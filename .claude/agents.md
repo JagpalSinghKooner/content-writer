@@ -10,18 +10,84 @@ This is the quick workflow reference for writing SEO articles. Articles are writ
 
 **ALL RULES ARE HARD FORCED. NO ESCAPES. NO EXCEPTIONS.**
 
-The workflow has THREE mandatory gates. An article cannot proceed until each gate shows PASS/OPEN/UNLOCKED.
+The workflow has **FIVE mandatory gates**. An article cannot proceed until each gate shows PASS/OPEN/UNLOCKED.
 
-### Gate 1: Research Gate (Before Writing)
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         5-GATE CONTENT WORKFLOW                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+STEP 1: Choose Article ─────────────── Seed from claude.md keywords table
+           │
+STEP 2: Run /keyword-research ──────── Validate + expand keywords
+           │
+           ▼
+    ┌──────────────┐
+    │ KEYWORD GATE │ ← Gate 1: Keywords validated & table updated
+    └──────────────┘
+           │
+STEP 3: Complete Research ──────────── Competitors, PAA, sources
+           │
+           ▼
+    ┌──────────────┐
+    │ RESEARCH GATE│ ← Gate 2: Research complete
+    └──────────────┘
+           │
+STEP 4: Run /positioning-angles ────── Find article-specific angle
+           │
+           ▼
+    ┌──────────────┐
+    │  ANGLE GATE  │ ← Gate 3: Angle selected & documented
+    └──────────────┘
+           │
+STEP 5: Plan HushAway® Prominence ──── Using selected angle
+           │
+STEP 6: Write with /seo-content ────── Article creation
+           │
+           ▼
+    ┌──────────────┐
+    │ CONTENT GATE │ ← Gate 4: Content passes 23 checks
+    └──────────────┘
+           │
+           ▼
+    ┌──────────────┐
+    │  FINAL GATE  │ ← Gate 5: All checks complete
+    └──────────────┘
+           │
+STEP 7: Preview & Export
+```
+
+---
+
+### Gate 1: Keyword Gate (After Keyword Research) - NEW
+```bash
+.claude/scripts/check-keyword-gate.sh [research-file]
+```
+- **Must show:** `KEYWORD GATE: UNLOCKED`
+- **Checks:** keywordStatus, target keyword validated, secondary keywords (5+), search volume, keyword cluster complete
+- **Exit code:** 0 = proceed, 1 = blocked
+- **Requirement:** claude.md keywords table MUST be updated with validated keyword and secondaries
+- **Research CANNOT begin until this gate is unlocked**
+
+### Gate 2: Research Gate (After Research Complete)
 ```bash
 .claude/scripts/check-research-gate.sh [research-file]
 ```
 - **Must show:** `RESEARCH GATE: UNLOCKED`
-- **Checks:** gateStatus, researchStatus, keywords, search intent, competitor gaps, PAA questions, sources, positioning
+- **Checks:** gateStatus, researchStatus, keywords, search intent, competitor gaps, PAA questions, sources
+- **Exit code:** 0 = proceed, 1 = blocked
+- **Positioning CANNOT begin until this gate is unlocked**
+
+### Gate 3: Angle Gate (After Positioning Angles) - NEW
+```bash
+.claude/scripts/check-angle-gate.sh [research-file]
+```
+- **Must show:** `ANGLE GATE: UNLOCKED`
+- **Checks:** angleStatus, selected angle documented, headline direction, counter-positions defined
 - **Exit code:** 0 = proceed, 1 = blocked
 - **Writing CANNOT begin until this gate is unlocked**
 
-### Gate 2: Content Gate (After Writing)
+### Gate 4: Content Gate (After Writing)
 ```bash
 .claude/scripts/master-gate.sh [article-file] [hub|cluster]
 ```
@@ -30,10 +96,10 @@ The workflow has THREE mandatory gates. An article cannot proceed until each gat
 - **Exit code:** 0 = proceed, 1 = blocked
 - **Preview/export CANNOT proceed until this gate is open**
 
-### Gate 3: Final Gate (Before Export)
+### Gate 5: Final Gate (Before Export)
 - Word count verified (3000+ hub, 1500+ cluster)
 - All frontmatter complete
-- Gate 2 passed with zero failures
+- Gate 4 passed with zero failures
 - **Export CANNOT proceed until all checks pass**
 
 ### Enforcement Rules
@@ -41,26 +107,34 @@ The workflow has THREE mandatory gates. An article cannot proceed until each gat
 2. **No partial passes** - ALL checks must pass, not just most
 3. **No skipping gates** - Each gate must be run in sequence
 4. **No exceptions** - These rules apply to every article, every time
+5. **Skills are MANDATORY** - /keyword-research and /positioning-angles must run, not optional
 
 ---
 
 ## Quick Start
 
-1. Check `.claude/claude.md` for brand voice and keywords table
-2. Complete research for the article
-3. **Run research gate:** `.claude/scripts/check-research-gate.sh [research-file]` - MUST show UNLOCKED
-4. Complete HushAway® Prominence Planning (see `.claude/skills/write-article.md` Step 5)
-5. Use `/seo-content` skill to write the article
-6. **Run content gate:** `.claude/scripts/master-gate.sh [filename] [hub|cluster]` - MUST show OPEN
-7. Fix any failures, re-run until GATE OPEN
-8. Preview with `npm run dev`
-9. Final checks complete, export to main website
+1. Check `.claude/claude.md` for brand voice and keywords table (seed keyword)
+2. **Run `/keyword-research` skill** to validate and expand keywords
+3. **Run keyword gate:** `.claude/scripts/check-keyword-gate.sh [research-file]` - MUST show UNLOCKED
+4. **Update claude.md table** with validated keyword and secondary keywords
+5. Complete research for the article (competitors, PAA, sources)
+6. **Run research gate:** `.claude/scripts/check-research-gate.sh [research-file]` - MUST show UNLOCKED
+7. **Run `/positioning-angles` skill** to find article-specific angle
+8. **Run angle gate:** `.claude/scripts/check-angle-gate.sh [research-file]` - MUST show UNLOCKED
+9. Complete HushAway® Prominence Planning using the selected angle
+10. Use `/seo-content` skill to write the article
+11. **Run content gate:** `.claude/scripts/master-gate.sh [filename] [hub|cluster]` - MUST show OPEN
+12. Fix any failures, re-run until GATE OPEN
+13. Preview with `npm run dev`
+14. Final checks complete, export to main website
 
 ---
 
-## Step 1: Choose Article
+## Step 1: Choose Article (Seed Keyword)
 
-Open `claude.md` and select the next article from the keywords table. Follow pillar priority order:
+Open `claude.md` and select the next article from the keywords table. **The table provides SEED keywords - these are starting points, not final targets.**
+
+Follow pillar priority order:
 
 1. Pillar 5: ADHD Apps (25,000 searches) - START HERE
 2. Pillar 2: Sleep Apps for Kids (8,000-12,000)
@@ -70,11 +144,58 @@ Open `claude.md` and select the next article from the keywords table. Follow pil
 6. Pillar 7: Neurodivergent Parenting (2,000-4,000)
 7. Pillar 6: Emotional Regulation (1,000-2,000)
 
+**Note:** The seed keyword will be validated and potentially improved in Step 2.
+
 ---
 
-## Step 2: Complete Research
+## Step 2: Run Keyword Research (MANDATORY)
 
-Before writing, complete research for the article. **Writing cannot begin until research is complete and unlocked.**
+**Before any research begins, run the `/keyword-research` skill.**
+
+This is NOT optional. Every article requires dynamic keyword validation.
+
+### Invoke the skill:
+```
+/keyword-research
+```
+
+### Provide context:
+- **Seed keyword:** [from claude.md table]
+- **Pillar topic:** [pillar name]
+- **Content type:** [Hub or Cluster]
+- **Business context:** HushAway® sound therapy for neurodivergent children
+
+### The skill will output:
+1. **Validated target keyword** (may confirm seed or suggest better alternative)
+2. **Secondary keyword cluster** (5-10 related keywords)
+3. **Search volume validation**
+4. **Competitor opportunity assessment**
+5. **Content type recommendation**
+
+### After skill completes:
+
+1. **Update the research file** with:
+   - `keywordStatus: validated`
+   - Target keyword (validated)
+   - Full secondary keywords list
+   - Search volume data
+
+2. **Update claude.md keywords table** with:
+   - Validated target keyword (if different from seed)
+   - Secondary keywords column
+
+3. **Run the Keyword Gate:**
+```bash
+.claude/scripts/check-keyword-gate.sh [research-file]
+```
+
+**MUST show `KEYWORD GATE: UNLOCKED` before proceeding to Step 3.**
+
+---
+
+## Step 3: Complete Research
+
+**After Keyword Gate is unlocked**, complete research for the article.
 
 **Research file location:**
 ```
@@ -88,47 +209,136 @@ Example: `/research/pillar-7-neurodivergent-parenting/hub-research.md`
 - Cluster articles: `[X.X]-[slug]-research.md` (e.g., `7.1-parent-burnout-research.md`)
 
 **Research requirements:**
-1. Target keyword + 3-5 secondary keywords
+1. Target keyword (validated from Step 2) + secondary keywords (from Step 2)
 2. Search intent analysis
 3. Top 5 SERP results reviewed
 4. 3+ competitor gaps identified
 5. 5+ People Also Ask questions (these become H2/H3 headings in the article)
 6. 3+ research sources with citations
-7. Positioning angle selected
 
-**Gate status explained:**
-- `gateStatus: locked` = Research incomplete, writing CANNOT begin
-- `gateStatus: unlocked` = Research complete, writing can proceed
-
-This gate ensures thorough research before any article writing starts. Do not bypass.
+**Note:** Positioning angle is NO LONGER selected here - it comes from Step 4.
 
 **When research is complete:**
 - Set `researchStatus: complete` in frontmatter
 - Set `gateStatus: unlocked` in frontmatter
 - Set `dateCompleted` to today's date
-- Proceed to writing
+
+**Run the Research Gate:**
+```bash
+.claude/scripts/check-research-gate.sh [research-file]
+```
+
+**MUST show `RESEARCH GATE: UNLOCKED` before proceeding to Step 4.**
 
 ---
 
-## Step 3: Write Article
+## Step 4: Run Positioning Angles (MANDATORY)
 
-Use the `/seo-content` skill with these parameters:
+**After Research Gate is unlocked, run the `/positioning-angles` skill.**
+
+This is NOT optional. Every article requires a dynamic, article-specific angle.
+
+### Invoke the skill:
+```
+/positioning-angles
+```
+
+### Provide context:
+- **Article topic:** [from research]
+- **Target keyword:** [validated keyword]
+- **Competitor gaps:** [from research - what competitors miss]
+- **Search intent:** [from research]
+- **HushAway® differentiator:** Sound therapy for neurodivergent children
+
+### The skill will output:
+1. **3-5 distinct angle options** for this specific article
+2. **Psychology/reasoning** behind each angle
+3. **Headline directions** for each
+4. **Recommended starting angle**
+
+### After skill completes:
+
+1. **Select ONE angle** as the primary angle for this article
+
+2. **Update the research file** with:
+   ```yaml
+   angleStatus: selected
+   selectedAngle: "[Name of chosen angle]"
+   angleDescription: "[One sentence description]"
+   headlineDirection: "[Example headline from skill output]"
+   counterPositions:
+     - "[Counter-position for competitor category 1]"
+     - "[Counter-position for competitor category 2]"
+   ```
+
+3. **Run the Angle Gate:**
+```bash
+.claude/scripts/check-angle-gate.sh [research-file]
+```
+
+**MUST show `ANGLE GATE: UNLOCKED` before proceeding to Step 5.**
+
+---
+
+## Step 5: Plan HushAway® Prominence
+
+**After Angle Gate is unlocked**, plan where HushAway® appears throughout the article using the selected angle.
+
+### Using Your Selected Angle:
+
+Your angle from Step 4 informs ALL prominence planning:
+
+| Planning Element | How Angle Informs It |
+|------------------|---------------------|
+| Introduction mention | Frame HushAway® using the angle's core insight |
+| Counter-positions | Use the counter-positions defined in Step 4 |
+| Comparison section | Build around the angle's differentiation |
+| CTA framing | Connect Sound Sanctuary to the angle's promise |
+
+### Complete this checklist:
+
+- [ ] **Introduction mention planned:** Draft callout using selected angle within first 500 words
+- [ ] **Counter-positions mapped:** Each competitor category closes with angle-informed HushAway® positioning
+- [ ] **Differentiator section planned:** "Why Most [Topic] Approaches Fail" using angle insight
+- [ ] **Comparison format chosen:** Table/checklist highlighting angle's differentiation
+
+**Minimum HushAway® presence:**
+- Introduction: 1 mention using angle framing
+- Body sections: 50%+ of H2 sections close with angle-informed positioning
+- Closing: Comparison element + Sound Sanctuary CTA
+
+---
+
+## Step 6: Write Article
+
+**After prominence planning is complete**, use the `/seo-content` skill.
+
+### Invoke the skill:
+```
+/seo-content
+```
+
+### Provide these parameters:
 
 ```
-Target keyword: [from research]
-Keyword cluster: [secondary keywords from research]
-Search intent: [Informational / Commercial]
+Target keyword: [validated keyword from Step 2]
+Keyword cluster: [secondary keywords from Step 2]
+Search intent: [from research]
 Content type: [Pillar hub / Cluster article]
-Positioning angle: [from research]
+Selected angle: [from Step 4]
+Headline direction: [from Step 4]
+Counter-positions: [from Step 4]
 MINIMUM word count: [3,000+ hub / 1,500+ cluster]
 
 Requirements:
 - Lead with empathy for exhausted parents
 - Parent-to-parent tone throughout
 - Include signature phrases naturally
+- Use selected angle throughout (not static pillar angles)
+- Apply counter-positions from Step 4
 - Gentle CTA: "Explore the Sound Sanctuary"
 - UK English, NO emojis, NO em-dashes
-- **Community quotes:** 2+ for hub, 1+ for cluster (must follow humanise-content.md Section 8 categories: Verified, Composite, or Illustrative)
+- **Community quotes:** 2+ for hub, 1+ for cluster
 - **Dated citations:** Always include year (e.g., "Research from 2023 found...")
 - **Curiosity loops:** 2+ for hub, 1+ for cluster (transitional hooks)
 - **Internal links:** 8-10 for hub, 4-6 for cluster (cross-pillar)
@@ -136,7 +346,7 @@ Requirements:
 
 ---
 
-## Step 4: Run Master Gate (MANDATORY)
+## Step 7: Run Master Gate (MANDATORY)
 
 **All verification is now automated in a single script.**
 
@@ -208,7 +418,7 @@ Requirements:
 
 ---
 
-## Step 5: Save and Preview
+## Step 8: Save and Preview
 
 **Save article to:**
 ```
@@ -245,7 +455,7 @@ Open `http://localhost:4321` to view the article.
 
 ---
 
-## Step 6: Export to Main Site
+## Step 9: Export to Main Site
 
 When article passes quality check:
 1. Copy markdown content (meta description is in frontmatter)
@@ -299,26 +509,33 @@ Hub articles need 8-10 internal links, cluster articles need 4-6. Include cross-
   - [X.X]-[slug]-research.md            - Cluster research (e.g., 7.1-parent-burnout-research.md)
 /templates/                             - Research template
 /dashboard/                             - Progress tracking (HTML dashboard)
-/.claude/claude.md                      - Brand voice, product info, pillar table
+/.claude/claude.md                      - Brand voice, product info, pillar table (SEED keywords)
 /.claude/agents.md                      - This workflow guide
 /.claude/humanise-content.md           - Master content rules (50+ banned words, limits)
+/.claude/scripts/check-keyword-gate.sh - Keyword gate (after /keyword-research)
+/.claude/scripts/check-research-gate.sh - Research gate (after research complete)
+/.claude/scripts/check-angle-gate.sh   - Angle gate (after /positioning-angles)
 /.claude/scripts/master-gate.sh        - Content gate (23 sections)
-/.claude/scripts/check-research-gate.sh - Research gate (9 checks)
 /.claude/skills/write-article.md       - Detailed article writing process
-/.claude/skills/                        - Marketing skills
+/.claude/skills/keyword-research/      - Keyword research skill
+/.claude/skills/positioning-angles/    - Positioning angles skill
+/.claude/skills/seo-content/           - SEO content writing skill
+/.claude/skills/                        - Other marketing skills
 ```
 
 ---
 
 ## Skills Reference
 
-**For articles:**
-- `/seo-content` - Write SEO articles
-- `/keyword-research` - Research keywords
+**MANDATORY for every article (in order):**
+1. `/keyword-research` - Validate + expand keywords (Step 2) - **CANNOT SKIP**
+2. `/positioning-angles` - Find article-specific angle (Step 4) - **CANNOT SKIP**
+3. `/seo-content` - Write the article (Step 6)
 
 **For other content:**
 - `/brand-voice` - Refine brand voice
-- `/positioning-angles` - Find angles
 - `/direct-response-copy` - Conversion copy
 - `/email-sequences` - Email sequences
 - `/content-atomizer` - Repurpose content
+- `/newsletter` - Newsletter formats
+- `/lead-magnet` - Lead magnet concepts

@@ -149,17 +149,27 @@ A subscription-based sound therapy platform (mobile app + web app) designed spec
 
 ---
 
-## 5 Positioning Angles
+## 5 Base Positioning Angles (Reference Only)
 
-Choose based on pillar. Each article should lead with at least one angle.
+**IMPORTANT: These are BASE angles for reference. Every article MUST run `/positioning-angles` skill to generate article-specific angles.**
 
-| Angle | When to Use |
-|-------|-------------|
+The `/positioning-angles` skill will:
+1. Use these base angles as context
+2. Analyze the specific article's research and competitor gaps
+3. Generate 3-5 article-specific angles
+4. Provide headline directions and counter-positions
+
+**Base angles (for context):**
+
+| Angle | Pillar Context |
+|-------|----------------|
 | 1. Neurodivergent-First Specialist | ALL content (default positioning) |
 | 2. Passive Support Alternative | Pillars 3, 6 (anxiety, emotional regulation) |
 | 3. Research-Backed Sensory Science | Pillars 1, 4 (ADHD sleep, sensory apps) |
 | 4. Supportive Ally | Pillar 7 (neurodivergent parenting) |
 | 5. Gentle Consistency Promise | Pillars 2, 5 (sleep apps, ADHD apps) |
+
+**DO NOT use these directly.** Run `/positioning-angles` skill after research to get article-specific angles with counter-positions.
 
 ---
 
@@ -347,6 +357,25 @@ Example: "If you're struggling with burnout, you're not alone [LINK TO: Recognis
 
 ## 7 Content Pillars (77 Articles Total)
 
+### IMPORTANT: Seed Keywords vs Validated Keywords
+
+**The keywords in this table are SEED KEYWORDS - starting points, not final targets.**
+
+Before writing ANY article:
+1. Select the seed keyword from this table
+2. Run `/keyword-research` skill to validate and expand
+3. Update this table with the VALIDATED keyword and secondary keywords
+4. Pass the Keyword Gate before proceeding
+
+**Table columns:**
+- **Article** - Article identifier
+- **Target Keyword** - Seed keyword (update with validated keyword after /keyword-research)
+- **Volume** - Estimated search volume (update if /keyword-research provides new data)
+- **Secondary Keywords** - Add after /keyword-research skill completes
+- **Status** - validated / not-started
+
+---
+
 **Priority Order (by search volume):**
 
 ### Pillar 5: ADHD Apps (Start Here - Highest Volume)
@@ -470,12 +499,22 @@ Example: "If you're struggling with burnout, you're not alone [LINK TO: Recognis
 
 ---
 
-## Article Writing Process
+## Article Writing Process (5-Gate Workflow)
+
+**MANDATORY SKILLS (cannot skip):**
+1. `/keyword-research` - Run BEFORE research → Pass KEYWORD GATE
+2. `/positioning-angles` - Run AFTER research → Pass ANGLE GATE
+3. `/seo-content` - Run AFTER angle gate → Pass CONTENT GATE
 
 **Workflow:** `.claude/agents.md`
 **Detailed process:** `.claude/skills/write-article.md`
 **Content rules:** `.claude/humanise-content.md`
-**Verification:** `.claude/scripts/master-gate.sh`
+
+**Gate Scripts:**
+- `.claude/scripts/check-keyword-gate.sh` - After /keyword-research
+- `.claude/scripts/check-research-gate.sh` - After research complete
+- `.claude/scripts/check-angle-gate.sh` - After /positioning-angles
+- `.claude/scripts/master-gate.sh` - After writing complete
 
 **The Final Test:**
 Would an exhausted parent at 2am find this supportive? If yes, publish.
@@ -563,12 +602,15 @@ Would an exhausted parent at 2am find this supportive? If yes, publish.
 
 ## Skills Available
 
-- `seo-content` - Write SEO-optimised articles
-- `keyword-research` - Research keywords and clusters
-- `brand-voice` - Extract or refine brand voice
-- `positioning-angles` - Find positioning angles
-- `direct-response-copy` - Conversion copywriting
-- `email-sequences` - Email nurture sequences
-- `content-atomizer` - Repurpose content
-- `newsletter` - Newsletter formats
-- `lead-magnet` - Lead magnet concepts
+**MANDATORY for every article (in order):**
+1. `/keyword-research` - Validate + expand keywords - **CANNOT SKIP** - Run before research
+2. `/positioning-angles` - Find article-specific angle - **CANNOT SKIP** - Run after research
+3. `/seo-content` - Write the article - Run after angle gate passes
+
+**Other skills:**
+- `/brand-voice` - Extract or refine brand voice
+- `/direct-response-copy` - Conversion copywriting
+- `/email-sequences` - Email nurture sequences
+- `/content-atomizer` - Repurpose content
+- `/newsletter` - Newsletter formats
+- `/lead-magnet` - Lead magnet concepts
