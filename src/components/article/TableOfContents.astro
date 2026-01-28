@@ -1,0 +1,97 @@
+---
+interface TocItem {
+  depth: number;
+  text: string;
+  slug: string;
+}
+
+interface Props {
+  headings: TocItem[];
+}
+
+const { headings } = Astro.props;
+
+// Filter to only show h2 and h3 headings
+const tocItems = headings.filter(h => h.depth >= 2 && h.depth <= 3);
+---
+
+{tocItems.length > 0 && (
+  <nav
+    id="table-of-contents"
+    class="hidden lg:block"
+    aria-label="Table of contents"
+  >
+    <div class="sticky top-24">
+      <h2 class="text-sm font-semibold text-ink uppercase tracking-wide mb-4">
+        On this page
+      </h2>
+      <ul class="space-y-1">
+        {tocItems.map((item) => (
+          <li>
+            <a
+              href={`#${item.slug}`}
+              class={`toc-link ${item.depth === 3 ? 'pl-6' : ''}`}
+              data-toc-link
+              data-target={item.slug}
+            >
+              {item.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <!-- Back to top link -->
+      <div class="mt-6 pt-4 border-t border-parchment">
+        <a
+          href="#"
+          class="text-sm text-slate hover:text-sage-600 transition-colors inline-flex items-center gap-1.5"
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+          Back to top
+        </a>
+      </div>
+    </div>
+  </nav>
+)}
+
+<script>
+  // Highlight current section in TOC
+  const tocLinks = document.querySelectorAll('[data-toc-link]');
+  const headings = document.querySelectorAll('article h2[id], article h3[id]');
+
+  if (tocLinks.length && headings.length) {
+    const observerOptions = {
+      rootMargin: '-80px 0px -70% 0px',
+      threshold: 0,
+    };
+
+    let currentActive: Element | null = null;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Remove active class from all
+          tocLinks.forEach((link) => {
+            link.classList.remove('toc-link-active');
+            link.classList.add('toc-link');
+          });
+
+          // Add active class to current
+          const activeLink = document.querySelector(
+            `[data-toc-link][data-target="${entry.target.id}"]`
+          );
+          if (activeLink) {
+            activeLink.classList.add('toc-link-active');
+            activeLink.classList.remove('toc-link');
+            currentActive = activeLink;
+          }
+        }
+      });
+    }, observerOptions);
+
+    headings.forEach((heading) => observer.observe(heading));
+  }
+</script>

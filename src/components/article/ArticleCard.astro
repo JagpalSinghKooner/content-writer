@@ -1,0 +1,87 @@
+---
+import Badge from '../ui/Badge.astro';
+
+interface Props {
+  title: string;
+  excerpt?: string;
+  href: string;
+  pillar: number;
+  pillarName: string;
+  articleNumber: string;
+  wordCount?: number;
+  isHub?: boolean;
+  status?: string;
+}
+
+const {
+  title,
+  excerpt,
+  href,
+  pillar,
+  pillarName,
+  articleNumber,
+  wordCount = 0,
+  isHub = false,
+  status = 'draft',
+} = Astro.props;
+
+// Calculate reading time (200 words per minute)
+const readingTime = Math.ceil(wordCount / 200);
+
+// Generate excerpt from title if not provided
+const displayExcerpt = excerpt || `Explore ${title.toLowerCase()} with gentle, research-backed guidance for families.`;
+---
+
+<article class="article-card group">
+  <a href={href} class="block">
+    <!-- Header with badges -->
+    <div class="flex items-center gap-2 mb-3">
+      <Badge variant="pillar" pillar={pillar} size="sm">
+        {pillarName}
+      </Badge>
+      {isHub && (
+        <Badge variant="coral" size="sm">
+          Start Here
+        </Badge>
+      )}
+      {status === 'draft' && (
+        <Badge variant="amber" size="sm">
+          Draft
+        </Badge>
+      )}
+    </div>
+
+    <!-- Title -->
+    <h3 class="font-heading text-lg font-semibold text-ink mb-2 group-hover:text-sage-600 transition-colors line-clamp-2">
+      {title}
+    </h3>
+
+    <!-- Excerpt -->
+    <p class="text-slate text-sm leading-relaxed line-clamp-2 mb-4">
+      {displayExcerpt}
+    </p>
+
+    <!-- Meta footer -->
+    <div class="flex items-center gap-4 text-xs text-mist">
+      {readingTime > 0 && (
+        <span class="flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          {readingTime} min read
+        </span>
+      )}
+      {wordCount > 0 && (
+        <span class="flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          {wordCount.toLocaleString()} words
+        </span>
+      )}
+      <span class="text-sage-400 font-medium">
+        {articleNumber}
+      </span>
+    </div>
+  </a>
+</article>

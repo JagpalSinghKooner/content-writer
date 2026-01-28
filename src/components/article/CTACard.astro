@@ -1,0 +1,60 @@
+---
+interface Props {
+  variant?: 'default' | 'compact';
+  title?: string;
+  description?: string;
+}
+
+const {
+  variant = 'default',
+  title = 'Explore the Sound Sanctuary',
+  description = 'Discover gentle, sensory-friendly soundscapes designed specifically for children who feel everything. No tasks to complete, no instructions to follow. Just a soft place to land.',
+} = Astro.props;
+---
+
+{variant === 'default' ? (
+  <div class="cta-card my-8">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+      <div class="flex-shrink-0">
+        <div class="w-14 h-14 rounded-2xl bg-sage-100 flex items-center justify-center">
+          <svg class="w-7 h-7 text-sage-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+          </svg>
+        </div>
+      </div>
+      <div class="flex-1">
+        <h3 class="font-heading text-lg font-semibold text-ink mb-1">
+          {title}
+        </h3>
+        <p class="text-charcoal text-sm leading-relaxed">
+          {description}
+        </p>
+      </div>
+      <div class="flex-shrink-0">
+        <a
+          href="https://hushaway.com/sound-sanctuary"
+          class="btn-cta text-sm whitespace-nowrap"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Sound Sanctuary
+        </a>
+      </div>
+    </div>
+  </div>
+) : (
+  <div class="bg-cream rounded-xl p-4 border border-parchment my-6">
+    <div class="flex items-center gap-4">
+      <div class="w-10 h-10 rounded-xl bg-sage-100 flex items-center justify-center flex-shrink-0">
+        <svg class="w-5 h-5 text-sage-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+        </svg>
+      </div>
+      <div class="flex-1 min-w-0">
+        <p class="text-sm text-charcoal">
+          Looking for gentle sound support? <a href="https://hushaway.com/sound-sanctuary" class="text-sage-600 hover:underline font-medium" target="_blank" rel="noopener">Explore HushAway</a>
+        </p>
+      </div>
+    </div>
+  </div>
+)}

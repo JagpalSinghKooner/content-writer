@@ -1,0 +1,241 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import ArticleCard from '../../components/article/ArticleCard.astro';
+import Badge from '../../components/ui/Badge.astro';
+import Button from '../../components/ui/Button.astro';
+
+// Pillar configuration
+const pillarConfig: Record<string, {
+  id: number;
+  name: string;
+  collection: string;
+  description: string;
+  longDescription: string;
+  volume: string;
+}> = {
+  'adhd-sleep': {
+    id: 1,
+    name: 'ADHD Sleep',
+    collection: 'pillar-1-adhd-sleep',
+    description: 'Helping children with ADHD find restful sleep',
+    longDescription: 'Sleep and ADHD have a complex relationship. Many children with ADHD struggle to settle at bedtime, wake frequently, or have difficulty with morning routines. These articles explore research-backed approaches to supporting better sleep for your child.',
+    volume: '5,000-8,000',
+  },
+  'sleep-apps': {
+    id: 2,
+    name: 'Sleep Apps for Kids',
+    collection: 'pillar-2-sleep-apps',
+    description: 'Age-appropriate sleep support for all children',
+    longDescription: 'With hundreds of sleep apps available, finding the right one for your child can feel overwhelming. These articles help you navigate the options, understand what works, and find age-appropriate support.',
+    volume: '8,000-12,000',
+  },
+  'anxiety-apps': {
+    id: 3,
+    name: 'Anxiety Apps for Children',
+    collection: 'pillar-3-anxiety-apps',
+    description: 'Gentle support for anxious children',
+    longDescription: 'Anxiety affects many children, often appearing alongside ADHD and other neurodivergent traits. These articles explore gentle, child-friendly approaches to supporting anxious children, including what apps can and cannot do.',
+    volume: '4,000-6,000',
+  },
+  'sensory-apps': {
+    id: 4,
+    name: 'Sensory Friendly Apps',
+    collection: 'pillar-4-sensory-apps',
+    description: 'Sensory-friendly tools and approaches',
+    longDescription: 'Many neurodivergent children experience sensory processing differences that affect how they interact with the world. These articles explore sensory-friendly tools, environments, and approaches that can help.',
+    volume: '2,000-3,000',
+  },
+  'adhd-apps': {
+    id: 5,
+    name: 'ADHD Apps',
+    collection: 'pillar-5-adhd-apps',
+    description: 'Finding what works for children with ADHD',
+    longDescription: 'The world of ADHD apps is vast and often overwhelming. From focus tools to emotional regulation support, these articles help you understand what works, what the research says, and how to find the right fit for your child.',
+    volume: '25,000',
+  },
+  'emotional-regulation': {
+    id: 6,
+    name: 'Emotional Regulation',
+    collection: 'pillar-6-emotional-regulation',
+    description: 'Supporting children with big feelings',
+    longDescription: 'Emotional regulation is often the hidden challenge behind ADHD struggles. Before children can focus, organise, or follow routines, they need to feel calm in their bodies. These articles explore how to support this foundational skill.',
+    volume: '1,000-2,000',
+  },
+  'neurodivergent-parenting': {
+    id: 7,
+    name: 'Neurodivergent Parenting',
+    collection: 'pillar-7-neurodivergent-parenting',
+    description: 'Support for parents walking this path',
+    longDescription: 'Parenting a neurodivergent child is rewarding, exhausting, and often isolating. These articles are for you: the parent who needs to know they are not alone, who deserves support, and who is doing better than they think.',
+    volume: '2,000-4,000',
+  },
+};
+
+export async function getStaticPaths() {
+  const pillarSlugs = [
+    'adhd-sleep',
+    'sleep-apps',
+    'anxiety-apps',
+    'sensory-apps',
+    'adhd-apps',
+    'emotional-regulation',
+    'neurodivergent-parenting',
+  ];
+  return pillarSlugs.map((slug) => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const pillar = pillarConfig[slug];
+
+if (!pillar) {
+  return Astro.redirect('/');
+}
+
+// Get articles for this pillar
+const articles = await getCollection(pillar.collection as any).catch(() => []);
+
+// Sort - hub first, then by article number
+const sortedArticles = articles.sort((a, b) => {
+  const aNum = a.data.articleNumber || '';
+  const bNum = b.data.articleNumber || '';
+  if (aNum === 'PILLAR' || aNum === 'HUB') return -1;
+  if (bNum === 'PILLAR' || bNum === 'HUB') return 1;
+  return aNum.localeCompare(bNum);
+});
+
+// Separate hub article
+const hubArticle = sortedArticles.find(a => a.data.articleNumber === 'HUB');
+const clusterArticles = sortedArticles.filter(a => a.data.articleNumber !== 'HUB');
+
+const breadcrumbItems = [
+  { label: pillar.name },
+];
+---
+
+<BaseLayout
+  title={pillar.name}
+  description={`${pillar.description}. Gentle, research-backed guidance for families from HushAway.`}
+>
+  <div class="bg-linen">
+    <!-- Header -->
+    <section class={`bg-gradient-to-b from-sage-50 to-linen border-b border-parchment`}>
+      <div class="container-content py-8 md:py-12">
+        <Breadcrumbs items={breadcrumbItems} />
+
+        <div class="flex items-start gap-4 mb-4">
+          <span class={`w-4 h-4 rounded-full pillar-${pillar.id} mt-2 flex-shrink-0`}></span>
+          <div>
+            <h1 class="font-heading text-3xl md:text-4xl font-semibold text-ink mb-3">
+              {pillar.name}
+            </h1>
+            <p class="text-lg text-charcoal max-w-2xl leading-relaxed">
+              {pillar.longDescription}
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate">
+          <span>{sortedArticles.length} of 11 articles published</span>
+          <span class="text-mist">|</span>
+          <span>{pillar.volume} monthly searches</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hub Article (Featured) -->
+    {hubArticle && (
+      <section class="bg-cream py-10 md:py-12">
+        <div class="container-content">
+          <div class="flex items-center gap-3 mb-6">
+            <h2 class="font-heading text-xl font-semibold text-ink">Start Here</h2>
+            <Badge variant="coral" size="sm">Hub Article</Badge>
+          </div>
+
+          <a
+            href={`/${pillar.collection}/${hubArticle.id.replace(/\.md$/, '')}`}
+            class="block card-hover p-6 md:p-8 max-w-3xl"
+          >
+            <Badge variant="pillar" pillar={pillar.id} size="sm" class="mb-3">
+              {pillar.name}
+            </Badge>
+            <h3 class="font-heading text-2xl font-semibold text-ink mb-3 group-hover:text-sage-600">
+              {hubArticle.data.title}
+            </h3>
+            <p class="text-charcoal mb-4 leading-relaxed">
+              {hubArticle.data.metaDescription || `A comprehensive guide to ${pillar.name.toLowerCase()} for families of neurodivergent children.`}
+            </p>
+            <div class="flex items-center gap-4 text-sm text-slate">
+              {hubArticle.data.wordCount > 0 && (
+                <span>{Math.ceil(hubArticle.data.wordCount / 200)} min read</span>
+              )}
+              <span class="text-sage-600 font-medium inline-flex items-center gap-1">
+                Read article
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
+    )}
+
+    <!-- Cluster Articles -->
+    <section class="py-10 md:py-12">
+      <div class="container-content">
+        <h2 class="font-heading text-xl font-semibold text-ink mb-6">
+          {clusterArticles.length > 0 ? 'More Articles' : 'Coming Soon'}
+        </h2>
+
+        {clusterArticles.length > 0 ? (
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {clusterArticles.map((article) => (
+              <ArticleCard
+                title={article.data.title}
+                href={`/${pillar.collection}/${article.id.replace(/\.md$/, '')}`}
+                pillar={pillar.id}
+                pillarName={pillar.name}
+                articleNumber={article.data.articleNumber}
+                wordCount={article.data.wordCount}
+                status={article.data.status}
+              />
+            ))}
+          </div>
+        ) : (
+          <div class="text-center py-12 bg-cream rounded-2xl">
+            <div class="w-14 h-14 rounded-full bg-sage-100 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <h3 class="font-heading text-lg text-ink mb-2">More articles coming soon</h3>
+            <p class="text-slate text-sm max-w-md mx-auto">
+              We are working on additional articles for this topic. Check back soon for more gentle, research-backed guidance.
+            </p>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="pb-16">
+      <div class="container-content">
+        <div class="cta-card text-center max-w-2xl mx-auto">
+          <h2 class="font-heading text-xl font-semibold text-ink mb-3">
+            Looking for sound support?
+          </h2>
+          <p class="text-charcoal text-sm mb-5">
+            HushAway offers sensory-friendly soundscapes designed for children who feel everything.
+          </p>
+          <Button href="https://hushaway.com/sound-sanctuary" variant="cta" external>
+            Explore the Sound Sanctuary
+          </Button>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

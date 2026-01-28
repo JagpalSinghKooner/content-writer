@@ -1,0 +1,45 @@
+---
+import ArticleCard from './ArticleCard.astro';
+
+interface Article {
+  title: string;
+  href: string;
+  pillar: number;
+  pillarName: string;
+  articleNumber: string;
+  wordCount?: number;
+}
+
+interface Props {
+  articles: Article[];
+  title?: string;
+}
+
+const {
+  articles,
+  title = 'Continue Reading',
+} = Astro.props;
+
+// Only show up to 3 related articles
+const displayArticles = articles.slice(0, 3);
+---
+
+{displayArticles.length > 0 && (
+  <section class="mt-12 pt-8 border-t border-parchment">
+    <h2 class="font-heading text-xl font-semibold text-ink mb-6">
+      {title}
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {displayArticles.map((article) => (
+        <ArticleCard
+          title={article.title}
+          href={article.href}
+          pillar={article.pillar}
+          pillarName={article.pillarName}
+          articleNumber={article.articleNumber}
+          wordCount={article.wordCount}
+        />
+      ))}
+    </div>
+  </section>
+)}

@@ -1,0 +1,55 @@
+---
+// Reading progress bar - shows scroll progress through article
+---
+
+<div
+  id="reading-progress"
+  class="fixed top-0 left-0 h-1 bg-gradient-to-r from-sage via-sage-400 to-coral z-50 transition-all duration-75"
+  style="width: 0%"
+  role="progressbar"
+  aria-label="Reading progress"
+  aria-valuenow="0"
+  aria-valuemin="0"
+  aria-valuemax="100"
+></div>
+
+<script>
+  const progressBar = document.getElementById('reading-progress');
+  const article = document.querySelector('article');
+
+  if (progressBar && article) {
+    const updateProgress = () => {
+      const articleRect = article.getBoundingClientRect();
+      const articleTop = articleRect.top + window.scrollY;
+      const articleHeight = articleRect.height;
+      const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY;
+
+      // Calculate progress based on article position
+      const start = articleTop - windowHeight * 0.3;
+      const end = articleTop + articleHeight - windowHeight * 0.7;
+      const range = end - start;
+
+      let progress = ((scrollPosition - start) / range) * 100;
+      progress = Math.max(0, Math.min(100, progress));
+
+      progressBar.style.width = `${progress}%`;
+      progressBar.setAttribute('aria-valuenow', String(Math.round(progress)));
+    };
+
+    // Throttle scroll events for performance
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateProgress();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Initial calculation
+    updateProgress();
+  }
+</script>

@@ -1,0 +1,199 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../navigation/Breadcrumbs.astro';
+import Badge from '../ui/Badge.astro';
+import ReadingProgress from '../article/ReadingProgress.astro';
+import TableOfContents from '../article/TableOfContents.astro';
+import ArticleMeta from '../article/ArticleMeta.astro';
+import AuthorCard from '../article/AuthorCard.astro';
+import CTACard from '../article/CTACard.astro';
+
+interface TocItem {
+  depth: number;
+  text: string;
+  slug: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  pillar?: number;
+  pillarName?: string;
+  articleNumber?: string;
+  status?: string;
+  wordCount?: number;
+  targetKeyword?: string;
+  dateCreated?: string;
+  dateUpdated?: string;
+  author?: string;
+  headings?: TocItem[];
+}
+
+const {
+  title,
+  description,
+  pillar,
+  pillarName,
+  articleNumber,
+  status = 'draft',
+  wordCount = 0,
+  targetKeyword,
+  dateCreated,
+  dateUpdated,
+  author = 'Nicola Maria Rose',
+  headings = [],
+} = Astro.props;
+
+// Build breadcrumb items
+const breadcrumbItems = [];
+if (pillarName) {
+  breadcrumbItems.push({
+    label: pillarName,
+    href: `/pillar/${pillarName.toLowerCase().replace(/\s+/g, '-')}`,
+  });
+}
+breadcrumbItems.push({ label: title });
+
+// Determine if this is a hub article
+const isHub = articleNumber === 'HUB';
+
+// Generate meta description
+const metaDescription = description || `${title}. Gentle, research-backed guidance for families of neurodivergent children from HushAway.`;
+
+// Pillar slug mapping for links
+const pillarSlugs: Record<number, string> = {
+  1: 'adhd-sleep',
+  2: 'sleep-apps',
+  3: 'anxiety-apps',
+  4: 'sensory-apps',
+  5: 'adhd-apps',
+  6: 'emotional-regulation',
+  7: 'neurodivergent-parenting',
+};
+---
+
+<BaseLayout title={title} description={metaDescription}>
+  <ReadingProgress />
+
+  <div class="bg-linen">
+    <div class="container-content py-6 lg:py-8">
+      <Breadcrumbs items={breadcrumbItems} />
+    </div>
+
+    <!-- Article with sidebar layout -->
+    <div class="container-content pb-12 lg:pb-16">
+      <div class="lg:grid lg:grid-cols-[1fr_220px] lg:gap-12 xl:gap-16">
+        <!-- Main article content -->
+        <article class="min-w-0">
+          <!-- Article header -->
+          <header class="mb-8 lg:mb-10">
+            <!-- Badges -->
+            <div class="flex flex-wrap items-center gap-2 mb-4">
+              {pillarName && pillar && (
+                <Badge variant="pillar" pillar={pillar}>
+                  {pillarName}
+                </Badge>
+              )}
+              {isHub && (
+                <Badge variant="coral">
+                  Pillar Hub
+                </Badge>
+              )}
+              {status === 'draft' && (
+                <Badge variant="amber">
+                  Draft
+                </Badge>
+              )}
+            </div>
+
+            <!-- Title -->
+            <h1 class="font-heading text-3xl sm:text-4xl lg:text-[2.5rem] font-semibold text-ink leading-tight mb-4 text-balance">
+              {title}
+            </h1>
+
+            <!-- Meta information -->
+            {dateCreated && (
+              <ArticleMeta
+                dateCreated={dateCreated}
+                dateUpdated={dateUpdated}
+                wordCount={wordCount}
+                author={author}
+              />
+            )}
+          </header>
+
+          <!-- Article body with prose styling -->
+          <div class="prose prose-lg max-w-none prose-headings:scroll-mt-20">
+            <slot />
+          </div>
+
+          <!-- Bottom CTA -->
+          <CTACard />
+
+          <!-- Author card -->
+          <div class="mt-10">
+            <AuthorCard />
+          </div>
+        </article>
+
+        <!-- Sidebar with TOC (desktop only) -->
+        {headings.length > 0 && (
+          <aside class="hidden lg:block">
+            <TableOfContents headings={headings} />
+          </aside>
+        )}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+  /* Ensure prose links are styled correctly */
+  .prose a {
+    @apply text-sage-600 font-medium no-underline hover:underline transition-colors;
+  }
+
+  /* Style [LINK TO: ...] placeholders */
+  .prose a[href*="LINK TO"],
+  .prose a:not([href]) {
+    @apply inline-block bg-amber-light/50 text-amber-dark px-2 py-0.5 rounded border border-dashed border-amber text-sm no-underline hover:no-underline;
+  }
+
+  /* Blockquote testimonial styling */
+  .prose blockquote {
+    @apply border-l-4 border-coral bg-cream py-4 px-5 rounded-r-xl my-6 not-italic;
+  }
+
+  .prose blockquote p {
+    @apply text-charcoal italic;
+  }
+
+  .prose blockquote p:first-of-type::before,
+  .prose blockquote p:last-of-type::after {
+    content: none;
+  }
+
+  /* Table styling */
+  .prose table {
+    @apply w-full text-sm;
+  }
+
+  .prose thead th {
+    @apply bg-cream text-ink font-semibold text-left;
+  }
+
+  .prose tbody tr:nth-child(even) {
+    @apply bg-linen;
+  }
+
+  /* Responsive tables */
+  .prose .table-wrapper {
+    @apply overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0;
+  }
+
+  /* Heading anchor links */
+  .prose h2 a,
+  .prose h3 a {
+    @apply no-underline hover:no-underline;
+  }
+</style>

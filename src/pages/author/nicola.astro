@@ -1,0 +1,202 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import ArticleCard from '../../components/article/ArticleCard.astro';
+import Button from '../../components/ui/Button.astro';
+
+// Get all articles by Nicola (all articles)
+const pillar1 = await getCollection('pillar-1-adhd-sleep').catch(() => []);
+const pillar2 = await getCollection('pillar-2-sleep-apps').catch(() => []);
+const pillar3 = await getCollection('pillar-3-anxiety-apps').catch(() => []);
+const pillar4 = await getCollection('pillar-4-sensory-apps').catch(() => []);
+const pillar5 = await getCollection('pillar-5-adhd-apps').catch(() => []);
+const pillar6 = await getCollection('pillar-6-emotional-regulation').catch(() => []);
+const pillar7 = await getCollection('pillar-7-neurodivergent-parenting').catch(() => []);
+
+const pillarMap: Record<string, { id: number; name: string }> = {
+  'pillar-1-adhd-sleep': { id: 1, name: 'ADHD Sleep' },
+  'pillar-2-sleep-apps': { id: 2, name: 'Sleep Apps' },
+  'pillar-3-anxiety-apps': { id: 3, name: 'Anxiety Apps' },
+  'pillar-4-sensory-apps': { id: 4, name: 'Sensory Apps' },
+  'pillar-5-adhd-apps': { id: 5, name: 'ADHD Apps' },
+  'pillar-6-emotional-regulation': { id: 6, name: 'Emotional Regulation' },
+  'pillar-7-neurodivergent-parenting': { id: 7, name: 'Neurodivergent Parenting' },
+};
+
+const allCollections = [
+  { collection: 'pillar-1-adhd-sleep', articles: pillar1 },
+  { collection: 'pillar-2-sleep-apps', articles: pillar2 },
+  { collection: 'pillar-3-anxiety-apps', articles: pillar3 },
+  { collection: 'pillar-4-sensory-apps', articles: pillar4 },
+  { collection: 'pillar-5-adhd-apps', articles: pillar5 },
+  { collection: 'pillar-6-emotional-regulation', articles: pillar6 },
+  { collection: 'pillar-7-neurodivergent-parenting', articles: pillar7 },
+];
+
+const allArticles = allCollections.flatMap(({ collection, articles }) =>
+  articles.map(a => ({
+    ...a,
+    collection,
+    pillarId: pillarMap[collection].id,
+    pillarName: pillarMap[collection].name,
+  }))
+);
+
+// Sort by date (newest first)
+const sortedArticles = allArticles.sort((a, b) => {
+  const dateA = new Date(a.data.dateCreated || 0);
+  const dateB = new Date(b.data.dateCreated || 0);
+  return dateB.getTime() - dateA.getTime();
+});
+
+const credentials = [
+  {
+    title: 'Certified Neurodivergent Inclusive Coach',
+    description: 'Trained to support families navigating neurodivergence with understanding and practical strategies.',
+  },
+  {
+    title: 'ADHD Coach',
+    description: 'Specialised training in ADHD coaching techniques for children and families.',
+  },
+  {
+    title: 'Sound Therapy Practitioner',
+    description: 'Qualified in therapeutic sound applications for wellbeing and sensory support.',
+  },
+  {
+    title: '7 Years Nursery Experience',
+    description: 'Hands-on experience working with young children, including those with additional needs.',
+  },
+];
+
+const breadcrumbItems = [
+  { label: 'About Nicola' },
+];
+---
+
+<BaseLayout
+  title="About Nicola Maria Rose"
+  description="Meet Nicola Maria Rose, Certified Neurodivergent Inclusive Coach and creator of HushAway. Learn about her background and approach to supporting families."
+>
+  <div class="bg-linen">
+    <!-- Header -->
+    <section class="bg-gradient-to-b from-sage-50 to-linen border-b border-parchment">
+      <div class="container-content py-8 md:py-12">
+        <Breadcrumbs items={breadcrumbItems} />
+
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <!-- Photo placeholder -->
+          <div class="flex-shrink-0">
+            <div class="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-sage-100 flex items-center justify-center text-sage-600 font-heading text-4xl md:text-5xl font-semibold">
+              NR
+            </div>
+          </div>
+
+          <!-- Bio -->
+          <div class="flex-1">
+            <h1 class="font-heading text-3xl md:text-4xl font-semibold text-ink mb-2">
+              Nicola Maria Rose
+            </h1>
+            <p class="text-sage-600 font-medium mb-4">
+              Certified Neurodivergent Inclusive Coach
+            </p>
+            <p class="text-charcoal leading-relaxed max-w-2xl">
+              With seven years of experience working with families of neurodivergent children, I created HushAway to provide the gentle sound support I saw so many families needing. My approach is always neurodiversity-affirming: we support, not "fix". Every child deserves to feel safe in their body.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-12 md:py-16">
+      <div class="container-content">
+        <div class="max-w-3xl">
+          <h2 class="font-heading text-2xl font-semibold text-ink mb-6">My Story</h2>
+
+          <div class="prose prose-lg">
+            <p>
+              In my years working with families, I have seen the same pattern again and again: parents trying everything to help their children, often feeling like they are failing when approaches do not work. What I learned is that most strategies assume children can already engage. But for many neurodivergent children, the foundation needs to come first: feeling calm and regulated in their bodies.
+            </p>
+            <p>
+              This is why I created HushAway. Not as another app that demands more from already overwhelmed children, but as passive support that meets them where they are. No tasks to complete. No instructions to follow. Just gentle, sensory-friendly sounds that create a soft place to land.
+            </p>
+            <p>
+              The families I work with often tell me they have tried everything. What they usually have not tried is starting with the nervous system. When children feel calmer, they can access other skills. The focus app works better. The routine becomes followable. The homework gets done with fewer meltdowns.
+            </p>
+            <p>
+              Every article I write comes from this understanding: that parents need honest, research-backed guidance from someone who has seen what actually helps. Not marketing promises. Not one-size-fits-all solutions. Just gentle support for families navigating big feelings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials -->
+    <section class="bg-cream py-12 md:py-16">
+      <div class="container-content">
+        <h2 class="font-heading text-2xl font-semibold text-ink mb-8">Credentials</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {credentials.map((credential) => (
+            <div class="bg-white rounded-xl p-5 border border-parchment">
+              <h3 class="font-heading font-semibold text-ink mb-2">
+                {credential.title}
+              </h3>
+              <p class="text-slate text-sm">
+                {credential.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="py-12 md:py-16">
+      <div class="container-content">
+        <h2 class="font-heading text-2xl font-semibold text-ink mb-8">
+          Articles by Nicola
+        </h2>
+
+        {sortedArticles.length > 0 ? (
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sortedArticles.map((article) => (
+              <ArticleCard
+                title={article.data.title}
+                href={`/${article.collection}/${article.id.replace(/\.md$/, '')}`}
+                pillar={article.pillarId}
+                pillarName={article.pillarName}
+                articleNumber={article.data.articleNumber}
+                wordCount={article.data.wordCount}
+                isHub={article.data.articleNumber === 'HUB'}
+                status={article.data.status}
+              />
+            ))}
+          </div>
+        ) : (
+          <div class="text-center py-12 bg-cream rounded-2xl">
+            <p class="text-slate">Articles coming soon.</p>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="pb-16">
+      <div class="container-content">
+        <div class="cta-card text-center max-w-2xl mx-auto">
+          <h2 class="font-heading text-xl font-semibold text-ink mb-3">
+            Experience the Sound Sanctuary
+          </h2>
+          <p class="text-charcoal text-sm mb-5">
+            Discover the gentle sound support I created for families like yours. Sensory-friendly soundscapes designed for children who feel everything.
+          </p>
+          <Button href="https://hushaway.com/sound-sanctuary" variant="cta" external>
+            Explore the Sound Sanctuary
+          </Button>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

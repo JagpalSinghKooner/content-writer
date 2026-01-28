@@ -1,0 +1,63 @@
+---
+import '../styles/article.css';
+
+interface Props {
+  title: string;
+  pillar?: number;
+  pillarName?: string;
+  articleNumber?: string;
+  status?: string;
+  wordCount?: number;
+  minimumWordCount?: number;
+  targetKeyword?: string;
+  dateCreated?: string;
+  dateUpdated?: string;
+}
+
+const {
+  title,
+  pillar,
+  pillarName,
+  articleNumber,
+  status = 'draft',
+  wordCount = 0,
+  minimumWordCount,
+  targetKeyword,
+  dateCreated,
+  dateUpdated
+} = Astro.props;
+
+const wordCountDisplay = minimumWordCount
+  ? `${wordCount.toLocaleString()} / ${minimumWordCount.toLocaleString()} words`
+  : `${wordCount.toLocaleString()} words`;
+---
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title} | HushAway® Preview</title>
+</head>
+<body>
+  <article class="article-container">
+    <header class="article-meta">
+      {pillarName && (
+        <span class="pillar-badge">Pillar {pillar}: {pillarName}</span>
+      )}
+      <h1>{title}</h1>
+      <div class="meta-details">
+        {articleNumber && <span>Article: {articleNumber}</span>}
+        <span class={`status ${status}`}>{status}</span>
+        <span>{wordCountDisplay}</span>
+        {targetKeyword && <span>Keyword: {targetKeyword}</span>}
+        {dateUpdated && <span>Updated: {dateUpdated}</span>}
+      </div>
+    </header>
+
+    <main class="article-content">
+      <slot />
+    </main>
+  </article>
+</body>
+</html>

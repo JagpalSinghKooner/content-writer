@@ -1,0 +1,52 @@
+---
+interface Props {
+  variant?: 'sage' | 'coral' | 'amber' | 'mint' | 'lavender' | 'pillar';
+  pillar?: number;
+  size?: 'sm' | 'md';
+  class?: string;
+}
+
+const {
+  variant = 'sage',
+  pillar,
+  size = 'md',
+  class: className = '',
+} = Astro.props;
+
+const baseClasses = 'inline-flex items-center font-medium rounded-full';
+
+const sizeClasses = {
+  sm: 'px-2 py-0.5 text-xs',
+  md: 'px-2.5 py-0.5 text-sm',
+};
+
+const variantClasses = {
+  sage: 'bg-sage-100 text-sage-700',
+  coral: 'bg-coral-light text-coral-dark',
+  amber: 'bg-amber-light text-amber-dark',
+  mint: 'bg-mint-light text-mint-dark',
+  lavender: 'bg-lavender-light text-lavender-dark',
+  pillar: '', // Will use pillar-specific class
+};
+
+// Pillar-specific colours
+const pillarClasses: Record<number, string> = {
+  1: 'bg-sage-100 text-sage-700',
+  2: 'bg-mint-light text-mint-dark',
+  3: 'bg-lavender-light text-lavender-dark',
+  4: 'bg-sage-100 text-sage-600',
+  5: 'bg-sage-100 text-sage-700',
+  6: 'bg-coral-light text-coral-dark',
+  7: 'bg-lavender-light text-lavender-dark',
+};
+
+const colorClass = variant === 'pillar' && pillar
+  ? pillarClasses[pillar] || variantClasses.sage
+  : variantClasses[variant];
+
+const classes = [baseClasses, sizeClasses[size], colorClass, className].join(' ');
+---
+
+<span class={classes}>
+  <slot />
+</span>

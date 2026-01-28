@@ -1,0 +1,182 @@
+---
+const navigation = [
+  { name: 'Home', href: '/' },
+  {
+    name: 'Topics',
+    href: '#',
+    children: [
+      { name: 'ADHD Sleep', href: '/pillar/adhd-sleep', pillar: 1 },
+      { name: 'Sleep Apps', href: '/pillar/sleep-apps', pillar: 2 },
+      { name: 'Anxiety Apps', href: '/pillar/anxiety-apps', pillar: 3 },
+      { name: 'Sensory Apps', href: '/pillar/sensory-apps', pillar: 4 },
+      { name: 'ADHD Apps', href: '/pillar/adhd-apps', pillar: 5 },
+      { name: 'Emotional Regulation', href: '/pillar/emotional-regulation', pillar: 6 },
+      { name: 'Neurodivergent Parenting', href: '/pillar/neurodivergent-parenting', pillar: 7 },
+    ]
+  },
+  { name: 'About Nicola', href: '/author/nicola' },
+];
+---
+
+<header class="sticky top-0 z-40 bg-linen/95 backdrop-blur-sm border-b border-parchment">
+  <nav class="container-content" aria-label="Main navigation">
+    <div class="flex items-center justify-between h-16 md:h-18">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 text-ink hover:text-sage-600 transition-colors">
+        <span class="font-heading text-xl font-semibold">HushAway<sup class="text-xs">&reg;</sup></span>
+      </a>
+
+      <!-- Desktop navigation -->
+      <div class="hidden md:flex items-center gap-8">
+        {navigation.map((item) => (
+          item.children ? (
+            <div class="relative group">
+              <button
+                class="flex items-center gap-1 text-charcoal hover:text-sage-600 transition-colors font-medium"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                {item.name}
+                <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <!-- Dropdown -->
+              <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div class="bg-white rounded-xl shadow-medium border border-parchment py-2 min-w-[220px]">
+                  {item.children.map((child) => (
+                    <a
+                      href={child.href}
+                      class="flex items-center gap-3 px-4 py-2.5 text-charcoal hover:bg-cream hover:text-sage-600 transition-colors"
+                    >
+                      <span class={`w-2 h-2 rounded-full pillar-${child.pillar}`}></span>
+                      {child.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <a href={item.href} class="text-charcoal hover:text-sage-600 transition-colors font-medium">
+              {item.name}
+            </a>
+          )
+        ))}
+      </div>
+
+      <!-- CTA Button -->
+      <div class="hidden md:block">
+        <a
+          href="https://hushaway.com/sound-sanctuary"
+          class="btn-cta text-sm"
+          target="_blank"
+          rel="noopener"
+        >
+          Sound Sanctuary
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        type="button"
+        class="md:hidden p-2 -mr-2 text-charcoal hover:text-sage-600 transition-colors"
+        aria-label="Open menu"
+        data-mobile-menu-toggle
+      >
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile navigation -->
+  <div
+    class="md:hidden fixed inset-0 z-50 bg-linen transform translate-x-full transition-transform duration-300 ease-in-out"
+    data-mobile-menu
+    aria-hidden="true"
+  >
+    <div class="flex flex-col h-full">
+      <div class="flex items-center justify-between h-16 px-4 border-b border-parchment">
+        <span class="font-heading text-xl font-semibold text-ink">HushAway<sup class="text-xs">&reg;</sup></span>
+        <button
+          type="button"
+          class="p-2 -mr-2 text-charcoal hover:text-sage-600 transition-colors"
+          aria-label="Close menu"
+          data-mobile-menu-close
+        >
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex-1 px-4 py-6 overflow-y-auto">
+        <ul class="space-y-1">
+          <li>
+            <a href="/" class="block py-3 text-lg text-charcoal hover:text-sage-600 font-medium">Home</a>
+          </li>
+          <li class="pt-4">
+            <span class="text-sm font-medium text-slate uppercase tracking-wide">Topics</span>
+            <ul class="mt-2 space-y-1">
+              {navigation[1].children?.map((child) => (
+                <li>
+                  <a
+                    href={child.href}
+                    class="flex items-center gap-3 py-2.5 text-charcoal hover:text-sage-600"
+                  >
+                    <span class={`w-2 h-2 rounded-full pillar-${child.pillar}`}></span>
+                    {child.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li class="pt-4">
+            <a href="/author/nicola" class="block py-3 text-lg text-charcoal hover:text-sage-600 font-medium">
+              About Nicola
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="p-4 border-t border-parchment">
+        <a
+          href="https://hushaway.com/sound-sanctuary"
+          class="btn-cta w-full justify-center"
+          target="_blank"
+          rel="noopener"
+        >
+          Explore the Sound Sanctuary
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('[data-mobile-menu-toggle]');
+  const menuClose = document.querySelector('[data-mobile-menu-close]');
+  const mobileMenu = document.querySelector('[data-mobile-menu]');
+
+  function openMenu() {
+    mobileMenu?.classList.remove('translate-x-full');
+    mobileMenu?.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    mobileMenu?.classList.add('translate-x-full');
+    mobileMenu?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  menuToggle?.addEventListener('click', openMenu);
+  menuClose?.addEventListener('click', closeMenu);
+
+  // Close on escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+</script>

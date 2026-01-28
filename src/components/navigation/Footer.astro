@@ -1,0 +1,104 @@
+---
+const pillars = [
+  { name: 'ADHD Sleep', href: '/pillar/adhd-sleep' },
+  { name: 'Sleep Apps', href: '/pillar/sleep-apps' },
+  { name: 'Anxiety Apps', href: '/pillar/anxiety-apps' },
+  { name: 'Sensory Apps', href: '/pillar/sensory-apps' },
+  { name: 'ADHD Apps', href: '/pillar/adhd-apps' },
+  { name: 'Emotional Regulation', href: '/pillar/emotional-regulation' },
+  { name: 'Neurodivergent Parenting', href: '/pillar/neurodivergent-parenting' },
+];
+
+const resources = [
+  { name: 'About Nicola', href: '/author/nicola' },
+  { name: 'Sound Sanctuary', href: 'https://hushaway.com/sound-sanctuary', external: true },
+  { name: 'Main Site', href: 'https://hushaway.com', external: true },
+];
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-cream border-t border-parchment mt-auto">
+  <div class="container-content py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <!-- Brand column -->
+      <div class="lg:col-span-1">
+        <a href="/" class="inline-block">
+          <span class="font-heading text-xl font-semibold text-ink">HushAway<sup class="text-xs">&reg;</sup></span>
+        </a>
+        <p class="mt-4 text-slate text-sm leading-relaxed">
+          A soft place to land for families navigating big feelings. Gentle sound support designed for children who feel everything.
+        </p>
+      </div>
+
+      <!-- Topics column -->
+      <div>
+        <h3 class="font-heading text-ink font-semibold mb-4">Topics</h3>
+        <ul class="space-y-2.5">
+          {pillars.map((pillar) => (
+            <li>
+              <a href={pillar.href} class="text-slate hover:text-sage-600 text-sm transition-colors">
+                {pillar.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Resources column -->
+      <div>
+        <h3 class="font-heading text-ink font-semibold mb-4">Resources</h3>
+        <ul class="space-y-2.5">
+          {resources.map((resource) => (
+            <li>
+              <a
+                href={resource.href}
+                class="text-slate hover:text-sage-600 text-sm transition-colors inline-flex items-center gap-1"
+                target={resource.external ? '_blank' : undefined}
+                rel={resource.external ? 'noopener' : undefined}
+              >
+                {resource.name}
+                {resource.external && (
+                  <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Newsletter placeholder column -->
+      <div>
+        <h3 class="font-heading text-ink font-semibold mb-4">Stay Connected</h3>
+        <p class="text-slate text-sm mb-4">
+          Get gentle parenting insights and sound therapy tips delivered to your inbox.
+        </p>
+        <form class="space-y-3" onsubmit="return false;">
+          <input
+            type="email"
+            placeholder="Your email address"
+            class="w-full px-4 py-2.5 rounded-xl bg-white border border-stone text-charcoal placeholder:text-mist focus:border-sage-400 focus:ring-2 focus:ring-sage-100 text-sm"
+          />
+          <button type="submit" class="btn-primary w-full text-sm">
+            Subscribe
+          </button>
+        </form>
+        <p class="mt-2 text-xs text-mist">
+          No spam, unsubscribe anytime.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-12 pt-8 border-t border-parchment flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-slate text-sm">
+        &copy; {currentYear} HushAway<sup>&reg;</sup>. All rights reserved.
+      </p>
+      <p class="text-mist text-xs">
+        Created with care for families who need a soft place to land.
+      </p>
+    </div>
+  </div>
+</footer>

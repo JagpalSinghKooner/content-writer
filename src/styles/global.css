@@ -1,0 +1,220 @@
+/* Fonts - Fraunces */
+@import '@fontsource/fraunces/400.css';
+@import '@fontsource/fraunces/500.css';
+@import '@fontsource/fraunces/600.css';
+@import '@fontsource/fraunces/700.css';
+
+/* Fonts - Source Sans 3 */
+@import '@fontsource/source-sans-3/400.css';
+@import '@fontsource/source-sans-3/500.css';
+@import '@fontsource/source-sans-3/600.css';
+@import '@fontsource/source-sans-3/700.css';
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base layer customisations */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-linen text-charcoal font-body antialiased;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+  }
+
+  /* Focus states for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-sage-500 rounded;
+  }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-sage-200 text-ink;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-ink;
+  }
+
+  /* Links */
+  a {
+    @apply text-sage-600 transition-colors duration-200;
+  }
+
+  a:hover {
+    @apply text-sage-700;
+  }
+}
+
+/* Component layer */
+@layer components {
+  /* Skip link for accessibility */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-sage focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-medium;
+  }
+
+  /* Button variants */
+  .btn {
+    @apply inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-sage text-white hover:bg-sage-600 focus-visible:ring-sage-500;
+  }
+
+  .btn-secondary {
+    @apply btn border-2 border-sage text-sage hover:bg-sage-50 focus-visible:ring-sage-500;
+  }
+
+  .btn-cta {
+    @apply btn bg-coral text-ink hover:bg-coral-dark focus-visible:ring-coral;
+  }
+
+  .btn-ghost {
+    @apply btn text-charcoal hover:bg-cream focus-visible:ring-sage-500;
+  }
+
+  /* Badge variants */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-sage {
+    @apply badge bg-sage-100 text-sage-700;
+  }
+
+  .badge-coral {
+    @apply badge bg-coral-light text-coral-dark;
+  }
+
+  .badge-amber {
+    @apply badge bg-amber-light text-amber-dark;
+  }
+
+  .badge-mint {
+    @apply badge bg-mint-light text-mint-dark;
+  }
+
+  .badge-lavender {
+    @apply badge bg-lavender-light text-lavender-dark;
+  }
+
+  /* Card component */
+  .card {
+    @apply bg-white rounded-2xl shadow-soft border border-parchment overflow-hidden transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-medium hover:-translate-y-0.5;
+  }
+
+  /* Container widths */
+  .container-content {
+    @apply max-w-content mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-article {
+    @apply max-w-article mx-auto px-4 sm:px-6;
+  }
+
+  /* Prose enhancements for articles */
+  .prose-article {
+    @apply prose prose-lg;
+  }
+
+  /* Link placeholder styling for [LINK TO: ...] */
+  .link-placeholder {
+    @apply inline-block bg-amber-light/50 text-amber-dark px-2 py-0.5 rounded border border-dashed border-amber text-sm;
+  }
+
+  /* Reading progress bar */
+  .reading-progress {
+    @apply fixed top-0 left-0 h-0.5 bg-gradient-to-r from-sage to-coral z-50 transition-all duration-100;
+  }
+
+  /* Table of contents */
+  .toc-link {
+    @apply block py-1.5 text-sm text-slate hover:text-sage-600 transition-colors duration-200 border-l-2 border-transparent pl-3;
+  }
+
+  .toc-link-active {
+    @apply toc-link text-sage-600 border-l-sage-500 font-medium;
+  }
+
+  /* CTA card (Sound Sanctuary) */
+  .cta-card {
+    @apply bg-gradient-to-br from-sage-50 to-cream rounded-2xl p-6 sm:p-8 border border-sage-100;
+  }
+
+  /* Author card */
+  .author-card {
+    @apply flex flex-col sm:flex-row gap-4 sm:gap-6 items-start p-6 bg-cream rounded-2xl;
+  }
+
+  /* Article card for listings */
+  .article-card {
+    @apply card-hover p-5;
+  }
+
+  /* Pillar badge colours */
+  .pillar-1 { @apply bg-sage-100 text-sage-700; }
+  .pillar-2 { @apply bg-mint-light text-mint-dark; }
+  .pillar-3 { @apply bg-lavender-light text-lavender-dark; }
+  .pillar-4 { @apply bg-sage-100 text-sage-600; }
+  .pillar-5 { @apply bg-sage-100 text-sage-700; }
+  .pillar-6 { @apply bg-coral-light text-coral-dark; }
+  .pillar-7 { @apply bg-lavender-light text-lavender-dark; }
+
+  /* Testimonial/blockquote styling */
+  .testimonial {
+    @apply border-l-4 border-coral bg-cream py-4 px-5 rounded-r-xl my-6;
+  }
+
+  .testimonial-quote {
+    @apply italic text-charcoal leading-relaxed;
+  }
+
+  .testimonial-attribution {
+    @apply mt-3 text-sm text-slate not-italic;
+  }
+}
+
+/* Utility layer */
+@layer utilities {
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-sage to-coral bg-clip-text text-transparent;
+  }
+}

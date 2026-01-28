@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleLayout from '../components/layout/ArticleLayout.astro';
+
+export async function getStaticPaths() {
+  // All 7 content pillars
+  const collectionNames = [
+    'pillar-1-adhd-sleep',
+    'pillar-2-sleep-apps',
+    'pillar-3-anxiety-apps',
+    'pillar-4-sensory-apps',
+    'pillar-5-adhd-apps',
+    'pillar-6-emotional-regulation',
+    'pillar-7-neurodivergent-parenting',
+  ] as const;
+
+  const paths: Array<{ params: { slug: string }; props: { entry: any; collection: string } }> = [];
+
+  for (const collectionName of collectionNames) {
+    try {
+      const entries = await getCollection(collectionName);
+      for (const entry of entries) {
+        // Remove .md extension from the id for the URL slug
+        const slug = entry.id.replace(/\.md$/, '');
+        paths.push({
+          params: { slug: `${collectionName}/${slug}` },
+          props: { entry, collection: collectionName },
+        });
+      }
+    } catch {
+      // Collection may be empty, skip
+    }
+  }
+
+  return paths;
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await entry.render();
+---
+
+<ArticleLayout
+  title={entry.data.title || entry.id}
+  description={entry.data.metaDescription}
+  pillar={entry.data.pillar}
+  pillarName={entry.data.pillarName}
+  articleNumber={entry.data.articleNumber}
+  status={entry.data.status}
+  wordCount={entry.data.wordCount}
+  targetKeyword={entry.data.targetKeyword}
+  dateCreated={entry.data.dateCreated}
+  dateUpdated={entry.data.dateUpdated}
+  author={entry.data.author}
+  headings={headings}
+>
+  <Content />
+</ArticleLayout>

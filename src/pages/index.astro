@@ -1,0 +1,321 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import ArticleCard from '../components/article/ArticleCard.astro';
+import Badge from '../components/ui/Badge.astro';
+import Button from '../components/ui/Button.astro';
+
+// Get articles from all 7 pillars
+const pillar1 = await getCollection('pillar-1-adhd-sleep').catch(() => []);
+const pillar2 = await getCollection('pillar-2-sleep-apps').catch(() => []);
+const pillar3 = await getCollection('pillar-3-anxiety-apps').catch(() => []);
+const pillar4 = await getCollection('pillar-4-sensory-apps').catch(() => []);
+const pillar5 = await getCollection('pillar-5-adhd-apps').catch(() => []);
+const pillar6 = await getCollection('pillar-6-emotional-regulation').catch(() => []);
+const pillar7 = await getCollection('pillar-7-neurodivergent-parenting').catch(() => []);
+
+// Sort helper - hub articles first, then by article number
+const sortArticles = (articles: any[]) => {
+  return articles.sort((a, b) => {
+    const aNum = a.data.articleNumber || '';
+    const bNum = b.data.articleNumber || '';
+    if (aNum === 'PILLAR' || aNum === 'HUB') return -1;
+    if (bNum === 'PILLAR' || bNum === 'HUB') return 1;
+    return aNum.localeCompare(bNum);
+  });
+};
+
+// Pillar data with metadata
+const pillars = [
+  {
+    id: 1,
+    name: 'ADHD Sleep',
+    slug: 'adhd-sleep',
+    collection: 'pillar-1-adhd-sleep',
+    articles: sortArticles(pillar1),
+    volume: '5,000-8,000',
+    description: 'Helping children with ADHD find restful sleep',
+  },
+  {
+    id: 2,
+    name: 'Sleep Apps',
+    slug: 'sleep-apps',
+    collection: 'pillar-2-sleep-apps',
+    articles: sortArticles(pillar2),
+    volume: '8,000-12,000',
+    description: 'Age-appropriate sleep support for all children',
+  },
+  {
+    id: 3,
+    name: 'Anxiety Apps',
+    slug: 'anxiety-apps',
+    collection: 'pillar-3-anxiety-apps',
+    articles: sortArticles(pillar3),
+    volume: '4,000-6,000',
+    description: 'Gentle support for anxious children',
+  },
+  {
+    id: 4,
+    name: 'Sensory Apps',
+    slug: 'sensory-apps',
+    collection: 'pillar-4-sensory-apps',
+    articles: sortArticles(pillar4),
+    volume: '2,000-3,000',
+    description: 'Sensory-friendly tools and approaches',
+  },
+  {
+    id: 5,
+    name: 'ADHD Apps',
+    slug: 'adhd-apps',
+    collection: 'pillar-5-adhd-apps',
+    articles: sortArticles(pillar5),
+    volume: '25,000',
+    description: 'Finding what works for children with ADHD',
+  },
+  {
+    id: 6,
+    name: 'Emotional Regulation',
+    slug: 'emotional-regulation',
+    collection: 'pillar-6-emotional-regulation',
+    articles: sortArticles(pillar6),
+    volume: '1,000-2,000',
+    description: 'Supporting children with big feelings',
+  },
+  {
+    id: 7,
+    name: 'Neurodivergent Parenting',
+    slug: 'neurodivergent-parenting',
+    collection: 'pillar-7-neurodivergent-parenting',
+    articles: sortArticles(pillar7),
+    volume: '2,000-4,000',
+    description: 'Support for parents walking this path',
+  },
+];
+
+// Get all articles for display
+const allArticles = pillars.flatMap(p =>
+  p.articles.map(a => ({
+    ...a,
+    pillarId: p.id,
+    pillarName: p.name,
+    pillarSlug: p.slug,
+    collection: p.collection,
+  }))
+);
+
+// Separate hub articles for featured section
+const hubArticles = allArticles.filter(a => a.data.articleNumber === 'HUB');
+
+// Calculate totals
+const totalArticles = allArticles.length;
+---
+
+<BaseLayout
+  title="Blog"
+  description="Gentle, research-backed guidance for families of neurodivergent children. Explore articles about ADHD, sleep, anxiety, sensory support, and more."
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-sage-50 to-linen">
+    <div class="container-content py-16 md:py-24 text-center">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-ink mb-6 text-balance">
+        A soft place to land for families<br class="hidden sm:block" /> navigating big feelings
+      </h1>
+      <p class="text-lg md:text-xl text-charcoal max-w-2xl mx-auto mb-8 leading-relaxed">
+        Gentle, research-backed guidance from someone who understands what it is like to support children who feel everything.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="#articles" variant="primary" size="lg">
+          Explore Articles
+        </Button>
+        <Button href="https://hushaway.com/sound-sanctuary" variant="cta" size="lg" external>
+          Visit Sound Sanctuary
+        </Button>
+      </div>
+
+      <!-- Stats -->
+      <div class="mt-12 flex flex-wrap justify-center gap-8 text-center">
+        <div>
+          <p class="text-3xl font-heading font-semibold text-sage-600">{totalArticles}</p>
+          <p class="text-sm text-slate">Articles Published</p>
+        </div>
+        <div>
+          <p class="text-3xl font-heading font-semibold text-sage-600">7</p>
+          <p class="text-sm text-slate">Topic Areas</p>
+        </div>
+        <div>
+          <p class="text-3xl font-heading font-semibold text-sage-600">77</p>
+          <p class="text-sm text-slate">Articles Planned</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillar Filter Section -->
+  <section class="border-b border-parchment bg-white sticky top-16 z-30">
+    <div class="container-content py-4">
+      <div class="flex gap-2 overflow-x-auto scrollbar-hide pb-2 -mb-2">
+        <button
+          class="pillar-filter-btn active"
+          data-filter="all"
+        >
+          All Topics
+        </button>
+        {pillars.map((pillar) => (
+          <button
+            class="pillar-filter-btn"
+            data-filter={pillar.id}
+          >
+            <span class={`w-2 h-2 rounded-full pillar-${pillar.id} inline-block mr-1.5`}></span>
+            {pillar.name}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Hub Articles -->
+  {hubArticles.length > 0 && (
+    <section class="bg-cream py-12 md:py-16">
+      <div class="container-content">
+        <div class="flex items-center gap-3 mb-8">
+          <h2 class="font-heading text-2xl font-semibold text-ink">Start Here</h2>
+          <Badge variant="coral">Hub Articles</Badge>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {hubArticles.map((article) => (
+            <ArticleCard
+              title={article.data.title}
+              href={`/${article.collection}/${article.id.replace(/\.md$/, '')}`}
+              pillar={article.pillarId}
+              pillarName={article.pillarName}
+              articleNumber={article.data.articleNumber}
+              wordCount={article.data.wordCount}
+              isHub={true}
+              status={article.data.status}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- All Articles Grid -->
+  <section id="articles" class="py-12 md:py-16">
+    <div class="container-content">
+      <h2 class="font-heading text-2xl font-semibold text-ink mb-8">All Articles</h2>
+
+      {allArticles.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="article-grid">
+          {allArticles.map((article) => (
+            <div data-pillar={article.pillarId} class="article-item">
+              <ArticleCard
+                title={article.data.title}
+                href={`/${article.collection}/${article.id.replace(/\.md$/, '')}`}
+                pillar={article.pillarId}
+                pillarName={article.pillarName}
+                articleNumber={article.data.articleNumber}
+                wordCount={article.data.wordCount}
+                isHub={article.data.articleNumber === 'HUB'}
+                status={article.data.status}
+              />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-16">
+          <div class="w-16 h-16 rounded-full bg-sage-100 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-xl text-ink mb-2">No articles yet</h3>
+          <p class="text-slate">Articles are being written and will appear here soon.</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Pillar Overview Section -->
+  <section class="bg-cream py-12 md:py-16">
+    <div class="container-content">
+      <h2 class="font-heading text-2xl font-semibold text-ink mb-8">Browse by Topic</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {pillars.map((pillar) => (
+          <a
+            href={`/pillar/${pillar.slug}`}
+            class="card-hover p-5 group"
+          >
+            <div class="flex items-start gap-3">
+              <span class={`w-3 h-3 rounded-full pillar-${pillar.id} mt-1.5 flex-shrink-0`}></span>
+              <div>
+                <h3 class="font-heading font-semibold text-ink group-hover:text-sage-600 transition-colors">
+                  {pillar.name}
+                </h3>
+                <p class="text-sm text-slate mt-1">
+                  {pillar.description}
+                </p>
+                <p class="text-xs text-mist mt-2">
+                  {pillar.articles.length} / 11 articles
+                </p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24">
+    <div class="container-content">
+      <div class="cta-card text-center max-w-3xl mx-auto">
+        <h2 class="font-heading text-2xl md:text-3xl font-semibold text-ink mb-4">
+          Looking for gentle sound support?
+        </h2>
+        <p class="text-charcoal mb-6 max-w-xl mx-auto">
+          HushAway offers sensory-friendly soundscapes designed specifically for children who feel everything. No tasks to complete, no instructions to follow. Just a soft place to land.
+        </p>
+        <Button href="https://hushaway.com/sound-sanctuary" variant="cta" size="lg" external>
+          Explore the Sound Sanctuary
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .pillar-filter-btn {
+    @apply flex items-center whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-all duration-200;
+    @apply bg-white border border-parchment text-charcoal hover:border-sage-300 hover:text-sage-600;
+  }
+
+  .pillar-filter-btn.active {
+    @apply bg-sage text-white border-sage hover:bg-sage-600;
+  }
+</style>
+
+<script>
+  // Pillar filtering
+  const filterButtons = document.querySelectorAll('.pillar-filter-btn');
+  const articleItems = document.querySelectorAll<HTMLElement>('.article-item');
+
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      // Update active state
+      filterButtons.forEach((btn) => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      const filter = button.getAttribute('data-filter');
+
+      // Filter articles
+      articleItems.forEach((item) => {
+        const pillar = item.getAttribute('data-pillar');
+        if (filter === 'all' || pillar === filter) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

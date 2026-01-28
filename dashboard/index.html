@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HushAway® Content Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="dashboard-header">
+        <div class="header-content">
+            <h1>HushAway® Content Dashboard</h1>
+            <div class="header-actions">
+                <button id="refresh-btn" class="btn btn-secondary">Refresh</button>
+                <div class="filter-group">
+                    <label for="status-filter">Filter:</label>
+                    <select id="status-filter" class="filter-select">
+                        <option value="all">All Articles</option>
+                        <option value="draft">Draft</option>
+                        <option value="in-review">In Review</option>
+                        <option value="ready">Ready to Publish</option>
+                        <option value="published">Published</option>
+                    </select>
+                    <select id="pillar-filter" class="filter-select">
+                        <option value="all">All Pillars</option>
+                        <option value="1">Pillar 1: ADHD Sleep</option>
+                        <option value="2">Pillar 2: Sleep Apps</option>
+                        <option value="3">Pillar 3: Anxiety Apps</option>
+                        <option value="4">Pillar 4: Sensory Apps</option>
+                        <option value="5">Pillar 5: ADHD Apps</option>
+                        <option value="6">Pillar 6: Emotional Regulation</option>
+                        <option value="7">Pillar 7: Neurodivergent Parenting</option>
+                    </select>
+                    <select id="priority-filter" class="filter-select">
+                        <option value="all">All Priorities</option>
+                        <option value="HIGH">High Priority</option>
+                        <option value="MEDIUM">Medium Priority</option>
+                        <option value="LOW">Low Priority</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search articles, keywords..." />
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-section">
+            <div class="progress-info">
+                <span id="progress-text">0 of 77 articles (0%)</span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-label">Total Words:</span>
+                    <span id="total-words" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Search Volume:</span>
+                    <span id="total-volume" class="stat-value">76,300-122,100</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Draft:</span>
+                    <span id="draft-count" class="stat-value">77</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">In Review:</span>
+                    <span id="review-count" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Ready:</span>
+                    <span id="ready-count" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Published:</span>
+                    <span id="published-count" class="stat-value">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Pillar Cards Section -->
+        <section class="pillar-cards-section">
+            <h2>Content Pillars</h2>
+            <div id="pillar-cards" class="pillar-cards-grid">
+                <!-- Pillar cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Articles List Section -->
+        <section class="articles-section">
+            <div class="section-header">
+                <h2>Articles</h2>
+                <div class="view-toggles">
+                    <button id="view-cards" class="view-btn active">Cards</button>
+                    <button id="view-table" class="view-btn">Table</button>
+                </div>
+            </div>
+            <div id="articles-container" class="articles-grid">
+                <!-- Article cards will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Preview Modal -->
+    <div id="preview-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="preview-title">Article Preview</h2>
+                <button class="modal-close" onclick="closePreviewModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="preview-sidebar">
+                    <h3>Article Info</h3>
+                    <div id="preview-metadata"></div>
+                    <h3>Quality Checklist</h3>
+                    <div id="preview-checklist"></div>
+                </div>
+                <div class="preview-content">
+                    <div id="preview-article"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Article Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Article Details</h2>
+                <button class="modal-close" onclick="closeEditModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="edit-form">
+                    <input type="hidden" id="edit-article-id" />
+                    <div class="form-group">
+                        <label for="edit-status">Status:</label>
+                        <select id="edit-status" class="form-control">
+                            <option value="draft">Draft</option>
+                            <option value="in-review">In Review</option>
+                            <option value="ready">Ready to Publish</option>
+                            <option value="published">Published</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-word-count">Word Count:</label>
+                        <input type="number" id="edit-word-count" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-framer-url">Framer URL:</label>
+                        <input type="url" id="edit-framer-url" class="form-control" placeholder="https://..." />
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeEditModal()">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Article Modal -->
+    <div id="create-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create New Article</h2>
+                <button class="modal-close" onclick="closeCreateModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="create-article-info"></p>
+                <p>This will create a new markdown file from the template in the appropriate pillar folder.</p>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeCreateModal()">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmCreateArticle()">Create Article File</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
