@@ -373,13 +373,14 @@ Before writing ANY article (all steps automated):
 3. Run `/keyword-research` skill with context from the library
 4. **Auto-update `.claude/keyword-library.md`** with the validated keyword (all 6 columns required)
 5. Complete research file and pass Research Gate
-6. **READ `.claude/angle-library.md`** to see angles already used and patterns to avoid
-7. Run `/positioning-angles` skill with context from the library
-8. **Auto-update `.claude/angle-library.md`** with the selected angle (all 6 columns required)
-9. **READ both libraries** to confirm angle and keywords before writing
-10. Write with `/seo-content` skill
-11. Pass all 6 gates in order
-12. Auto-update `ARTICLE-ORDER.md` status once complete
+6. **Run `.claude/scripts/generate-research-summary.sh`** to create compact summary for skills
+7. **READ `.claude/angle-library.md`** to see angles already used and patterns to avoid
+8. Run `/positioning-angles` skill (reads summary, not full research file)
+9. **Auto-update `.claude/angle-library.md`** with the selected angle (all 6 columns required)
+10. **READ both libraries** to confirm angle and keywords before writing
+11. Write with `/seo-content` skill (reads summary, not full research file)
+12. Pass all 6 gates in order
+13. Auto-update `ARTICLE-ORDER.md` status once complete
 
 **Why READ libraries first?**
 - `keyword-library.md` shows existing keyword clusters for internal linking opportunities
