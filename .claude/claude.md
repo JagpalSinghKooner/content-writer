@@ -428,22 +428,25 @@ When current batch is complete:
 **After Research Gate passes, generate a research summary:**
 
 ```bash
-# Auto-generate research summary for skills to read (instead of full 800+ line research file)
-# Save to: .claude/scratchpad/research-summary.md
+.claude/scripts/generate-research-summary.sh [research-file]
+# Example: .claude/scripts/generate-research-summary.sh research/pillar-5-adhd-apps/5.1-focus-apps-research.md
 ```
 
-**Summary contents (extract from research file):**
+This script automatically extracts key data from the research file and saves a compact summary (90% smaller) to `.claude/scratchpad/research-summary.md`.
+
+**Summary contains:**
 - Target keyword + secondary keywords
 - Selected angle + headline direction
-- Key stats for citations (3-4 findings with source/year)
+- Key stats for citations (with source/year)
 - Competitor gaps for HushAway positioning
 - Top 5 PAA questions to address
 
 **Skills should read `.claude/scratchpad/research-summary.md` instead of full research file after Research Gate passes.**
 
-**Gate remediation:** When a gate fails, use `--remediate` flag on re-runs to only check failed sections:
+**Gate remediation:** When a gate fails, use `--remediate` flag on re-runs to suppress PASS output:
 ```bash
 .claude/scripts/master-gate.sh [article-file] [hub|cluster] --remediate
+.claude/scripts/check-conversion-gate.sh [article-file] --remediate
 ```
 
 ---

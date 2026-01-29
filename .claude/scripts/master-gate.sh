@@ -44,14 +44,6 @@ pass_msg() {
     fi
 }
 
-# Helper function for section headers (suppressed in remediate mode)
-section_header() {
-    if [ "$QUIET_PASS" = false ]; then
-        echo ""
-        echo ">>> SECTION $1"
-    fi
-}
-
 if [ -z "$FILE" ] || [ -z "$TYPE" ]; then
     echo "============================================================================"
     echo "ERROR: Both filename and article type are REQUIRED"
