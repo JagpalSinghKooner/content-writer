@@ -319,12 +319,22 @@ Example: `/research/pillar-7-neurodivergent-parenting/hub-research.md`
 .claude/scripts/generate-research-summary.sh research/pillar-5-adhd-apps/5.1-focus-apps-research.md
 ```
 
-**This script:**
+**This script automatically:**
 1. Extracts key data from the research file (keywords, angle, stats, gaps, PAA)
-2. Saves a compact summary (90% smaller) to `.claude/scratchpad/research-summary.md`
-3. Skills will read the summary instead of full research file to prevent context exhaustion
+2. **Auto-pulls E-E-A-T citations from `research/eeat-library.md` based on pillar**
+3. Saves a compact summary (90% smaller) to `.claude/scratchpad/research-summary.md`
+4. Skills will read the summary instead of full research file to prevent context exhaustion
+
+**E-E-A-T Citation Mapping (Automatic):**
+| Pillar | Citations Auto-Pulled |
+|--------|----------------------|
+| 1 (ADHD Sleep) | Sleep Problems + UK Stats |
+| 5 (ADHD Apps) | Parenting Stress + UK Stats |
+| 7 (Neurodivergent Parenting) | Parenting Stress + Caregiver Burnout + UK Stats |
 
 **This step is MANDATORY. Skills expect the summary to exist.**
+
+**No manual E-E-A-T lookup required.** Pre-formatted citations are included in the summary, ready to use in the article.
 
 **Note:** The summary file is automatically overwritten for each new article - no cleanup required.
 

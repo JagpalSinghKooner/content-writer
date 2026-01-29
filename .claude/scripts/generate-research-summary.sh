@@ -77,6 +77,63 @@ flag && /^    year:/{gsub(/^    year:/, ""); gsub(/"/, ""); year=$0}
 flag && /^    finding:/{gsub(/^    finding:/, ""); gsub(/"/, ""); finding=$0; print "| " source " | " year " | " finding " |"}
 ' "$RESEARCH_FILE" | head -4)
 
+# --- Extract E-E-A-T citations based on pillar ---
+EEAT_LIBRARY="research/eeat-library.md"
+PILLAR_NUM=$(echo "$RESEARCH_FILE" | grep -oE 'pillar-[0-9]+' | grep -oE '[0-9]+')
+
+# Function to extract citations from a section
+extract_section_citations() {
+    local section_name="$1"
+    local library="$2"
+    # Extract the "How to Cite (Warm)" column from tables in the section
+    awk -v section="$section_name" '
+    $0 ~ "## " section {found=1; next}
+    found && /^## / {found=0}
+    found && /^\|.*\|.*\|.*\|.*\|.*\|$/ && !/Statistic.*Source.*Year/ && !/---/ {
+        # Split by | and get last column (How to Cite)
+        n = split($0, cols, "|")
+        if (n >= 6) {
+            cite = cols[6]
+            gsub(/^[[:space:]]+|[[:space:]]+$/, "", cite)
+            if (cite != "" && cite !~ /How to Cite/) {
+                print "- " cite
+            }
+        }
+    }
+    ' "$library"
+}
+
+EEAT_CITATIONS=""
+
+if [ -f "$EEAT_LIBRARY" ]; then
+    case "$PILLAR_NUM" in
+        1)
+            # ADHD Sleep → Sleep Problems + UK Stats
+            EEAT_CITATIONS=$(extract_section_citations "Sleep Problems in ADHD Children" "$EEAT_LIBRARY")
+            EEAT_CITATIONS="$EEAT_CITATIONS"$'\n'"$(extract_section_citations "UK-Specific Statistics" "$EEAT_LIBRARY" | head -2)"
+            ;;
+        5)
+            # ADHD Apps → Parenting Stress (apps help with focus/stress) + UK Stats
+            EEAT_CITATIONS=$(extract_section_citations "Parenting Stress and Mental Health" "$EEAT_LIBRARY" | head -3)
+            EEAT_CITATIONS="$EEAT_CITATIONS"$'\n'"$(extract_section_citations "UK-Specific Statistics" "$EEAT_LIBRARY" | head -2)"
+            ;;
+        7)
+            # Neurodivergent Parenting → Parenting Stress + Caregiver Burnout + UK Stats
+            EEAT_CITATIONS=$(extract_section_citations "Parenting Stress and Mental Health" "$EEAT_LIBRARY" | head -2)
+            EEAT_CITATIONS="$EEAT_CITATIONS"$'\n'"$(extract_section_citations "Caregiver Burnout" "$EEAT_LIBRARY" | head -2)"
+            EEAT_CITATIONS="$EEAT_CITATIONS"$'\n'"$(extract_section_citations "UK-Specific Statistics" "$EEAT_LIBRARY" | head -2)"
+            ;;
+        *)
+            # Default: UK Stats + General Parenting
+            EEAT_CITATIONS=$(extract_section_citations "Parenting Stress and Mental Health" "$EEAT_LIBRARY" | head -2)
+            EEAT_CITATIONS="$EEAT_CITATIONS"$'\n'"$(extract_section_citations "UK-Specific Statistics" "$EEAT_LIBRARY" | head -2)"
+            ;;
+    esac
+fi
+
+# Clean up empty lines from citations
+EEAT_CITATIONS=$(echo "$EEAT_CITATIONS" | grep -v '^$' | head -6)
+
 # --- Generate summary file ---
 
 cat > "$OUTPUT_FILE" << EOF
@@ -106,11 +163,19 @@ $SECONDARY_KEYWORDS
 
 ---
 
-## Key Stats for Citations
+## Key Stats for Citations (From Research)
 
 | Source | Year | Finding |
 |--------|------|---------|
 $RESEARCH_SOURCES
+
+---
+
+## E-E-A-T Citations (Auto-Pulled from Library)
+
+**Use these pre-formatted citations in the article:**
+
+$EEAT_CITATIONS
 
 ---
 
