@@ -10,23 +10,27 @@ This is the quick workflow reference for writing SEO articles. Articles are writ
 
 **ALL RULES ARE HARD FORCED. NO ESCAPES. NO EXCEPTIONS.**
 
-The workflow has **FIVE mandatory gates**. An article cannot proceed until each gate shows PASS/OPEN/UNLOCKED.
+**ALWAYS START WITH `/orchestrator`** - It diagnoses the optimal approach and routes to the right skills.
+
+The workflow has **SIX mandatory gates**. An article cannot proceed until each gate shows PASS. All gates are fully automated.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                         5-GATE CONTENT WORKFLOW                              │
+│                         6-GATE CONTENT WORKFLOW                              │
 └─────────────────────────────────────────────────────────────────────────────┘
 
-STEP 1: Choose Article ─────────────── Seed from claude.md keywords table
+STEP 0: Run /orchestrator ──────────── Entry point: diagnoses needs, routes to skills
            │
-STEP 2: Run /keyword-research ──────── Validate + expand keywords
+STEP 1: Choose Article ─────────────── Select from ARTICLE-ORDER.md
+           │
+STEP 2: Run /keyword-research ──────── Validate keywords + Perplexity MCP (MANDATORY)
            │
            ▼
     ┌──────────────┐
-    │ KEYWORD GATE │ ← Gate 1: Keywords validated & table updated
+    │ KEYWORD GATE │ ← Gate 1: Keywords validated + Perplexity verified
     └──────────────┘
            │
-STEP 3: Complete Research ──────────── Competitors, PAA, sources
+STEP 3: Complete Research ──────────── Review Perplexity data + remaining sections
            │
            ▼
     ┌──────────────┐
@@ -42,6 +46,8 @@ STEP 4: Run /positioning-angles ────── Find article-specific angle
            │
 STEP 5: Plan HushAway® Prominence ──── Using selected angle
            │
+STEP 5.5: Verify Libraries ────────── Pre-flight check (keyword + angle entries exist)
+           │
 STEP 6: Write with /seo-content ────── Article creation
            │
            ▼
@@ -49,100 +55,154 @@ STEP 6: Write with /seo-content ────── Article creation
     │ CONTENT GATE │ ← Gate 4: Content passes 23 checks
     └──────────────┘
            │
+STEP 7a: Run /direct-response-copy ─── Conversion review (skill FIRST)
+           │
+STEP 7b: Run check-conversion-gate.sh ── Conversion verification (script SECOND)
+           │
+           ▼
+    ┌────────────────┐
+    │ CONVERSION GATE│ ← Gate 5: Conversion elements verified
+    └────────────────┘
+           │
            ▼
     ┌──────────────┐
-    │  FINAL GATE  │ ← Gate 5: All checks complete
+    │  FINAL GATE  │ ← Gate 6: All checks complete
     └──────────────┘
            │
-STEP 7: Preview & Export
+STEP 8: Preview & Export
 ```
 
 ---
 
-### Gate 1: Keyword Gate (After Keyword Research) - NEW
+### Gate 1: Keyword Gate (After Keyword Research + Perplexity)
 ```bash
 .claude/scripts/check-keyword-gate.sh [research-file]
 ```
-- **Must show:** `KEYWORD GATE: UNLOCKED`
-- **Checks:** keywordStatus, target keyword validated, secondary keywords (5+), search volume, keyword cluster complete
-- **Exit code:** 0 = proceed, 1 = blocked
-- **Requirement:** claude.md keywords table MUST be updated with validated keyword and secondaries
-- **Research CANNOT begin until this gate is unlocked**
+- **Must show:** `KEYWORD GATE: PASS`
+- **Checks:** keywordStatus, target keyword validated, secondary keywords (5+), **perplexityUsed: true**, PAA questions (7+), competitor gaps, research sources
+- **Exit code:** 0 = PASS, 1 = FAIL
+- **Auto-update:** On PASS, automatically adds entry to `.claude/keyword-library.md`
+- **Requirement:** Perplexity MCP must be used during keyword research
+- **Research CANNOT begin until this gate shows PASS**
 
 ### Gate 2: Research Gate (After Research Complete)
 ```bash
 .claude/scripts/check-research-gate.sh [research-file]
 ```
-- **Must show:** `RESEARCH GATE: UNLOCKED`
+- **Must show:** `RESEARCH GATE: PASS`
 - **Checks:** gateStatus, researchStatus, keywords, search intent, competitor gaps, PAA questions, sources
-- **Exit code:** 0 = proceed, 1 = blocked
-- **Positioning CANNOT begin until this gate is unlocked**
+- **Exit code:** 0 = PASS, 1 = FAIL
+- **Positioning CANNOT begin until this gate shows PASS**
 
-### Gate 3: Angle Gate (After Positioning Angles) - NEW
+### Gate 3: Angle Gate (After Positioning Angles)
 ```bash
 .claude/scripts/check-angle-gate.sh [research-file]
 ```
-- **Must show:** `ANGLE GATE: UNLOCKED`
+- **Must show:** `ANGLE GATE: PASS`
 - **Checks:** angleStatus, selected angle documented, headline direction, counter-positions defined
-- **Exit code:** 0 = proceed, 1 = blocked
-- **Writing CANNOT begin until this gate is unlocked**
+- **Exit code:** 0 = PASS, 1 = FAIL
+- **Auto-update:** On PASS, automatically adds entry to `.claude/angle-library.md`
+- **Writing CANNOT begin until this gate shows PASS**
 
 ### Gate 4: Content Gate (After Writing)
 ```bash
 .claude/scripts/master-gate.sh [article-file] [hub|cluster]
 ```
-- **Must show:** `GATE STATUS: OPEN`
+- **Must show:** `CONTENT GATE: PASS`
 - **Checks:** 23 sections covering all humanise-content.md rules
-- **Exit code:** 0 = proceed, 1 = blocked
-- **Preview/export CANNOT proceed until this gate is open**
+- **Exit code:** 0 = PASS, 1 = FAIL
+- **Conversion review CANNOT begin until this gate shows PASS**
 
-### Gate 5: Final Gate (Before Export)
-- Word count verified (3000+ hub, 1500+ cluster)
-- All frontmatter complete
-- Gate 4 passed with zero failures
-- **Export CANNOT proceed until all checks pass**
+### Gate 5: Conversion Gate (After Content Gate)
+
+**This gate requires TWO steps:**
+1. Run `/direct-response-copy` skill for AI-assisted conversion review
+2. Run `check-conversion-gate.sh` script for automated verification
+
+```bash
+.claude/scripts/check-conversion-gate.sh [article-file]
+```
+- **Must show:** `CONVERSION GATE: PASS`
+- **Checks:** 7 automated checks for conversion elements
+- **Exit code:** 0 = PASS, 1 = FAIL
+- **Final Gate CANNOT proceed until this gate shows PASS**
+
+**Remediation:** If script shows FAIL, fix issues and re-run script only (not the skill again).
+
+**Automated Checks (7 total):**
+
+| Check | Requirement |
+|-------|-------------|
+| 1. Parent Objections | At least 2 of 4 objections addressed |
+| 2. CTA Clarity | "Free forever" language present |
+| 3. Low-Friction | No commitment barriers (no "trial", "subscribe") |
+| 4. Differentiation | 3+ neurodivergent-first mentions |
+| 5. HushAway® Prominence | 5+ mentions, 2+ in conversion contexts |
+| 6. Sound Sanctuary CTA | 2+ mentions of destination |
+| 7. Risk Reversal | Risk-free language present |
+
+**Parent Objections Detected:**
+1. "Another app won't help" → passive sound, no engagement required
+2. "Too tired to try" → zero learning curve, just press play
+3. "Is this actually different?" → neurodivergent-first, not adapted generic
+4. "What if my child won't use it?" → free forever, nothing to lose
+
+### Gate 6: Final Gate (Before Export)
+```bash
+.claude/scripts/check-final-gate.sh [article-file] [hub|cluster]
+```
+- **Must show:** `FINAL GATE: PASS`
+- **Checks:** Frontmatter complete (title, meta, dates), word count, file location, trademark verification
+- **Exit code:** 0 = proceed, 1 = blocked
+- **Auto-update:** On PASS, automatically updates status in `ARTICLE-ORDER.md`
+- **Export CANNOT proceed until this gate passes**
+
+**This gate is FULLY AUTOMATED. No manual verification required.**
 
 ### Enforcement Rules
-1. **No manual overrides** - If a gate fails, fix the content and re-run
+1. **All gates automated** - Every gate has a script. If a gate fails, fix the content and re-run the script
 2. **No partial passes** - ALL checks must pass, not just most
 3. **No skipping gates** - Each gate must be run in sequence
 4. **No exceptions** - These rules apply to every article, every time
-5. **Skills are MANDATORY** - /keyword-research and /positioning-angles must run, not optional
+5. **Skills are MANDATORY** - /orchestrator, /keyword-research, /positioning-angles, /seo-content, and /direct-response-copy must ALL run
+6. **Gate 5 requires BOTH** - Run /direct-response-copy skill first, THEN run check-conversion-gate.sh script
 
 ---
 
 ## Quick Start
 
-1. Check `.claude/claude.md` for brand voice and keywords table (seed keyword)
-2. **Run `/keyword-research` skill** to validate and expand keywords
-3. **Run keyword gate:** `.claude/scripts/check-keyword-gate.sh [research-file]` - MUST show UNLOCKED
-4. **Update claude.md table** with validated keyword and secondary keywords
-5. Complete research for the article (competitors, PAA, sources)
-6. **Run research gate:** `.claude/scripts/check-research-gate.sh [research-file]` - MUST show UNLOCKED
-7. **Run `/positioning-angles` skill** to find article-specific angle
-8. **Run angle gate:** `.claude/scripts/check-angle-gate.sh [research-file]` - MUST show UNLOCKED
-9. Complete HushAway® Prominence Planning using the selected angle
-10. Use `/seo-content` skill to write the article
-11. **Run content gate:** `.claude/scripts/master-gate.sh [filename] [hub|cluster]` - MUST show OPEN
-12. Fix any failures, re-run until GATE OPEN
-13. Preview with `npm run dev`
-14. Final checks complete, export to main website
+**Always start with `/orchestrator`** - It will guide you through the workflow.
+
+0. **Run `/orchestrator` skill** - Entry point that diagnoses needs and routes to right skills
+1. **READ `ARTICLE-ORDER.md`** to select next article in priority order
+2. **READ `.claude/keyword-library.md`** to see previously validated keywords
+3. **Run `/keyword-research` skill** to validate and expand keywords
+4. **Run keyword gate:** `.claude/scripts/check-keyword-gate.sh [research-file]` - MUST show PASS (auto-updates keyword library)
+5. **Update research file** with validated keyword and secondary keywords
+6. Complete research for the article (competitors, PAA, sources)
+7. **Run research gate:** `.claude/scripts/check-research-gate.sh [research-file]` - MUST show PASS
+8. **READ `.claude/angle-library.md`** to see all angles already used
+9. **Run `/positioning-angles` skill** to find article-specific angle
+10. **Run angle gate:** `.claude/scripts/check-angle-gate.sh [research-file]` - MUST show PASS (auto-updates angle library)
+11. Complete HushAway® Prominence Planning using the selected angle
+12. **VERIFY both libraries** have entries for this article before writing
+13. Use `/seo-content` skill to write the article
+14. **Run content gate:** `.claude/scripts/master-gate.sh [filename] [hub|cluster]` - MUST show PASS
+15. Fix any failures, re-run script until PASS
+16. **Run `/direct-response-copy` skill** for conversion review
+17. **Run conversion gate:** `.claude/scripts/check-conversion-gate.sh [article-file]` - MUST show PASS
+18. Fix any conversion issues, re-run script until PASS
+19. **Run final gate:** `.claude/scripts/check-final-gate.sh [article-file] [hub|cluster]` - MUST show PASS (auto-updates ARTICLE-ORDER.md)
+20. Preview with `npm run dev`
+21. Export to main website
 
 ---
 
 ## Step 1: Choose Article (Seed Keyword)
 
-Open `claude.md` and select the next article from the keywords table. **The table provides SEED keywords - these are starting points, not final targets.**
+Open `ARTICLE-ORDER.md` and select the next article in priority order. **The keywords provided are SEED keywords - starting points, not final targets.**
 
-Follow pillar priority order:
-
-1. Pillar 5: ADHD Apps (25,000 searches) - START HERE
-2. Pillar 2: Sleep Apps for Kids (8,000-12,000)
-3. Pillar 1: ADHD Sleep Support (5,000-8,000)
-4. Pillar 3: Anxiety Apps (4,000-6,000)
-5. Pillar 4: Sensory Friendly Apps (2,000-3,000)
-6. Pillar 7: Neurodivergent Parenting (2,000-4,000)
-7. Pillar 6: Emotional Regulation (1,000-2,000)
+The file lists articles by search volume (highest first) with status tracking and prompts for each article.
 
 **Note:** The seed keyword will be validated and potentially improved in Step 2.
 
@@ -154,13 +214,22 @@ Follow pillar priority order:
 
 This is NOT optional. Every article requires dynamic keyword validation.
 
+**Perplexity MCP is REQUIRED.** The Keyword Gate will FAIL without it.
+- Ensure Perplexity MCP is configured: `claude mcp add perplexity --env PERPLEXITY_API_KEY=<your-key>`
+- The skill uses Perplexity for PAA questions, competitor analysis, and research sources
+- Gate 1 checks `perplexityUsed: true` in the research file
+
+### Before running skill:
+1. **READ `.claude/keyword-library.md`** to see previously validated keywords
+2. Note existing keywords for clustering opportunities
+
 ### Invoke the skill:
 ```
 /keyword-research
 ```
 
 ### Provide context:
-- **Seed keyword:** [from claude.md table]
+- **Seed keyword:** [from ARTICLE-ORDER.md]
 - **Pillar topic:** [pillar name]
 - **Content type:** [Hub or Cluster]
 - **Business context:** HushAway® sound therapy for neurodivergent children
@@ -180,22 +249,24 @@ This is NOT optional. Every article requires dynamic keyword validation.
    - Full secondary keywords list
    - Search volume data
 
-2. **Update claude.md keywords table** with:
-   - Validated target keyword (if different from seed)
-   - Secondary keywords column
+2. **Auto-update `.claude/keyword-library.md`** with validated keyword:
+   - Add new row to "Validated Keywords" table
+   - Include: Article, Pillar, Target Keyword, Volume, Secondary Keywords, Date
 
 3. **Run the Keyword Gate:**
 ```bash
 .claude/scripts/check-keyword-gate.sh [research-file]
 ```
 
-**MUST show `KEYWORD GATE: UNLOCKED` before proceeding to Step 3.**
+**MUST show `KEYWORD GATE: PASS` before proceeding to Step 3.**
 
 ---
 
 ## Step 3: Complete Research
 
-**After Keyword Gate is unlocked**, complete research for the article.
+**After Keyword Gate passes**, complete research for the article.
+
+**Note:** Perplexity MCP already populated key research sections during Step 2. This step completes the remaining sections and reviews the Perplexity data.
 
 **Research file location:**
 ```
@@ -228,7 +299,7 @@ Example: `/research/pillar-7-neurodivergent-parenting/hub-research.md`
 .claude/scripts/check-research-gate.sh [research-file]
 ```
 
-**MUST show `RESEARCH GATE: UNLOCKED` before proceeding to Step 4.**
+**MUST show `RESEARCH GATE: PASS` before proceeding to Step 4.**
 
 ---
 
@@ -237,6 +308,11 @@ Example: `/research/pillar-7-neurodivergent-parenting/hub-research.md`
 **After Research Gate is unlocked, run the `/positioning-angles` skill.**
 
 This is NOT optional. Every article requires a dynamic, article-specific angle.
+
+### Before running skill:
+1. **READ `.claude/angle-library.md`** to see all angles already used
+2. Note any patterns that have been overused
+3. Prioritise fresh angles that haven't been used before
 
 ### Invoke the skill:
 ```
@@ -271,12 +347,17 @@ This is NOT optional. Every article requires a dynamic, article-specific angle.
      - "[Counter-position for competitor category 2]"
    ```
 
-3. **Run the Angle Gate:**
+3. **Auto-update `.claude/angle-library.md`** with selected angle:
+   - Add new row to "Angles Used" table
+   - Include: Article, Pillar, Angle Name, Core Insight, Headline Direction, Date
+   - Update "Pattern Tracking" if a recurring theme is identified
+
+4. **Run the Angle Gate:**
 ```bash
 .claude/scripts/check-angle-gate.sh [research-file]
 ```
 
-**MUST show `ANGLE GATE: UNLOCKED` before proceeding to Step 5.**
+**MUST show `ANGLE GATE: PASS` before proceeding to Step 5.**
 
 ---
 
@@ -393,17 +474,17 @@ Requirements:
 
 ### Gate Status
 
-**OPEN (exit code 0):** All checks passed. Proceed to Step 6.
+**PASS (exit code 0):** All checks passed. Proceed to next gate.
 
-**CLOSED (exit code 1):** Failures found.
+**FAIL (exit code 1):** Failures found.
 1. Review failures listed in output
 2. Fix ALL failures in article
-3. Re-run script
-4. Repeat until OPEN
+3. Re-run script (NOT the skill)
+4. Repeat until PASS
 
-**Do NOT proceed with CLOSED gate. No exceptions.**
+**Do NOT proceed with FAIL. No exceptions.**
 
-**All checks are fully automated.** The gate now includes 22 sections covering:
+**All checks are fully automated.** The gate now includes 23 sections covering:
 - Banned words, phrases, and AI-isms
 - Frequency limits and intensifiers
 - Structural patterns (per-section limits, consecutive patterns)
@@ -414,7 +495,59 @@ Requirements:
 - Section length variety (auto-detected)
 - External link sources (UK-approved check)
 
-**GATE OPEN = Article passes. GATE CLOSED = Fix and re-run. No manual steps required.**
+**PASS = Proceed to next gate. FAIL = Fix and re-run script. All gates are fully automated.**
+
+---
+
+## Step 7.5: Run Conversion Gate (MANDATORY)
+
+**After Content Gate shows PASS:**
+1. Run `/direct-response-copy` skill for AI-assisted conversion review
+2. Run `check-conversion-gate.sh` script for automated verification
+
+```bash
+.claude/scripts/check-conversion-gate.sh [article-file]
+```
+
+Example:
+```bash
+.claude/scripts/check-conversion-gate.sh src/content/pillar-5-adhd-apps/hub-adhd-apps.md
+```
+
+### What the Script Checks (7 Automated Checks)
+
+| Check | Requirement | Auto-Detection |
+|-------|-------------|----------------|
+| 1. Parent Objections | 2+ of 4 objections addressed | Keyword patterns |
+| 2. CTA Clarity | "Free forever" language | Text matching |
+| 3. Low-Friction | No commitment barriers | Banned phrase detection |
+| 4. Differentiation | 3+ neurodivergent-first mentions | Pattern count |
+| 5. HushAway® Prominence | 5+ total, 2+ in conversion contexts | Context analysis |
+| 6. Sound Sanctuary CTA | 2+ mentions | Text count |
+| 7. Risk Reversal | Risk-free language present | Pattern matching |
+
+### Gate Status
+
+**PASS (exit code 0):** All checks passed. Proceed to Final Gate.
+
+**FAIL (exit code 1):** Failures found.
+1. Review failures listed in output
+2. Fix ALL failures in article
+3. Re-run script (NOT the skill again)
+4. Repeat until PASS
+
+**Remediation:** Skill runs once. After initial review, only re-run the script.
+
+### Parent Objections (Auto-Detected)
+
+| Objection | Keywords Detected |
+|-----------|-------------------|
+| "Another app won't help" | passive sound, no engagement, just listen |
+| "Too tired to try" | zero learning curve, just press play, no setup |
+| "Is this actually different?" | neurodivergent-first, designed specifically, not adapted |
+| "What if my child won't use it?" | free forever, nothing to lose, no risk |
+
+**All checks are fully automated. PASS = proceed to Final Gate. FAIL = fix and re-run script.**
 
 ---
 
@@ -455,15 +588,21 @@ Open `http://localhost:4321` to view the article.
 
 ---
 
-## Step 9: Export to Main Site
+## Step 9: Update Tracking and Export to Main Site
 
-When article passes quality check:
-1. Copy markdown content (meta description is in frontmatter)
-2. Paste into main HushAway® website CMS
-3. Add featured image
-4. Replace any `[LINK TO: Article Title]` placeholders with actual links
-5. Publish
-6. Update status in local file to `published`
+**After Final Gate shows PASS:**
+
+1. **Update `ARTICLE-ORDER.md`:**
+   - Mark article checkbox as complete: `- [x]`
+   - This tracks overall progress across all articles
+
+2. **Export to main site:**
+   - Copy markdown content (meta description is in frontmatter)
+   - Paste into main HushAway® website CMS
+   - Add featured image
+   - Replace any `[LINK TO: Article Title]` placeholders with actual links
+   - Publish
+   - Update status in local file to `published`
 
 ---
 
@@ -509,14 +648,19 @@ Hub articles need 8-10 internal links, cluster articles need 4-6. Include cross-
   - [X.X]-[slug]-research.md            - Cluster research (e.g., 7.1-parent-burnout-research.md)
 /templates/                             - Research template
 /dashboard/                             - Progress tracking (HTML dashboard)
-/.claude/claude.md                      - Brand voice, product info, pillar table (SEED keywords)
+/ARTICLE-ORDER.md                       - Full article list, priority order, status tracking, prompts
+/.claude/claude.md                      - Brand voice, product info, rules reference
 /.claude/agents.md                      - This workflow guide
+/.claude/angle-library.md               - Central angle registry (grows dynamically)
+/.claude/keyword-library.md             - Central keyword registry (grows dynamically)
 /.claude/humanise-content.md           - Master content rules (50+ banned words, limits)
-/.claude/scripts/check-keyword-gate.sh - Keyword gate (after /keyword-research)
-/.claude/scripts/check-research-gate.sh - Research gate (after research complete)
-/.claude/scripts/check-angle-gate.sh   - Angle gate (after /positioning-angles)
-/.claude/scripts/master-gate.sh        - Content gate (23 sections)
-/.claude/skills/write-article.md       - Detailed article writing process
+/.claude/scripts/check-keyword-gate.sh    - Keyword gate (after /keyword-research)
+/.claude/scripts/check-research-gate.sh  - Research gate (after research complete)
+/.claude/scripts/check-angle-gate.sh     - Angle gate (after /positioning-angles)
+/.claude/scripts/master-gate.sh          - Content gate (23 sections)
+/.claude/scripts/check-conversion-gate.sh - Conversion gate (after /direct-response-copy)
+/.claude/scripts/check-final-gate.sh     - Final gate (before export)
+/.claude/skills/write-article.md         - Detailed article writing process
 /.claude/skills/keyword-research/      - Keyword research skill
 /.claude/skills/positioning-angles/    - Positioning angles skill
 /.claude/skills/seo-content/           - SEO content writing skill
@@ -527,15 +671,47 @@ Hub articles need 8-10 internal links, cluster articles need 4-6. Include cross-
 
 ## Skills Reference
 
-**MANDATORY for every article (in order):**
-1. `/keyword-research` - Validate + expand keywords (Step 2) - **CANNOT SKIP**
-2. `/positioning-angles` - Find article-specific angle (Step 4) - **CANNOT SKIP**
-3. `/seo-content` - Write the article (Step 6)
+### Entry Point (Always Start Here)
 
-**For other content:**
-- `/brand-voice` - Refine brand voice
-- `/direct-response-copy` - Conversion copy
-- `/email-sequences` - Email sequences
-- `/content-atomizer` - Repurpose content
+**`/orchestrator`** - Marketing strategist that diagnoses your needs and routes to the right skills. Use this when:
+- Starting any new content task
+- Unsure which skill to use
+- Need a multi-step workflow
+- Have a vague marketing request
+
+### MANDATORY for Every Article (in order)
+
+| Step | Skill/Script | Purpose | Gate |
+|------|--------------|---------|------|
+| 0 | `/orchestrator` | Diagnose + route | - |
+| 2 | `/keyword-research` | Validate keywords | Keyword Gate |
+| 4 | `/positioning-angles` | Find article angle | Angle Gate |
+| 6 | `/seo-content` | Write the article | Content Gate |
+| 7a | `/direct-response-copy` | Conversion review (skill) | - |
+| 7b | `check-conversion-gate.sh` | Conversion verification (script) | Conversion Gate |
+| 8 | `check-final-gate.sh` | Pre-export verification | Final Gate |
+
+**CANNOT SKIP** - All skills AND scripts in the table above are mandatory for every article.
+**Gate 5 requires BOTH:** Run skill first, then run script for automated verification.
+
+### For Other Content
+
+- `/brand-voice` - Extract or refine brand voice
+- `/email-sequences` - Email nurture sequences
+- `/content-atomizer` - Repurpose content for social
 - `/newsletter` - Newsletter formats
 - `/lead-magnet` - Lead magnet concepts
+
+### MCP Integration Status
+
+| MCP Server | Status | Integration Point |
+|------------|--------|-------------------|
+| **Perplexity MCP** | IMPLEMENTED | Step 2: /keyword-research |
+| **DataForSEO MCP** | PLANNED | Step 2: exact volumes (future) |
+
+**Perplexity MCP (Active):**
+- Runs during `/keyword-research` skill
+- Provides: real PAA questions, competitor analysis, research sources, trend data
+- Keyword Gate verifies `perplexityUsed: true`
+
+See `LIVE-DATA-WORKFLOW.md` for DataForSEO implementation plan.

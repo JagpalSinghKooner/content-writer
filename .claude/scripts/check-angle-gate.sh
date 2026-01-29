@@ -5,12 +5,12 @@
 # Usage: ./check-angle-gate.sh <research-file>
 # Example: ./check-angle-gate.sh research/pillar-5-adhd-apps/hub-research.md
 #
-# Exit codes: 0 = UNLOCKED (writing can proceed), 1 = LOCKED (cannot proceed)
+# Exit codes: 0 = PASS (writing can proceed), 1 = FAIL (cannot proceed)
 #
 # This script ensures positioning angles have been generated and selected
 # before article writing begins.
-# The /positioning-angles skill MUST be run before this gate can be unlocked.
-# Writing cannot start until this gate shows UNLOCKED.
+# The /positioning-angles skill MUST be run before this gate can pass.
+# Writing cannot start until this gate shows PASS.
 # ============================================================================
 
 FILE="$1"
@@ -37,7 +37,7 @@ fi
 
 if [ ! -f "$FILE" ]; then
     echo "============================================================================"
-    echo "ANGLE GATE: LOCKED"
+    echo "ANGLE GATE: FAIL"
     echo "============================================================================"
     echo ""
     echo "ERROR: Research file not found: $FILE"
@@ -151,6 +151,90 @@ else
     # This is a warning, not a fail - the other checks are more definitive
 fi
 
+# Check 8: Verify angle-library.md was updated with complete entry
+echo ""
+echo ">>> CHECK 8: Angle Library Updated (Enhanced Validation)"
+ANGLE_LIBRARY=".claude/angle-library.md"
+if [ ! -f "$ANGLE_LIBRARY" ]; then
+    echo "FAIL: Angle library not found at $ANGLE_LIBRARY"
+    FAILS=$((FAILS+1))
+else
+    # Extract article name from research file frontmatter
+    ARTICLE_NAME=$(grep "^articleName:" "$FILE" 2>/dev/null | sed 's/articleName:[[:space:]]*//' | tr -d '"' | tr -d "'")
+
+    # If no articleName field, try to derive from file path
+    if [ -z "$ARTICLE_NAME" ] || [ "$ARTICLE_NAME" = "null" ]; then
+        # Extract from path: research/pillar-5-adhd-apps/hub-research.md -> hub
+        ARTICLE_NAME=$(basename "$FILE" | sed 's/-research\.md$//' | sed 's/^hub$/HUB/' | sed 's/^\([0-9]*\.[0-9]*\)-/\1 /')
+    fi
+
+    # Check if selected angle appears in the library
+    if [ -z "$SELECTED_ANGLE" ]; then
+        echo "FAIL: No selected angle to validate against library"
+        FAILS=$((FAILS+1))
+    else
+        # Look for a row containing the selected angle in the "Angles Used" table
+        LIBRARY_ROW=$(grep -i "$SELECTED_ANGLE" "$ANGLE_LIBRARY" 2>/dev/null | grep "|" | head -1)
+
+        if [ -z "$LIBRARY_ROW" ]; then
+            echo "FAIL: Selected angle '$SELECTED_ANGLE' not found in angle-library.md"
+            echo "      Add a row to the 'Angles Used' table with:"
+            echo "      | Article | Pillar | Angle Name | Core Insight | Headline Direction | Date |"
+            FAILS=$((FAILS+1))
+        else
+            echo "INFO: Found library entry: $LIBRARY_ROW"
+
+            # Validate the row has all required columns (6 columns in table)
+            COLUMN_COUNT=$(echo "$LIBRARY_ROW" | tr '|' '\n' | grep -v "^$" | wc -l | tr -d ' ')
+
+            if [ "$COLUMN_COUNT" -lt 6 ]; then
+                echo "FAIL: Library entry incomplete - found $COLUMN_COUNT columns, need 6"
+                echo "      Required: Article | Pillar | Angle Name | Core Insight | Headline Direction | Date"
+                FAILS=$((FAILS+1))
+            else
+                # Check if the entry has a date (last column)
+                ENTRY_DATE=$(echo "$LIBRARY_ROW" | awk -F'|' '{print $(NF-1)}' | tr -d ' ')
+
+                if [ -z "$ENTRY_DATE" ] || [ "$ENTRY_DATE" = "-" ]; then
+                    echo "FAIL: Library entry missing date"
+                    FAILS=$((FAILS+1))
+                else
+                    # Validate date is recent (within last 30 days)
+                    TODAY=$(date +%Y-%m-%d)
+                    THIRTY_DAYS_AGO=$(date -v-30d +%Y-%m-%d 2>/dev/null || date -d "30 days ago" +%Y-%m-%d 2>/dev/null || echo "")
+
+                    if [ -n "$THIRTY_DAYS_AGO" ]; then
+                        if [[ "$ENTRY_DATE" > "$THIRTY_DAYS_AGO" ]] || [[ "$ENTRY_DATE" == "$TODAY" ]]; then
+                            echo "PASS: Library entry found with recent date ($ENTRY_DATE)"
+                        else
+                            echo "WARN: Library entry date ($ENTRY_DATE) is more than 30 days old"
+                            echo "      If this is a new article, ensure you added a fresh entry."
+                        fi
+                    else
+                        echo "PASS: Library entry found with date: $ENTRY_DATE"
+                    fi
+                fi
+
+                # Check if Core Insight column has content
+                CORE_INSIGHT_COL=$(echo "$LIBRARY_ROW" | awk -F'|' '{print $5}' | tr -d ' ')
+                if [ -z "$CORE_INSIGHT_COL" ] || [ "$CORE_INSIGHT_COL" = "-" ]; then
+                    echo "WARN: Library entry may be missing Core Insight"
+                else
+                    echo "PASS: Library entry has Core Insight"
+                fi
+
+                # Check if Headline Direction column has content
+                HEADLINE_COL=$(echo "$LIBRARY_ROW" | awk -F'|' '{print $6}' | tr -d ' ')
+                if [ -z "$HEADLINE_COL" ] || [ "$HEADLINE_COL" = "-" ]; then
+                    echo "WARN: Library entry may be missing Headline Direction"
+                else
+                    echo "PASS: Library entry has Headline Direction"
+                fi
+            fi
+        fi
+    fi
+fi
+
 # ============================================================================
 # FINAL RESULT
 # ============================================================================
@@ -163,13 +247,22 @@ echo ""
 
 if [ "$FAILS" -eq 0 ]; then
     echo "============================================"
-    echo "   ANGLE GATE: UNLOCKED"
+    echo "   ANGLE GATE: PASS"
     echo "   Positioning complete."
     echo "   Writing phase can proceed."
     echo "============================================"
     echo ""
     echo "SELECTED ANGLE: $SELECTED_ANGLE"
     echo "HEADLINE DIRECTION: $HEADLINE_DIR"
+    echo ""
+    # AUTO-UPDATE: Add entry to angle library
+    echo ">>> AUTO-UPDATING ANGLE LIBRARY..."
+    SCRIPT_DIR="$(dirname "$0")"
+    if [ -f "$SCRIPT_DIR/update-angle-library.sh" ]; then
+        "$SCRIPT_DIR/update-angle-library.sh" "$FILE"
+    else
+        echo "WARNING: update-angle-library.sh not found. Manual update required."
+    fi
     echo ""
     echo "NEXT STEPS:"
     echo "  1. Complete HushAway® Prominence Planning using this angle"
@@ -179,18 +272,19 @@ if [ "$FAILS" -eq 0 ]; then
     exit 0
 else
     echo "============================================"
-    echo "   ANGLE GATE: LOCKED"
+    echo "   ANGLE GATE: FAIL"
     echo "   $FAILS check(s) failed."
     echo "============================================"
     echo ""
     echo "REQUIRED ACTION:"
-    echo "  1. Ensure research gate is unlocked first"
+    echo "  1. Ensure research gate shows PASS first"
     echo "  2. Run /positioning-angles skill with research context"
     echo "  3. Select ONE angle from the generated options"
     echo "  4. Document: selectedAngle, angleDescription, headlineDirection, counterPositions"
-    echo "  5. Re-run this gate"
+    echo "  5. Update .claude/angle-library.md with selected angle"
+    echo "  6. Re-run this gate script"
     echo ""
-    echo "DO NOT START WRITING UNTIL THIS GATE IS UNLOCKED."
+    echo "DO NOT START WRITING UNTIL THIS GATE SHOWS PASS."
     echo ""
     exit 1
 fi

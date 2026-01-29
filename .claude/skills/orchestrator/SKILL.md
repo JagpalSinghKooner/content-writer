@@ -45,6 +45,8 @@ Skip the orchestrator when:
 | **email-sequences** | Builds sequences that convert | Lead magnet, offer, voice profile | Welcome/nurture/conversion sequences |
 | **content-atomizer** | Turns 1 piece into many | Blog post, newsletter, or video | Platform-native social assets |
 
+**Note:** `.claude/skills/write-article.md` provides comprehensive article guidance but is not a callable skill. It documents the full workflow that orchestrator routes through.
+
 ### Skill Dependencies
 
 ```
@@ -65,6 +67,62 @@ EXECUTION LAYER (requires strategy inputs)
 DISTRIBUTION LAYER (transforms execution outputs)
 └── content-atomizer (needs content to atomize)
 ```
+
+---
+
+## Library Integration (HushAway Workflow)
+
+**IMPORTANT:** For HushAway article writing, two library files track progress and prevent duplication:
+
+### The Library Files
+
+| Library | Purpose | When to Read | When to Update |
+|---------|---------|--------------|----------------|
+| `.claude/keyword-library.md` | Tracks validated keywords | BEFORE running /keyword-research | Auto-updated AFTER keyword validation |
+| `.claude/angle-library.md` | Tracks positioning angles used | BEFORE running /positioning-angles | Auto-updated AFTER angle selection |
+
+### Why Libraries Matter
+
+1. **Prevent Duplication:** Angles and keywords should not be reused across articles
+2. **Enable Learning:** Libraries show what has worked and what patterns to avoid
+3. **Cross-Linking:** Keyword clusters reveal internal linking opportunities
+4. **Quality Control:** Gate scripts verify libraries are updated before proceeding
+
+### Library Workflow
+
+When routing to HushAway article skills:
+
+```
+1. READ ARTICLE-ORDER.md → Select article by priority
+2. READ keyword-library.md → Check existing keywords
+3. RUN /keyword-research → Validate new keyword
+4. UPDATE keyword-library.md → Add validated keyword
+5. PASS Keyword Gate
+
+6. Complete research
+7. PASS Research Gate
+
+8. READ angle-library.md → Check angles already used
+9. RUN /positioning-angles → Generate fresh angles
+10. UPDATE angle-library.md → Add selected angle
+11. PASS Angle Gate
+
+12. VERIFY both libraries populated → Pre-flight check
+13. RUN /seo-content → Write article
+14. PASS Content Gate, Conversion Gate, Final Gate
+```
+
+### Handoff Note for HushAway Articles
+
+When routing to `/keyword-research` or `/positioning-angles`, include:
+
+> **Library Context:** Check `.claude/keyword-library.md` (or `angle-library.md`) before generating output. Avoid duplicating existing entries. Libraries auto-update on gate pass.
+
+**CRITICAL: Before routing to `/seo-content`:**
+1. Verify `.claude/keyword-library.md` has an entry for this article
+2. Verify `.claude/angle-library.md` has an entry for this article
+3. If EITHER library is missing an entry, do NOT proceed to /seo-content
+4. Route back to the appropriate skill (/keyword-research or /positioning-angles) first
 
 ---
 

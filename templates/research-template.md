@@ -10,6 +10,33 @@ gateStatus: locked
 dateCreated: "[YYYY-MM-DD]"
 dateCompleted: null
 researcher: "[Name or Claude]"
+
+# Keyword Research (validated by Perplexity MCP)
+keywordStatus: pending
+perplexityUsed: false
+perplexityDate: null
+targetKeyword: null
+searchTrend: null
+searchVolume: null
+
+secondaryKeywords:
+  # Minimum 5 required - populated by /keyword-research skill
+  # - "[keyword 1]"
+
+# PAA Questions (from Perplexity Query 2 - minimum 7 required)
+paaQuestions:
+  # - "[Question 1]"
+
+# Competitor Gaps (from Perplexity Query 3 - minimum 2 required)
+competitorGaps:
+  # - "[Gap 1]"
+
+# Research Sources (from Perplexity Query 4 - minimum 2 required)
+researchSources:
+  # - source: "[Source name]"
+  #   year: [YYYY]
+  #   finding: "[Key finding]"
+  #   url: "[URL]"
 ---
 
 # Research: [Article Title]
@@ -21,18 +48,30 @@ researcher: "[Name or Claude]"
 
 ### Mandatory Fields Checklist
 
+**STEP 1: Run /keyword-research skill with Perplexity MCP (populates Sections 1, 3, 4, 5, 8)**
+
 Before article writing can begin, ALL of the following must be marked complete:
 
-- [ ] **Target Keyword Data** (Section 1)
-- [ ] **Search Intent Analysis** (Section 2)
-- [ ] **SERP Analysis** (Section 3)
-- [ ] **Competitor Gap Analysis** (Section 4)
-- [ ] **People Also Ask Questions** (Section 5)
-- [ ] **E-E-A-T Planning** (Section 6)
-- [ ] **HushAway® Positioning Angle** (Section 7)
-- [ ] **Source Collection** (Section 8)
+- [ ] **Perplexity MCP Used** (frontmatter: perplexityUsed: true)
+- [ ] **Target Keyword Data** (Section 1) - from Perplexity Query 1
+- [ ] **Search Intent Analysis** (Section 2) - manual review
+- [ ] **SERP Analysis** (Section 3) - from Perplexity Query 3
+- [ ] **Competitor Gap Analysis** (Section 4) - from Perplexity Query 3
+- [ ] **People Also Ask Questions** (Section 5) - from Perplexity Query 2
+- [ ] **E-E-A-T Planning** (Section 6) - manual planning
+- [ ] **HushAway® Positioning Angle** (Section 7) - from /positioning-angles skill
+- [ ] **Source Collection** (Section 8) - from Perplexity Query 4
 
-**When ALL boxes above are checked, update:**
+**Keyword Gate checks (run after /keyword-research):**
+- `keywordStatus: validated`
+- `perplexityUsed: true`
+- `perplexityDate: [date]`
+- `searchTrend: [rising/stable/declining]` (recommended)
+- PAA questions: 7+ required
+- Competitor gaps: 2+ required
+- Research sources: 2+ required
+
+**Research Gate checks (run after completing all sections):**
 - `researchStatus: complete`
 - `gateStatus: unlocked`
 - `dateCompleted: [today's date]`
@@ -105,9 +144,12 @@ Based on intent, this article should be:
 ## Section 3: SERP Analysis
 
 **Status:** [ ] Complete
+**Data Source:** Perplexity MCP (Query 3)
 
 **Date Analysed:** [YYYY-MM-DD]
 **Search Query Used:** "[exact query]"
+
+> **Note:** This section is auto-populated by Perplexity Query 3 during /keyword-research. Review and expand as needed.
 
 ### Top 5 Ranking Results
 
@@ -173,6 +215,9 @@ Based on intent, this article should be:
 ## Section 4: Competitor Gap Analysis
 
 **Status:** [ ] Complete
+**Data Source:** Perplexity MCP (Query 3)
+
+> **Note:** Initial gaps come from Perplexity Query 3 (stored in frontmatter competitorGaps). Expand with specific positioning below.
 
 ### What Competitors Are Missing
 
@@ -204,11 +249,14 @@ Based on intent, this article should be:
 ## Section 5: People Also Ask Questions
 
 **Status:** [ ] Complete
+**Data Source:** Perplexity MCP (Query 2)
 
-**Source:** Google SERP for "[primary keyword]"
+**Source:** Google SERP + Reddit + Mumsnet (via Perplexity)
 **Date Captured:** [YYYY-MM-DD]
 
-### PAA Questions (Minimum 5)
+> **Note:** Questions come from Perplexity Query 2 (stored in frontmatter paaQuestions). Expand with answer approaches below.
+
+### PAA Questions (Minimum 7)
 
 1. **Q:** [Question 1]
    **Answer Approach:** [Brief note on how to answer in HushAway® voice]
@@ -372,8 +420,9 @@ Check which signature phrases fit naturally in this article:
 ## Section 8: Source Collection
 
 **Status:** [ ] Complete
+**Data Source:** Perplexity MCP (Query 4)
 
-**IMPORTANT:** Check `/research/eeat-library.md` first for existing verified citations before researching new sources.
+> **Note:** Initial sources come from Perplexity Query 4 (stored in frontmatter researchSources). Expand with warm citation formats below. Also check `/research/eeat-library.md` for existing verified citations.
 
 ### Research Sources (Minimum 3)
 

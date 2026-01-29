@@ -2,30 +2,62 @@
 
 **Purpose:** Integrate real-time keyword data into the content workflow using MCP (Model Context Protocol) servers for DataForSEO and Perplexity.
 
-**Status:** PLANNING - Review before implementation
+**Status:** PARTIALLY IMPLEMENTED
+
+---
+
+## Implementation Status
+
+| MCP Server | Status | Integration Point | Date |
+|------------|--------|-------------------|------|
+| **Perplexity MCP** | IMPLEMENTED | Step 2: /keyword-research | 2026-01-29 |
+| **DataForSEO MCP** | PLANNED | Step 2: exact volumes (future) | - |
 
 ---
 
 ## Overview
 
-Currently, the `/keyword-research` skill uses strategic frameworks but lacks live search data. This document outlines how to integrate:
+The `/keyword-research` skill now integrates Perplexity MCP for real-time search data:
 
-1. **DataForSEO MCP** - Real keyword volumes, difficulty scores, SERP data
-2. **Perplexity MCP** - Real-time search trends, competitor insights, topical analysis
+1. **Perplexity MCP** (ACTIVE) - Real-time search trends, competitor insights, PAA questions, research sources
+2. **DataForSEO MCP** (PLANNED) - Exact keyword volumes, difficulty scores, SERP data
 
-Together, these provide the live data needed to validate seed keywords and discover opportunities.
+Perplexity runs during Step 2 (/keyword-research) and is MANDATORY. The Keyword Gate verifies `perplexityUsed: true`.
 
 ---
 
-## Current Gap
+## Perplexity Integration Verification Points
 
-| What We Have | What We Need |
-|--------------|--------------|
-| Seed keywords in claude.md table | Validated search volumes |
-| Strategic keyword frameworks | Real difficulty/competition data |
-| Manual competitor research | Live SERP analysis |
-| Estimated volumes | Actual monthly search data |
-| Static secondary keywords | Dynamic keyword clusters |
+| Gate | Perplexity Check | Status |
+|------|------------------|--------|
+| Gate 1: Keyword | `perplexityUsed: true`, `perplexityDate`, `searchTrend`, 7+ PAA, 2+ gaps, 2+ sources | IMPLEMENTED |
+| Gate 2: Research | `perplexityUsed: true` verification, date freshness (<30 days) | IMPLEMENTED |
+| Gate 3: Angle | (No direct check - uses research data) | N/A |
+| Gate 4: Content | (No direct check - verifies citations exist) | N/A |
+| Gate 5: Conversion | (No direct check) | N/A |
+| Gate 6: Final | (No direct check) | N/A |
+
+**Data Flow:**
+```
+Perplexity MCP → Research File Frontmatter → Gate 1 (Keyword) → Gate 2 (Research) → Article
+     ↓                      ↓                     ↓                   ↓
+  4 queries          YAML fields verified    11 checks           Freshness check
+```
+
+---
+
+## Current Gap (After Perplexity Implementation)
+
+| What We Have | What We Need | Status |
+|--------------|--------------|--------|
+| Seed keywords in ARTICLE-ORDER.md | Validated search volumes | Perplexity provides trends |
+| Strategic keyword frameworks | Real difficulty/competition data | DataForSEO (planned) |
+| Perplexity competitor research | Exact SERP positions | DataForSEO (planned) |
+| Trend-based volumes | Actual monthly search data | DataForSEO (planned) |
+| Dynamic secondary keywords | Exact volume per keyword | DataForSEO (planned) |
+| Real PAA questions | - | SOLVED (Perplexity) |
+| Real competitor gaps | - | SOLVED (Perplexity) |
+| Research sources with URLs | - | SOLVED (Perplexity) |
 
 ---
 

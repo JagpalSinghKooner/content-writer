@@ -1,403 +1,337 @@
 ---
-title: "ADHD Apps for Kids: What Works and What Parents Miss"
+title: "ADHD Apps for Children: Why Most Fail and What Helps"
+metaDescription: "Searching for ADHD apps that work? Most fail because they ask children to focus before they can. Discover the calm-first approach that changes everything."
+author: "Nicola Maria Rose"
+authorCredentials: "Certified Neurodivergent Inclusive Coach, ADHD Coach, Sound Therapy Practitioner"
+datePublished: "2026-01-29"
+dateModified: "2026-01-29"
+dateCreated: "2026-01-29"
+dateUpdated: "2026-01-29"
+status: "complete"
 pillar: 5
 pillarName: "ADHD Apps"
-articleNumber: "HUB"
+articleType: "hub"
 targetKeyword: "ADHD apps"
-secondaryKeywords:
-  - "ADHD apps for kids"
-  - "best ADHD apps"
-  - "ADHD apps children"
-  - "apps for ADHD child"
-  - "ADHD management apps"
-metaDescription: "Tried ADHD apps that your child abandoned after three days? Learn which ones work, what the research shows, and why calm comes before focus."
-status: draft
-wordCount: 3521
-minimumWordCount: 3000
-dateCreated: "2026-01-28"
-dateUpdated: "2026-01-28"
-urlSlug: "adhd-apps"
-author: "Nicola Maria Rose"
 ---
 
-# ADHD Apps for Kids: What Works and What Parents Miss
+# ADHD Apps for Children: Why Most Fail and What Helps
 
-If you've typed "ADHD apps" into a search bar, hoping to find something that might finally help your child, you're not alone. Hundreds of apps claim to support children with ADHD. Which ones work? Which are worth paying for? And why do so many seem to lose their appeal after the first week?
+If you've downloaded half a dozen ADHD apps hoping one might finally help your child, you're not alone. And if none of them stuck past the first week, that's not your fault either.
 
-In my years working with families affected by ADHD, I've seen parents try app after app, hoping to find the one that makes a difference. Some find genuine help. Many find frustration. Most ADHD apps focus on productivity, organisation, and focus. But what many children need first is something different: the ability to feel calm and regulated in their body before they can access those skills.
+The ADHD apps market has exploded in recent years, growing from $1.91 billion to a projected $4.06 billion by 2029. Parents are searching. Parents are trying. Most end up disappointed.
 
-At [HushAway®](https://hushaway.com/sound-sanctuary), we've built something that approaches this differently. Instead of demanding focus from already overwhelmed children, we created sensory-friendly sound support that works passively, meeting children where they are rather than asking more from stretched nervous systems.
+"We've tried every app going," one mum in our community shared. "He loves them for three days, then they collect dust. I realised we were trying to build the roof before the foundation."
 
----
+She's identified something that most app developers miss entirely. Most ADHD apps ask children to do something, whether that's focusing, organising, completing tasks, or managing time. But what if your child's nervous system is so overwhelmed that they can't engage with those demands in the first place?
 
-## Do ADHD Apps Work?
+That's the question that led us to create HushAway®. Instead of asking children to do something, it does something for them. Gentle sounds built for neurodivergent nervous systems, helping children feel calm enough in their bodies to access focus, sleep, or whatever else they need. It's not another task on their list. It's support that works in the background.
 
-ADHD apps are digital tools made to support children (and adults) with ADHD. They range from simple timer apps to sophisticated games claiming to train attention, from routine builders to mindfulness programmes.
+But HushAway® isn't the right fit for every child or every situation. So this guide covers the full range of ADHD apps for children, from focus timers to emotional regulation tools, from sleep support to the only FDA-approved ADHD game. We'll look at what works, what doesn't, and how to choose based on your child's needs rather than marketing promises.
 
-Some do. Many don't.
+## Do ADHD Apps Help Children?
 
-A systematic review from 2020 found that very few ADHD apps have evidence supporting their claims. Most apps available today have never been tested in rigorous studies, and none provided information about scientific backing. This doesn't mean they're useless. But we should approach bold promises with healthy scepticism.
+The short answer: some do. But the picture is more complicated than most guides suggest.
 
-What research does support:
+A 2024 meta-analysis examining digital therapeutics for ADHD found measurable improvements in both inattention (effect size -0.25) and executive function (effect size 0.71). That second number is meaningful. It suggests that apps targeting working memory, planning, and organisation can genuinely help some children.
 
-- Psychoeducational apps that help parents understand ADHD and manage behaviour show the strongest evidence
-- One FDA-approved digital therapeutic (EndeavorRx) has proven benefits for attention in clinical trials
-- Sound-based interventions like white noise have shown promise for improving attention and reducing hyperactive behaviour
-- Routine and structure apps help when they match how ADHD brains work
+Research from 2023 found that just four weeks of using a meditation app reduced anxiety and sleep problems in children with ADHD aged 6 to 12, even with minimal daily use. The 2024 NHS ADHD Taskforce report noted that 70% of NHS services now use digital tools in ADHD assessment, recommending further expansion of digital support.
 
-What we don't yet know:
+So yes, there's real evidence behind some of these tools.
 
-- Long-term results of most apps
-- Whether improvements in apps translate to real-world behaviour changes
-- Which children benefit most from which types of apps
+Some apps work.
 
-ADHD apps can be useful tools as part of broader support. They're not magic solutions.
+The research is clear.
 
-It depends.
+But here's what those statistics don't capture: the graveyard of abandoned apps on parents' phones. The excitement that lasted a week. The guilt when another solution failed.
 
-The right app depends entirely on what your child needs.
+A 2024 systematic review examining 14 studies found that while many ADHD apps show promise, effectiveness varies considerably. Sensory-based apps demonstrated particular potential for symptom relief, but most apps lack long-term evidence.
 
----
+Here's what most people miss: ADHD apps can help. But most apps assume children are already regulated enough to engage with them.
 
-## What Is the Best App for a Child with ADHD?
+Think about it. A focus timer assumes your child can choose to focus. A task management app assumes they can break down tasks and follow through. A gamified homework helper assumes the promise of points will override the executive function difficulties making homework feel impossible.
 
-Parents ask me this question constantly. The answer might be frustrating: it depends on your child.
+For many children with ADHD, these assumptions don't hold. Their nervous systems are working overtime just to manage the sensory and emotional demands of daily life. Asking them to engage with one more app, even a helpful one, adds to the load rather than lightening it.
 
-A child who struggles with emotional regulation needs different support than a child who needs help with homework organisation. A child who seeks sensory input needs something different from a child who's easily overwhelmed by stimulation. There's no single "best" ADHD app because there's no single type of ADHD experience.
+That's where passive support comes in. HushAway® works differently because it doesn't require engagement. Sounds play in the background, helping regulate the nervous system without demanding attention or effort. Children don't have to do anything. The support happens to them, not through them.
 
-Before downloading anything, ask yourself:
+## Understanding the Types of ADHD Apps
 
-**What does my child struggle with most right now?**
+Before choosing an app, it helps to understand what's out there. ADHD apps fall into several categories, and each addresses different challenges. If you're looking for [LINK TO: focus apps for ADHD children], start here to understand your options.
 
-- Calming down when upset? Look at emotional regulation apps
-- Staying focused on tasks? Consider focus or timer apps
-- Remembering routines? Visual schedule apps might help
-- Feeling overwhelmed by their environment? Sound therapy could be the answer [LINK TO: 4.1 Sensory Overload vs Sensory Seeking]
-- Falling asleep? Sleep-specific apps work well for many families
+**Focus and Task Management Apps**
 
-**What does my child enjoy?**
+These include timers (Pomodoro-style), distraction blockers, and visual task lists. Forest grows a virtual tree when you stay focused. Focus Keeper uses timed work sessions. Time Timer shows time passing visually with a disappearing red disk.
 
-- Games and rewards? Gamified apps like Joon might work
-- Quiet, calming experiences? Mindfulness or sound apps could be better
-- Clear structure? Visual routine apps might resonate
+Works well for: Children who can already engage with structured activities but need external accountability.
 
-**What's realistic for our family?**
+Where they fall short: They assume your child can choose to engage. If overwhelm or dysregulation is the barrier, these tools can't help until that's addressed first.
 
-- Do you have time to set up and monitor an app?
-- Can you afford a subscription?
-- Will your child use it independently or need support?
+**Organisation and Routine Apps**
 
-You know your child best.
+Apps like Todoist, Tiimo, and Brili help with daily routines and task sequences. They use visual schedules, step-by-step breakdowns, and progress tracking. See our guide to [LINK TO: task management apps for kids] for more detail.
 
-Every child is different.
+Ideal for: Children who know what they need to do but struggle with the sequence or timing.
 
-The "best" app meets your child where they are, not where we wish they would be.
+What to know: Organisation apps are brilliant when children are calm enough to follow them. When they're dysregulated, even the best visual schedule becomes background noise.
 
----
+**Gamified Motivation Apps**
 
-## Types of ADHD Apps for Children
+Habitica turns tasks into a role-playing game. Joon creates a virtual pet that thrives when children complete quests set by parents. ChoreMonster rewards completed tasks.
 
-Understanding the different categories helps you narrow down what might work for your child.
+Good fit for: Children motivated by game mechanics, points, and visible progress.
 
-### Focus and Attention Apps
+Worth considering: Gamification relies on dopamine hits from novelty and rewards. Children with ADHD often habituate quickly. The game that was exciting on Monday feels boring by Thursday. Then parents are back to square one.
 
-Focus and attention apps aim to improve concentration through games, timers, or attention training exercises.
+**Emotional Regulation and Calming Apps**
 
-**EndeavorRx** is the only FDA-approved app for ADHD, made for children aged 8 to 12. It uses a video game format to target attention systems in the brain. In clinical trials, one-third of children showed measurable improvement in attention after four weeks.
+Mightier teaches emotional awareness through biofeedback-enhanced games. Calm and Headspace offer guided meditations. Breathe, Think, Do with Sesame uses Sesame Street characters to teach calming strategies. For more on this category, see [LINK TO: emotional dysregulation ADHD apps].
 
-**Brain training apps** like NeuroNation offer cognitive exercises meant to improve memory and processing speed. Evidence for these is mixed, and benefits may not transfer to real-world tasks.
+Best for: Children building emotional awareness and developing long-term regulation skills.
 
-**Timer-based apps** help children work in focused bursts. Short work, then break. The Pomodoro technique suits many ADHD brains well.
+One challenge: Many of these apps require children to sit still and actively participate. For some children with ADHD, that's precisely what they struggle with. If sitting through a meditation feels like torture, the app won't help no matter how good its content.
 
-See [LINK TO: 5.1 Focus Apps ADHD] for more on focus-specific apps.
+**Sound and Sensory Support Apps**
 
-But here's what most focus apps miss: they assume your child can already engage. If their nervous system is overwhelmed, no attention-training game will help. HushAway® creates the calm that makes focus accessible in the first place.
+This is where HushAway® fits. Sound-based apps provide ambient soundscapes, white noise, brown noise, ASMR, or guided audio content that supports nervous system regulation without requiring active engagement. See our [LINK TO: sensory apps for children] hub for the full picture.
 
-### Emotional Regulation Apps
+Best for: Children who are overwhelmed, dysregulated, or struggling with sensory processing. Also excellent for sleep support.
 
-Emotional regulation apps help children understand and manage their emotions, an often overlooked aspect of ADHD support.
+What makes this category different: Passive support. The sounds work in the background while children do other things, whether that's getting ready for school, doing homework, or falling asleep. There's nothing to engage with, no points to earn, no tasks to complete.
 
-**Zones of Regulation** is based on a widely-used curriculum. It helps children identify their emotional state and learn strategies for self-regulation.
+HushAway® was built from the ground up for neurodivergent children. Unlike generic sound apps, everything is sensory-friendly: no sudden volume changes, no jarring transitions, predictable patterns that sensitive nervous systems can trust. It's not a meditation app asking children to sit still. It's a soft place to land while life happens around them.
 
-**Choiceworks** helps children understand emotions, manage time, and improve waiting skills. It works well for younger children.
+## Why Most ADHD Apps Stop Working After Two Weeks
 
-**Breathing and mindfulness apps** like Headspace for Kids offer guided breathing exercises and meditations created for children.
+Parents describe this pattern constantly. Their child downloads a new app, loves it, uses it eagerly for three days to two weeks, then refuses to touch it again.
 
-Research from 2021 shows that between 25% and 45% of children with ADHD experience big emotional regulation difficulties. This makes it one of the most common co-occurring challenges. Apps that help with these challenges suit what many children need better than productivity tools. And HushAway® offers passive support that doesn't require your child to engage when they're already overwhelmed.
+It's not laziness.
 
-Learn more at [LINK TO: 5.10 Emotional Dysregulation ADHD Apps].
+It's how ADHD brains work.
 
-Active engagement apps require participation, following instructions, and cognitive engagement. When your child is already overwhelmed, they may not have the capacity to use these tools. HushAway® works differently: passive sound support that helps regulate the nervous system without requiring anything from your child.
+ADHD involves differences in dopamine regulation. The reward system craves novelty and loses interest in familiar activities. When a new app arrives, it brings that hit of novelty. Points to earn, characters to discover, new mechanics to explore.
 
-### Task Management and Routine Apps
+But ADHD brains habituate to rewards faster than neurotypical brains. What felt exciting on Monday feels boring by Friday. The dopamine hit diminishes. Without that neurochemical motivation, engaging with the app becomes just another demand on an already strained executive function system.
 
-Task management apps provide structure through visual schedules, reminders, and reward systems.
+Gamified apps are vulnerable to this pattern because they rely on reward mechanics that the ADHD brain will inevitably adapt to.
 
-**Joon** turns daily tasks into a game where children care for a virtual pet by completing real-world responsibilities. Built with ADHD in mind, it works well for children aged 6 to 12.
+"The morning routine chart was useless until we started playing brown noise while he got ready," one parent in our community shared. "Now he follows it without the usual battles."
 
-**Brili** is a visual routine app that breaks tasks into steps with time limits. It helps most with morning and bedtime routines.
+The difference? Sound support doesn't rely on novelty. There's no gamification to habituate to, no points that stop feeling rewarding. The sound simply creates a calmer sensory environment, and that calmer environment makes other things possible.
 
-**Goally** offers visual schedules, behaviour tracking, and emotional regulation tools in one platform.
+This is the foundation-before-roof principle. Many children with ADHD need nervous system support before they can benefit from focus tools, organisation apps, or gamified homework helpers. Start with regulation. Then add the active tools once there's a stable foundation.
 
-Routine apps work best when they match how ADHD brains function: providing external structure, breaking tasks into manageable chunks, and offering immediate rewards.
+HushAway® fits into this approach. It's not meant to replace every other ADHD app. It creates conditions where other approaches work better. Use sound support to help your child feel calmer in their body, and the routine app or focus timer they abandoned might become usable again.
 
-Structure helps.
+## ADHD Apps for Focus and Homework
 
-But an overwhelmed child can't follow any routine, no matter how cleverly designed. Many parents find that pairing routine apps with sensory support creates better results. As one mum shared: "The morning routine chart was useless until we started playing brown noise while he got ready. Now he actually follows it."
+If homework battles are your particular struggle, you're not alone. "He can play video games for hours but can't focus on homework for five minutes" is something we hear constantly.
 
-### Educational Apps
+The video game focus isn't a mystery. Games provide constant novelty, immediate feedback, and frequent rewards. They're built to be engaging. Homework provides none of those things.
 
-Educational apps support academic skills that children with ADHD often struggle with.
+Focus apps try to bridge that gap. Some options worth considering:
 
-**Reading Eggs** makes learning to read engaging through games and rewards. Widely used in schools, it helps reluctant readers.
+**Forest** grows a virtual tree while you stay focused, which dies if you leave the app. The fear of killing a tree provides gentle accountability. Free version available.
 
-**Khan Academy** offers free educational content in short, digestible videos. The ability to pause, rewind, and learn at your own pace suits many ADHD learners.
+**Focus Keeper** uses the Pomodoro technique: focused work sessions followed by short breaks. The frequent breaks can help ADHD brains stay engaged.
 
-Learning apps don't target ADHD specifically. But they support the academic challenges that often accompany it.
+**Brain Focus** tracks focus sessions and breaks, with customisable timing and statistics.
 
-Many children with ADHD struggle to engage with educational content because they're dysregulated before they even start. Playing gentle background sounds while using learning apps creates an environment where focus becomes more accessible.
+These apps work well for children who are regulated enough to choose to engage with homework but struggle with sustained attention once they've started. The external structure and visible progress help.
 
-### Sound Therapy and Sensory Support
+But if your child can't get started at all, if the very idea of homework sends them into meltdown or shutdown, focus apps won't help. You're trying to build the roof when there's no foundation.
 
-Sound therapy apps use sound to support calm, focus, and regulation. HushAway® sits in this category, and we believe it's the foundation that makes other ADHD apps work better.
+For those children, start with regulation support. Use HushAway® soundscapes during the transition from school to homework. Let their nervous system settle before making any demands. Once they're calmer, then introduce the focus timer.
 
-**Why sound matters for ADHD:**
+Some families use both together. Sound playing in the background, focus app providing the timer structure. The combination addresses both regulation and accountability.
 
-A 2023 review in Frontiers in Psychology found that between 40% and 60% of children with ADHD also have sensory processing difficulties. Their brains process sound, touch, and other sensory information differently. Sensory processing differences affect daily functioning in the majority of children with ADHD, influencing everything from focus to emotional regulation. The right sensory environment makes a real difference to how they feel and function.
+## Sleep Apps for ADHD Children
 
-See [LINK TO: 4.HUB Sensory Apps for Children] for more on sensory processing differences.
+Sleep problems affect more than half of children with ADHD. Difficulty falling asleep, frequent night waking, restless sleep, early morning waking. Poor sleep makes ADHD worse, creating a cycle that exhausts everyone. For more on this topic, see our [LINK TO: ADHD sleep support] guide.
 
-Sound-based support includes:
+Sound-based sleep support has genuine research backing. The 2023 Headspace study found reduced sleep problems in children with ADHD after just four weeks of use. But meditation apps require children to actively engage, which doesn't work for every child.
 
-- **White noise** creates consistent ambient sound. A 2022 study found it improves attention and reduces hyperactive behaviour in young children with ADHD
-- **Brown noise** is deeper and more soothing, often described as a "weighted blanket for the brain"
-- **Binaural beats** involve sounds played at slightly different frequencies in each ear, which help the brain reach states associated with focus or relaxation
-- **Nature sounds and ambient soundscapes** provide predictable, calming sounds that create a consistent sensory environment
+HushAway® approaches sleep differently. The Sound Sanctuary offers sleep soundscapes built for neurodivergent nervous systems: ambient sounds, white and brown noise, gentle guided content. Children can fall asleep to these sounds without needing to participate in a meditation or follow breathing instructions. The sound does the work. Explore the Sound Sanctuary to see if it helps your child settle at night.
 
-**What makes HushAway® different:**
+Other sleep apps worth knowing about:
 
-While apps like Calm and Headspace offer sound content, they're made for general audiences. HushAway® was built for neurodivergent children by a Certified Neurodivergent Inclusive Coach with seven years of experience working with families.
+**Sleep Wise** was developed for children with special educational needs, including ADHD. It offers personalised sleep strategies based on your child's challenges.
 
-What this looks like:
+**Headspace for Kids** includes sleep content that some children with ADHD find helpful, though it requires more active engagement than passive sound support.
 
-- No sudden sounds or surprises: every soundscape is created with sensory sensitivities in mind
-- Predictable patterns: children who feel everything need consistency they can rely on
-- Customisable intensity: because what soothes one child may overwhelm another
-- Works passively: no tasks to complete, no instructions to follow, no attention required
+**White Noise apps** (various) provide basic ambient sound without ADHD-specific design. These can help but may include sudden volume changes or jarring sounds that don't suit sensory-sensitive children.
 
-Unlike apps that require active engagement, sound therapy works passively. Your child doesn't need to complete tasks, follow instructions, or maintain attention. The sound simply provides a soft place to land.
+The key question: can your child engage with guided content at bedtime, or do they need something that works without requiring anything from them?
 
-Read more at [LINK TO: 4.2 Binaural Beats Kids] about how sound supports children with ADHD.
+If bedtime is already a battleground, adding another thing your child needs to do rarely helps. That's when passive sound support makes the most difference.
 
-So which type of support does your child need? That depends on where they are right now.
+## Emotional Regulation Apps for ADHD Children
 
----
+Emotional dysregulation affects roughly one in three children with ADHD. Big feelings come fast and feel overwhelming. Anger, frustration, anxiety, and disappointment can all flood in before there's any chance to respond thoughtfully.
 
-## Why Most ADHD Apps End Up Abandoned
+Apps addressing emotional regulation take different approaches:
 
-You can't focus your way out of dysregulation.
+**Mightier** teaches children to recognise their physiological signs of escalating emotion through biofeedback-enhanced games. They wear a heart rate monitor and play games that respond to their physical state. It's evidence-backed and takes about 45 minutes weekly of combined screen and offline activities.
 
-If your child's nervous system is overwhelmed, stressed, or in fight-or-flight mode, no productivity app will help them concentrate on homework. They can't access the parts of their brain needed for focus, planning, and organisation when they're emotionally flooded. This explains why so many ADHD apps end up abandoned after a few days.
+**Calm and Headspace for Kids** offer guided meditations and breathing exercises. Research supports their use for anxiety and emotional awareness, though they require children to sit still and participate.
 
-Research backs this up. A 2021 study found emotional dysregulation in 25% to 45% of children with ADHD. This isn't a side effect; it's central to their experience. Children who struggle with emotional regulation tend to have more difficulty with attention and impulse control too, because these skills draw on overlapping brain systems.
+**Breathe, Think, Do with Sesame** uses beloved Sesame Street characters to teach problem-solving and self-regulation skills. Best for younger children aged 2 to 5.
 
-Parents in our community tell me the same story constantly. One mum put it perfectly: "We've tried every app going. He loves them for three days, then they collect dust. I realised we were trying to build the roof before the foundation."
+**Stop, Breathe and Think Kids** guides children through identifying their emotions and choosing appropriate calming exercises.
 
-The missing piece? These apps all assume the child can already engage. They target focus, productivity, and organisation, but skip the foundational step: helping the child feel calm and regulated enough to use any tool at all.
+Apps like these build skills over time. They teach children to notice their emotions, name them, and apply strategies. Skills matter.
 
-Many parents start with focus and productivity apps because those seem like the most obvious targets. But if your child regularly experiences big feelings, meltdowns, or sensory overwhelm, starting with emotional regulation or sensory support works better.
+That's valuable work.
 
-Before a child can learn to manage their time, they need to feel safe in their body. Before they can focus on a task, they need to feel calm enough to engage.
+But skill-building takes time and requires the child to be regulated enough to learn. In the moment of overwhelm, a child can't access a meditation app or apply a breathing technique they learned last Tuesday.
 
-We built HushAway® with this in mind. Instead of asking more from already overwhelmed children, we created passive sound support that meets them where they are. No tasks to complete. No instructions to follow. No cognitive load required. Just gentle, sensory-friendly sounds that help the nervous system settle.
+HushAway® provides a different kind of support: immediate, passive regulation. When big feelings arrive, gentle sounds can help the nervous system settle without requiring the child to do anything. It's not replacing the skill-building apps. It's providing support in the moments when those skills aren't yet accessible.
 
-When children feel calmer, they can engage with other supports. The focus app works better. The routine becomes followable. The homework gets done with fewer meltdowns.
+Many families use both. Emotional regulation apps for building long-term skills. HushAway® for in-the-moment support when those skills aren't reachable.
 
----
+## The FDA-Approved ADHD App: What Parents Need to Know
 
-## What Is the FDA-Approved ADHD Game?
+EndeavorRx is the only FDA-approved digital therapeutic for ADHD. It's a video game built to improve attention and cognitive function in children aged 8 to 12 through specific gameplay challenges. See our detailed guide to [LINK TO: FDA approved ADHD game] for the full breakdown.
 
-You may have heard about EndeavorRx, the first and currently only prescription digital therapeutic approved by the FDA for ADHD.
+Here's what you need to know: EndeavorRx requires a doctor's prescription. It costs approximately $99 per month. The recommended use involves playing the game for 25 minutes a day, five days a week, for at least four weeks.
 
-EndeavorRx is a video game that targets attention systems in the brain. Children guide a character through various challenges that require focus and the ability to ignore distractions. It's meant for children aged 8 to 12 with primarily inattentive or combined-type ADHD.
+Clinical trials showed modest improvements in attention measures. Some children benefit meaningfully; others see less change.
 
-The approval was based on five clinical studies involving over 600 children:
+What EndeavorRx represents: a shift toward recognising digital tools as legitimate medical interventions. In 2024, NICE recommended QbTest as the first digital technology for helping diagnose ADHD in children, another sign that the medical establishment is taking these tools seriously.
 
-- One-third of children showed measurable improvement in attention after four weeks
-- 68% of parents reported improvement in ADHD-related impairments after two months
-- 73% of children reported improvement in their attention
-- No serious side effects were reported
+But EndeavorRx is still an active engagement approach. Children play the game. They focus on challenges. They work at improving.
 
-One thing to know: EndeavorRx is meant to be used alongside other support, not as a standalone solution. The FDA states it should be part of a therapeutic programme that includes other approaches.
+For children who can engage with that demand, it may help. For children whose nervous systems are too overwhelmed to engage with any app, even a clinically developed one, the active engagement requirement remains a barrier.
 
-It's also a prescription product in the US, meaning families need to go through a healthcare provider to access it. Availability varies. And for many UK families, it simply isn't an option yet.
-
-For a detailed look at this option, see [LINK TO: 5.7 FDA Approved ADHD Game].
-
----
-
-## Are There Free ADHD Apps That Work?
-
-Budget matters. You shouldn't have to pay a fortune to support your child. Several useful apps are free or have free versions:
-
-**Free options:**
-
-- **Breathe, Think, Do with Sesame Street**: A free app from Sesame Workshop that teaches young children breathing and problem-solving strategies. Excellent for children under 6
-- **Timer apps**: Simple timer apps (many free) help children work in focused bursts without fancy features
-- **Khan Academy**: Completely free educational content that suits ADHD learners who benefit from short, self-paced videos
-
-**Free with limitations:**
-
-- **Headspace**: Offers some free content for children, with more available through subscription
-- **Calm**: Similar model to Headspace, with some free sleep stories and meditations for children
-
-Free apps often have limited features, advertisements, or less personalisation. If your child has found something that genuinely helps, a subscription is worth considering. HushAway® offers a subscription model too, with soundscapes built for neurodivergent children rather than general audiences. Compare the cost against other supports you pay for, and remember that apps should supplement, not replace, other forms of help.
-
----
-
-## What Sounds Help ADHD Children Focus?
-
-Sound therapy is increasingly recognised as a support for children with ADHD, and growing research backs it up.
-
-### White Noise
-
-White noise contains all frequencies at equal intensity, creating a consistent ambient sound. A 2022 study with preschool children found that white noise improved attentional performance and reduced hyperactive behaviour in children with ADHD.
-
-The theory behind it is called stochastic resonance: background noise helps ADHD brains filter out distractions by providing a consistent sensory baseline.
-
-### Brown Noise
-
-Deeper and more soothing than white noise, brown noise has been described as a "weighted blanket for the brain." While research is still emerging, many families report it helps children feel calmer and more settled. For more on the differences between sound types, see [LINK TO: 2.6 White Noise vs Guided Sleep Apps].
-
-### Binaural Beats
-
-When slightly different tones play in each ear, the brain perceives a third tone: a binaural beat. Different frequencies support different mental states:
-
-- Alpha and beta frequencies (8-30 Hz) are associated with alertness and focus
-- Theta frequencies (4-8 Hz) are associated with relaxation and creativity
-- Delta frequencies (0.5-4 Hz) are associated with deep relaxation and sleep
-
-Early research suggests binaural beats help improve focus and reduce anxiety.
-
-More studies are needed.
-
-But many parents report positive results already.
-
-### Nature Sounds and Soundscapes
-
-Predictable, calming sounds, whether rain, ocean waves, or gentle ambient music, create a consistent sensory environment that helps children feel more regulated.
-
-Unlike apps that require active engagement, sound works passively. Your child doesn't need to remember to use it, complete tasks, or maintain attention. The sound simply provides a soft place to land, creating conditions where calm and focus become more accessible.
-
-We created the [Sound Sanctuary](https://hushaway.com/sound-sanctuary) for exactly this reason: gentle sound support for children who feel everything, including those with ADHD who need sensory-friendly options.
-
----
+The distinction between active and passive support matters here too. EndeavorRx asks children to do something. HushAway® does something for them. Both have their place. The question is which your child needs right now.
 
 ## How to Choose the Right ADHD App for Your Child
 
-With so many options, here's a practical approach to finding what might work:
+With hundreds of ADHD apps available, how do you choose? Start by asking what's getting in the way. Our guide to [LINK TO: ADHD apps by age] can help narrow your options further.
 
-### Consider Your Child's Age
+| Barrier | App Type | Examples | HushAway® Role |
+|---------|----------|----------|----------------|
+| Sustained attention | Focus timers | Forest, Focus Keeper | Use alongside for regulation |
+| Organisation | Routine apps | Brili, Tiimo | Foundation before structure |
+| Motivation | Gamified apps | Habitica, Joon | Backup when novelty fades |
+| Emotional overwhelm | Regulation apps | Mightier, Calm | Immediate support in crisis |
+| Sleep | Sound/guided apps | Sleep Wise, Headspace | Primary sleep support |
+| Nervous system dysregulation | Passive sound | HushAway® | Start here first |
 
-**Under 6:** Look for simple, visual apps with minimal text. Breathe, Think, Do with Sesame Street and Choiceworks work well.
+**Sustained attention during tasks:**
+If your child can get started but struggles to stay focused, focus timers like Forest or Focus Keeper may help. The external structure and visual progress provide accountability.
 
-**6 to 12:** The widest range of options exists here. Joon, EndeavorRx (8+), and most educational apps target this age group.
+**Organisation and sequencing:**
+When the barrier is knowing what to do but not being able to break it into steps, routine apps like Brili or Tiimo that provide visual structure work well.
 
-**Over 12:** Many "adult" apps become appropriate. Timer apps, habit trackers, and mindfulness apps all help.
+**Motivation:**
+Children who know what to do but can't find the motivation to begin may respond to gamified apps like Habitica or Joon. These provide the external motivation their dopamine system struggles to generate internally. Know that novelty fades, so have a backup plan.
 
-### Match the App to the Need
+**Emotional overwhelm:**
+When big feelings take over and make everything else impossible, consider emotional regulation apps like Mightier for skill-building, and HushAway® for immediate support during moments of overwhelm.
 
-Start with one clear goal rather than trying to address everything at once:
+**Sleep:**
+Sound-based sleep apps work well here. HushAway®'s sleep soundscapes are built for neurodivergent children who need passive support rather than guided meditation. See our [LINK TO: executive function apps] guide for more on building night-time routines.
 
-| If Your Child Needs... | Consider... |
-|------------------------|-------------|
-| Help calming down | Sound therapy, mindfulness apps |
-| Structure for routines | Brili, Joon, Goally |
-| Support with focus | Timer apps, EndeavorRx (with prescription) |
-| Emotional vocabulary | Zones of Regulation, Choiceworks |
-| Homework motivation | Joon, gamified reward apps |
+**Nervous system dysregulation:**
+Children who seem constantly on edge, overstimulated, or unable to engage with any demands need passive sound support. HushAway® helps regulate the nervous system in the background, creating conditions where other approaches become possible.
 
-### Think About Screen Time
+**Not sure what the barrier is?**
+Start with regulation support. When children feel calmer in their bodies, it becomes clearer what else they need. Sometimes, regulation support alone makes a bigger difference than parents expect.
 
-One legitimate concern: does adding another app create more screen time problems?
+## The Screen Time Question
 
-This depends on the type of app:
+Parents often ask whether using apps to help ADHD is contradictory given concerns about screen time.
 
-- Active engagement apps (games, educational content) add to screen time and should be balanced with other activities
-- Passive sound apps don't require looking at a screen; your child can listen while doing other things or falling asleep
+It's a fair question. Research does suggest that excessive screen time, particularly fast-paced gaming and social media scrolling, can worsen ADHD behaviours in some children. The constant stimulation trains the brain to expect high-dopamine input, making lower-stimulation activities feel unbearable.
 
-If screen time is already a challenge, passive support like sound therapy fits better than another game-based app.
+But not all screen use is equal. Active, high-stimulation scrolling is different from using a timer app that sits in the corner of the screen. Sound-based apps like HushAway® don't require looking at the screen at all. You press play and put the phone down.
 
-### Try Before You Commit
+The key distinctions:
 
-Most apps offer free trials or limited free versions. Take advantage of these to see if your child engages with the app before paying for a subscription.
+**Active screen engagement** (games, videos, social media) provides high stimulation and can be problematic when excessive.
 
-Watch for:
+**Passive tool use** (timers, sound apps, schedules) provides utility without the stimulation hit.
 
-- Does your child use it willingly or only with reminders?
-- Does it help in real situations or only during calm times?
-- Does interest last beyond the first few days?
+**Guided content** (meditation, educational apps) sits somewhere between, providing structure without high stimulation but still requiring attention.
 
-### Involve Your Child
+HushAway® was built with this distinction in mind. The Sound Sanctuary works in the background. Children don't need to watch the screen, tap buttons, or engage with visual content. They can focus on what they're doing, whether that's homework, getting dressed, or falling asleep, while the sounds support their nervous system.
 
-For older children especially, choice matters. Let them explore options and have input into what they try. Ownership helps. An app they choose is more likely to stick than one imposed on them. HushAway® lets children pick their own soundscapes too, giving them control over their sensory environment.
+If screen time concerns you, look for apps that minimise visual engagement. The best ADHD tools don't need your child's eyes on the screen.
+
+## Free ADHD Apps That Work
+
+Cost matters. Budgets are tight. Monthly fees add up. Parents want to know what works without adding another expense.
+
+Free options worth trying:
+
+**Habitica** (free with optional paid features) gamifies daily tasks through RPG mechanics. It's one of the better free options for children who respond to game-based motivation.
+
+**Forest** (free version available) provides basic focus timer functionality with the tree-growing mechanic.
+
+**Choiceworks Calendar** (free) offers visual scheduling using pictures, good for younger children or those who benefit from visual supports.
+
+**Google Calendar** (free) integrates with other Google tools many children already use for school. Not ADHD-specific but useful for basic scheduling.
+
+**Breathe, Think, Do with Sesame** (free) teaches emotional regulation skills to younger children.
+
+Many "free" apps have significant limitations in their free versions, pushing you toward paid tiers for full functionality. Read the details before getting your child invested.
+
+HushAway® takes a different approach. The Sound Sanctuary is free forever, giving full access to sounds, stories, daytime and nighttime content, and affirmations. No credit card. No commitment. Costs nothing to try. Additional features are coming, but the foundation remains free.
+
+Why? We believe nervous system support shouldn't be locked behind a paywall. If sound helps your child feel calmer, that shouldn't depend on what you can afford.
+
+## Making ADHD Apps Work Long-Term
+
+Even the best app won't help if it's abandoned after two weeks. Some strategies to make apps stick:
+
+**Start with one app, not five.** Introducing multiple tools at once overwhelms both children and parents. Pick one that addresses the most pressing need. Get it established before adding anything else.
+
+**Match the app to your child's challenge.** An organisation app won't help if regulation is the real barrier. A focus timer won't help if motivation is missing. Get the right tool for the problem.
+
+**Expect novelty to fade.** For gamified apps especially, plan for the moment when points stop being exciting. Some families rotate between apps. Others use gamification to establish habits, then transition to simpler tools.
+
+**Use passive support as a foundation.** HushAway® doesn't rely on novelty or engagement. It's the kind of tool that can become part of daily life without losing effectiveness over time. Many families find that consistent sound support creates stability while other apps come and go.
+
+**Involve your child in choosing.** Apps imposed by parents often get rejected. Let your child explore options and have input. They're more likely to use something they chose themselves.
+
+**Track whether it's helping.** After two to four weeks, assess: Is homework getting done more easily? Are morning routines smoother? Is sleep improving? If nothing is changing, the app may not be addressing the real need.
+
+## When Professional Support Is Needed
+
+Apps are tools, not standalone solutions. They can support children with ADHD, but they don't replace professional assessment, appropriate accommodations, and, for some children, medication.
+
+Consider seeking professional support when:
+
+- Your child hasn't been formally assessed and you suspect ADHD
+- Current strategies aren't working despite consistent effort
+- Your child is struggling at school, socially, or with mental health
+- Sleep problems are severe and persistent
+- Emotional dysregulation is affecting family life
+
+In the UK, you can start with your GP, who can refer to Child and Adolescent Mental Health Services (CAMHS) or community paediatrics. Wait times vary significantly by area. Some families access private assessment while waiting for NHS services.
+
+The [NHS provides information about ADHD](https://www.nhs.uk/conditions/attention-deficit-hyperactivity-disorder-adhd/), including what to expect from assessment. [ADHD UK](https://adhduk.co.uk) offers support and resources for families in the UK. [NICE guidelines](https://www.nice.org.uk/guidance/ng87) outline evidence-based approaches to ADHD diagnosis and management.
+
+While you're waiting for professional support, apps like HushAway® can help manage daily challenges. They're not a substitute for proper assessment and care, but they can make the waiting period more manageable for the whole family.
+
+## Getting Started
+
+If you've made it this far, you're not just looking for another list of apps. You're looking for something that might help your child.
+
+Start by identifying the real barrier. Is it focus? Organisation? Emotional regulation? Sleep? Nervous system overwhelm? The answer shapes which tools will help.
+
+If you're unsure, start with regulation support. When children feel calmer in their bodies, other challenges often become clearer and more manageable. HushAway® provides that foundation: gentle sound support that works in the background, asking nothing of your child while helping their nervous system settle.
+
+The Sound Sanctuary is free forever. No monthly fees. No credit card. Nothing to lose. Just your name and email, and you're in.
+
+You know your child best. You've tried more approaches than anyone else. And if those approaches haven't worked, it's not because you're doing something wrong. Most ADHD apps ask children to do something before they're regulated enough to do it. That's the apps failing, not you or your child.
+
+Maybe it's time to try something that works differently.
+
+[Explore the Sound Sanctuary](https://hushaway.com/sound-sanctuary)
 
 ---
 
-## When Professional Support is Needed
+*This article provides information about ADHD apps, not professional advice. Every child is different, and what works for one family may not work for another. If you're concerned about your child's ADHD, please speak to your GP or paediatrician.*
 
-ADHD apps are tools. They don't replace professional support when it's needed. And HushAway® doesn't either.
-
-Consider seeking professional help if:
-
-- Your child's ADHD significantly affects their daily life, relationships, or schooling
-- You're unsure whether your child has ADHD and want an assessment
-- Your child is struggling with anxiety, depression, or other difficulties alongside ADHD
-- You've tried multiple strategies without seeing improvement
-- You're feeling overwhelmed and need guidance
-
-**UK Resources:**
-
-- Your GP can refer you to appropriate services, including CAMHS (Child and Adolescent Mental Health Services)
-- [NHS guidance on ADHD in children](https://www.nhs.uk/conditions/attention-deficit-hyperactivity-disorder-adhd/) provides information about assessment and support
-- [ADHD UK](https://adhduk.co.uk/) offers support, resources, and community for families affected by ADHD
-- [NICE guidelines on ADHD](https://www.nice.org.uk/guidance/ng87) provide clinical recommendations that inform what support works
-
-NHS data from 2025 shows that over half a million people are currently waiting for ADHD assessment in England, with many waiting over a year. While you wait, apps and other strategies provide some support. But professional input remains valuable when accessible.
-
-For information on professional support options, see [LINK TO: 5.6 ADHD Medication and Therapy Apps].
-
----
-
-## Active Apps vs Passive Sound Support
-
-| | Active ADHD Apps | HushAway® Sound Support |
-|---|---|---|
-| **Requires** | Attention, engagement, following instructions | Nothing; works passively in the background |
-| **Best when** | Child is already calm and regulated | Child is overwhelmed, dysregulated, or struggling |
-| **Screen time** | Adds to screen time | No screen required; audio only |
-| **Cognitive load** | High; child must actively participate | None; support happens automatically |
-| **Works for** | Focus training, routine building, education | Creating calm, supporting sleep, reducing overwhelm |
-| **Foundation or tool?** | Tool that requires readiness | Foundation that creates readiness |
-
-Most children benefit from both types of support at different times. The key is understanding which your child needs right now.
-
----
-
-## Key Takeaways
-
-Most ADHD apps lack strong research evidence, but some show genuine promise. The FDA-approved EndeavorRx has the strongest clinical backing for attention improvement.
-
-Emotional regulation often needs to come before focus. If your child struggles with big feelings or sensory overwhelm, starting with regulation support works better than productivity apps.
-
-Passive sound support like HushAway® offers something different: it doesn't require your child to complete tasks or maintain attention. It creates conditions where calm and focus become possible, making other apps work better.
-
----
-
-Finding the right support for your child with ADHD can feel like searching for a needle in a haystack. If you've tried multiple apps without success, you're not doing anything wrong. Finding what works is a process, not a destination.
-
-You know your child best. Trust your instincts about what they need, whether that's help with focus, support for big feelings, or simply a way to feel calmer in their body.
-
-If your child struggles with big feelings, sensory overwhelm, or simply needs a soft place to land, HushAway® offers something different. Our Sound Sanctuary provides sensory-friendly soundscapes for children who feel everything, created by a Certified Neurodivergent Inclusive Coach who understands what these families need.
-
-[Explore the Sound Sanctuary](https://hushaway.com/sound-sanctuary) and discover gentle sound support that meets your child where they are.
+*Written by Nicola Maria Rose, Certified Neurodivergent Inclusive Coach, ADHD Coach, and Sound Therapy Practitioner. HushAway® was created to support children who feel everything, providing a soft place to land for overwhelmed nervous systems.*

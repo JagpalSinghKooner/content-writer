@@ -25,6 +25,45 @@ Output format: **3-5 distinct angle options**, each with:
 
 ---
 
+## Library Integration (HushAway Workflow)
+
+**IMPORTANT:** For HushAway articles, check the libraries BEFORE generating angles.
+
+### Before generating angles:
+
+1. **CHECK `ARTICLE-ORDER.md`** to confirm:
+   - Correct article is selected (by priority order)
+   - Pillar context (avoid reusing patterns within same pillar)
+   - Article type (Hub vs Cluster may need different angle approaches)
+
+2. **READ `.claude/angle-library.md`**:
+   - Check "Angles Used" table to see all angles already used
+   - Check "Pattern Tracking" table for underlying patterns that have been overused
+   - Prioritise fresh angles AND fresh underlying patterns
+   - Note which pillars have used which patterns
+
+### When generating angles:
+- Flag if an angle uses a pattern already in the library
+- If reusing a pattern, provide clear justification (different pillar = usually acceptable)
+- Aim for both angle AND pattern diversity across the article library
+
+### After angle selection:
+Include this instruction in your output:
+
+> **Next step:** Update `.claude/angle-library.md`:
+>
+> **Angles Used table (required):**
+> - Article: [article name]
+> - Pillar: [pillar number]
+> - Angle Name: [selected angle name]
+> - Core Insight: [one sentence]
+> - Headline Direction: [headline from selected angle]
+> - Date: [today's date]
+
+This ensures the library grows with each article and future angles remain diverse.
+
+---
+
 ## The angle-finding process
 
 ### Step 1: Identify what they're actually selling

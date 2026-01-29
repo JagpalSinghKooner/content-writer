@@ -30,27 +30,48 @@ This is a local development folder for writing and previewing SEO articles. Arti
 
 ---
 
-## Content Rules and Verification (Hard Gate)
+## Content Rules and Verification (6 Hard Gates)
 
 **All content rules:** `.claude/humanise-content.md` (50+ banned words, 30+ frequency limits, structural rules, human voice requirements)
 
-**Verification scripts:**
-- Research gate: `.claude/scripts/check-research-gate.sh`
-- Content gate: `.claude/scripts/master-gate.sh`
+**6-Gate Verification (ALL MANDATORY):**
+
+| Gate | Script | When | Status |
+|------|--------|------|--------|
+| 1. Keyword Gate | `check-keyword-gate.sh` | After /keyword-research + Perplexity | PASS/FAIL |
+| 2. Research Gate | `check-research-gate.sh` | After research complete | PASS/FAIL |
+| 3. Angle Gate | `check-angle-gate.sh` | After /positioning-angles | PASS/FAIL |
+| 4. Content Gate | `master-gate.sh` | After /seo-content | PASS/FAIL |
+| 5. Conversion Gate | `check-conversion-gate.sh` | After /direct-response-copy | PASS/FAIL |
+| 6. Final Gate | `check-final-gate.sh` | Before export | PASS/FAIL |
 
 ```bash
-# GATE 1: Run before writing begins
+# Gate 1: After /keyword-research skill
+.claude/scripts/check-keyword-gate.sh [research-file]
+
+# Gate 2: After research is complete
 .claude/scripts/check-research-gate.sh [research-file]
 
-# GATE 2: Run after writing completes
-.claude/scripts/master-gate.sh [filename] [hub|cluster]
+# Gate 3: After /positioning-angles skill
+.claude/scripts/check-angle-gate.sh [research-file]
+
+# Gate 4: After /seo-content skill
+.claude/scripts/master-gate.sh [article-file] [hub|cluster]
+
+# Gate 5: After /direct-response-copy skill (run skill THEN script)
+.claude/scripts/check-conversion-gate.sh [article-file]
+
+# Gate 6: Before export (fully automated)
+.claude/scripts/check-final-gate.sh [article-file] [hub|cluster]
 ```
 
-**BOTH GATES MUST PASS TO PROCEED.**
-- Exit code 0 = OPEN/UNLOCKED (pass)
-- Exit code 1 = CLOSED/LOCKED (fail)
-- Any failure = fix ALL issues and re-run
-- No exceptions. No bypasses. No manual overrides.
+**ALL 6 GATES MUST PASS. NO EXCEPTIONS. ALL GATES ARE FULLY AUTOMATED.**
+- Exit code 0 = PASS (proceed to next gate)
+- Exit code 1 = FAIL (fix issues and re-run script)
+- Any failure = fix ALL issues and re-run the script
+- No exceptions. No bypasses. Every gate has an automated script.
+- **Skills are MANDATORY** - /orchestrator, /keyword-research, /positioning-angles, /seo-content, /direct-response-copy must ALL run
+- **Gate 5 requires BOTH:** Run /direct-response-copy skill first, THEN run check-conversion-gate.sh script
 
 ---
 
@@ -74,11 +95,15 @@ This is a local development folder for writing and previewing SEO articles. Arti
 | Title/meta length | <60 / 140-160 chars | master-gate.sh Section 20 | Content |
 | Research complete | All sections filled | check-research-gate.sh | Research |
 
-**Workflow enforcement:**
-1. Research Gate MUST show UNLOCKED before writing begins
-2. Content Gate MUST show OPEN before preview/export
-3. NO article proceeds with ANY failure
-4. FIX and RE-RUN until all passes
+**Workflow enforcement (6 gates in order):**
+1. Keyword Gate MUST show PASS before research begins
+2. Research Gate MUST show PASS before positioning begins
+3. Angle Gate MUST show PASS before writing begins
+4. Content Gate MUST show PASS before conversion review
+5. Conversion Gate MUST show PASS before final gate
+6. Final Gate MUST show PASS before export
+7. NO article proceeds with ANY gate failure
+8. FIX and RE-RUN script until gate shows PASS
 
 ---
 
@@ -113,7 +138,12 @@ This means:
 **Website:** hushaway.com
 
 **What is HushAway®?**
-A subscription-based sound therapy platform (mobile app + web app) designed specifically for neurodivergent children.
+A sound therapy platform (mobile app + web app) designed specifically for neurodivergent children, with a free forever tier.
+
+**Pricing Model:**
+- **Free Forever:** Full access to the Sound Sanctuary (sounds, stories, daytime/nighttime content, affirmations)
+- **Premium:** Coming soon (additional features)
+- **Sign-up:** Name + email → magic link sent automatically (no password required)
 
 **Sound Types:**
 - Sleep soundscapes (ambient sounds, white noise, nature sounds)
@@ -146,30 +176,6 @@ A subscription-based sound therapy platform (mobile app + web app) designed spec
 - "Gentle sound support" (what we offer)
 - "Mum" (not "mom", UK English)
 - "You know your child best"
-
----
-
-## 5 Base Positioning Angles (Reference Only)
-
-**IMPORTANT: These are BASE angles for reference. Every article MUST run `/positioning-angles` skill to generate article-specific angles.**
-
-The `/positioning-angles` skill will:
-1. Use these base angles as context
-2. Analyze the specific article's research and competitor gaps
-3. Generate 3-5 article-specific angles
-4. Provide headline directions and counter-positions
-
-**Base angles (for context):**
-
-| Angle | Pillar Context |
-|-------|----------------|
-| 1. Neurodivergent-First Specialist | ALL content (default positioning) |
-| 2. Passive Support Alternative | Pillars 3, 6 (anxiety, emotional regulation) |
-| 3. Research-Backed Sensory Science | Pillars 1, 4 (ADHD sleep, sensory apps) |
-| 4. Supportive Ally | Pillar 7 (neurodivergent parenting) |
-| 5. Gentle Consistency Promise | Pillars 2, 5 (sleep apps, ADHD apps) |
-
-**DO NOT use these directly.** Run `/positioning-angles` skill after research to get article-specific angles with counter-positions.
 
 ---
 
@@ -355,169 +361,120 @@ Example: "If you're struggling with burnout, you're not alone [LINK TO: Recognis
 
 ---
 
-## 7 Content Pillars (77 Articles Total)
+## Content Pillars
 
-### IMPORTANT: Seed Keywords vs Validated Keywords
+**For the full article list, priority order, status tracking, and prompts:** See `ARTICLE-ORDER.md`
 
-**The keywords in this table are SEED KEYWORDS - starting points, not final targets.**
+### Article Workflow
 
-Before writing ANY article:
-1. Select the seed keyword from this table
-2. Run `/keyword-research` skill to validate and expand
-3. Update this table with the VALIDATED keyword and secondary keywords
-4. Pass the Keyword Gate before proceeding
+Before writing ANY article (all steps automated):
+1. **READ `ARTICLE-ORDER.md`** to select the next article in priority order
+2. **READ `.claude/keyword-library.md`** to see previously validated keywords and clustering opportunities
+3. Run `/keyword-research` skill with context from the library
+4. **Auto-update `.claude/keyword-library.md`** with the validated keyword (all 6 columns required)
+5. Complete research file and pass Research Gate
+6. **READ `.claude/angle-library.md`** to see angles already used and patterns to avoid
+7. Run `/positioning-angles` skill with context from the library
+8. **Auto-update `.claude/angle-library.md`** with the selected angle (all 6 columns required)
+9. **READ both libraries** to confirm angle and keywords before writing
+10. Write with `/seo-content` skill
+11. Pass all 6 gates in order
+12. Auto-update `ARTICLE-ORDER.md` status once complete
 
-**Table columns:**
-- **Article** - Article identifier
-- **Target Keyword** - Seed keyword (update with validated keyword after /keyword-research)
-- **Volume** - Estimated search volume (update if /keyword-research provides new data)
-- **Secondary Keywords** - Add after /keyword-research skill completes
-- **Status** - validated / not-started
+**Why READ libraries first?**
+- `keyword-library.md` shows existing keyword clusters for internal linking opportunities
+- `angle-library.md` prevents reusing angles and ensures diversity across articles
+- Both libraries accumulate learning data that improves future articles
 
----
+### Batch Management
 
-**Priority Order (by search volume):**
-
-### Pillar 5: ADHD Apps (Start Here - Highest Volume)
-**Volume:** 25,000 monthly searches | **Angle:** Neurodivergent-First + Supportive Ally
-
-| Article | Target Keyword | Volume |
-|---------|---------------|--------|
-| HUB | ADHD apps | 25,000 |
-| 5.1 | Focus apps ADHD | 600-1,200 |
-| 5.2 | Task management apps kids | 400-900 |
-| 5.3 | Executive function ADHD apps | 300-700 |
-| 5.4 | Behavior tracking ADHD | 300-700 |
-| 5.5 | Organization apps ADHD children | 400-800 |
-| 5.6 | ADHD treatment medication therapy apps | 400-900 |
-| 5.7 | FDA approved ADHD game | 300-600 |
-| 5.8 | ADHD apps school classroom | 400-900 |
-| 5.9 | ADHD apps by age | 300-700 |
-| 5.10 | Emotional dysregulation ADHD apps | 400-800 |
-
-### Pillar 2: Sleep Apps for Kids
-**Volume:** 8,000-12,000 monthly searches | **Angle:** Neurodivergent-First + Gentle Consistency
-
-| Article | Target Keyword | Volume |
-|---------|---------------|--------|
-| HUB | Sleep apps for kids | 8,000-12,000 |
-| 2.1 | Bedtime stories vs meditation apps kids | 300-600 |
-| 2.2 | Sleep apps for toddlers | 1,000-2,000 |
-| 2.3 | Sleep apps for school age children | 800-1,500 |
-| 2.4 | Sleep apps for teens | 600-1,200 |
-| 2.5 | Sleep routine for kids | 1,500-2,500 |
-| 2.6 | White noise vs guided sleep apps | 200-500 |
-| 2.7 | Screen time before bed kids | 1,000-2,000 |
-| 2.8 | Best free sleep apps for kids | 800-1,500 |
-| 2.9 | Sleep apps and sleep training | 300-700 |
-| 2.10 | Sleep tracking apps for kids | 400-800 |
-
-### Pillar 1: ADHD Sleep Support
-**Volume:** 5,000-8,000 monthly searches | **Angle:** Research-Backed Science + Neurodivergent-First
-
-| Article | Target Keyword | Volume |
-|---------|---------------|--------|
-| HUB | ADHD sleep dysregulation | 5,000-8,000 |
-| 1.1 | ADHD bedtime resistance | 1,500-2,000 |
-| 1.2 | How to help ADHD child fall asleep | 1,200-1,800 |
-| 1.3 | ADHD sleep schedule | 800-1,200 |
-| 1.4 | Sensory bedroom ADHD | 600-1,000 |
-| 1.5 | ADHD medication sleep side effects | 400-700 |
-| 1.6 | Melatonin ADHD children | 400-600 |
-| 1.7 | ADHD night waking | 500-900 |
-| 1.8 | ADHD anxiety sleep children | 600-1,000 |
-| 1.9 | ADHD early morning dysregulation | 300-600 |
-| 1.10 | ADHD screen time sleep | 400-700 |
-
-### Pillar 3: Anxiety Apps for Children
-**Volume:** 4,000-6,000 monthly searches | **Angle:** Passive Support Alternative
-
-| Article | Target Keyword | Volume |
-|---------|---------------|--------|
-| HUB | Anxiety apps for children | 4,000-6,000 |
-| 3.1 | Anxiety autism children | 700-1,400 |
-| 3.2 | CBT apps for kids anxiety | 400-900 |
-| 3.3 | Grounding techniques anxious kids | 600-1,200 |
-| 3.4 | Social anxiety ADHD children | 500-1,100 |
-| 3.5 | Separation anxiety apps kids | 400-900 |
-| 3.6 | Panic attacks children | 1,000-2,000 |
-| 3.7 | Anxiety medication children apps | 300-700 |
-| 3.8 | Parent anxiety child anxiety | 400-900 |
-| 3.9 | School anxiety children apps | 400-900 |
-| 3.10 | Performance anxiety neurodivergent children | 200-500 |
-
-### Pillar 4: Sensory Friendly Apps
-**Volume:** 2,000-3,000 monthly searches | **Angle:** Research-Backed Science + Neurodivergent-First
-
-| Article | Target Keyword | Volume |
-|---------|---------------|--------|
-| HUB | Sensory apps for children | 2,000-3,000 |
-| 4.1 | Sensory overload vs sensory seeking | 300-700 |
-| 4.2 | Binaural beats kids | 400-800 |
-| 4.3 | ASMR kids | 600-1,200 |
-| 4.4 | Autism sensory regulation apps | 400-900 |
-| 4.5 | ADHD stimming apps | 300-700 |
-| 4.6 | Sensory toolkit children | 200-500 |
-| 4.7 | Sensory diet children | 300-600 |
-| 4.8 | Weighted blankets anxiety sleep | 800-1,500 |
-| 4.9 | Sensory friendly home design | 200-500 |
-| 4.10 | School sensory accommodations | 300-700 |
-
-### Pillar 7: Neurodivergent Parenting
-**Volume:** 2,000-4,000 monthly searches | **Angle:** Supportive Ally
-
-| Article | Target Keyword | Volume |
-|---------|---------------|--------|
-| HUB | Neurodivergent parenting | 2,000-4,000 |
-| 7.1 | Parent burnout ADHD | 500-1,100 |
-| 7.2 | ADHD parent sleep deprivation | 300-700 |
-| 7.3 | Respite care ADHD children | 200-500 |
-| 7.4 | Co-parenting ADHD | 300-700 |
-| 7.5 | Parent therapy counseling | 400-900 |
-| 7.6 | ADHD parenting community support | 300-700 |
-| 7.7 | Self-compassion parents | 300-700 |
-| 7.8 | Parent self-care apps | 300-700 |
-| 7.9 | Stress management parents | 500-1,100 |
-| 7.10 | Neurodivergent parent ADHD | 400-900 |
-
-### Pillar 6: Emotional Regulation
-**Volume:** 1,000-2,000 monthly searches | **Angle:** Passive Support + Neurodivergent-First
-
-| Article | Target Keyword | Volume |
-|---------|---------------|--------|
-| HUB | Emotional regulation apps children | 1,000-2,000 |
-| 6.1 | Emotional dysregulation ADHD children | 400-800 |
-| 6.2 | Emotional regulation autism | 300-700 |
-| 6.3 | Affirmations anxious children | 300-700 |
-| 6.4 | Mindfulness ADHD children | 600-1,200 |
-| 6.5 | Anger management apps kids | 500-1,100 |
-| 6.6 | Emotional vocabulary children | 300-700 |
-| 6.7 | Self-compassion children | 300-700 |
-| 6.8 | Emotional resilience children | 400-900 |
-| 6.9 | Breathing exercises kids anxiety | 600-1,200 |
-| 6.10 | Coping strategies apps kids | 300-700 |
+When current batch is complete:
+1. Archive completed research/articles to `/archive/` folder (for training data)
+2. Clear `ARTICLE-ORDER.md`
+3. Add new pillars and articles
+4. Keep `angle-library.md` and `keyword-library.md` (carries forward as learning data)
 
 ---
 
-## Article Writing Process (5-Gate Workflow)
+## Article Writing Process (6-Gate Workflow)
 
-**MANDATORY SKILLS (cannot skip):**
-1. `/keyword-research` - Run BEFORE research → Pass KEYWORD GATE
-2. `/positioning-angles` - Run AFTER research → Pass ANGLE GATE
-3. `/seo-content` - Run AFTER angle gate → Pass CONTENT GATE
+**ALWAYS START WITH `/orchestrator`** - It diagnoses the optimal approach and routes to the right skills.
+
+**MANDATORY SKILLS (in order):**
+1. `/orchestrator` - Entry point → Diagnoses needs, routes to skills
+2. `/keyword-research` - Run BEFORE research → Pass KEYWORD GATE
+3. `/positioning-angles` - Run AFTER research → Pass ANGLE GATE
+4. `/seo-content` - Run AFTER angle gate → Pass CONTENT GATE
+5. `/direct-response-copy` - Run AFTER content gate → Pass CONVERSION GATE
 
 **Workflow:** `.claude/agents.md`
 **Detailed process:** `.claude/skills/write-article.md`
 **Content rules:** `.claude/humanise-content.md`
 
-**Gate Scripts:**
+**Gate Scripts (ALL AUTOMATED):**
 - `.claude/scripts/check-keyword-gate.sh` - After /keyword-research
 - `.claude/scripts/check-research-gate.sh` - After research complete
 - `.claude/scripts/check-angle-gate.sh` - After /positioning-angles
-- `.claude/scripts/master-gate.sh` - After writing complete
+- `.claude/scripts/master-gate.sh` - After writing complete (23 sections)
+- `.claude/scripts/check-conversion-gate.sh` - After /direct-response-copy (7 conversion checks)
+- `.claude/scripts/check-final-gate.sh` - Before export (frontmatter, word count, location)
 
-**The Final Test:**
-Would an exhausted parent at 2am find this supportive? If yes, publish.
+**All 6 gates are fully automated. Every gate has a script. No manual verification steps.**
+
+---
+
+## Conversion Requirements (Conversion Gate)
+
+**Goal:** Every article should guide readers towards signing up for the free Sound Sanctuary.
+
+### Parent Objections to Address
+
+Every article must counter these common objections:
+
+| Objection | How to Address |
+|-----------|----------------|
+| "Another app won't help" | Show how passive sound is different from active apps that failed |
+| "Too tired to try" | Emphasise zero learning curve, just press play, no effort required |
+| "Is this actually different?" | Neurodivergent-first positioning (not adapted generic wellness) |
+| "What if my child won't use it?" | It's free forever, no risk to try, nothing to lose |
+
+### Conversion Gate Checklist
+
+**Gate 5 requires TWO steps:**
+1. Run `/direct-response-copy` skill for AI-assisted conversion review
+2. Run `check-conversion-gate.sh` script for automated verification
+
+For content to pass the Conversion Gate, both must complete (7 checks):
+
+1. **Objection Handling** - At least 2 of the 4 objections addressed naturally in content
+2. **CTA Clarity** - "Free forever" or equivalent mentioned near primary CTA
+3. **Low-Friction Language** - No commitment language, emphasis on instant/easy access
+4. **Differentiation** - Neurodivergent-first positioning clear (not just another app)
+5. **HushAway® Prominence** - Appears in conversion contexts, not just informational
+6. **Sound Sanctuary CTA** - 2+ mentions of Sound Sanctuary as destination
+7. **Risk Reversal** - Free access removes all barriers to trying
+
+### Conversion CTA Patterns
+
+**Good:**
+- "Try the Sound Sanctuary free, forever. Just enter your name and email."
+- "No subscription needed. No credit card. Just gentle sounds, ready when you need them."
+- "See if it helps. It costs nothing to find out."
+
+**Avoid:**
+- "Sign up for our premium service"
+- "Start your free trial" (implies it ends)
+- "Subscribe to get access"
+
+### Remediation Loop
+
+If `check-conversion-gate.sh` shows FAIL:
+1. Review specific failures in script output
+2. Fix affected sections in the article
+3. Re-run `check-conversion-gate.sh` script (NOT the skill again)
+4. Repeat until script shows PASS
+
+**Note:** The skill only runs once. After initial review, fix issues and re-run the script only.
 
 ---
 
@@ -602,15 +559,56 @@ Would an exhausted parent at 2am find this supportive? If yes, publish.
 
 ## Skills Available
 
-**MANDATORY for every article (in order):**
-1. `/keyword-research` - Validate + expand keywords - **CANNOT SKIP** - Run before research
-2. `/positioning-angles` - Find article-specific angle - **CANNOT SKIP** - Run after research
-3. `/seo-content` - Write the article - Run after angle gate passes
+### Entry Point (Always Start Here)
 
-**Other skills:**
+**`/orchestrator`** - Marketing strategist that diagnoses your needs and routes to the right skills. Use this when:
+- Starting any new content task
+- Unsure which skill to use
+- Need a multi-step workflow
+- Have a vague marketing request
+
+### Article Workflow Skills (Mandatory Order)
+
+| Step | Skill/Script | Purpose | Gate | Notes |
+|------|--------------|---------|------|-------|
+| 1 | `/orchestrator` | Diagnose + route | - | Entry point |
+| 2 | `/keyword-research` | Validate keywords | Keyword Gate | Perplexity MCP required |
+| 3 | `/positioning-angles` | Find article angle | Angle Gate | After research |
+| 4 | `/seo-content` | Write the article | Content Gate | 23 checks |
+| 5a | `/direct-response-copy` | Conversion review | - | **Run FIRST** |
+| 5b | `check-conversion-gate.sh` | Conversion verify | Conversion Gate | **Run SECOND** |
+| 6 | `check-final-gate.sh` | Pre-export check | Final Gate | Ready for export |
+
+**IMPORTANT:** Gate 5 requires BOTH the skill AND the script. Run `/direct-response-copy` first for AI-assisted review, THEN run the script for automated verification.
+
+### Other Content Skills
+
 - `/brand-voice` - Extract or refine brand voice
-- `/direct-response-copy` - Conversion copywriting
 - `/email-sequences` - Email nurture sequences
-- `/content-atomizer` - Repurpose content
+- `/content-atomizer` - Repurpose content for social
 - `/newsletter` - Newsletter formats
 - `/lead-magnet` - Lead magnet concepts
+
+### Live Data Integration (MCP)
+
+**Perplexity MCP is MANDATORY for all article research.**
+
+| MCP Server | Status | Integration Point | What It Provides |
+|------------|--------|-------------------|------------------|
+| **Perplexity MCP** | IMPLEMENTED | Step 2: /keyword-research | Real PAA questions, competitor analysis, research sources |
+| **DataForSEO MCP** | PLANNED | Step 2: (future) | Exact search volumes, keyword difficulty |
+
+**Perplexity runs during `/keyword-research` and provides:**
+- Real PAA questions from Google, Reddit, Mumsnet (7+ required)
+- Competitor SERP analysis with content gaps
+- Research sources with URLs for E-E-A-T citations
+- Keyword trend validation
+
+**Keyword Gate verifies Perplexity was used:** `perplexityUsed: true`
+
+**To configure Perplexity MCP:**
+```bash
+claude mcp add perplexity --env PERPLEXITY_API_KEY=<your-key>
+```
+
+See `LIVE-DATA-WORKFLOW.md` for DataForSEO implementation plan.

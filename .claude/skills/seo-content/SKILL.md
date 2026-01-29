@@ -41,6 +41,56 @@ If coming from keyword-research skill, most of this is already defined.
 
 ---
 
+## Library Integration (HushAway Workflow)
+
+**IMPORTANT:** Before writing, check the central libraries to ensure consistency with previous articles.
+
+### Before starting:
+
+1. **READ `ARTICLE-ORDER.md`** to confirm which article you're writing and its priority
+2. **READ `.claude/keyword-library.md`** to:
+   - See previously validated keywords
+   - Avoid duplicating secondary keywords from other articles
+   - Identify cross-linking opportunities with existing keyword clusters
+3. **READ `.claude/angle-library.md`** to:
+   - Confirm the selected angle from `/positioning-angles` skill
+   - Ensure the angle is documented before writing
+   - Reference the headline direction for content tone
+
+### During writing:
+
+- Use the **selected angle** from angle-library.md to inform:
+  - Introduction framing
+  - Counter-positions for competitor sections
+  - HushAway® prominence statements
+- Reference the **secondary keywords** from keyword-library.md naturally throughout content
+- Check if any keywords from previous articles warrant internal linking
+
+### What to Verify:
+
+| Check | Source | Purpose |
+|-------|--------|---------|
+| Article priority | ARTICLE-ORDER.md | Confirm correct article |
+| Selected angle | angle-library.md | Consistent positioning |
+| Headline direction | angle-library.md | Content tone guide |
+| Secondary keywords | keyword-library.md | Natural keyword integration |
+| Keyword clusters | keyword-library.md | Internal linking opportunities |
+
+### CRITICAL: Verify Libraries Are Populated
+
+**STOP if either of these conditions is true:**
+- `.claude/keyword-library.md` has NO entry for the article you're about to write
+- `.claude/angle-library.md` has NO entry for the article you're about to write
+
+If libraries are empty for this article, **DO NOT PROCEED**. Run these skills first:
+1. `/keyword-research` → Updates keyword-library.md → Pass Keyword Gate
+2. Complete research → Pass Research Gate
+3. `/positioning-angles` → Updates angle-library.md → Pass Angle Gate
+
+**Only then can this skill run.** The gate scripts verify library entries exist.
+
+---
+
 ## The workflow
 
 ```
@@ -62,7 +112,7 @@ RESEARCH → BRIEF → OUTLINE → DRAFT → HUMANIZE → OPTIMIZE → REVIEW
 - Community quotes: 2+ for hub, 1+ for cluster
 - External links: 3+ for hub, 2+ for cluster (UK sources)
 
-**Verification:** Run `.claude/scripts/master-gate.sh [filename] [hub|cluster]` before publishing. Gate must show OPEN.
+**Verification:** Run `.claude/scripts/master-gate.sh [filename] [hub|cluster]` before publishing. Gate must show PASS.
 
 ---
 

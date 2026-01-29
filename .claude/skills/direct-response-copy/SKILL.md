@@ -17,6 +17,22 @@ That's it. Everything else flows from there.
 
 ---
 
+## HushAway® Workflow Note
+
+**This skill is MANDATORY in the HushAway® article workflow.**
+
+Run this skill AFTER `/seo-content` passes the Content Gate, and BEFORE running `check-conversion-gate.sh`.
+
+**Prerequisites:** The article must already have:
+- Validated keywords (from `/keyword-research` skill)
+- Selected positioning angle (from `/positioning-angles` skill)
+- Draft content (from `/seo-content` skill)
+- Content Gate PASS (from `master-gate.sh`)
+
+**Purpose:** This skill reviews and optimises article copy for conversion effectiveness. The conversion gate script (`check-conversion-gate.sh`) then verifies all 7 conversion checks pass.
+
+---
+
 ## Headlines
 
 The headline does 80% of the work. One headline can outpull another by 19.5x. Same product, same offer, different headline.

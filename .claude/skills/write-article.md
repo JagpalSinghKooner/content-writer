@@ -4,12 +4,16 @@
 
 ---
 
-## 5-GATE WORKFLOW OVERVIEW
+## 6-GATE WORKFLOW OVERVIEW
 
-**Every article MUST pass through 5 gates. No exceptions. No skipping.**
+**ALWAYS START WITH `/orchestrator`** - It diagnoses the optimal approach and routes to the right skills.
+
+**Every article MUST pass through 6 gates. No exceptions. No skipping.**
 
 ```
-STEP 1: Choose Article ─────────────── Seed from claude.md keywords table
+STEP 0: /orchestrator ──────────────── Entry point: diagnoses, routes
+           │
+STEP 1: Choose Article ─────────────── Select from ARTICLE-ORDER.md
            │
 STEP 2: /keyword-research ──────────── MANDATORY skill
            │
@@ -34,8 +38,14 @@ STEP 5: Prominence Planning
 STEP 6: /seo-content ───────────────── Write article
            │
     ┌──────────────┐
-    │ CONTENT GATE │ ← Must pass before export
+    │ CONTENT GATE │ ← Must pass before conversion review
     └──────────────┘
+           │
+STEP 7: check-conversion-gate.sh ───── Conversion verification
+           │
+    ┌────────────────┐
+    │CONVERSION GATE │ ← Must pass before export
+    └────────────────┘
            │
     ┌──────────────┐
     │  FINAL GATE  │
@@ -46,13 +56,37 @@ STEP 6: /seo-content ───────────────── Write a
 
 ## Quick Start Instructions
 
+**Always start with `/orchestrator`** - It will guide you through the workflow.
+
 When you invoke this skill with `/write-article`, follow these steps:
+
+### Step 0: Run Orchestrator (Entry Point)
+
+**Start every session with:**
+```
+/orchestrator
+```
+
+The orchestrator will:
+1. Diagnose what you need to do
+2. Route you to the right skills in order
+3. Guide you through the workflow
 
 ### Step 1: Load Project Context
 
 **First, read these files to understand the project:**
-- `.claude/claude.md` - HushAway® brand voice, critical rules, SEED keywords table
-- `.claude/agents.md` - Complete article writing workflow with 5 gates
+- `.claude/claude.md` - HushAway® brand voice, critical rules
+- `ARTICLE-ORDER.md` - Full article list, priority order, status tracking
+- `.claude/agents.md` - Complete article writing workflow with 6 gates
+
+**Library files (read at point of use):**
+- `.claude/keyword-library.md` - Read BEFORE running /keyword-research (Step 3)
+- `.claude/angle-library.md` - Read BEFORE running /positioning-angles (Step 5)
+
+**Why read libraries at point of use?**
+- `keyword-library.md` must be checked immediately before keyword validation to avoid duplicates
+- `angle-library.md` must be checked immediately before angle selection to ensure diversity
+- Reading at the right moment ensures fresh context for each skill
 
 **Quick test:** Ask yourself "What are HushAway®'s forbidden words?"
 - Answer should include: No emojis, no em-dashes, UK English, no deficit language, no AI-isms
@@ -68,27 +102,25 @@ When you invoke this skill with `/write-article`, follow these steps:
 - "Which article would you like me to write?"
 - User will provide title and pillar number
 
-**Priority Order (by search volume):**
-1. **Pillar 5:** ADHD Apps (25,000 searches) - START HERE
-2. **Pillar 2:** Sleep Apps for Kids (8,000-12,000)
-3. **Pillar 1:** ADHD Sleep Support (5,000-8,000)
-4. **Pillar 3:** Anxiety Apps (4,000-6,000)
-5. **Pillar 4:** Sensory Friendly Apps (2,000-3,000)
-6. **Pillar 7:** Neurodivergent Parenting (2,000-4,000)
-7. **Pillar 6:** Emotional Regulation (1,000-2,000)
+**Priority Order:** See `ARTICLE-ORDER.md` for the full priority list with search volumes and status tracking.
 
-**Note:** Keywords in claude.md are SEEDS - they will be validated/improved in Step 3.
+**Note:** Keywords in ARTICLE-ORDER.md are SEEDS - they will be validated/improved in Step 3.
 
 ### Step 3: Run Keyword Research (MANDATORY - CANNOT SKIP)
 
 **Before ANY research begins, run the `/keyword-research` skill.**
+
+**Using library context from Step 1:**
+1. Reference `.claude/keyword-library.md` (already loaded) for previously validated keywords
+2. Note existing keywords for clustering opportunities
+3. Identify which pillar keywords might create internal linking opportunities
 
 ```
 /keyword-research
 ```
 
 **Provide context:**
-- **Seed keyword:** [from claude.md table]
+- **Seed keyword:** [from ARTICLE-ORDER.md]
 - **Pillar topic:** [pillar name]
 - **Content type:** [Hub or Cluster]
 - **Business context:** HushAway® sound therapy for neurodivergent children
@@ -115,14 +147,16 @@ When you invoke this skill with `/write-article`, follow these steps:
    searchVolume: "[volume]"
    ```
 
-2. **Update claude.md keywords table** with validated keyword and secondaries
+2. **Auto-update `.claude/keyword-library.md`** with validated keyword:
+   - Add new row to "Validated Keywords" table
+   - Include: Article, Pillar, Target Keyword, Volume, Secondary Keywords, Date
 
 3. **Run the Keyword Gate:**
    ```bash
    .claude/scripts/check-keyword-gate.sh [research-file]
    ```
 
-**MUST show `KEYWORD GATE: UNLOCKED` before proceeding.**
+**MUST show `KEYWORD GATE: PASS` before proceeding.**
 
 ### Step 4: Complete Research
 
@@ -149,11 +183,17 @@ When you invoke this skill with `/write-article`, follow these steps:
 .claude/scripts/check-research-gate.sh [research-file]
 ```
 
-**MUST show `RESEARCH GATE: UNLOCKED` before proceeding.**
+**MUST show `RESEARCH GATE: PASS` before proceeding.**
 
 ### Step 5: Run Positioning Angles (MANDATORY - CANNOT SKIP)
 
 **After Research Gate is unlocked, run the `/positioning-angles` skill.**
+
+**Using library context from Step 1:**
+1. Reference `.claude/angle-library.md` (already loaded) for all angles already used
+2. Note any patterns that have been overused
+3. Prioritise fresh angles that haven't been used before
+4. Avoid reusing patterns within the same pillar
 
 ```
 /positioning-angles
@@ -188,12 +228,17 @@ When you invoke this skill with `/write-article`, follow these steps:
      - "[Counter-position 3]"
    ```
 
-3. **Run the Angle Gate:**
+3. **Auto-update `.claude/angle-library.md`** with selected angle:
+   - Add new row to "Angles Used" table
+   - Include: Article, Pillar, Angle Name, Core Insight, Headline Direction, Date
+   - Update "Pattern Tracking" if a recurring theme is identified
+
+4. **Run the Angle Gate:**
    ```bash
    .claude/scripts/check-angle-gate.sh [research-file]
    ```
 
-**MUST show `ANGLE GATE: UNLOCKED` before proceeding.**
+**MUST show `ANGLE GATE: PASS` before proceeding.**
 
 ### Step 6: HushAway® Prominence Planning (REQUIRED)
 
@@ -239,11 +284,67 @@ When you invoke this skill with `/write-article`, follow these steps:
 - **Counter-positions:** [from Step 5]
 - **Prominence plan:** [from Step 6]
 
+### Step 8: Run Conversion Gate (MANDATORY)
+
+**After Content Gate shows PASS:**
+1. Run `/direct-response-copy` skill for AI-assisted conversion review
+2. Run `check-conversion-gate.sh` script for automated verification
+
+```bash
+.claude/scripts/check-conversion-gate.sh [article-file]
+```
+
+Example:
+```bash
+.claude/scripts/check-conversion-gate.sh src/content/pillar-5-adhd-apps/hub-adhd-apps.md
+```
+
+**The script automatically checks (7 checks):**
+
+| Check | Requirement | Auto-Detection |
+|-------|-------------|----------------|
+| 1. Parent Objections | 2+ of 4 objections addressed | Keyword patterns |
+| 2. CTA Clarity | "Free forever" language | Text matching |
+| 3. Low-Friction | No commitment barriers | Banned phrase detection |
+| 4. Differentiation | 3+ neurodivergent-first mentions | Pattern count |
+| 5. HushAway® Prominence | 5+ total, 2+ in conversion contexts | Context analysis |
+| 6. Sound Sanctuary CTA | 2+ mentions | Text count |
+| 7. Risk Reversal | Risk-free language present | Pattern matching |
+
+**Parent Objections (Auto-Detected):**
+
+| Objection | Keywords Detected |
+|-----------|-------------------|
+| "Another app won't help" | passive sound, no engagement, just listen |
+| "Too tired to try" | zero learning curve, just press play, no setup |
+| "Is this actually different?" | neurodivergent-first, designed specifically |
+| "What if my child won't use it?" | free forever, nothing to lose, no risk |
+
+**If FAIL:**
+1. Review failures listed in script output
+2. Fix ALL failures in article
+3. Re-run script (NOT the skill again - skill only runs once)
+4. Repeat until PASS
+
+**Conversion CTA Patterns:**
+
+**Good:**
+- "Try the Sound Sanctuary free, forever. Just enter your name and email."
+- "No subscription needed. No credit card. Just gentle sounds, ready when you need them."
+- "See if it helps. It costs nothing to find out."
+
+**Avoid:**
+- "Sign up for our premium service"
+- "Start your free trial" (implies it ends)
+- "Subscribe to get access"
+
+**CONVERSION GATE MUST show PASS before proceeding to Final Gate.**
+
 ---
 
-## Pre-Writing Checklist (All 3 Gates Must Be Unlocked)
+## Pre-Writing Checklist (Gates 1-3 Must Show PASS Before Writing)
 
-**Do not start writing until all gates show UNLOCKED.**
+**Do not start writing until all gates show PASS.**
 
 ### Gate 1: Keyword Gate Checklist
 
@@ -254,8 +355,7 @@ When you invoke this skill with `/write-article`, follow these steps:
 | Target keyword validated | Research file | [ ] Confirmed |
 | Secondary keywords | Research file | [ ] 5+ listed |
 | Search volume | Research file | [ ] Documented |
-| claude.md table updated | claude.md | [ ] Updated with validated keyword + secondaries |
-| Keyword Gate script | `.claude/scripts/check-keyword-gate.sh` | [ ] Shows UNLOCKED |
+| Keyword Gate script | `.claude/scripts/check-keyword-gate.sh` | [ ] Shows PASS |
 
 ### Gate 2: Research Gate Checklist
 
@@ -269,7 +369,7 @@ When you invoke this skill with `/write-article`, follow these steps:
 | Competitor analysis | Research file | [ ] Top 3-5 reviewed |
 | Competitor gaps | Research file | [ ] 3+ identified |
 | Statistics | Research file + eeat-library.md | [ ] 3+ with sources |
-| Research Gate script | `.claude/scripts/check-research-gate.sh` | [ ] Shows UNLOCKED |
+| Research Gate script | `.claude/scripts/check-research-gate.sh` | [ ] Shows PASS |
 
 ### Gate 3: Angle Gate Checklist
 
@@ -281,7 +381,7 @@ When you invoke this skill with `/write-article`, follow these steps:
 | angleDescription | Research file | [ ] One sentence |
 | headlineDirection | Research file | [ ] Example headline |
 | counterPositions | Research file | [ ] 2+ defined |
-| Angle Gate script | `.claude/scripts/check-angle-gate.sh` | [ ] Shows UNLOCKED |
+| Angle Gate script | `.claude/scripts/check-angle-gate.sh` | [ ] Shows PASS |
 
 ### Research File Structure (Updated)
 
@@ -348,7 +448,7 @@ counterPositions:
 - H2: ...
 ```
 
-**All THREE gates must show UNLOCKED before writing begins.**
+**Gates 1-3 (Keyword, Research, Angle) must show PASS before writing begins.**
 
 ---
 
@@ -389,76 +489,6 @@ counterPositions:
 - "Feel safe in their body" (sensory safety)
 - "Children who feel everything" (empowering framing)
 - "Gentle sound support" (what we offer)
-
----
-
-## Pillar-Specific Writing Guidance
-
-### Pillar 7: Neurodivergent Parenting
-**Lead angle:** Angle 4 (Supportive Ally) - OWN THIS COMPLETELY
-
-**Important voice note:** Nicola has professional expertise, not personal lived experience as a neurodivergent parent. The "parent-to-parent" voice comes from the HushAway® community, not Nicola's personal parenting stories.
-
-**Special requirements:**
-- Nicola's professional observations woven throughout: "In my years working with families..."
-- Community voice for lived experience: "Parents in our community often tell me..."
-- Vulnerable, real, exhausted honesty (attributed to community)
-- Permission to struggle
-- Warm professional voice, not expert-talking-down
-
-**Example opening:**
-> "So many parents tell me the same thing: 'I'm sitting outside my child's bedroom door at 2am, exhausted and wondering if I'm the only one who finds this so hard.' If you're reading this right now, feeling that same exhaustion, I need you to know something before anything else: you're not alone. In my years working with families navigating neurodivergent parenting, I've seen how isolating this can feel. But you're not failing. This is just really, really hard."
-
-### Pillar 4: Sensory Friendly Apps
-**Lead angle:** Angle 3 (Research-Backed Science) + Angle 1 (Neurodivergent-First)
-
-**Special requirements:**
-- OWN this space as THE authority
-- Explain ASMR, binaural beats accessibly
-- Differentiate overload vs seeking
-- Position HushAway® as specialist
-
-### Pillar 1: ADHD Sleep Support
-**Lead angle:** Angle 3 (Research-Backed Science) + Angle 1 (Neurodivergent-First)
-
-**Special requirements:**
-- Explain circadian rhythm delays accessibly
-- Validate bedtime battles are real
-- Position sound support as neurological need
-- High commercial intent - guide to HushAway® naturally
-
-### Pillar 2: Sleep Apps for Kids
-**Lead angle:** Angle 1 (Neurodivergent-First) + Angle 5 (Gentle Consistency)
-
-**Special requirements:**
-- Don't do generic listicle
-- Educate on sensory-friendly criteria first
-- Emphasise predictability
-- Differentiate from Calm/Headspace
-
-### Pillar 3: Anxiety Apps
-**Lead angle:** Angle 2 (Passive Support Alternative) - KILLER ANGLE
-
-**Special requirements:**
-- Acknowledge active apps require capacity anxious children don't have
-- Position passive sound as alternative, not inferior
-- "When your child is already overwhelmed, the last thing they need is another task"
-
-### Pillar 6: Emotional Regulation Apps
-**Lead angle:** Angle 2 (Passive Support) + Angle 1 (Neurodivergent-First)
-
-**Special requirements:**
-- Acknowledge skill-building requires capacity
-- Position passive regulation as step BEFORE active work
-- "Before we can teach children to name feelings, they need to feel safe"
-
-### Pillar 5: ADHD Apps
-**Lead angle:** Angle 1 (Neurodivergent-First) + Angle 4 (Parent-to-Parent)
-
-**Special requirements:**
-- Don't compete on productivity
-- Carve out "emotional regulation first" positioning
-- "Before focus, children need to feel regulated"
 
 ---
 
@@ -868,18 +898,18 @@ grep "—" [filename]
 
 ### Gate Enforcement
 
-**GATE MUST SHOW "OPEN" TO PROCEED.**
+**GATE MUST SHOW "PASS" TO PROCEED.**
 
-- Exit code 0 = OPEN (all 22 sections passed)
-- Exit code 1 = CLOSED (failures found)
+- Exit code 0 = PASS (all 23 sections passed)
+- Exit code 1 = FAIL (failures found)
 
-**If CLOSED:**
+**If FAIL:**
 1. Review failures listed in output
 2. Fix ALL failures in article
-3. Re-run script
-4. Repeat until OPEN
+3. Re-run script (NOT the skill)
+4. Repeat until PASS
 
-**Do NOT proceed with CLOSED gate. No exceptions.**
+**Do NOT proceed with FAIL. No exceptions. All gates are fully automated.**
 
 ---
 
@@ -966,14 +996,13 @@ Not acceptable:
 
 Before marking article complete, verify:
 
-### PRE-WRITING GATES (All Must Be UNLOCKED)
+### PRE-WRITING GATES (All Must Show PASS)
 - [ ] `/keyword-research` skill completed
-- [ ] **KEYWORD GATE: UNLOCKED** (check-keyword-gate.sh passed)
-- [ ] claude.md table updated with validated keyword + secondaries
+- [ ] **KEYWORD GATE: PASS** (check-keyword-gate.sh)
 - [ ] Research file complete
-- [ ] **RESEARCH GATE: UNLOCKED** (check-research-gate.sh passed)
+- [ ] **RESEARCH GATE: PASS** (check-research-gate.sh)
 - [ ] `/positioning-angles` skill completed
-- [ ] **ANGLE GATE: UNLOCKED** (check-angle-gate.sh passed)
+- [ ] **ANGLE GATE: PASS** (check-angle-gate.sh)
 - [ ] Selected angle documented with counter-positions
 - [ ] Prominence planning complete using selected angle
 
@@ -1072,11 +1101,37 @@ Max hedges = (word count / 1000) x 8
 - [ ] External link verification completed (all links tested and authoritative)
 - [ ] New citations added to eeat-library.md (if any)
 
-### THE FINAL TEST
-- [ ] Would an exhausted parent at 2am find this supportive?
-- [ ] Does it sound unmistakably like HushAway®?
-- [ ] Would I bookmark this?
-- [ ] Does it differentiate from generic competitors?
+### CONVERSION GATE (After Content Gate Shows PASS)
+- [ ] `/direct-response-copy` skill run for conversion review (run once)
+- [ ] `check-conversion-gate.sh` script run for automated verification
+- [ ] At least 2 of 4 parent objections addressed
+- [ ] "Free forever" or equivalent clear near primary CTA
+- [ ] No commitment language (no "trial", "subscribe")
+- [ ] Neurodivergent-first differentiation prominent
+- [ ] HushAway® in conversion contexts (not just informational)
+- [ ] Risk reversal present (free removes barriers)
+- [ ] **CONVERSION GATE: PASS** (if FAIL, fix and re-run script only)
+
+### FINAL GATE (Gate 6 - Automated)
+- [ ] Run `check-final-gate.sh` script
+- [ ] All frontmatter complete (title, meta, dates)
+- [ ] Word count meets minimum
+- [ ] File in correct location
+- [ ] HushAway® trademark on all instances
+- [ ] **Script shows PASS before export**
+
+---
+
+## Quality Aspirations (NOT Gate Requirements)
+
+These are goals to strive for but are NOT part of automated gate verification:
+- Would an exhausted parent at 2am find this supportive?
+- Does it sound unmistakably like HushAway®?
+- Would I bookmark this?
+- Does it differentiate from generic competitors?
+- Would an exhausted parent want to try HushAway® after reading this?
+
+**Note:** These are subjective quality markers. The 6 automated gates verify objective requirements.
 
 ---
 
@@ -1091,17 +1146,23 @@ Change `status` from `draft` to `in-review`
 ### Step 3: Save the File
 Save the completed article to the content folder.
 
-### Step 4: Update Dashboard
-1. Open `/Users/jagpalkooner/Downloads/HushAway - Launch/dashboard/index.html`
+### Step 4: Update ARTICLE-ORDER.md
+After Final Gate shows PASS:
+1. Open `ARTICLE-ORDER.md`
+2. Mark article checkbox as complete: `- [x]`
+3. This tracks overall progress across all articles
+
+### Step 5: Update Dashboard
+1. Open `dashboard/index.html`
 2. Click "Edit Details" on the article
 3. Update status to "In Review"
 4. Confirm word count
 5. Save changes
 
-### Step 5: Quality Review
+### Step 6: Quality Review
 Run through the quality checklist above. If all pass, mark as "Ready to Publish".
 
-### Step 6: Publish to Framer
+### Step 7: Publish to Framer
 Once ready:
 1. Copy content from markdown file
 2. Paste into Framer CMS
@@ -1115,13 +1176,12 @@ Once ready:
 
 **Create new article:**
 ```bash
-cd "/Users/jagpalkooner/Downloads/HushAway - Launch/dashboard"
-./create-article.sh
+./dashboard/create-article.sh
 ```
 
 **Open dashboard:**
 ```
-/Users/jagpalkooner/Downloads/HushAway - Launch/dashboard/index.html
+dashboard/index.html
 ```
 
 **Start writing with seo-content skill:**
@@ -1135,15 +1195,27 @@ cd "/Users/jagpalkooner/Downloads/HushAway - Launch/dashboard"
 
 **At start of new session:**
 
-1. User: `/write-article`
-2. Claude reads this file + CLAUDE.md + agents.md
-3. Claude: "I'm ready to write a HushAway® article. Which article would you like me to write, or should I start with the next priority article from Pillar 7?"
-4. User provides article details or confirms Pillar 7 hub
-5. Claude invokes `/seo-content` skill with proper context
-6. Claude writes the article following all guidelines
-7. Claude updates frontmatter with word count
-8. User saves file and updates dashboard
+1. User: `/orchestrator` (entry point)
+2. Orchestrator diagnoses needs and routes to /write-article
+3. Claude reads this file + CLAUDE.md + agents.md + keyword-library.md + angle-library.md
+4. Claude: "I'm ready to write a HushAway® article. According to ARTICLE-ORDER.md, the next priority article is [ARTICLE NAME]. Shall I proceed with this one?"
+5. User confirms or selects different article from ARTICLE-ORDER.md
+6. Claude references keyword-library.md context (already loaded in Step 3)
+7. Claude runs `/keyword-research` → Updates keyword-library.md → Keyword Gate shows PASS
+8. Claude completes research → Research Gate shows PASS
+9. Claude references angle-library.md context (already loaded in Step 3)
+10. Claude runs `/positioning-angles` → Updates angle-library.md → Angle Gate shows PASS
+11. Claude confirms library context before writing
+12. Claude invokes `/seo-content` skill with proper context
+13. Claude writes the article following all guidelines
+14. Content Gate shows PASS (23 sections verified)
+15. Claude runs `/direct-response-copy` for conversion review
+16. Claude runs `check-conversion-gate.sh` → Conversion Gate shows PASS
+17. Claude runs `check-final-gate.sh` → Final Gate shows PASS
+18. Claude updates frontmatter with word count
+19. Claude updates `ARTICLE-ORDER.md` to mark article complete
+20. User saves file and exports to main website
 
 ---
 
-*This skill ensures every HushAway® article maintains consistent quality, brand voice, and SEO optimisation while genuinely helping exhausted parents raising neurodivergent children.*
+*This skill ensures every HushAway® article maintains consistent quality, brand voice, SEO optimisation, and conversion focus while genuinely helping exhausted parents raising neurodivergent children.*

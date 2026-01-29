@@ -10,25 +10,47 @@
 # This script enforces ALL rules from .claude/humanise-content.md
 # No manual steps required - everything is automated.
 #
-# Sections:
+# Sections (23 total):
 # 1-4:   Word count, banned words, frequency limits, intensifiers
 # 5-7:   Banned phrases, redundant phrases, structural limits
 # 8-10:  Hedging density, sentence variety, human markers
 # 11-14: Community quotes, citations, curiosity loops, internal links
 # 15-17: Trademark, em-dashes, emojis
-# 18-21: Brand prominence, keyword placement, title/meta, external links
+# 18-20: Brand prominence, keyword placement, title/meta
+# 21:    External links
+# 22:    Additional structural checks (self-answering Qs, paragraph starters, list variety)
+# 23:    Additional human voice checks (consecutive It, on one hand pattern, external link count)
 # ============================================================================
 
 # --- ARGUMENTS ---
 FILE="$1"
-TYPE="${2:-cluster}"  # Default to cluster (stricter minimums for hub)
+TYPE="$2"
 
-if [ -z "$FILE" ]; then
-    echo "Usage: ./master-gate.sh <filename> [hub|cluster]"
+if [ -z "$FILE" ] || [ -z "$TYPE" ]; then
+    echo "============================================================================"
+    echo "ERROR: Both filename and article type are REQUIRED"
+    echo "============================================================================"
+    echo ""
+    echo "Usage: ./master-gate.sh <filename> <hub|cluster>"
     echo ""
     echo "Examples:"
-    echo "  ./master-gate.sh article.md hub      # For pillar hub articles"
-    echo "  ./master-gate.sh article.md cluster  # For cluster articles"
+    echo "  ./master-gate.sh article.md hub      # For pillar hub articles (3000+ words)"
+    echo "  ./master-gate.sh article.md cluster  # For cluster articles (1500+ words)"
+    echo ""
+    echo "IMPORTANT: You must specify 'hub' or 'cluster' to set correct minimums."
+    echo "           Hub articles: 3000 words, 2 quotes, 2 loops, 8 links, 3 citations"
+    echo "           Cluster articles: 1500 words, 1 quote, 1 loop, 4 links, 2 citations"
+    exit 1
+fi
+
+if [ "$TYPE" != "hub" ] && [ "$TYPE" != "cluster" ]; then
+    echo "============================================================================"
+    echo "ERROR: Invalid article type '$TYPE'"
+    echo "============================================================================"
+    echo ""
+    echo "Type must be either 'hub' or 'cluster'"
+    echo ""
+    echo "Usage: ./master-gate.sh <filename> <hub|cluster>"
     exit 1
 fi
 
@@ -715,7 +737,10 @@ fi
 # Uses temp file approach for macOS bash 3.2 compatibility (no associative arrays)
 PARA_START_FAILS=0
 SECTION_NUM=0
-TEMP_PARA_FILE="/tmp/para_starts_$$"
+# Use project-local scratchpad (sandbox-safe)
+SCRATCHPAD_DIR=".claude/scratchpad"
+mkdir -p "$SCRATCHPAD_DIR"
+TEMP_PARA_FILE="$SCRATCHPAD_DIR/para_starts_$$"
 rm -f "$TEMP_PARA_FILE"
 
 while IFS= read -r line; do
@@ -947,16 +972,20 @@ echo ""
 
 if [ "$FAILS" -eq 0 ]; then
     echo "============================================"
-    echo "   GATE STATUS: OPEN"
-    echo "   All checks passed. Proceed to next step."
+    echo "   CONTENT GATE: PASS"
+    echo "   All checks passed. Proceed to Conversion Gate."
     echo "============================================"
+    echo ""
+    echo "NEXT STEP: Run /direct-response-copy skill, then:"
+    echo "  .claude/scripts/check-conversion-gate.sh $FILE"
+    echo ""
     exit 0
 else
     echo "============================================"
-    echo "   GATE STATUS: CLOSED"
+    echo "   CONTENT GATE: FAIL"
     echo "   $FAILS check(s) failed."
-    echo "   FIX ALL FAILURES before proceeding."
-    echo "   DO NOT PROCEED WITH FAILURES."
+    echo "   FIX ALL FAILURES and re-run script."
+    echo "   DO NOT PROCEED UNTIL GATE SHOWS PASS."
     echo "============================================"
     exit 1
 fi

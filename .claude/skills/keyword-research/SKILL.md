@@ -28,14 +28,165 @@ Transform a business context into a **prioritized content plan** with:
 ## The process
 
 ```
-SEED → EXPAND → CLUSTER → PRIORITIZE → MAP
+SEED → PERPLEXITY → EXPAND → CLUSTER → PRIORITIZE → MAP
 ```
 
-1. **Seed** — Generate initial keywords from business context
-2. **Expand** — Use the 6 Circles Method to build comprehensive list
-3. **Cluster** — Group related keywords into content pillars
-4. **Prioritize** — Score by opportunity and business value
-5. **Map** — Assign clusters to specific content pieces
+1. **Seed** — Get seed keyword from ARTICLE-ORDER.md
+2. **Perplexity** — Run 4 MCP queries for real-time validation (MANDATORY)
+3. **Expand** — Use 6 Circles Method + Perplexity-discovered keywords
+4. **Cluster** — Group into content pillars using PAA questions
+5. **Prioritize** — Score by opportunity (informed by competitor gaps)
+6. **Map** — Assign clusters to content pieces with research sources
+
+---
+
+## Library Integration (HushAway Workflow)
+
+**IMPORTANT:** For HushAway articles, check the libraries BEFORE validating keywords.
+
+### Before validating keywords:
+
+1. **CHECK `ARTICLE-ORDER.md`** to confirm:
+   - Correct article is selected (by priority order)
+   - Seed keyword matches the article you're working on
+   - Pillar context for clustering opportunities
+
+2. **READ `.claude/keyword-library.md`**:
+   - Check "Validated Keywords" table to see all keywords already validated
+   - Check "Keyword Clusters" table for cross-pillar linking opportunities
+   - Review "Gaps Identified" table for keywords worth pursuing
+
+3. **IDENTIFY** how the new keyword relates to existing validated keywords
+
+### When validating keywords:
+- Note if a keyword relates to existing validated keywords (linking opportunities)
+- Identify any keyword gaps discovered during research (200+ volume, relevant, not yet targeted)
+- Consider how new keywords fit into existing clusters
+
+### After keyword validation:
+Include this instruction in your output:
+
+> **Next step:** Update `.claude/keyword-library.md`:
+>
+> **Validated Keywords table (required):**
+> - Article: [article name]
+> - Pillar: [pillar number]
+> - Target Keyword: [validated keyword]
+> - Volume: [search volume]
+> - Secondary Keywords: [comma-separated list]
+> - Date: [today's date]
+
+This ensures the library grows with each article and provides learning data for future research.
+
+---
+
+## Perplexity MCP Integration (MANDATORY)
+
+**For HushAway articles, Perplexity MCP is required.** The Keyword Gate will FAIL without it.
+
+### Before running this skill:
+
+Verify Perplexity MCP is configured:
+```bash
+claude mcp list
+```
+If "perplexity" is not listed, configure it first:
+```bash
+claude mcp add perplexity --env PERPLEXITY_API_KEY=<your-key>
+```
+
+### Perplexity Queries (Run During Keyword Research)
+
+Run these 4 queries using the Perplexity MCP tool during the skill:
+
+**Query 1: Keyword Validation + Trends**
+```
+Search: "[seed keyword]" UK search trends 2024 2025
+Prompt: For the keyword "[seed keyword]", provide:
+1. Is this actively searched by UK parents?
+2. What related keywords are trending?
+3. What seasonal patterns exist?
+4. Suggested keyword variations with higher search potential
+```
+
+**Query 2: PAA Discovery**
+```
+Search: Questions parents ask about "[seed keyword]"
+Prompt: Find 7+ questions UK parents commonly ask about this topic. Include:
+1. Google "People Also Ask" questions
+2. Questions from Reddit r/ADHD_parents, r/AutismParenting
+3. Questions from UK forums like Mumsnet
+Note the search intent for each (informational vs solution-seeking).
+```
+
+**Query 3: Competitor SERP Analysis**
+```
+Search: "[seed keyword]" guide site:uk
+Prompt: Analyze the top 5 ranking results. For each, identify:
+1. Content type and word count
+2. Strengths and gaps
+3. Whether they use neurodivergent-affirming language
+4. UK vs US focus
+```
+
+**Query 4: Source Discovery**
+```
+Search: Research "[seed keyword]" children 2022-2026 UK
+Prompt: Find citable research and statistics. Prioritise:
+1. NHS or NICE guidelines
+2. Peer-reviewed studies (2022+)
+3. UK organisations (ADHD UK, National Autistic Society)
+Provide: source name, year, key finding, URL for each.
+```
+
+### How to Invoke Perplexity MCP Tools
+
+The AI assistant MUST use these MCP tools during keyword research. The gate verifies `perplexityUsed: true` which should ONLY be set after actual tool invocation.
+
+**For keyword validation and trends (Query 1):**
+```
+Tool: mcp__perplexity__perplexity_ask
+Messages: [{"role": "user", "content": "[seed keyword] UK search trends 2024 2025 - is this actively searched by UK parents? Related keywords? Seasonal patterns?"}]
+```
+
+**For PAA question discovery (Query 2):**
+```
+Tool: mcp__perplexity__perplexity_research
+Messages: [{"role": "user", "content": "Questions UK parents ask about [seed keyword] - include Google PAA, Reddit, Mumsnet questions"}]
+```
+
+**For SERP and competitor analysis (Query 3):**
+```
+Tool: mcp__perplexity__perplexity_search
+Query: "[seed keyword] guide site:uk"
+Max results: 5
+```
+
+**For research source discovery (Query 4):**
+```
+Tool: mcp__perplexity__perplexity_research
+Messages: [{"role": "user", "content": "Research [seed keyword] children 2022-2026 UK - NHS, NICE, peer-reviewed studies with URLs"}]
+```
+
+**Tool Selection Guide:**
+| Query | Best Tool | Why |
+|-------|-----------|-----|
+| Query 1 (Trends) | `perplexity_ask` | Quick validation, conversational |
+| Query 2 (PAA) | `perplexity_research` | Deep research with citations |
+| Query 3 (SERP) | `perplexity_search` | Web search with ranked results |
+| Query 4 (Sources) | `perplexity_research` | Academic sources with URLs |
+
+### After Perplexity Queries:
+
+The skill output MUST include:
+1. `perplexityUsed: true` in research file frontmatter
+2. `perplexityDate: [YYYY-MM-DD]`
+3. `searchTrend: [rising/stable/declining]` from Query 1
+4. Real PAA questions discovered (min 7)
+5. Competitor gaps identified
+6. Research sources with URLs
+
+**These populate the research file sections automatically.**
 
 ---
 
@@ -460,25 +611,60 @@ For each priority cluster, assign:
 
 ## What this skill does NOT do
 
-This skill provides **strategic direction**, not:
-- Live search volume data (use free tools if needed)
-- Automated SERP analysis (manual review required)
-- Content writing (use direct-response-copy skill)
+This skill provides **strategic direction and research data**, not:
+- Content writing (use /seo-content skill)
 - Technical SEO audits (different skill set)
+- Exact search volume numbers (Perplexity provides trends, not precise volumes)
 
-The output is a prioritized plan. Execution is separate.
+The output is a validated keyword plan with research data. Content writing is separate.
 
 ---
 
-## Free tools to supplement
+## HushAway Output Format (with Perplexity)
 
-If the user needs data validation:
+For HushAway articles, the output MUST include these frontmatter fields for the research file:
 
-- **Google Trends** (trends.google.com) — Trend direction, seasonality
-- **Google Search** — SERP analysis, autocomplete, "People Also Ask"
-- **AnswerThePublic** (free tier) — Question-based keywords
-- **AlsoAsked** (free tier) — PAA relationship mapping
-- **Reddit/Quora search** — Real user questions and language
+```yaml
+# Keyword Research (validated by Perplexity MCP)
+keywordStatus: validated
+perplexityUsed: true
+perplexityDate: [YYYY-MM-DD]
+
+targetKeyword: "[validated keyword]"
+searchTrend: [rising/stable/declining]
+
+secondaryKeywords:
+  - "[keyword 1]"
+  - "[keyword 2]"
+  - "[keyword 3]"
+  - "[keyword 4]"
+  - "[keyword 5]"
+
+# PAA Questions (from Perplexity Query 2)
+paaQuestions:
+  - "[Question 1]"
+  - "[Question 2]"
+  - "[Question 3]"
+  - "[Question 4]"
+  - "[Question 5]"
+  - "[Question 6]"
+  - "[Question 7]"
+
+# Competitor Gaps (from Perplexity Query 3)
+competitorGaps:
+  - "[Gap 1]"
+  - "[Gap 2]"
+  - "[Gap 3]"
+
+# Research Sources (from Perplexity Query 4)
+researchSources:
+  - source: "[Source name]"
+    year: [YYYY]
+    finding: "[Key finding]"
+    url: "[URL]"
+```
+
+This data automatically populates research file sections 1, 3, 4, 5, and 8.
 
 ---
 

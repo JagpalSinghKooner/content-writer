@@ -5,7 +5,7 @@
 # Usage: ./check-keyword-gate.sh <research-file>
 # Example: ./check-keyword-gate.sh research/pillar-5-adhd-apps/hub-research.md
 #
-# Exit codes: 0 = UNLOCKED (research can proceed), 1 = LOCKED (cannot proceed)
+# Exit codes: 0 = PASS (research can proceed), 1 = FAIL (cannot proceed)
 #
 # This script ensures keyword research is complete before article research begins.
 # The /keyword-research skill MUST be run before this gate can be unlocked.
@@ -25,18 +25,21 @@ if [ -z "$FILE" ]; then
     echo "  ./check-keyword-gate.sh research/pillar-5-adhd-apps/hub-research.md"
     echo "  ./check-keyword-gate.sh research/pillar-7-neurodivergent-parenting/7.1-parent-burnout-research.md"
     echo ""
-    echo "This gate verifies that /keyword-research skill has been run and:"
+    echo "This gate verifies that /keyword-research skill has been run with Perplexity MCP:"
     echo "  - Target keyword has been validated"
     echo "  - Secondary keywords have been identified (5+)"
     echo "  - Search volume has been documented"
-    echo "  - claude.md table has been updated"
+    echo "  - Perplexity MCP was used (perplexityUsed: true)"
+    echo "  - PAA questions discovered (7+)"
+    echo "  - Competitor gaps identified"
+    echo "  - Research sources with URLs found"
     echo ""
     exit 1
 fi
 
 if [ ! -f "$FILE" ]; then
     echo "============================================================================"
-    echo "KEYWORD GATE: LOCKED"
+    echo "KEYWORD GATE: FAIL"
     echo "============================================================================"
     echo ""
     echo "ERROR: Research file not found: $FILE"
@@ -114,6 +117,18 @@ else
     FAILS=$((FAILS+1))
 fi
 
+# Check 4.5: Search trend documented (from Perplexity Query 1)
+echo ""
+echo ">>> CHECK 4.5: Search Trend"
+SEARCH_TREND=$(grep "^searchTrend:" "$FILE" 2>/dev/null | sed 's/searchTrend:[[:space:]]*//' | tr -d '"' | tr -d "'")
+if [ -n "$SEARCH_TREND" ] && [ "$SEARCH_TREND" != "null" ] && [ "$SEARCH_TREND" != "" ]; then
+    echo "PASS: Search trend documented: $SEARCH_TREND"
+else
+    echo "WARN: No search trend documented (recommended from Perplexity Query 1)"
+    echo "      Add searchTrend: rising/stable/declining to frontmatter."
+    # Note: This is a warning, not a fail - trend data is recommended but not mandatory
+fi
+
 # Check 5: Verify skill was actually run (look for skill output markers)
 echo ""
 echo ">>> CHECK 5: Keyword Research Skill Evidence"
@@ -125,6 +140,145 @@ else
     echo "WARN: Limited evidence of /keyword-research skill output"
     echo "      Ensure you ran /keyword-research and incorporated its output."
     # This is a warning, not a fail - the other checks are more definitive
+fi
+
+# Check 6: Perplexity MCP Verification (MANDATORY)
+echo ""
+echo ">>> CHECK 6: Perplexity MCP Verification"
+PERPLEXITY_USED=$(grep "^perplexityUsed:" "$FILE" 2>/dev/null | sed 's/perplexityUsed:[[:space:]]*//' | tr -d '"' | tr -d "'")
+if [ "$PERPLEXITY_USED" = "true" ]; then
+    echo "PASS: Perplexity MCP was used (perplexityUsed = true)"
+else
+    echo "FAIL: Perplexity MCP not used (perplexityUsed = '$PERPLEXITY_USED')"
+    echo "      Run /keyword-research skill with Perplexity MCP configured."
+    echo "      Configure with: claude mcp add perplexity --env PERPLEXITY_API_KEY=<key>"
+    FAILS=$((FAILS+1))
+fi
+
+# Check 7: Perplexity Date
+echo ""
+echo ">>> CHECK 7: Perplexity Date"
+PERPLEXITY_DATE=$(grep "^perplexityDate:" "$FILE" 2>/dev/null | sed 's/perplexityDate:[[:space:]]*//' | tr -d '"' | tr -d "'")
+if [ -n "$PERPLEXITY_DATE" ] && [ "$PERPLEXITY_DATE" != "null" ] && [ "$PERPLEXITY_DATE" != "" ]; then
+    echo "PASS: Perplexity data captured on: $PERPLEXITY_DATE"
+else
+    echo "FAIL: No Perplexity date recorded"
+    echo "      Ensure perplexityDate is set when running /keyword-research."
+    FAILS=$((FAILS+1))
+fi
+
+# Check 8: PAA Questions from Perplexity (min 7)
+echo ""
+echo ">>> CHECK 8: PAA Questions (min 7)"
+PAA_COUNT=$(sed -n '/^paaQuestions:/,/^[a-zA-Z]/p' "$FILE" 2>/dev/null | grep -c "^  - " 2>/dev/null) || PAA_COUNT=0
+if [ "$PAA_COUNT" -ge 7 ]; then
+    echo "PASS: PAA questions found: $PAA_COUNT (need 7+)"
+else
+    echo "FAIL: Only $PAA_COUNT PAA questions found (need at least 7)"
+    echo "      Run Perplexity Query 2 to discover real PAA questions."
+    FAILS=$((FAILS+1))
+fi
+
+# Check 9: Competitor Gaps from Perplexity
+echo ""
+echo ">>> CHECK 9: Competitor Gaps"
+GAP_COUNT=$(sed -n '/^competitorGaps:/,/^[a-zA-Z]/p' "$FILE" 2>/dev/null | grep -c "^  - " 2>/dev/null) || GAP_COUNT=0
+if [ "$GAP_COUNT" -ge 2 ]; then
+    echo "PASS: Competitor gaps identified: $GAP_COUNT"
+else
+    echo "FAIL: Only $GAP_COUNT competitor gaps found (need at least 2)"
+    echo "      Run Perplexity Query 3 to analyze competitor content."
+    FAILS=$((FAILS+1))
+fi
+
+# Check 10: Research Sources from Perplexity
+echo ""
+echo ">>> CHECK 10: Research Sources"
+SOURCE_COUNT=$(sed -n '/^researchSources:/,/^[a-zA-Z]/p' "$FILE" 2>/dev/null | grep -c "source:" 2>/dev/null) || SOURCE_COUNT=0
+if [ "$SOURCE_COUNT" -ge 2 ]; then
+    echo "PASS: Research sources found: $SOURCE_COUNT"
+else
+    echo "FAIL: Only $SOURCE_COUNT research sources found (need at least 2)"
+    echo "      Run Perplexity Query 4 to discover citable sources."
+    FAILS=$((FAILS+1))
+fi
+
+# Check 11: Verify keyword-library.md was updated with complete entry
+echo ""
+echo ">>> CHECK 11: Keyword Library Updated (Enhanced Validation)"
+KEYWORD_LIBRARY=".claude/keyword-library.md"
+if [ ! -f "$KEYWORD_LIBRARY" ]; then
+    echo "FAIL: Keyword library not found at $KEYWORD_LIBRARY"
+    FAILS=$((FAILS+1))
+else
+    # Extract article name from research file frontmatter
+    ARTICLE_NAME=$(grep "^articleName:" "$FILE" 2>/dev/null | sed 's/articleName:[[:space:]]*//' | tr -d '"' | tr -d "'")
+
+    # If no articleName field, try to derive from file path
+    if [ -z "$ARTICLE_NAME" ] || [ "$ARTICLE_NAME" = "null" ]; then
+        # Extract from path: research/pillar-5-adhd-apps/hub-research.md -> hub
+        ARTICLE_NAME=$(basename "$FILE" | sed 's/-research\.md$//' | sed 's/^hub$/HUB/' | sed 's/^\([0-9]*\.[0-9]*\)-/\1 /')
+    fi
+
+    # Check if target keyword appears in the library
+    if [ -z "$TARGET_KEYWORD" ]; then
+        echo "FAIL: No target keyword to validate against library"
+        FAILS=$((FAILS+1))
+    else
+        # Look for a row containing the target keyword in the "Validated Keywords" table
+        LIBRARY_ROW=$(grep -i "$TARGET_KEYWORD" "$KEYWORD_LIBRARY" 2>/dev/null | grep "|" | head -1)
+
+        if [ -z "$LIBRARY_ROW" ]; then
+            echo "FAIL: Target keyword '$TARGET_KEYWORD' not found in keyword-library.md"
+            echo "      Add a row to the 'Validated Keywords' table with:"
+            echo "      | Article | Pillar | Target Keyword | Volume | Secondary Keywords | Date |"
+            FAILS=$((FAILS+1))
+        else
+            echo "INFO: Found library entry: $LIBRARY_ROW"
+
+            # Validate the row has all required columns (6 columns in table)
+            COLUMN_COUNT=$(echo "$LIBRARY_ROW" | tr '|' '\n' | grep -v "^$" | wc -l | tr -d ' ')
+
+            if [ "$COLUMN_COUNT" -lt 6 ]; then
+                echo "FAIL: Library entry incomplete - found $COLUMN_COUNT columns, need 6"
+                echo "      Required: Article | Pillar | Target Keyword | Volume | Secondary Keywords | Date"
+                FAILS=$((FAILS+1))
+            else
+                # Check if the entry has a date (last column)
+                ENTRY_DATE=$(echo "$LIBRARY_ROW" | awk -F'|' '{print $(NF-1)}' | tr -d ' ')
+
+                if [ -z "$ENTRY_DATE" ] || [ "$ENTRY_DATE" = "-" ]; then
+                    echo "FAIL: Library entry missing date"
+                    FAILS=$((FAILS+1))
+                else
+                    # Validate date is recent (within last 30 days)
+                    # Get today's date in YYYY-MM-DD format
+                    TODAY=$(date +%Y-%m-%d)
+                    THIRTY_DAYS_AGO=$(date -v-30d +%Y-%m-%d 2>/dev/null || date -d "30 days ago" +%Y-%m-%d 2>/dev/null || echo "")
+
+                    if [ -n "$THIRTY_DAYS_AGO" ]; then
+                        # Compare dates (simple string comparison works for YYYY-MM-DD format)
+                        if [[ "$ENTRY_DATE" > "$THIRTY_DAYS_AGO" ]] || [[ "$ENTRY_DATE" == "$TODAY" ]]; then
+                            echo "PASS: Library entry found with recent date ($ENTRY_DATE)"
+                        else
+                            echo "WARN: Library entry date ($ENTRY_DATE) is more than 30 days old"
+                            echo "      If this is a new article, ensure you added a fresh entry."
+                        fi
+                    else
+                        echo "PASS: Library entry found with date: $ENTRY_DATE"
+                    fi
+                fi
+
+                # Check if secondary keywords column has content
+                SECONDARY_COL=$(echo "$LIBRARY_ROW" | awk -F'|' '{print $6}' | tr -d ' ')
+                if [ -z "$SECONDARY_COL" ] || [ "$SECONDARY_COL" = "-" ]; then
+                    echo "WARN: Library entry may be missing secondary keywords"
+                else
+                    echo "PASS: Library entry has secondary keywords"
+                fi
+            fi
+        fi
+    fi
 fi
 
 # ============================================================================
@@ -139,10 +293,19 @@ echo ""
 
 if [ "$FAILS" -eq 0 ]; then
     echo "============================================"
-    echo "   KEYWORD GATE: UNLOCKED"
+    echo "   KEYWORD GATE: PASS"
     echo "   Keyword research complete."
     echo "   Research phase can proceed."
     echo "============================================"
+    echo ""
+    # AUTO-UPDATE: Add entry to keyword library
+    echo ">>> AUTO-UPDATING KEYWORD LIBRARY..."
+    SCRIPT_DIR="$(dirname "$0")"
+    if [ -f "$SCRIPT_DIR/update-keyword-library.sh" ]; then
+        "$SCRIPT_DIR/update-keyword-library.sh" "$FILE"
+    else
+        echo "WARNING: update-keyword-library.sh not found. Manual update required."
+    fi
     echo ""
     echo "NEXT STEP: Complete research, then run:"
     echo "  .claude/scripts/check-research-gate.sh $FILE"
@@ -150,17 +313,18 @@ if [ "$FAILS" -eq 0 ]; then
     exit 0
 else
     echo "============================================"
-    echo "   KEYWORD GATE: LOCKED"
+    echo "   KEYWORD GATE: FAIL"
     echo "   $FAILS check(s) failed."
     echo "============================================"
     echo ""
     echo "REQUIRED ACTION:"
     echo "  1. Run /keyword-research skill with the seed keyword"
     echo "  2. Update research file with validated keyword and secondaries"
-    echo "  3. Update claude.md keywords table"
-    echo "  4. Re-run this gate"
+    echo "  3. Ensure research file has full keyword cluster"
+    echo "  4. Update .claude/keyword-library.md with validated keyword"
+    echo "  5. Re-run this gate script"
     echo ""
-    echo "DO NOT START RESEARCH UNTIL THIS GATE IS UNLOCKED."
+    echo "DO NOT START RESEARCH UNTIL THIS GATE SHOWS PASS."
     echo ""
     exit 1
 fi
