@@ -2,13 +2,17 @@
 # ============================================================================
 # MASTER HUMANISATION GATE - Fully Automated (23 Sections)
 # ============================================================================
-# Usage: ./master-gate.sh <filename> [hub|cluster]
+# Usage: ./master-gate.sh <filename> [hub|cluster] [--remediate]
 # Example: ./master-gate.sh article.md hub
+# Example: ./master-gate.sh article.md cluster --remediate
 #
 # Exit codes: 0 = PASS (GATE OPEN), 1 = FAIL (GATE CLOSED)
 #
 # This script enforces ALL rules from .claude/humanise-content.md
 # No manual steps required - everything is automated.
+#
+# --remediate flag: Only shows failures, suppresses verbose PASS output
+#                   Use on 2nd+ runs to reduce context window usage
 #
 # Sections (23 total):
 # 1-4:   Word count, banned words, frequency limits, intensifiers
@@ -25,6 +29,28 @@
 # --- ARGUMENTS ---
 FILE="$1"
 TYPE="$2"
+REMEDIATE="$3"
+
+# --- REMEDIATION MODE ---
+QUIET_PASS=false
+if [ "$REMEDIATE" = "--remediate" ]; then
+    QUIET_PASS=true
+fi
+
+# Helper function for pass output (suppressed in remediate mode)
+pass_msg() {
+    if [ "$QUIET_PASS" = false ]; then
+        echo "PASS: $1"
+    fi
+}
+
+# Helper function for section headers (suppressed in remediate mode)
+section_header() {
+    if [ "$QUIET_PASS" = false ]; then
+        echo ""
+        echo ">>> SECTION $1"
+    fi
+}
 
 if [ -z "$FILE" ] || [ -z "$TYPE" ]; then
     echo "============================================================================"
@@ -100,7 +126,7 @@ if [ "$WORD_COUNT" -lt "$MIN_WORDS" ]; then
     echo "FAIL: Word count $WORD_COUNT < minimum $MIN_WORDS"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: Word count $WORD_COUNT >= $MIN_WORDS"
+    pass_msg "Word count $WORD_COUNT >= $MIN_WORDS"
 fi
 
 # --- SECTION 2: BANNED WORDS (must be 0) ---
@@ -114,7 +140,7 @@ if [ "$AIISMS" -gt 0 ]; then
     grep -inE "navigate|navigating|delve|landscape|leverage|comprehensive|robust|crucial|vital|realm|multifaceted|paradigm|synergy|harness|unlock|empower|straightforward|seamless|seamlessly|utilize|utilise|facilitate|optimal|plethora|myriad|pivotal|foster|bolster|whilst|moreover|furthermore|additionally|hence|thus|therefore|consequently|nevertheless|nonetheless|notwithstanding|firstly|secondly|thirdly|aforementioned|underscore|coupled with|in essence|certainly|essentially|fundamentally|undoubtedly|remarkably|ultimately|notably|evidently|inherently|arguably|invariably|interestingly" "$FILE" 2>/dev/null | head -10
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No AI-isms"
+    pass_msg "No AI-isms"
 fi
 
 # Hyperbolic/misused (0 allowed)
@@ -124,7 +150,7 @@ if [ "$HYPERBOLIC" -gt 0 ]; then
     grep -inwE "amazing|literally|obviously" "$FILE" 2>/dev/null | head -5
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No hyperbolic words"
+    pass_msg "No hyperbolic words"
 fi
 
 # Deficit language (uses URL-stripped content to avoid false positives from URLs)
@@ -134,7 +160,7 @@ if [ "$DEFICIT" -gt 0 ]; then
     echo "$CONTENT_NO_URLS" | grep -inE "\bfix\b|\bcure\b|\bnormal\b|suffering from|special needs" 2>/dev/null | head -5
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No deficit language"
+    pass_msg "No deficit language"
 fi
 
 # Clinical terms (uses URL-stripped content to avoid false positives from official URLs)
@@ -144,7 +170,7 @@ if [ "$CLINICAL" -gt 0 ]; then
     echo "$CONTENT_NO_URLS" | grep -inE "\bdisorder\b|\bpatient\b|\btreatment\b|\bsymptoms\b" 2>/dev/null | head -5
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No clinical terms"
+    pass_msg "No clinical terms"
 fi
 
 # American English (expanded list)
@@ -155,7 +181,7 @@ if [ "$AMERICAN" -gt 0 ]; then
     grep -inE "\bmom\b|\bcolor\b|\bbehavior\b|\bfavor\b|\bhonor\b|\borganize\b|\brecognize\b|\btraveled\b|\bcanceled\b|\bpracticing\b" "$FILE" 2>/dev/null | head -5
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No American English"
+    pass_msg "No American English"
 fi
 
 # --- SECTION 3: FREQUENCY-LIMITED WORDS ---
@@ -177,7 +203,7 @@ check_frequency() {
         echo "FAIL: '$word' appears $count times (max $max)"
         FAILS=$((FAILS+1))
     else
-        echo "PASS: '$word' = $count (max $max)"
+        pass_msg "'$word' = $count (max $max)"
     fi
 }
 
@@ -191,7 +217,7 @@ check_frequency_pattern() {
         echo "FAIL: '$label' appears $count times (max $max)"
         FAILS=$((FAILS+1))
     else
-        echo "PASS: '$label' = $count (max $max)"
+        pass_msg "'$label' = $count (max $max)"
     fi
 }
 
@@ -256,7 +282,7 @@ check_banned() {
         grep -inE "$pattern" "$FILE" 2>/dev/null | head -3
         FAILS=$((FAILS+1))
     else
-        echo "PASS: No $label"
+        pass_msg "No $label"
     fi
 }
 
@@ -278,7 +304,7 @@ if [ "$REDUNDANT" -gt 0 ]; then
     grep -inE "completely unique|absolutely essential|very important|basic fundamentals|end result|past history|future plans" "$FILE" 2>/dev/null | head -5
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No redundant phrases"
+    pass_msg "No redundant phrases"
 fi
 
 # --- SECTION 7: STRUCTURAL LIMITS ---
@@ -290,7 +316,7 @@ if [ "$THIS_IS" -gt 3 ]; then
     echo "FAIL: 'This is why/where/what' appears $THIS_IS times (max 3)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: 'This is why/where/what' = $THIS_IS (max 3)"
+    pass_msg "'This is why/where/what' = $THIS_IS (max 3)"
 fi
 
 EXAMPLES_INCLUDE=$(grep -ci "examples include" "$FILE" 2>/dev/null) || EXAMPLES_INCLUDE=0
@@ -298,7 +324,7 @@ if [ "$EXAMPLES_INCLUDE" -gt 2 ]; then
     echo "FAIL: 'Examples include' appears $EXAMPLES_INCLUDE times (max 2)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: 'Examples include' = $EXAMPLES_INCLUDE (max 2)"
+    pass_msg "'Examples include' = $EXAMPLES_INCLUDE (max 2)"
 fi
 
 BACKWARD=$(grep -ciE "as mentioned earlier|as stated above|as previously discussed|as noted earlier" "$FILE" 2>/dev/null) || BACKWARD=0
@@ -306,7 +332,7 @@ if [ "$BACKWARD" -gt 1 ]; then
     echo "FAIL: Backward references appear $BACKWARD times (max 1)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: Backward references = $BACKWARD (max 1)"
+    pass_msg "Backward references = $BACKWARD (max 1)"
 fi
 
 LY_ADVERBS=$(grep -cE "^(Interestingly|Unfortunately|Importantly|Surprisingly|Notably|Significantly|Remarkably|Understandably|Evidently|Inherently|Arguably|Invariably)," "$FILE" 2>/dev/null) || LY_ADVERBS=0
@@ -314,7 +340,7 @@ if [ "$LY_ADVERBS" -gt 2 ]; then
     echo "FAIL: Sentence-initial -ly adverbs = $LY_ADVERBS (max 2)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: Sentence-initial -ly adverbs = $LY_ADVERBS (max 2)"
+    pass_msg "Sentence-initial -ly adverbs = $LY_ADVERBS (max 2)"
 fi
 
 # --- SECTION 8: HEDGING DENSITY ---
@@ -329,7 +355,7 @@ if [ "$HEDGES" -gt "$MAX_HEDGES" ]; then
     echo "FAIL: Hedges = $HEDGES (max $MAX_HEDGES for ${WORD_COUNT} words)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: Hedges = $HEDGES (max $MAX_HEDGES)"
+    pass_msg "Hedges = $HEDGES (max $MAX_HEDGES)"
 fi
 
 # Check for stacked hedges (multiple in same sentence)
@@ -339,7 +365,7 @@ if [ "$STACKED" -gt 0 ]; then
     grep -inE "(may|might|could|potentially|possibly|often|tend to|tends to).*(may|might|could|potentially|possibly|often|tend to|tends to)" "$FILE" 2>/dev/null | head -3
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No stacked hedges"
+    pass_msg "No stacked hedges"
 fi
 
 # --- SECTION 9: SENTENCE VARIETY (Automated) ---
@@ -352,7 +378,7 @@ if [ "$THIS_STARTS" -gt 6 ]; then
     echo "FAIL: Sentences starting with 'This' = $THIS_STARTS (max 6 for article)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: Sentences starting with 'This' = $THIS_STARTS (global)"
+    pass_msg "Sentences starting with 'This' = $THIS_STARTS (global)"
 fi
 
 # Per-section "This" limit check (max 2 per H2 section)
@@ -380,7 +406,7 @@ if [ "$THIS_SECTION_FAILS" -gt 0 ]; then
     echo "FAIL: $THIS_SECTION_FAILS H2 section(s) have 3+ sentences starting with 'This' (max 2 per section)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No H2 section exceeds 2 'This' sentence starts"
+    pass_msg "No H2 section exceeds 2 'This' sentence starts"
 fi
 
 # Count "you/your" sentence starts (total)
@@ -405,7 +431,7 @@ if [ "$CONSECUTIVE_YOU" -gt 0 ]; then
     echo "FAIL: Found $CONSECUTIVE_YOU instance(s) of 3+ consecutive 'You/Your' sentences (max 0)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No consecutive 'You/Your' patterns (3+ in a row)"
+    pass_msg "No consecutive 'You/Your' patterns (3+ in a row)"
 fi
 
 # Check for short sentences (under 8 words) - global check
@@ -414,7 +440,7 @@ if [ "$SHORT_SENTENCES" -lt 3 ]; then
     echo "FAIL: Short sentences (under ~8 words) = $SHORT_SENTENCES (need at least 3 total)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: Short sentences = $SHORT_SENTENCES (global)"
+    pass_msg "Short sentences = $SHORT_SENTENCES (global)"
 fi
 
 # Per-section short sentence check (min 1 per H2 section)
@@ -442,7 +468,7 @@ if [ "$SHORT_SECTION_FAILS" -gt 0 ]; then
     echo "WARN: $SHORT_SECTION_FAILS H2 section(s) have no short sentences (recommended: 1+ per section)"
     WARNINGS=$((WARNINGS+1))
 else
-    echo "PASS: All H2 sections have at least 1 short sentence"
+    pass_msg "All H2 sections have at least 1 short sentence"
 fi
 
 # --- SECTION 10: HUMAN MARKERS (must have) ---
@@ -454,7 +480,7 @@ if [ "$AND_BUT" -lt 2 ]; then
     echo "FAIL: And/But sentence starters = $AND_BUT (need at least 2)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: And/But starters = $AND_BUT"
+    pass_msg "And/But starters = $AND_BUT"
 fi
 
 WE_USAGE=$(grep -ciw "we" "$FILE" 2>/dev/null) || WE_USAGE=0
@@ -462,7 +488,7 @@ if [ "$WE_USAGE" -lt 2 ]; then
     echo "FAIL: 'We' usage = $WE_USAGE (need at least 2)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: 'We' usage = $WE_USAGE"
+    pass_msg "'We' usage = $WE_USAGE"
 fi
 
 # Contractions check
@@ -476,7 +502,7 @@ if [ "$CONTRACTION_RATIO" -lt 2 ]; then
     echo "FAIL: Contractions = $CONTRACTIONS (need ~2+ per 500 words)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: Contractions = $CONTRACTIONS"
+    pass_msg "Contractions = $CONTRACTIONS"
 fi
 
 # --- SECTION 11: COMMUNITY QUOTES ---
@@ -488,7 +514,7 @@ if [ "$QUOTES" -lt "$MIN_COMMUNITY_QUOTES" ]; then
     echo "FAIL: Community quotes = $QUOTES (need at least $MIN_COMMUNITY_QUOTES)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: Community quotes = $QUOTES"
+    pass_msg "Community quotes = $QUOTES"
 fi
 
 # --- SECTION 12: DATED CITATIONS ---
@@ -500,7 +526,7 @@ if [ "$DATED_CITATIONS" -lt "$MIN_CITATIONS" ]; then
     echo "FAIL: Dated citations = $DATED_CITATIONS (need at least $MIN_CITATIONS)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: Dated citations = $DATED_CITATIONS"
+    pass_msg "Dated citations = $DATED_CITATIONS"
 fi
 
 # --- SECTION 13: CURIOSITY LOOPS ---
@@ -513,7 +539,7 @@ if [ "$CURIOSITY" -lt "$MIN_CURIOSITY_LOOPS" ]; then
     echo "FAIL: Curiosity loops = $CURIOSITY (need at least $MIN_CURIOSITY_LOOPS)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: Curiosity loops = $CURIOSITY"
+    pass_msg "Curiosity loops = $CURIOSITY"
 fi
 
 # --- SECTION 14: INTERNAL LINKS ---
@@ -525,7 +551,7 @@ if [ "$LINKS" -lt "$MIN_INTERNAL_LINKS" ]; then
     echo "FAIL: Internal links = $LINKS (need at least $MIN_INTERNAL_LINKS)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: Internal links = $LINKS"
+    pass_msg "Internal links = $LINKS"
 fi
 
 # --- SECTION 15: TRADEMARK ---
@@ -538,7 +564,7 @@ if [ "$HUSHAWAY_NO_TM" -gt 0 ]; then
     grep -n "HushAway" "$FILE" 2>/dev/null | grep -v "HushAway®" | grep -v "hushaway.com" | head -5
     FAILS=$((FAILS+1))
 else
-    echo "PASS: All HushAway instances have registered symbol"
+    pass_msg "All HushAway instances have registered symbol"
 fi
 
 # --- SECTION 16: EM-DASHES ---
@@ -551,7 +577,7 @@ if [ "$EMDASH" -gt 0 ]; then
     grep -n "—" "$FILE" 2>/dev/null | head -5
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No em-dashes"
+    pass_msg "No em-dashes"
 fi
 
 # --- SECTION 17: EMOJIS ---
@@ -564,7 +590,7 @@ if [ "$EMOJIS" -gt 0 ]; then
     echo "FAIL: Emojis found: $EMOJIS"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No emojis"
+    pass_msg "No emojis"
 fi
 
 # --- SECTION 18: BRAND PROMINENCE ---
@@ -574,7 +600,7 @@ echo ">>> SECTION 18: BRAND PROMINENCE (required)"
 # Extract first 500 words and check for HushAway®
 FIRST_500=$(head -c 3000 "$FILE" | tr '\n' ' ')
 if echo "$FIRST_500" | grep -q "HushAway®"; then
-    echo "PASS: HushAway® appears in introduction"
+    pass_msg "HushAway® appears in introduction"
 else
     echo "FAIL: HushAway® must appear within first 500 words"
     FAILS=$((FAILS+1))
@@ -597,7 +623,7 @@ if [ "$TOTAL_H2" -gt 0 ]; then
         echo "FAIL: HushAway® in only $H2_WITH_HUSHAWAY of $TOTAL_H2 H2 sections (need $HALF_H2 or more)"
         FAILS=$((FAILS+1))
     else
-        echo "PASS: HushAway® in $H2_WITH_HUSHAWAY of $TOTAL_H2 H2 sections"
+        pass_msg "HushAway® in $H2_WITH_HUSHAWAY of $TOTAL_H2 H2 sections"
     fi
 else
     echo "WARN: No H2 sections found"
@@ -608,7 +634,7 @@ fi
 HAS_TABLE=$(grep -c "^|" "$FILE" 2>/dev/null) || HAS_TABLE=0
 HAS_COMPARISON=$(grep -ciE "comparison|compare|vs\.?|versus|side.by.side|how .* differs" "$FILE" 2>/dev/null) || HAS_COMPARISON=0
 if [ "$HAS_TABLE" -gt 2 ] || [ "$HAS_COMPARISON" -gt 0 ]; then
-    echo "PASS: Comparison element found"
+    pass_msg "Comparison element found"
 else
     echo "FAIL: Missing comparison element (table or side-by-side content)"
     FAILS=$((FAILS+1))
@@ -625,7 +651,7 @@ if [ -n "$TARGET_KEYWORD" ]; then
     # Check keyword in first 150 words (approximately first 1000 chars)
     FIRST_150=$(head -c 1000 "$FILE" | tr '\n' ' ')
     if echo "$FIRST_150" | grep -qi "$TARGET_KEYWORD"; then
-        echo "PASS: Primary keyword '$TARGET_KEYWORD' in first 150 words"
+        pass_msg "Primary keyword '$TARGET_KEYWORD' in first 150 words"
     else
         echo "FAIL: Primary keyword '$TARGET_KEYWORD' not found in first 150 words"
         FAILS=$((FAILS+1))
@@ -633,7 +659,7 @@ if [ -n "$TARGET_KEYWORD" ]; then
 
     # Check keyword in at least one H2
     if grep "^## " "$FILE" 2>/dev/null | grep -qi "$TARGET_KEYWORD"; then
-        echo "PASS: Primary keyword in at least one H2"
+        pass_msg "Primary keyword in at least one H2"
     else
         echo "FAIL: Primary keyword '$TARGET_KEYWORD' not in any H2 heading"
         FAILS=$((FAILS+1))
@@ -655,7 +681,7 @@ if [ -n "$TITLE" ]; then
         echo "FAIL: Title length $TITLE_LENGTH chars (max 60)"
         FAILS=$((FAILS+1))
     else
-        echo "PASS: Title length $TITLE_LENGTH chars"
+        pass_msg "Title length $TITLE_LENGTH chars"
     fi
 else
     echo "FAIL: No title found in frontmatter"
@@ -673,13 +699,13 @@ if [ -n "$META_DESC" ]; then
         echo "FAIL: Meta description $META_LENGTH chars (max 160)"
         FAILS=$((FAILS+1))
     else
-        echo "PASS: Meta description $META_LENGTH chars"
+        pass_msg "Meta description $META_LENGTH chars"
     fi
 
     # Check if meta contains keyword
     if [ -n "$TARGET_KEYWORD" ]; then
         if echo "$META_DESC" | grep -qi "$TARGET_KEYWORD"; then
-            echo "PASS: Meta description contains primary keyword"
+            pass_msg "Meta description contains primary keyword"
         else
             echo "FAIL: Meta description missing primary keyword '$TARGET_KEYWORD'"
             FAILS=$((FAILS+1))
@@ -702,14 +728,14 @@ if [ -n "$EXTERNAL_LINKS" ]; then
     while IFS= read -r link; do
         # Check if it's an approved UK source
         if echo "$link" | grep -qiE "nhs\.uk|adhduk\.co\.uk|nice\.org\.uk|bps\.org\.uk|rcpsych\.ac\.uk|gov\.uk|ncbi\.nlm\.nih\.gov|pubmed|apa\.org"; then
-            echo "PASS: Approved source: $link"
+            pass_msg "Approved source: $link"
         else
             # Check for US-specific sources (flag as warning for review)
             if echo "$link" | grep -qiE "\.com|cdc\.gov|nimh\.nih\.gov|aap\.org"; then
                 echo "WARN: Non-UK source needs review: $link"
                 WARNINGS=$((WARNINGS+1))
             else
-                echo "PASS: Link accepted: $link"
+                pass_msg "Link accepted: $link"
             fi
         fi
     done <<< "$EXTERNAL_LINKS"
@@ -730,7 +756,7 @@ if [ "$SELF_ANSWER" -gt 0 ]; then
     grep -inE "\?[^?]*\b(The answer is|The answer:|The honest answer|The short answer|The simple answer|Here's the answer)" "$FILE" 2>/dev/null | head -3
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No formulaic self-answering question patterns detected"
+    pass_msg "No formulaic self-answering question patterns detected"
 fi
 
 # Check for paragraph starters (3+ paragraphs starting with same word per section)
@@ -770,7 +796,7 @@ if [ "$PARA_START_FAILS" -gt 0 ]; then
     echo "FAIL: $PARA_START_FAILS instance(s) of 3+ paragraphs starting with same word in a section"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No section has 3+ paragraphs starting with same word"
+    pass_msg "No section has 3+ paragraphs starting with same word"
 fi
 
 # Check for list variety (detect identical bullet point starts)
@@ -800,7 +826,7 @@ if [ "$LIST_IDENTICAL" -gt 0 ]; then
     echo "FAIL: Found $LIST_IDENTICAL list(s) with 5+ bullets starting with identical word (vary structure)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: List structure has variety (no identical word starts)"
+    pass_msg "List structure has variety (no identical word starts)"
 fi
 
 # Check for lists where all bullets start with "The"
@@ -831,7 +857,7 @@ if [ "$THE_LISTS" -gt 0 ]; then
     echo "FAIL: Found $THE_LISTS list(s) with 5+ bullets starting with 'The' (vary structure)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No lists with all 'The' starts"
+    pass_msg "No lists with all 'The' starts"
 fi
 
 # Check for lists where all bullets start with verbs (common AI pattern)
@@ -870,7 +896,7 @@ if [ "$VERB_LISTS" -gt 0 ]; then
     echo "WARN: Found $VERB_LISTS list(s) with 5+ bullets all starting with verbs (consider varying)"
     WARNINGS=$((WARNINGS+1))
 else
-    echo "PASS: No lists with all verb starts"
+    pass_msg "No lists with all verb starts"
 fi
 
 # Check for section length variety (no more than 3 sections of identical length)
@@ -903,7 +929,7 @@ if [ "${#SECTION_LENGTHS[@]}" -ge 3 ]; then
         echo "WARN: Section lengths have low variance (min: $MIN_LEN, max: $MAX_LEN lines) - consider varying"
         WARNINGS=$((WARNINGS+1))
     else
-        echo "PASS: Section lengths have variety (min: $MIN_LEN, max: $MAX_LEN lines)"
+        pass_msg "Section lengths have variety (min: $MIN_LEN, max: $MAX_LEN lines)"
     fi
 else
     echo "INFO: Not enough sections to check length variety"
@@ -931,7 +957,7 @@ if [ "$CONSECUTIVE_IT" -gt 0 ]; then
     echo "FAIL: Found $CONSECUTIVE_IT instance(s) of 3+ consecutive paragraphs starting with 'It' (max 2 in a row)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No consecutive 'It' paragraph patterns (3+ in a row)"
+    pass_msg "No consecutive 'It' paragraph patterns (3+ in a row)"
 fi
 
 # Check for "on one hand... on the other hand" pattern (0 allowed)
@@ -941,7 +967,7 @@ if [ "$ON_ONE_HAND" -gt 0 ]; then
     grep -inE "on (the )?one hand|on the other hand" "$FILE" 2>/dev/null | head -3
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No 'on one hand/on the other hand' patterns"
+    pass_msg "No 'on one hand/on the other hand' patterns"
 fi
 
 # Check minimum external links count
@@ -956,7 +982,7 @@ if [ "$EXTERNAL_LINK_COUNT" -lt "$MIN_EXTERNAL" ]; then
     echo "FAIL: External links = $EXTERNAL_LINK_COUNT (need at least $MIN_EXTERNAL for $TYPE articles)"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: External links = $EXTERNAL_LINK_COUNT (min $MIN_EXTERNAL)"
+    pass_msg "External links = $EXTERNAL_LINK_COUNT (min $MIN_EXTERNAL)"
 fi
 
 # ============================================================================

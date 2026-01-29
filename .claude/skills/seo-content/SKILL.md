@@ -45,6 +45,9 @@ If coming from keyword-research skill, most of this is already defined.
 
 **IMPORTANT:** Before writing, check the central libraries to ensure consistency with previous articles.
 
+### Context Optimization:
+**Read `.claude/scratchpad/research-summary.md`** instead of the full research file. The summary contains all data needed for writing: target keyword, secondary keywords, selected angle, key stats for citations, competitor gaps, and PAA questions. This prevents context window exhaustion.
+
 ### Before starting:
 
 1. **READ `ARTICLE-ORDER.md`** to confirm which article you're writing and its priority

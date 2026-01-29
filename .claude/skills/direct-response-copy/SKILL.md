@@ -23,6 +23,8 @@ That's it. Everything else flows from there.
 
 Run this skill AFTER `/seo-content` passes the Content Gate, and BEFORE running `check-conversion-gate.sh`.
 
+**Context Optimization:** Read `.claude/scratchpad/research-summary.md` instead of the full research file. The summary contains target keyword, selected angle, and competitor gaps - everything needed to review conversion effectiveness.
+
 **Prerequisites:** The article must already have:
 - Validated keywords (from `/keyword-research` skill)
 - Selected positioning angle (from `/positioning-angles` skill)

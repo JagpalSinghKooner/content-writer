@@ -423,6 +423,31 @@ When current batch is complete:
 
 ---
 
+## Context Optimization (Prevent Context Window Exhaustion)
+
+**After Research Gate passes, generate a research summary:**
+
+```bash
+# Auto-generate research summary for skills to read (instead of full 800+ line research file)
+# Save to: .claude/scratchpad/research-summary.md
+```
+
+**Summary contents (extract from research file):**
+- Target keyword + secondary keywords
+- Selected angle + headline direction
+- Key stats for citations (3-4 findings with source/year)
+- Competitor gaps for HushAway positioning
+- Top 5 PAA questions to address
+
+**Skills should read `.claude/scratchpad/research-summary.md` instead of full research file after Research Gate passes.**
+
+**Gate remediation:** When a gate fails, use `--remediate` flag on re-runs to only check failed sections:
+```bash
+.claude/scripts/master-gate.sh [article-file] [hub|cluster] --remediate
+```
+
+---
+
 ## Conversion Requirements (Conversion Gate)
 
 **Goal:** Every article should guide readers towards signing up for the free Sound Sanctuary.

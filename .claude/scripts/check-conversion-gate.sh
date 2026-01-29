@@ -2,10 +2,14 @@
 # ============================================================================
 # CONVERSION GATE CHECK - Post Content Gate Verification (Gate 5)
 # ============================================================================
-# Usage: ./check-conversion-gate.sh <article-file>
+# Usage: ./check-conversion-gate.sh <article-file> [--remediate]
 # Example: ./check-conversion-gate.sh src/content/pillar-5-adhd-apps/hub-adhd-apps.md
+# Example: ./check-conversion-gate.sh article.md --remediate
 #
 # Exit codes: 0 = PASS (export can proceed), 1 = FAIL (cannot proceed)
+#
+# --remediate flag: Only shows failures, suppresses verbose PASS output
+#                   Use on 2nd+ runs to reduce context window usage
 #
 # This script ensures the article has proper conversion elements to funnel
 # readers into signing up for the free Sound Sanctuary.
@@ -14,6 +18,20 @@
 # ============================================================================
 
 FILE="$1"
+REMEDIATE="$2"
+
+# --- REMEDIATION MODE ---
+QUIET_PASS=false
+if [ "$REMEDIATE" = "--remediate" ]; then
+    QUIET_PASS=true
+fi
+
+# Helper function for pass output (suppressed in remediate mode)
+pass_msg() {
+    if [ "$QUIET_PASS" = false ]; then
+        echo "PASS: $1"
+    fi
+}
 
 if [ -z "$FILE" ]; then
     echo "============================================================================"
@@ -118,7 +136,7 @@ fi
 
 echo ""
 if [ "$OBJECTIONS_FOUND" -ge 2 ]; then
-    echo "PASS: $OBJECTIONS_FOUND of 4 objections addressed (minimum 2 required)"
+    pass_msg "$OBJECTIONS_FOUND of 4 objections addressed (minimum 2 required)"
 else
     echo "FAIL: Only $OBJECTIONS_FOUND of 4 objections addressed (minimum 2 required)"
     FAILS=$((FAILS+1))
@@ -134,7 +152,7 @@ FREE_FOREVER_PATTERNS="free forever|free, forever|forever free|always free|compl
 FREE_FOREVER=$(grep -ciE "$FREE_FOREVER_PATTERNS" "$FILE" 2>/dev/null) || FREE_FOREVER=0
 
 if [ "$FREE_FOREVER" -ge 1 ]; then
-    echo "PASS: 'Free forever' language found ($FREE_FOREVER mentions)"
+    pass_msg "'Free forever' language found ($FREE_FOREVER mentions)"
 else
     echo "FAIL: 'Free forever' or equivalent not found"
     echo "      Add near CTA: 'free forever', 'always free', 'completely free'"
@@ -160,11 +178,11 @@ if [ "$BAD_LANGUAGE" -gt 0 ]; then
     echo "      Remove: 'free trial', 'subscribe', 'sign up for', 'register'"
     FAILS=$((FAILS+1))
 else
-    echo "PASS: No commitment barrier language found"
+    pass_msg "No commitment barrier language found"
 fi
 
 if [ "$GOOD_LANGUAGE" -ge 1 ]; then
-    echo "PASS: Low-friction access language found ($GOOD_LANGUAGE mentions)"
+    pass_msg "Low-friction access language found ($GOOD_LANGUAGE mentions)"
 else
     echo "WARNING: Consider adding low-friction language"
     echo "      Add: 'just enter your email', 'instant access', 'no credit card'"
@@ -181,7 +199,7 @@ DIFF_PATTERNS="neurodivergent|sensory.friendly|sensory processing|neurodivergent
 DIFFERENTIATION=$(grep -ciE "$DIFF_PATTERNS" "$FILE" 2>/dev/null) || DIFFERENTIATION=0
 
 if [ "$DIFFERENTIATION" -ge 3 ]; then
-    echo "PASS: Neurodivergent-first positioning clear ($DIFFERENTIATION mentions)"
+    pass_msg "Neurodivergent-first positioning clear ($DIFFERENTIATION mentions)"
 else
     echo "FAIL: Insufficient neurodivergent-first differentiation ($DIFFERENTIATION mentions, need 3+)"
     echo "      Strengthen: neurodivergent-first, sensory-friendly, designed specifically"
@@ -201,14 +219,14 @@ HUSHAWAY_COUNT=$(grep -c "HushAway" "$FILE" 2>/dev/null) || HUSHAWAY_COUNT=0
 HUSHAWAY_CONVERSION=$(grep -ciE "HushAway.{0,100}(free|try|sound sanctuary|access)" "$FILE" 2>/dev/null) || HUSHAWAY_CONVERSION=0
 
 if [ "$HUSHAWAY_COUNT" -ge 5 ]; then
-    echo "PASS: HushAway mentioned $HUSHAWAY_COUNT times"
+    pass_msg "HushAway mentioned $HUSHAWAY_COUNT times"
 else
     echo "FAIL: HushAway only mentioned $HUSHAWAY_COUNT times (need 5+)"
     FAILS=$((FAILS+1))
 fi
 
 if [ "$HUSHAWAY_CONVERSION" -ge 2 ]; then
-    echo "PASS: HushAway in conversion contexts ($HUSHAWAY_CONVERSION instances)"
+    pass_msg "HushAway in conversion contexts ($HUSHAWAY_CONVERSION instances)"
 else
     echo "FAIL: HushAway not prominent in conversion contexts ($HUSHAWAY_CONVERSION instances, need 2+)"
     echo "      Add HushAway near: 'free', 'try', 'Sound Sanctuary', 'access'"
@@ -225,7 +243,7 @@ SANCTUARY_PATTERNS="Sound Sanctuary|sound sanctuary"
 SANCTUARY=$(grep -cE "$SANCTUARY_PATTERNS" "$FILE" 2>/dev/null) || SANCTUARY=0
 
 if [ "$SANCTUARY" -ge 2 ]; then
-    echo "PASS: Sound Sanctuary mentioned $SANCTUARY times"
+    pass_msg "Sound Sanctuary mentioned $SANCTUARY times"
 else
     echo "FAIL: Sound Sanctuary not mentioned enough ($SANCTUARY times, need 2+)"
     echo "      Add CTA destination: 'Sound Sanctuary'"
@@ -242,7 +260,7 @@ RISK_PATTERNS="nothing to lose|no risk|risk.free|no commitment|no obligation|cos
 RISK_REVERSAL=$(grep -ciE "$RISK_PATTERNS" "$FILE" 2>/dev/null) || RISK_REVERSAL=0
 
 if [ "$RISK_REVERSAL" -ge 1 ]; then
-    echo "PASS: Risk reversal language found ($RISK_REVERSAL mentions)"
+    pass_msg "Risk reversal language found ($RISK_REVERSAL mentions)"
 else
     echo "FAIL: No risk reversal language found"
     echo "      Add: 'nothing to lose', 'no risk', 'costs nothing to try'"

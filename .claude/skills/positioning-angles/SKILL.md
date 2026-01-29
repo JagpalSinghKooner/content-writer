@@ -29,6 +29,9 @@ Output format: **3-5 distinct angle options**, each with:
 
 **IMPORTANT:** For HushAway articles, check the libraries BEFORE generating angles.
 
+### Context Optimization:
+**Read `.claude/scratchpad/research-summary.md`** instead of the full research file when available. The summary contains: target keyword, competitor gaps, PAA questions, and key stats - everything needed for angle generation without the 800+ line research file.
+
 ### Before generating angles:
 
 1. **CHECK `ARTICLE-ORDER.md`** to confirm:
