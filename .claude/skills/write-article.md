@@ -24,10 +24,12 @@ STEP 2: /keyword-research ──────────── MANDATORY skill
 STEP 3: Complete Research
            │
     ┌──────────────┐
-    │ RESEARCH GATE│ ← Must pass before angles
+    │ RESEARCH GATE│ ← Must pass before summary
     └──────────────┘
            │
-STEP 4: /positioning-angles ────────── MANDATORY skill
+STEP 3b: generate-research-summary.sh ── Creates compact summary for skills
+           │
+STEP 4: /positioning-angles ────────── MANDATORY skill (reads summary)
            │
     ┌──────────────┐
     │  ANGLE GATE  │ ← Must pass before writing
@@ -35,13 +37,15 @@ STEP 4: /positioning-angles ────────── MANDATORY skill
            │
 STEP 5: Prominence Planning
            │
-STEP 6: /seo-content ───────────────── Write article
+STEP 6: /seo-content ───────────────── Write article (reads summary)
            │
     ┌──────────────┐
     │ CONTENT GATE │ ← Must pass before conversion review
     └──────────────┘
            │
-STEP 7: check-conversion-gate.sh ───── Conversion verification
+STEP 7: /direct-response-copy ───────── Conversion review (reads summary)
+           │
+STEP 8: check-conversion-gate.sh ───── Conversion verification
            │
     ┌────────────────┐
     │CONVERSION GATE │ ← Must pass before export
@@ -184,6 +188,26 @@ The orchestrator will:
 ```
 
 **MUST show `RESEARCH GATE: PASS` before proceeding.**
+
+### Step 4b: Generate Research Summary (MANDATORY - CONTEXT OPTIMIZATION)
+
+**After Research Gate passes, immediately run the summary generation script:**
+
+```bash
+.claude/scripts/generate-research-summary.sh [research-file]
+```
+
+**Example:**
+```bash
+.claude/scripts/generate-research-summary.sh research/pillar-5-adhd-apps/5.1-focus-apps-research.md
+```
+
+**This script:**
+1. Extracts key data from the research file (keywords, angle, stats, gaps, PAA)
+2. Saves a compact summary (90% smaller) to `.claude/scratchpad/research-summary.md`
+3. Skills will read the summary instead of full research file to prevent context exhaustion
+
+**This step is MANDATORY. Skills expect the summary to exist.**
 
 ### Step 5: Run Positioning Angles (MANDATORY - CANNOT SKIP)
 
