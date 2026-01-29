@@ -37,7 +37,9 @@ STEP 3: Complete Research ──────────── Review Perplexity
     │ RESEARCH GATE│ ← Gate 2: Research complete
     └──────────────┘
            │
-STEP 4: Run /positioning-angles ────── Find article-specific angle
+STEP 3b: generate-research-summary.sh ── Creates compact summary for skills
+           │
+STEP 4: Run /positioning-angles ────── Find article-specific angle (reads summary)
            │
            ▼
     ┌──────────────┐
@@ -181,20 +183,21 @@ STEP 8: Preview & Export
 5. **Update research file** with validated keyword and secondary keywords
 6. Complete research for the article (competitors, PAA, sources)
 7. **Run research gate:** `.claude/scripts/check-research-gate.sh [research-file]` - MUST show PASS
-8. **READ `.claude/angle-library.md`** to see all angles already used
-9. **Run `/positioning-angles` skill** to find article-specific angle
-10. **Run angle gate:** `.claude/scripts/check-angle-gate.sh [research-file]` - MUST show PASS (auto-updates angle library)
-11. Complete HushAway® Prominence Planning using the selected angle
-12. **VERIFY both libraries** have entries for this article before writing
-13. Use `/seo-content` skill to write the article
-14. **Run content gate:** `.claude/scripts/master-gate.sh [filename] [hub|cluster]` - MUST show PASS
-15. Fix any failures, re-run script until PASS
-16. **Run `/direct-response-copy` skill** for conversion review
-17. **Run conversion gate:** `.claude/scripts/check-conversion-gate.sh [article-file]` - MUST show PASS
-18. Fix any conversion issues, re-run script until PASS
-19. **Run final gate:** `.claude/scripts/check-final-gate.sh [article-file] [hub|cluster]` - MUST show PASS (auto-updates ARTICLE-ORDER.md)
-20. Preview with `npm run dev`
-21. Export to main website
+8. **Run summary generator:** `.claude/scripts/generate-research-summary.sh [research-file]` - creates compact summary for skills
+9. **READ `.claude/angle-library.md`** to see all angles already used
+10. **Run `/positioning-angles` skill** to find article-specific angle (reads summary)
+11. **Run angle gate:** `.claude/scripts/check-angle-gate.sh [research-file]` - MUST show PASS (auto-updates angle library)
+12. Complete HushAway® Prominence Planning using the selected angle
+13. **VERIFY both libraries** have entries for this article before writing
+14. Use `/seo-content` skill to write the article (reads summary)
+15. **Run content gate:** `.claude/scripts/master-gate.sh [filename] [hub|cluster]` - MUST show PASS
+16. Fix any failures, re-run script until PASS
+17. **Run `/direct-response-copy` skill** for conversion review (reads summary)
+18. **Run conversion gate:** `.claude/scripts/check-conversion-gate.sh [article-file]` - MUST show PASS
+19. Fix any conversion issues, re-run script until PASS
+20. **Run final gate:** `.claude/scripts/check-final-gate.sh [article-file] [hub|cluster]` - MUST show PASS (auto-updates ARTICLE-ORDER.md)
+21. Preview with `npm run dev`
+22. Export to main website
 
 ---
 
@@ -299,7 +302,31 @@ Example: `/research/pillar-7-neurodivergent-parenting/hub-research.md`
 .claude/scripts/check-research-gate.sh [research-file]
 ```
 
-**MUST show `RESEARCH GATE: PASS` before proceeding to Step 4.**
+**MUST show `RESEARCH GATE: PASS` before proceeding.**
+
+---
+
+## Step 3b: Generate Research Summary (MANDATORY)
+
+**After Research Gate passes, immediately run the summary generation script:**
+
+```bash
+.claude/scripts/generate-research-summary.sh [research-file]
+```
+
+**Example:**
+```bash
+.claude/scripts/generate-research-summary.sh research/pillar-5-adhd-apps/5.1-focus-apps-research.md
+```
+
+**This script:**
+1. Extracts key data from the research file (keywords, angle, stats, gaps, PAA)
+2. Saves a compact summary (90% smaller) to `.claude/scratchpad/research-summary.md`
+3. Skills will read the summary instead of full research file to prevent context exhaustion
+
+**This step is MANDATORY. Skills expect the summary to exist.**
+
+**Note:** The summary file is automatically overwritten for each new article - no cleanup required.
 
 ---
 
