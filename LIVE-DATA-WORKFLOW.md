@@ -344,8 +344,8 @@ trendingSubtopics:  # NEW - from Perplexity
 ### Phase 5: Documentation
 
 - [ ] Update `agents.md` with live data workflow
-- [ ] Update `write-article.md` with new frontmatter fields
-- [ ] Update `claude.md` to reference live data process
+- [ ] Update `.claude/rules/humanise-rules.md` with new frontmatter fields
+- [ ] Update `.claude/CLAUDE.md` to reference live data process
 - [ ] Create troubleshooting guide for API issues
 
 ---

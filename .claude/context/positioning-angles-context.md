@@ -116,7 +116,9 @@ Session 1 ends with options saved. Selection happens in Session 2.
 
 ---
 
-## After Skill Completes (Legacy Reference)
+## Session 2: Angle Selection (Writer Performs These Steps)
+
+**These steps happen in SESSION 2, after the writer reviews angle options.**
 
 1. **Select ONE angle** based on:
    - Differentiation from existing angles in library

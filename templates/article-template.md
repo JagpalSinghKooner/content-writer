@@ -173,16 +173,22 @@ SIGNATURE PHRASES TO INCLUDE (use 3-5 naturally)
 <!--
 BEFORE SAVING
 
-Run all verification processes in: .claude/skills/write-article.md
+Run gate scripts from: .claude/scripts/
 
-This includes:
-- Word count verification
-- Citation verification
-- Banned words scanning (AI-isms, deficit language, clinical terms, American English, em-dashes, emojis)
-- Link verification (internal + external)
-- Title tag verification (under 60 chars)
-- Meta description verification (140-160 chars)
-- Full quality checklist
+1. Pre-flight check during writing:
+   .claude/scripts/quick-check.sh [article-file]
 
-See write-article.md for comprehensive checklists and verification steps.
+2. Content Gate (after /seo-content):
+   .claude/scripts/master-gate.sh [article-file] [hub|cluster] --summary
+   Re-runs with diff: --diff --summary (shows FIXED/STILL FAILING/NEW)
+
+3. Conversion Gate (after /direct-response-copy):
+   .claude/scripts/check-conversion-gate.sh [article-file] --summary
+   Re-runs with diff: --diff --summary
+
+4. Final Gate (before export):
+   .claude/scripts/check-final-gate.sh [article-file] [hub|cluster]
+
+See .claude/agents.md for full 6-gate workflow.
+See .claude/rules/humanise-rules.md for all content rules.
 -->

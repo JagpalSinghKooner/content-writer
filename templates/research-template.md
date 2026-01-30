@@ -11,6 +11,10 @@ dateCreated: "[YYYY-MM-DD]"
 dateCompleted: null
 researcher: "[Name or Claude]"
 
+# Content Rules Reference
+# All content rules: .claude/rules/humanise-rules.md
+# Gate verification: .claude/scripts/ (run gates in order)
+
 # Keyword Research (validated by Perplexity MCP)
 keywordStatus: pending
 perplexityUsed: false

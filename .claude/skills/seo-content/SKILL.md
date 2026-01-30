@@ -111,7 +111,28 @@ RESEARCH → BRIEF → OUTLINE → DRAFT → HUMANIZE → OPTIMIZE → REVIEW
 
 **Key requirements:** All thresholds are in `.claude/rules/humanise-rules.md` (banned words, frequency limits, quotes, links).
 
-**Verification:** Run `.claude/scripts/master-gate.sh [filename] [hub|cluster]` before publishing. Gate must show PASS.
+### Pre-Flight Checks (Run During Writing)
+
+**MANDATORY:** Run quick-check.sh after each major section to catch issues early:
+```bash
+.claude/scripts/quick-check.sh [article-file]
+```
+
+This catches 80% of common failures during writing, preventing gate iteration loops.
+
+**Run after:**
+- Introduction complete
+- Each H2 section complete
+- Before final submission
+
+### Final Verification
+
+**Run gate with --summary (default):**
+```bash
+.claude/scripts/master-gate.sh [filename] [hub|cluster] --summary
+```
+
+**If FAIL:** Run without `--summary` for details, fix, re-run with `--remediate`.
 
 ---
 

@@ -2,9 +2,10 @@
 # ============================================================================
 # MASTER HUMANISATION GATE - Fully Automated (23 Sections)
 # ============================================================================
-# Usage: ./master-gate.sh <filename> [hub|cluster] [--remediate]
+# Usage: ./master-gate.sh <filename> [hub|cluster] [--remediate] [--diff]
 # Example: ./master-gate.sh article.md hub
 # Example: ./master-gate.sh article.md cluster --remediate
+# Example: ./master-gate.sh article.md hub --diff --summary
 #
 # Exit codes: 0 = PASS (GATE OPEN), 1 = FAIL (GATE CLOSED)
 #
@@ -15,6 +16,8 @@
 #
 # --remediate flag: Only shows failures, suppresses verbose PASS output
 #                   Use on 2nd+ runs to reduce context window usage
+# --diff flag: Shows changes from previous run (FIXED, STILL FAILING, NEW FAILURE)
+#              Useful for iterative fixing sessions
 #
 # Sections (23 total):
 # 1-4:   Word count, banned words, frequency limits, intensifiers
@@ -29,20 +32,120 @@
 # ============================================================================
 
 # --- ARGUMENTS ---
-FILE="$1"
-TYPE="$2"
-REMEDIATE="$3"
-
-# --- REMEDIATION MODE ---
+FILE=""
+TYPE=""
 QUIET_PASS=false
-if [ "$REMEDIATE" = "--remediate" ]; then
-    QUIET_PASS=true
+SUMMARY_MODE=false
+FAIL_FAST=false
+DIFF_MODE=false
+MAX_FAILS_BEFORE_STOP=3
+
+# Parse arguments
+for arg in "$@"; do
+    case $arg in
+        --remediate) QUIET_PASS=true ;;
+        --summary) SUMMARY_MODE=true; QUIET_PASS=true ;;
+        --fail-fast) FAIL_FAST=true ;;
+        --diff) DIFF_MODE=true ;;
+        hub|cluster) TYPE="$arg" ;;
+        *) [ -z "$FILE" ] && FILE="$arg" ;;
+    esac
+done
+
+# Track failures for summary mode
+declare -a FAILURE_SUMMARY
+
+# --- DIFF MODE: State tracking ---
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ -f "$SCRIPT_DIR/lib/gate-state.sh" ]; then
+    source "$SCRIPT_DIR/lib/gate-state.sh"
 fi
 
-# Helper function for pass output (suppressed in remediate mode)
+# State tracking arrays (pipe-delimited for bash 3.2 compatibility)
+CURRENT_STATE=""
+DIFF_FIXED=""
+DIFF_STILL_FAILING=""
+DIFF_NEW_FAILURE=""
+FIXED_COUNT=0
+STILL_COUNT=0
+NEW_COUNT=0
+
+# Record check result for diff tracking
+record_check() {
+    local check_name="$1"
+    local status="$2"  # PASS or FAIL
+    local value="$3"
+
+    # Add to current state
+    if [ -n "$CURRENT_STATE" ]; then
+        CURRENT_STATE="${CURRENT_STATE}
+${check_name}=${status}:${value}"
+    else
+        CURRENT_STATE="${check_name}=${status}:${value}"
+    fi
+
+    # If diff mode and we have previous state, compare
+    if [ "$DIFF_MODE" = true ] && [ -n "$STATE_FILE" ] && has_previous_state "$STATE_FILE" 2>/dev/null; then
+        local prev_data
+        prev_data=$(get_prev_value "$check_name" "$STATE_FILE")
+        local prev_status="${prev_data%%:*}"
+
+        local result
+        result=$(compare_check_result "$check_name" "$status" "$prev_status")
+
+        case "$result" in
+            FIXED)
+                FIXED_COUNT=$((FIXED_COUNT + 1))
+                if [ -n "$DIFF_FIXED" ]; then
+                    DIFF_FIXED="${DIFF_FIXED}|${check_name}: ${value}"
+                else
+                    DIFF_FIXED="${check_name}: ${value}"
+                fi
+                ;;
+            STILL_FAILING)
+                STILL_COUNT=$((STILL_COUNT + 1))
+                if [ -n "$DIFF_STILL_FAILING" ]; then
+                    DIFF_STILL_FAILING="${DIFF_STILL_FAILING}|${check_name}: ${value}"
+                else
+                    DIFF_STILL_FAILING="${check_name}: ${value}"
+                fi
+                ;;
+            NEW_FAILURE)
+                NEW_COUNT=$((NEW_COUNT + 1))
+                if [ -n "$DIFF_NEW_FAILURE" ]; then
+                    DIFF_NEW_FAILURE="${DIFF_NEW_FAILURE}|${check_name}: ${value}"
+                else
+                    DIFF_NEW_FAILURE="${check_name}: ${value}"
+                fi
+                ;;
+        esac
+    fi
+}
+
+# Helper function for pass output (suppressed in remediate/summary mode)
 pass_msg() {
     if [ "$QUIET_PASS" = false ]; then
         echo "PASS: $1"
+    fi
+}
+
+# Helper function to track failures for summary mode
+track_fail() {
+    FAILURE_SUMMARY+=("$1")
+}
+
+# Helper function to check fail-fast condition
+check_fail_fast() {
+    if [ "$FAIL_FAST" = true ] && [ "$FAILS" -ge "$MAX_FAILS_BEFORE_STOP" ]; then
+        echo ""
+        echo "============================================"
+        echo "FAIL-FAST: $FAILS failures found"
+        echo "Fix these issues first, then re-run gate."
+        echo "============================================"
+        for failure in "${FAILURE_SUMMARY[@]}"; do
+            echo "- $failure"
+        done
+        exit 1
     fi
 }
 
@@ -79,6 +182,12 @@ if [ ! -f "$FILE" ]; then
     exit 1
 fi
 
+# --- DIFF MODE: Initialize state file ---
+if [ "$DIFF_MODE" = true ]; then
+    STATE_FILE=$(get_state_file "$FILE" "master-gate" 2>/dev/null)
+    cleanup_old_states 2>/dev/null
+fi
+
 # --- CONFIGURATION BASED ON TYPE ---
 if [ "$TYPE" = "hub" ]; then
     MIN_WORDS=3000
@@ -110,6 +219,21 @@ echo "==========================================================================
 echo "File: $FILE"
 echo "Type: $TYPE"
 echo "Word Count: $WORD_COUNT (min: $MIN_WORDS)"
+if [ "$SUMMARY_MODE" = true ]; then
+    echo "Mode: SUMMARY (compact output)"
+elif [ "$QUIET_PASS" = true ]; then
+    echo "Mode: REMEDIATE (failures only)"
+fi
+if [ "$FAIL_FAST" = true ]; then
+    echo "Fail-Fast: ON (stops after $MAX_FAILS_BEFORE_STOP failures)"
+fi
+if [ "$DIFF_MODE" = true ]; then
+    if has_previous_state "$STATE_FILE" 2>/dev/null; then
+        echo "Diff Mode: ON (comparing to previous run)"
+    else
+        echo "Diff Mode: ON (no previous state - first run)"
+    fi
+fi
 echo "Timestamp: $(date)"
 echo "============================================================================"
 
@@ -118,23 +242,29 @@ echo ""
 echo ">>> SECTION 1: WORD COUNT"
 if [ "$WORD_COUNT" -lt "$MIN_WORDS" ]; then
     echo "FAIL: Word count $WORD_COUNT < minimum $MIN_WORDS"
+    track_fail "Word count: $WORD_COUNT (min $MIN_WORDS)"
+    record_check "WORD_COUNT" "FAIL" "$WORD_COUNT"
     FAILS=$((FAILS+1))
 else
     pass_msg "Word count $WORD_COUNT >= $MIN_WORDS"
+    record_check "WORD_COUNT" "PASS" "$WORD_COUNT"
 fi
 
 # --- SECTION 2: BANNED WORDS (must be 0) ---
 echo ""
 echo ">>> SECTION 2: BANNED WORDS (must be 0)"
 
-# AI-isms (complete list from humanise-content.md)
+# AI-isms (complete list from humanise-rules.md Section 1)
 AIISMS=$(grep -ciE "navigate|navigating|delve|landscape|leverage|comprehensive|robust|crucial|vital|realm|multifaceted|paradigm|synergy|harness|unlock|empower|straightforward|seamless|seamlessly|utilize|utilise|facilitate|optimal|plethora|myriad|pivotal|foster|bolster|whilst|moreover|furthermore|additionally|hence|thus|therefore|consequently|nevertheless|nonetheless|notwithstanding|firstly|secondly|thirdly|aforementioned|underscore|coupled with|in essence|certainly|essentially|fundamentally|undoubtedly|remarkably|ultimately|notably|evidently|inherently|arguably|invariably|interestingly" "$FILE" 2>/dev/null) || AIISMS=0
 if [ "$AIISMS" -gt 0 ]; then
     echo "FAIL: AI-isms found: $AIISMS"
     grep -inE "navigate|navigating|delve|landscape|leverage|comprehensive|robust|crucial|vital|realm|multifaceted|paradigm|synergy|harness|unlock|empower|straightforward|seamless|seamlessly|utilize|utilise|facilitate|optimal|plethora|myriad|pivotal|foster|bolster|whilst|moreover|furthermore|additionally|hence|thus|therefore|consequently|nevertheless|nonetheless|notwithstanding|firstly|secondly|thirdly|aforementioned|underscore|coupled with|in essence|certainly|essentially|fundamentally|undoubtedly|remarkably|ultimately|notably|evidently|inherently|arguably|invariably|interestingly" "$FILE" 2>/dev/null | head -10
+    track_fail "AI-isms: $AIISMS"
+    record_check "AI_ISMS" "FAIL" "$AIISMS"
     FAILS=$((FAILS+1))
 else
     pass_msg "No AI-isms"
+    record_check "AI_ISMS" "PASS" "0"
 fi
 
 # Hyperbolic/misused (0 allowed)
@@ -173,10 +303,16 @@ AMERICAN=$(grep -ciE "\bmom\b|\bcolor\b|\bbehavior\b|\bfavor\b|\bhonor\b|\borgan
 if [ "$AMERICAN" -gt 0 ]; then
     echo "FAIL: American English found: $AMERICAN"
     grep -inE "\bmom\b|\bcolor\b|\bbehavior\b|\bfavor\b|\bhonor\b|\borganize\b|\brecognize\b|\btraveled\b|\bcanceled\b|\bpracticing\b" "$FILE" 2>/dev/null | head -5
+    track_fail "American English: $AMERICAN"
+    record_check "AMERICAN_ENGLISH" "FAIL" "$AMERICAN"
     FAILS=$((FAILS+1))
 else
     pass_msg "No American English"
+    record_check "AMERICAN_ENGLISH" "PASS" "0"
 fi
+
+# Fail-fast check after banned words
+check_fail_fast
 
 # --- SECTION 3: FREQUENCY-LIMITED WORDS ---
 echo ""
@@ -195,6 +331,7 @@ check_frequency() {
     count=$(grep -ciw "$word" "$FILE" 2>/dev/null) || count=0
     if [ "$count" -gt "$max" ]; then
         echo "FAIL: '$word' appears $count times (max $max)"
+        track_fail "'$word': $count (max $max)"
         FAILS=$((FAILS+1))
     else
         pass_msg "'$word' = $count (max $max)"
@@ -209,6 +346,7 @@ check_frequency_pattern() {
     count=$(grep -ciE "$pattern" "$FILE" 2>/dev/null) || count=0
     if [ "$count" -gt "$max" ]; then
         echo "FAIL: '$label' appears $count times (max $max)"
+        track_fail "'$label': $count (max $max)"
         FAILS=$((FAILS+1))
     else
         pass_msg "'$label' = $count (max $max)"
@@ -274,6 +412,7 @@ check_banned() {
     if [ "$count" -gt 0 ]; then
         echo "FAIL: $label found: $count"
         grep -inE "$pattern" "$FILE" 2>/dev/null | head -3
+        track_fail "$label: $count found"
         FAILS=$((FAILS+1))
     else
         pass_msg "No $label"
@@ -329,7 +468,8 @@ else
     pass_msg "Backward references = $BACKWARD (max 1)"
 fi
 
-LY_ADVERBS=$(grep -cE "^(Interestingly|Unfortunately|Importantly|Surprisingly|Notably|Significantly|Remarkably|Understandably|Evidently|Inherently|Arguably|Invariably)," "$FILE" 2>/dev/null) || LY_ADVERBS=0
+# Note: Interestingly, Evidently, Inherently, Arguably, Invariably removed - already banned as AI-isms
+LY_ADVERBS=$(grep -cE "^(Unfortunately|Importantly|Surprisingly|Notably|Significantly|Remarkably|Understandably)," "$FILE" 2>/dev/null) || LY_ADVERBS=0
 if [ "$LY_ADVERBS" -gt 2 ]; then
     echo "FAIL: Sentence-initial -ly adverbs = $LY_ADVERBS (max 2)"
     FAILS=$((FAILS+1))
@@ -472,14 +612,18 @@ echo ">>> SECTION 10: HUMAN MARKERS (required)"
 AND_BUT=$(grep -cE "^(And|But) " "$FILE" 2>/dev/null) || AND_BUT=0
 if [ "$AND_BUT" -lt 2 ]; then
     echo "FAIL: And/But sentence starters = $AND_BUT (need at least 2)"
+    track_fail "And/But starters: $AND_BUT (need 2)"
+    record_check "AND_BUT_STARTERS" "FAIL" "$AND_BUT"
     FAILS=$((FAILS+1))
 else
     pass_msg "And/But starters = $AND_BUT"
+    record_check "AND_BUT_STARTERS" "PASS" "$AND_BUT"
 fi
 
 WE_USAGE=$(grep -ciw "we" "$FILE" 2>/dev/null) || WE_USAGE=0
 if [ "$WE_USAGE" -lt 2 ]; then
     echo "FAIL: 'We' usage = $WE_USAGE (need at least 2)"
+    track_fail "'We' usage: $WE_USAGE (need 2)"
     FAILS=$((FAILS+1))
 else
     pass_msg "'We' usage = $WE_USAGE"
@@ -492,12 +636,20 @@ if [ "$WORD_COUNT" -gt 0 ]; then
 else
     CONTRACTION_RATIO=0
 fi
+MIN_CONTRACTIONS=$((WORD_COUNT * 2 / 500))
+if [ "$MIN_CONTRACTIONS" -lt 2 ]; then MIN_CONTRACTIONS=2; fi
 if [ "$CONTRACTION_RATIO" -lt 2 ]; then
-    echo "FAIL: Contractions = $CONTRACTIONS (need ~2+ per 500 words)"
+    echo "FAIL: Contractions = $CONTRACTIONS (need minimum $MIN_CONTRACTIONS for $WORD_COUNT words)"
+    track_fail "Contractions: $CONTRACTIONS (need $MIN_CONTRACTIONS)"
+    record_check "CONTRACTIONS" "FAIL" "$CONTRACTIONS"
     FAILS=$((FAILS+1))
 else
-    pass_msg "Contractions = $CONTRACTIONS"
+    pass_msg "Contractions = $CONTRACTIONS (min $MIN_CONTRACTIONS)"
+    record_check "CONTRACTIONS" "PASS" "$CONTRACTIONS"
 fi
+
+# Fail-fast check after human markers
+check_fail_fast
 
 # --- SECTION 11: COMMUNITY QUOTES ---
 echo ""
@@ -506,9 +658,11 @@ echo ">>> SECTION 11: COMMUNITY QUOTES (min: $MIN_COMMUNITY_QUOTES)"
 QUOTES=$(grep -ciE "one mum|one parent|as one parent|parent shared|parents in our community|mum put it|parent told" "$FILE" 2>/dev/null) || QUOTES=0
 if [ "$QUOTES" -lt "$MIN_COMMUNITY_QUOTES" ]; then
     echo "FAIL: Community quotes = $QUOTES (need at least $MIN_COMMUNITY_QUOTES)"
+    record_check "COMMUNITY_QUOTES" "FAIL" "$QUOTES"
     FAILS=$((FAILS+1))
 else
     pass_msg "Community quotes = $QUOTES"
+    record_check "COMMUNITY_QUOTES" "PASS" "$QUOTES"
 fi
 
 # --- SECTION 12: DATED CITATIONS WITH LINKS ---
@@ -530,9 +684,11 @@ UNLINKED_CITATIONS=$((DATED_CITATIONS - LINKED_CITATIONS))
 if [ "$DATED_CITATIONS" -lt "$MIN_CITATIONS" ]; then
     echo "FAIL: Dated citations = $DATED_CITATIONS (need at least $MIN_CITATIONS)"
     echo "      Use format: 'Research from 2024 found...' or 'A 2024 study showed...'"
+    record_check "DATED_CITATIONS" "FAIL" "$DATED_CITATIONS"
     FAILS=$((FAILS+1))
 else
     pass_msg "Dated citations = $DATED_CITATIONS"
+    record_check "DATED_CITATIONS" "PASS" "$DATED_CITATIONS"
 fi
 
 # Check all citations have links (E-E-A-T requirement)
@@ -565,12 +721,18 @@ fi
 echo ""
 echo ">>> SECTION 14: INTERNAL LINKS (min: $MIN_INTERNAL_LINKS)"
 
-LINKS=$(grep -c "LINK TO:" "$FILE" 2>/dev/null) || LINKS=0
+# Count both placeholder links and actual /blog links for consistency with Final Gate
+PLACEHOLDER_LINKS=$(grep -c "LINK TO:" "$FILE" 2>/dev/null) || PLACEHOLDER_LINKS=0
+ACTUAL_LINKS=$(grep -c '\[.*\](/blog' "$FILE" 2>/dev/null) || ACTUAL_LINKS=0
+LINKS=$((PLACEHOLDER_LINKS + ACTUAL_LINKS))
 if [ "$LINKS" -lt "$MIN_INTERNAL_LINKS" ]; then
     echo "FAIL: Internal links = $LINKS (need at least $MIN_INTERNAL_LINKS)"
+    echo "      (placeholders: $PLACEHOLDER_LINKS, actual: $ACTUAL_LINKS)"
+    record_check "INTERNAL_LINKS" "FAIL" "$LINKS"
     FAILS=$((FAILS+1))
 else
-    pass_msg "Internal links = $LINKS"
+    pass_msg "Internal links = $LINKS (placeholders: $PLACEHOLDER_LINKS, actual: $ACTUAL_LINKS)"
+    record_check "INTERNAL_LINKS" "PASS" "$LINKS"
 fi
 
 # --- SECTION 15: TRADEMARK ---
@@ -746,7 +908,8 @@ if [ -n "$EXTERNAL_LINKS" ]; then
     BAD_EXTERNAL=0
     while IFS= read -r link; do
         # Check if it's an approved UK source
-        if echo "$link" | grep -qiE "nhs\.uk|adhduk\.co\.uk|nice\.org\.uk|bps\.org\.uk|rcpsych\.ac\.uk|gov\.uk|ncbi\.nlm\.nih\.gov|pubmed|apa\.org"; then
+        # Note: apa.org removed - not a UK source per humanise-rules.md Section 9
+        if echo "$link" | grep -qiE "nhs\.uk|adhduk\.co\.uk|nice\.org\.uk|bps\.org\.uk|rcpsych\.ac\.uk|gov\.uk|ncbi\.nlm\.nih\.gov|pubmed"; then
             pass_msg "Approved source: $link"
         else
             # Check for US-specific sources (flag as warning for review)
@@ -1005,32 +1168,85 @@ else
 fi
 
 # ============================================================================
+# DIFF OUTPUT (if --diff mode enabled)
+# ============================================================================
+if [ "$DIFF_MODE" = true ]; then
+    # Check if we had previous state BEFORE saving current state
+    HAD_PREVIOUS_STATE=false
+    if [ -n "$STATE_FILE" ] && [ -f "$STATE_FILE" ]; then
+        HAD_PREVIOUS_STATE=true
+    fi
+
+    # Save current state for next run
+    if [ -n "$STATE_FILE" ]; then
+        init_state_dir 2>/dev/null
+        echo "$CURRENT_STATE" > "$STATE_FILE"
+    fi
+
+    # Output diff only if we had previous state to compare against
+    if [ "$HAD_PREVIOUS_STATE" = true ]; then
+        if [ "$FIXED_COUNT" -gt 0 ] || [ "$STILL_COUNT" -gt 0 ] || [ "$NEW_COUNT" -gt 0 ]; then
+            output_diff_summary "$FIXED_COUNT" "$STILL_COUNT" "$NEW_COUNT" \
+                "$DIFF_FIXED" "$DIFF_STILL_FAILING" "$DIFF_NEW_FAILURE"
+        else
+            echo ""
+            echo "============================================================================"
+            echo "DIFF FROM PREVIOUS RUN"
+            echo "============================================================================"
+            echo ""
+            echo "No changes from previous run."
+            echo ""
+        fi
+    fi
+fi
+
+# ============================================================================
 # FINAL RESULT
 # ============================================================================
 echo ""
 echo "============================================================================"
 echo "FINAL RESULT"
 echo "============================================================================"
-echo "Total checks failed: $FAILS"
-echo "Warnings: $WARNINGS"
-echo ""
 
+if [ "$SUMMARY_MODE" = true ]; then
+    # Compact summary output
+    if [ "$FAILS" -eq 0 ]; then
+        echo "CONTENT GATE: PASS"
+    else
+        echo "CONTENT GATE: FAIL ($FAILS issues)"
+        for failure in "${FAILURE_SUMMARY[@]}"; do
+            echo "- $failure"
+        done
+    fi
+    echo "============================================================================"
+else
+    # Standard output
+    echo "Total checks failed: $FAILS"
+    echo "Warnings: $WARNINGS"
+    echo ""
+
+    if [ "$FAILS" -eq 0 ]; then
+        echo "============================================"
+        echo "   CONTENT GATE: PASS"
+        echo "   All checks passed. Proceed to Conversion Gate."
+        echo "============================================"
+        echo ""
+        echo "NEXT STEP: Run /direct-response-copy skill, then:"
+        echo "  .claude/scripts/check-conversion-gate.sh $FILE"
+        echo ""
+    else
+        echo "============================================"
+        echo "   CONTENT GATE: FAIL"
+        echo "   $FAILS check(s) failed."
+        echo "   FIX ALL FAILURES and re-run script."
+        echo "   DO NOT PROCEED UNTIL GATE SHOWS PASS."
+        echo "============================================"
+    fi
+fi
+
+# Exit with 0 for pass, 1 for fail (standard shell convention)
 if [ "$FAILS" -eq 0 ]; then
-    echo "============================================"
-    echo "   CONTENT GATE: PASS"
-    echo "   All checks passed. Proceed to Conversion Gate."
-    echo "============================================"
-    echo ""
-    echo "NEXT STEP: Run /direct-response-copy skill, then:"
-    echo "  .claude/scripts/check-conversion-gate.sh $FILE"
-    echo ""
     exit 0
 else
-    echo "============================================"
-    echo "   CONTENT GATE: FAIL"
-    echo "   $FAILS check(s) failed."
-    echo "   FIX ALL FAILURES and re-run script."
-    echo "   DO NOT PROCEED UNTIL GATE SHOWS PASS."
-    echo "============================================"
     exit 1
 fi

@@ -45,7 +45,7 @@ Skip the orchestrator when:
 | **email-sequences** | Builds sequences that convert | Lead magnet, offer, voice profile | Welcome/nurture/conversion sequences |
 | **content-atomizer** | Turns 1 piece into many | Blog post, newsletter, or video | Platform-native social assets |
 
-**Note:** `.claude/skills/write-article.md` provides comprehensive article guidance but is not a callable skill. It documents the full workflow that orchestrator routes through.
+**Note:** `.claude/agents.md` provides the full 6-gate article workflow that orchestrator routes through.
 
 ### Skill Dependencies
 

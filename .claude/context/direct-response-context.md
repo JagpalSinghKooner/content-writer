@@ -19,6 +19,18 @@ Run this skill AFTER `/seo-content` passes the Content Gate (master-gate.sh).
 
 Also review the article that just passed Content Gate.
 
+**Product Reference (MANDATORY):** `HushAway.md`
+
+Use the sound library to understand what HushAway® offers:
+- Sleep support (Night Time Stories, Sleep audio, Frequencies)
+- Sensory calming (ASMR Sounds, ASMR Soundscapes, Kaleidoscopes)
+- Focus and regulation (Binaural Beats, Brainwave Beats)
+- Daytime calm (Peace Time, Daytime Stories)
+
+**CTAs always point to Sound Sanctuary** - never reference product series names directly. Readers don't know them. Instead, describe the benefit:
+- Good: "Explore the Sound Sanctuary for gentle sleep support"
+- Bad: "Try the Night Time Stories series"
+
 ---
 
 ## Purpose
@@ -64,17 +76,18 @@ Review article for conversion effectiveness. This skill does NOT rewrite the art
 
 ## After Skill Completes
 
-**Run gate script:**
+**Run gate script with --summary (default):**
 ```bash
-.claude/scripts/check-conversion-gate.sh [article-file]
+.claude/scripts/check-conversion-gate.sh [article-file] --summary
 ```
 
 **MUST show:** `CONVERSION GATE: PASS`
 
 If gate shows FAIL:
-1. Fix specific failures listed in output
-2. Re-run script (NOT the skill again)
-3. Repeat until PASS
+1. Run without `--summary` to see full details
+2. Fix specific failures listed
+3. Re-run with `--remediate` flag
+4. Repeat until PASS
 
 ---
 

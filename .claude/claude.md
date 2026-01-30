@@ -38,14 +38,24 @@ This file contains all banned words, frequency limits, structural rules, convers
 
 | Gate | Script | When |
 |------|--------|------|
-| 1. Keyword | `check-keyword-gate.sh` | After /keyword-research |
-| 2. Research | `check-research-gate.sh` | After research complete |
-| 3. Angle | `check-angle-gate.sh` | After /positioning-angles |
-| 4. Content | `master-gate.sh` | After /seo-content |
-| 5. Conversion | `check-conversion-gate.sh` | After /direct-response-copy |
-| 6. Final | `check-final-gate.sh` | Before export |
+| 1. Keyword | `check-keyword-gate.sh [research]` | After /keyword-research |
+| 2. Research | `check-research-gate.sh [research]` | After research complete |
+| 3. Angle | `check-angle-gate.sh [research]` | After /positioning-angles |
+| Pre-flight | `quick-check.sh [article]` | During /seo-content writing |
+| 4. Content | `master-gate.sh [article] [hub\|cluster] --summary` | After /seo-content |
+| 5. Conversion | `check-conversion-gate.sh [article] --summary` | After /direct-response-copy |
+| 6. Final | `check-final-gate.sh [article] [hub\|cluster]` | Before export |
 
 **ALL 6 GATES MUST PASS. NO EXCEPTIONS.**
+
+### Script Flags
+
+| Flag | Purpose | When to Use |
+|------|---------|-------------|
+| `--summary` | Compact output (~80% fewer tokens) | Default for gate runs |
+| `--remediate` | Shows failures only | 2nd+ runs after fixing |
+| `--fail-fast` | Stops after 3 failures | When many failures expected |
+| `--diff` | Shows FIXED/STILL FAILING/NEW between runs | Iterative fixing sessions |
 
 ---
 
@@ -78,6 +88,11 @@ A sound therapy platform (mobile app + web app) designed specifically for neurod
 **Pricing Model:**
 - **Free Forever:** Full access to the Sound Sanctuary
 - **Sign-up:** Name + email → magic link (no password required)
+
+**Sound Library (Mandatory Reference):**
+`HushAway.md` contains the complete sound library with all product series, usage contexts, and terminology. Content skills MUST reference this for accurate product descriptions.
+
+**Note:** Product series names are internal references. CTAs always direct to the Sound Sanctuary, not specific products.
 
 **Sound Types:**
 - Sleep soundscapes (ambient sounds, white noise, nature sounds)
@@ -176,10 +191,12 @@ NHS, ADHD UK, NICE guidelines, British Psychological Society, Royal College of P
 2. Run `/keyword-research` → Keyword Gate
 3. Complete research → Research Gate
 4. Run `generate-research-summary.sh`
-5. Run `/positioning-angles` → Angle Gate
-6. Run `/seo-content` → Content Gate
+5. Run `/positioning-angles` (generates options; writer selects before Angle Gate)
+6. Run `/seo-content` (with `quick-check.sh` after each section) → Content Gate
 7. Run `/direct-response-copy` → Conversion Gate
 8. Final Gate → Export
+
+**Pre-flight validation:** Run `quick-check.sh [article]` during writing to catch 80% of failures early.
 
 **Skills read context files:** `.claude/context/[skill]-context.md`
 

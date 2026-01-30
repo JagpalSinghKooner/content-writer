@@ -130,10 +130,20 @@ Never use: "Research has consistently shown...", "Studies have repeatedly demons
 | Sentence-initial -ly adverbs | 2 per article |
 | Sentences starting with "This" | 2 per H2 section |
 
+### Global Limits (Entire Article)
+
+These apply IN ADDITION to per-section requirements:
+
+| Pattern | Limit |
+|---------|-------|
+| Short sentences (under 8 words) | Minimum 3 total |
+| Sentences starting with "This" | Maximum 6 total |
+
 ### Hedging Density
 - Max 8 hedges per 1000 words
 - Hub (3000 words): max 24 hedges
 - Cluster (1500 words): max 12 hedges
+- Articles under 1000 words: minimum 8 hedges still applies (script floors at 1000)
 - Hedge words: may, might, can, could, potentially, possibly, perhaps, likely, unlikely, tend to, often
 - No stacked hedges (multiple hedges in one sentence)
 
@@ -168,10 +178,11 @@ completely unique, absolutely essential, very important, basic fundamentals, end
 
 **CRITICAL: Script Detection Requirement**
 - Short sentences MUST be standalone paragraphs (one sentence per line)
-- The gate script uses regex `^[^.]{1,40}\.$` which requires:
+- The gate script uses regex `^[^.#]{1,40}\.$` which requires:
   - Start of line (`^`) - sentence must begin the paragraph
-  - Under 40 characters total
+  - Under 40 characters total (excluding `.` and `#`)
   - Single period at end of line
+  - Lines starting with `#` (markdown headers) are excluded
 - Inline short sentences will NOT be counted (e.g., "It depends. Every child is different." counts as ZERO)
 - Put each short sentence on its own line for detection
 

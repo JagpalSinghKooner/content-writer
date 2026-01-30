@@ -14,6 +14,7 @@ This file tracks all positioning angles used across articles. The `/positioning-
 | 5.1 Focus Apps ADHD | 5 | The Two-Week Curse | Focus apps fail because ADHD brains habituate to rewards faster than neurotypical brains, causing novelty and motivation to disappear | Why Every Focus App Your Child Loved Gets Abandoned After Two Weeks | 2026-01-29 |
 | 5.2 Task Management Apps | 5 | The App Graveyard | Your phone is a graveyard of abandoned ADHD apps - each promised to be different but ended the same way | Before You Download Another App That'll Be Forgotten in Two Weeks | 2026-01-29 |
 | 5.3 Executive Function Apps | 5 | The Executive Function Catch-22 | Executive function apps ask children to plan, remember, and organise - the very skills they lack - creating an impossible loop | The Cruel Irony of Executive Function Apps (And What Actually Helps) | 2026-01-30 |
+| 5.4 Behaviour Tracking ADHD | 5 | Support vs Surveillance Flip | What if you could support your child's regulation without tracking their every meltdown? There's a difference between understanding and documenting. | Support Without Surveillance: A Different Approach to ADHD Behaviour | 2026-01-30 |
 
 ---
 
@@ -29,6 +30,7 @@ As this library grows, the skill will identify overused patterns and generate fr
 | Mechanism / explanation reveal | 1 | 2026-01-29 | Explains WHY a common experience happens (2-week abandonment = dopamine habituation). Different from sequencing insight. |
 | Empathy-first / naming the elephant | 1 | 2026-01-29 | Names the uncomfortable truth (app graveyard) with dark humour. High relatability, builds trust before offering solutions. |
 | Paradox / catch-22 | 1 | 2026-01-30 | Names an impossible loop that creates instant recognition. The tool requires the skill it's meant to teach. Strong intellectual hook. |
+| Alternative frame / reframe the goal | 1 | 2026-01-30 | Shifts the goal from data collection to actual support. Strong HushAway positioning: passive support requires no tracking, just play. |
 
 ### What Counts as a "Pattern"?
 

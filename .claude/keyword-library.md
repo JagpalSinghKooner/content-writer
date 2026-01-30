@@ -14,6 +14,7 @@ This file tracks all validated keywords across articles. The `/keyword-research`
 | 5.1 Focus Apps ADHD | 5 | focus apps ADHD | 600-1,200 | focus apps for ADHD children, ADHD focus apps for kids UK, Pomodoro technique ADHD children, apps to help ADHD child focus homework, best focus timer apps ADHD, Forest app ADHD, Focus Keeper ADHD, time management apps ADHD kids | 2026-01-29 |
 | 5.2 Task Management Apps | 5 | task management apps kids | 400-900 | ADHD task management apps, chore apps for kids ADHD, visual schedule apps ADHD children, routine apps for ADHD kids, organisation apps ADHD children UK, to-do list apps kids ADHD, time management apps ADHD kids, homework organisation apps ADHD | 2026-01-29 |
 | 5.3 Executive Function Apps | 5 | executive function ADHD apps | 300-700 | ADHD apps for kids UK, best ADHD routine apps for children, ADHD planning apps for kids, working memory apps ADHD kids, ADHD organisation apps for children, executive function apps for children, apps for ADHD executive dysfunction, habit tracker apps ADHD kids | 2026-01-30 |
+| 5.4 Behaviour Tracking | 5 | behaviour tracking ADHD | 300-700 | ADHD behaviour chart UK, track ADHD behaviour app, parent ADHD behaviour monitoring, ADHD school behaviour strategies, behaviour tracking apps ADHD children, mood tracker ADHD kids, ABC behaviour tracking ADHD | 2026-01-30 |
 
 ---
 
@@ -27,6 +28,7 @@ As this library grows, related keywords will be grouped for cross-linking opport
 | Anxiety + Sensory | Pillar 3, Pillar 4 | Cross-link anxiety apps with sensory regulation |
 | Parent Support | Pillar 7, All | Cross-link parenting content with all pillars |
 | Focus + Time Management | 5.1, 5.2, 5.3 | Cross-link focus apps with task management and executive function articles |
+| Behaviour + Emotional Regulation | 5.4, 5.10, Pillar 6 | Cross-link behaviour tracking with emotional dysregulation and regulation articles |
 
 ---
 
@@ -42,6 +44,8 @@ Keywords discovered during research that aren't yet targeted:
 | apps for ADHD children waiting for CAMHS | 100-200 | Pillar 7 or blog post | Very specific UK pain point |
 | visual planner apps ADHD kids | 300-500 | 5.2 or standalone | Tiimo/Thruday specific, high intent |
 | apps that work for ADHD children UK | 200-400 | Could support any Pillar 5 | UK-specific, solution-seeking intent |
+| Class Charts ADHD reasonable adjustments | 200-400 | 5.4 or Pillar 7 | High intent, school advocacy angle |
+| passive calming apps ADHD | 100-300 | Pillar 4 or 5 | Direct HushAway positioning opportunity |
 
 ### What Qualifies as a "Gap"?
 
