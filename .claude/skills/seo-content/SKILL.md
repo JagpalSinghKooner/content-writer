@@ -5,6 +5,9 @@ description: "Create high-quality, SEO-optimized content that ranks AND reads li
 
 # SEO Content Workflow
 
+**HushAway Context:** Read `.claude/context/seo-content-context.md` for HushAway-specific requirements.
+**MANDATORY:** Read `.claude/rules/humanise-rules.md` BEFORE writing any content.
+
 SEO content has a reputation problem. Most of it is garbage — keyword-stuffed, AI-sounding, says nothing new. It ranks for a month, then dies.
 
 This skill creates content that ranks AND builds trust. Content that sounds like an expert sharing what they know, not a content mill churning out filler.
@@ -104,16 +107,9 @@ RESEARCH → BRIEF → OUTLINE → DRAFT → HUMANIZE → OPTIMIZE → REVIEW
 
 ## HushAway® Content: MANDATORY RULES
 
-**IMPORTANT:** For HushAway® articles, ALL content must pass `.claude/humanise-content.md` rules before publishing.
+**IMPORTANT:** For HushAway® articles, ALL content must pass `.claude/rules/humanise-rules.md` rules before publishing. This is the SINGLE SOURCE OF TRUTH for all content rules.
 
-**Key requirements:**
-- 50+ banned AI-isms (0 allowed)
-- 19 frequency-limited words with strict limits
-- Hedging density: max 8 per 1000 words
-- UK English only (mum, colour, behaviour)
-- No emojis, no em-dashes
-- Community quotes: 2+ for hub, 1+ for cluster
-- External links: 3+ for hub, 2+ for cluster (UK sources)
+**Key requirements:** All thresholds are in `.claude/rules/humanise-rules.md` (banned words, frequency limits, quotes, links).
 
 **Verification:** Run `.claude/scripts/master-gate.sh [filename] [hub|cluster]` before publishing. Gate must show PASS.
 
@@ -530,8 +526,8 @@ Read your draft out loud. If you stumble, readers will too. If it sounds like a 
 [ ] Primary keyword in meta description
 [ ] Primary keyword in URL slug
 [ ] Image alt text includes relevant keywords
-[ ] Internal links to related content (4-8 per piece)
-[ ] External links to authoritative sources (2-4 per piece)
+[ ] Internal links to related content (see project rules)
+[ ] External links to authoritative sources (see project rules)
 ```
 
 ### Title Optimization
@@ -544,7 +540,7 @@ Read your draft out loud. If you stumble, readers will too. If it sounds like a 
 - "n8n vs Zapier: Which Automation Tool is Right for You?"
 
 **Title rules:**
-- Under 60 characters (or it gets cut off)
+- Keep under character limit (see project rules)
 - Front-load the keyword
 - Include a hook or differentiator
 - Match search intent
@@ -557,7 +553,7 @@ Read your draft out loud. If you stumble, readers will too. If it sounds like a 
 > "AI marketing tools can automate 60-80% of repetitive tasks. We tested 23 tools over 6 months to find the 10 that actually deliver. See the results."
 
 **Meta rules:**
-- 150-160 characters
+- Stay within character range (see project rules)
 - Include primary keyword
 - Compelling enough to click
 - Match what the content delivers
@@ -643,9 +639,9 @@ Use headers for structure, not decoration. Each H2 should be a scannable summary
 ```
 [ ] Primary keyword in title, H1, first paragraph
 [ ] Secondary keywords in H2s naturally
-[ ] Meta description compelling and <160 chars
-[ ] Internal links included (4-8)
-[ ] External citations for claims (2-4)
+[ ] Meta description compelling (see project rules for length)
+[ ] Internal links included (see project rules)
+[ ] External citations for claims (see project rules)
 [ ] Alt text on all images
 [ ] Headers create logical structure
 [ ] FAQ section with schema-ready format
@@ -671,7 +667,7 @@ The final deliverable is publication-ready content:
 ```
 # [SEO-Optimized Title]
 
-Meta description: [150-160 characters]
+Meta description: [see project rules for length]
 
 ---
 

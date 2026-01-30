@@ -7,6 +7,9 @@
 #
 # Exit codes: 0 = PASS (export can proceed), 1 = FAIL (cannot proceed)
 #
+# RULES SOURCE: .claude/rules/humanise-rules.md Section 7 (Article Thresholds)
+# This script enforces thresholds: word counts, meta lengths, link counts.
+#
 # This script ensures the article is ready for export to the main website.
 # Content Gate (master-gate.sh) and Conversion Gate MUST pass before this gate.
 # Export cannot proceed until this gate shows PASS.
@@ -161,8 +164,8 @@ fi
 echo ""
 echo ">>> CHECK 5: Word Count (minimum $MIN_WORDS)"
 
-# Extract content after frontmatter (after second ---)
-CONTENT=$(sed -n '/^---$/,/^---$/d; p' "$FILE" 2>/dev/null)
+# Extract content after frontmatter (skip first --- block only, preserve --- section dividers)
+CONTENT=$(awk 'BEGIN{fm=0} /^---$/{fm++; if(fm==2){next}} fm>=2' "$FILE" 2>/dev/null)
 WORD_COUNT=$(echo "$CONTENT" | wc -w | tr -d ' ')
 
 if [ "$WORD_COUNT" -ge "$MIN_WORDS" ]; then

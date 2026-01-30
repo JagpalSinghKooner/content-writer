@@ -59,7 +59,7 @@ Before article writing can begin, ALL of the following must be marked complete:
 - [ ] **Competitor Gap Analysis** (Section 4) - from Perplexity Query 3
 - [ ] **People Also Ask Questions** (Section 5) - from Perplexity Query 2
 - [ ] **E-E-A-T Planning** (Section 6) - manual planning
-- [ ] **HushAway® Positioning Angle** (Section 7) - from /positioning-angles skill
+- [ ] **HushAway® Positioning Angle** (Section 7) - from `/positioning-angles` skill (Step 4)
 - [ ] **Source Collection** (Section 8) - from Perplexity Query 4
 
 **Keyword Gate checks (run after /keyword-research):**
@@ -347,33 +347,31 @@ Based on intent, this article should be:
 ## Section 7: HushAway® Positioning Angle
 
 **Status:** [ ] Complete
+**Data Source:** `/positioning-angles` skill
 
-### Primary Angle for This Article
+> **IMPORTANT:** Angles are generated dynamically by the `/positioning-angles` skill (Step 4).
+> Do NOT select from a static list. Run the skill to generate article-specific angles.
+> Check `.claude/angle-library.md` BEFORE running the skill to avoid reusing angles.
 
-Select ONE primary angle from the 5 core angles:
+### From /positioning-angles Skill Output
 
-- [ ] **Angle 1: Neurodivergent-First Specialist** (Use for ALL pillars)
-- [ ] **Angle 2: Passive Support Alternative** (Best for Pillars 3, 6)
-- [ ] **Angle 3: Research-Backed Sensory Science** (Best for Pillars 1, 4)
-- [ ] **Angle 4: Supportive Ally** (Best for Pillar 7)
-- [ ] **Angle 5: Gentle Consistency Promise** (Best for Pillars 2, 5)
+After running the skill, document the selected angle here:
 
-**Selected Primary Angle:** [Angle X: Name]
+**Selected Angle Name:** [From skill output]
 
-**How this angle manifests in the article:**
-> [Specific explanation of how we'll weave this angle through the content]
+**Angle Description (one sentence):**
+> [Core insight from skill output]
 
-### Secondary Angle (if applicable)
-
-**Selected Secondary Angle:** [Angle X: Name or "None"]
+**Headline Direction:**
+> [Example headline from skill output]
 
 ### Differentiation Hook
 
 **Generic Competitor Approach:**
-> [How competitors typically cover this topic]
+> [How competitors typically cover this topic - from research]
 
 **HushAway® Hook:**
-> [Our unique angle that differentiates this article]
+> [Our unique angle that differentiates this article - from skill output]
 
 ### Signature Phrases to Include
 

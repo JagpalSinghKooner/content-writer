@@ -8,7 +8,9 @@
 #
 # Exit codes: 0 = PASS (GATE OPEN), 1 = FAIL (GATE CLOSED)
 #
-# This script enforces ALL rules from .claude/humanise-content.md
+# RULES SOURCE: .claude/rules/humanise-rules.md (SINGLE SOURCE OF TRUTH)
+# This script enforces rules from Sections 1-7, 9-11 of humanise-rules.md
+# Skills should read the rules file BEFORE writing; this script verifies AFTER.
 # No manual steps required - everything is automated.
 #
 # --remediate flag: Only shows failures, suppresses verbose PASS output
@@ -509,16 +511,41 @@ else
     pass_msg "Community quotes = $QUOTES"
 fi
 
-# --- SECTION 12: DATED CITATIONS ---
+# --- SECTION 12: DATED CITATIONS WITH LINKS ---
 echo ""
-echo ">>> SECTION 12: DATED CITATIONS (min: $MIN_CITATIONS)"
+echo ">>> SECTION 12: DATED CITATIONS (min: $MIN_CITATIONS, must have links)"
 
-DATED_CITATIONS=$(grep -cE "20[0-9]{2}" "$FILE" 2>/dev/null) || DATED_CITATIONS=0
+# Citation patterns: "Research from 2024", "A 2024 study", "studies from 2024", etc.
+CITATION_PATTERN="(Research from |A |In |study from |studies from |report from )20[0-9]{2}|20[0-9]{2} (study|survey|research|report|review|found|showed|systematic)"
+
+# Count all dated citations
+DATED_CITATIONS=$(grep -ciE "$CITATION_PATTERN" "$FILE" 2>/dev/null) || DATED_CITATIONS=0
+
+# Count citations that have a markdown link on the same line
+LINKED_CITATIONS=$(grep -iE "$CITATION_PATTERN" "$FILE" 2>/dev/null | grep -c '\[.*\](http' 2>/dev/null) || LINKED_CITATIONS=0
+
+# Calculate unlinked citations
+UNLINKED_CITATIONS=$((DATED_CITATIONS - LINKED_CITATIONS))
+
 if [ "$DATED_CITATIONS" -lt "$MIN_CITATIONS" ]; then
     echo "FAIL: Dated citations = $DATED_CITATIONS (need at least $MIN_CITATIONS)"
+    echo "      Use format: 'Research from 2024 found...' or 'A 2024 study showed...'"
     FAILS=$((FAILS+1))
 else
     pass_msg "Dated citations = $DATED_CITATIONS"
+fi
+
+# Check all citations have links (E-E-A-T requirement)
+if [ "$UNLINKED_CITATIONS" -gt 0 ]; then
+    echo "FAIL: $UNLINKED_CITATIONS citation(s) missing hyperlinks"
+    echo "      Every research citation needs a source link for E-E-A-T compliance"
+    echo "      Unlinked citations:"
+    grep -iE "$CITATION_PATTERN" "$FILE" 2>/dev/null | grep -v '\[.*\](http' | head -3 | while read -r line; do
+        echo "        - ${line:0:80}..."
+    done
+    FAILS=$((FAILS+1))
+else
+    pass_msg "All citations have source links"
 fi
 
 # --- SECTION 13: CURIOSITY LOOPS ---

@@ -1,7 +1,7 @@
 # HushAway® Article Generation Order
 
 **Total Articles:** 77 (7 Hubs + 70 Clusters)
-**Completed:** 3 / 77
+**Completed:** 5 / 77
 
 ---
 
@@ -15,23 +15,80 @@
 
 ---
 
-## Standard Notes (Include with Every Prompt)
+## 2-Session Workflow (Optimal Quality)
 
-**Copy this section and paste it after every article prompt:**
+Split research and writing into separate sessions for better output quality.
+
+---
+
+### SESSION 1: Research Phase
+
+Copy this prompt to start research on the NEXT article:
 
 ```
+Research the next article in the pipeline.
 
-Write the next article from ARTICLE-ORDER.md
+STEP 1: Find next article
+- Read ARTICLE-ORDER.md
+- Find the FIRST row with ⬜ status
+- That is your target article
 
+STEP 2: Research phase (Gates 1-3)
+1. Run /keyword-research with Perplexity MCP
+2. Create research file at the path shown in ARTICLE-ORDER.md prompt column
+3. Update keyword-library.md with validated keyword
+4. Pass Keyword Gate (check-keyword-gate.sh)
+5. Complete full research using Perplexity
+6. Pass Research Gate (check-research-gate.sh)
+7. Run generate-research-summary.sh [research-file]
+8. Run /positioning-angles (generates options, does NOT select)
+
+STOP HERE. Angle options saved. Start new session for writing.
+```
+
+---
+
+### SESSION 2: Writing Phase
+
+Copy this prompt in a NEW session to write the article:
+
+```
+Write the article that has research completed.
+
+STEP 1: Select Angle
+- Read .claude/scratchpad/research-summary.md (has keywords + angle options)
+- Read research file for full angle option details (psychology, patterns)
+- Present ALL angle options to writer with their psychology/reasoning
+- Use AskUserQuestion to let writer choose which angle to use
+- Once writer selects:
+  1. Update research file frontmatter:
+     - angleStatus: selected
+     - selectedAngle: "[chosen angle name]"
+     - angleDescription: "[one sentence from chosen option]"
+     - headlineDirection: "[headline from chosen option]"
+     - counterPositions: [extract from research competitor gaps]
+  2. Add row to .claude/angle-library.md (all 6 columns)
+  3. Update research-summary.md Positioning section with selected angle
+  4. Run Angle Gate: .claude/scripts/check-angle-gate.sh [research-file]
+  5. Gate MUST show PASS before proceeding
+
+STEP 2: Writing phase (Gates 4-6)
+1. Run /seo-content to write article
+2. Save to path shown in ARTICLE-ORDER.md prompt column
+3. Pass Content Gate (master-gate.sh [file] [hub|cluster])
+4. Run /direct-response-copy
+5. Pass Conversion Gate (check-conversion-gate.sh)
+6. Pass Final Gate (check-final-gate.sh)
+7. Mark article ✅ in ARTICLE-ORDER.md
 
 IMPORTANT REMINDERS:
 - Avoid commitment language: subscription, premium, free trial, sign up for, register
 - Monitor frequency words: actually (max 3), designed to/for (max 3)
-- Use article template frontmatter from templates/article-template.md (include dateCreated, dateUpdated, status)
-- Community quotes: 2 for hub articles, 1 for cluster articles
+- Use frontmatter from templates/article-template.md
+- Community quotes: 2 for hub, 1 for cluster
 - Sound Sanctuary: mention 2+ times in conversion contexts
-- Risk reversal: include "nothing to lose", "costs nothing to try", or similar
-- Run all 6 gates in order before marking complete
+- Risk reversal: include "nothing to lose", "costs nothing to try"
+- All 6 gates must pass before marking complete
 ```
 
 ---
@@ -40,7 +97,7 @@ IMPORTANT REMINDERS:
 
 | Pillar | Name | Hub Status | Clusters Done | Total |
 |--------|------|------------|---------------|-------|
-| 5 | ADHD Apps | ✅ | 1/10 | 2/11 |
+| 5 | ADHD Apps | ✅ | 3/10 | 4/11 |
 | 2 | Sleep Apps for Kids | ⬜ | 0/10 | 0/11 |
 | 1 | ADHD Sleep Support | ⬜ | 0/10 | 0/11 |
 | 3 | Anxiety Apps for Children | ⬜ | 0/10 | 0/11 |
@@ -56,8 +113,8 @@ IMPORTANT REMINDERS:
 |---|--------|---------|---------|--------|--------|
 | 1 | ✅ | HUB: ADHD Apps | ADHD apps | 25,000 | `Create research file at research/pillar-5-adhd-apps/hub-research.md using the template, then write hub article for "ADHD apps" targeting parents of ADHD children. Save to src/content/pillar-5-adhd-apps/hub-adhd-apps.md. Run all 6 gates before finalising.` |
 | 2 | ✅ | 5.1 Focus Apps ADHD | Focus apps ADHD | 600-1,200 | `Create research file at research/pillar-5-adhd-apps/5.1-focus-apps-research.md using the template, then write cluster article for "Focus apps ADHD" targeting parents of ADHD children. Save to src/content/pillar-5-adhd-apps/5.1-focus-apps-adhd.md. Run both gates before finalising.` |
-| 3 | ⬜ | 5.2 Task Management Apps | Task management apps kids | 400-900 | `Create research file at research/pillar-5-adhd-apps/5.2-task-management-research.md using the template, then write cluster article for "Task management apps kids" targeting parents. Save to src/content/pillar-5-adhd-apps/5.2-task-management-apps.md. Run both gates before finalising.` |
-| 4 | ⬜ | 5.3 Executive Function Apps | Executive function ADHD apps | 300-700 | `Create research file at research/pillar-5-adhd-apps/5.3-executive-function-research.md using the template, then write cluster article for "Executive function ADHD apps" targeting parents. Save to src/content/pillar-5-adhd-apps/5.3-executive-function-apps.md. Run both gates before finalising.` |
+| 3 | ✅ | 5.2 Task Management Apps | Task management apps kids | 400-900 | `Create research file at research/pillar-5-adhd-apps/5.2-task-management-research.md using the template, then write cluster article for "Task management apps kids" targeting parents. Save to src/content/pillar-5-adhd-apps/5.2-task-management-apps.md. Run both gates before finalising.` |
+| 4 | ✅ | 5.3 Executive Function Apps | Executive function ADHD apps | 300-700 | `Create research file at research/pillar-5-adhd-apps/5.3-executive-function-research.md using the template, then write cluster article for "Executive function ADHD apps" targeting parents. Save to src/content/pillar-5-adhd-apps/5.3-executive-function-apps.md. Run both gates before finalising.` |
 | 5 | ⬜ | 5.4 Behavior Tracking | Behavior tracking ADHD | 300-700 | `Create research file at research/pillar-5-adhd-apps/5.4-behavior-tracking-research.md using the template, then write cluster article for "Behavior tracking ADHD" (use UK spelling "behaviour" in content) targeting parents. Save to src/content/pillar-5-adhd-apps/5.4-behaviour-tracking-adhd.md. Run both gates before finalising.` |
 | 6 | ⬜ | 5.5 Organization Apps | Organization apps ADHD children | 400-800 | `Create research file at research/pillar-5-adhd-apps/5.5-organisation-apps-research.md using the template, then write cluster article for "Organization apps ADHD children" (use UK spelling "organisation" in content) targeting parents. Save to src/content/pillar-5-adhd-apps/5.5-organisation-apps-adhd.md. Run both gates before finalising.` |
 | 7 | ⬜ | 5.6 Treatment Apps | ADHD treatment medication therapy apps | 400-900 | `Create research file at research/pillar-5-adhd-apps/5.6-treatment-apps-research.md using the template, then write cluster article for "ADHD treatment medication therapy apps" targeting parents seeking complementary support. Save to src/content/pillar-5-adhd-apps/5.6-adhd-treatment-apps.md. Run both gates before finalising.` |

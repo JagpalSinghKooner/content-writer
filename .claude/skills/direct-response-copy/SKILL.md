@@ -5,6 +5,8 @@ description: "Write copy that converts. Use when writing landing pages, emails, 
 
 # Direct Response Copy
 
+**HushAway Context:** Read `.claude/context/direct-response-context.md` for HushAway-specific requirements.
+
 Here's what separates copy that converts from copy that just exists: the good stuff sounds like a person talking to you. Not a marketing team. Not a guru. Not a robot. A person who figured something out and wants to share it.
 
 That's what this skill does. It writes copy that feels natural while deploying the persuasion principles that actually work. The reader shouldn't notice the technique. They should just find themselves nodding along and clicking the button.

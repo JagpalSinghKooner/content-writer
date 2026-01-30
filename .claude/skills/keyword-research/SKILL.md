@@ -5,6 +5,8 @@ description: "Strategic keyword research without expensive tools. Use when someo
 
 # Keyword Research
 
+**HushAway Context:** Read `.claude/context/keyword-research-context.md` for HushAway-specific requirements.
+
 Most keyword research is backwards. People start with tools, get overwhelmed by data, and end up with a spreadsheet they never use.
 
 This skill starts with strategy. What does your business need? Who are you trying to reach? What would make them find you? Then it builds a content plan that actually makes sense.

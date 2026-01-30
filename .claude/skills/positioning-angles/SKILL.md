@@ -5,6 +5,8 @@ description: "Find the angle that makes something sell. Use when launching a pro
 
 # Positioning & Angles
 
+**HushAway Context:** Read `.claude/context/positioning-angles-context.md` for HushAway-specific requirements.
+
 The same product can sell 100x better with a different angle. Not a different product. Not better features. Just a different way of framing what it already does.
 
 This skill finds those angles.

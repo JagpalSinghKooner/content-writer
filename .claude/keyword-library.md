@@ -12,6 +12,8 @@ This file tracks all validated keywords across articles. The `/keyword-research`
 |---------|--------|----------------|--------|-------------------|------|
 | HUB: ADHD Apps | 5 | ADHD apps | 25,000 | ADHD apps for kids UK, best ADHD apps for children, ADHD focus apps, ADHD apps for kids free, ADHD routine apps, ADHD apps for emotional regulation, ADHD sleep apps, FDA approved ADHD app | 2026-01-29 |
 | 5.1 Focus Apps ADHD | 5 | focus apps ADHD | 600-1,200 | focus apps for ADHD children, ADHD focus apps for kids UK, Pomodoro technique ADHD children, apps to help ADHD child focus homework, best focus timer apps ADHD, Forest app ADHD, Focus Keeper ADHD, time management apps ADHD kids | 2026-01-29 |
+| 5.2 Task Management Apps | 5 | task management apps kids | 400-900 | ADHD task management apps, chore apps for kids ADHD, visual schedule apps ADHD children, routine apps for ADHD kids, organisation apps ADHD children UK, to-do list apps kids ADHD, time management apps ADHD kids, homework organisation apps ADHD | 2026-01-29 |
+| 5.3 Executive Function Apps | 5 | executive function ADHD apps | 300-700 | ADHD apps for kids UK, best ADHD routine apps for children, ADHD planning apps for kids, working memory apps ADHD kids, ADHD organisation apps for children, executive function apps for children, apps for ADHD executive dysfunction, habit tracker apps ADHD kids | 2026-01-30 |
 
 ---
 
@@ -38,6 +40,8 @@ Keywords discovered during research that aren't yet targeted:
 | sound apps for ADHD kids | 300-500 | Pillar 4 or 5 cluster | Direct HushAway opportunity |
 | calming apps for ADHD children | 400-700 | Pillar 3 or 5 cluster | Overlaps anxiety + ADHD |
 | apps for ADHD children waiting for CAMHS | 100-200 | Pillar 7 or blog post | Very specific UK pain point |
+| visual planner apps ADHD kids | 300-500 | 5.2 or standalone | Tiimo/Thruday specific, high intent |
+| apps that work for ADHD children UK | 200-400 | Could support any Pillar 5 | UK-specific, solution-seeking intent |
 
 ### What Qualifies as a "Gap"?
 

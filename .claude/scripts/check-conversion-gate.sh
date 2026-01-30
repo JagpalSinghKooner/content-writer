@@ -11,6 +11,10 @@
 # --remediate flag: Only shows failures, suppresses verbose PASS output
 #                   Use on 2nd+ runs to reduce context window usage
 #
+# RULES SOURCE: .claude/rules/humanise-rules.md Section 8 (Conversion Language)
+# This script enforces conversion rules - objections, CTAs, risk reversal.
+# Skills should read the rules file BEFORE writing; this script verifies AFTER.
+#
 # This script ensures the article has proper conversion elements to funnel
 # readers into signing up for the free Sound Sanctuary.
 # Content Gate (master-gate.sh) MUST pass before this gate can be run.
@@ -166,8 +170,10 @@ echo ""
 echo ">>> CHECK 3: Low-Friction Language"
 
 # Check for BAD commitment language (should NOT be present)
+# Exclude lines with negative context (no/without subscription)
 BAD_PATTERNS="free trial|start.*trial|subscribe|subscription|sign up for|register for|create.*account|premium|upgrade"
-BAD_LANGUAGE=$(grep -ciE "$BAD_PATTERNS" "$FILE" 2>/dev/null) || BAD_LANGUAGE=0
+BAD_LANGUAGE=$(grep -iE "$BAD_PATTERNS" "$FILE" 2>/dev/null | grep -viE "no subscription|without.*subscription|subscription.*not|free from.*subscription" | wc -l) || BAD_LANGUAGE=0
+BAD_LANGUAGE=$(echo "$BAD_LANGUAGE" | tr -d ' ')
 
 # Check for GOOD low-friction language (should be present)
 GOOD_PATTERNS="just.*email|name.*email|instant access|no credit card|no payment|no subscription|no sign.?up|magic link"
@@ -175,7 +181,7 @@ GOOD_LANGUAGE=$(grep -ciE "$GOOD_PATTERNS" "$FILE" 2>/dev/null) || GOOD_LANGUAGE
 
 if [ "$BAD_LANGUAGE" -gt 0 ]; then
     echo "FAIL: Commitment language detected ($BAD_LANGUAGE instances)"
-    echo "      Remove: 'free trial', 'subscribe', 'sign up for', 'register'"
+    echo "      Remove: 'free trial', 'subscribe', 'sign up for', 'register for', 'premium', 'upgrade'"
     FAILS=$((FAILS+1))
 else
     pass_msg "No commitment barrier language found"
