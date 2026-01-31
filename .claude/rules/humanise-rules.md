@@ -214,15 +214,22 @@ completely unique, absolutely essential, very important, basic fundamentals, end
 ### No Em-Dashes
 - Use commas, full stops, or semicolons instead
 
+### Signature Phrases
+See `.claude/CLAUDE.md` (Signature Phrases section) for brand-specific phrases to use naturally:
+- "Big feelings", "soft place to land", "feel safe in their body"
+- "Children who feel everything", "Sound Sanctuary", "gentle sound support"
+
 ---
 
 ## 7. Article Thresholds
 
-### Word Counts (Minimums)
-| Type | Minimum | Target |
-|------|---------|--------|
-| Hub | 3,000 | 3,500-4,000 |
+### Word Counts
+| Type | Hard Minimum | Target Range |
+|------|--------------|--------------|
+| Hub | 1,500 | 3,000-4,000 |
 | Cluster | 1,500 | 2,000-2,500 |
+
+**Note:** 1,500 words is the hard minimum for SEO ranking regardless of article type. Target ranges are for optimal depth and user experience.
 
 ### Required Elements Per Article
 | Element | Hub | Cluster |

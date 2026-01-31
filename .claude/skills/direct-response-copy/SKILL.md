@@ -459,55 +459,16 @@ You don't need all ten every time. But this is the complete arc when you need it
 
 Readers are getting better at spotting AI-generated content. These patterns destroy trust instantly.
 
-**Overused words:**
-- "delve" / "dive into" / "dig into"
-- "comprehensive" / "robust" / "cutting-edge"
-- "utilize" (just say "use")
-- "leverage" (as a verb)
-- "crucial" / "vital" / "essential"
-- "unlock" / "unleash" / "supercharge"
-- "game-changer" / "revolutionary"
-- "landscape" / "navigate" / "streamline"
+**Full banned word/phrase lists:** See `.claude/rules/humanise-rules.md` Section 1 (Zero Tolerance) and Section 3 (Banned Phrases).
 
-**Overused phrases:**
-- "In today's fast-paced world..."
-- "It's important to note that..."
-- "When it comes to..."
-- "In order to..." (just say "to")
-- "Whether you're a... or a..."
-- "Are you ready to take your X to the next level?"
-- "Let's dive in" / "Without further ado"
+**Quick reference - kill these immediately:**
+- Words: delve, comprehensive, utilize, leverage, crucial, landscape, navigate
+- Phrases: "In today's...", "It's important to note...", "When it comes to..."
+- Punctuation: Too many em-dashes, sentences with 4+ commas
+- Structure: Every paragraph same length, bullet points start same way
+- Voice: Passive voice, no contractions, hedging everywhere
 
-**Punctuation tells:**
-- Too many em-dashes (limit to 1-2 per piece, use periods instead)
-- Long sentences with 4+ commas (break them up)
-- Colons in titles repeatedly
-- Semicolons where periods would work
-
-**Structural tells:**
-- Every paragraph is the same length
-- Every bullet point starts the same way
-- Overly organized with too many headings
-- Bold on every key term
-- Numbered lists where the numbers don't matter
-
-**Voice tells:**
-- Passive voice throughout
-- No "I" or "you" anywhere
-- Hedging: "some may find," "it's possible that," "can potentially"
-- No contractions
-- Perfectly grammatical but lifeless
-
-**The fix:**
-
-Read your copy out loud. If you stumble, a reader will too. If it sounds like a textbook, rewrite it.
-
-Real humans:
-- Use contractions
-- Write sentence fragments sometimes
-- Have opinions without hedging
-- Use "I" and "you" freely
-- Make unexpected word choices
+**The fix:** Read your copy out loud. If you stumble, a reader will too. Real humans use contractions, write sentence fragments, have opinions, and make unexpected word choices.
 
 ---
 

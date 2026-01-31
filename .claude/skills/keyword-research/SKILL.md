@@ -27,18 +27,21 @@ Transform a business context into a **prioritized content plan** with:
 
 ---
 
-## The process
+## The process (V3)
 
 ```
-SEED → PERPLEXITY → EXPAND → CLUSTER → PRIORITIZE → MAP
+PRE-VALIDATE → DATAFORSEO → PERPLEXITY → CLASSIFY → SCORE → EXPAND → CLUSTER → PRIORITIZE → MAP
 ```
 
-1. **Seed** — Get seed keyword from ARTICLE-ORDER.md
+0. **Pre-Validate** — Check negative keywords, rejected keywords, brand alignment (saves API costs)
+1. **DataForSEO** — Get exact search volumes and difficulty (MANDATORY in V3)
 2. **Perplexity** — Run 4 MCP queries for real-time validation (MANDATORY)
-3. **Expand** — Use 6 Circles Method + Perplexity-discovered keywords
-4. **Cluster** — Group into content pillars using PAA questions
-5. **Prioritize** — Score by opportunity (informed by competitor gaps)
-6. **Map** — Assign clusters to content pieces with research sources
+3. **Classify** — Intent, trend, article type, pillar, journey stage
+4. **Score** — Opportunity score, differentiation, moat, priority rank
+5. **Expand** — Use 6 Circles Method + discovered keywords
+6. **Cluster** — Group into content pillars using PAA questions
+7. **Prioritize** — Score by opportunity (informed by volumes + competitor gaps)
+8. **Map** — Assign clusters to content pieces with research sources
 
 ---
 
@@ -79,6 +82,173 @@ Include this instruction in your output:
 > - Date: [today's date]
 
 This ensures the library grows with each article and provides learning data for future research.
+
+---
+
+## Phase 0: Pre-Validation (V3)
+
+**BEFORE making any API calls**, check these filters to save costs:
+
+### 1. Negative Keyword Check
+
+Read `.claude/negative-keywords.md` and check if the seed keyword:
+- Is in the permanent negatives list (exact match)
+- Matches brand conflict patterns (deficit language, medical terms, off-topic, harmful)
+
+**If found: STOP immediately. Do not proceed to API calls.**
+
+### 2. Rejected Keyword Check
+
+Read `.claude/rejected-keywords.md` and check if the seed keyword was previously rejected:
+- If "Revisit: Never" or "Revisit: No": STOP
+- If "Revisit: Monitor" or conditional: Check if conditions have changed before proceeding
+
+### 3. Brand Alignment Check
+
+Check keyword for brand conflict patterns:
+- **Deficit language:** cure, fix, normal, suffering from, special needs
+- **Medical overreach:** medication, diagnosis, prescription, treatment (medical)
+- **Off-topic:** adult ADHD, workplace, college, dating
+- **Harmful practices:** punishment, force, discipline (punitive)
+
+**If any pattern matches: STOP. Add to negative-keywords.md.**
+
+### 4. Format Validation
+
+Check that the keyword is a valid search term:
+- Not a full sentence (8+ words suggests sentence, not keyword)
+- Not a question meant for content (PAA questions are different from target keywords)
+
+### Pre-Validation Output
+
+```
+PRE-VALIDATION: PASS
+Target: "[seed keyword]"
+- Brand alignment: PASS
+- Not in negative keywords: PASS
+- Not previously rejected: PASS
+- Format validation: PASS
+→ Proceeding to API validation
+```
+
+Or if failed:
+
+```
+PRE-VALIDATION: FAIL
+Target: "[seed keyword]"
+- Brand alignment: FAIL (deficit language detected)
+→ STOPPED - No API calls made
+→ Added to negative-keywords.md
+```
+
+---
+
+## V3 Classifications and Scoring
+
+**Full specification:** See `KEYWORD-VALIDATION-SYSTEM-V2.md` Sections 5-8 for:
+- Search intent classification (transactional/commercial/informational-product/informational)
+- Intent multipliers (3.0/2.5/2.0/1.0) and volume floors (50/100/200/500)
+- Trend classification and multipliers
+- Article type criteria (hub vs cluster)
+- Journey stage mapping
+- Opportunity score formula and calculation
+- Differentiation scoring (0-15+)
+- Competitive moat assessment (0-10)
+- Priority ranking system (1-5)
+
+**Quick reference (thresholds):**
+- Opportunity score: 15+ to pass
+- Differentiation: 5+ (7+ for hubs if difficulty > 40)
+- Trend gate: If declining AND score < 25, REJECT
+
+---
+
+## DataForSEO API Integration (MANDATORY in V3)
+
+**For HushAway articles, DataForSEO is MANDATORY.** The Keyword Gate V3 will FAIL without it.
+
+DataForSEO runs BEFORE Perplexity queries. Both tools must return valid data for a keyword to pass validation.
+
+### Prerequisites
+
+1. **Credentials:** Set `DATAFORSEO_LOGIN` and `DATAFORSEO_PASSWORD` in `.env` file (project root)
+2. **Available APIs:** Keywords Data API, DataForSEO Labs (NO Backlinks API access)
+
+### DataForSEO Queries (Run Before Perplexity)
+
+**Query 1: Exact Search Volume + Difficulty**
+
+Call the Keywords Data API for the seed keyword:
+
+```bash
+curl -X POST "https://api.dataforseo.com/v3/keywords_data/google/search_volume/live" \
+  -H "Authorization: Basic $(echo -n "$DATAFORSEO_LOGIN:$DATAFORSEO_PASSWORD" | base64)" \
+  -H "Content-Type: application/json" \
+  -d '[{
+    "keywords": ["[seed keyword]"],
+    "location_code": 2826,
+    "language_code": "en"
+  }]'
+```
+
+Response provides:
+- `search_volume`: Exact monthly searches
+- `competition`: 0-1 competition score
+- `cpc`: Cost per click (commercial intent indicator)
+
+**Query 2: Related Keywords with Volumes**
+
+Call DataForSEO Labs for keyword expansion:
+
+```bash
+curl -X POST "https://api.dataforseo.com/v3/dataforseo_labs/google/related_keywords/live" \
+  -H "Authorization: Basic $(echo -n "$DATAFORSEO_LOGIN:$DATAFORSEO_PASSWORD" | base64)" \
+  -H "Content-Type: application/json" \
+  -d '[{
+    "keyword": "[seed keyword]",
+    "location_code": 2826,
+    "language_code": "en",
+    "limit": 20
+  }]'
+```
+
+Response provides related keywords with:
+- `keyword`: The related keyword
+- `search_volume`: Monthly searches
+- `keyword_difficulty`: 0-100 difficulty score
+
+### Location Code Reference
+
+| Location | Code |
+|----------|------|
+| United Kingdom | 2826 |
+| United States | 2840 |
+| Australia | 2036 |
+
+**Always use 2826 (UK) for HushAway content.**
+
+### Error Handling (V3)
+
+If DataForSEO API fails (timeout, auth error, rate limit):
+
+1. **Retry 3 times** with exponential backoff (5s, 10s, 20s)
+2. If still failing after retries:
+   - Set `dataforSeoUsed: false` in research file frontmatter
+   - Set `dataforSeoError: "[error message]"`
+   - **STOP - Keyword Gate V3 will FAIL**
+
+**In V3, both DataForSEO AND Perplexity are mandatory.** There is no graceful fallback.
+
+If DataForSEO is genuinely unavailable, the keyword cannot be validated and should be queued for later retry.
+
+### After DataForSEO Queries
+
+If successful, the skill output MUST include:
+- `dataforSeoUsed: true` in research file frontmatter
+- `dataforSeoDate: [YYYY-MM-DD]`
+- `targetKeywordVolume: [exact number]`
+- `targetKeywordDifficulty: [0-100 score]`
+- Secondary keywords with volumes and difficulty scores
 
 ---
 
@@ -622,51 +792,26 @@ The output is a validated keyword plan with research data. Content writing is se
 
 ---
 
-## HushAway Output Format (with Perplexity)
+## HushAway Output Format V3
 
-For HushAway articles, the output MUST include these frontmatter fields for the research file:
+**Full frontmatter specification:** See `KEYWORD-VALIDATION-SYSTEM-V2.md` Section 18 for complete V3 output format (~40 fields).
 
-```yaml
-# Keyword Research (validated by Perplexity MCP)
-keywordStatus: validated
-perplexityUsed: true
-perplexityDate: [YYYY-MM-DD]
+**Key requirements:**
+- Both DataForSEO AND Perplexity are MANDATORY (no graceful fallback)
+- All numeric fields must be exact numbers (no estimates)
+- `keywordVerdict: GO` required to pass Keyword Gate V3
 
-targetKeyword: "[validated keyword]"
-searchTrend: [rising/stable/declining]
+**V3 Hard Gates:** See `KEYWORD-VALIDATION-SYSTEM-V2.md` Section 3 for all thresholds.
 
-secondaryKeywords:
-  - "[keyword 1]"
-  - "[keyword 2]"
-  - "[keyword 3]"
-  - "[keyword 4]"
-  - "[keyword 5]"
+**Quick reference (minimum counts):**
+- Volume: Intent-tiered floor (50/100/200/500)
+- Opportunity score: 15+
+- PAA questions: 7+
+- Competitor gaps: 2+
+- Research sources: 2+
+- Differentiation: 5+ (7+ for hubs)
 
-# PAA Questions (from Perplexity Query 2)
-paaQuestions:
-  - "[Question 1]"
-  - "[Question 2]"
-  - "[Question 3]"
-  - "[Question 4]"
-  - "[Question 5]"
-  - "[Question 6]"
-  - "[Question 7]"
-
-# Competitor Gaps (from Perplexity Query 3)
-competitorGaps:
-  - "[Gap 1]"
-  - "[Gap 2]"
-  - "[Gap 3]"
-
-# Research Sources (from Perplexity Query 4)
-researchSources:
-  - source: "[Source name]"
-    year: [YYYY]
-    finding: "[Key finding]"
-    url: "[URL]"
-```
-
-This data automatically populates research file sections 1, 3, 4, 5, and 8.
+**Gate script:** `check-keyword-gate-v3.sh` validates all thresholds automatically.
 
 ---
 

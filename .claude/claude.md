@@ -38,7 +38,7 @@ This file contains all banned words, frequency limits, structural rules, convers
 
 | Gate | Script | When |
 |------|--------|------|
-| 1. Keyword | `check-keyword-gate.sh [research]` | After /keyword-research |
+| 1. Keyword (V3) | `check-keyword-gate-v3.sh [research]` | After /keyword-research |
 | 2. Research | `check-research-gate.sh [research]` | After research complete |
 | 3. Angle | `check-angle-gate.sh [research]` | After /positioning-angles |
 | Pre-flight | `quick-check.sh [article]` | During /seo-content writing |
@@ -47,6 +47,16 @@ This file contains all banned words, frequency limits, structural rules, convers
 | 6. Final | `check-final-gate.sh [article] [hub\|cluster]` | Before export |
 
 **ALL 6 GATES MUST PASS. NO EXCEPTIONS.**
+
+### Keyword Validation V3
+
+The V3 keyword system includes:
+- **Pre-API filters:** Brand alignment, negative/rejected keyword checks (saves API costs)
+- **Mandatory APIs:** Both DataForSEO AND Perplexity MCP required
+- **Intent-tiered volume floors:** 50 (transactional), 100 (commercial), 200 (info+product), 500 (informational)
+- **Opportunity scoring:** Formula-based score must be 15+ to pass
+- **Supporting libraries:** `.claude/negative-keywords.md`, `.claude/rejected-keywords.md`
+- **Full spec:** `KEYWORD-VALIDATION-SYSTEM-V2.md`
 
 ### Script Flags
 
@@ -148,20 +158,12 @@ A sound therapy platform (mobile app + web app) designed specifically for neurod
 
 **E-E-A-T is essential for ranking.**
 
-### Citation Style (Warm, Not Academic)
+**Full requirements:** See `.claude/rules/humanise-rules.md` Section 9 for citation style, format examples, and UK-approved sources.
 
-**Good examples:**
-- "Research from 2024 found that parents of children with ADHD are more than four times more likely to experience depression."
-- "A large Swedish study found that children with ADHD are eight times more likely to have a sleep disorder."
-
-**NOT:**
-- "According to a study published in the Journal of Sleep Research (Smith et al., 2023)..."
-
-### Requirements
-See `.claude/rules/humanise-rules.md` Section 7 for citation, quote, and link requirements.
-
-### UK-Approved Sources
-NHS, ADHD UK, NICE guidelines, British Psychological Society, Royal College of Psychiatrists, gov.uk, PubMed
+**Quick reference:**
+- Use warm format: "Research from 2024 found..." (not academic style)
+- Always include the year in citations
+- UK sources only: NHS, ADHD UK, NICE, BPS, RCP, gov.uk, PubMed
 
 ---
 
@@ -211,6 +213,9 @@ NHS, ADHD UK, NICE guidelines, British Psychological Society, Royal College of P
 /.claude/skills/                         - Marketing skills
 /.claude/context/                        - Skill-specific context files
 /.claude/rules/                          - Authoritative rules (single source of truth)
+/.claude/keyword-library.md             - Validated keywords (V3 schema)
+/.claude/negative-keywords.md           - Blocked keywords (brand conflicts, medical, off-topic)
+/.claude/rejected-keywords.md           - Failed keywords with revisit strategies
 ```
 
 ---
@@ -242,9 +247,24 @@ NHS, ADHD UK, NICE guidelines, British Psychological Society, Royal College of P
 ### Other Skills
 `/brand-voice`, `/email-sequences`, `/content-atomizer`, `/newsletter`, `/lead-magnet`
 
-### Live Data (MCP)
-**Perplexity MCP** is mandatory for keyword research. Provides PAA questions, competitor analysis, research sources.
+### Live Data (API Integration)
+
+**Both APIs are MANDATORY in V3.** Keywords cannot be validated without both.
+
+**Perplexity MCP** (MANDATORY) - Provides PAA questions, competitor analysis, research sources, trends.
 
 ```bash
 claude mcp add perplexity --env PERPLEXITY_API_KEY=<your-key>
 ```
+
+**DataForSEO API** (MANDATORY in V3) - Provides exact search volumes, keyword difficulty scores, CPC.
+
+Create `.env` file in project root:
+```
+DATAFORSEO_LOGIN=your_login_here
+DATAFORSEO_PASSWORD=your_password_here
+```
+
+**V3 Change:** DataForSEO is no longer optional. Both APIs must succeed for keyword validation to pass.
+
+**Full spec:** `KEYWORD-VALIDATION-SYSTEM-V2.md`

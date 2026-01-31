@@ -24,7 +24,7 @@ STEP 2: Run /keyword-research ──────── Validate keywords + Perpl
            │
            ▼
     ┌──────────────┐
-    │ KEYWORD GATE │ ← Gate 1: check-keyword-gate.sh
+    │ KEYWORD GATE │ ← Gate 1: check-keyword-gate-v3.sh
     └──────────────┘
            │
 STEP 3: Complete Research
@@ -78,7 +78,7 @@ STEP 7: Preview & Export
 
 | Gate | Script | When | Exit |
 |------|--------|------|------|
-| 1. Keyword | `check-keyword-gate.sh [research]` | After /keyword-research | 0=PASS |
+| 1. Keyword (V3) | `check-keyword-gate-v3.sh [research]` | After /keyword-research | 0=PASS |
 | 2. Research | `check-research-gate.sh [research]` | After research complete | 0=PASS |
 | 3. Angle | `check-angle-gate.sh [research]` | After /positioning-angles | 0=PASS |
 | Pre-flight | `quick-check.sh [article]` | During /seo-content writing | 0=PASS |

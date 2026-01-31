@@ -57,7 +57,7 @@ if [ "$KEYWORD_STATUS" = "validated" ]; then
     echo "PASS: Keyword Gate passed (keywordStatus = validated)"
 else
     echo "FAIL: Keyword Gate not passed (keywordStatus = '$KEYWORD_STATUS')"
-    echo "      Run check-keyword-gate.sh and ensure it shows PASS before proceeding."
+    echo "      Run check-keyword-gate-v3.sh and ensure it shows PASS before proceeding."
     FAILS=$((FAILS+1))
 fi
 

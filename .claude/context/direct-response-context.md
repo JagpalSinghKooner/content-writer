@@ -41,36 +41,17 @@ Review article for conversion effectiveness. This skill does NOT rewrite the art
 
 ## 7 Conversion Checks
 
-### 1. Objection Handling (Need 2 of 4)
+**Full conversion language requirements:** See `.claude/rules/humanise-rules.md` Section 8 for complete objection handling (4 objections with counter-phrases), CTA patterns, and banned words.
 
-| Objection | Counter-Language |
-|-----------|------------------|
-| "Another app won't help" | passive sound, no engagement, just listen, different from apps |
-| "Too tired to try" | zero learning curve, just press play, no setup, instant access |
-| "Is this actually different?" | neurodivergent-first, built for, purpose-built, not adapted |
-| "What if my child won't use it?" | free forever, nothing to lose, no risk, costs nothing |
+**Quick reference (what gate script checks):**
 
-### 2. CTA Clarity
-- "Free forever" or equivalent must appear
-- Use: "free forever", "always free", "completely free"
-
-### 3. Low-Friction Language
-- **Use:** just enter your email, instant access, no credit card, magic link
-- **Avoid:** free trial, subscribe, sign up for, premium, upgrade
-
-### 4. Differentiation
-- Neurodivergent-first positioning must be clear
-- 3+ mentions of neurodivergent-specific language
-
-### 5. HushAway® Prominence
-- 5+ total mentions
-- 2+ mentions in conversion contexts (near "free", "try", "Sound Sanctuary")
-
-### 6. Sound Sanctuary CTA
-- 2+ mentions of "Sound Sanctuary" as destination
-
-### 7. Risk Reversal
-- 1+ of: "nothing to lose", "no risk", "costs nothing", "no commitment"
+1. **Objection handling:** 2 of 4 objections addressed with counter-language
+2. **CTA clarity:** "free forever" or equivalent present
+3. **Low-friction language:** avoid trial, subscribe, premium, upgrade
+4. **Differentiation:** 3+ neurodivergent-first mentions
+5. **HushAway® prominence:** 5+ total, 2+ in conversion contexts
+6. **Sound Sanctuary CTA:** 2+ mentions as destination
+7. **Risk reversal:** 1+ of: nothing to lose, no risk, costs nothing
 
 ---
 

@@ -1,238 +1,395 @@
-# HushAway® Article Generation Order
+# HushAway Article Generation Order
 
-**Total Articles:** 77 (7 Hubs + 70 Clusters)
-**Completed:** 6 / 77
+**Total Articles:** 110 (8 Hubs + 102 Clusters)
+**Completed:** 0 / 110
+**Structure:** Validated via DataForSEO + Perplexity MCP (2026-01-31)
+**Keyword Rules:** V3.1 (crisis intent, lowered info floor)
 
 ---
 
 ## How to Use This Document
 
-1. Work through articles in order (highest search volume first)
+1. Work through articles in execution priority order
 2. Mark checkboxes as you complete each article
-3. Copy the prompt from the right column to start a new context window
-4. **Include the Standard Notes below with every prompt**
-5. Each prompt includes the research file creation + article writing workflow
+3. Run `/keyword-research [keyword]` to start validation
+4. **Follow the 4-Session Workflow below**
+5. All 6 gates must pass before marking complete
 
 ---
 
-## 2-Session Workflow (Optimal Quality)
+## 4-Session Workflow
 
-Split research and writing into separate sessions for better output quality.
-
----
-
-### SESSION 1: Research Phase
-
-Copy this prompt to start research on the NEXT article:
-
-```
-Research the next article in the pipeline.
-
-STEP 1: Find next article
-- Read ARTICLE-ORDER.md
-- Find the FIRST row with ⬜ status
-- That is your target article
-
-STEP 2: Research phase (Gates 1-3)
-1. Run /keyword-research with Perplexity MCP
-2. Create research file at the path shown in ARTICLE-ORDER.md prompt column
-3. Update keyword-library.md with validated keyword
-4. Pass Keyword Gate (check-keyword-gate.sh)
-5. Complete full research using Perplexity
-6. Pass Research Gate (check-research-gate.sh)
-7. Run generate-research-summary.sh [research-file]
-8. Run /positioning-angles (generates options, does NOT select)
-
-STOP HERE. Angle options saved. Start new session for writing.
-```
+| Session | Focus | Gate | Est. Tokens |
+|---------|-------|------|-------------|
+| 1 | Keyword validation | Keyword Gate V3.1 | ~25,000 |
+| 2 | Research completion | Research Gate | ~20,000 |
+| 3 | Positioning angles | Angle Gate | ~15,000 |
+| 4 | Writing + conversion | Content/Conversion/Final | ~40,000 |
 
 ---
 
-### SESSION 2: Writing Phase
+## Session Start Prompts
 
-Copy this prompt in a NEW session to write the article:
+Copy-paste the appropriate prompt when starting each session to manage context window.
+
+### Session 1: Keyword Validation
 
 ```
-Write the article that has research completed.
+ARTICLE: [Article Name] - [Keyword]
+PILLAR: [N]
 
-STEP 1: Select Angle
-- Read .claude/scratchpad/research-summary.md (has keywords + angle options)
-- Read research file for full angle option details (psychology, patterns)
-- Present ALL angle options to writer with their psychology/reasoning
-- Use AskUserQuestion to let writer choose which angle to use
-- Once writer selects:
-  1. Update research file frontmatter:
-     - angleStatus: selected
-     - selectedAngle: "[chosen angle name]"
-     - angleDescription: "[one sentence from chosen option]"
-     - headlineDirection: "[headline from chosen option]"
-     - counterPositions: [extract from research competitor gaps]
-  2. Add row to .claude/angle-library.md (all 6 columns)
-  3. Update research-summary.md Positioning section with selected angle
-  4. Run Angle Gate: .claude/scripts/check-angle-gate.sh [research-file]
-  5. Gate MUST show PASS before proceeding
+SESSION 1: KEYWORD VALIDATION
 
-STEP 2: Writing phase (Gates 4-6)
-1. Run /seo-content to write article
-2. Save to path shown in ARTICLE-ORDER.md prompt column
-3. Pass Content Gate (master-gate.sh [file] [hub|cluster] --summary)
-   - Use --diff on re-runs to see FIXED/STILL FAILING/NEW
-4. Run /direct-response-copy
-5. Pass Conversion Gate (check-conversion-gate.sh --summary)
-6. Pass Final Gate (check-final-gate.sh)
-7. Mark article ✅ in ARTICLE-ORDER.md
+READ THESE FILES:
+- .claude/keyword-library.md (check existing keywords)
+- .claude/negative-keywords.md (check blocked terms)
+- .claude/rejected-keywords.md (check previous failures)
+- ARTICLE-ORDER.md (article details)
 
-IMPORTANT REMINDERS:
-- Avoid commitment language: subscription, premium, free trial, sign up for, register
-- Monitor frequency words: actually (max 3), designed to/for (max 3)
-- Use frontmatter from templates/article-template.md
-- Community quotes: 2 for hub, 1 for cluster
-- Sound Sanctuary: mention 2+ times in conversion contexts
-- Risk reversal: include "nothing to lose", "costs nothing to try"
-- All 6 gates must pass before marking complete
+DO NOT READ:
+- Full research files
+- Article content files
+- HushAway.md (not needed yet)
+- humanise-rules.md (not needed yet)
+
+RUN:
+1. /keyword-research [keyword]
+2. .claude/scripts/check-keyword-gate-v3.sh [research-file]
+
+GATE: Keyword Gate V3.1 must PASS before Session 2
+```
+
+### Session 2: Research Completion
+
+```
+ARTICLE: [Article Name] - [Keyword]
+PILLAR: [N]
+
+SESSION 2: RESEARCH COMPLETION
+
+READ THESE FILES:
+- Research file from Session 1
+- .claude/context/keyword-research-context.md
+
+DO NOT READ:
+- Other research files
+- Article content files
+- HushAway.md (not needed yet)
+- humanise-rules.md (not needed yet)
+
+RUN:
+1. Complete research sections (PAA, competitors, sources)
+2. .claude/scripts/check-research-gate.sh [research-file]
+3. .claude/scripts/generate-research-summary.sh [research-file]
+
+GATE: Research Gate must PASS before Session 3
+OUTPUT: research-summary.md in .claude/scratchpad/
+```
+
+### Session 3: Positioning Angles
+
+```
+ARTICLE: [Article Name] - [Keyword]
+PILLAR: [N]
+
+SESSION 3: POSITIONING ANGLES
+
+READ THESE FILES:
+- .claude/scratchpad/research-summary.md (NOT full research)
+- .claude/angle-library.md (avoid duplicate angles)
+- .claude/context/positioning-angles-context.md
+
+DO NOT READ:
+- Full research file (use summary instead)
+- Article content files
+- HushAway.md (not needed yet)
+- humanise-rules.md (not needed yet)
+
+RUN:
+1. /positioning-angles
+2. Select angle from generated options
+3. Update .claude/angle-library.md with selection
+4. .claude/scripts/check-angle-gate.sh [research-file]
+
+GATE: Angle Gate must PASS before Session 4
+```
+
+### Session 4: Writing + Conversion
+
+```
+ARTICLE: [Article Name] - [Keyword]
+PILLAR: [N]
+
+SESSION 4: WRITING + CONVERSION
+
+READ THESE FILES:
+- .claude/scratchpad/research-summary.md (compact data)
+- .claude/rules/humanise-rules.md (CRITICAL - all content rules)
+- HushAway.md (product details for CTAs)
+- .claude/context/seo-content-context.md
+- .claude/context/direct-response-context.md
+
+DO NOT READ:
+- Full research file (summary has all data)
+- Other article files
+- Keyword library (not needed)
+
+RUN:
+1. /seo-content (run quick-check.sh after each H2 section)
+2. .claude/scripts/master-gate.sh [article] [hub|cluster] --summary
+3. /direct-response-copy
+4. .claude/scripts/check-conversion-gate.sh [article] --summary
+5. .claude/scripts/check-final-gate.sh [article] [hub|cluster]
+
+GATES: Content, Conversion, Final must ALL PASS
 ```
 
 ---
 
 ## Quick Stats
 
-| Pillar | Name | Hub Status | Clusters Done | Total |
-|--------|------|------------|---------------|-------|
-| 5 | ADHD Apps | ✅ | 3/10 | 4/11 |
-| 2 | Sleep Apps for Kids | ⬜ | 0/10 | 0/11 |
-| 1 | ADHD Sleep Support | ⬜ | 0/10 | 0/11 |
-| 3 | Anxiety Apps for Children | ⬜ | 0/10 | 0/11 |
-| 4 | Sensory Friendly Apps | ⬜ | 0/10 | 0/11 |
-| 7 | Neurodivergent Parenting | ⬜ | 0/10 | 0/11 |
-| 6 | Emotional Regulation | ⬜ | 0/10 | 0/11 |
+| Pillar | Name | Hub Keyword | Volume | Diff | Score | Hub | Clusters | Total |
+|--------|------|-------------|--------|------|-------|-----|----------|-------|
+| 1 | Sleep and Bedtime | ADHD sleep | 2,400 | 5 | 400 | ⬜ | 0/15 | 0/16 |
+| 2 | Meltdowns | autistic meltdown | 3,600 | 10 | 450 | ⬜ | 0/15 | 0/16 |
+| 3 | Emotional Regulation | emotional dysregulation | 9,900 | 42 | 457 | ⬜ | 0/12 | 0/13 |
+| 4 | Transitions and Routines | autism routine | 390 | 12 | 35 | ⬜ | 0/15 | 0/16 |
+| 5 | Focus and Concentration | ADHD focus | 260 | 16 | 20 | ⬜ | 0/12 | 0/13 |
+| 6 | Sensory Processing | sensory overload | 3,600 | 46 | 161 | ⬜ | 0/15 | 0/16 |
+| 7 | Sound Therapy | sound therapy | 1,600 | 41 | 63 | ⬜ | 0/10 | 0/11 |
+| 8 | Comparisons | calm apps | 4,400 | 47 | 193 | ⬜ | 0/8 | 0/9 |
+
+**Execution Priority:** 1 > 2 > 6 > 4 > 3 > 5 > 7 > 8 (crisis intent first, comparisons last)
 
 ---
 
-## Pillar 5: ADHD Apps (25,000 monthly searches)
+## Pillar 1: Sleep and Bedtime
 
-| # | Status | Article | Keyword | Volume | Prompt |
-|---|--------|---------|---------|--------|--------|
-| 1 | ✅ | HUB: ADHD Apps | ADHD apps | 25,000 | `Create research file at research/pillar-5-adhd-apps/hub-research.md using the template, then write hub article for "ADHD apps" targeting parents of ADHD children. Save to src/content/pillar-5-adhd-apps/hub-adhd-apps.md. Run all 6 gates before finalising.` |
-| 2 | ✅ | 5.1 Focus Apps ADHD | Focus apps ADHD | 600-1,200 | `Create research file at research/pillar-5-adhd-apps/5.1-focus-apps-research.md using the template, then write cluster article for "Focus apps ADHD" targeting parents of ADHD children. Save to src/content/pillar-5-adhd-apps/5.1-focus-apps-adhd.md. Run all gates before finalising.` |
-| 3 | ✅ | 5.2 Task Management Apps | Task management apps kids | 400-900 | `Create research file at research/pillar-5-adhd-apps/5.2-task-management-research.md using the template, then write cluster article for "Task management apps kids" targeting parents. Save to src/content/pillar-5-adhd-apps/5.2-task-management-apps.md. Run all gates before finalising.` |
-| 4 | ✅ | 5.3 Executive Function Apps | Executive function ADHD apps | 300-700 | `Create research file at research/pillar-5-adhd-apps/5.3-executive-function-research.md using the template, then write cluster article for "Executive function ADHD apps" targeting parents. Save to src/content/pillar-5-adhd-apps/5.3-executive-function-apps.md. Run all gates before finalising.` |
-| 5 | ✅ | 5.4 Behavior Tracking | Behavior tracking ADHD | 300-700 | `Create research file at research/pillar-5-adhd-apps/5.4-behavior-tracking-research.md using the template, then write cluster article for "Behavior tracking ADHD" (use UK spelling "behaviour" in content) targeting parents. Save to src/content/pillar-5-adhd-apps/5.4-behaviour-tracking-adhd.md. Run all gates before finalising.` |
-| 6 | ⬜ | 5.5 Organization Apps | Organization apps ADHD children | 400-800 | `Create research file at research/pillar-5-adhd-apps/5.5-organisation-apps-research.md using the template, then write cluster article for "Organization apps ADHD children" (use UK spelling "organisation" in content) targeting parents. Save to src/content/pillar-5-adhd-apps/5.5-organisation-apps-adhd.md. Run all gates before finalising.` |
-| 7 | ⬜ | 5.6 Treatment Apps | ADHD treatment medication therapy apps | 400-900 | `Create research file at research/pillar-5-adhd-apps/5.6-treatment-apps-research.md using the template, then write cluster article for "ADHD treatment medication therapy apps" targeting parents seeking complementary support. Save to src/content/pillar-5-adhd-apps/5.6-adhd-treatment-apps.md. Run all gates before finalising.` |
-| 8 | ⬜ | 5.7 FDA Approved Game | FDA approved ADHD game | 300-600 | `Create research file at research/pillar-5-adhd-apps/5.7-fda-approved-game-research.md using the template, then write cluster article for "FDA approved ADHD game" (EndeavorRx focus) targeting parents. Save to src/content/pillar-5-adhd-apps/5.7-fda-approved-adhd-game.md. Run all gates before finalising.` |
-| 9 | ⬜ | 5.8 School Apps | ADHD apps school classroom | 400-900 | `Create research file at research/pillar-5-adhd-apps/5.8-school-apps-research.md using the template, then write cluster article for "ADHD apps school classroom" targeting parents and educators. Save to src/content/pillar-5-adhd-apps/5.8-adhd-apps-school.md. Run all gates before finalising.` |
-| 10 | ⬜ | 5.9 Apps by Age | ADHD apps by age | 300-700 | `Create research file at research/pillar-5-adhd-apps/5.9-apps-by-age-research.md using the template, then write cluster article for "ADHD apps by age" covering toddlers through teens. Save to src/content/pillar-5-adhd-apps/5.9-adhd-apps-by-age.md. Run all gates before finalising.` |
-| 11 | ⬜ | 5.10 Emotional Dysregulation | Emotional dysregulation ADHD apps | 400-800 | `Create research file at research/pillar-5-adhd-apps/5.10-emotional-dysregulation-research.md using the template, then write cluster article for "Emotional dysregulation ADHD apps" targeting parents. Save to src/content/pillar-5-adhd-apps/5.10-emotional-dysregulation-apps.md. Run all gates before finalising.` |
+**Hub Keyword:** ADHD sleep (2,400/mo, KD 5, Easy)
+**V3 Score:** 400 | **Intent:** Crisis | **Trend:** Stable
+**Product Fit:** Night Time Stories, Sleep Audio, Sound Garden, Binaural Beats
 
----
-
-## Pillar 2: Sleep Apps for Kids (8,000-12,000 monthly searches)
-
-| # | Status | Article | Keyword | Volume | Prompt |
-|---|--------|---------|---------|--------|--------|
-| 12 | ⬜ | HUB: Sleep Apps for Kids | Sleep apps for kids | 8,000-12,000 | `Create research file at research/pillar-2-sleep-apps/hub-research.md using the template with all 9 sections, then write hub article (min 3,000 words) for "Sleep apps for kids" targeting parents of children with sleep difficulties. Save to src/content/pillar-2-sleep-apps/hub-sleep-apps-kids.md. Run all gates before finalising.` |
-| 13 | ⬜ | 2.1 Stories vs Meditation | Bedtime stories vs meditation apps kids | 300-600 | `Create research file at research/pillar-2-sleep-apps/2.1-stories-vs-meditation-research.md using the template, then write cluster article for "Bedtime stories vs meditation apps kids" targeting parents. Save to src/content/pillar-2-sleep-apps/2.1-stories-vs-meditation.md. Run all gates before finalising.` |
-| 14 | ⬜ | 2.2 Sleep Apps Toddlers | Sleep apps for toddlers | 1,000-2,000 | `Create research file at research/pillar-2-sleep-apps/2.2-toddler-sleep-apps-research.md using the template, then write cluster article for "Sleep apps for toddlers" targeting parents of 1-3 year olds. Save to src/content/pillar-2-sleep-apps/2.2-sleep-apps-toddlers.md. Run all gates before finalising.` |
-| 15 | ⬜ | 2.3 School Age Sleep | Sleep apps for school age children | 800-1,500 | `Create research file at research/pillar-2-sleep-apps/2.3-school-age-research.md using the template, then write cluster article for "Sleep apps for school age children" targeting parents of 5-12 year olds. Save to src/content/pillar-2-sleep-apps/2.3-sleep-apps-school-age.md. Run all gates before finalising.` |
-| 16 | ⬜ | 2.4 Sleep Apps Teens | Sleep apps for teens | 600-1,200 | `Create research file at research/pillar-2-sleep-apps/2.4-teen-sleep-apps-research.md using the template, then write cluster article for "Sleep apps for teens" targeting parents of teenagers. Save to src/content/pillar-2-sleep-apps/2.4-sleep-apps-teens.md. Run all gates before finalising.` |
-| 17 | ⬜ | 2.5 Sleep Routine | Sleep routine for kids | 1,500-2,500 | `Create research file at research/pillar-2-sleep-apps/2.5-sleep-routine-research.md using the template, then write cluster article for "Sleep routine for kids" targeting parents seeking bedtime structure. Save to src/content/pillar-2-sleep-apps/2.5-sleep-routine-kids.md. Run all gates before finalising.` |
-| 18 | ⬜ | 2.6 White Noise vs Guided | White noise vs guided sleep apps | 200-500 | `Create research file at research/pillar-2-sleep-apps/2.6-white-noise-vs-guided-research.md using the template, then write cluster article for "White noise vs guided sleep apps" comparing approaches. Save to src/content/pillar-2-sleep-apps/2.6-white-noise-vs-guided.md. Run all gates before finalising.` |
-| 19 | ⬜ | 2.7 Screen Time Before Bed | Screen time before bed kids | 1,000-2,000 | `Create research file at research/pillar-2-sleep-apps/2.7-screen-time-research.md using the template, then write cluster article for "Screen time before bed kids" addressing the paradox of sleep apps. Save to src/content/pillar-2-sleep-apps/2.7-screen-time-before-bed.md. Run all gates before finalising.` |
-| 20 | ⬜ | 2.8 Free Sleep Apps | Best free sleep apps for kids | 800-1,500 | `Create research file at research/pillar-2-sleep-apps/2.8-free-sleep-apps-research.md using the template, then write cluster article for "Best free sleep apps for kids" with honest assessments. Save to src/content/pillar-2-sleep-apps/2.8-free-sleep-apps-kids.md. Run all gates before finalising.` |
-| 21 | ⬜ | 2.9 Sleep Training | Sleep apps and sleep training | 300-700 | `Create research file at research/pillar-2-sleep-apps/2.9-sleep-training-research.md using the template, then write cluster article for "Sleep apps and sleep training" for parents of younger children. Save to src/content/pillar-2-sleep-apps/2.9-sleep-apps-training.md. Run all gates before finalising.` |
-| 22 | ⬜ | 2.10 Sleep Tracking | Sleep tracking apps for kids | 400-800 | `Create research file at research/pillar-2-sleep-apps/2.10-sleep-tracking-research.md using the template, then write cluster article for "Sleep tracking apps for kids" with privacy considerations. Save to src/content/pillar-2-sleep-apps/2.10-sleep-tracking-apps.md. Run all gates before finalising.` |
+| # | Status | Article | Keyword | Prompt |
+|---|--------|---------|---------|--------|
+| 1.0 | ⬜ | HUB: When Your Neurodivergent Child Won't Sleep | ADHD sleep | `/keyword-research ADHD sleep` |
+| 1.1 | ⬜ | ADHD child won't sleep | ADHD child won't sleep | `/keyword-research ADHD child won't sleep` |
+| 1.2 | ⬜ | Autistic child sleep problems | autistic child sleep problems | `/keyword-research autistic child sleep problems` |
+| 1.3 | ⬜ | ADHD bedtime routine | ADHD bedtime routine | `/keyword-research ADHD bedtime routine` |
+| 1.4 | ⬜ | Autism bedtime routine | autism bedtime routine | `/keyword-research autism bedtime routine` |
+| 1.5 | ⬜ | Sensory bedroom setup | sensory bedroom setup | `/keyword-research sensory bedroom setup` |
+| 1.6 | ⬜ | Melatonin alternatives children | melatonin alternatives children | `/keyword-research melatonin alternatives children` |
+| 1.7 | ⬜ | Child wakes up all night | child wakes up all night | `/keyword-research child wakes up all night` |
+| 1.8 | ⬜ | ADHD child anxious about sleeping alone | ADHD child anxious sleeping alone | `/keyword-research ADHD child anxious sleeping alone` |
+| 1.9 | ⬜ | Racing thoughts at bedtime | racing thoughts at bedtime child | `/keyword-research racing thoughts at bedtime child` |
+| 1.10 | ⬜ | Weighted blanket autism sleep | weighted blanket autism sleep | `/keyword-research weighted blanket autism sleep` |
+| 1.11 | ⬜ | Why do ADHD children struggle with sleep | why do ADHD children struggle with sleep | `/keyword-research why do ADHD children struggle with sleep` |
+| 1.12 | ⬜ | NHS sleep clinic autism | NHS sleep clinic autism | `/keyword-research NHS sleep clinic autism` |
+| 1.13 | ⬜ | Screen time before bed autism | screen time before bed autism | `/keyword-research screen time before bed autism` |
+| 1.14 | ⬜ | Bedwetting ADHD autism | bedwetting ADHD autism | `/keyword-research bedwetting ADHD autism` |
+| 1.15 | ⬜ | Sound therapy for sleep | sound therapy for sleep children | `/keyword-research sound therapy for sleep children` |
 
 ---
 
-## Pillar 1: ADHD Sleep Support (5,000-8,000 monthly searches)
+## Pillar 2: Meltdowns
 
-| # | Status | Article | Keyword | Volume | Prompt |
-|---|--------|---------|---------|--------|--------|
-| 23 | ⬜ | HUB: ADHD Sleep | ADHD sleep dysregulation | 5,000-8,000 | `Create research file at research/pillar-1-adhd-sleep/hub-research.md using the template with all 9 sections, then write hub article (min 3,000 words) for "ADHD sleep dysregulation" targeting exhausted parents. Save to src/content/pillar-1-adhd-sleep/hub-adhd-sleep.md. Run all gates before finalising.` |
-| 24 | ⬜ | 1.1 Bedtime Resistance | ADHD bedtime resistance | 1,500-2,000 | `Create research file at research/pillar-1-adhd-sleep/1.1-bedtime-resistance-research.md using the template, then write cluster article for "ADHD bedtime resistance" targeting frustrated parents. Save to src/content/pillar-1-adhd-sleep/1.1-bedtime-resistance.md. Run all gates before finalising.` |
-| 25 | ⬜ | 1.2 Help Fall Asleep | How to help ADHD child fall asleep | 1,200-1,800 | `Create research file at research/pillar-1-adhd-sleep/1.2-help-fall-asleep-research.md using the template, then write cluster article for "How to help ADHD child fall asleep" with practical strategies. Save to src/content/pillar-1-adhd-sleep/1.2-help-adhd-child-fall-asleep.md. Run all gates before finalising.` |
-| 26 | ⬜ | 1.3 Sleep Schedule | ADHD sleep schedule | 800-1,200 | `Create research file at research/pillar-1-adhd-sleep/1.3-sleep-schedule-research.md using the template, then write cluster article for "ADHD sleep schedule" with routine-building advice. Save to src/content/pillar-1-adhd-sleep/1.3-adhd-sleep-schedule.md. Run all gates before finalising.` |
-| 27 | ⬜ | 1.4 Sensory Bedroom | Sensory bedroom ADHD | 600-1,000 | `Create research file at research/pillar-1-adhd-sleep/1.4-sensory-bedroom-research.md using the template, then write cluster article for "Sensory bedroom ADHD" with environment design tips. Save to src/content/pillar-1-adhd-sleep/1.4-sensory-bedroom-adhd.md. Run all gates before finalising.` |
-| 28 | ⬜ | 1.5 Medication Side Effects | ADHD medication sleep side effects | 400-700 | `Create research file at research/pillar-1-adhd-sleep/1.5-medication-sleep-research.md using the template, then write cluster article for "ADHD medication sleep side effects" with balanced information. Save to src/content/pillar-1-adhd-sleep/1.5-medication-sleep-effects.md. Run all gates before finalising.` |
-| 29 | ⬜ | 1.6 Melatonin | Melatonin ADHD children | 400-600 | `Create research file at research/pillar-1-adhd-sleep/1.6-melatonin-research.md using the template, then write cluster article for "Melatonin ADHD children" with research-backed guidance. Save to src/content/pillar-1-adhd-sleep/1.6-melatonin-adhd-children.md. Run all gates before finalising.` |
-| 30 | ⬜ | 1.7 Night Waking | ADHD night waking | 500-900 | `Create research file at research/pillar-1-adhd-sleep/1.7-night-waking-research.md using the template, then write cluster article for "ADHD night waking" addressing middle-of-night challenges. Save to src/content/pillar-1-adhd-sleep/1.7-adhd-night-waking.md. Run all gates before finalising.` |
-| 31 | ⬜ | 1.8 Anxiety Sleep | ADHD anxiety sleep children | 600-1,000 | `Create research file at research/pillar-1-adhd-sleep/1.8-anxiety-sleep-research.md using the template, then write cluster article for "ADHD anxiety sleep children" addressing comorbid challenges. Save to src/content/pillar-1-adhd-sleep/1.8-adhd-anxiety-sleep.md. Run all gates before finalising.` |
-| 32 | ⬜ | 1.9 Early Morning | ADHD early morning dysregulation | 300-600 | `Create research file at research/pillar-1-adhd-sleep/1.9-early-morning-research.md using the template, then write cluster article for "ADHD early morning dysregulation" for difficult mornings. Save to src/content/pillar-1-adhd-sleep/1.9-early-morning-dysregulation.md. Run all gates before finalising.` |
-| 33 | ⬜ | 1.10 Screen Time Sleep | ADHD screen time sleep | 400-700 | `Create research file at research/pillar-1-adhd-sleep/1.10-screen-time-sleep-research.md using the template, then write cluster article for "ADHD screen time sleep" with practical boundaries. Save to src/content/pillar-1-adhd-sleep/1.10-adhd-screen-time-sleep.md. Run all gates before finalising.` |
+**Hub Keyword:** autistic meltdown (3,600/mo, KD 10, Easy)
+**V3 Score:** 450 | **Intent:** Crisis | **Trend:** Stable
+**Product Fit:** Frequencies, Peace Time, Kaleidoscopes
 
----
-
-## Pillar 3: Anxiety Apps for Children (4,000-6,000 monthly searches)
-
-| # | Status | Article | Keyword | Volume | Prompt |
-|---|--------|---------|---------|--------|--------|
-| 34 | ⬜ | HUB: Anxiety Apps | Anxiety apps for children | 4,000-6,000 | `Create research file at research/pillar-3-anxiety-apps/hub-research.md using the template with all 9 sections, then write hub article (min 3,000 words) for "Anxiety apps for children" targeting worried parents. Save to src/content/pillar-3-anxiety-apps/hub-anxiety-apps.md. Run all gates before finalising.` |
-| 35 | ⬜ | 3.1 Anxiety Autism | Anxiety autism children | 700-1,400 | `Create research file at research/pillar-3-anxiety-apps/3.1-anxiety-autism-research.md using the template, then write cluster article for "Anxiety autism children" addressing unique needs. Save to src/content/pillar-3-anxiety-apps/3.1-anxiety-autism-children.md. Run all gates before finalising.` |
-| 36 | ⬜ | 3.2 CBT Apps | CBT apps for kids anxiety | 400-900 | `Create research file at research/pillar-3-anxiety-apps/3.2-cbt-apps-research.md using the template, then write cluster article for "CBT apps for kids anxiety" with evidence-based focus. Save to src/content/pillar-3-anxiety-apps/3.2-cbt-apps-kids-anxiety.md. Run all gates before finalising.` |
-| 37 | ⬜ | 3.3 Grounding Techniques | Grounding techniques anxious kids | 600-1,200 | `Create research file at research/pillar-3-anxiety-apps/3.3-grounding-techniques-research.md using the template, then write cluster article for "Grounding techniques anxious kids" with practical exercises. Save to src/content/pillar-3-anxiety-apps/3.3-grounding-techniques.md. Run all gates before finalising.` |
-| 38 | ⬜ | 3.4 Social Anxiety ADHD | Social anxiety ADHD children | 500-1,100 | `Create research file at research/pillar-3-anxiety-apps/3.4-social-anxiety-research.md using the template, then write cluster article for "Social anxiety ADHD children" addressing comorbidity. Save to src/content/pillar-3-anxiety-apps/3.4-social-anxiety-adhd.md. Run all gates before finalising.` |
-| 39 | ⬜ | 3.5 Separation Anxiety | Separation anxiety apps kids | 400-900 | `Create research file at research/pillar-3-anxiety-apps/3.5-separation-anxiety-research.md using the template, then write cluster article for "Separation anxiety apps kids" for school transitions. Save to src/content/pillar-3-anxiety-apps/3.5-separation-anxiety-apps.md. Run all gates before finalising.` |
-| 40 | ⬜ | 3.6 Panic Attacks | Panic attacks children | 1,000-2,000 | `Create research file at research/pillar-3-anxiety-apps/3.6-panic-attacks-research.md using the template, then write cluster article for "Panic attacks children" with calming strategies. Save to src/content/pillar-3-anxiety-apps/3.6-panic-attacks-children.md. Run all gates before finalising.` |
-| 41 | ⬜ | 3.7 Anxiety Medication Apps | Anxiety medication children apps | 300-700 | `Create research file at research/pillar-3-anxiety-apps/3.7-anxiety-medication-research.md using the template, then write cluster article for "Anxiety medication children apps" as complementary support. Save to src/content/pillar-3-anxiety-apps/3.7-anxiety-medication-apps.md. Run all gates before finalising.` |
-| 42 | ⬜ | 3.8 Parent Anxiety | Parent anxiety child anxiety | 400-900 | `Create research file at research/pillar-3-anxiety-apps/3.8-parent-anxiety-research.md using the template, then write cluster article for "Parent anxiety child anxiety" addressing the connection. Save to src/content/pillar-3-anxiety-apps/3.8-parent-anxiety-child.md. Run all gates before finalising.` |
-| 43 | ⬜ | 3.9 School Anxiety | School anxiety children apps | 400-900 | `Create research file at research/pillar-3-anxiety-apps/3.9-school-anxiety-research.md using the template, then write cluster article for "School anxiety children apps" for school-related worries. Save to src/content/pillar-3-anxiety-apps/3.9-school-anxiety-apps.md. Run all gates before finalising.` |
-| 44 | ⬜ | 3.10 Performance Anxiety | Performance anxiety neurodivergent children | 200-500 | `Create research file at research/pillar-3-anxiety-apps/3.10-performance-anxiety-research.md using the template, then write cluster article for "Performance anxiety neurodivergent children" for tests and performances. Save to src/content/pillar-3-anxiety-apps/3.10-performance-anxiety.md. Run all gates before finalising.` |
+| # | Status | Article | Keyword | Prompt |
+|---|--------|---------|---------|--------|
+| 2.0 | ⬜ | HUB: Meltdowns: What's Really Happening and How to Help | autistic meltdown | `/keyword-research autistic meltdown` |
+| 2.1 | ⬜ | Autistic meltdown strategies | autistic meltdown strategies | `/keyword-research autistic meltdown strategies` |
+| 2.2 | ⬜ | ADHD meltdown | ADHD meltdown | `/keyword-research ADHD meltdown` |
+| 2.3 | ⬜ | Meltdown vs tantrum | meltdown vs tantrum | `/keyword-research meltdown vs tantrum` |
+| 2.4 | ⬜ | Sensory meltdown | sensory meltdown | `/keyword-research sensory meltdown` |
+| 2.5 | ⬜ | How to calm child during meltdown | how to calm child during meltdown | `/keyword-research how to calm child during meltdown` |
+| 2.6 | ⬜ | Meltdown triggers autism | meltdown triggers autism | `/keyword-research meltdown triggers autism` |
+| 2.7 | ⬜ | Meltdown at school | meltdown at school | `/keyword-research meltdown at school` |
+| 2.8 | ⬜ | After meltdown recovery | after meltdown recovery | `/keyword-research after meltdown recovery` |
+| 2.9 | ⬜ | Public meltdown autism | public meltdown autism | `/keyword-research public meltdown autism` |
+| 2.10 | ⬜ | Meltdown survival guide parents | meltdown survival guide parents | `/keyword-research meltdown survival guide parents` |
+| 2.11 | ⬜ | Shutdown vs meltdown | shutdown vs meltdown autism | `/keyword-research shutdown vs meltdown autism` |
+| 2.12 | ⬜ | Bedtime meltdowns | bedtime meltdowns | `/keyword-research bedtime meltdowns` |
+| 2.13 | ⬜ | Sound for meltdown recovery | sound for meltdown recovery | `/keyword-research sound for meltdown recovery` |
+| 2.14 | ⬜ | Meltdown prevention strategies | meltdown prevention strategies | `/keyword-research meltdown prevention strategies` |
+| 2.15 | ⬜ | Am I making meltdowns worse | am I making meltdowns worse | `/keyword-research am I making meltdowns worse` |
 
 ---
 
-## Pillar 4: Sensory Friendly Apps (2,000-3,000 monthly searches)
+## Pillar 3: Emotional Regulation
 
-| # | Status | Article | Keyword | Volume | Prompt |
-|---|--------|---------|---------|--------|--------|
-| 45 | ⬜ | HUB: Sensory Apps | Sensory apps for children | 2,000-3,000 | `Create research file at research/pillar-4-sensory-apps/hub-research.md using the template with all 9 sections, then write hub article (min 3,000 words) for "Sensory apps for children" targeting parents of sensory-sensitive kids. Save to src/content/pillar-4-sensory-apps/hub-sensory-apps.md. Run all gates before finalising.` |
-| 46 | ⬜ | 4.1 Overload vs Seeking | Sensory overload vs sensory seeking | 300-700 | `Create research file at research/pillar-4-sensory-apps/4.1-overload-vs-seeking-research.md using the template, then write cluster article for "Sensory overload vs sensory seeking" explaining the difference. Save to src/content/pillar-4-sensory-apps/4.1-overload-vs-seeking.md. Run all gates before finalising.` |
-| 47 | ⬜ | 4.2 Binaural Beats Kids | Binaural beats kids | 400-800 | `Create research file at research/pillar-4-sensory-apps/4.2-binaural-beats-research.md using the template, then write cluster article for "Binaural beats kids" with research backing. Save to src/content/pillar-4-sensory-apps/4.2-binaural-beats-kids.md. Run all gates before finalising.` |
-| 48 | ⬜ | 4.3 ASMR Kids | ASMR kids | 600-1,200 | `Create research file at research/pillar-4-sensory-apps/4.3-asmr-kids-research.md using the template, then write cluster article for "ASMR kids" with sensory-friendly focus. Save to src/content/pillar-4-sensory-apps/4.3-asmr-kids.md. Run all gates before finalising.` |
-| 49 | ⬜ | 4.4 Autism Sensory | Autism sensory regulation apps | 400-900 | `Create research file at research/pillar-4-sensory-apps/4.4-autism-sensory-research.md using the template, then write cluster article for "Autism sensory regulation apps" for autistic children. Save to src/content/pillar-4-sensory-apps/4.4-autism-sensory-apps.md. Run all gates before finalising.` |
-| 50 | ⬜ | 4.5 ADHD Stimming | ADHD stimming apps | 300-700 | `Create research file at research/pillar-4-sensory-apps/4.5-stimming-apps-research.md using the template, then write cluster article for "ADHD stimming apps" with affirming approach. Save to src/content/pillar-4-sensory-apps/4.5-adhd-stimming-apps.md. Run all gates before finalising.` |
-| 51 | ⬜ | 4.6 Sensory Toolkit | Sensory toolkit children | 200-500 | `Create research file at research/pillar-4-sensory-apps/4.6-sensory-toolkit-research.md using the template, then write cluster article for "Sensory toolkit children" with practical ideas. Save to src/content/pillar-4-sensory-apps/4.6-sensory-toolkit.md. Run all gates before finalising.` |
-| 52 | ⬜ | 4.7 Sensory Diet | Sensory diet children | 300-600 | `Create research file at research/pillar-4-sensory-apps/4.7-sensory-diet-research.md using the template, then write cluster article for "Sensory diet children" explaining the concept. Save to src/content/pillar-4-sensory-apps/4.7-sensory-diet-children.md. Run all gates before finalising.` |
-| 53 | ⬜ | 4.8 Weighted Blankets | Weighted blankets anxiety sleep | 800-1,500 | `Create research file at research/pillar-4-sensory-apps/4.8-weighted-blankets-research.md using the template, then write cluster article for "Weighted blankets anxiety sleep" with evidence-based info. Save to src/content/pillar-4-sensory-apps/4.8-weighted-blankets.md. Run all gates before finalising.` |
-| 54 | ⬜ | 4.9 Sensory Home | Sensory friendly home design | 200-500 | `Create research file at research/pillar-4-sensory-apps/4.9-sensory-home-research.md using the template, then write cluster article for "Sensory friendly home design" with room-by-room tips. Save to src/content/pillar-4-sensory-apps/4.9-sensory-friendly-home.md. Run all gates before finalising.` |
-| 55 | ⬜ | 4.10 School Accommodations | School sensory accommodations | 300-700 | `Create research file at research/pillar-4-sensory-apps/4.10-school-accommodations-research.md using the template, then write cluster article for "School sensory accommodations" for advocacy. Save to src/content/pillar-4-sensory-apps/4.10-school-sensory-accommodations.md. Run all gates before finalising.` |
+**Hub Keyword:** emotional dysregulation (9,900/mo, KD 42, Medium)
+**V3 Score:** 457 | **Intent:** Info-product | **Trend:** Rising
+**Product Fit:** Emotions series, Affirmations, Peace Time
 
----
-
-## Pillar 7: Neurodivergent Parenting (2,000-4,000 monthly searches)
-
-| # | Status | Article | Keyword | Volume | Prompt |
-|---|--------|---------|---------|--------|--------|
-| 56 | ⬜ | HUB: ND Parenting | Neurodivergent parenting | 2,000-4,000 | `Create research file at research/pillar-7-neurodivergent-parenting/hub-research.md using the template with all 9 sections, then write hub article (min 3,000 words) for "Neurodivergent parenting" targeting exhausted parents. Save to src/content/pillar-7-neurodivergent-parenting/hub-neurodivergent-parenting.md. Run all gates before finalising.` |
-| 57 | ⬜ | 7.1 Parent Burnout | Parent burnout ADHD | 500-1,100 | `Create research file at research/pillar-7-neurodivergent-parenting/7.1-parent-burnout-research.md using the template, then write cluster article for "Parent burnout ADHD" with compassionate approach. Save to src/content/pillar-7-neurodivergent-parenting/7.1-parent-burnout-adhd.md. Run all gates before finalising.` |
-| 58 | ⬜ | 7.2 Sleep Deprivation | ADHD parent sleep deprivation | 300-700 | `Create research file at research/pillar-7-neurodivergent-parenting/7.2-sleep-deprivation-research.md using the template, then write cluster article for "ADHD parent sleep deprivation" addressing parent exhaustion. Save to src/content/pillar-7-neurodivergent-parenting/7.2-parent-sleep-deprivation.md. Run all gates before finalising.` |
-| 59 | ⬜ | 7.3 Respite Care | Respite care ADHD children | 200-500 | `Create research file at research/pillar-7-neurodivergent-parenting/7.3-respite-care-research.md using the template, then write cluster article for "Respite care ADHD children" with UK resources. Save to src/content/pillar-7-neurodivergent-parenting/7.3-respite-care-adhd.md. Run all gates before finalising.` |
-| 60 | ⬜ | 7.4 Co-Parenting | Co-parenting ADHD | 300-700 | `Create research file at research/pillar-7-neurodivergent-parenting/7.4-co-parenting-research.md using the template, then write cluster article for "Co-parenting ADHD" for separated or partnered parents. Save to src/content/pillar-7-neurodivergent-parenting/7.4-co-parenting-adhd.md. Run all gates before finalising.` |
-| 61 | ⬜ | 7.5 Parent Therapy | Parent therapy counseling | 400-900 | `Create research file at research/pillar-7-neurodivergent-parenting/7.5-parent-therapy-research.md using the template, then write cluster article for "Parent therapy counseling" (UK spelling: counselling) for parent wellbeing. Save to src/content/pillar-7-neurodivergent-parenting/7.5-parent-therapy.md. Run all gates before finalising.` |
-| 62 | ⬜ | 7.6 Community Support | ADHD parenting community support | 300-700 | `Create research file at research/pillar-7-neurodivergent-parenting/7.6-community-support-research.md using the template, then write cluster article for "ADHD parenting community support" with UK groups. Save to src/content/pillar-7-neurodivergent-parenting/7.6-community-support.md. Run all gates before finalising.` |
-| 63 | ⬜ | 7.7 Self-Compassion | Self-compassion parents | 300-700 | `Create research file at research/pillar-7-neurodivergent-parenting/7.7-self-compassion-research.md using the template, then write cluster article for "Self-compassion parents" with gentle strategies. Save to src/content/pillar-7-neurodivergent-parenting/7.7-self-compassion-parents.md. Run all gates before finalising.` |
-| 64 | ⬜ | 7.8 Self-Care Apps | Parent self-care apps | 300-700 | `Create research file at research/pillar-7-neurodivergent-parenting/7.8-self-care-apps-research.md using the template, then write cluster article for "Parent self-care apps" for overwhelmed parents. Save to src/content/pillar-7-neurodivergent-parenting/7.8-parent-self-care-apps.md. Run all gates before finalising.` |
-| 65 | ⬜ | 7.9 Stress Management | Stress management parents | 500-1,100 | `Create research file at research/pillar-7-neurodivergent-parenting/7.9-stress-management-research.md using the template, then write cluster article for "Stress management parents" with practical techniques. Save to src/content/pillar-7-neurodivergent-parenting/7.9-stress-management-parents.md. Run all gates before finalising.` |
-| 66 | ⬜ | 7.10 ND Parent ADHD | Neurodivergent parent ADHD | 400-900 | `Create research file at research/pillar-7-neurodivergent-parenting/7.10-nd-parent-research.md using the template, then write cluster article for "Neurodivergent parent ADHD" for parents who are also ND. Save to src/content/pillar-7-neurodivergent-parenting/7.10-neurodivergent-parent-adhd.md. Run all gates before finalising.` |
+| # | Status | Article | Keyword | Prompt |
+|---|--------|---------|---------|--------|
+| 3.0 | ⬜ | HUB: Big Feelings: Understanding and Supporting Emotional Regulation | emotional dysregulation | `/keyword-research emotional dysregulation` |
+| 3.1 | ⬜ | Emotional dysregulation ADHD | emotional dysregulation ADHD | `/keyword-research emotional dysregulation ADHD` |
+| 3.2 | ⬜ | Big feelings autism | big feelings autism | `/keyword-research big feelings autism` |
+| 3.3 | ⬜ | ADHD mood swings child | ADHD mood swings child | `/keyword-research ADHD mood swings child` |
+| 3.4 | ⬜ | Calming strategies children | calming strategies children | `/keyword-research calming strategies children` |
+| 3.5 | ⬜ | Angry outbursts ADHD child | angry outbursts ADHD child | `/keyword-research angry outbursts ADHD child` |
+| 3.6 | ⬜ | Emotional regulation tools | emotional regulation tools children | `/keyword-research emotional regulation tools children` |
+| 3.7 | ⬜ | Co-regulation parent child | co-regulation parent child | `/keyword-research co-regulation parent child` |
+| 3.8 | ⬜ | Nervous system regulation children | nervous system regulation children | `/keyword-research nervous system regulation children` |
+| 3.9 | ⬜ | Rejection sensitivity dysphoria | rejection sensitivity dysphoria | `/keyword-research rejection sensitivity dysphoria` |
+| 3.10 | ⬜ | Anxiety and ADHD child | anxiety and ADHD child | `/keyword-research anxiety and ADHD child` |
+| 3.11 | ⬜ | Sound therapy emotional regulation | sound therapy emotional regulation | `/keyword-research sound therapy emotional regulation` |
+| 3.12 | ⬜ | Helping child identify emotions | helping child identify emotions | `/keyword-research helping child identify emotions` |
 
 ---
 
-## Pillar 6: Emotional Regulation (1,000-2,000 monthly searches)
+## Pillar 4: Transitions and Routines
 
-| # | Status | Article | Keyword | Volume | Prompt |
-|---|--------|---------|---------|--------|--------|
-| 67 | ⬜ | HUB: Emotional Regulation | Emotional regulation apps children | 1,000-2,000 | `Create research file at research/pillar-6-emotional-regulation/hub-research.md using the template with all 9 sections, then write hub article (min 3,000 words) for "Emotional regulation apps children" targeting parents. Save to src/content/pillar-6-emotional-regulation/hub-emotional-regulation.md. Run all gates before finalising.` |
-| 68 | ⬜ | 6.1 Dysregulation ADHD | Emotional dysregulation ADHD children | 400-800 | `Create research file at research/pillar-6-emotional-regulation/6.1-dysregulation-adhd-research.md using the template, then write cluster article for "Emotional dysregulation ADHD children" with understanding focus. Save to src/content/pillar-6-emotional-regulation/6.1-dysregulation-adhd.md. Run all gates before finalising.` |
-| 69 | ⬜ | 6.2 Regulation Autism | Emotional regulation autism | 300-700 | `Create research file at research/pillar-6-emotional-regulation/6.2-regulation-autism-research.md using the template, then write cluster article for "Emotional regulation autism" for autistic children. Save to src/content/pillar-6-emotional-regulation/6.2-emotional-regulation-autism.md. Run all gates before finalising.` |
-| 70 | ⬜ | 6.3 Affirmations | Affirmations anxious children | 300-700 | `Create research file at research/pillar-6-emotional-regulation/6.3-affirmations-research.md using the template, then write cluster article for "Affirmations anxious children" with gentle approach. Save to src/content/pillar-6-emotional-regulation/6.3-affirmations-anxious-children.md. Run all gates before finalising.` |
-| 71 | ⬜ | 6.4 Mindfulness ADHD | Mindfulness ADHD children | 600-1,200 | `Create research file at research/pillar-6-emotional-regulation/6.4-mindfulness-adhd-research.md using the template, then write cluster article for "Mindfulness ADHD children" with realistic expectations. Save to src/content/pillar-6-emotional-regulation/6.4-mindfulness-adhd-children.md. Run all gates before finalising.` |
-| 72 | ⬜ | 6.5 Anger Management | Anger management apps kids | 500-1,100 | `Create research file at research/pillar-6-emotional-regulation/6.5-anger-management-research.md using the template, then write cluster article for "Anger management apps kids" with compassionate framing. Save to src/content/pillar-6-emotional-regulation/6.5-anger-management-apps.md. Run all gates before finalising.` |
-| 73 | ⬜ | 6.6 Emotional Vocabulary | Emotional vocabulary children | 300-700 | `Create research file at research/pillar-6-emotional-regulation/6.6-emotional-vocabulary-research.md using the template, then write cluster article for "Emotional vocabulary children" for naming feelings. Save to src/content/pillar-6-emotional-regulation/6.6-emotional-vocabulary.md. Run all gates before finalising.` |
-| 74 | ⬜ | 6.7 Self-Compassion Kids | Self-compassion children | 300-700 | `Create research file at research/pillar-6-emotional-regulation/6.7-self-compassion-kids-research.md using the template, then write cluster article for "Self-compassion children" with gentle strategies. Save to src/content/pillar-6-emotional-regulation/6.7-self-compassion-children.md. Run all gates before finalising.` |
-| 75 | ⬜ | 6.8 Emotional Resilience | Emotional resilience children | 400-900 | `Create research file at research/pillar-6-emotional-regulation/6.8-resilience-research.md using the template, then write cluster article for "Emotional resilience children" with building capacity. Save to src/content/pillar-6-emotional-regulation/6.8-emotional-resilience.md. Run all gates before finalising.` |
-| 76 | ⬜ | 6.9 Breathing Exercises | Breathing exercises kids anxiety | 600-1,200 | `Create research file at research/pillar-6-emotional-regulation/6.9-breathing-exercises-research.md using the template, then write cluster article for "Breathing exercises kids anxiety" with practical techniques. Save to src/content/pillar-6-emotional-regulation/6.9-breathing-exercises-kids.md. Run all gates before finalising.` |
-| 77 | ⬜ | 6.10 Coping Strategies | Coping strategies apps kids | 300-700 | `Create research file at research/pillar-6-emotional-regulation/6.10-coping-strategies-research.md using the template, then write cluster article for "Coping strategies apps kids" with toolkit approach. Save to src/content/pillar-6-emotional-regulation/6.10-coping-strategies-apps.md. Run all gates before finalising.` |
+**Hub Keyword:** autism routine (390/mo, KD 12, Easy)
+**V3 Score:** 35 | **Intent:** Info-product | **Trend:** Stable
+**Product Fit:** All products (transition support)
+
+| # | Status | Article | Keyword | Prompt |
+|---|--------|---------|---------|--------|
+| 4.0 | ⬜ | HUB: Why Transitions Are So Hard (And What Actually Helps) | autism routine | `/keyword-research autism routine` |
+| 4.1 | ⬜ | Morning routine ADHD child | morning routine ADHD child | `/keyword-research morning routine ADHD child` |
+| 4.2 | ⬜ | Autistic child morning struggles | autistic child morning struggles | `/keyword-research autistic child morning struggles` |
+| 4.3 | ⬜ | After school meltdowns | after school meltdowns | `/keyword-research after school meltdowns` |
+| 4.4 | ⬜ | After school routine autism | after school routine autism | `/keyword-research after school routine autism` |
+| 4.5 | ⬜ | School refusal autism | school refusal autism | `/keyword-research school refusal autism` |
+| 4.6 | ⬜ | Transition to secondary school autism | transition to secondary school autism | `/keyword-research transition to secondary school autism` |
+| 4.7 | ⬜ | Visual timetable autism | visual timetable autism | `/keyword-research visual timetable autism` |
+| 4.8 | ⬜ | ADHD child won't get ready | ADHD child won't get ready | `/keyword-research ADHD child won't get ready` |
+| 4.9 | ⬜ | Transition between activities | transition between activities ADHD | `/keyword-research transition between activities ADHD` |
+| 4.10 | ⬜ | Low demand parenting | low demand parenting | `/keyword-research low demand parenting` |
+| 4.11 | ⬜ | Routine changes ADHD anxiety | routine changes ADHD anxiety | `/keyword-research routine changes ADHD anxiety` |
+| 4.12 | ⬜ | School uniform sensory issues | school uniform sensory issues | `/keyword-research school uniform sensory issues` |
+| 4.13 | ⬜ | Holiday routine autism | holiday routine autism | `/keyword-research holiday routine autism` |
+| 4.14 | ⬜ | Sound for transitions | sound for transitions | `/keyword-research sound for transitions` |
+| 4.15 | ⬜ | Time blindness ADHD morning | time blindness ADHD morning | `/keyword-research time blindness ADHD morning` |
 
 ---
 
+## Pillar 5: Focus and Concentration
 
-*Last Updated: 2026-01-29*
+**Hub Keyword:** ADHD focus (260/mo, KD 16, Easy)
+**V3 Score:** 20 | **Intent:** Info-product | **Trend:** Stable
+**Product Fit:** Frequencies, Focus series, Binaural Beats
+
+| # | Status | Article | Keyword | Prompt |
+|---|--------|---------|---------|--------|
+| 5.0 | ⬜ | HUB: Beyond 'Just Focus': What ADHD Attention Actually Looks Like | ADHD focus | `/keyword-research ADHD focus` |
+| 5.1 | ⬜ | ADHD child won't do homework | ADHD child won't do homework | `/keyword-research ADHD child won't do homework` |
+| 5.2 | ⬜ | Homework battles ADHD | homework battles ADHD | `/keyword-research homework battles ADHD` |
+| 5.3 | ⬜ | Fidget tools focus ADHD | fidget tools focus ADHD | `/keyword-research fidget tools focus ADHD` |
+| 5.4 | ⬜ | How long can ADHD child focus | how long can ADHD child focus | `/keyword-research how long can ADHD child focus` |
+| 5.5 | ⬜ | Distraction free homework space | distraction free homework space | `/keyword-research distraction free homework space` |
+| 5.6 | ⬜ | ADHD medication homework timing | ADHD medication homework timing | `/keyword-research ADHD medication homework timing` |
+| 5.7 | ⬜ | Focus inconsistency ADHD | focus inconsistency ADHD | `/keyword-research focus inconsistency ADHD` |
+| 5.8 | ⬜ | Exam accommodations ADHD UK | exam accommodations ADHD UK | `/keyword-research exam accommodations ADHD UK` |
+| 5.9 | ⬜ | Handwriting difficulties ADHD | handwriting difficulties ADHD | `/keyword-research handwriting difficulties ADHD` |
+| 5.10 | ⬜ | Background noise helps ADHD | background noise helps ADHD | `/keyword-research background noise helps ADHD` |
+| 5.11 | ⬜ | Sound therapy focus | sound therapy focus | `/keyword-research sound therapy focus` |
+| 5.12 | ⬜ | SATs stress ADHD autism | SATs stress ADHD autism | `/keyword-research SATs stress ADHD autism` |
+
+---
+
+## Pillar 6: Sensory Processing
+
+**Hub Keyword:** sensory overload (3,600/mo, KD 46, Medium)
+**V3 Score:** 161 | **Intent:** Crisis | **Trend:** Stable
+**Product Fit:** ASMR Kaleidoscopes, Frequencies, ASMR Soundscapes
+
+| # | Status | Article | Keyword | Prompt |
+|---|--------|---------|---------|--------|
+| 6.0 | ⬜ | HUB: Sensory Overload: What Your Child Experiences and How to Help | sensory overload | `/keyword-research sensory overload` |
+| 6.1 | ⬜ | Sensory overload symptoms | sensory overload symptoms | `/keyword-research sensory overload symptoms` |
+| 6.2 | ⬜ | ADHD overstimulation | ADHD overstimulation | `/keyword-research ADHD overstimulation` |
+| 6.3 | ⬜ | Sensory seeking child | sensory seeking child | `/keyword-research sensory seeking child` |
+| 6.4 | ⬜ | Sensory avoiding child | sensory avoiding child | `/keyword-research sensory avoiding child` |
+| 6.5 | ⬜ | Noise sensitivity ADHD | noise sensitivity ADHD | `/keyword-research noise sensitivity ADHD` |
+| 6.6 | ⬜ | Light sensitivity autism | light sensitivity autism | `/keyword-research light sensitivity autism` |
+| 6.7 | ⬜ | Sensory diet activities | sensory diet activities | `/keyword-research sensory diet activities` |
+| 6.8 | ⬜ | Sensory friendly environment | sensory friendly environment | `/keyword-research sensory friendly environment` |
+| 6.9 | ⬜ | Sensory overload school | sensory overload school | `/keyword-research sensory overload school` |
+| 6.10 | ⬜ | AuDHD sensory | AuDHD sensory | `/keyword-research AuDHD sensory` |
+| 6.11 | ⬜ | Sensory meltdown triggers | sensory meltdown triggers | `/keyword-research sensory meltdown triggers` |
+| 6.12 | ⬜ | Calming sensory input | calming sensory input | `/keyword-research calming sensory input` |
+| 6.13 | ⬜ | Interoception children | interoception children | `/keyword-research interoception children` |
+| 6.14 | ⬜ | Sound therapy sensory overload | sound therapy sensory overload | `/keyword-research sound therapy sensory overload` |
+| 6.15 | ⬜ | Sensory processing differences explained | sensory processing differences explained | `/keyword-research sensory processing differences explained` |
+
+---
+
+## Pillar 7: Sound Therapy
+
+**Hub Keyword:** sound therapy (1,600/mo, KD 41, Medium)
+**V3 Score:** 63 | **Intent:** Info-product | **Trend:** Stable
+**Product Fit:** All HushAway products
+
+| # | Status | Article | Keyword | Prompt |
+|---|--------|---------|---------|--------|
+| 7.0 | ⬜ | HUB: Sound Therapy for Neurodivergent Children: What the Research Shows | sound therapy | `/keyword-research sound therapy` |
+| 7.1 | ⬜ | White noise autism sleep | white noise autism sleep | `/keyword-research white noise autism sleep` |
+| 7.2 | ⬜ | ASMR for children | ASMR for children | `/keyword-research ASMR for children` |
+| 7.3 | ⬜ | Binaural beats children | binaural beats children | `/keyword-research binaural beats children` |
+| 7.4 | ⬜ | Nature sounds calm children | nature sounds calm children | `/keyword-research nature sounds calm children` |
+| 7.5 | ⬜ | Sound for sensory regulation | sound for sensory regulation | `/keyword-research sound for sensory regulation` |
+| 7.6 | ⬜ | Passive listening vs apps | passive listening vs apps | `/keyword-research passive listening vs apps` |
+| 7.7 | ⬜ | HushAway sound sanctuary | HushAway sound sanctuary | `/keyword-research HushAway sound sanctuary` |
+| 7.8 | ⬜ | Sound therapy vs meditation | sound therapy vs meditation | `/keyword-research sound therapy vs meditation` |
+| 7.9 | ⬜ | Calming sounds vs silence | calming sounds vs silence | `/keyword-research calming sounds vs silence` |
+| 7.10 | ⬜ | Sound sensitivity and sound therapy | sound sensitivity and sound therapy | `/keyword-research sound sensitivity and sound therapy` |
+
+---
+
+## Pillar 8: Comparisons
+
+**Hub Keyword:** calm apps (4,400/mo, KD 47, Medium)
+**V3 Score:** 193 | **Intent:** Commercial | **Trend:** Stable
+**Product Fit:** All HushAway products
+
+| # | Status | Article | Keyword | Prompt |
+|---|--------|---------|---------|--------|
+| 8.0 | ⬜ | HUB: Finding the Right Sound App for Your Neurodivergent Child | calm apps | `/keyword-research calm apps` |
+| 8.1 | ⬜ | HushAway vs Calm | HushAway vs Calm | `/keyword-research HushAway vs Calm` |
+| 8.2 | ⬜ | HushAway vs Moshi | HushAway vs Moshi | `/keyword-research HushAway vs Moshi` |
+| 8.3 | ⬜ | HushAway vs Headspace | HushAway vs Headspace | `/keyword-research HushAway vs Headspace` |
+| 8.4 | ⬜ | Free ADHD apps children | free ADHD apps children | `/keyword-research free ADHD apps children` |
+| 8.5 | ⬜ | Best sleep apps autism UK | best sleep apps autism UK | `/keyword-research best sleep apps autism UK` |
+| 8.6 | ⬜ | Sound apps vs meditation apps | sound apps vs meditation apps | `/keyword-research sound apps vs meditation apps` |
+| 8.7 | ⬜ | Generic calm apps don't work | generic calm apps don't work | `/keyword-research generic calm apps don't work` |
+| 8.8 | ⬜ | Screen-free sound options | screen-free sound options | `/keyword-research screen-free sound options` |
+
+---
+
+## Validation Data Summary
+
+| Pillar | Hub Keyword | UK Volume | Difficulty | Trend | V3 Score | Priority |
+|--------|-------------|-----------|------------|-------|----------|----------|
+| 1 | ADHD sleep | 2,400 | 5 (Easy) | Stable | 400 | 1st |
+| 2 | autistic meltdown | 3,600 | 10 (Easy) | Stable | 450 | 2nd |
+| 3 | emotional dysregulation | 9,900 | 42 (Medium) | Rising | 457 | 5th |
+| 4 | autism routine | 390 | 12 (Easy) | Stable | 35 | 4th |
+| 5 | ADHD focus | 260 | 16 (Easy) | Stable | 20 | 6th |
+| 6 | sensory overload | 3,600 | 46 (Medium) | Stable | 161 | 3rd |
+| 7 | sound therapy | 1,600 | 41 (Medium) | Stable | 63 | 7th |
+| 8 | calm apps | 4,400 | 47 (Medium) | Stable | 193 | 8th |
+
+**Total Validated Hub Volume:** 26,050
+**Data Source:** DataForSEO + Perplexity MCP (UK location 2826)
+**Validation Date:** 2026-01-31
+
+---
+
+## File Structure
+
+Articles are stored in: `/src/content/pillar-[N]-[topic-name]/`
+Research files are stored in: `/research/pillar-[N]-[topic-name]/`
+
+Example paths:
+- Hub: `src/content/pillar-1-sleep-bedtime/hub-adhd-sleep.md`
+- Cluster: `src/content/pillar-1-sleep-bedtime/1.1-adhd-child-wont-sleep.md`
+- Research: `research/pillar-1-sleep-bedtime/hub-research.md`
+
+---
+
+*Last Updated: 2026-01-31*

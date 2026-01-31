@@ -72,13 +72,14 @@ This catches 90%+ of Content Gate failures DURING writing, preventing iteration 
 ### Word Frequency Tracking
 
 Track frequency-limited words as you write. See `.claude/rules/humanise-rules.md` Section 2 for:
-- Full list of limited words and their maximums
-- Scaling rules for articles over 3,500 words
+- Full list of 18 limited words and their maximums
+- 12 intensifier limits
+- **Scaling formula for articles 3,500+ words** (limits increase by 1)
 
 **Most commonly exceeded (quick reference):**
-- actually: 2 max
+- actually: 2 max (3 for 3,500+ words)
 - specifically: 2 max
-- helpful: 3 max
+- helpful: 3 max (4 for 3,500+ words)
 
 ### Before Completing Each H2 Section
 

@@ -391,82 +391,28 @@ AI-generated content has tells. Remove them ruthlessly.
 
 The goal isn't "sounds okay." It's "sounds like a specific person wrote this based on real experience."
 
-### The AI Detection Patterns
+### AI Detection Patterns
 
-AI content fails in predictable ways. Learn to spot them:
+**Full lists of banned words and phrases:** See `.claude/rules/humanise-rules.md`:
+- Section 1: Zero Tolerance Words (51 AI-isms, banned phrases)
+- Section 3: Banned Phrases (self-answering questions, labelled transitions, guide-speak)
+- Section 5: Human Voice Requirements (contractions, short sentences, variety)
 
-**1. Word-Level Tells**
+**Key patterns to watch for:**
+- **Word-level:** delve, comprehensive, utilize, leverage, crucial, landscape, navigate
+- **Phrase-level:** "In today's...", "It's important to note...", "When it comes to..."
+- **Structure-level:** Everything in threes, perfect parallelism, hedge stacks
+- **Voice-level:** No opinions, no mistakes mentioned, generic examples
 
-Kill these immediately:
-- delve, dive into, dig into
-- comprehensive, robust, cutting-edge
-- utilize (just say "use")
-- leverage (as a verb)
-- crucial, vital, essential
-- unlock, unleash, supercharge
-- game-changer, revolutionary
-- landscape, navigate, streamline
-- tapestry, multifaceted, myriad
-- foster, facilitate, enhance
-- realm, paradigm, synergy
-- embark, journey (for processes)
-- plethora, myriad, bevy
-- nuanced, intricate, seamless
+### Human Voice Markers
 
-**2. Phrase-Level Tells**
-
-These scream "AI wrote this":
-- "In today's fast-paced world..."
-- "In today's digital age..."
-- "It's important to note that..."
-- "When it comes to..."
-- "In order to..." (just say "to")
-- "Whether you're a... or a..."
-- "Let's dive in" / "Let's explore"
-- "Without further ado"
-- "At the end of the day"
-- "It goes without saying"
-- "In conclusion" (especially at the end)
-- "This comprehensive guide will..."
-- "Are you looking for..." (fake questions)
-- "Look no further"
-
-**3. Structure-Level Tells**
-
-AI has recognizable structural patterns:
-
-- **The Triple Pattern**: Everything in threes. Three benefits. Three examples. Three subpoints. Humans are messier.
-- **Perfect Parallelism**: Every bullet point same length, same structure. Too clean.
-- **The Hedge Stack**: "While X, it's important to consider Y, but also Z." Never commits.
-- **Fake Objectivity**: "Some experts say... others believe..." without taking a position.
-- **Summary Sandwich**: Intro summarizes, body covers, conclusion summarizes again. Boring.
-- **Empty Transitions**: "Now that we've covered X, let's move on to Y." Adds nothing.
-
-**4. Voice-Level Tells**
-
-The hardest to fix:
-
-- **No Opinions**: Everything balanced, nothing claimed. Real experts have takes.
-- **No Mistakes Mentioned**: Never wrong about anything, ever. Suspicious.
-- **Generic Examples**: "For example, a business might..." instead of a real story.
-- **Distance from Subject**: Writing about, not from experience of.
-- **Uniform Certainty**: Every statement equally confident. Humans hedge where uncertain, commit where sure.
-
-### Before/After Examples
-
-**AI Version:**
-> "Email marketing remains a crucial component of any comprehensive digital marketing strategy. When it comes to improving open rates, it's important to consider several key factors. First, crafting compelling subject lines is essential. Second, segmenting your audience allows for more targeted messaging. Third, timing plays a vital role in engagement."
-
-**Human Version:**
-> "I ignored email for two years. Social media was sexier. Then I looked at the numbers: email drove 3x the revenue of all social combined. Here's what actually moves open rates—the stuff that worked when we tested it across 12 client accounts."
-
----
-
-**AI Version:**
-> "In today's fast-paced business landscape, professionals are increasingly turning to automation tools to streamline their workflows and enhance productivity. These comprehensive solutions offer a myriad of benefits for organizations of all sizes."
-
-**Human Version:**
-> "Most automation tools are shelfware. You buy them, set them up, use them twice, forget they exist. Here are the three that actually stuck after a year of testing—and the 14 I wasted money on."
+Real writing has:
+- Contractions (I'm, you're, it's, don't)
+- Sentence fragments
+- Strong opinions without hedging
+- "I" and "you" used freely
+- Unexpected word choices
+- Varying sentence/paragraph lengths
 
 ---
 
