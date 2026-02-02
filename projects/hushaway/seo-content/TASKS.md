@@ -5,7 +5,7 @@
 | Task | Status |
 |------|--------|
 | Task 1: Keyword Research | PASS |
-| Task 2: Start ADHD Sleep Pillar | pending |
+| Task 2: Start ADHD Sleep Pillar | PASS |
 | Task 3: Positioning Angles for ADHD Sleep | pending |
 | Task 4: Write ADHD Sleep Articles | pending |
 
@@ -45,16 +45,28 @@
 **Objective:** Create pillar brief for ADHD Sleep with competitor analysis and content plan.
 
 **Acceptance Criteria:**
-- [ ] Extract ADHD Sleep pillar from keyword brief
-- [ ] Run deep competitor analysis on top 5 ranking content
-- [ ] Identify content gaps and angle opportunities
-- [ ] Create article outline for pillar guide + supporting articles
-- [ ] Output saved to `adhd-sleep/01-pillar-brief.md`
+- [x] Extract ADHD Sleep pillar from keyword brief
+- [x] Run deep competitor analysis on top 5 ranking content
+- [x] Identify content gaps and angle opportunities
+- [x] Create article outline for pillar guide + supporting articles
+- [x] Output saved to `adhd-sleep/01-pillar-brief.md`
 
 **Starter Prompt:**
 > Run /start-pillar for ADHD Sleep. Extract the pillar from 00-keyword-brief.md. Focus on: (1) Deep competitor analysis of NHS, CHADD, ADDitude, Moshi testimonials, and any UK ADHD sleep content; (2) Identify what none of them say (passive listening, ND-first design, "racing brain" language); (3) Plan 8+ articles covering: pillar guide, ADHD bedtime routine, calming sounds for ADHD, ADHD medication and sleep, racing thoughts at bedtime, ADHD sleep vs autism sleep. Position all content toward The Open Sanctuary as primary CTA.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `adhd-sleep/01-pillar-brief.md` with all 7 sections: strategic context, keyword table (21 keywords mapped), competitor analysis (NHS Trust Resources, The ADHD Centre, Kids.org.uk), content plan (7 articles), angle opportunities (5 identified), internal linking map, and publishing order.
+- **Decisions:**
+  - Primary angle: "The Missing Piece" — position sound-based solutions as what's missing from current ADHD sleep guidance
+  - Top competitors: NHS Trust Resources (DR 90+, comprehensive but clinical), The ADHD Centre (DR 35-45, parent-friendly but no sound solutions), Kids.org.uk (DR 55-65, charity credibility but generic)
+  - Key gap: NO UK competitor combines ADHD sleep expertise with sound-based solutions and parent-friendly voice
+  - 7 articles planned: 6 supporting + 1 pillar guide (publishes last)
+  - Article 1 "Why Your ADHD Child Won't Sleep" is foundation — all other articles reference concepts it introduces
+- **Next:** Run `/positioning-angles` to develop unified positioning for all 7 articles. Primary angle established; need secondary angles per article and consistency check.
 
 ---
 
@@ -93,4 +105,4 @@
 ---
 
 *Project started: 2026-02-02*
-*Last updated: 2026-02-02*
+*Last updated: 2026-02-03*
