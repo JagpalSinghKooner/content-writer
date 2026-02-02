@@ -4,9 +4,32 @@
 
 | Task | Status |
 |------|--------|
+| Task 7: Error Learning System with GitHub Integration | PASS |
 | Task 6: End-to-End Validation with Real Client | pending |
 
-**Previous work:** 36 tasks completed (see git history). Git + GitHub setup complete.
+**Previous work:** 37 tasks completed (see git history). Git + GitHub setup complete. Error tracking system added.
+
+---
+
+## Task 7: Error Learning System with GitHub Integration
+
+**Objective:** Add automatic error logging to GitHub Issues for pattern extraction and system improvement.
+
+**Acceptance Criteria:**
+- [x] Rule #3: Error Tracking Protocol added to CLAUDE.md
+- [x] Extracted-from-Issue template added to common-mistakes.md
+- [x] System creates Issue + Draft PR at pillar start
+- [x] Errors auto-logged to Issue during workflow
+- [x] Pattern extraction step added at pillar completion
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Added Rule #3 (Error Tracking Protocol) to CLAUDE.md. Added extracted-from-Issue template to common-mistakes.md.
+- **Decisions:** Per-pillar tracking (not per-project or per-session). Minimal error detail (type + message only). Both Issue (for errors) and Draft PR (for work) created at pillar start. Patterns extracted when 3+ occurrences.
+- **Next:** First real use will be during Task 6 (End-to-End Validation). Error tracking activates when starting the first pillar.
 
 ---
 

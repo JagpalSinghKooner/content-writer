@@ -149,6 +149,76 @@ After the final task in a pillar passes (pillar guide + distribution done):
 
 ---
 
+## Rule #3: Error Tracking (Automatic)
+
+**Every error is logged to GitHub for pattern extraction. This is how the system learns.**
+
+### When Starting a Pillar
+
+1. Create branch `pillar/{pillar-name}`
+2. Create GitHub Issue: `🔴 Errors: {Pillar Name}`
+3. Create Draft PR: `📚 {Pillar Name}` with Issue link in description
+
+**Issue Description Template:**
+```
+Tracking errors for the {Pillar Name} pillar.
+
+Errors are logged automatically. When the pillar completes, recurring patterns will be extracted to `common-mistakes.md`.
+
+Related PR: #{pr-number}
+```
+
+### When Any Error Occurs
+
+Auto-comment to the Issue with this format:
+
+```
+**[Error Type]** {message}
+```
+
+**Error Types:**
+| Type | When |
+|------|------|
+| `Validation FAIL` | `/validate-content` returns FAIL |
+| `Git Error` | Any git operation fails |
+| `Skill FAIL` | Any skill fails to complete |
+
+**Examples:**
+```
+**[Validation FAIL]** Banned word "leverage" in paragraph 3
+
+**[Git Error]** Merge conflict in 01-pillar-brief.md
+
+**[Skill FAIL]** /seo-content failed: missing brand voice in profile
+```
+
+### When Pillar Completes
+
+1. Review all errors logged to the Issue
+2. Extract recurring patterns (3+ occurrences) to `common-mistakes.md`
+3. Convert Draft PR to Ready for Review
+4. Close the Issue with summary comment
+
+**Closing Comment Template:**
+```
+## Summary
+
+- Total errors logged: {count}
+- Patterns extracted: {count}
+- Added to common-mistakes.md: {list pattern names}
+
+Closing as pillar is complete.
+```
+
+### Why This Rule Exists
+
+- **Captures everything** — No error lost between sessions
+- **Patterns emerge** — Same error 5 times = obvious pattern
+- **System improves** — common-mistakes.md grows with real data
+- **Errors decrease** — Future validation catches known patterns
+
+---
+
 ## Phase 1: Client Onboarding
 
 Run `/onboard-client` once per client to create their profile:
