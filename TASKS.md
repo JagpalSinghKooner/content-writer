@@ -5,9 +5,19 @@
 | Task | Status |
 |------|--------|
 | Task 7: Error Learning System with GitHub Integration | PASS |
+| Task 8: Document Sub-Agent Orchestration in CLAUDE.md | pending |
+| Task 9: Create Sub-Agent Template | pending |
+| Task 10: Update seo-content Skill | pending |
+| Task 11: Execute ADHD Sleep Pillar - Tier 1 | pending |
+| Task 12: Execute ADHD Sleep Pillar - Tier 2 | pending |
+| Task 13: Execute ADHD Sleep Pillar - Tier 3 | pending |
+| Task 14: Execute ADHD Sleep Pillar - Tier 4 | pending |
+| Task 15: Post-Pillar Linking Pass | pending |
 | Task 6: End-to-End Validation with Real Client | pending |
 
 **Previous work:** 37 tasks completed (see git history). Git + GitHub setup complete. Error tracking system added.
+
+**Plan reference:** Sub-Agent Orchestration plan at /Users/jagpalkooner/.claude/plans/hashed-puzzling-wilkes.md
 
 ---
 
@@ -46,5 +56,163 @@
 
 **Starter Prompt:**
 > Run end-to-end validation with first real client. Execute complete workflow: (1) Run /onboard-client for real client; (2) Run /keyword-research to produce keyword brief with real search data; (3) Run /start-pillar for first pillar with DR scores; (4) Run /positioning-angles for pillar positioning; (5) Run /seo-content for all supporting articles + pillar guide (10+ total); (6) Run /direct-response-copy on each article; (7) Run /validate-content on each article; (8) Run /content-atomizer on at least 2 articles; (9) Document any gaps or friction points encountered; (10) Update common-mistakes.md with any patterns; (11) Write retrospective noting what worked, what didn't, and any system improvements needed.
+
+**Status:** pending
+
+---
+
+## Task 8: Document Sub-Agent Orchestration in CLAUDE.md
+
+**Objective:** Add Sub-Agent Orchestration section to CLAUDE.md
+
+**Acceptance Criteria:**
+- [ ] New section added after "Phase 2: Content Generation"
+- [ ] Tier structure documented
+- [ ] Failure handling documented
+- [ ] Context management documented
+
+**Starter Prompt:**
+> Add sub-agent orchestration documentation to CLAUDE.md. Reference the approved plan at /Users/jagpalkooner/.claude/plans/hashed-puzzling-wilkes.md for the exact content to add.
+
+**Status:** pending
+
+---
+
+## Task 9: Create Sub-Agent Template
+
+**Objective:** Create sub-agent-seo-content.md template
+
+**Acceptance Criteria:**
+- [ ] Template created at .claude/skills/templates/sub-agent-seo-content.md
+- [ ] Includes context file references
+- [ ] Includes workflow requirements
+- [ ] Includes validation checklist
+
+**Starter Prompt:**
+> Create the sub-agent template for SEO content generation at .claude/skills/templates/sub-agent-seo-content.md. Reference the plan for template structure.
+
+**Status:** pending
+
+---
+
+## Task 10: Update seo-content Skill
+
+**Objective:** Add pillar mode to seo-content skill
+
+**Acceptance Criteria:**
+- [ ] Pillar mode section added to seo-content.md
+- [ ] Orchestration mode documented
+- [ ] Trigger command documented (`/seo-content pillar`)
+
+**Starter Prompt:**
+> Update .claude/skills/seo-content/seo-content.md with pillar mode documentation. Reference the plan for content to add.
+
+**Status:** pending
+
+---
+
+## Task 11: Execute ADHD Sleep Pillar - Tier 1
+
+**Objective:** Generate Article 1 using sub-agent orchestration
+
+**Context:**
+- Client: HushAway®
+- Pillar: ADHD Sleep
+- Article: Why Your ADHD Child Won't Sleep (And What Actually Helps)
+- Target keyword: adhd child won't sleep
+
+**Acceptance Criteria:**
+- [ ] Writing sub-agent creates Article 1
+- [ ] Validation sub-agent validates Article 1
+- [ ] Article passes validation
+- [ ] Committed to git
+
+**Starter Prompt:**
+> Execute Tier 1 of ADHD Sleep pillar for HushAway®. Read the pillar brief at projects/hushaway/seo-content/adhd-sleep/01-pillar-brief.md and positioning at 02-positioning.md. Spawn writing sub-agent for Article 1 (Why Your ADHD Child Won't Sleep), then validation sub-agent. Commit if PASS.
+
+**Status:** pending
+
+---
+
+## Task 12: Execute ADHD Sleep Pillar - Tier 2
+
+**Objective:** Generate Articles 2, 3, 4, 6 in parallel
+
+**Context:**
+- Article 2: ADHD Bedtime Routine That Actually Works (adhd bedtime routine)
+- Article 3: Best Calming Sounds for ADHD Children (calming sounds for adhd child)
+- Article 4: Racing Thoughts at Bedtime (adhd racing thoughts child)
+- Article 6: ADHD Sleep vs Autism Sleep (adhd sleep vs autism sleep)
+
+**Acceptance Criteria:**
+- [ ] 4 writing sub-agents spawn in parallel
+- [ ] 4 validation sub-agents validate
+- [ ] All articles pass validation
+- [ ] All committed to git
+
+**Starter Prompt:**
+> Execute Tier 2 of ADHD Sleep pillar. Spawn 4 writing sub-agents IN PARALLEL (single message with 4 Task tool calls) for Articles 2, 3, 4, 6. Each sub-agent reads brief, positioning, profile. After all return, spawn 4 validation sub-agents. Commit all PASS articles.
+
+**Status:** pending
+
+---
+
+## Task 13: Execute ADHD Sleep Pillar - Tier 3
+
+**Objective:** Generate Article 5 (depends on 3 + 4)
+
+**Context:**
+- Article 5: Beyond Melatonin: Non-Medication Sleep Help for ADHD Children
+- Target keyword: non-medication adhd sleep help
+- Dependencies: Must link to Articles 3 and 4
+
+**Acceptance Criteria:**
+- [ ] Writing sub-agent creates Article 5
+- [ ] Internal links to Articles 3, 4 included
+- [ ] Validation sub-agent validates
+- [ ] Committed to git
+
+**Starter Prompt:**
+> Execute Tier 3 of ADHD Sleep pillar. Article 5 (Beyond Melatonin) which links to Articles 3 and 4 (now completed). Provide the sub-agent with file paths to Articles 3 and 4 for internal linking.
+
+**Status:** pending
+
+---
+
+## Task 14: Execute ADHD Sleep Pillar - Tier 4
+
+**Objective:** Generate Article 7 (Pillar Guide)
+
+**Context:**
+- Article 7: The Complete Guide to ADHD Sleep Problems in Children
+- Target keyword: adhd sleep problems
+- Word count: 4,000-5,000
+- Dependencies: Links to all 6 supporting articles
+
+**Acceptance Criteria:**
+- [ ] Writing sub-agent creates Pillar Guide
+- [ ] Links to all 6 supporting articles
+- [ ] Validation sub-agent validates
+- [ ] Committed to git
+
+**Starter Prompt:**
+> Execute Tier 4 of ADHD Sleep pillar. Generate the Pillar Guide (Article 7) which links to all 6 supporting articles. Provide the sub-agent with all article file paths. This is the comprehensive guide (4,000-5,000 words).
+
+**Status:** pending
+
+---
+
+## Task 15: Post-Pillar Linking Pass
+
+**Objective:** Update all articles with links TO pillar guide
+
+**Acceptance Criteria:**
+- [ ] All 6 supporting articles link to pillar guide
+- [ ] All placeholder links resolved
+- [ ] No broken links
+- [ ] Committed to git
+
+**Starter Prompt:**
+> Run post-pillar linking pass for ADHD Sleep pillar. Add links from all 6 supporting articles to the pillar guide. Replace any `<!-- LINK NEEDED: ... -->` placeholders with actual links. Verify no broken links remain.
 
 **Status:** pending
