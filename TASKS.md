@@ -5,7 +5,7 @@
 | Task | Status |
 |------|--------|
 | Task 7: Error Learning System with GitHub Integration | PASS |
-| Task 8: Document Sub-Agent Orchestration in CLAUDE.md | pending |
+| Task 8: Document Sub-Agent Orchestration in CLAUDE.md | PASS |
 | Task 9: Create Sub-Agent Template | pending |
 | Task 10: Update seo-content Skill | pending |
 | Task 11: Execute ADHD Sleep Pillar - Tier 1 | pending |
@@ -66,15 +66,22 @@
 **Objective:** Add Sub-Agent Orchestration section to CLAUDE.md
 
 **Acceptance Criteria:**
-- [ ] New section added after "Phase 2: Content Generation"
-- [ ] Tier structure documented
-- [ ] Failure handling documented
-- [ ] Context management documented
+- [x] New section added after "Phase 2: Content Generation"
+- [x] Tier structure documented
+- [x] Failure handling documented
+- [x] Context management documented
 
 **Starter Prompt:**
 > Add sub-agent orchestration documentation to CLAUDE.md. Reference the approved plan at /Users/jagpalkooner/.claude/plans/hashed-puzzling-wilkes.md for the exact content to add.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Added "Sub-Agent Orchestration for Pillars" section to CLAUDE.md after Validation Checkpoints. Includes ASCII diagram of tier model, sub-agent types table, detailed instructions on how sub-agents work (file paths not pasted content), responsibilities for main session and sub-agents, failure handling protocol, and context management strategy.
+- **Decisions:** Clarified that sub-agents receive file paths and read files themselves (not pasted content). This keeps context minimal. Main session never reads full article content - only receives paths and status.
+- **Next:** Task 9 creates the sub-agent template at `.claude/skills/templates/sub-agent-seo-content.md` which provides the exact prompt format for spawning writing sub-agents.
 
 ---
 

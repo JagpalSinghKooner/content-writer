@@ -428,6 +428,93 @@ These run when explicitly requested:
 - **Batch review:** After completing a pillar, review all articles together for consistency, contradictions, and cross-linking
 - **Spot check:** When client feedback suggests issues, when revisiting old content, or when quality is questioned
 
+### Sub-Agent Orchestration for Pillars
+
+When generating multiple articles for a pillar, use the Parallel by Dependency Tier model:
+
+```
+Main Session (Orchestrator)
+    │
+    ├─→ Tier 1: Foundation article(s)
+    │   ├─→ Writing Sub-Agent: Creates article, returns file path
+    │   ├─→ Validation Sub-Agent: Validates article, returns PASS/FAIL
+    │   └─→ Main commits if PASS
+    │
+    ├─→ Tier 2: Articles with no inter-dependencies (parallel)
+    │   ├─→ Writing Sub-Agents (parallel): Each creates article
+    │   ├─→ Validation Sub-Agents (parallel): Each validates
+    │   └─→ Main commits all PASS articles
+    │
+    ├─→ Tier 3+: Articles with dependencies on previous tiers
+    │   └─→ Same pattern: write → validate → commit
+    │
+    └─→ Final Tier: Pillar Guide (depends on all)
+        ├─→ Writing Sub-Agent: Creates pillar guide
+        ├─→ Validation Sub-Agent: Validates guide
+        └─→ Main commits if PASS
+```
+
+**Tier Structure:**
+
+1. Identify article dependencies from pillar brief
+2. Group articles into tiers (articles in same tier have no inter-dependencies)
+3. Run Tier 1 first (foundation articles)
+4. Run remaining tiers in order, parallel within each tier
+
+**Sub-Agent Types:**
+
+| Type | Role | Returns |
+|------|------|---------|
+| Writing | Creates article following /seo-content workflow | File path + status |
+| Validation | Validates against universal rules + brand voice | PASS/FAIL + issues |
+
+**How Sub-Agents Work:**
+
+Sub-agents receive **file paths**, not pasted content. Each sub-agent:
+1. Receives paths to: client profile, positioning doc, pillar brief
+2. Reads those files itself using the Read tool
+3. Executes the `/seo-content` workflow autonomously
+4. Returns file path + status (not full article content)
+
+**Sub-Agent Instructions Include:**
+
+- Client profile path (e.g., `clients/hushaway/profile.md`)
+- Positioning document path (e.g., `{pillar}/02-positioning.md`)
+- Pillar brief path (e.g., `{pillar}/01-pillar-brief.md`)
+- Target article details (keyword, angle, word count)
+- Completed articles list (paths for internal linking)
+- Instruction to execute `/seo-content` workflow
+
+**Main Session Responsibilities:**
+
+- Orchestrate tier execution order
+- Spawn sub-agents (parallel within tier) using Task tool
+- Receive file paths and status from completed sub-agents
+- Commit after each tier completes
+- Handle any sub-agent failures
+
+**Sub-Agent Responsibilities:**
+
+- Read all context files from provided paths
+- Research phase (E-E-A-T citations)
+- Write complete article to disk
+- Self-validate against universal rules
+- Return file path + status to main session
+
+**Failure Handling:**
+
+- If sub-agent fails: Retry with same instructions
+- If retry fails: Retry once more with error context
+- If second retry fails: Escalate to user, continue with other articles
+- Log all failures to TASKS.md
+
+**Context Management:**
+
+- Writing sub-agents return: file path + basic status (not full article text)
+- Validation sub-agents read article from path, validate, return PASS/FAIL
+- Main session never reads full article content directly
+- This keeps main session context minimal for orchestration
+
 ---
 
 ## Skills
