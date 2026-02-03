@@ -337,9 +337,16 @@ HushAway® sounds like a warm, understanding parent talking to another parent. N
 **Upsell path:** Free exploration → Full library subscription
 
 **CTA Templates:**
-- "Explore The Open Sanctuary — it's free, forever."
-- "Try a sound from The Open Sanctuary tonight."
-- "Start with The Open Sanctuary. No signup, no cost."
+- "Explore The Open Sanctuary"
+- "Try a sound from The Open Sanctuary tonight"
+- "Enter The Open Sanctuary"
+- "Discover sounds in The Open Sanctuary"
+
+**CTA Rules:**
+- Never mention pricing (free, cost, price)
+- Never say "no signup" (users DO sign up for free accounts)
+- Focus on benefit/experience, not transaction
+- The Open Sanctuary is the destination, not a "free trial"
 
 ### Secondary CTAs
 

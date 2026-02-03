@@ -414,16 +414,23 @@
 **Objective:** Fix incorrect CTA templates in HushAway client profile.
 
 **Acceptance Criteria:**
-- [ ] Remove CTA templates that say "no signup" (incorrect - users DO sign up)
-- [ ] Remove CTA templates that mention "free" or pricing
-- [ ] Remove em dashes from any CTA templates
-- [ ] Add new CTA templates focused on benefit/experience
-- [ ] Add CTA Rules section documenting what to avoid
+- [x] Remove CTA templates that say "no signup" (incorrect - users DO sign up)
+- [x] Remove CTA templates that mention "free" or pricing
+- [x] Remove em dashes from any CTA templates
+- [x] Add new CTA templates focused on benefit/experience
+- [x] Add CTA Rules section documenting what to avoid
 
 **Starter Prompt:**
 > Implement Task 18: Fix HushAway Profile CTAs. Edit clients/hushaway/profile.md lines 339-342. Remove current CTAs that incorrectly say "no signup" or mention "free". Replace with benefit-focused CTAs: "Explore The Open Sanctuary", "Try a sound from The Open Sanctuary tonight", "Enter The Open Sanctuary", "Discover sounds in The Open Sanctuary". Add CTA Rules: never mention pricing, never say "no signup", focus on benefit not transaction. Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Fixed HushAway profile CTA templates. Removed 3 problematic CTAs (had em dash, "free", "no signup", "no cost"). Replaced with 4 benefit-focused CTAs. Added CTA Rules section with 4 rules for future content.
+- **Decisions:** CTA Rules explicitly document why pricing/signup language is forbidden. The Open Sanctuary positioned as destination/experience, not transaction.
+- **Next:** All planned tasks complete. Ready for content production workflow.
 
 ---
 
