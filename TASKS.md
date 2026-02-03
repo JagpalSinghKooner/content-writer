@@ -15,9 +15,9 @@
 | Task 15: Post-Pillar Linking Pass | PASS |
 | Task 6: End-to-End Validation with Real Client | in_progress |
 | Task 16: Rename TASKS.md to PROJECT-TASKS.md | PASS |
-| Task 17: Update PROJECT-TASKS.md for HushAway | pending |
+| Task 17: Update PROJECT-TASKS.md for HushAway | PASS |
 | Task 18: Fix Banned Words in Articles | pending |
-| Task 19: Run /direct-response-copy (Articles 1-4) | pending |
+| Task 19: Run /direct-response-copy (Articles 1-4) | PASS |
 | Task 20: Run /direct-response-copy (Articles 5-7) | pending |
 | Task 21: Run /validate-content on All Articles | pending |
 | Task 22: Create Distribution Content | pending |
@@ -325,14 +325,21 @@
 **Objective:** Bring PROJECT-TASKS.md up to date with actual work completed.
 
 **Acceptance Criteria:**
-- [ ] Tasks 3-4 marked PASS with handoff sections
-- [ ] New tasks added for remaining work (content fixes, distribution)
-- [ ] Summary table updated
+- [x] Tasks 3-4 marked PASS with handoff sections
+- [x] New tasks added for remaining work (content fixes, distribution)
+- [x] Summary table updated
 
 **Starter Prompt:**
 > Update projects/hushaway/seo-content/PROJECT-TASKS.md. Mark Task 3 (Positioning) and Task 4 (Write Articles) as PASS with proper handoff sections. Add new tasks for: (1) Fix banned words in articles, (2) Run /direct-response-copy, (3) Run /validate-content, (4) Create distribution content.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Updated PROJECT-TASKS.md with Tasks 3-4 marked PASS (with handoff sections documenting positioning framework and 7 articles written). Added 4 new tasks: Task 5 (Fix Banned Words), Task 6 (Run /direct-response-copy), Task 7 (Run /validate-content), Task 8 (Create Distribution Content).
+- **Decisions:** New tasks mirror root TASKS.md structure but with project-specific numbering (5-8 vs 18-22). Starter prompts tailored to project context.
+- **Next:** Task 18 — Fix banned words in articles (comorbid, intervention).
 
 ---
 
@@ -357,15 +364,22 @@
 **Objective:** Enhance first batch of articles with direct-response elements.
 
 **Acceptance Criteria:**
-- [ ] Articles 01, 02, 03, 04 enhanced
-- [ ] Hooks strengthened
-- [ ] CTAs optimised
-- [ ] Voice maintained
+- [x] Articles 01, 02, 03, 04 enhanced
+- [x] Hooks strengthened
+- [x] CTAs optimised
+- [x] Voice maintained
 
 **Starter Prompt:**
 > Run /direct-response-copy on ADHD Sleep articles 01-04. Read client profile for voice requirements. Enhance hooks, CTAs, and persuasive elements while maintaining parent-to-parent voice. Do not add new banned words.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Enhanced all 4 articles with direct-response techniques. Hooks shortened and punchified. Parent empathy sections strengthened ("you've tried harder than most"). CTAs rewritten with warmer voice ("We built it because we needed it too"). Zero-effort messaging enhanced for exhausted parents.
+- **Decisions:** Maintained parent-to-parent voice throughout. No banned words added (verified against universal-rules.md). Used italic emphasis for emotional resonance rather than bold.
+- **Next:** Task 20 — Run /direct-response-copy on articles 05-07.
 
 ---
 
