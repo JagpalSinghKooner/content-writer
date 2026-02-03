@@ -11,9 +11,9 @@
 | Task 5: Fix Banned Words in Articles | PASS |
 | Task 6: Run /direct-response-copy | PASS |
 | Task 7: Run /validate-content | PASS |
-| Task 8a: LinkedIn Distribution | pending |
-| Task 8b: Twitter/X Distribution | pending |
-| Task 8c: Newsletter Distribution | pending |
+| Task 8a: LinkedIn Distribution | PASS |
+| Task 8b: Twitter/X Distribution | PASS |
+| Task 8c: Newsletter Distribution | PASS |
 | Task 8d: Instagram Distribution | PASS |
 
 ---
@@ -250,12 +250,12 @@
 - Article 03: `adhd-sleep/articles/03-calming-sounds-adhd.md` (product bridge)
 
 **Acceptance Criteria:**
-- [ ] Distribution folders created for all 3 articles
-- [ ] LinkedIn carousel (10 slides max) created for each article
-- [ ] 2-3 text posts created for each article
-- [ ] All content follows LinkedIn specs from content-atomizer platform playbook
-- [ ] UK English throughout, no banned AI words
-- [ ] Brand voice maintained per client profile
+- [x] Distribution folders created for all 3 articles
+- [x] LinkedIn carousel (10 slides max) created for each article
+- [x] 2-3 text posts created for each article
+- [x] All content follows LinkedIn specs from content-atomizer platform playbook
+- [x] UK English throughout, no banned AI words
+- [x] Brand voice maintained per client profile
 
 **Starter Prompt:**
 > **Sub-Agent Orchestration Task**
@@ -289,7 +289,13 @@
 >
 > Each sub-agent returns file path + status. Validate all outputs against universal rules.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created LinkedIn distribution content for 3 articles. Files at `adhd-sleep/distribution/{slug}/linkedin.md`
+- **Next:** Task 8b (Twitter/X)
 
 ---
 
@@ -303,11 +309,11 @@
 - Article 03: `adhd-sleep/articles/03-calming-sounds-adhd.md` (product bridge)
 
 **Acceptance Criteria:**
-- [ ] Twitter/X thread (8-15 tweets) created for each article
-- [ ] 3-5 standalone singles created for each article
-- [ ] All content follows Twitter/X specs from content-atomizer platform playbook
-- [ ] UK English throughout, no banned AI words
-- [ ] Brand voice maintained per client profile
+- [x] Twitter/X thread (8-15 tweets) created for each article
+- [x] 3-5 standalone singles created for each article
+- [x] All content follows Twitter/X specs from content-atomizer platform playbook
+- [x] UK English throughout, no banned AI words
+- [x] Brand voice maintained per client profile
 
 **Starter Prompt:**
 > **Sub-Agent Orchestration Task**
@@ -342,7 +348,13 @@
 >
 > Each sub-agent returns file path + status. Validate all outputs against universal rules.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created Twitter/X distribution content for 3 articles. Files at `adhd-sleep/distribution/{slug}/twitter.md`
+- **Next:** Task 8c (Newsletter)
 
 ---
 
@@ -356,11 +368,11 @@
 - Article 03: `adhd-sleep/articles/03-calming-sounds-adhd.md` (product bridge)
 
 **Acceptance Criteria:**
-- [ ] Newsletter snippet created for each article
-- [ ] Each snippet has: hook, body (2-3 paragraphs), CTA to full article
-- [ ] All content follows newsletter specs from content-atomizer platform playbook
-- [ ] UK English throughout, no banned AI words
-- [ ] Brand voice maintained per client profile
+- [x] Newsletter snippet created for each article
+- [x] Each snippet has: hook, body (2-3 paragraphs), CTA to full article
+- [x] All content follows newsletter specs from content-atomizer platform playbook
+- [x] UK English throughout, no banned AI words
+- [x] Brand voice maintained per client profile
 
 **Starter Prompt:**
 > **Sub-Agent Orchestration Task**
@@ -395,7 +407,13 @@
 >
 > Each sub-agent returns file path + status. Validate all outputs against universal rules.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created Newsletter distribution content for 3 articles. Files at `adhd-sleep/distribution/{slug}/newsletter.md`
+- **Next:** Task 8d (Instagram)
 
 ---
 
