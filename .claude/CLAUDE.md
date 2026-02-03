@@ -293,9 +293,9 @@ Run `/onboard-client` once per client to create their profile:
 | Keyword brief | `00-keyword-brief.md` | `00-keyword-brief.md` |
 | Pillar brief | `01-pillar-brief.md` | `01-pillar-brief.md` |
 | Positioning | `02-positioning.md` | `02-positioning.md` |
-| Supporting articles | `{nn}-{slug}.md` | `01-what-is-seo.md` |
-| Pillar guide | `{nn}-{slug}.md` (highest number) | `11-ai-marketing-strategy-guide.md` |
-| Distribution | `distribution/{slug}/{platform}.md` | `distribution/what-is-seo/linkedin.md` |
+| Supporting articles | `{nn}-{slug}.md` | `01-beginners-guide-what-is-seo.md` |
+| Pillar guide | `{nn}-{slug}.md` (highest number) | `11-complete-guide-ai-marketing-strategy.md` |
+| Distribution | `distribution/{slug}/{platform}.md` | `distribution/beginners-guide-what-is-seo/linkedin.md` |
 
 **Article Numbering:**
 
@@ -310,9 +310,25 @@ The pillar guide publishes last because it links to all supporting articles—th
 **Slug Rules:**
 - Lowercase only
 - Hyphens between words (no underscores or spaces)
-- Contains primary keyword
+- Descriptive-first format: `{context}-{keyword}`
 - Max 50 characters
 - No stop words unless essential for meaning
+
+**Slug Format:**
+
+Slugs must be descriptive, not keyword-only. The format is `{context}-{keyword}` where context provides meaning and keyword targets search.
+
+| Bad (keyword-only) ✗ | Good (descriptive-first) ✓ |
+|---------------------|---------------------------|
+| `adhd-sleep` | `understanding-adhd-sleep-problems` |
+| `what-is-seo` | `beginners-guide-what-is-seo` |
+| `email-marketing` | `complete-guide-email-marketing` |
+| `productivity-tips` | `morning-routine-productivity-tips` |
+
+**Why descriptive-first:**
+- Keyword-only slugs are generic and undifferentiated
+- Descriptive slugs signal content depth to readers and search engines
+- They match the H1 hook requirement (both need context beyond keyword)
 
 **Distribution Folder:**
 

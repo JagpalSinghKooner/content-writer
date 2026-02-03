@@ -315,16 +315,23 @@
 **Objective:** Change slug rules from "contains keyword" to descriptive-first format.
 
 **Acceptance Criteria:**
-- [ ] Update Slug Rules section (around line 310-315)
-- [ ] Change rule from "Contains primary keyword" to "Descriptive-first format"
-- [ ] Add format pattern: `{context}-{keyword}`
-- [ ] Add examples showing bad (keyword-only) vs good (descriptive-first)
-- [ ] Update any slug examples elsewhere in file to match new format
+- [x] Update Slug Rules section (around line 310-315)
+- [x] Change rule from "Contains primary keyword" to "Descriptive-first format"
+- [x] Add format pattern: `{context}-{keyword}`
+- [x] Add examples showing bad (keyword-only) vs good (descriptive-first)
+- [x] Update any slug examples elsewhere in file to match new format
 
 **Starter Prompt:**
 > Implement Task 13: Update CLAUDE.md slug format rules. Find the Slug Rules section (~line 310) and change the "Contains primary keyword" rule to require descriptive-first format. Add format: `{context}-{keyword}` with examples like "understanding-adhd-sleep-problems" NOT "adhd-sleep". Search for other slug examples in the file and update them to match. Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Updated CLAUDE.md with new slug format rules: (1) Changed "Contains primary keyword" to "Descriptive-first format: `{context}-{keyword}`", (2) Added new "Slug Format" section with bad vs good examples table and explanation, (3) Updated 3 slug examples in File Naming Conventions table to use descriptive-first format
+- **Decisions:** Examples show context before keyword (e.g., "beginners-guide-what-is-seo" not "what-is-seo"). Added explanation connecting slug format to H1 hook requirement for consistency.
+- **Next:** Task 14 adds new validation checks to content-validator.md (em dash, H1 keyword, H1 hook, heading uniqueness, slug format)
 
 ---
 
