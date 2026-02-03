@@ -9,7 +9,7 @@
 | Task 9: Create Sub-Agent Template | PASS |
 | Task 10: Update seo-content Skill | PASS |
 | Task 11: Execute ADHD Sleep Pillar - Tier 1 | PASS |
-| Task 12: Execute ADHD Sleep Pillar - Tier 2 | pending |
+| Task 12: Execute ADHD Sleep Pillar - Tier 2 | PASS |
 | Task 13: Execute ADHD Sleep Pillar - Tier 3 | pending |
 | Task 14: Execute ADHD Sleep Pillar - Tier 4 | pending |
 | Task 15: Post-Pillar Linking Pass | pending |
@@ -173,15 +173,26 @@
 - Article 6: ADHD Sleep vs Autism Sleep (adhd sleep vs autism sleep)
 
 **Acceptance Criteria:**
-- [ ] 4 writing sub-agents spawn in parallel
-- [ ] 4 validation sub-agents validate
-- [ ] All articles pass validation
-- [ ] All committed to git
+- [x] 4 writing sub-agents spawn in parallel
+- [x] 4 validation sub-agents validate
+- [x] All articles pass validation
+- [x] All committed to git
 
 **Starter Prompt:**
 > Execute Tier 2 of ADHD Sleep pillar. Spawn 4 writing sub-agents IN PARALLEL (single message with 4 Task tool calls) for Articles 2, 3, 4, 6. Each sub-agent reads brief, positioning, profile. After all return, spawn 4 validation sub-agents. Commit all PASS articles.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created 4 articles in parallel using sub-agent orchestration:
+  - Article 02: ADHD Bedtime Routine (2,412 words, 4 citations)
+  - Article 03: Calming Sounds for ADHD (2,412 words, 3 citations)
+  - Article 04: Racing Thoughts at Bedtime (2,089 words, 3 citations)
+  - Article 06: ADHD Sleep vs Autism Sleep (1,987 words, 4 citations)
+- **Decisions:** Article 06 required post-validation fix (removed "comorbid" - banned clinical term). All articles include placeholder links for unpublished articles (03, 04, 05, 07) and active links to Article 01.
+- **Next:** Task 13 generates Article 5 (Beyond Melatonin) which depends on Articles 3 and 4 (now complete). Provide sub-agent with paths to Articles 3 and 4 for internal linking.
 
 ---
 
