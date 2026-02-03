@@ -13,7 +13,7 @@
 | Task 7: Create /execute-pillar Skill | PASS |
 | Task 8: Update References | PASS |
 | Task 9: Test Auto-Delegation | PASS |
-| Task 10: Test Return Formats + Rules at Runtime | pending |
+| Task 10: Test Return Formats + Rules at Runtime | PASS |
 | Task 11: Full Pipeline Validation | pending |
 | Task 12: Update universal-rules.md - Em Dash & Heading Rules | pending |
 | Task 13: Update CLAUDE.md - Slug Format Rules | pending |
@@ -282,17 +282,40 @@
 **Objective:** Verify agents return correct formats and read rules at runtime.
 
 **Acceptance Criteria:**
-- [ ] SEO Writer returns: PASS/FAIL + file path + word count + citations found
-- [ ] Copy Enhancer returns: PASS/FAIL + mode + changes made
-- [ ] Content Validator returns: FULL output (not abbreviated) with all 6 phases
-- [ ] Content Atomizer returns: PASS/FAIL + files created + platform summary
-- [ ] Add test rule to `universal-rules.md` → verify seo-writer and content-validator apply it
-- [ ] Document test results in handoff
+- [x] SEO Writer returns: PASS/FAIL + file path + word count + citations found
+- [x] Copy Enhancer returns: PASS/FAIL + mode + changes made
+- [x] Content Validator returns: FULL output (not abbreviated) with all 6 phases
+- [x] Content Atomizer returns: PASS/FAIL + files created + platform summary
+- [x] Add test rule to `universal-rules.md` → verify seo-writer and content-validator apply it
+- [x] Document test results in handoff
 
 **Starter Prompt:**
 > Implement Task 10: Test Return Formats + Rules at Runtime. Verify each agent returns the correct format per agents-prd.md. Test rules at runtime: add a temporary test rule to `universal-rules.md` (e.g., "Test: Always include word 'verified' somewhere"), run seo-writer and content-validator, confirm they applied the rule, then remove the test rule. Document results in handoff.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Tested all 4 agents for return format compliance and rules at runtime.
+- **Test Results:**
+
+| Agent | Return Format | Runtime Rules | Result |
+|-------|---------------|---------------|--------|
+| SEO Writer | ✅ Status, File Path, Word Count, Citations Found, Issues, Notes | ✅ Read TEST RULE, included "runtime-verified" in content | PASS |
+| Copy Enhancer | ✅ Status, Mode, Changes Made, Issues Fixed (if Fix mode), Notes | N/A (doesn't read rules by design) | PASS |
+| Content Validator | ✅ FULL output with all 6 phases (FAIL/WARN issues, SEO Checklist, Schema, Readability, Brand Voice, Pillar Consistency) | ✅ Read TEST RULE, flagged missing "runtime-verified" as FAIL | PASS |
+| Content Atomizer | ✅ Status, Source Article, Files Created (4), Platform Summary, Notes | N/A (doesn't read rules by design) | PASS |
+
+- **Runtime Rules Test:**
+  - Added temporary test rule requiring word "runtime-verified" in content
+  - SEO Writer read the rule and included the word in generated content
+  - Content Validator read the rule and correctly flagged its absence in existing content
+  - Test rule removed after verification
+- **Decisions:**
+  - Copy-enhancer removing "runtime-verified" as "unclear jargon" is correct behaviour—it enhances copy, not rules
+  - All agents used Sonnet model (except seo-writer set to opus in agent file) as specified
+- **Next:** Task 11 runs full pipeline validation with /execute-pillar
 
 ---
 
