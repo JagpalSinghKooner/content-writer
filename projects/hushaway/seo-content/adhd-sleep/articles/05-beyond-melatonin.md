@@ -45,7 +45,7 @@ internal_links:
     anchor: "calming sounds for ADHD children"
   - url: "/adhd-racing-thoughts"
     anchor: "racing thoughts at bedtime"
-  - url: "<!-- LINK NEEDED: 07-adhd-sleep-problems-guide when published -->"
+  - url: "/adhd-sleep-problems-guide"
     anchor: "complete guide to ADHD sleep"
 external_citations:
   - url: "https://www.uhs.nhs.uk/whats-new/press-releases/southampton-researchers-launch-new-study-to-help-children-with-adhd-sleep-better"
@@ -246,7 +246,7 @@ The Open Sanctuary from HushAway® offers free sounds designed for sensitive and
 
 Melatonin might be part of your child's sleep solution. But it doesn't have to be the whole solution. And for many families, the missing piece isn't another medication. It's giving the ADHD brain what it actually needs at bedtime: something calm to think about instead of everything at once.
 
-For the complete picture of ADHD sleep challenges and solutions, our<!-- LINK NEEDED: 07-adhd-sleep-problems-guide when published --> brings together everything from the science to practical strategies for every situation.
+For the complete picture of ADHD sleep challenges and solutions, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) brings together everything from the science to practical strategies for every situation.
 
 ---
 

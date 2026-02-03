@@ -38,13 +38,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "articles/01-adhd-child-wont-sleep.md"
+  - url: "/adhd-child-wont-sleep"
     anchor: "why ADHD children struggle to sleep"
-  - url: "<!-- LINK NEEDED: 02-adhd-bedtime-routine when published -->"
+  - url: "/adhd-bedtime-routine"
     anchor: "ADHD-friendly bedtime routine"
-  - url: "<!-- LINK NEEDED: 03-calming-sounds-adhd when published -->"
+  - url: "/calming-sounds-adhd"
     anchor: "calming sounds for ADHD children"
-  - url: "<!-- LINK NEEDED: 07-adhd-sleep-problems-guide when published -->"
+  - url: "/adhd-sleep-problems-guide"
     anchor: "complete guide to ADHD sleep"
 external_citations:
   - url: "https://jcsm.aasm.org/doi/10.5664/jcsm.10662"
@@ -113,7 +113,7 @@ When we remove all stimulation (dark room, no screens, no sounds), we're not giv
 
 This is why your child can be physically exhausted — yawning, heavy-eyed, barely able to stand — and still lie awake for hours. Their body is ready for sleep. Their brain hasn't received the signal to stop.
 
-We've explored this more deeply in our article on [why ADHD children struggle to sleep](articles/01-adhd-child-wont-sleep.md). The racing thoughts are often the core issue keeping everything else from working.
+We've explored this more deeply in our article on [why ADHD children struggle to sleep](/adhd-child-wont-sleep). The racing thoughts are often the core issue keeping everything else from working.
 
 ## The Redirect Approach: Working With the Brain, Not Against It
 
@@ -150,7 +150,7 @@ What works is sound that:
 
 This is why we designed HushAway® content specifically for passive listening. Your child doesn't need to do anything. Press play, and the sound gives their racing brain somewhere calm to focus.
 
-Frequencies, ambient soundscapes, gentle stories that don't require attention — these work because they occupy the brain without demanding anything from it. For more on which sounds work and why, we've written a guide to<!-- LINK NEEDED: 03-calming-sounds-adhd when published -->.
+Frequencies, ambient soundscapes, gentle stories that don't require attention — these work because they occupy the brain without demanding anything from it. For more on which sounds work and why, we've written a guide to [calming sounds for ADHD children](/calming-sounds-adhd).
 
 ## What This Looks Like in Practice
 
@@ -203,7 +203,7 @@ Consider building it in like this:
 
 This way, the sound catches racing thoughts before they start. Your child's brain doesn't get the chance to fill the silence with its own content.
 
-If you're building an<!-- LINK NEEDED: 02-adhd-bedtime-routine when published -->, sound fits naturally as the final element — the thing that carries your child from "in bed" to "asleep."
+If you're building an [ADHD-friendly bedtime routine](/adhd-bedtime-routine), sound fits naturally as the final element — the thing that carries your child from "in bed" to "asleep."
 
 ## What If It Doesn't Work Immediately?
 
@@ -227,7 +227,7 @@ Tonight, try putting on something from the night time collection as your child s
 
 One quiet moment can change a whole day for a child. Sometimes it starts the night before.
 
-For the full picture of ADHD and sleep, our<!-- LINK NEEDED: 07-adhd-sleep-problems-guide when published --> brings everything together — from the science to practical solutions for every challenge.
+For the full picture of ADHD and sleep, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) brings everything together — from the science to practical solutions for every challenge.
 
 ---
 

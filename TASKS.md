@@ -12,7 +12,7 @@
 | Task 12: Execute ADHD Sleep Pillar - Tier 2 | PASS |
 | Task 13: Execute ADHD Sleep Pillar - Tier 3 | PASS |
 | Task 14: Execute ADHD Sleep Pillar - Tier 4 | PASS |
-| Task 15: Post-Pillar Linking Pass | pending |
+| Task 15: Post-Pillar Linking Pass | PASS |
 | Task 6: End-to-End Validation with Real Client | pending |
 
 **Previous work:** 37 tasks completed (see git history). Git + GitHub setup complete. Error tracking system added.
@@ -260,12 +260,19 @@
 **Objective:** Update all articles with links TO pillar guide
 
 **Acceptance Criteria:**
-- [ ] All 6 supporting articles link to pillar guide
-- [ ] All placeholder links resolved
-- [ ] No broken links
-- [ ] Committed to git
+- [x] All 6 supporting articles link to pillar guide
+- [x] All placeholder links resolved
+- [x] No broken links
+- [x] Committed to git
 
 **Starter Prompt:**
 > Run post-pillar linking pass for ADHD Sleep pillar. Add links from all 6 supporting articles to the pillar guide. Replace any `<!-- LINK NEEDED: ... -->` placeholders with actual links. Verify no broken links remain.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Updated all 6 supporting articles (01-06) with links to pillar guide (07-adhd-sleep-problems-guide). Replaced all `<!-- LINK NEEDED: ... -->` placeholders with proper markdown links. Also standardised existing internal links to use slug-based URL format (e.g., `/adhd-child-wont-sleep`) for consistency.
+- **Decisions:** Used slug-based URL format (`/slug`) for all internal links rather than relative file paths, as this matches what the pillar guide uses and is more CMS-friendly.
+- **Next:** ADHD Sleep pillar is now complete with full internal linking. Ready for PR creation or distribution content if needed.

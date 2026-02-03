@@ -41,11 +41,11 @@ schema_type: "Article"
 internal_links:
   - url: "/adhd-child-wont-sleep"
     anchor: "why your ADHD child won't sleep"
-  - url: "<!-- LINK NEEDED: 02-adhd-bedtime-routine when published -->"
+  - url: "/adhd-bedtime-routine"
     anchor: "ADHD bedtime routine"
-  - url: "<!-- LINK NEEDED: 04-racing-thoughts-bedtime when published -->"
+  - url: "/adhd-racing-thoughts"
     anchor: "racing thoughts at bedtime"
-  - url: "<!-- LINK NEEDED: 07-adhd-sleep-problems-guide when published -->"
+  - url: "/adhd-sleep-problems-guide"
     anchor: "complete guide to ADHD sleep"
 external_citations:
   - url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11283987/"
@@ -220,9 +220,9 @@ If your child genuinely dislikes sound at bedtime, that's important information.
 
 Sound isn't a magic solution. It's one tool that, for many ADHD children, addresses a specific problem — the racing brain that needs something to focus on.
 
-It works best when combined with other elements of an<!-- LINK NEEDED: 02-adhd-bedtime-routine when published --> that works with your child's brain rather than against it.
+It works best when combined with other elements of an [ADHD bedtime routine](/adhd-bedtime-routine) that works with your child's brain rather than against it.
 
-And for children whose main struggle is<!-- LINK NEEDED: 04-racing-thoughts-bedtime when published -->, sound can be particularly powerful because it gives those thoughts somewhere to land.
+And for children whose main struggle is [racing thoughts at bedtime](/adhd-racing-thoughts), sound can be particularly powerful because it gives those thoughts somewhere to land.
 
 ## A Note on Volume and Safety
 
@@ -240,7 +240,7 @@ The Open Sanctuary from HushAway® features sounds designed specifically for sen
 
 Try something tonight. See how your child responds. You might find the missing piece isn't a complicated intervention — it's simply giving their brain what it needs to rest.
 
-For a comprehensive look at ADHD sleep challenges and solutions, our<!-- LINK NEEDED: 07-adhd-sleep-problems-guide when published --> covers everything from the science to practical strategies for every age group.
+For a comprehensive look at ADHD sleep challenges and solutions, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) covers everything from the science to practical strategies for every age group.
 
 ---
 
