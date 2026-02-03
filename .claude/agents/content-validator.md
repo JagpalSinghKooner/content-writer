@@ -133,7 +133,81 @@ Scan for structural patterns. Any found = FAIL.
 FAIL: Lines XX-XX: 3 consecutive sentences start with "This" - vary openers
 ```
 
-### 1.5 SEO Requirements Check
+### 1.5 Em Dash Check
+
+Scan for em dashes "—" anywhere in content. Any found = FAIL.
+
+Em dashes are an AI writing fingerprint. They must be restructured, not replaced with other punctuation.
+
+**Output format:**
+```
+FAIL: Line XX: Em dash found in "text — more text" → restructure as separate sentences
+FAIL: Line XX: Em dash found in "thing — explanation" → reword without dash
+```
+
+### 1.6 H1 Validation
+
+Check H1 contains both the primary keyword AND a hook element.
+
+**Checklist:**
+- [ ] H1 contains primary keyword
+- [ ] H1 has hook element (not just keyword alone)
+- [ ] Only one H1 exists
+
+**FAIL conditions:**
+- H1 is missing
+- H1 does not contain primary keyword
+- H1 is keyword-only (no hook or context)
+
+**Examples:**
+| Bad H1 (keyword only) | Good H1 (keyword + hook) |
+|-----------------------|--------------------------|
+| "ADHD Sleep Problems" | "ADHD Sleep Problems: Why Your Child's Brain Won't Switch Off" |
+| "Calming Sounds for ADHD" | "Calming Sounds for ADHD: What Actually Works (And What Doesn't)" |
+
+**Output format:**
+```
+FAIL: H1 "ADHD Sleep" is keyword-only → add hook that creates curiosity or promises value
+FAIL: H1 "Sleep Tips for Kids" missing primary keyword "ADHD" → include keyword in H1
+```
+
+### 1.7 Heading Uniqueness
+
+Check that no heading text is duplicated across the document.
+
+**Rules:**
+- H2 text cannot repeat the H1
+- H3 text cannot repeat its parent H2
+- No two headings at the same level can have identical text
+- Comparison is case-insensitive
+
+**Output format:**
+```
+FAIL: Line XX: H2 "Benefits" duplicates H2 on line YY → use distinct heading text
+FAIL: Line XX: H3 "Overview" repeats parent H2 text → use different wording
+```
+
+### 1.8 Slug Format Check
+
+Check slug follows descriptive-first format, not keyword-only.
+
+**Rules:**
+- Slug should be `{context}-{keyword}` format
+- Slug should not be just the keyword
+- Slug must convey article purpose
+
+**Examples:**
+| Bad (keyword-only) | Good (descriptive-first) |
+|--------------------|--------------------------|
+| `adhd-sleep` | `understanding-adhd-sleep-problems` |
+| `calming-sounds` | `guide-to-calming-sounds-adhd` |
+
+**Output format:**
+```
+WARN: Slug "adhd-sleep" appears keyword-only → use descriptive format like "understanding-adhd-sleep-problems"
+```
+
+### 1.9 SEO Requirements Check
 
 Check all SEO requirements. Missing = FAIL.
 
@@ -363,6 +437,9 @@ WARN: Uses "cheap" but pillar positioning uses "affordable" — align terminolog
 - [x/✗] Meta description 140-160 chars [actual: XXX chars]
 - [x/✗] 3+ internal links [actual: X links]
 - [x/✗] Single H1 [found: X H1 tags]
+- [x/✗] H1 contains keyword + hook [not keyword-only]
+- [x/✗] Headings unique [no duplicates]
+- [x/✗] No em dashes [count: X]
 
 ---
 
@@ -370,6 +447,7 @@ WARN: Uses "cheap" but pillar positioning uses "affordable" — align terminolog
 
 - [x/✗] All required frontmatter fields present
 - [x/✗] Slug format valid [slug: "xxx-xxx-xxx"]
+- [x/✗] Slug is descriptive-first [not keyword-only]
 - [x/✗] word_count matches actual
 - [x/✗] keyword_density matches actual
 

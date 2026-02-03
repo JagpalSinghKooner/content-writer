@@ -17,8 +17,7 @@
 | Task 11: Full Pipeline Validation | pending |
 | Task 12: Update universal-rules.md - Em Dash & Heading Rules | pending |
 | Task 13: Update CLAUDE.md - Slug Format Rules | pending |
-| Task 14: Update content-validator.md - New Validation Checks | pending |
-| Task 15: Update seo-writer.md - H1/Slug/Em-Dash Instructions | pending |
+| Task 14: Update content-validator.md - New Validation Checks | PASS |
 | Task 16: Update copy-enhancer.md - Em Dash Fix Mode | PASS |
 | Task 17: Update common-mistakes.md - New Patterns | pending |
 | Task 18: Fix HushAway Profile CTAs | pending |
@@ -340,35 +339,23 @@
 **Objective:** Add 5 new validation checks: em dash, H1 keyword, H1 hook, heading uniqueness, slug format.
 
 **Acceptance Criteria:**
-- [ ] Add Em Dash Check to Phase 1 (Universal Rules) - FAIL if any "—" found
-- [ ] Add H1 Validation - FAIL if keyword missing or H1 is keyword-only
-- [ ] Add Heading Uniqueness - FAIL if duplicate heading text found
-- [ ] Add Slug Format check - WARN if slug appears keyword-only
-- [ ] Each check includes clear pass/fail criteria with line number reporting
+- [x] Add Em Dash Check to Phase 1 (Universal Rules) - FAIL if any "—" found
+- [x] Add H1 Validation - FAIL if keyword missing or H1 is keyword-only
+- [x] Add Heading Uniqueness - FAIL if duplicate heading text found
+- [x] Add Slug Format check - WARN if slug appears keyword-only
+- [x] Each check includes clear pass/fail criteria with line number reporting
 
 **Starter Prompt:**
 > Implement Task 14: Update content-validator.md with new validation checks. Add to Phase 1 (Universal Rules): (1) Em dash check - FAIL if any "—" found with line numbers, (2) H1 validation - FAIL if keyword missing or no hook, (3) Heading uniqueness - FAIL if duplicate text across H1/H2/H3, (4) Slug format - WARN if keyword-only. Reference plan file for exact check format. Commit when done.
 
-**Status:** pending
+**Status:** PASS
 
 ---
 
-## Task 15: Update seo-writer.md - H1/Slug/Em-Dash Instructions
-
-**Objective:** Add explicit instructions for H1 format, slug format, and em dash ban.
-
-**Acceptance Criteria:**
-- [ ] Add H1 Format section with formula: [Keyword]: [Hook]
-- [ ] Include H1 examples (good and bad)
-- [ ] Add Slug Format section with descriptive-first pattern
-- [ ] Include slug examples (good and bad)
-- [ ] Add No Em Dashes section with restructuring guidance
-- [ ] These instructions appear in the agent's system prompt (not just referenced)
-
-**Starter Prompt:**
-> Implement Task 15: Update seo-writer.md with H1, slug, and em dash instructions. Add three new sections to the system prompt: (1) H1 Format - formula [Keyword]: [Hook] with examples, (2) Slug Format - descriptive-first pattern with examples, (3) No Em Dashes - restructure sentences, never use "—". These must be explicit instructions the agent follows, not references to other files. Reference plan file for exact content. Commit when done.
-
-**Status:** pending
+**Handoff:**
+- **Done:** Added 4 new validation checks to Phase 1 (sections 1.5-1.8), renumbered existing SEO Requirements to 1.9. Added checks to Return Format SEO Checklist and Schema Validation sections. Each check includes clear output format with line numbers.
+- **Decisions:** Em dash check (1.5) = FAIL with line numbers. H1 validation (1.6) = FAIL if missing keyword or keyword-only. Heading uniqueness (1.7) = FAIL if duplicates at any level (case-insensitive). Slug format (1.8) = WARN for keyword-only (not FAIL).
+- **Next:** Task 17 adds corresponding patterns (em dash overuse, keyword-only slugs, H1 without hook) to common-mistakes.md
 
 ---
 
