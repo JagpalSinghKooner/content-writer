@@ -11,7 +11,10 @@
 | Task 5: Fix Banned Words in Articles | PASS |
 | Task 6: Run /direct-response-copy | PASS |
 | Task 7: Run /validate-content | PASS |
-| Task 8: Create Distribution Content | pending |
+| Task 8a: LinkedIn Distribution | pending |
+| Task 8b: Twitter/X Distribution | pending |
+| Task 8c: Newsletter Distribution | pending |
+| Task 8d: Instagram Distribution | PASS |
 
 ---
 
@@ -237,24 +240,230 @@
 
 ---
 
-## Task 8: Create Distribution Content
+## Task 8a: LinkedIn Distribution
 
-**Objective:** Atomise pillar guide and key supporting articles into platform-specific distribution content.
+**Objective:** Create LinkedIn distribution content (carousel + text posts) for 3 key articles using parallel sub-agents.
+
+**Target Articles:**
+- Article 07: `adhd-sleep/articles/07-adhd-sleep-solutions-guide.md` (pillar guide)
+- Article 01: `adhd-sleep/articles/01-adhd-child-wont-sleep.md` (entry point)
+- Article 03: `adhd-sleep/articles/03-calming-sounds-adhd.md` (product bridge)
 
 **Acceptance Criteria:**
-- [ ] Distribution folder created for pillar guide
-- [ ] LinkedIn carousel + text posts created
-- [ ] Twitter/X thread + singles created
-- [ ] Newsletter snippet created
-- [ ] Instagram carousel + caption created
-- [ ] All content follows platform specs from content-atomizer skill
+- [ ] Distribution folders created for all 3 articles
+- [ ] LinkedIn carousel (10 slides max) created for each article
+- [ ] 2-3 text posts created for each article
+- [ ] All content follows LinkedIn specs from content-atomizer platform playbook
+- [ ] UK English throughout, no banned AI words
+- [ ] Brand voice maintained per client profile
 
 **Starter Prompt:**
-> Run /content-atomizer on the pillar guide (`07-adhd-sleep-solutions-guide.md`) and top 2 supporting articles. Create distribution content for: LinkedIn (carousel + 2-3 text posts), Twitter/X (thread + 3-5 singles), Newsletter (snippet with hook), Instagram (carousel + caption). Follow platform playbook from skill references. Save to `adhd-sleep/distribution/{article-slug}/` folders.
+> **Sub-Agent Orchestration Task**
+>
+> Spawn 3 sub-agents in parallel using the Task tool. Each sub-agent runs `/content-atomizer` for LinkedIn only.
+>
+> **Context Files (provide paths to all sub-agents):**
+> - Client profile: `clients/hushaway/profile.md`
+> - Platform playbook: `.claude/skills/content-atomizer/references/platform-playbook.md`
+> - Universal rules: `.claude/rules/universal-rules.md`
+>
+> **Sub-Agent 1:** Article 07 (pillar guide)
+> - Source: `adhd-sleep/articles/07-adhd-sleep-solutions-guide.md`
+> - Output: `adhd-sleep/distribution/07-adhd-sleep-solutions-guide/linkedin.md`
+> - Focus: Authority positioning, comprehensive guide hook
+>
+> **Sub-Agent 2:** Article 01 (ADHD child won't sleep)
+> - Source: `adhd-sleep/articles/01-adhd-child-wont-sleep.md`
+> - Output: `adhd-sleep/distribution/01-adhd-child-wont-sleep/linkedin.md`
+> - Focus: Parent pain point, emotional hook
+>
+> **Sub-Agent 3:** Article 03 (calming sounds)
+> - Source: `adhd-sleep/articles/03-calming-sounds-adhd.md`
+> - Output: `adhd-sleep/distribution/03-calming-sounds-adhd/linkedin.md`
+> - Focus: Solution-aware audience, product bridge
+>
+> **LinkedIn Requirements (from platform playbook):**
+> - Carousel: 10 slides max, hook on slide 1, CTA on final slide
+> - Text posts: 1,300 char limit, line breaks for readability, no hashtag spam
+> - Algorithm: Comments > reactions, ask questions, first comment engagement
+>
+> Each sub-agent returns file path + status. Validate all outputs against universal rules.
 
 **Status:** pending
 
 ---
 
+## Task 8b: Twitter/X Distribution
+
+**Objective:** Create Twitter/X distribution content (thread + singles) for 3 key articles using parallel sub-agents.
+
+**Target Articles:**
+- Article 07: `adhd-sleep/articles/07-adhd-sleep-solutions-guide.md` (pillar guide)
+- Article 01: `adhd-sleep/articles/01-adhd-child-wont-sleep.md` (entry point)
+- Article 03: `adhd-sleep/articles/03-calming-sounds-adhd.md` (product bridge)
+
+**Acceptance Criteria:**
+- [ ] Twitter/X thread (8-15 tweets) created for each article
+- [ ] 3-5 standalone singles created for each article
+- [ ] All content follows Twitter/X specs from content-atomizer platform playbook
+- [ ] UK English throughout, no banned AI words
+- [ ] Brand voice maintained per client profile
+
+**Starter Prompt:**
+> **Sub-Agent Orchestration Task**
+>
+> Spawn 3 sub-agents in parallel using the Task tool. Each sub-agent runs `/content-atomizer` for Twitter/X only.
+>
+> **Context Files (provide paths to all sub-agents):**
+> - Client profile: `clients/hushaway/profile.md`
+> - Platform playbook: `.claude/skills/content-atomizer/references/platform-playbook.md`
+> - Universal rules: `.claude/rules/universal-rules.md`
+>
+> **Sub-Agent 1:** Article 07 (pillar guide)
+> - Source: `adhd-sleep/articles/07-adhd-sleep-solutions-guide.md`
+> - Output: `adhd-sleep/distribution/07-adhd-sleep-solutions-guide/twitter.md`
+> - Focus: Thread unpacking the "missing piece" framework
+>
+> **Sub-Agent 2:** Article 01 (ADHD child won't sleep)
+> - Source: `adhd-sleep/articles/01-adhd-child-wont-sleep.md`
+> - Output: `adhd-sleep/distribution/01-adhd-child-wont-sleep/twitter.md`
+> - Focus: Relatable parent moments, quotable takes
+>
+> **Sub-Agent 3:** Article 03 (calming sounds)
+> - Source: `adhd-sleep/articles/03-calming-sounds-adhd.md`
+> - Output: `adhd-sleep/distribution/03-calming-sounds-adhd/twitter.md`
+> - Focus: Science-backed tips, actionable thread
+>
+> **Twitter/X Requirements (from platform playbook):**
+> - Thread: 8-15 tweets, hook tweet gets 80% of engagement, number tweets
+> - Singles: Standalone value, no thread dependency, quotable insights
+> - 280 char limit, images/media boost engagement
+> - Algorithm: Replies and retweets matter, controversial takes spread
+>
+> Each sub-agent returns file path + status. Validate all outputs against universal rules.
+
+**Status:** pending
+
+---
+
+## Task 8c: Newsletter Distribution
+
+**Objective:** Create newsletter snippets for 3 key articles using parallel sub-agents.
+
+**Target Articles:**
+- Article 07: `adhd-sleep/articles/07-adhd-sleep-solutions-guide.md` (pillar guide)
+- Article 01: `adhd-sleep/articles/01-adhd-child-wont-sleep.md` (entry point)
+- Article 03: `adhd-sleep/articles/03-calming-sounds-adhd.md` (product bridge)
+
+**Acceptance Criteria:**
+- [ ] Newsletter snippet created for each article
+- [ ] Each snippet has: hook, body (2-3 paragraphs), CTA to full article
+- [ ] All content follows newsletter specs from content-atomizer platform playbook
+- [ ] UK English throughout, no banned AI words
+- [ ] Brand voice maintained per client profile
+
+**Starter Prompt:**
+> **Sub-Agent Orchestration Task**
+>
+> Spawn 3 sub-agents in parallel using the Task tool. Each sub-agent runs `/content-atomizer` for Newsletter only.
+>
+> **Context Files (provide paths to all sub-agents):**
+> - Client profile: `clients/hushaway/profile.md`
+> - Platform playbook: `.claude/skills/content-atomizer/references/platform-playbook.md`
+> - Universal rules: `.claude/rules/universal-rules.md`
+>
+> **Sub-Agent 1:** Article 07 (pillar guide)
+> - Source: `adhd-sleep/articles/07-adhd-sleep-solutions-guide.md`
+> - Output: `adhd-sleep/distribution/07-adhd-sleep-solutions-guide/newsletter.md`
+> - Focus: "Everything you need to know" positioning
+>
+> **Sub-Agent 2:** Article 01 (ADHD child won't sleep)
+> - Source: `adhd-sleep/articles/01-adhd-child-wont-sleep.md`
+> - Output: `adhd-sleep/distribution/01-adhd-child-wont-sleep/newsletter.md`
+> - Focus: Personal story hook, empathy-first
+>
+> **Sub-Agent 3:** Article 03 (calming sounds)
+> - Source: `adhd-sleep/articles/03-calming-sounds-adhd.md`
+> - Output: `adhd-sleep/distribution/03-calming-sounds-adhd/newsletter.md`
+> - Focus: Practical tip teaser, curiosity gap
+>
+> **Newsletter Requirements (from platform playbook):**
+> - Hook: 1-2 sentences that stop the scroll
+> - Body: 2-3 paragraphs, value-forward, not just a teaser
+> - CTA: Clear link to full article, soft sell
+> - Tone: Personal, like you're emailing a friend
+>
+> Each sub-agent returns file path + status. Validate all outputs against universal rules.
+
+**Status:** pending
+
+---
+
+## Task 8d: Instagram Distribution
+
+**Objective:** Create Instagram distribution content (carousel + caption + Reel script) for 3 key articles using parallel sub-agents.
+
+**Target Articles:**
+- Article 07: `adhd-sleep/articles/07-adhd-sleep-solutions-guide.md` (pillar guide)
+- Article 01: `adhd-sleep/articles/01-adhd-child-wont-sleep.md` (entry point)
+- Article 03: `adhd-sleep/articles/03-calming-sounds-adhd.md` (product bridge)
+
+**Acceptance Criteria:**
+- [x] Instagram carousel (10 slides max) created for each article
+- [x] Caption with hashtags created for each article
+- [x] Reel script (15-30 seconds) created for each article
+- [x] All content follows Instagram specs from content-atomizer platform playbook
+- [x] UK English throughout, no banned AI words
+- [x] Brand voice maintained per client profile
+
+**Starter Prompt:**
+> **Sub-Agent Orchestration Task**
+>
+> Spawn 3 sub-agents in parallel using the Task tool. Each sub-agent runs `/content-atomizer` for Instagram only.
+>
+> **Context Files (provide paths to all sub-agents):**
+> - Client profile: `clients/hushaway/profile.md`
+> - Platform playbook: `.claude/skills/content-atomizer/references/platform-playbook.md`
+> - Universal rules: `.claude/rules/universal-rules.md`
+>
+> **Sub-Agent 1:** Article 07 (pillar guide)
+> - Source: `adhd-sleep/articles/07-adhd-sleep-solutions-guide.md`
+> - Output: `adhd-sleep/distribution/07-adhd-sleep-solutions-guide/instagram.md`
+> - Focus: "Save this" carousel, comprehensive tips
+>
+> **Sub-Agent 2:** Article 01 (ADHD child won't sleep)
+> - Source: `adhd-sleep/articles/01-adhd-child-wont-sleep.md`
+> - Output: `adhd-sleep/distribution/01-adhd-child-wont-sleep/instagram.md`
+> - Focus: Relatable parent moment, emotional Reel hook
+>
+> **Sub-Agent 3:** Article 03 (calming sounds)
+> - Source: `adhd-sleep/articles/03-calming-sounds-adhd.md`
+> - Output: `adhd-sleep/distribution/03-calming-sounds-adhd/instagram.md`
+> - Focus: Sound demo potential, product-adjacent
+>
+> **Instagram Requirements (from platform playbook):**
+> - Carousel: 10 slides max, hook on slide 1, swipe motivation, CTA on final slide
+> - Caption: 2,200 char limit, line breaks, 3-5 relevant hashtags (not spam)
+> - Reel: 15-30 seconds, hook in first 3 seconds, trending audio optional
+> - Algorithm: Saves and shares > likes, carousel engagement is high
+>
+> Each sub-agent returns file path + status. Validate all outputs against universal rules.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created Instagram distribution content for 3 articles using parallel sub-agents. All 3 files created and validated:
+  - `adhd-sleep/distribution/07-adhd-sleep-problems-guide/instagram.md` (pillar guide)
+  - `adhd-sleep/distribution/01-adhd-child-wont-sleep/instagram.md` (entry point)
+  - `adhd-sleep/distribution/03-calming-sounds-adhd/instagram.md` (product bridge)
+- **Content per file:** 10-slide carousel (hook → value → CTA), caption under 2,200 chars with 5 hashtags, Reel script 20-25 seconds with hook in first 3 seconds
+- **Validation:** All passed UK English, no banned AI words, brand voice aligned (warm parent-to-parent), soft CTAs to The Open Sanctuary
+- **Note:** Starter prompt had typo "07-adhd-sleep-solutions-guide" but actual article slug is "07-adhd-sleep-problems-guide" — sub-agents correctly used actual slug
+- **Next:** Tasks 8a-8c (LinkedIn, Twitter/X, Newsletter) remain pending for distribution content
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-03 (Task 7 PASS — all 7 articles validated)*
+*Last updated: 2026-02-03 (Task 8d Instagram Distribution PASS)*
