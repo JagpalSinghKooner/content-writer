@@ -17,6 +17,7 @@
 | Task 8d: Instagram Distribution | PASS |
 | Task 9: Start Autistic Meltdowns Pillar | PASS |
 | Task 10: Positioning Angles for Autistic Meltdowns | PASS |
+| Task 11: Start Sensory Overload Pillar | PASS |
 
 ---
 
@@ -552,5 +553,45 @@
 
 ---
 
+## Task 11: Start Sensory Overload Pillar
+
+**Objective:** Create pillar brief for Sensory Overload with competitor analysis and content plan.
+
+**Acceptance Criteria:**
+- [x] Extract Sensory Overload pillar from keyword brief
+- [x] Run deep competitor analysis with Perplexity (DR estimates + content depth)
+- [x] Identify content gaps and angle opportunities
+- [x] Create article outline for pillar guide + supporting articles
+- [x] Output saved to `sensory-overload/01-pillar-brief.md`
+
+**Starter Prompt:**
+> Run /start-pillar for Sensory Overload. Extract the pillar from 00-keyword-brief.md. Focus on: (1) Deep competitor analysis of sensoryintegration.org.uk, youngminds.org.uk, ABA therapy blogs, and product listicles; (2) Identify the gap—NO competitor positions audio-first calming, all focus on tactile tools; (3) Plan 7+ articles covering: sensory overload basics, calming strategies, after school sensory, sensory tools, auditory hypersensitivity, sensory diet, pillar guide. Position sound as THE core solution for sensory overload. All content toward The Open Sanctuary.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `sensory-overload/01-pillar-brief.md` with all 7 sections: strategic context, keyword table (20 keywords mapped), competitor analysis (6 UK competitors with DR estimates), content plan (8 articles: 7 supporting + 1 pillar guide), angle opportunities (5 identified), internal linking map, and publishing order.
+- **Decisions:**
+  - **CRITICAL MARKET GAP IDENTIFIED:** Perplexity research across 6 major UK competitors revealed NO competitor positions sound AS THE SOLUTION. All frame sound as:
+    - A problem to reduce (noise reduction: ear defenders, quiet spaces)
+    - One tool among many (mentioned alongside weighted blankets, fidgets)
+    - Never as the primary therapeutic intervention
+  - **Primary angle:** "Sound AS THE Solution" — Position HushAway as the ONLY UK resource with audio-first calming approach. This angle is completely open.
+  - **Top competitors identified:**
+    - Just One Norfolk NHS (DR 75-90): OT focus, mentions sound in passing, no passive listening
+    - Ambitious About Autism (DR 65-75): Neurodiversity-affirming, frames sound as problem not solution
+    - YoungMinds (DR 70-80): Mental health focus, minimal audio/sound coverage
+    - High Speed Training (DR 45-55): Teacher-focused, audio only as noise reduction
+    - The Autism Service (DR 35-50): Clinical, describes auditory overload but no "play THIS" guidance
+    - Sensory Integration Education (DR 30-45): Most sophisticated audio theory BUT only in professional training materials (not consumer-accessible)
+  - **Key differentiation:** All competitors recommend tactile tools (weighted blankets, fidgets, chewies) that require motor control and attention. Sound requires NOTHING during peak overload—zero-demand regulation. This is HushAway's unique mechanism.
+  - **8 articles planned:** 7 supporting + 1 pillar guide (publishes last)
+  - **Publishing order:** Article 1 (Understanding Sensory Overload) is foundation, Article 2 (Calming Sounds) is conversion driver (publish early), Article 3 (Sound Sensitivity) addresses objection, Articles 4-7 build use cases, Pillar Guide synthesizes all
+- **Next:** Run `/positioning-angles` to develop unified positioning for all 8 articles. Primary angle established ("Sound AS THE Solution"); need secondary angles per article and consistency check.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-03 (Task 10 Positioning Angles for Autistic Meltdowns PASS)*
+*Last updated: 2026-02-03 (Task 11 Start Sensory Overload Pillar PASS)*
