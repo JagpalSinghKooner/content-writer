@@ -6,7 +6,7 @@ meta_description: "ADHD and autism cause different sleep problems. Learn how to 
 slug: "adhd-sleep-vs-autism-sleep"
 author: "HushAway"
 date: "2026-02-03"
-status: "draft"
+status: "review"
 
 # Taxonomy
 categories:
@@ -26,7 +26,7 @@ secondary_keywords_used:
   - "adhd and autism sleep"
   - "autism sleep differences"
 keyword_density: "1.4%"
-word_count: "1987"
+word_count: "2124"
 
 # Open Graph
 og_title: "ADHD Sleep vs Autism Sleep: A Parent's Guide to the Differences"
@@ -64,21 +64,25 @@ external_citations:
     title: "Sleep problems in children with ASD and ADHD: A comparative study"
 ---
 
-Your child has been diagnosed with ADHD, autism, or both. Bedtime is a struggle. You've searched for help with "neurodivergent sleep problems" — but the advice you find treats all neurodivergent children the same.
+You've tried the calming routine. The weighted blanket. The melatonin. Nothing quite works.
 
-Here's the thing: ADHD sleep vs autism sleep are not the same problem. They look similar on the surface (your child won't sleep), but the reasons behind the difficulties are often quite different. And when your child has both ADHD and autism, things get even more complicated.
+And maybe you've noticed something: the advice for "neurodivergent sleep" treats all neurodivergent children as though they're the same. But you know your child, and you know that ADHD and autism are different. So why would the sleep problems be identical?
 
-Understanding these differences isn't just academic. It's practical. When you know which sleep challenges your child actually faces, you can stop trying solutions designed for a different brain and start using approaches that fit.
+They're not.
+
+ADHD sleep vs autism sleep are not the same problem. They look similar on the surface — your child won't sleep — but the reasons behind the difficulties are often quite different. And when your child has both ADHD and autism, things get even more complicated.
+
+Understanding these differences isn't just academic. It's practical. When you know which sleep challenges your child actually faces, you can stop trying solutions designed for a different brain and start using approaches that actually fit.
 
 ## Why This Distinction Matters
 
-Research shows that both ADHD and autism significantly increase sleep problems. According to Nottinghamshire NHS, 2024 — [Sleeping Well with Autism and ADHD](https://www.nottsapc.nhs.uk/media/w4ydkpqq/sleeping-well-with-autism-and-adhd.pdf), up to 86% of autistic people experience sleep difficulties, and children with ADHD are at higher risk of developing sleep disorders across all subtypes.
+The numbers are staggering. According to Nottinghamshire NHS, 2024 — [Sleeping Well with Autism and ADHD](https://www.nottsapc.nhs.uk/media/w4ydkpqq/sleeping-well-with-autism-and-adhd.pdf), up to 86% of autistic people experience sleep difficulties, and children with ADHD are at higher risk of developing sleep disorders across all subtypes.
 
-But here's what the statistics don't tell you: the sleep problems look different.
+But here's what those statistics don't tell you: the sleep problems look different.
 
 When parents search for "neurodivergent sleep" solutions, they often find generic advice that might work for one condition but not the other. A strategy perfect for an autistic child's sensory needs might completely miss the racing-brain problem an ADHD child faces. And vice versa.
 
-Getting this right matters because the wrong approach doesn't just fail — it can make bedtime harder for everyone.
+Getting this right matters because the wrong approach doesn't just fail — it can make bedtime harder for everyone. You end up frustrated. Your child ends up frustrated. And sleep feels further away than ever.
 
 ## How ADHD Affects Sleep
 
@@ -211,13 +215,15 @@ You'll need both approaches working together:
 
 Here's something we've noticed at HushAway®: passive listening can help children with ADHD, autism, or both — but for different reasons.
 
-For ADHD children, sound gives the racing brain somewhere calm to land. It occupies the part of the brain that would otherwise be generating endless thoughts.
+For ADHD children, sound gives the racing brain somewhere calm to land. It occupies the part of the brain that would otherwise be generating endless thoughts. Instead of fighting to focus on nothing, they can rest on something.
 
-For autistic children, the right sounds can create sensory predictability. Consistent, calming audio becomes part of the routine — something reliable that signals "this is sleep time."
+For autistic children, the right sounds can create sensory predictability. Consistent, calming audio becomes part of the routine — something reliable that signals "this is sleep time." When the same gentle sounds play each night, the transition from awake to asleep becomes less jarring.
 
-For children with both conditions, passive sound serves double duty: it addresses the racing brain while providing sensory consistency.
+For children with both conditions, passive sound serves double duty: it addresses the racing brain while providing sensory consistency. Two problems, one solution.
 
-The key word is "passive." Active engagement (apps that require choices, games, even some meditation programmes) can actually increase alertness in both ADHD and autistic children. Passive listening — audio that requires nothing from your child except presence — allows the brain and sensory system to settle naturally.
+The key word here is "passive." Active engagement (apps that require choices, games, even some meditation programmes) can actually increase alertness in both ADHD and autistic children. Passive listening — audio that requires nothing from your child except presence — allows the brain and sensory system to settle naturally.
+
+No tapping. No choosing. Just press play and let it work.
 
 ## Your Next Step
 
@@ -225,11 +231,15 @@ If your child has ADHD, autism, or both, and sleep is a struggle, start by ident
 
 - **Primarily racing thoughts?** Focus on giving the brain calming input
 - **Primarily sensory overwhelm?** Focus on environment and routine
-- **Both?** Layer your approach
+- **Both?** Layer your approach — you'll need to address both, and that's okay
 
-The Open Sanctuary from HushAway® offers sounds designed for neurodivergent children — whether the challenge is ADHD, autism, or both. No signup required. Try something from the collection tonight and see which sounds help your child settle.
+Here's the good news: you don't have to figure this out alone. And you don't need a complicated programme to start.
 
-Because understanding the difference between ADHD sleep vs autism sleep isn't just about labels. It's about finding what actually works for your child's unique brain.
+The Open Sanctuary from HushAway® offers sounds designed for neurodivergent children — whether the challenge is ADHD, autism, or both. We built this collection specifically because one-size-fits-all approaches weren't working for our families.
+
+No signup required. No cost. Tonight, you could try something from the collection and see which sounds help your child settle.
+
+Because understanding the difference between ADHD sleep vs autism sleep isn't just about labels. It's about finding what actually works for your child's unique brain. And that's worth the effort.
 
 ---
 

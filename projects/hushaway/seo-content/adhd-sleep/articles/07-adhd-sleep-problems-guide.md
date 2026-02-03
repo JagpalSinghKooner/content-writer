@@ -6,7 +6,7 @@ meta_description: "75% of ADHD children have sleep problems. Discover why generi
 slug: "adhd-sleep-problems-guide"
 author: "HushAway"
 date: "2026-02-03"
-status: "draft"
+status: "review"
 
 # Taxonomy
 categories:
@@ -27,7 +27,7 @@ secondary_keywords_used:
   - "adhd bedtime routine"
   - "adhd racing thoughts"
 keyword_density: "1.2%"
-word_count: "4387"
+word_count: "4698"
 
 # Open Graph
 og_title: "ADHD Sleep Problems: The Complete UK Parent's Guide"
@@ -79,9 +79,15 @@ external_citations:
     title: "Brain scans show children with ADHD have faulty off-switch for mind-wandering"
 ---
 
-It's 10pm. Your child has been in bed for two hours. You can hear them moving around, asking questions, finding reasons to leave the room. They're exhausted. You're exhausted. And yet, sleep won't come.
+It's 10pm. Your child has been in bed for two hours.
 
-If your child has ADHD, this scene is probably familiar. ADHD sleep problems affect roughly 75% of children with the condition — yet most of the advice you'll find doesn't work. Standard sleep guidance was designed for neurotypical brains. It misses what's actually keeping your child awake.
+You can hear them moving around. Asking questions through the door. Finding reasons to come downstairs. They're exhausted — you can see it in their eyes. You're exhausted too. And yet, sleep won't come.
+
+You've tried everything. The consistent routine. The screen limits. The calming stories. Maybe even melatonin. Some nights are better than others, but nothing really solves it.
+
+If this sounds like your house, you're not alone. And you're not doing anything wrong.
+
+ADHD sleep problems affect roughly 75% of children with the condition. That's three in four ADHD kids struggling to sleep — yet most of the advice you'll find doesn't work. Standard sleep guidance was designed for neurotypical brains. It misses what's actually keeping your child awake.
 
 This guide brings together everything UK parents need to know about ADHD and sleep: why it happens, what the research says, what actually helps, and the missing piece that nobody talks about.
 
@@ -89,13 +95,15 @@ This guide brings together everything UK parents need to know about ADHD and sle
 
 Every sleep guide says the same things. Consistent bedtime. Cool room. No screens. Create a calming routine.
 
+You've done all of that. You've probably done it for months, maybe years.
+
 This advice works for neurotypical children. Their brains take those environmental cues, wind down, and drift off.
 
 ADHD brains don't follow that script.
 
 Research from the University Hospital Southampton NHS Foundation Trust, 2022 — [Southampton researchers launch new study to help children with ADHD sleep better](https://www.uhs.nhs.uk/whats-new/press-releases/southampton-researchers-launch-new-study-to-help-children-with-adhd-sleep-better) found that almost 75% of children with ADHD have sleep problems. Professor Samuele Cortese, leading the research, noted that despite these high numbers, there's no national guidance for health professionals on treating ADHD sleep problems. Many clinicians default to melatonin because they're unsure what else to recommend.
 
-The problem isn't that you're doing it wrong. The problem is that generic sleep advice wasn't built for how your child's brain works.
+Here's what that means for you: The problem isn't that you're doing it wrong. The problem is that generic sleep advice wasn't built for how your child's brain works. You've been following the right advice — it's just advice designed for different brains.
 
 ### The Racing Brain That Won't Switch Off
 
@@ -125,15 +133,18 @@ The circadian delay also affects mornings. If your child's body clock runs 45 mi
 
 ### How This Affects Your Child (And Your Whole Family)
 
-ADHD sleep problems don't just affect your child. According to the Journal of Clinical Sleep Medicine, 2023 — [The impact of sleep difficulties in children with ADHD on the family](https://jcsm.aasm.org/doi/10.5664/jcsm.10662), poor sleep ripples through the entire household.
+ADHD sleep problems don't just affect your child. They ripple through the entire household.
 
-The research found that:
+According to the Journal of Clinical Sleep Medicine, 2023 — [The impact of sleep difficulties in children with ADHD on the family](https://jcsm.aasm.org/doi/10.5664/jcsm.10662), the effects are significant:
+
 - Children with ADHD move through sleep stages differently and sleep about one hour less per night
 - They experience less REM sleep, more frequent arousals, and lighter sleep overall
 - Parents described bedtime as "hostile ground" they came to dread
 - One mother said she felt like "failure on toast" because nothing she tried seemed to work
 
-This isn't about willpower or parenting skills. This is about brain wiring.
+That phrase — "failure on toast" — probably resonates. You've tried so hard. Done everything right. And still, bedtime feels like walking into a battle you've already lost.
+
+Here's what we want you to know: This isn't about willpower or parenting skills. This is about brain wiring. Your child isn't choosing to stay awake. And you're not failing them.
 
 ## Why Standard Sleep Advice Fails ADHD Children
 
@@ -181,23 +192,31 @@ For more on this, including what to do when melatonin isn't enough, see our guid
 
 ## The Missing Piece Nobody Talks About
 
-Here's what changed everything for us at HushAway®, and for thousands of families we've worked with:
+Here's what changed everything for us at HushAway®, and for the families we work with:
 
 **The ADHD brain needs INPUT to calm down, not just the removal of input.**
 
+Read that again. It's the opposite of what most sleep advice tells you.
+
 When we try to create sleep by taking things away (screens, activity, stimulation), we leave the ADHD brain in a vacuum. And brains don't like vacuums. They fill them — usually with racing thoughts, anxiety, or restless energy.
 
-The solution is to give the brain something calming TO focus on, rather than fighting to focus on nothing.
+Think about what happens at bedtime: You take away the TV. You take away the toys. You make the room quiet and dark. For a neurotypical child, this signals "time to sleep."
+
+For an ADHD child? You've just removed every external focus. Now their brain has nothing to do except generate its own content. And generate it does — thoughts, worries, questions, ideas, memories, plans. All at once. At full volume.
+
+The solution isn't fighting to focus on nothing. It's giving the brain something calming TO focus on.
 
 ### Why Sound Is the Missing Piece
 
-Sound works particularly well for ADHD brains. There's solid research behind this.
+Sound works particularly well for ADHD brains. And there's solid research behind this.
 
 A meta-analysis published in the Journal of the American Academy of Child & Adolescent Psychiatry, 2024 — [Systematic Review and Meta-Analysis: Do White Noise and Pink Noise Help With Task Performance in Youth With ADHD](https://pmc.ncbi.nlm.nih.gov/articles/PMC11283987/) found that white and pink noise produced a small but statistically significant improvement in cognitive function for children with ADHD.
 
-But here's what made the findings particularly interesting: the same sounds had the opposite effect on neurotypical children. For children without ADHD, white and pink noise slightly reduced their performance.
+But here's the truly interesting part: the same sounds had the opposite effect on neurotypical children. For children without ADHD, white and pink noise slightly reduced their performance.
 
-This tells us something important. ADHD brains genuinely respond differently to sound. What helps them can actually hinder others. This isn't about preferences — it's about neurobiology.
+What does that tell us? ADHD brains genuinely respond differently to sound. What helps them can actually hinder others. This isn't about preferences or what "works for some kids." It's about neurobiology.
+
+Your child's brain is wired to need input. When you provide the right kind of input — calm, consistent, requiring nothing from them — the racing thoughts finally have somewhere to rest.
 
 ### How Passive Sound Works
 
@@ -213,13 +232,17 @@ For a detailed look at which sounds work and why, see our complete guide to [cal
 
 We understand something at HushAway®: you're exhausted too.
 
-By bedtime, you've already survived breakfast battles, school runs, homework struggles, after-school meltdowns, and dinner negotiations. You don't have the energy for a complicated bedtime intervention.
+By bedtime, you've already survived breakfast battles, school runs, homework struggles, after-school meltdowns, and dinner negotiations. The idea of implementing one more thing — one more technique, one more programme, one more approach to remember — feels overwhelming.
 
-That's why passive listening is different. There's nothing to implement. No behaviour charts. No reward systems. No lengthy guided meditations where you need to keep your child engaged.
+That's why passive listening is different.
+
+There's nothing to implement. No behaviour charts. No reward systems. No lengthy guided meditations where you need to keep your child engaged. No apps that require you to guide them through choices.
 
 Press play. That's it.
 
-Your child doesn't need to do anything. You don't need to do anything. The sounds give their brain something calming to focus on while everyone — you included — gets to rest.
+Your child doesn't need to do anything. You don't need to do anything. The sounds give their brain something calming to focus on while everyone — you included — finally gets to rest.
+
+We built HushAway® this way on purpose. Because we've been those exhausted parents too. We know that the best solution is one that requires nothing from you when you have nothing left to give.
 
 ## ADHD Sleep Solutions by Age
 
@@ -313,7 +336,7 @@ Not wanting to go to bed, finding every excuse to stay up, becoming distressed a
 
 Understanding which pattern your child shows helps you focus your energy. A child with sleep onset insomnia needs different emphasis than one with early morning waking.
 
-## ADHD Sleep and Comorbid Conditions
+## ADHD Sleep and Co-occurring Conditions
 
 Many ADHD children have additional conditions that affect sleep.
 
@@ -406,7 +429,7 @@ Standard routine advice misses one key final step. Here's the sequence that work
 
 The sound catches racing thoughts before they take over. Your child lies in the dark, but they're not alone with their thoughts.
 
-Why does timing matter? Starting sound too late — after your child is already distressed and thoughts are spiralling — means you're playing catch-up. Starting it early, as part of the routine, prevents the spiral from starting. Prevention is easier than intervention.
+Why does timing matter? Starting sound too late — after your child is already distressed and thoughts are spiralling — means you're playing catch-up. Starting it early, as part of the routine, prevents the spiral from starting. Prevention is easier than rescue.
 
 ### Step 4: Add Non-Medication Support
 
@@ -457,7 +480,7 @@ Add another element. Maybe sound helped with racing thoughts, but now circadian 
 
 Consider whether you've identified the right challenge. If your child has both ADHD and autism, are you addressing both sets of needs? If medication is involved, have you discussed timing with the prescriber?
 
-Some children need more intensive support. The DISCA study is researching digital behavioural interventions specifically for ADHD sleep. Ask your GP or paediatrician about available programmes.
+Some children need more intensive support. The DISCA study is researching digital behavioural support specifically for ADHD sleep. Ask your GP or paediatrician about available programmes.
 
 ## The UK Context: What Parents Need to Know
 
@@ -476,7 +499,7 @@ Ask your GP what's available locally. But be prepared for the answer to be "not 
 ### Research and Resources
 
 UK-based research is leading the way on ADHD sleep:
-- The Southampton DISCA study is developing digital sleep interventions
+- The Southampton DISCA study is developing digital sleep programmes
 - Nottinghamshire NHS has produced guidance on neurodivergent sleep
 - Multiple NHS trusts have created downloadable resources
 
@@ -488,15 +511,21 @@ Let's address some common misconceptions that can derail parents' efforts.
 
 ### "They're Just Not Trying Hard Enough"
 
-This misunderstanding causes enormous damage. Your child isn't choosing to lie awake. They can't simply decide to stop their brain from racing any more than they can decide to stop being hungry. Telling them to "just relax" or "just stop thinking" asks them to do something neurologically difficult for their brain.
+If anyone has ever said this to you — or if you've ever thought it yourself in a moment of frustration — please know: it's not true.
 
-What looks like not trying is often a child who has tried everything they know how to try and failed. The answer isn't more effort — it's different strategies that work with their brain.
+Your child isn't choosing to lie awake. They can't simply decide to stop their brain from racing any more than they can decide to stop being hungry. Telling them to "just relax" or "just stop thinking" asks them to do something neurologically difficult for their brain.
+
+What looks like not trying is often a child who has tried everything they know how to try and failed. They're not being stubborn. They're stuck.
+
+The answer isn't more effort — it's different strategies that work with their brain.
 
 ### "We Just Need to Be More Consistent"
 
-Consistency helps, but consistency with the wrong approach just means consistently failing. If your routine is missing the element that addresses the racing brain, doing it more consistently won't suddenly make it work.
+You've probably been incredibly consistent already. More consistent than most families could ever manage.
 
-The goal is consistent application of the right approach, not just more of the same.
+But here's the truth: consistency with the wrong approach just means consistently failing. If your routine is missing the element that addresses the racing brain, doing it more consistently won't suddenly make it work.
+
+The goal is consistent application of the right approach, not just more of the same. And you're not failing because you weren't consistent enough. You were consistent with advice that wasn't designed for your child's brain.
 
 ### "If They Were Really Tired, They'd Sleep"
 
@@ -514,11 +543,13 @@ It's better to assume you need to address it and be pleasantly surprised if it r
 
 You've read the research. You understand why generic advice fails. You know what makes ADHD sleep different.
 
-Now what?
+Now what? Here's what you can do tonight.
 
-**Tonight, try this:**
+**One small thing:**
 
-Pick one sound from The Open Sanctuary — HushAway's free collection designed for sensitive and neurodivergent children. Start it as your child settles into bed, before the racing thoughts take over.
+Pick one sound from The Open Sanctuary — HushAway®'s free collection designed for sensitive and neurodivergent children. Start it as your child settles into bed, before the racing thoughts take over.
+
+Don't announce it as a new "technique." Don't make it a thing. Just have the sound playing as part of settling in.
 
 Watch what happens when their brain has somewhere calm to focus instead of generating its own content.
 
@@ -526,16 +557,21 @@ You might notice:
 - Fewer questions and call-outs
 - Body relaxing faster
 - Less time to sleep onset
+- A calmer feeling in the room
 
-You might not see dramatic change the first night. That's okay. Give it a week.
+You might not see dramatic change the first night. That's okay. Give it a week. Their brain needs time to learn that it can trust the sound to be there, to be consistent, to be something it can rest on.
 
 ## The Bigger Picture
 
 ADHD sleep problems are real, common, and neurobiological. They're not about parenting failures or children being difficult.
 
+You haven't failed. You've been working harder than most parents ever have to — trying everything, researching everything, staying up worrying about the same child who's staying up because they can't help it.
+
 The solution isn't trying harder at strategies designed for different brains. It's using approaches that work WITH how your child's brain actually functions.
 
 Sound-based passive listening is the missing piece in most ADHD sleep guidance. It gives the racing brain something calming to focus on. It requires zero effort from exhausted parents. It works alongside other strategies — including medication when needed.
+
+The Open Sanctuary from HushAway® is free, forever. No signup. No cost. No commitment. Just sounds designed for brains like your child's, created by parents who understand.
 
 One quiet moment can change a whole day for a child. Sometimes that moment starts the night before.
 

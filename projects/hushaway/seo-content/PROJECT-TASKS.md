@@ -9,7 +9,7 @@
 | Task 3: Positioning Angles for ADHD Sleep | PASS |
 | Task 4: Write ADHD Sleep Articles | PASS |
 | Task 5: Fix Banned Words in Articles | pending |
-| Task 6: Run /direct-response-copy | in_progress (4/7) |
+| Task 6: Run /direct-response-copy | PASS |
 | Task 7: Run /validate-content | pending |
 | Task 8: Create Distribution Content | pending |
 
@@ -155,7 +155,7 @@
 
 **Acceptance Criteria:**
 - [x] Articles 01-04 enhanced with /direct-response-copy (4 of 7)
-- [ ] Articles 05-07 enhanced with /direct-response-copy (0 of 3)
+- [x] Articles 05-07 enhanced with /direct-response-copy (3 of 3)
 - [x] CTAs strengthened without being pushy
 - [x] Hooks improved for engagement
 - [x] Brand voice maintained throughout
@@ -164,22 +164,20 @@
 **Starter Prompt:**
 > Run /direct-response-copy on each article in `adhd-sleep/articles/`. Focus on: (1) Strengthen opening hooks — make parents feel seen immediately; (2) Add specific proof points where claims are made; (3) Improve CTAs for The Open Sanctuary — soft CTAs in educational sections, clearer value proposition in CTA blocks; (4) Maintain warm parent-to-parent voice from client profile. Do NOT make content feel salesy or clinical.
 
-**Status:** in_progress
+**Status:** PASS
 
 ---
 
-**Partial Handoff (articles 01-04):**
-- **Done:** Enhanced articles 01-04 with direct-response-copy techniques (re-run 2026-02-03)
-- **Changes made:**
-  - Opening hooks strengthened — shorter punchy sentences, more emotional resonance
-  - Parent empathy sections enhanced — "you're nodding", "you're not alone", exhaustion validation
-  - CTA sections rewritten with warmer parent-to-parent voice ("We built it because we needed it too")
-  - "Just Press Play" sections emphasise zero-effort for exhausted parents
-  - Guilt validation sections improved — acknowledging they've "tried harder than most"
-  - Key analogies sharpened (hungry person in empty kitchen)
-  - No banned words added — verified against universal-rules.md
+**Handoff:**
+- **Done:** All 7 articles enhanced with direct-response-copy techniques
+- **Changes made (articles 05-07):**
+  - **Article 05 (beyond-melatonin):** Stronger opening hook with parent recognition scene (drowsy but not asleep), added vivid "melatonin mismatch" description, improved CTA section with "We built it because we needed it too" language, added parent quote about "permission to stop"
+  - **Article 06 (adhd-vs-autism-sleep):** Opening rewritten to validate their experience of one-size-fits-all failing, stronger "Sound Solution" section explaining how passive listening helps both conditions, improved CTA with warmth and reassurance
+  - **Article 07 (pillar guide - extra attention):** Comprehensive enhancement — opening now validates everything they've tried, "failure on toast" quote humanised, "Missing Piece" section expanded with clear before/after contrast, "Just Press Play" section emphasises zero-effort for exhausted parents, misconceptions sections rewritten with more empathy ("if anyone has ever said this to you"), closing CTA section strengthened with "You haven't failed" validation
+- **Status updates:** All three articles changed from "draft" to "review" in frontmatter
+- **Word counts updated:** Article 05 (2542), Article 06 (2124), Article 07 (4698)
 - **Voice preserved:** All edits maintain warm, parent-to-parent tone per client profile
-- **Next:** Run /direct-response-copy on articles 05-07 (beyond-melatonin, adhd-vs-autism-sleep, pillar guide)
+- **Next:** Run /validate-content on all 7 articles to verify PASS before distribution content
 
 ---
 
@@ -222,4 +220,4 @@
 ---
 
 *Project started: 2026-02-02*
-*Last updated: 2026-02-03 (direct-response-copy re-run on articles 01-04)*
+*Last updated: 2026-02-03 (direct-response-copy completed on all 7 articles)*
