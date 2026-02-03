@@ -14,6 +14,7 @@ Not all rules apply to all content types. Use this matrix to determine which che
 | **2. Banned AI Words** | ✓ | ✓ | ✓ | - | ✓ |
 | **3. Banned AI Phrases** | ✓ | ✓ | ✓ | - | - |
 | **4. AI Patterns** | ✓ | ✓ | ✓ | - | - |
+| **4b. No Em Dashes** | ✓ | ✓ | ✓ | ✓ | ✓ |
 | **5. SEO Requirements** | ✓ | - | - | - | - |
 | **6. External Citations** | ✓ | Optional | Optional | - | - |
 | **Brand Voice** | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -228,6 +229,32 @@ Structural tells that reveal AI authorship.
 
 ---
 
+### 4b. No Em Dashes
+
+Em dashes (—) are an AI fingerprint. Human writers rarely use them; AI uses them constantly for parenthetical asides and list introductions.
+
+**The Rule:** Never use em dashes. Restructure the sentence instead.
+
+**Why not just replace with other punctuation?**
+
+Swapping em dashes for commas, colons, or parentheses keeps the AI sentence structure. The goal is to write like a human, which means restructuring entirely.
+
+**Restructuring Examples:**
+
+| AI Pattern (with em dash) | Human Alternative |
+|---------------------------|-------------------|
+| "Sleep tracking apps — like Oura and Whoop — can help" | "Sleep tracking apps like Oura and Whoop can help" |
+| "The solution — cognitive behavioural therapy — works" | "The solution is cognitive behavioural therapy, and it works" |
+| "One thing matters — consistency" | "One thing matters: consistency" OR "Consistency is the only thing that matters" |
+| "ADHD affects sleep — but not how you'd expect" | "ADHD affects sleep, but not how you'd expect" OR start a new sentence |
+| "The real problem — and this surprises most people — is timing" | "The real problem is timing. This surprises most people." |
+
+**Detection:**
+- Search for "—" (em dash character)
+- Also check for " - " with spaces (sometimes used as em dash substitute)
+
+---
+
 ### 5. SEO Requirements
 
 Technical requirements for search optimisation.
@@ -253,8 +280,25 @@ Technical requirements for search optimisation.
 
 **Structure:**
 - [ ] One H1 only (the title)
+- [ ] H1 contains primary keyword AND a hook (not keyword alone)
 - [ ] Logical H2/H3 hierarchy
+- [ ] No duplicate heading text (each H1/H2/H3 must be unique)
 - [ ] Short paragraphs (3-4 sentences max)
+
+**H1 Format Examples:**
+
+| Bad (Keyword Only) ✗ | Good (Keyword + Hook) ✓ |
+|---------------------|------------------------|
+| ADHD Sleep Problems | Why Your ADHD Brain Won't Let You Sleep |
+| Email Marketing Guide | Email Marketing Guide: Send Less, Sell More |
+| Content Strategy | The Content Strategy That Built a 7-Figure Business |
+| SEO Best Practices | SEO Best Practices the Experts Actually Use |
+
+**Why keyword-only H1s fail:**
+- Boring (no reason to click)
+- Generic (everyone ranks for the same title)
+- No differentiation in search results
+- Misses the hook that drives engagement
 
 ---
 
@@ -266,12 +310,12 @@ Citations build trust and demonstrate expertise. Proper sourcing is a Google ran
 
 Use this format for all external citations:
 
-> [Author/Organisation], [Year] — [hyperlinked title](URL)
+> [Author/Organisation], [Year]: [hyperlinked title](URL)
 
 **Examples:**
-- Google, 2023 — [Search Quality Evaluator Guidelines](https://example.com)
-- NHS, 2024 — [Mental Health Statistics](https://example.com)
-- Dr. Sarah Chen, 2023 — [The Future of Remote Work](https://example.com)
+- Google, 2023: [Search Quality Evaluator Guidelines](https://example.com)
+- NHS, 2024: [Mental Health Statistics](https://example.com)
+- Dr. Sarah Chen, 2023: [The Future of Remote Work](https://example.com)
 
 **Citation Checklist:**
 - [ ] Every citation includes a working hyperlink
@@ -455,7 +499,8 @@ Standard definitions for terms used across all skills. Use these consistently.
 2. ✗ Any banned words? (53 words)
 3. ✗ Any banned phrases?
 4. ✗ Any AI patterns?
-5. ✗ SEO requirements met?
+4b. ✗ Any em dashes (—)?
+5. ✗ SEO requirements met? (H1 has keyword + hook? Headings unique?)
 6. ✗ E-E-A-T citations present and properly formatted?
 
 **WARN (Should Fix):**

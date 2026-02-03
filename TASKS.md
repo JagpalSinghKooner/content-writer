@@ -15,6 +15,13 @@
 | Task 9: Test Auto-Delegation | pending |
 | Task 10: Test Return Formats + Rules at Runtime | pending |
 | Task 11: Full Pipeline Validation | pending |
+| Task 12: Update universal-rules.md - Em Dash & Heading Rules | pending |
+| Task 13: Update CLAUDE.md - Slug Format Rules | pending |
+| Task 14: Update content-validator.md - New Validation Checks | pending |
+| Task 15: Update seo-writer.md - H1/Slug/Em-Dash Instructions | pending |
+| Task 16: Update copy-enhancer.md - Em Dash Fix Mode | pending |
+| Task 17: Update common-mistakes.md - New Patterns | pending |
+| Task 18: Fix HushAway Profile CTAs | pending |
 
 **Previous work:** Tasks 1-29 completed (see git history). Sub-agent system now superseded by Claude Code agent files approach per agents-prd.md.
 
@@ -277,4 +284,139 @@
 
 ---
 
-**Plan reference:** /Users/jagpalkooner/.claude/plans/virtual-beaming-llama.md
+## Task 12: Update universal-rules.md - Em Dash & Heading Rules
+
+**Objective:** Add em dash ban, H1 keyword+hook requirement, heading uniqueness rule, and fix citation format.
+
+**Acceptance Criteria:**
+- [x] Add new FAIL rule: No Em Dashes (Rule 4b after AI Patterns)
+- [x] Include restructuring examples (not replacement with other punctuation)
+- [x] Update Rule 5 (SEO Requirements) Structure section with H1 keyword+hook requirement
+- [x] Add H1 format examples showing bad (keyword-only) vs good (keyword+hook)
+- [x] Add heading uniqueness rule (no duplicate text across H1/H2/H3)
+- [x] Fix citation format: change em dash to colon `[Author], [Year]: [title](URL)`
+
+**Starter Prompt:**
+> Implement Task 12: Update universal-rules.md with em dash and heading rules. Add Rule 4b "No Em Dashes" as a FAIL condition after Rule 4 (AI Patterns). Include table of restructuring examples (not replacements). Update Rule 5 Structure section: H1 must contain primary keyword + hook, add examples table, add heading uniqueness rule. Fix citation format on line ~269 to use colon instead of em dash. Reference plan file for exact content. Commit when done.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Updated universal-rules.md with 6 changes: (1) Added Rule 4b "No Em Dashes" with restructuring examples table, (2) Updated Scope table to include Rule 4b, (3) Updated Rule 5 Structure section with H1 keyword+hook requirement, (4) Added H1 format examples table (bad vs good), (5) Added heading uniqueness rule, (6) Fixed citation format from em dash to colon
+- **Decisions:** Em dashes apply to ALL content types (marked ✓ across the board in Scope table). Restructuring examples show full sentence rewrites, not simple punctuation swaps.
+- **Next:** Task 13 updates CLAUDE.md slug format rules
+
+---
+
+## Task 13: Update CLAUDE.md - Slug Format Rules
+
+**Objective:** Change slug rules from "contains keyword" to descriptive-first format.
+
+**Acceptance Criteria:**
+- [ ] Update Slug Rules section (around line 310-315)
+- [ ] Change rule from "Contains primary keyword" to "Descriptive-first format"
+- [ ] Add format pattern: `{context}-{keyword}`
+- [ ] Add examples showing bad (keyword-only) vs good (descriptive-first)
+- [ ] Update any slug examples elsewhere in file to match new format
+
+**Starter Prompt:**
+> Implement Task 13: Update CLAUDE.md slug format rules. Find the Slug Rules section (~line 310) and change the "Contains primary keyword" rule to require descriptive-first format. Add format: `{context}-{keyword}` with examples like "understanding-adhd-sleep-problems" NOT "adhd-sleep". Search for other slug examples in the file and update them to match. Commit when done.
+
+**Status:** pending
+
+---
+
+## Task 14: Update content-validator.md - New Validation Checks
+
+**Objective:** Add 5 new validation checks: em dash, H1 keyword, H1 hook, heading uniqueness, slug format.
+
+**Acceptance Criteria:**
+- [ ] Add Em Dash Check to Phase 1 (Universal Rules) - FAIL if any "—" found
+- [ ] Add H1 Validation - FAIL if keyword missing or H1 is keyword-only
+- [ ] Add Heading Uniqueness - FAIL if duplicate heading text found
+- [ ] Add Slug Format check - WARN if slug appears keyword-only
+- [ ] Each check includes clear pass/fail criteria with line number reporting
+
+**Starter Prompt:**
+> Implement Task 14: Update content-validator.md with new validation checks. Add to Phase 1 (Universal Rules): (1) Em dash check - FAIL if any "—" found with line numbers, (2) H1 validation - FAIL if keyword missing or no hook, (3) Heading uniqueness - FAIL if duplicate text across H1/H2/H3, (4) Slug format - WARN if keyword-only. Reference plan file for exact check format. Commit when done.
+
+**Status:** pending
+
+---
+
+## Task 15: Update seo-writer.md - H1/Slug/Em-Dash Instructions
+
+**Objective:** Add explicit instructions for H1 format, slug format, and em dash ban.
+
+**Acceptance Criteria:**
+- [ ] Add H1 Format section with formula: [Keyword]: [Hook]
+- [ ] Include H1 examples (good and bad)
+- [ ] Add Slug Format section with descriptive-first pattern
+- [ ] Include slug examples (good and bad)
+- [ ] Add No Em Dashes section with restructuring guidance
+- [ ] These instructions appear in the agent's system prompt (not just referenced)
+
+**Starter Prompt:**
+> Implement Task 15: Update seo-writer.md with H1, slug, and em dash instructions. Add three new sections to the system prompt: (1) H1 Format - formula [Keyword]: [Hook] with examples, (2) Slug Format - descriptive-first pattern with examples, (3) No Em Dashes - restructure sentences, never use "—". These must be explicit instructions the agent follows, not references to other files. Reference plan file for exact content. Commit when done.
+
+**Status:** pending
+
+---
+
+## Task 16: Update copy-enhancer.md - Em Dash Fix Mode
+
+**Objective:** Add em dash detection and fix to the copy enhancer's enhancement checklist.
+
+**Acceptance Criteria:**
+- [ ] Add Em Dash Removal section to Enhancement Pass workflow
+- [ ] Document as FAIL condition that must be fixed
+- [ ] Include process: find → restructure (not replace)
+- [ ] Include before/after examples
+- [ ] Ensure this check runs in both Enhancement and Fix modes
+
+**Starter Prompt:**
+> Implement Task 16: Update copy-enhancer.md with em dash fix capability. Add "Em Dash Removal (FAIL Condition)" section to the Enhancement Pass. Document process: scan for "—", restructure each sentence (not replace with other punctuation), split into separate sentences or reword. Include before/after table. Ensure this check applies to both Enhancement and Fix modes. Reference plan file for exact content. Commit when done.
+
+**Status:** pending
+
+---
+
+## Task 17: Update common-mistakes.md - New Patterns
+
+**Objective:** Add three new patterns: em dash overuse, keyword-only slugs, H1 without hook.
+
+**Acceptance Criteria:**
+- [ ] Add "Em dash overuse" pattern with Pattern/Why it fails/Fix format
+- [ ] Add "Keyword-only slugs" pattern with examples
+- [ ] Add "H1 without hook" pattern with examples
+- [ ] Patterns follow existing format in the file
+- [ ] Patterns are actionable and include clear fixes
+
+**Starter Prompt:**
+> Implement Task 17: Update common-mistakes.md with three new patterns. Add: (1) "Em dash overuse" - using "—" for pauses/asides, fix is restructure not replace, (2) "Keyword-only slugs" - slugs that are just keywords, fix is descriptive-first format, (3) "H1 without hook" - H1 that's just keyword, fix is add curiosity/value hook. Follow existing pattern format in the file. Reference plan file for exact content. Commit when done.
+
+**Status:** pending
+
+---
+
+## Task 18: Fix HushAway Profile CTAs
+
+**Objective:** Fix incorrect CTA templates in HushAway client profile.
+
+**Acceptance Criteria:**
+- [ ] Remove CTA templates that say "no signup" (incorrect - users DO sign up)
+- [ ] Remove CTA templates that mention "free" or pricing
+- [ ] Remove em dashes from any CTA templates
+- [ ] Add new CTA templates focused on benefit/experience
+- [ ] Add CTA Rules section documenting what to avoid
+
+**Starter Prompt:**
+> Implement Task 18: Fix HushAway Profile CTAs. Edit clients/hushaway/profile.md lines 339-342. Remove current CTAs that incorrectly say "no signup" or mention "free". Replace with benefit-focused CTAs: "Explore The Open Sanctuary", "Try a sound from The Open Sanctuary tonight", "Enter The Open Sanctuary", "Discover sounds in The Open Sanctuary". Add CTA Rules: never mention pricing, never say "no signup", focus on benefit not transaction. Commit when done.
+
+**Status:** pending
+
+---
+
+**Plan reference:** /Users/jagpalkooner/.claude/plans/lovely-enchanting-cray.md
