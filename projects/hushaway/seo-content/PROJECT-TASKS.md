@@ -16,6 +16,7 @@
 | Task 8c: Newsletter Distribution | PASS |
 | Task 8d: Instagram Distribution | PASS |
 | Task 9: Start Autistic Meltdowns Pillar | PASS |
+| Task 10: Positioning Angles for Autistic Meltdowns | PASS |
 
 ---
 
@@ -515,5 +516,41 @@
 
 ---
 
+## Task 10: Positioning Angles for Autistic Meltdowns
+
+**Objective:** Develop unified positioning for Autistic Meltdowns pillar that differentiates from clinical/generic content.
+
+**Acceptance Criteria:**
+- [x] Market sophistication assessed (Stage 3, mechanism-focused)
+- [x] Primary angle identified for pillar guide ("What to Play NOW")
+- [x] Secondary angles for each supporting article (6 articles)
+- [x] Consistency check across all angles
+- [x] Output saved to `autistic-meltdowns/02-positioning.md`
+
+**Starter Prompt:**
+> Run /positioning-angles for Autistic Meltdowns pillar. Input: autistic-meltdowns/01-pillar-brief.md + clients/hushaway/profile.md. Focus on: (1) The massive gap—everyone says "try calming music" but no one says WHAT to play; (2) Position sound as passive, zero-demand tool that works when other tools can't; (3) Parent validation—they're not failing, meltdowns are neurological not behavioural; (4) Extend "what to play" across all phases (prevention, during, recovery). Maintain parent-to-parent voice.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `autistic-meltdowns/02-positioning.md` with unified positioning framework. Assessed market as Stage 3 (mechanism introducer)—parents are skeptical of "try calming music" advice and need to understand WHY passive sound works.
+- **Decisions:**
+  - Primary angle: "What to Play NOW" — the specificity gap. Everyone mentions sound; no one specifies what. This fills the gap.
+  - Unique mechanism: Passive listening. Sound works when weighted blankets (require touch), fidgets (require motor control), and breathing exercises (require cognition) fail—because it requires nothing.
+  - Secondary angles extend (not repeat) primary:
+    - Article 01: "Not broken, wired differently" (neurological foundation)
+    - Article 02: "The sound answer nobody gave you" (direct gap-fill, conversion driver)
+    - Article 03: "The masking debt" (after school pattern)
+    - Article 04: "The hours after nobody talks about" (recovery gap)
+    - Article 05: "The quiet crisis" (shutdown vs meltdown)
+    - Article 06: "It's never just the last straw" (cumulative triggers, daily regulation)
+  - Consistency check passed: All angles connect to "passive sound as missing tool"
+  - Voice: Warm parent-to-parent per client profile throughout
+- **Next:** Write all 7 articles using `/seo-content` skill following the positioning angles and publishing order from pillar brief.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-03 (Task 9 Start Autistic Meltdowns Pillar PASS)*
+*Last updated: 2026-02-03 (Task 10 Positioning Angles for Autistic Meltdowns PASS)*
