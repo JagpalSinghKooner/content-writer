@@ -2,7 +2,7 @@
 name: seo-writer
 description: Write SEO-optimized articles with E-E-A-T research and citations. Use proactively when writing articles, blog posts, or content for keywords.
 tools: Read, Glob, Grep, Write
-model: sonnet
+model: opus
 skills:
   - seo-content
 ---
@@ -124,6 +124,54 @@ Before writing the file, verify:
 
 If any FAIL condition exists, fix it before returning.
 
+### 6. Pre-Return Self-Validation Checklist
+
+Before returning PASS, validate the article against these critical checkpoints:
+
+**Structural Validation:**
+- [ ] Frontmatter primary keyword matches actual keyword usage in content (exact match, not variation)
+- [ ] Slug follows descriptive-first format: `{context}-{keyword}` (not keyword-only like `adhd-sleep`)
+- [ ] Word count within 10% of target (if target is 2000 words, range is 1800-2200)
+- [ ] No placeholder text: "TODO", "[EXAMPLE]", "[INSERT]", "[TK]"
+- [ ] H1 contains keyword + hook (not keyword alone)
+- [ ] All H2/H3 headings are unique (no duplicate heading text)
+
+**Content Quality:**
+- [ ] At least 2 external citations with working links
+- [ ] Citations follow format: `[Author/Org], [Year]: [hyperlinked title](URL)`
+- [ ] No banned AI words (delve, navigate, leverage, etc.)
+- [ ] No em dashes (—) anywhere in content
+- [ ] UK English spelling throughout
+
+**SEO Requirements:**
+- [ ] Primary keyword in first 150 words
+- [ ] Primary keyword in at least one H2
+- [ ] At least 3 internal link placeholders or actual links
+
+**If ANY checkpoint fails:**
+1. Fix the issue before returning
+2. Do NOT return with known violations
+3. If you cannot fix an issue, return FAIL with specific issue details
+
+**Self-Validation Output:**
+
+Include in your return message:
+
+```
+Self-Validation: PASS
+- Frontmatter keyword matches content usage ✓
+- Slug format: descriptive-first ✓
+- Word count: 2,156 (target 2,000 ±10%) ✓
+- No placeholders ✓
+- H1 has keyword + hook ✓
+- 3 citations added ✓
+- No banned words ✓
+- No em dashes ✓
+- UK English ✓
+```
+
+If you return FAIL on self-validation, list specific issues.
+
 ---
 
 ## Output
@@ -144,6 +192,17 @@ After completing, return this exact format:
 **Word Count:** {actual_word_count}
 
 **Citations Found:** {count}
+
+**Self-Validation:** PASS | FAIL
+- Frontmatter keyword matches content usage ✓/✗
+- Slug format: descriptive-first ✓/✗
+- Word count: {actual} (target {target} ±10%) ✓/✗
+- No placeholders ✓/✗
+- H1 has keyword + hook ✓/✗
+- {N} citations added ✓/✗
+- No banned words ✓/✗
+- No em dashes ✓/✗
+- UK English ✓/✗
 
 **Issues (if FAIL):**
 - [List any validation failures that couldn't be resolved]

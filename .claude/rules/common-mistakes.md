@@ -233,3 +233,57 @@ The whole point of agents is keeping the main session context minimal for orches
 If main session needs article details, read from the file path after orchestration completes.
 
 **Reference:** `rules/workflow.md` → Agent orchestration section
+
+---
+
+### Primary Keyword Frontmatter Mismatch (Issue #3)
+
+**Pattern:** Frontmatter `primary_keyword` field contains one keyword variation, but article content uses a different variation
+
+**Why it fails:** SEO inconsistency. Google doesn't see clear keyword targeting when frontmatter and content don't match.
+
+**Fix:** Before writing agent returns PASS, validate that frontmatter primary keyword appears verbatim in:
+- First 150 words of content
+- At least one H2 heading
+- Meta title and description
+
+**Example:**
+- ❌ Frontmatter says `autism meltdown child` but content uses `autism meltdown` throughout
+- ✓ Frontmatter says `autism meltdown` and content uses exact phrase in intro, H2s, meta
+
+**Source:** Autistic Meltdowns pillar — Article 01, caught in validation retry
+
+---
+
+### Slug Format: Keyword-Only Instead of Descriptive-First (Issue #3)
+
+**Pattern:** Slug is just the keyword (e.g., `what-to-play-during-meltdown`) without descriptive context
+
+**Why it fails:** Violates slug rules in universal-rules.md. Descriptive-first format (`{context}-{keyword}`) provides clarity and SEO benefit.
+
+**Fix:** Writing agent validates slug format before returning:
+- Must follow pattern: `{context}-{keyword}`
+- Cannot be keyword-only
+- Max 50 characters
+- Examples:
+  - ❌ `adhd-sleep`
+  - ✓ `understanding-adhd-sleep-problems`
+  - ❌ `email-marketing`
+  - ✓ `complete-guide-email-marketing`
+
+**Source:** Autistic Meltdowns pillar — Article 02, caught in validation retry
+
+---
+
+### Banned Word Slips Through Enhancement (Issue #3)
+
+**Pattern:** Banned AI word (e.g., "navigate") appears in article after copy-enhancer runs
+
+**Why it fails:** Copy Enhancer is supposed to catch and replace banned words but isn't doing so consistently
+
+**Fix:** Copy Enhancer must run banned words check BEFORE returning PASS:
+1. Search article for all 53 banned words (case-insensitive)
+2. Replace each instance with natural alternative
+3. Confirm zero banned words remain before returning
+
+**Source:** Autistic Meltdowns pillar — Article 01, word "navigate" on line 115, caught in validation retry

@@ -228,6 +228,39 @@ FAIL: Primary keyword "X" not in first 150 words → add to opening paragraph
 FAIL: Word count is 1,234 → minimum is 1,500 words
 ```
 
+### 1.10 Placeholder Link Handling
+
+Placeholder links are VALID per workflow rules when referencing articles not yet published.
+
+**Valid Placeholder Format:**
+
+```html
+<!-- LINK NEEDED: [slug] when published -->
+```
+
+**Validation Logic:**
+
+1. Detect placeholder links with regex: `<!-- LINK NEEDED: .+ when published -->`
+2. Count them
+3. Extract slug references
+4. Output as **INFO** (not FAIL or WARN)
+
+**Output Format:**
+
+```
+**[Internal Links INFO]** 2 placeholder links found (valid per workflow):
+- Line 127: 04-autism-meltdown-recovery-guide
+- Line 156: 06-preventing-autism-meltdowns-warning-signs
+```
+
+**Critical:** Do NOT fail validation for placeholder links. They are explicitly allowed.
+
+**What DOES Fail Internal Links:**
+
+- Broken actual links (href points to non-existent article)
+- Fewer than 3 total internal links (including placeholders)
+- Internal links to competitor sites or external domains
+
 ---
 
 ## Phase 2: Client Profile Check
@@ -435,11 +468,13 @@ WARN: Uses "cheap" but pillar positioning uses "affordable" — align terminolog
 - [x/✗] Word count 1,500+ [actual: XXXX]
 - [x/✗] Meta title under 60 chars [actual: XX chars]
 - [x/✗] Meta description 140-160 chars [actual: XXX chars]
-- [x/✗] 3+ internal links [actual: X links]
+- [x/✗] 3+ internal links [actual: X links, {N} placeholders]
 - [x/✗] Single H1 [found: X H1 tags]
 - [x/✗] H1 contains keyword + hook [not keyword-only]
 - [x/✗] Headings unique [no duplicates]
 - [x/✗] No em dashes [count: X]
+
+**Note:** Placeholder links (`<!-- LINK NEEDED: ... -->`) are valid and count toward internal link total.
 
 ---
 
