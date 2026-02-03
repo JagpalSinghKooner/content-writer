@@ -7,7 +7,7 @@
 | Task 1: Create Agents Directory Structure | PASS |
 | Task 2: Create SEO Writer Agent | PASS |
 | Task 3: Create Copy Enhancer Agent | PASS |
-| Task 4: Create Content Validator Agent | pending |
+| Task 4: Create Content Validator Agent | PASS |
 | Task 5: Create Content Atomizer Agent | pending |
 | Task 6: Create workflow.md | pending |
 | Task 7: Create /execute-pillar Skill | pending |
@@ -100,16 +100,23 @@
 **Objective:** Create the Content Validator agent file with read-only tools and FULL output requirement.
 
 **Acceptance Criteria:**
-- [ ] Create `.claude/agents/content-validator.md`
-- [ ] YAML frontmatter includes: name, description, tools (Read, Glob, Grep), disallowedTools (Write, Edit, Bash), model (sonnet), skills (validate-content)
-- [ ] System prompt instructs agent to READ `universal-rules.md` and `common-mistakes.md` at runtime
-- [ ] FULL OUTPUT requirement explicitly documented (never abbreviate, never summarise)
-- [ ] Return format matches PRD specification (all 6 validation phases)
+- [x] Create `.claude/agents/content-validator.md`
+- [x] YAML frontmatter includes: name, description, tools (Read, Glob, Grep), disallowedTools (Write, Edit, Bash), model (sonnet), skills (validate-content)
+- [x] System prompt instructs agent to READ `universal-rules.md` and `common-mistakes.md` at runtime
+- [x] FULL OUTPUT requirement explicitly documented (never abbreviate, never summarise)
+- [x] Return format matches PRD specification (all 6 validation phases)
 
 **Starter Prompt:**
 > Implement Task 4: Create Content Validator Agent. Create `.claude/agents/content-validator.md` following the specification in `agents-prd.md` section "3. Content Validator Agent". Key requirements: (1) YAML frontmatter with tools: Read, Glob, Grep; disallowedTools: Write, Edit, Bash; model: sonnet; skills: validate-content, (2) READ rules at runtime, (3) FULL OUTPUT requirement critical, (4) Return format includes all 6 validation phases. Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `.claude/agents/content-validator.md` with complete YAML frontmatter and comprehensive system prompt. YAML includes name, description, tools (Read, Glob, Grep), disallowedTools (Write, Edit, Bash), model (sonnet), and skills (validate-content). System prompt instructs agent to READ rules at runtime with prominent "CRITICAL: Full Output Required" section. All 6 validation phases documented: Universal Rules, Client Profile, Human Quality, Schema Validation, Readability Metrics, Pillar Consistency. Return format matches PRD exactly with all sections.
+- **Decisions:** Added prominent "CRITICAL" section at top of system prompt emphasising never abbreviate/summarise requirement. Included content type awareness table for different validation rules per content type. Added missing context handling section showing how to return FAIL when required inputs missing. Used explicit tool denial list (Write, Edit, Bash) via disallowedTools field.
+- **Next:** Task 5 creates Content Atomizer Agent with platform specifications for LinkedIn, Twitter, Instagram, and Newsletter.
 
 ---
 
