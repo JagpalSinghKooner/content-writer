@@ -150,35 +150,35 @@ Never skip step 2. It's where good content becomes great content.
 
 ---
 
-## Sub-Agent Patterns
+## Agent Orchestration Patterns
 
-The following patterns relate to sub-agent orchestration. See [Sub-Agent Rules](sub-agent-rules.md) for the complete guidelines.
+The following patterns relate to agent orchestration. See [Workflow Rules](workflow.md) for the complete guidelines.
 
 ---
 
-### Asking clarifying questions in sub-agent context
+### Asking clarifying questions in agent context
 
-**Pattern:** Sub-agent attempts to ask a question ("Should I include X?" or "Which format do you prefer?") during execution
+**Pattern:** Agent attempts to ask a question ("Should I include X?" or "Which format do you prefer?") during execution
 
-**Why it fails:** Sub-agents operate in fresh context windows with no memory of the main session. They cannot receive answers to questions. Any question asked hangs forever, blocking the sub-agent. The main session never sees the question because sub-agents run autonomously.
+**Why it fails:** Agents operate in fresh context windows with no memory of the main session. They cannot receive answers to questions. Any question asked hangs forever, blocking the agent. The main session never sees the question because agents run autonomously.
 
-**Fix:** All clarifying questions must be resolved BEFORE spawning sub-agents:
+**Fix:** All clarifying questions must be resolved BEFORE spawning agents:
 1. Main session gathers all requirements upfront
 2. Resolve ambiguities with the user before orchestration begins
-3. Sub-agent prompts include complete, unambiguous instructions
-4. If sub-agent encounters missing context, it returns FAIL with the missing item listed—never asks
+3. Agent prompts include complete, unambiguous instructions
+4. If agent encounters missing context, it returns FAIL with the missing item listed—never asks
 
-**Reference:** `rules/sub-agent-rules.md` → "Complete Context Upfront" section
+**Reference:** `rules/workflow.md` → Agent orchestration section
 
 ---
 
 ### Returning abbreviated validation output
 
-**Pattern:** Validation sub-agent returns "PASS" or "FAIL" without full details, or summarises issues instead of listing them all with line numbers
+**Pattern:** Validation agent returns "PASS" or "FAIL" without full details, or summarises issues instead of listing them all with line numbers
 
-**Why it fails:** The main session needs full validation output to make retry decisions. Without line-specific issues, the main session cannot determine whether to retry, which fixes to apply, or whether to escalate. Abbreviated output forces the main session to re-validate or read the article directly, defeating the purpose of sub-agent isolation.
+**Why it fails:** The main session needs full validation output to make retry decisions. Without line-specific issues, the main session cannot determine whether to retry, which fixes to apply, or whether to escalate. Abbreviated output forces the main session to re-validate or read the article directly, defeating the purpose of agent isolation.
 
-**Fix:** Validation sub-agents must return the COMPLETE output format:
+**Fix:** Validation agents must return the COMPLETE output format:
 1. Every FAIL issue with line number and specific fix
 2. Every WARN issue with suggestion
 3. Full SEO checklist with actual values
@@ -187,49 +187,49 @@ The following patterns relate to sub-agent orchestration. See [Sub-Agent Rules](
 
 Never abbreviate. Never summarise. Return everything.
 
-**Reference:** `rules/sub-agent-rules.md` → "Return Data Formats" section; `templates/sub-agent-validate-content.md`
+**Reference:** `rules/workflow.md` → Agent return formats section; `agents/content-validator.md`
 
 ---
 
-### Combining writing and validation in single sub-agent
+### Combining writing and validation in single agent
 
-**Pattern:** Spawning one sub-agent to both write an article AND validate it, or asking the writing sub-agent to "self-validate before returning"
+**Pattern:** Spawning one agent to both write an article AND validate it, or asking the writing agent to "self-validate before returning"
 
-**Why it fails:** Combining roles breaks isolation and loses the benefits of sub-agent architecture:
+**Why it fails:** Combining roles breaks isolation and loses the benefits of agent architecture:
 - Self-validation bias: writers miss their own mistakes
 - Context bloat: combined tasks use more context, increasing failure risk
 - Unclear failure handling: if validation fails, do you re-run the whole thing?
 - No parallel validation: can't validate multiple articles simultaneously
 
-**Fix:** Always use SEPARATE sub-agents:
-1. Writing sub-agent: Creates article, returns file path + status
-2. Validation sub-agent: Reads article from path, validates, returns full output
+**Fix:** Always use SEPARATE agents:
+1. seo-writer agent: Creates article, returns file path + status
+2. content-validator agent: Reads article from path, validates, returns full output
 3. Main session: Decides retry strategy based on validation output
 
-Two sub-agents per article. Always separate. No exceptions.
+Separate agents per task. Always separate. No exceptions.
 
-**Reference:** `rules/sub-agent-rules.md` → "Sub-Agent Types" section
+**Reference:** `rules/workflow.md` → Single article pipeline section
 
 ---
 
 ### Passing content instead of file paths
 
-**Pattern:** Including full article content in the sub-agent prompt or expecting sub-agents to return full article text in their response
+**Pattern:** Including full article content in the agent prompt or expecting agents to return full article text in their response
 
 **Why it fails:** Passing content instead of paths wastes context:
 - Main session context: Article text (2000+ words) bloats the orchestrator
-- Sub-agent prompt: Already has context files to read; adding content is redundant
+- Agent prompt: Already has context files to read; adding content is redundant
 - Return payload: Full article in response prevents orchestrating many articles
 
-The whole point of sub-agents is keeping the main session context minimal for orchestration.
+The whole point of agents is keeping the main session context minimal for orchestration.
 
 **Fix:** Always pass file paths, never content:
-1. Sub-agents receive paths to context files (profile, positioning, brief)
-2. Sub-agents read those files themselves
-3. Writing sub-agents return: file path + status (not content)
-4. Validation sub-agents read from path, return validation output (not article)
+1. Agents receive paths to context files (profile, positioning, brief)
+2. Agents read those files themselves
+3. Writing agents return: file path + status (not content)
+4. Validation agents read from path, return validation output (not article)
 5. Main session never reads article content directly
 
 If main session needs article details, read from the file path after orchestration completes.
 
-**Reference:** `rules/sub-agent-rules.md` → "Context Management" section
+**Reference:** `rules/workflow.md` → Agent orchestration section

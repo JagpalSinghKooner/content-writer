@@ -1006,7 +1006,7 @@ A good validation catches issues before readers do. A great validation explains 
 
 ## Non-Interactive Mode
 
-When invoked by a sub-agent (see [Sub-Agent Rules](../../rules/sub-agent-rules.md)), this skill runs in non-interactive mode.
+When invoked by an agent (see [Workflow Rules](../../rules/workflow.md)), this skill runs in non-interactive mode.
 
 ### What Changes
 
@@ -1128,4 +1128,4 @@ Main session should verify file paths and parameters before re-spawning.
 
 ---
 
-*Reference: `rules/sub-agent-rules.md` for complete sub-agent orchestration guidelines.*
+*Reference: `rules/workflow.md` for complete agent orchestration guidelines.*

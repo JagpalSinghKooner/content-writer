@@ -464,33 +464,30 @@ These run when explicitly requested:
 - **Batch review:** After completing a pillar, review all articles together for consistency, contradictions, and cross-linking
 - **Spot check:** When client feedback suggests issues, when revisiting old content, or when quality is questioned
 
-### Sub-Agent Orchestration for Pillars
+### Agent-Automated Execution
 
-When generating multiple articles for a pillar, use sub-agent orchestration. Full documentation in [Sub-Agent Rules](rules/sub-agent-rules.md).
+Steps 4-7 of the content workflow (seo-content, direct-response-copy, validate-content, content-atomizer) are automated via the agent system. The main session orchestrates agent execution.
+
+**Full workflow documentation:** [Workflow Rules](rules/workflow.md)
 
 **Key Principles:**
 
-1. **Fresh context windows** — Sub-agents have no memory of the main session; all context provided upfront
-2. **Skills invoked directly** — Sub-agents run `/seo-content` and `/validate-content` autonomously
-3. **Writing and validation are SEPARATE** — Never combine in a single sub-agent
-4. **Full validation output returned** — Not just PASS/FAIL; include line-specific issues
-5. **All clarifying questions resolved BEFORE spawning** — Sub-agents cannot ask questions
+1. **Agents cannot spawn other agents** — The main session orchestrates all agent spawning
+2. **Fresh context windows** — Each agent runs with clean context
+3. **Tier-based parallel execution** — Articles grouped by internal linking dependencies
+4. **Automatic retry loop** — Validation failures trigger copy-enhancer fixes (max 3 attempts)
+5. **Full validation output required** — Never abbreviated
 
-**Sub-Agent Types:**
+**Quick Reference:**
 
-| Type | Skill | Returns |
-|------|-------|---------|
-| Writing | `/seo-content` | File path + status + word count |
-| Validation | `/validate-content` | PASS/FAIL + full issues + SEO checklist + readability metrics |
+| Step | Agent | Auto-Triggered By |
+|------|-------|-------------------|
+| 4 | seo-writer | "Write an article for keyword X" |
+| 5 | copy-enhancer | "Enhance this article" or validation FAIL |
+| 6 | content-validator | After enhancement (automatic) |
+| 7 | content-atomizer | "Create distribution content" |
 
-**Templates:**
-
-- Writing: [sub-agent-seo-content.md](skills/templates/sub-agent-seo-content.md)
-- Validation: [sub-agent-validate-content.md](skills/templates/sub-agent-validate-content.md)
-
-**Orchestration Pattern:**
-
-Parallel by Dependency Tier — run articles in tiers based on internal linking dependencies. See [Sub-Agent Rules](rules/sub-agent-rules.md) for the complete pattern diagram and tier identification guide.
+**For pillar execution:** Use `/execute-pillar` to run the complete workflow with tier-based parallel execution, error logging, and automatic commits. See [Workflow Rules](rules/workflow.md) for full documentation.
 
 ---
 
@@ -511,6 +508,28 @@ Parallel by Dependency Tier — run articles in tiers based on internal linking 
 | `/newsletter` | Create newsletters people want to read |
 | `/validate-content` | Check content against rules before publishing |
 | `/orchestrator` | Route to correct skill when unsure where to start |
+| `/execute-pillar` | Run complete pillar execution workflow with agent orchestration |
+
+---
+
+## Agents
+
+Four agents handle the automated content generation workflow (Steps 4-7). The main session orchestrates all agent execution.
+
+| Agent | Purpose | Auto-Triggers On |
+|-------|---------|------------------|
+| **seo-writer** | Write SEO articles with E-E-A-T research | "Write an article for keyword X", "Create content for X" |
+| **copy-enhancer** | Add persuasion + fix validation issues | "Enhance this article", "Fix these issues" |
+| **content-validator** | Check rules + quality (read-only) | After enhancement (automatic), "Validate this article" |
+| **content-atomizer** | Create platform distribution | "Create distribution content", "Atomize this article" |
+
+**Agent Files:** Located in `.claude/agents/`
+
+**Key Constraint:** Agents cannot spawn other agents. The main session orchestrates all spawning, handles retry loops, and manages commits.
+
+**Workflow:** See [Workflow Rules](rules/workflow.md) for the complete orchestration pattern, retry logic, and tier-based parallel execution.
+
+**Full Specifications:** See [Agents PRD](agents-prd.md) for detailed agent specifications, return formats, and system prompts.
 
 ---
 
@@ -519,7 +538,7 @@ Parallel by Dependency Tier — run articles in tiers based on internal linking 
 - [Universal Rules](rules/universal-rules.md) - UK English, banned AI words, SEO requirements
 - [Common Mistakes](rules/common-mistakes.md) - Learned patterns (grows over time)
 - [Client Profile Requirements](rules/client-profile-requirements.md) - Which profile fields each skill needs
-- [Sub-Agent Rules](rules/sub-agent-rules.md) - Sub-agent orchestration, fresh context windows, return formats
+- [Workflow Rules](rules/workflow.md) - Agent orchestration, execution pipeline, retry loops
 
 ---
 
@@ -537,8 +556,6 @@ Located in `.claude/skills/templates/`:
 | [article-template.md](skills/templates/article-template.md) | SEO article structure with frontmatter |
 | [distribution-template.md](skills/templates/distribution-template.md) | Platform files for content atomisation |
 | [email-sequence-template.md](skills/templates/email-sequence-template.md) | Email sequence structures by type |
-| [sub-agent-seo-content.md](skills/templates/sub-agent-seo-content.md) | Writing sub-agent prompt template |
-| [sub-agent-validate-content.md](skills/templates/sub-agent-validate-content.md) | Validation sub-agent prompt template |
 
 ### Skill-Specific Templates
 

@@ -248,6 +248,10 @@ The onboarding interview covered:
 
 **Skills used:** `/seo-content` then `/direct-response-copy`
 
+> **Agent Automation Note:** Steps 4-7 (seo-content, direct-response-copy, validate-content, content-atomizer) can be automated via the agent system. For full pillar execution with multiple articles, use `/execute-pillar` which orchestrates the seo-writer, copy-enhancer, content-validator, and content-atomizer agents in tier-based parallel execution. See [Workflow Rules](../rules/workflow.md) for details.
+>
+> This example shows the manual workflow for a single article to illustrate each step. In practice, use agent automation for efficiency when generating 4+ articles.
+
 ### Output
 
 ```

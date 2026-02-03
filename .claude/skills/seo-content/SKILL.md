@@ -826,7 +826,9 @@ Save articles to the pillar's articles folder using this naming convention:
 
 ## Pillar Mode (Multiple Articles)
 
-When generating a full pillar (7+ articles), running each article sequentially in one session exhausts context. Pillar mode solves this through sub-agent orchestration.
+When generating a full pillar (7+ articles), running each article sequentially in one session exhausts context. Pillar mode solves this through agent orchestration.
+
+**Full documentation:** [Workflow Rules](../../rules/workflow.md)
 
 ### When to Use Pillar Mode
 
@@ -834,107 +836,31 @@ When generating a full pillar (7+ articles), running each article sequentially i
 |----------|------|---------|
 | Single article | Standard | `/seo-content` |
 | 2-3 articles | Standard (sequential) | `/seo-content` per article |
-| 4+ articles (full pillar) | Pillar mode | `/seo-content pillar` |
+| 4+ articles (full pillar) | Agent-automated | `/execute-pillar` |
 
 ### How Pillar Mode Works
 
-Pillar mode uses a **Parallel by Dependency Tier** execution model:
+The main session orchestrates 4 agents (seo-writer, copy-enhancer, content-validator, content-atomizer) using **Parallel by Dependency Tier** execution:
+
+1. **Tier 1:** Foundation articles (no dependencies)
+2. **Tier 2+:** Articles grouped by internal linking dependencies
+3. **Final Tier:** Pillar guide (links to all articles)
+
+Within each tier, multiple articles can run in parallel. The main session:
+- Spawns agents and receives PASS/FAIL results
+- Handles retry loops (max 3 attempts per article)
+- Commits after each tier completes
+- Runs post-pillar linking pass
+
+**Key constraint:** Agents cannot spawn other agents. The main session orchestrates all execution.
+
+### Agent Pipeline Per Article
 
 ```
-Main Session (Orchestrator)
-    │
-    ├─→ Tier 1: Foundation article(s)
-    │   ├─→ Writing Sub-Agent → creates article, returns file path
-    │   ├─→ Validation Sub-Agent → validates, returns PASS/FAIL
-    │   └─→ Main commits if PASS
-    │
-    ├─→ Tier 2: Articles with no inter-dependencies (parallel)
-    │   ├─→ Writing Sub-Agents (parallel) → each creates article
-    │   ├─→ Validation Sub-Agents (parallel) → each validates
-    │   └─→ Main commits all PASS articles
-    │
-    ├─→ Tier 3+: Articles with dependencies on previous tiers
-    │   └─→ Same pattern: write → validate → commit
-    │
-    └─→ Final Tier: Pillar Guide (depends on all)
-        ├─→ Writing Sub-Agent → creates pillar guide
-        ├─→ Validation Sub-Agent → validates guide
-        └─→ Main commits if PASS
+seo-writer → copy-enhancer → content-validator → (retry if FAIL) → content-atomizer
 ```
 
-### The Orchestration Process
-
-When you trigger `/seo-content pillar`:
-
-1. **Analyse dependencies** — Read the pillar brief and identify which articles depend on others (for internal linking)
-2. **Calculate tiers** — Group articles into tiers where articles in the same tier have no inter-dependencies
-3. **Execute by tier** — Run tiers in order. Within each tier, spawn sub-agents in parallel
-4. **Validate and commit** — After each tier completes, validate all articles and commit passing ones
-5. **Linking pass** — After all tiers complete, run post-pillar linking pass to add links TO the pillar guide
-
-### Sub-Agent Types
-
-| Type | Role | Returns |
-|------|------|---------|
-| Writing | Creates complete article following this skill's workflow | File path + status |
-| Validation | Validates against universal rules + brand voice | PASS/FAIL + issues |
-
-### What Sub-Agents Receive
-
-Sub-agents receive **file paths**, not pasted content. Each writing sub-agent gets:
-
-- Client profile path (e.g., `clients/hushaway/profile.md`)
-- Positioning document path (e.g., `{pillar}/02-positioning.md`)
-- Pillar brief path (e.g., `{pillar}/01-pillar-brief.md`)
-- Target article details (keyword, angle, word count)
-- Completed articles list (paths for internal linking)
-- Instruction to execute the full `/seo-content` workflow autonomously
-
-The sub-agent reads all context files itself, executes the complete workflow (research → draft → humanise → optimise), and returns only the file path and status—not the full article content.
-
-### Failure Handling
-
-- If sub-agent fails: Retry with same instructions
-- If retry fails: Retry once more with error context
-- If second retry fails: Escalate to user, continue with other articles
-- All failures logged to PROJECT-TASKS.md
-
-### Context Management
-
-The key insight: **main session never reads article content directly**.
-
-- Writing sub-agents return: file path + basic status
-- Validation sub-agents read from path, validate, return PASS/FAIL
-- This keeps main session context minimal for orchestration of 7+ articles
-
-### Example: ADHD Sleep Pillar
-
-**Dependency analysis:**
-
-| Article | Depends On |
-|---------|------------|
-| #1 Why ADHD Child Won't Sleep | None |
-| #2 ADHD Bedtime Routine | #1 |
-| #3 Calming Sounds for ADHD | #1 |
-| #4 Racing Thoughts at Bedtime | #1 |
-| #5 Beyond Melatonin | #3, #4 |
-| #6 ADHD vs Autism Sleep | #1 |
-| #7 Pillar Guide | All |
-
-**Tier grouping:**
-
-| Tier | Articles | Execution |
-|------|----------|-----------|
-| 1 | Article 1 | Solo |
-| 2 | Articles 2, 3, 4, 6 | 4 sub-agents in parallel |
-| 3 | Article 5 | Solo (links to 3, 4) |
-| 4 | Article 7 (Pillar Guide) | Solo (links to all) |
-
-**Result:** 4 sequential batches, 7 articles completed efficiently.
-
-### Sub-Agent Template
-
-See `.claude/skills/templates/sub-agent-seo-content.md` for the complete sub-agent prompt template used when spawning writing and validation sub-agents.
+See [Workflow Rules](../../rules/workflow.md) for the complete orchestration pattern, retry logic, and tier identification guide.
 
 ---
 
@@ -1001,7 +927,7 @@ If any answer is no, revise before publishing.
 
 ## Non-Interactive Mode
 
-When invoked by a sub-agent (see [Sub-Agent Rules](../../rules/sub-agent-rules.md)), this skill runs in non-interactive mode.
+When invoked by an agent (see [Workflow Rules](../../rules/workflow.md)), this skill runs in non-interactive mode.
 
 ### What Changes
 
@@ -1066,4 +992,4 @@ Example:
 
 ---
 
-*Reference: `rules/sub-agent-rules.md` for complete sub-agent orchestration guidelines.*
+*Reference: `rules/workflow.md` for complete agent orchestration guidelines.*

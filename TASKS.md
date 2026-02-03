@@ -11,7 +11,7 @@
 | Task 5: Create Content Atomizer Agent | PASS |
 | Task 6: Create workflow.md | PASS |
 | Task 7: Create /execute-pillar Skill | PASS |
-| Task 8: Update References | pending |
+| Task 8: Update References | PASS |
 | Task 9: Test Auto-Delegation | pending |
 | Task 10: Test Return Formats + Rules at Runtime | pending |
 | Task 11: Full Pipeline Validation | pending |
@@ -215,20 +215,32 @@
 **Objective:** Update all files that reference deprecated sub-agent approach to reference new workflow.md and agent files.
 
 **Acceptance Criteria:**
-- [ ] Update `CLAUDE.md` — Replace "Sub-Agent Orchestration" section with reference to `workflow.md`
-- [ ] Update `CLAUDE.md` — Add `workflow.md` to Rules section table
-- [ ] Update `CLAUDE.md` — Remove sub-agent template references from Templates section
-- [ ] Update `CLAUDE.md` — Document 4 agents + `/execute-pillar` skill in new "Agents" section
-- [ ] Update `seo-content/SKILL.md` — Reference `workflow.md` in any pillar mode documentation
-- [ ] Update `validate-content/SKILL.md` — Reference `workflow.md` in Non-Interactive Mode section
-- [ ] Update `common-mistakes.md` — Rename "Sub-Agent Patterns" → "Agent Orchestration Patterns"
-- [ ] Update `common-mistakes.md` — Change references from `sub-agent-rules.md` to `workflow.md`
-- [ ] Update `end-to-end-example.md` — Add note about agent-automated Steps 4-7
+- [x] Update `CLAUDE.md` — Replace "Sub-Agent Orchestration" section with reference to `workflow.md`
+- [x] Update `CLAUDE.md` — Add `workflow.md` to Rules section table
+- [x] Update `CLAUDE.md` — Remove sub-agent template references from Templates section
+- [x] Update `CLAUDE.md` — Document 4 agents + `/execute-pillar` skill in new "Agents" section
+- [x] Update `seo-content/SKILL.md` — Reference `workflow.md` in any pillar mode documentation
+- [x] Update `validate-content/SKILL.md` — Reference `workflow.md` in Non-Interactive Mode section
+- [x] Update `common-mistakes.md` — Rename "Sub-Agent Patterns" → "Agent Orchestration Patterns"
+- [x] Update `common-mistakes.md` — Change references from `sub-agent-rules.md` to `workflow.md`
+- [x] Update `end-to-end-example.md` — Add note about agent-automated Steps 4-7
 
 **Starter Prompt:**
 > Implement Task 8: Update References. Update all files that reference the deprecated sub-agent approach. Reference the "Workflow Consolidation" section in `agents-prd.md` for the complete list of updates. Key changes: (1) CLAUDE.md gets new Agents section and references workflow.md, (2) Remove sub-agent template references, (3) common-mistakes.md rename section to "Agent Orchestration Patterns", (4) end-to-end-example.md note about agent automation. Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Updated all files referencing deprecated sub-agent approach to use new agent system and workflow.md
+- **Decisions:**
+  - CLAUDE.md: Added new "Agents" section with 4-agent table plus /execute-pillar skill; replaced Sub-Agent Orchestration section with Agent-Automated Execution referencing workflow.md; updated Rules table to include workflow.md instead of sub-agent-rules.md; removed sub-agent template references from Shared Templates
+  - seo-content/SKILL.md: Simplified Pillar Mode section to reference workflow.md; updated all references from sub-agent-rules.md to workflow.md
+  - validate-content/SKILL.md: Updated Non-Interactive Mode references to workflow.md
+  - common-mistakes.md: Renamed "Sub-Agent Patterns" to "Agent Orchestration Patterns"; updated all pattern descriptions to use "agent" instead of "sub-agent"; changed all references to workflow.md
+  - end-to-end-example.md: Added agent automation note at start of Phase 5 explaining that Steps 4-7 can be automated via /execute-pillar
+- **Next:** Task 9 tests auto-delegation to verify agents respond to correct triggers
 
 ---
 
