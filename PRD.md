@@ -19,12 +19,12 @@
 Every task follows this pattern — no exceptions:
 
 1. **Plan** — Break work into discrete tasks
-2. **Document** — Write tasks to `TASKS.md` in project root
+2. **Document** — Write tasks to `PROJECT-TASKS.md` in project root
 3. **Execute** — Complete one task at a time
 4. **Verify** — Each task must 100% PASS before proceeding
 5. **Handoff** — Document completion with context for next task
 
-See [CLAUDE.md](.claude/CLAUDE.md) for TASKS.md template and full requirements.
+See [CLAUDE.md](.claude/CLAUDE.md) for PROJECT-TASKS.md template and full requirements.
 
 ---
 
@@ -64,7 +64,7 @@ See [CLAUDE.md](.claude/CLAUDE.md) for TASKS.md template and full requirements.
 /projects/
 └── {client-name}/
     └── {project-name}/
-        ├── TASKS.md
+        ├── PROJECT-TASKS.md
         ├── 00-keyword-brief.md
         └── {pillar-name}/
             ├── 01-pillar-brief.md

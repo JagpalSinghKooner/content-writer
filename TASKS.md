@@ -14,7 +14,7 @@
 | Task 14: Execute ADHD Sleep Pillar - Tier 4 | PASS |
 | Task 15: Post-Pillar Linking Pass | PASS |
 | Task 6: End-to-End Validation with Real Client | in_progress |
-| Task 16: Rename TASKS.md to PROJECT-TASKS.md | pending |
+| Task 16: Rename TASKS.md to PROJECT-TASKS.md | PASS |
 | Task 17: Update PROJECT-TASKS.md for HushAway | pending |
 | Task 18: Fix Banned Words in Articles | pending |
 | Task 19: Run /direct-response-copy (Articles 1-4) | pending |
@@ -296,20 +296,27 @@
 **Objective:** Eliminate ambiguity between system-level TASKS.md (repo root) and project-level task tracking.
 
 **Acceptance Criteria:**
-- [ ] Rename `projects/hushaway/seo-content/TASKS.md` to `PROJECT-TASKS.md`
-- [ ] Update all references in CLAUDE.md (11 references)
-- [ ] Update tasks-template.md
-- [ ] Update sub-agent-seo-content.md
-- [ ] Update seo-content/SKILL.md
-- [ ] Update PRD.md
-- [ ] Update common-mistakes.md
-- [ ] Update end-to-end-example.md
-- [ ] Add explicit section distinguishing root TASKS.md vs PROJECT-TASKS.md
+- [x] Rename `projects/hushaway/seo-content/TASKS.md` to `PROJECT-TASKS.md`
+- [x] Update all references in CLAUDE.md (11 references)
+- [x] Update tasks-template.md
+- [x] Update sub-agent-seo-content.md
+- [x] Update seo-content/SKILL.md
+- [x] Update PRD.md
+- [x] Update common-mistakes.md
+- [x] Update end-to-end-example.md
+- [x] Add explicit section distinguishing root TASKS.md vs PROJECT-TASKS.md
 
 **Starter Prompt:**
 > Rename the project-level task tracker from TASKS.md to PROJECT-TASKS.md. Start by renaming projects/hushaway/seo-content/TASKS.md, then update all references in the codebase. Add a clear section to CLAUDE.md explaining: root TASKS.md = system development tasks, PROJECT-TASKS.md = client project work.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Renamed `projects/hushaway/seo-content/TASKS.md` to `PROJECT-TASKS.md`. Updated 9 files with references: CLAUDE.md, tasks-template.md, sub-agent-seo-content.md, seo-content/SKILL.md, PRD.md, common-mistakes.md, end-to-end-example.md, new-features.md. Added new "Task Tracking: Two Systems" section at top of CLAUDE.md explaining the distinction.
+- **Decisions:** Root `TASKS.md` = system development (building the machine). `PROJECT-TASKS.md` = client project work (running the machine). References to "root TASKS.md" kept explicit where needed (new-features.md).
+- **Next:** Task 17 — Update the HushAway PROJECT-TASKS.md to reflect actual work completed on the pillar.
 
 ---
 

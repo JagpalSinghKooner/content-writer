@@ -1,13 +1,13 @@
-# TASKS.md Starter Template
+# PROJECT-TASKS.md Starter Template
 
-A ready-to-copy template for tracking project tasks. Follows the TASKS.md specification from CLAUDE.md Rule #1.
+A ready-to-copy template for tracking client project tasks. Follows the PROJECT-TASKS.md specification from CLAUDE.md Rule #1.
 
 ---
 
 ## Usage Notes
 
 1. **Copy** this file to your project root
-2. **Rename** to `TASKS.md`
+2. **Rename** to `PROJECT-TASKS.md`
 3. **Replace** placeholders with project-specific content:
    - `[Project Name]` → Your project name
    - `[Task Title]` → Descriptive task name
@@ -18,8 +18,8 @@ A ready-to-copy template for tracking project tasks. Follows the TASKS.md specif
 
 **Key Rules:**
 - Every task must complete under 45% context window
-- A task is NOT complete until TASKS.md shows PASS with handoff section
-- The TASKS.md update is part of the task, not after it
+- A task is NOT complete until PROJECT-TASKS.md shows PASS with handoff section
+- The PROJECT-TASKS.md update is part of the task, not after it
 
 ---
 

@@ -4,16 +4,36 @@ A content production system that creates SEO-optimised articles for any client. 
 
 ---
 
+## Task Tracking: Two Systems
+
+This project uses **two separate task tracking files** for different purposes:
+
+| File | Location | Purpose |
+|------|----------|---------|
+| `TASKS.md` | Repository root | **System development tasks** — Building skills, rules, templates, and infrastructure for the content system itself |
+| `PROJECT-TASKS.md` | `/projects/{client}/{project}/` | **Client project work** — Tracking content creation tasks for specific client projects (keyword research, articles, distribution) |
+
+**Why two files?**
+
+- **TASKS.md (root):** Tracks work on the content system itself — new skills, rule updates, template improvements, bug fixes. This is *building the machine*.
+- **PROJECT-TASKS.md:** Tracks work *using* the system for clients — researching keywords, writing articles, creating distribution content. This is *running the machine*.
+
+**When starting a session:**
+- Working on a client project? → Read the project's `PROJECT-TASKS.md`
+- Working on system improvements? → Read the root `TASKS.md`
+
+---
+
 ## FIRST: Session Start Protocol
 
 **Before doing ANY work, read these files in order:**
 
-1. `TASKS.md` in the project root — Check current task status, read handoff context from completed tasks
+1. `PROJECT-TASKS.md` in the project root — Check current task status, read handoff context from completed tasks
 2. Client profile (if working on a project) — Restore brand voice and requirements
 
-**If TASKS.md doesn't exist for the current project, create it before starting work.**
+**If PROJECT-TASKS.md doesn't exist for the current project, create it before starting work.**
 
-This is non-negotiable. Without reading TASKS.md, you have no context about what's been done, what's in progress, or what decisions were made. You will duplicate work or contradict previous decisions.
+This is non-negotiable. Without reading PROJECT-TASKS.md, you have no context about what's been done, what's in progress, or what decisions were made. You will duplicate work or contradict previous decisions.
 
 ---
 
@@ -24,12 +44,12 @@ This is non-negotiable. Without reading TASKS.md, you have no context about what
 ### How All Work Gets Done
 
 1. **Plan** → Break work into discrete tasks
-2. **Document** → Write tasks to `TASKS.md` in project root
+2. **Document** → Write tasks to `PROJECT-TASKS.md` in project root
 3. **Execute** → Complete one task at a time
 4. **Verify** → Each task must 100% PASS before proceeding
 5. **Handoff** → Document completion with context for next task
 
-**CRITICAL: NEVER tell the user a task is complete without FIRST updating TASKS.md. The update happens IN THE SAME RESPONSE as the task completion, not after. Failure to do this breaks the entire system.**
+**CRITICAL: NEVER tell the user a task is complete without FIRST updating PROJECT-TASKS.md. The update happens IN THE SAME RESPONSE as the task completion, not after. Failure to do this breaks the entire system.**
 
 ### Context Management
 
@@ -37,7 +57,7 @@ This is non-negotiable. Without reading TASKS.md, you have no context about what
 - If a task will exceed 45%: stop, re-plan, split into 2-3 sessions
 - Never push through with degraded context—split the work instead
 
-### TASKS.md Template
+### PROJECT-TASKS.md Template
 
 Every project uses this structure:
 
@@ -81,9 +101,9 @@ See [Common Mistakes](rules/common-mistakes.md) for recurring violations of this
 
 Before responding that a task is done, verify:
 
-- [ ] TASKS.md acceptance criteria boxes are checked
-- [ ] TASKS.md status changed to PASS
-- [ ] TASKS.md handoff section written (Done, Decisions, Next)
+- [ ] PROJECT-TASKS.md acceptance criteria boxes are checked
+- [ ] PROJECT-TASKS.md status changed to PASS
+- [ ] PROJECT-TASKS.md handoff section written (Done, Decisions, Next)
 - [ ] Git commit created and pushed
 - [ ] PR created (if pillar complete)
 
@@ -97,7 +117,7 @@ Before responding that a task is done, verify:
 
 ### When a Task Passes
 
-Immediately after updating TASKS.md with PASS status:
+Immediately after updating PROJECT-TASKS.md with PASS status:
 
 1. Stage all changed files in the project folder
 2. Commit with message format:
@@ -247,7 +267,7 @@ Run `/onboard-client` once per client to create their profile:
 
 ```
 /projects/{client}/{project}/
-├── TASKS.md
+├── PROJECT-TASKS.md
 ├── 00-keyword-brief.md
 └── {pillar-name}/
     ├── 01-pillar-brief.md
@@ -506,7 +526,7 @@ Sub-agents receive **file paths**, not pasted content. Each sub-agent:
 - If sub-agent fails: Retry with same instructions
 - If retry fails: Retry once more with error context
 - If second retry fails: Escalate to user, continue with other articles
-- Log all failures to TASKS.md
+- Log all failures to PROJECT-TASKS.md
 
 **Context Management:**
 
@@ -555,7 +575,7 @@ Located in `.claude/skills/templates/`:
 
 | Template | Purpose |
 |----------|---------|
-| [tasks-template.md](skills/templates/tasks-template.md) | TASKS.md starter for new projects |
+| [tasks-template.md](skills/templates/tasks-template.md) | PROJECT-TASKS.md starter for new projects |
 | [article-template.md](skills/templates/article-template.md) | SEO article structure with frontmatter |
 | [distribution-template.md](skills/templates/distribution-template.md) | Platform files for content atomisation |
 | [email-sequence-template.md](skills/templates/email-sequence-template.md) | Email sequence structures by type |

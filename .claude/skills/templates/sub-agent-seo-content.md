@@ -254,4 +254,4 @@ If a writing sub-agent returns FAIL:
 2. **Second retry:** Re-spawn with error context from first attempt
 3. **Third failure:** Escalate to user, continue with other articles
 
-Log all failures to TASKS.md under the relevant task.
+Log all failures to PROJECT-TASKS.md under the relevant task.

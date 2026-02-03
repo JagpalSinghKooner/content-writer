@@ -1,6 +1,6 @@
 # End-to-End Workflow Example
 
-A complete walkthrough of the SEO Content System using a fictional client. This example demonstrates every phase from onboarding to distribution, with realistic file paths, TASKS.md entries, and handoff notes.
+A complete walkthrough of the SEO Content System using a fictional client. This example demonstrates every phase from onboarding to distribution, with realistic file paths, PROJECT-TASKS.md entries, and handoff notes.
 
 **Client:** Apex Analytics (B2B marketing analytics SaaS)
 **Project:** Q1 2024 Content Programme
@@ -38,7 +38,7 @@ The onboarding interview covered:
 - Conversion Elements (primary CTA, lead magnets, social proof)
 - Goals (traffic targets, lead generation, authority building)
 
-### TASKS.md Entry
+### PROJECT-TASKS.md Entry
 
 ```markdown
 ## Task 1: Client Onboarding
@@ -71,7 +71,7 @@ The onboarding interview covered:
 
 ```
 /projects/apex-analytics/q1-content/
-├── TASKS.md
+├── PROJECT-TASKS.md
 └── 00-keyword-brief.md
 ```
 
@@ -95,7 +95,7 @@ The onboarding interview covered:
 3. Manageable competition (established players but gaps in content quality)
 4. Clear pillar structure (pillar guide + 7 supporting articles)
 
-### TASKS.md Entry
+### PROJECT-TASKS.md Entry
 
 ```markdown
 ## Task 2: Keyword Research
@@ -127,7 +127,7 @@ The onboarding interview covered:
 
 ```
 /projects/apex-analytics/q1-content/
-├── TASKS.md
+├── PROJECT-TASKS.md
 ├── 00-keyword-brief.md
 └── marketing-attribution/
     └── 01-pillar-brief.md
@@ -158,7 +158,7 @@ The onboarding interview covered:
 
 **Gap identified:** No competitor combines technical depth with accessible writing and UK-relevant examples.
 
-### TASKS.md Entry
+### PROJECT-TASKS.md Entry
 
 ```markdown
 ## Task 3: Pillar Brief
@@ -219,7 +219,7 @@ The onboarding interview covered:
 
 **Consistency check:** All angles reinforce "action over perfection" primary theme.
 
-### TASKS.md Entry
+### PROJECT-TASKS.md Entry
 
 ```markdown
 ## Task 4: Positioning Angles
@@ -292,7 +292,7 @@ updated: 2024-01-15
 ---
 ```
 
-### TASKS.md Entry
+### PROJECT-TASKS.md Entry
 
 ```markdown
 ## Task 5.1: Article 01 - What Is Marketing Attribution
@@ -349,7 +349,7 @@ WARNINGS:
 RESULT: PASS with 2 warnings (non-blocking)
 ```
 
-### TASKS.md Entry
+### PROJECT-TASKS.md Entry
 
 ```markdown
 ## Task 5.2: Validate Article 01
@@ -414,7 +414,7 @@ RESULT: PASS with 2 warnings (non-blocking)
 - Bridge to full article
 - Single CTA
 
-### TASKS.md Entry
+### PROJECT-TASKS.md Entry
 
 ```markdown
 ## Task 6: Atomise Article 01
@@ -443,7 +443,7 @@ RESULT: PASS with 2 warnings (non-blocking)
 
 ```
 /projects/apex-analytics/q1-content/
-├── TASKS.md
+├── PROJECT-TASKS.md
 ├── 00-keyword-brief.md
 └── marketing-attribution/
     ├── 01-pillar-brief.md
@@ -465,7 +465,7 @@ RESULT: PASS with 2 warnings (non-blocking)
 
 ## Key Patterns Demonstrated
 
-1. **TASKS.md drives everything** — Every phase has a task entry with acceptance criteria, status, and handoff notes
+1. **PROJECT-TASKS.md drives everything** — Every phase has a task entry with acceptance criteria, status, and handoff notes
 2. **File naming is predictable** — `00-keyword-brief.md`, `01-pillar-brief.md`, `02-positioning.md`, then numbered articles
 3. **Handoffs carry context** — Each task explains decisions made and context for next task
 4. **Validation catches issues early** — Run after every article, not just at the end

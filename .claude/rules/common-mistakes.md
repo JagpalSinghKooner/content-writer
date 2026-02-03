@@ -48,9 +48,9 @@ The Issue number links back to the original error log for context.
 
 <!-- Add new patterns below this line -->
 
-### Skipping TASKS.md updates
+### Skipping PROJECT-TASKS.md updates
 
-**Pattern:** Completing work without updating TASKS.md (checkboxes, status, handoff section)
+**Pattern:** Completing work without updating PROJECT-TASKS.md (checkboxes, status, handoff section)
 
 **Why it fails:** Violates Rule #1. Breaks audit trail. Next session has no context. Work appears incomplete even when done.
 

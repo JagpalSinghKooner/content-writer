@@ -8,7 +8,7 @@ Features that would be nice to have but aren't blocking current work. Add new id
 
 | Feature | Priority | Notes |
 |---------|----------|-------|
-| Marketing History in Client Profile | Low | Moved from TASKS.md Phase 3 |
+| Marketing History in Client Profile | Low | Moved from root TASKS.md Phase 3 |
 
 ---
 
@@ -25,7 +25,7 @@ Features that would be nice to have but aren't blocking current work. Add new id
 
 **Status:** backlog
 
-**Notes:** Moved from TASKS.md Task 3.1. Implement when client feedback suggests this context would improve content quality.
+**Notes:** Moved from root TASKS.md Task 3.1. Implement when client feedback suggests this context would improve content quality.
 
 ---
 

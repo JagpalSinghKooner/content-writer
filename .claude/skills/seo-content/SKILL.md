@@ -897,7 +897,7 @@ The sub-agent reads all context files itself, executes the complete workflow (re
 - If sub-agent fails: Retry with same instructions
 - If retry fails: Retry once more with error context
 - If second retry fails: Escalate to user, continue with other articles
-- All failures logged to TASKS.md
+- All failures logged to PROJECT-TASKS.md
 
 ### Context Management
 
