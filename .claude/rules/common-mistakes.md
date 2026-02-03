@@ -120,6 +120,36 @@ Never skip step 2. It's where good content becomes great content.
 
 ---
 
+### Em dash overuse
+
+**Pattern:** Using em dashes "—" for pauses, asides, or emphasis
+
+**Why it fails:** Em dashes are an AI writing fingerprint. They interrupt flow and feel overly dramatic. Professional copywriters avoid them.
+
+**Fix:** Restructure as separate sentences or use periods. Never replace with other punctuation.
+
+---
+
+### Keyword-only slugs
+
+**Pattern:** Slugs that are just the primary keyword (e.g., `adhd-sleep`, `calming-sounds`)
+
+**Why it fails:** Misses SEO opportunity. Descriptive slugs tell readers and search engines what the article is about. Keyword-only slugs are ambiguous.
+
+**Fix:** Use descriptive-first format: `understanding-adhd-sleep-problems`, `guide-to-calming-sounds-adhd`
+
+---
+
+### H1 without hook
+
+**Pattern:** H1 that is just the keyword without context or intrigue
+
+**Why it fails:** Misses opportunity to capture attention. "ADHD Sleep Problems" tells you the topic but doesn't make you want to read. "ADHD Sleep Problems: Why Your Child's Brain Won't Switch Off" does.
+
+**Fix:** Always pair keyword with a hook that creates curiosity or promises value.
+
+---
+
 ## Sub-Agent Patterns
 
 The following patterns relate to sub-agent orchestration. See [Sub-Agent Rules](sub-agent-rules.md) for the complete guidelines.

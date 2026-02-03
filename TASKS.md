@@ -19,7 +19,7 @@
 | Task 13: Update CLAUDE.md - Slug Format Rules | pending |
 | Task 14: Update content-validator.md - New Validation Checks | PASS |
 | Task 16: Update copy-enhancer.md - Em Dash Fix Mode | PASS |
-| Task 17: Update common-mistakes.md - New Patterns | pending |
+| Task 17: Update common-mistakes.md - New Patterns | PASS |
 | Task 18: Fix HushAway Profile CTAs | pending |
 
 **Previous work:** Tasks 1-29 completed (see git history). Sub-agent system now superseded by Claude Code agent files approach per agents-prd.md.
@@ -398,7 +398,14 @@
 **Starter Prompt:**
 > Implement Task 17: Update common-mistakes.md with three new patterns. Add: (1) "Em dash overuse" - using "—" for pauses/asides, fix is restructure not replace, (2) "Keyword-only slugs" - slugs that are just keywords, fix is descriptive-first format, (3) "H1 without hook" - H1 that's just keyword, fix is add curiosity/value hook. Follow existing pattern format in the file. Reference plan file for exact content. Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Added 3 new patterns to common-mistakes.md: (1) "Em dash overuse" - AI fingerprint, restructure don't replace, (2) "Keyword-only slugs" - use descriptive-first format, (3) "H1 without hook" - pair keyword with curiosity/value hook
+- **Decisions:** Placed patterns in main Patterns section (before Sub-Agent Patterns). Used exact content from plan file. Each pattern follows standard Pattern/Why it fails/Fix format.
+- **Next:** Task 18 fixes HushAway profile CTAs (remove "no signup" and "free" mentions, add benefit-focused CTAs)
 
 ---
 
