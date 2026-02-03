@@ -43,33 +43,220 @@ Content is **rejected** if any of these rules are violated.
 
 Use British spelling throughout. American spelling = automatic fail.
 
+UK English follows predictable patterns. Learn the patterns, catch the violations.
+
+---
+
+#### Pattern 1: -our / -or
+
+UK uses **-our**, US uses **-or**.
+
 | UK ✓ | US ✗ |
 |------|------|
 | colour | color |
 | behaviour | behavior |
-| organisation | organization |
 | favourite | favorite |
 | honour | honor |
 | favour | favor |
 | humour | humor |
 | labour | labor |
+| harbour | harbor |
+| neighbour | neighbor |
+| flavour | flavor |
+| savour | savor |
+| vapour | vapor |
+| odour | odor |
+| vigour | vigor |
+| rumour | rumor |
+
+**Derived forms:** The -our is retained in most derivatives: colourful, behaviour**al**, favourite**s**, labouring. Exception: honorary, humorous, vigorous drop the 'u'.
+
+---
+
+#### Pattern 2: -ise / -ize
+
+UK prefers **-ise**, US uses **-ize**.
+
+| UK ✓ | US ✗ |
+|------|------|
 | recognise | recognize |
 | organise | organize |
 | realise | realize |
 | analyse | analyze |
+| memorise | memorize |
+| specialise | specialize |
+| prioritise | prioritize |
+| apologise | apologize |
+| customise | customize |
+| summarise | summarize |
+| optimise | optimize |
+| emphasise | emphasize |
+| criticise | criticize |
+| capitalise | capitalize |
+| categorise | categorize |
+| minimise | minimize |
+| maximise | maximize |
+
+**Derived forms:** Pattern extends to nouns and other forms: organisation, realisation, specialisation, prioritisation, customisation.
+
+**Note:** Some words are ALWAYS -ise in both UK and US: advertise, advise, comprise, compromise, despise, devise, disguise, exercise, improvise, revise, supervise, surprise, televise. These derive from different roots.
+
+---
+
+#### Pattern 3: -re / -er
+
+UK uses **-re**, US uses **-er**.
+
+| UK ✓ | US ✗ |
+|------|------|
 | centre | center |
 | metre | meter |
 | theatre | theater |
-| mum | mom |
+| fibre | fiber |
+| litre | liter |
+| calibre | caliber |
+| sombre | somber |
+| lustre | luster |
+| spectre | specter |
+| manoeuvre | maneuver |
+
+**Derived forms:** Pattern retained in compounds and derivatives: centred, metrication, fibreboard. Exception: central, metric (same in both).
+
+---
+
+#### Pattern 4: -ce / -se (Nouns vs Verbs)
+
+UK distinguishes nouns (-ce) from verbs (-se). US often uses -se for both.
+
+| UK ✓ | US ✗ | Notes |
+|------|------|-------|
+| defence | defense | noun |
+| offence | offense | noun |
+| licence | license | noun (UK verb is "license") |
+| pretence | pretense | noun |
+| practise | practice | verb (UK noun is "practice") |
+
+**UK Rule:** Licence/practice = noun. License/practise = verb.
+**US Rule:** License/practice for both.
+
+**Example:** "I need a licence to practise medicine" (UK) vs "I need a license to practice medicine" (US).
+
+---
+
+#### Pattern 5: Doubled Consonants (-ll-)
+
+UK doubles the final consonant before suffixes. US often doesn't.
+
+| UK ✓ | US ✗ |
+|------|------|
 | travelling | traveling |
+| travelled | traveled |
+| traveller | traveler |
 | cancelled | canceled |
-| defence | defense |
-| licence | license |
-| practise (verb) | practice (verb) |
-| grey | gray |
-| cheque | check |
-| programme | program |
+| cancelling | canceling |
+| modelling | modeling |
+| labelling | labeling |
+| counselling | counseling |
+| fuelling | fueling |
+| jewellery | jewelry |
+| signalling | signaling |
+| marvellous | marvelous |
+
+**The Rule:** UK doubles -l before -ed, -ing, -er, -ery. US keeps single -l.
+
+**Derived forms:** This extends to all suffixed forms: travellers, cancellations, modellers.
+
+---
+
+#### Pattern 6: -ogue / -og
+
+UK uses **-ogue**, US often drops the -ue.
+
+| UK ✓ | US ✗ |
+|------|------|
 | catalogue | catalog |
+| dialogue | dialog |
+| analogue | analog |
+| prologue | prolog |
+
+**Note:** US is inconsistent here. "Catalog" is common in US, but "dialogue" is often kept. For UK content, always use -ogue.
+
+---
+
+#### Pattern 7: -ence / -ense
+
+Some words differ in this suffix.
+
+| UK ✓ | US ✗ |
+|------|------|
+| defence | defense |
+| offence | offense |
+| pretence | pretense |
+
+**Note:** "License" follows different rules (see Pattern 4).
+
+---
+
+#### Pattern 8: Miscellaneous
+
+These don't follow patterns but are commonly confused.
+
+| UK ✓ | US ✗ | Notes |
+|------|------|-------|
+| grey | gray | Colour |
+| cheque | check | Financial instrument |
+| programme | program | Schedule/broadcast (but "computer program" in both) |
+| mum | mom | Parent |
+| aluminium | aluminum | Element (5 syllables UK, 4 US) |
+| draught | draft | Beer/air current |
+| pyjamas | pajamas | Sleepwear |
+| speciality | specialty | Area of expertise |
+| tyre | tire | Wheel rubber |
+| storey | story | Building level (but "story" for narrative) |
+| kerb | curb | Road edge (but "curb" as verb in both) |
+| mould | mold | Fungus/shape |
+| plough | plow | Farm tool |
+| sceptic | skeptic | Doubter |
+| enquiry | inquiry | Question (UK uses both; inquiry for formal investigation) |
+| ageing | aging | Getting older |
+| judgement | judgment | Legal/opinion (UK allows both; US prefers no 'e') |
+| acknowledgement | acknowledgment | Recognition |
+| aeroplane | airplane | Aircraft |
+| artefact | artifact | Historical object |
+| orientated | oriented | Direction (UK accepts both; US prefers oriented) |
+
+---
+
+#### Directional Words
+
+UK and US differ on directional/prepositional suffixes.
+
+| UK ✓ | US ✗ | Notes |
+|------|------|-------|
+| towards | toward | UK prefers -s |
+| forwards | forward | UK prefers -s |
+| backwards | backward | UK prefers -s |
+| afterwards | afterward | UK prefers -s |
+| whilst | while | UK accepts both; whilst is more formal |
+| amongst | among | UK accepts both; amongst is more formal |
+
+**Note:** Both forms are technically acceptable in UK English, but the -s forms are more traditionally British. For maximum UK authenticity, use the -s forms.
+
+---
+
+#### Quick Validation Checklist
+
+When checking content, search for these US patterns:
+
+1. **-or endings:** color, behavior, favor, honor, harbor, neighbor
+2. **-ize endings:** organize, realize, memorize, specialize, optimize
+3. **-er endings:** center, meter, theater, fiber, liter
+4. **Single -l:** traveling, canceled, modeling, jewelry
+5. **-og endings:** catalog, dialog, analog
+6. **-ense endings:** defense, offense, pretense
+7. **Common traps:** gray, check (financial), program, aluminum, pajamas, tire, curb, mold, skeptic
+
+**Total patterns: 8 categories, 48+ word pairs**
 
 ---
 
