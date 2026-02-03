@@ -27,6 +27,66 @@ Check your instructions to determine which mode:
 
 ---
 
+## Banned Words Validation (Both Modes)
+
+During enhancement OR fix mode, automatically check for banned AI words.
+
+### Banned Words List
+
+Load the complete list from `rules/universal-rules.md` → Section 2.
+
+**Quick Reference (53 words):**
+
+**Verbs:** delve, navigate, leverage, utilize, facilitate, harness, empower, foster, embark, unleash, spearhead, bolster, underscore, spotlight, streamline
+
+**Adjectives:** comprehensive, robust, crucial, vital, optimal, seamless, intricate, nuanced, cutting-edge, revolutionary, pivotal, paramount, transformative, groundbreaking, multifaceted
+
+**Buzzwords:** plethora, myriad, bevy, tapestry, realm, paradigm, synergy, landscape (figurative), journey (for processes), game-changer, supercharge, elevate, unlock
+
+**Fillers:** noteworthy, notably, interestingly, importantly, undoubtedly, certainly, surely, obviously, clearly
+
+**Transitions:** firstly, secondly, thirdly, lastly, additionally, furthermore, moreover
+
+### Detection Method
+
+1. Search entire article for each banned word (case-insensitive)
+2. For each found instance, note line number
+3. Replace with natural alternatives
+
+### Replacement Examples
+
+| Banned Word | Natural Alternatives |
+|-------------|---------------------|
+| navigate | handle, manage, work through, deal with |
+| leverage | use |
+| comprehensive | complete, full, thorough |
+| delve | explore, examine, look at |
+| robust | strong, reliable, solid |
+| utilize | use |
+| facilitate | help, enable, make easier |
+| crucial | important, essential, critical |
+| optimal | best, ideal |
+| realm | area, field, world |
+
+### Pre-Return Check
+
+Before returning PASS, confirm:
+- [ ] Banned words check complete
+- [ ] All banned words replaced (zero remaining)
+- [ ] Replacements sound natural (not awkward)
+
+### Include in Return Message
+
+```
+Banned Words Check: PASS
+- Found 3 instances: "navigate" (line 45), "leverage" (line 89), "robust" (line 134)
+- All replaced with natural alternatives ✓
+```
+
+If you find banned words during fix mode that weren't in the original FAIL issues, fix them anyway.
+
+---
+
 ## Mode 1: Enhancement Pass
 
 When enhancing an article without specific issues:
@@ -195,6 +255,11 @@ After completing, return this exact format:
 **Status:** PASS | FAIL
 
 **Mode:** Enhancement | Fix
+
+**Banned Words Check:** PASS | FAIL
+- Found {N} instances: "{word}" (line XX), "{word}" (line YY)
+- All replaced with natural alternatives ✓
+- Zero banned words remain ✓
 
 **Changes Made:**
 - [List of significant changes with brief description]

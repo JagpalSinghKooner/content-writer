@@ -102,6 +102,39 @@ Issue: #{issue-number}
 🤖 Generated with Claude Code
 ```
 
+### 1.4 Context Architecture Communication
+
+After creating the draft PR, proactively explain the context architecture to the user:
+
+**Output Template:**
+
+```
+📊 Context Architecture for This Pillar
+
+Agent Execution Plan:
+- {N} articles × 4 agents each = {N × 4} total agent spawns
+- Each agent runs in a fresh, isolated context window
+- Main session orchestrates spawning and receives results
+
+Context Budget:
+- Main session: Will accumulate orchestration context (~50-70% for 7 articles)
+- Agent contexts: Independent, don't affect main session
+- This architecture prevents context explosion compared to reading all articles directly
+
+Estimated Execution Time: {tier_count} tiers × ~5-10 min per tier = {estimate} minutes total
+
+Ready to proceed with tier analysis...
+```
+
+**Why This Matters:**
+
+- Sets user expectations about context usage
+- Explains why main session context increases during orchestration
+- Shows the architectural benefit (isolated agent contexts)
+- Prevents surprise when main session hits 60-70% context
+
+**When to Output:** After PR creation, before tier analysis
+
 ---
 
 ## Step 2: Tier Analysis
@@ -145,6 +178,85 @@ Document the tier analysis before execution:
 ### Final Tier (Pillar Guide)
 - Article NN: {pillar guide title} - Links to: all articles
 ```
+
+---
+
+## Step 2B: Pre-Execution Tier Validation (Automated)
+
+Before spawning any agents, validate the tier structure automatically.
+
+### Validation Checks
+
+**1. Completeness:** All articles from pillar brief are assigned to a tier
+
+**2. No Orphans:** Every article appears in exactly one tier
+
+**3. Dependency Validity:** Tier N+1 articles only reference articles in Tiers 1 through N
+
+**4. No Circular References:** Article A links to Article B which links back to Article A
+
+**5. Tier 1 Identified:** At least 1 article has no dependencies (Tier 1 must exist)
+
+### Validation Logic
+
+Pseudo-code for validation:
+
+```python
+# Check completeness and orphans
+for article in pillar_articles:
+    assert article in tier_assignments, f"Article {article} not assigned to any tier"
+
+# Check dependency validity
+for tier_num, articles in tiers.items():
+    for article in articles:
+        for link in article.internal_links:
+            link_tier = find_tier(link)
+            assert link_tier < tier_num, f"Tier {tier_num} article {article} links to Tier {link_tier} article {link}"
+
+# Check Tier 1 exists
+assert len(tiers[1]) > 0, "No Tier 1 articles found (at least 1 article must have no dependencies)"
+```
+
+### Error Output Format
+
+If validation fails, output:
+
+```
+❌ Tier Validation FAILED
+
+Issues found:
+1. Article 03 assigned to Tier 2 but references Article 05 (Tier 3)
+2. Article 04 not assigned to any tier
+3. Circular dependency: Article 02 → Article 04 → Article 02
+
+EXECUTION BLOCKED. Fix tier structure before proceeding.
+```
+
+### Success Output Format
+
+If validation passes, output:
+
+```
+✅ Tier Validation PASSED
+
+Tier Structure:
+- Tier 1: Articles 01, 02 (no dependencies) → Will spawn 8 agents in parallel
+- Tier 2: Articles 03, 04 (depend on Tier 1) → Will spawn 8 agents in parallel
+- Tier 3: Article 05 (pillar guide, depends on all) → Will spawn 4 agents
+
+Total: 20 agent spawns across 3 tiers
+Estimated context usage: ~50-60%
+
+Proceeding to execution...
+```
+
+### When to Run
+
+After completing "Tier Analysis Output" (Step 2) and before "Spawn Tier 1 agents" (Step 3)
+
+### What Happens on Fail
+
+Stop execution, output error details, do not spawn any agents
 
 ---
 
