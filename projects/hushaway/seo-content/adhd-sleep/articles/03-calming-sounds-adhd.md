@@ -6,7 +6,7 @@ meta_description: "Not all sounds calm ADHD brains. Discover which calming sound
 slug: "calming-sounds-adhd"
 author: "HushAway"
 date: "2026-02-03"
-status: "draft"
+status: "review"
 
 # Taxonomy
 categories:
@@ -62,25 +62,33 @@ external_citations:
     title: "White, pink noise improve focus for children with ADHD, study shows"
 ---
 
-You've probably heard that sounds can help your child sleep. Maybe you've tried white noise machines, rain sounds, or those "brown noise" videos everyone's talking about on social media.
+You've tried the sounds.
 
-And maybe they worked. Or maybe they made things worse.
+White noise machines. Rain recordings. Those "brown noise" videos that social media promised would fix everything.
 
-Here's something that might explain your mixed results: not all sounds calm ADHD brains. Some sounds that work beautifully for neurotypical children can actually increase alertness or cause irritation in children with ADHD. The calming sounds for ADHD children that actually work share specific properties that align with how the ADHD brain processes stimulation.
+Maybe they helped. Or maybe — and this is the frustrating part — they made things worse.
 
-This isn't guesswork. Research over the past two decades has been slowly uncovering why certain sounds help ADHD brains and others don't. Let's look at what the science actually says.
+Here's what nobody told you: not all calming sounds calm ADHD brains.
+
+Some sounds that work brilliantly for neurotypical children can actually increase alertness in ADHD kids. Others cause irritation. A few even trigger meltdowns.
+
+The calming sounds that actually work for ADHD children share specific properties. They match how the ADHD brain processes stimulation — and most generic "sleep sounds" don't.
+
+This isn't guesswork. Two decades of research have been quietly uncovering why certain sounds help ADHD brains settle — and why others backfire.
 
 ## Why Sound Works Differently for ADHD Brains
 
-Before we get into which sounds help, we need to understand why sound matters at all for ADHD children.
+Before we get into which sounds help, you need to understand why sound matters at all.
 
-If you've read about [why your ADHD child won't sleep](/adhd-child-wont-sleep), you'll know that the core problem is often a brain that won't switch off. When the external world goes quiet at bedtime, the ADHD brain doesn't follow suit. Instead, it hunts for stimulation — often finding it in racing thoughts, worries, or random mental tangents.
+If you've read about [why your ADHD child won't sleep](/adhd-child-wont-sleep), you already know the core problem: a brain that won't switch off. When the external world goes quiet at bedtime, the ADHD brain doesn't follow. Instead, it hunts for stimulation — and usually finds it in racing thoughts, worries, or random tangents that keep your child awake for hours.
 
-Sound offers something counterintuitive: it gives the brain stimulation to stop it seeking stimulation.
+Sound offers something counterintuitive: it gives the brain stimulation *so it stops seeking stimulation*.
 
-Think of it this way. An ADHD brain in a silent room is like a hungry person in an empty kitchen — it starts opening every cupboard, looking for something, anything. But if you give it just enough of the right input, it settles. It has something to focus on that doesn't require effort or engagement.
+Think of it this way. An ADHD brain in a silent room is like a hungry person in an empty kitchen. It opens every cupboard, checks the fridge, opens the cupboards again. Hunting. Restless. Unable to settle until it finds *something*.
 
-This is why the same white noise machine that helps your neurotypical niece sleep might leave your ADHD child wide awake. Their brain has different needs.
+But give that brain the right kind of input — steady, calming, requiring nothing in return — and the searching stops. The brain has what it needs. It settles.
+
+This explains why the same white noise machine that helps your neurotypical niece sleep might leave your ADHD child wide awake. Their brain has different needs. And once you understand those needs, you can meet them.
 
 ## What the Research Actually Shows
 
@@ -178,7 +186,7 @@ This is individual, but the goal is sounds that are interesting enough to occupy
 
 Joel Nigg, lead author of the 2024 meta-analysis and professor at Oregon Health & Science University, explained it this way in Oregon Health & Science University, 2024 — [White, pink noise improve focus for children with ADHD](https://news.ohsu.edu/2024/08/09/white-pink-noise-improve-focus-for-children-with-adhd-ohsu-study-shows): "Our priority is identifying new and improved tools to empower each individual to live their healthiest and most productive life."
 
-He noted that while additional research is needed, these results point to "a possible low-cost, low-risk intervention that may benefit youths with ADHD."
+He noted that while additional research is needed, these results point to "a possible low-cost, low-risk approach that may benefit youths with ADHD."
 
 **4. No Demands, No Instructions**
 
@@ -230,15 +238,23 @@ One caution from the researchers: volume matters. Playing sounds too loud, espec
 
 Keep sound at a moderate level — audible but not dominant. Your child should be able to hear you speak over it without you raising your voice. If using headphones (for binaural beats), limit duration and keep volume low.
 
-## Your Next Step
+## Finding What Works for Your Child
 
-Finding the right calming sounds for your ADHD child might take some experimentation. Not every sound works for every brain.
+Not every sound works for every brain. That's just the reality of ADHD.
 
-But the research is encouraging: for many children with ADHD, the right sound can genuinely help. It addresses the fundamental problem — a brain that needs input to settle — in a way that requires zero effort from you or your child.
+But the research is clear: for many children with ADHD, the right sound genuinely helps. It gives the brain what it's seeking — input — in a form that leads toward sleep instead of away from it.
 
-The Open Sanctuary from HushAway® features sounds designed specifically for sensitive and neurodivergent children. The collection includes frequencies, soundscapes, and ASMR content created with passive listening in mind — no interaction required, just press play.
+And it requires zero effort from you or your child. No new habits to build. No behaviours to track. Just sound.
 
-Try something tonight. See how your child responds. You might find the missing piece isn't a complicated intervention — it's simply giving their brain what it needs to rest.
+The Open Sanctuary from HushAway® is our free collection built specifically for sensitive and neurodivergent children. Frequencies. Soundscapes. ASMR content. All designed for passive listening — no interaction required, no engagement needed.
+
+We built it because we needed it too. Nothing else was working for our own kids.
+
+Tonight, pick something. Any sound. Press play and watch how your child responds.
+
+Their reaction will tell you more than any research study. If they settle faster, you've found something worth keeping. If not, try a different sound tomorrow. The collection is free. There's no rush.
+
+The missing piece might not be a new strategy. It might simply be the right sound.
 
 For a comprehensive look at ADHD sleep challenges and solutions, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) covers everything from the science to practical strategies for every age group.
 

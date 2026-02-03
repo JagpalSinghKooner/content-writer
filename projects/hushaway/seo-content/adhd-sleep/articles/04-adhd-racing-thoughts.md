@@ -6,7 +6,7 @@ meta_description: "Your child's ADHD racing thoughts at bedtime aren't defiance 
 slug: "adhd-racing-thoughts"
 author: "HushAway"
 date: "2026-02-03"
-status: "draft"
+status: "review"
 
 # Taxonomy
 categories:
@@ -61,7 +61,7 @@ external_citations:
     title: "Systematic Review and Meta-Analysis: Do White Noise and Pink Noise Help or Hurt Attention in ADHD?"
 ---
 
-You know the scene. Lights off. Room quiet. Everyone else in the house is settling down.
+Lights off. Room quiet. Everyone else in the house is finally settling down.
 
 And your child's brain? It's just getting started.
 
@@ -71,9 +71,15 @@ And your child's brain? It's just getting started.
 
 "What happens when we die?"
 
-If your child has ADHD racing thoughts at bedtime, this is your nightly reality. The quieter the room gets, the louder their brain becomes. You've tried telling them to close their eyes and think of nothing. You've tried counting sheep. You've tried asking them to relax.
+"Can I ask you one more question?"
 
-None of it works. And there's a reason for that.
+If your child has ADHD racing thoughts at bedtime, you know this scene by heart. The quieter the room gets, the louder their brain becomes.
+
+You've tried telling them to close their eyes. Think of nothing. Count sheep. *Just relax*. You've tried asking nicely. Then firmly. Then — at 10:30pm, exhausted — begging.
+
+None of it works.
+
+There's a reason for that. And it's not that you're doing it wrong.
 
 ## Why "Stop Thinking" Doesn't Work for ADHD Brains
 
@@ -178,17 +184,23 @@ For children with significant anxiety alongside ADHD, passive listening becomes 
 
 ## The Zero-Effort Element
 
-We understand something about bedtime in ADHD households: you're exhausted too.
+By 8pm, you're done.
 
-By the time 8pm arrives, you've navigated breakfast negotiations, school stress, after-school meltdowns, homework battles, and dinner chaos. You don't have the energy for a complicated sleep intervention. You don't have the bandwidth to guide a meditation or implement a complex behaviour protocol.
+Breakfast negotiations. School stress. After-school meltdowns. Homework battles. Dinner chaos. You've got nothing left — not patience, not energy, not one more creative strategy to try.
+
+The last thing you need is a complicated approach that requires your active supervision while your child lies there not sleeping.
+
+We know. We've been exactly where you are.
 
 This is why "just press play" matters.
 
-Passive listening requires nothing from you beyond pressing a button. There's no system to manage. No rewards to track. No script to follow. Your child doesn't need to engage or respond or try.
+Passive listening requires nothing from you beyond pressing a button. No system to manage. No rewards to track. No script to follow. No sitting there, timing your breathing, hoping this finally works.
 
 You put on the sound. You leave the room. The sound does the work.
 
-For parents who've tried everything else — who've followed every piece of advice about routines and environment and consistency — this simplicity can feel almost too easy. But sometimes easy is exactly what exhausted families need.
+For parents who've tried everything — who've followed every piece of advice, adjusted every variable, blamed themselves more times than they can count — this simplicity feels almost suspicious.
+
+But sometimes easy is exactly what exhausted families need. Sometimes the solution isn't trying harder. It's trying something different.
 
 ## Building It Into the Routine
 
@@ -215,17 +227,23 @@ This tends to pass. Within a week, most children stop noticing the sound conscio
 
 If your child actively resists, try different sounds. Some children prefer frequencies. Some prefer nature sounds. Some prefer gentle storytelling. The variety in The Open Sanctuary lets you experiment without cost.
 
-## Your Next Step
+## What You Can Try Tonight
 
-Racing thoughts at bedtime aren't something your child chooses. They're not being difficult or defiant. Their brain genuinely needs something to focus on — and when you don't provide it, the brain creates its own content.
+Racing thoughts at bedtime aren't something your child chooses. They're not being difficult. They're not being defiant. Their brain genuinely needs something to focus on — and when you don't provide it, the brain creates its own content.
 
-The redirect approach gives racing thoughts somewhere calm to land. Instead of fighting the brain, you work with it.
+Usually at 10pm. Usually about octopuses.
 
-The Open Sanctuary from HushAway® is free, forever. No signup required. It's a collection of sounds designed for sensitive and neurodivergent children, built for passive listening.
+The redirect approach gives those racing thoughts somewhere calm to land. Instead of fighting the brain, you work with it. Instead of demanding silence, you provide something better than silence.
 
-Tonight, try putting on something from the night time collection as your child settles. Watch what happens when their brain has somewhere to focus that isn't its own racing thoughts.
+The Open Sanctuary from HushAway® is free, forever. No signup. No cost. No catch.
 
-One quiet moment can change a whole day for a child. Sometimes it starts the night before.
+We built it because we needed it for our own kids. Nothing else was working. And now we want other families to have it too.
+
+Tonight, as your child settles, press play on something from the night time collection. Watch what happens when their brain has somewhere to focus that isn't its own racing thoughts.
+
+One quiet moment can change a whole day for a child.
+
+Sometimes, that moment starts the night before.
 
 For the full picture of ADHD and sleep, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) brings everything together — from the science to practical solutions for every challenge.
 

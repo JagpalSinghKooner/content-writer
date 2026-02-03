@@ -6,7 +6,7 @@ meta_description: "Your ADHD bedtime routine fails because it's designed for neu
 slug: "adhd-bedtime-routine"
 author: "HushAway"
 date: "2026-02-03"
-status: "draft"
+status: "review"
 
 # Taxonomy
 categories:
@@ -65,15 +65,21 @@ external_citations:
     title: "Understanding ADHD & Sleep"
 ---
 
-You've got a bedtime routine. Bath at 7pm. Teeth brushed by 7:15. Story time at 7:30. Lights out at 8.
+You have a bedtime routine. A good one.
 
-And by 9:30, your child is still awake. Racing thoughts. Endless questions. Getting up for water. Finding every possible reason to leave their room.
+Bath at 7. Teeth by 7:15. Story at 7:30. Lights out at 8.
 
-The frustrating part? You're doing everything "right." You've followed all the advice. Consistent timing. Predictable sequence. Screen-free wind-down.
+By 9:30? Still awake.
 
-So why doesn't your ADHD bedtime routine work?
+Racing thoughts. Endless questions. Getting up for water. Needing the toilet. Finding reasons — any reason — to leave their room.
 
-Here's what took us years to understand: the problem isn't that you need MORE routine. The problem is that standard routines are designed for neurotypical brains. They focus on what happens around your child but completely ignore what's happening inside their brain.
+You've been consistent. You've been patient. You've followed every piece of advice anyone has ever given you.
+
+So why doesn't your ADHD bedtime routine actually work?
+
+It took us years to understand this: the problem isn't that you need MORE routine. The problem is that standard routines are designed for neurotypical brains.
+
+They focus on what happens *around* your child. They completely ignore what's happening *inside* their brain.
 
 ## Why Standard Bedtime Routines Fail ADHD Children
 
@@ -101,11 +107,11 @@ We've written about [why your ADHD child won't sleep](/adhd-child-wont-sleep) an
 
 The quieter you make the room, the louder their brain becomes.
 
-According to the Journal of Clinical Sleep Medicine, 2023 — [The impact of sleep difficulties in children with ADHD on the family](https://pmc.ncbi.nlm.nih.gov/articles/PMC10545997/), children with ADHD experience "anxiety, fears, and overthinking" at bedtime. Parents in this study described bedtime as "hostile ground" they came to dread.
+According to the Journal of Clinical Sleep Medicine, 2023 — [The impact of sleep difficulties in children with ADHD on the family](https://pmc.ncbi.nlm.nih.gov/articles/PMC10545997/), children with ADHD experience "anxiety, fears, and overthinking" at bedtime. Parents in this study described bedtime as "hostile ground" — the part of the day they dreaded most.
 
-One parent put it perfectly: "Bedtime becomes hostile ground, doesn't it? It's the time that you come to dread because you know, it's like, 'here we go again.'"
+One parent said: "Bedtime becomes hostile ground, doesn't it? It's the time that you come to dread because you know, it's like, 'here we go again.'"
 
-Sound familiar?
+If you just nodded reading that, you're not alone.
 
 The routine isn't failing because you're not consistent enough. It's failing because it's missing the one thing ADHD brains need: something to give racing thoughts somewhere to go.
 
@@ -171,15 +177,21 @@ This is why HushAway® content is designed for passive listening. No tapping req
 
 ## The "Just Press Play" Factor
 
-Here's something we understand at HushAway®: you're exhausted too.
+By 7pm, you're done.
 
-By 7pm, you've already survived breakfast negotiations, school run stress, homework resistance, and after-school meltdowns. The last thing you need is a complicated bedtime intervention that requires your active management.
+Breakfast negotiations. School run. Work. Homework. The after-school explosion. Dinner. You've got nothing left — not patience, not energy, not one more ounce of "let's try being calm about this."
 
-That's why the missing piece works best when it requires nothing from you either.
+The last thing you need is a complicated bedtime approach that requires your active management for the next two hours.
 
-Press play on a calming soundscape. That's it. You don't need to sit with your child through a guided meditation. You don't need to supervise an app. You don't need to be "doing something" for an hour until they fall asleep.
+We know. We've been exactly where you are.
 
-The sound does the work. Your child's brain has somewhere to settle. Everyone — including you — gets to rest.
+That's why the missing piece works best when it requires *nothing* from you.
+
+Press play on a calming soundscape. Leave the room. No guided meditation to supervise. No app choices to manage. No sitting there until they finally fall asleep.
+
+The sound does the work. Your child's brain has somewhere to settle.
+
+And you? You finally get to stop.
 
 ## Handling ADHD Bedtime Struggles
 
@@ -253,19 +265,25 @@ While you're building the longer-term routine, here are immediate things that he
 
 Imagine tonight going differently.
 
-Same routine as always — bath, teeth, pyjamas, story. But at 7:45, you press play on a calming soundscape. Your child lies down, and instead of the familiar pattern (lights out, brain racing, calling out, getting up), there's something different.
+Same routine as always — bath, teeth, pyjamas, story. But at 7:45, you press play on something calm. Your child lies down and instead of the familiar pattern — lights out, brain racing, calling out, getting up, getting up again — there's something else.
 
-The sound gives their brain somewhere to settle. Not silence to fight against. Not darkness that amplifies every thought. Just gentle, calming input that meets their brain where it is.
+The sound gives their brain somewhere to land. Not silence to fight against. Not darkness that makes every thought louder. Just gentle, calming input that meets their brain exactly where it is.
 
-You don't hear them calling out every few minutes. You don't find them standing in the hallway at 9pm. When you check on them at 8:30, they're asleep.
+You don't hear them calling out every few minutes. You don't find them in the hallway at 9pm, wide-eyed and apologetic. When you peek in at 8:30, they're asleep.
 
-This is what a routine built for ADHD brains can do. Not perfect sleep every night — but manageable nights instead of battles.
+Not every night will be like this. ADHD sleep is variable; that's the nature of it. But tonight could be different. And sometimes different is all you need to keep going.
 
-## Your Next Step
+## Try This Tonight
 
-The Open Sanctuary from HushAway® is a free collection of sounds designed specifically for sensitive and neurodivergent children. You can try it tonight.
+You don't need to rebuild your entire routine. You just need to add the one thing that's been missing.
 
-Pick something from the night time collection. Add it to your routine after story time. See if it's the missing piece you've been looking for.
+The Open Sanctuary from HushAway® is free. No signup. No cost. No catch. We built it for sensitive and neurodivergent children — because we needed it for our own kids first, and nothing else was working.
+
+Tonight, after story time, press play on something from the night time collection. That's the only change.
+
+Tomorrow morning, you might find that bedtime went differently. Not perfectly — ADHD sleep is always variable. But *differently*.
+
+And sometimes, different is all you need to keep going.
 
 For more on understanding why ADHD children struggle with sleep, read our guide on [why your ADHD child won't sleep](/adhd-child-wont-sleep). And for the complete picture, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) covers everything from the science to practical solutions.
 
