@@ -154,7 +154,7 @@ Sound can reach the nervous system without requiring anything from your child. T
 
 Certain frequencies and soundscapes can give an overwhelmed nervous system something to land on. Something predictable. Something safe. Without adding any demands.
 
-We'll cover what to actually play during a meltdown<!-- LINK NEEDED: 02-what-to-play-during-meltdown when published --> in another article. For now, just know that sound works differently than other calming tools because it's passive. Press play. That's it. No decisions. No demands. No effort required from you or your child in that moment when you're both already stretched thin.
+We'll cover [what to actually play during a meltdown](/autistic-meltdowns/sounds-to-play-autism-meltdown) in another article. For now, just know that sound works differently than other calming tools because it's passive. Press play. That's it. No decisions. No demands. No effort required from you or your child in that moment when you're both already stretched thin.
 
 ## Signs Your Child Is Heading Toward a Meltdown
 
@@ -170,7 +170,7 @@ The tricky part? These signs are often subtle. And they happen when you're busy 
 
 But the more you learn your child's specific warning signs, the more opportunities you have to help them regulate before the bucket overflows. And over time, you'll spot them faster. You'll know when to leave the shop early. When to skip the extra errand. When to turn on some calming sounds before things tip over.
 
-Understanding these warning signs connects directly to preventing meltdowns before they start<!-- LINK NEEDED: 06-preventing-meltdowns when published -->. Prevention isn't about avoiding all triggers (impossible). It's about keeping the bucket from filling too fast.
+Understanding these warning signs connects directly to [preventing meltdowns before they start](/autistic-meltdowns/preventing-autism-meltdowns-warning-signs). Prevention isn't about avoiding all triggers (impossible). It's about keeping the bucket from filling too fast.
 
 ## What to Do During a Meltdown (The Short Version)
 
@@ -210,7 +210,7 @@ Some meltdowns will still happen. Some days will still be hard. That's the reali
 
 But when you understand that a meltdown is neurological overflow, not misbehaviour, everything shifts. You stop fighting your child. You start fighting for them. You can look at the stranger staring in the supermarket and know, with complete certainty, that their judgement says nothing about your parenting.
 
-It's also worth understanding that meltdowns and shutdowns are different<!-- LINK NEEDED: 05-meltdown-vs-shutdown when published -->. Shutdowns are the "quiet" version that often gets missed because they don't look dramatic. If your child goes silent and withdrawn instead of explosive, they need just as much support.
+It's also worth understanding that [meltdowns and shutdowns are different](/autistic-meltdowns/autism-meltdown-vs-shutdown-difference). Shutdowns are the "quiet" version that often gets missed because they don't look dramatic. If your child goes silent and withdrawn instead of explosive, they need just as much support.
 
 ## One More Thing
 

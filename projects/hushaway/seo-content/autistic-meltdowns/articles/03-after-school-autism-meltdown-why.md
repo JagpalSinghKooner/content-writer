@@ -276,7 +276,7 @@ When the meltdown arrives, you already know what to do. Reduce sensory input. St
 
 Sound can still help during the meltdown itself. If you have calming frequencies playing, let them continue. If not, quietly start them without announcement. The sound won't stop the meltdown, but it gives the nervous system something consistent while the overwhelm processes through.
 
-After the meltdown, your child will need time to rebuild. The [recovery after the meltdown](/autistic-meltdowns/04-meltdown-recovery)<!-- LINK NEEDED: 04-meltdown-recovery when published --> matters just as much as what you do during it. Sound supports that recovery too, keeping demands low while the nervous system slowly comes back online.
+After the meltdown, your child will need time to rebuild. The [recovery after the meltdown](/autistic-meltdowns/autism-meltdown-recovery-guide) matters just as much as what you do during it. Sound supports that recovery too, keeping demands low while the nervous system slowly comes back online.
 
 ## What Schools Don't See
 

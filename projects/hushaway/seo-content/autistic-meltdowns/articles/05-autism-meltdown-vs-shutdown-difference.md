@@ -230,7 +230,7 @@ Watch for early warning signs. If your child is getting quieter than usual, taki
 
 Building regulation into the day helps too. Rather than waiting for crisis, using calming sounds and sensory breaks throughout the day keeps the bucket from overflowing in the first place. Think of it as maintenance rather than emergency response.
 
-We'll cover this more in our article on preventing meltdowns before they start<!-- LINK NEEDED: 06-preventing-meltdowns when published -->.
+We'll cover this more in our article on [preventing meltdowns before they start](/autistic-meltdowns/preventing-autism-meltdowns-warning-signs).
 
 ## The Quiet Crisis
 

@@ -242,7 +242,7 @@ The sounds that help when they're calm are likely to help during overwhelm. But 
 Not every meltdown is the same. Have options for:
 - **Early warning signs:** Gentler sounds to help regulate before things tip over
 - **Full meltdown:** Very consistent, predictable sounds with no variation
-- **The recovery period after a meltdown<!-- LINK NEEDED: 04-meltdown-recovery when published -->:** Sounds that support the fragile nervous system as it rebuilds
+- **[The recovery period after a meltdown](/autistic-meltdowns/autism-meltdown-recovery-guide):** Sounds that support the fragile nervous system as it rebuilds
 
 What works at one stage might not work at another.
 
@@ -258,7 +258,7 @@ For meltdowns that happen outside the home, having sounds accessible on your pho
 
 ### Make It Part of Daily Regulation
 
-Sound doesn't have to be reserved for crisis moments. Using sound throughout the day to prevent build-up<!-- LINK NEEDED: 06-preventing-meltdowns when published --> can help keep the "bucket" from filling too fast. Playing calming sounds during transitions, after school, or at bedtime builds familiarity and may reduce meltdown frequency over time.
+Sound doesn't have to be reserved for crisis moments. Using [sound throughout the day to prevent build-up](/autistic-meltdowns/preventing-autism-meltdowns-warning-signs) can help keep the "bucket" from filling too fast. Playing calming sounds during transitions, after school, or at bedtime builds familiarity and may reduce meltdown frequency over time.
 
 ## What If Sound Doesn't Help?
 

@@ -232,7 +232,7 @@ If your child tends to go inward rather than outward when overwhelmed, you'll ne
 
 Shutdowns can be easier to miss because they don't demand attention the way meltdowns do. No screaming. No throwing things. Just a child who seems to disappear inside themselves. But they're equally important to catch early.
 
-For more on recognising and supporting shutdowns, see our guide on understanding the difference between meltdowns and shutdowns<!-- LINK NEEDED: 05-meltdown-vs-shutdown when published -->.
+For more on recognising and supporting shutdowns, see our guide on [understanding the difference between meltdowns and shutdowns](/autistic-meltdowns/autism-meltdown-vs-shutdown-difference).
 
 ## What About When Prevention Fails?
 
