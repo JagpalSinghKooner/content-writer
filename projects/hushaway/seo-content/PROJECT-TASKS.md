@@ -10,7 +10,7 @@
 | Task 4: Write ADHD Sleep Articles | PASS |
 | Task 5: Fix Banned Words in Articles | PASS |
 | Task 6: Run /direct-response-copy | PASS |
-| Task 7: Run /validate-content | pending |
+| Task 7: Run /validate-content | PASS |
 | Task 8: Create Distribution Content | pending |
 
 ---
@@ -197,17 +197,43 @@
 **Objective:** Final validation pass on all articles before publishing.
 
 **Acceptance Criteria:**
-- [ ] All 7 articles pass /validate-content
-- [ ] No banned words or phrases remaining
-- [ ] UK English verified throughout
-- [ ] SEO requirements met (keyword placement, meta data, links)
-- [ ] E-E-A-T citations properly formatted
-- [ ] Brand voice alignment confirmed
+- [x] All 7 articles pass /validate-content
+- [x] No banned words or phrases remaining
+- [x] UK English verified throughout
+- [x] SEO requirements met (keyword placement, meta data, links)
+- [x] E-E-A-T citations properly formatted
+- [x] Brand voice alignment confirmed
 
 **Starter Prompt:**
 > Run /validate-content on each article in `adhd-sleep/articles/`. Validate against: (1) Universal rules — UK English, banned words, AI patterns, SEO requirements, citations; (2) Client profile — brand voice, terminology, content rules. Each article must return PASS. Document any FAIL conditions with specific line numbers and required fixes.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** All 7 articles validated against universal rules and client profile. All returned PASS.
+- **Validation results:**
+  - Article 01 (adhd-child-wont-sleep): PASS — 2,247 words, 3 citations, 3 internal links
+  - Article 02 (adhd-bedtime-routine): PASS — 2,412 words, 4 citations, 4 internal links
+  - Article 03 (calming-sounds-adhd): PASS — 2,412 words, 3 citations, 4 internal links
+  - Article 04 (adhd-racing-thoughts): PASS — 2,089 words, 3 citations, 4 internal links
+  - Article 05 (beyond-melatonin): PASS — 2,542 words, 3 citations, 4 internal links
+  - Article 06 (adhd-sleep-vs-autism-sleep): PASS — 2,124 words, 4 citations, 3 internal links
+  - Article 07 (adhd-sleep-problems-guide): PASS — 4,698 words, 6 citations, 6 internal links (pillar guide)
+  - **Total:** 18,524 words across 7 articles
+- **Checks passed:**
+  - UK English: No US spellings detected
+  - Banned AI Words: None in article voice (quotes from researchers preserved)
+  - Banned AI Phrases: None detected
+  - SEO: All articles meet keyword placement, word count, meta data requirements
+  - E-E-A-T: All articles have properly formatted external citations (NHS, PubMed, Frontiers, etc.)
+  - Brand Voice: Warm parent-to-parent tone, "HushAway®" with ® symbol, no clinical jargon
+  - Pillar Consistency: Primary angle ("sound is the missing piece") consistent throughout
+- **Minor notes (non-blocking):**
+  - Article 01: Primary keyword not in H2 as exact phrase (keyword elements present)
+  - Article 05: "comprehensive" in direct quote from Prof. Cortese — acceptable as quoted speech
+- **Next:** Run `/content-atomizer` on pillar guide and top supporting articles to create distribution content.
 
 ---
 
@@ -231,4 +257,4 @@
 ---
 
 *Project started: 2026-02-02*
-*Last updated: 2026-02-03 (Task 5 PASS — banned words fixed in articles)*
+*Last updated: 2026-02-03 (Task 7 PASS — all 7 articles validated)*
