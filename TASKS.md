@@ -11,7 +11,7 @@
 | Task 11: Execute ADHD Sleep Pillar - Tier 1 | PASS |
 | Task 12: Execute ADHD Sleep Pillar - Tier 2 | PASS |
 | Task 13: Execute ADHD Sleep Pillar - Tier 3 | PASS |
-| Task 14: Execute ADHD Sleep Pillar - Tier 4 | pending |
+| Task 14: Execute ADHD Sleep Pillar - Tier 4 | PASS |
 | Task 15: Post-Pillar Linking Pass | pending |
 | Task 6: End-to-End Validation with Real Client | pending |
 
@@ -236,15 +236,22 @@
 - Dependencies: Links to all 6 supporting articles
 
 **Acceptance Criteria:**
-- [ ] Writing sub-agent creates Pillar Guide
-- [ ] Links to all 6 supporting articles
-- [ ] Validation sub-agent validates
-- [ ] Committed to git
+- [x] Writing sub-agent creates Pillar Guide
+- [x] Links to all 6 supporting articles
+- [x] Validation sub-agent validates
+- [x] Committed to git
 
 **Starter Prompt:**
 > Execute Tier 4 of ADHD Sleep pillar. Generate the Pillar Guide (Article 7) which links to all 6 supporting articles. Provide the sub-agent with all article file paths. This is the comprehensive guide (4,000-5,000 words).
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Pillar Guide "The Complete Guide to ADHD Sleep Problems in Children" created at `projects/hushaway/seo-content/adhd-sleep/articles/07-adhd-sleep-problems-guide.md`. 4,387 words. 6 E-E-A-T citations (Southampton NHS, DISCA Study, JAACAP, JCSM, Frontiers in Psychiatry, Wellcome Trust). Links to all 6 supporting articles. Writing sub-agent self-validated PASS, independent validation sub-agent confirmed PASS.
+- **Decisions:** Comprehensive structure covering: why ADHD sleep is different, the racing brain mechanism, circadian rhythm differences, types of sleep problems, age-specific approaches (toddlers through teens), comorbid conditions, common misconceptions, and the "missing piece" (sound-based passive listening). UK-specific context throughout.
+- **Next:** Task 15 runs post-pillar linking pass to add links FROM all 6 supporting articles TO this pillar guide. All placeholder links should be resolved.
 
 ---
 
