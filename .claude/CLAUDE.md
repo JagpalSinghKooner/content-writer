@@ -450,90 +450,31 @@ These run when explicitly requested:
 
 ### Sub-Agent Orchestration for Pillars
 
-When generating multiple articles for a pillar, use the Parallel by Dependency Tier model:
+When generating multiple articles for a pillar, use sub-agent orchestration. Full documentation in [Sub-Agent Rules](rules/sub-agent-rules.md).
 
-```
-Main Session (Orchestrator)
-    │
-    ├─→ Tier 1: Foundation article(s)
-    │   ├─→ Writing Sub-Agent: Creates article, returns file path
-    │   ├─→ Validation Sub-Agent: Validates article, returns PASS/FAIL
-    │   └─→ Main commits if PASS
-    │
-    ├─→ Tier 2: Articles with no inter-dependencies (parallel)
-    │   ├─→ Writing Sub-Agents (parallel): Each creates article
-    │   ├─→ Validation Sub-Agents (parallel): Each validates
-    │   └─→ Main commits all PASS articles
-    │
-    ├─→ Tier 3+: Articles with dependencies on previous tiers
-    │   └─→ Same pattern: write → validate → commit
-    │
-    └─→ Final Tier: Pillar Guide (depends on all)
-        ├─→ Writing Sub-Agent: Creates pillar guide
-        ├─→ Validation Sub-Agent: Validates guide
-        └─→ Main commits if PASS
-```
+**Key Principles:**
 
-**Tier Structure:**
-
-1. Identify article dependencies from pillar brief
-2. Group articles into tiers (articles in same tier have no inter-dependencies)
-3. Run Tier 1 first (foundation articles)
-4. Run remaining tiers in order, parallel within each tier
+1. **Fresh context windows** — Sub-agents have no memory of the main session; all context provided upfront
+2. **Skills invoked directly** — Sub-agents run `/seo-content` and `/validate-content` autonomously
+3. **Writing and validation are SEPARATE** — Never combine in a single sub-agent
+4. **Full validation output returned** — Not just PASS/FAIL; include line-specific issues
+5. **All clarifying questions resolved BEFORE spawning** — Sub-agents cannot ask questions
 
 **Sub-Agent Types:**
 
-| Type | Role | Returns |
-|------|------|---------|
-| Writing | Creates article following /seo-content workflow | File path + status |
-| Validation | Validates against universal rules + brand voice | PASS/FAIL + issues |
+| Type | Skill | Returns |
+|------|-------|---------|
+| Writing | `/seo-content` | File path + status + word count |
+| Validation | `/validate-content` | PASS/FAIL + full issues + SEO checklist + readability metrics |
 
-**How Sub-Agents Work:**
+**Templates:**
 
-Sub-agents receive **file paths**, not pasted content. Each sub-agent:
-1. Receives paths to: client profile, positioning doc, pillar brief
-2. Reads those files itself using the Read tool
-3. Executes the `/seo-content` workflow autonomously
-4. Returns file path + status (not full article content)
+- Writing: [sub-agent-seo-content.md](skills/templates/sub-agent-seo-content.md)
+- Validation: [sub-agent-validate-content.md](skills/templates/sub-agent-validate-content.md)
 
-**Sub-Agent Instructions Include:**
+**Orchestration Pattern:**
 
-- Client profile path (e.g., `clients/hushaway/profile.md`)
-- Positioning document path (e.g., `{pillar}/02-positioning.md`)
-- Pillar brief path (e.g., `{pillar}/01-pillar-brief.md`)
-- Target article details (keyword, angle, word count)
-- Completed articles list (paths for internal linking)
-- Instruction to execute `/seo-content` workflow
-
-**Main Session Responsibilities:**
-
-- Orchestrate tier execution order
-- Spawn sub-agents (parallel within tier) using Task tool
-- Receive file paths and status from completed sub-agents
-- Commit after each tier completes
-- Handle any sub-agent failures
-
-**Sub-Agent Responsibilities:**
-
-- Read all context files from provided paths
-- Research phase (E-E-A-T citations)
-- Write complete article to disk
-- Self-validate against universal rules
-- Return file path + status to main session
-
-**Failure Handling:**
-
-- If sub-agent fails: Retry with same instructions
-- If retry fails: Retry once more with error context
-- If second retry fails: Escalate to user, continue with other articles
-- Log all failures to PROJECT-TASKS.md
-
-**Context Management:**
-
-- Writing sub-agents return: file path + basic status (not full article text)
-- Validation sub-agents read article from path, validate, return PASS/FAIL
-- Main session never reads full article content directly
-- This keeps main session context minimal for orchestration
+Parallel by Dependency Tier — run articles in tiers based on internal linking dependencies. See [Sub-Agent Rules](rules/sub-agent-rules.md) for the complete pattern diagram and tier identification guide.
 
 ---
 
@@ -562,6 +503,7 @@ Sub-agents receive **file paths**, not pasted content. Each sub-agent:
 - [Universal Rules](rules/universal-rules.md) - UK English, banned AI words, SEO requirements
 - [Common Mistakes](rules/common-mistakes.md) - Learned patterns (grows over time)
 - [Client Profile Requirements](rules/client-profile-requirements.md) - Which profile fields each skill needs
+- [Sub-Agent Rules](rules/sub-agent-rules.md) - Sub-agent orchestration, fresh context windows, return formats
 
 ---
 
@@ -579,6 +521,8 @@ Located in `.claude/skills/templates/`:
 | [article-template.md](skills/templates/article-template.md) | SEO article structure with frontmatter |
 | [distribution-template.md](skills/templates/distribution-template.md) | Platform files for content atomisation |
 | [email-sequence-template.md](skills/templates/email-sequence-template.md) | Email sequence structures by type |
+| [sub-agent-seo-content.md](skills/templates/sub-agent-seo-content.md) | Writing sub-agent prompt template |
+| [sub-agent-validate-content.md](skills/templates/sub-agent-validate-content.md) | Validation sub-agent prompt template |
 
 ### Skill-Specific Templates
 

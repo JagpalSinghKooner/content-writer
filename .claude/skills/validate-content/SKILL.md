@@ -1001,3 +1001,131 @@ Before marking validation complete, verify:
 12. **Auto-retry workflow triggered if FAIL**
 
 A good validation catches issues before readers do. A great validation explains exactly how to fix them.
+
+---
+
+## Non-Interactive Mode
+
+When invoked by a sub-agent (see [Sub-Agent Rules](../../rules/sub-agent-rules.md)), this skill runs in non-interactive mode.
+
+### What Changes
+
+| Behaviour | Interactive | Non-Interactive |
+|-----------|-------------|-----------------|
+| Clarifying questions | Asked when needed | Never asked |
+| Confirmation requests | May ask "Continue?" | Proceeds without confirmation |
+| Summary output | May abbreviate for clarity | FULL output required |
+| User suggestions | May recommend actions | Returns data only |
+
+### Critical: Full Output Required
+
+**In non-interactive mode, return the COMPLETE validation output. Do not abbreviate.**
+
+The main session needs:
+- Every FAIL issue with line numbers and specific fixes
+- Every WARN issue with suggestions
+- Full SEO checklist with actual values
+- Complete readability metrics table
+- Brand voice alignment assessment
+
+**Why:** The main session uses this output to decide whether to retry, escalate, or proceed. Abbreviated output forces re-validation or direct file reading, defeating sub-agent isolation.
+
+### Requirements for Non-Interactive
+
+The sub-agent prompt must include:
+
+- [ ] Article path to validate
+- [ ] Client profile path (for brand voice)
+- [ ] Primary keyword (for SEO checks)
+- [ ] Content type (Article/Email/Newsletter/Distribution)
+
+### Return Format
+
+In non-interactive mode, return the FULL validation output format:
+
+```
+## Validation Result: [PASS/FAIL]
+
+**Article:** [filename]
+**Primary Keyword:** [keyword]
+**Word Count:** [actual count]
+**Client Profile:** [path]
+
+---
+
+### FAIL Issues (must fix before publishing)
+
+[Every FAIL issue with line number and fix]
+
+---
+
+### WARN Issues (should fix for quality)
+
+[Every WARN issue with suggestion]
+
+---
+
+### SEO Checklist
+
+[Full checklist with actual values]
+
+---
+
+### Schema Validation
+
+[Full schema check results]
+
+---
+
+### Readability Metrics
+
+[Complete metrics table]
+
+---
+
+### Brand Voice
+
+- Aligned: Yes | No
+- Tone Match: [assessment]
+- Terminology: [any violations]
+- Notes: [any concerns]
+
+---
+
+### Pillar Consistency (if checked)
+
+[Full pillar consistency results]
+```
+
+### Missing Context Handling
+
+If required context is missing:
+
+1. Return FAIL status immediately
+2. List missing context in the Issues section
+3. Do NOT attempt to guess or validate partially
+
+Example:
+```
+## Validation Result: FAIL
+
+**Article:** [path]
+**Primary Keyword:** [unknown]
+
+---
+
+### FAIL Issues
+
+1. **Missing Context:** Client profile not found at provided path — cannot validate brand voice
+2. **Missing Context:** Primary keyword not provided — cannot validate SEO requirements
+
+---
+
+### Notes
+
+Main session should verify file paths and parameters before re-spawning.
+```
+
+---
+
+*Reference: `rules/sub-agent-rules.md` for complete sub-agent orchestration guidelines.*

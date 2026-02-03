@@ -2,6 +2,17 @@
 
 A prompt template for spawning writing sub-agents during pillar orchestration. The main session fills in the placeholders and spawns the sub-agent using the Task tool.
 
+**Reference:** See `rules/sub-agent-rules.md` for orchestration principles and fresh context window documentation.
+
+---
+
+## Key Principles
+
+1. **Fresh context window** — This sub-agent has no memory of the main session
+2. **Invoke /seo-content directly** — Execute the skill, don't follow manual instructions
+3. **No clarifying questions** — All context must be in this prompt
+4. **Return path, not content** — Keep main session context minimal
+
 ---
 
 ## Template
@@ -181,57 +192,13 @@ Use these for internal linking. Link to Article 01 where relevant.
 
 ## Validation Sub-Agent Template
 
-For spawning validation sub-agents (separate from writing):
+**See `templates/sub-agent-validate-content.md` for the full validation sub-agent template.**
 
-```
-You are a validation sub-agent. Validate the article at the given path against universal rules and brand voice.
-
-## Files to Read
-
-- **Article to Validate:** {article_path}
-- **Client Profile:** {profile_path}
-- **Universal Rules:** .claude/rules/universal-rules.md
-
-## Validation Checklist
-
-Run ALL checks from universal-rules.md:
-
-**FAIL Conditions:**
-1. UK English — Check all spellings
-2. Banned AI Words — Check for all 53 words
-3. Banned AI Phrases — Check for all listed phrases
-4. AI Patterns — Check sentence structure
-5. SEO Requirements — Keyword placement, meta lengths, links
-6. E-E-A-T Citations — Proper format with URLs
-
-**WARN Conditions:**
-1. Contractions — Natural usage
-2. Sentence Length — Varied rhythm
-3. Personal Voice — Not just information dump
-4. Specific Examples — Numbers, not vague claims
-5. Active Voice — Dominant over passive
-
-**Brand Voice Alignment:**
-- Compare tone against profile voice summary
-- Check for terminology violations
-- Verify CTA usage matches profile
-
-## Output Format
-
-```
-**Status:** PASS | FAIL
-
-**FAIL Issues:**
-- [List each FAIL condition violated with specific line/example]
-
-**WARN Issues:**
-- [List each WARN condition with suggestion]
-
-**Brand Voice:**
-- Aligned: Yes | No
-- Notes: [Any voice concerns]
-```
-```
+The validation template includes:
+- Complete 6-phase validation workflow
+- Required return format (FULL output, not abbreviated)
+- All placeholders with examples
+- Usage notes for main session
 
 ---
 
@@ -241,7 +208,7 @@ Run ALL checks from universal-rules.md:
 2. **One sub-agent per article** — never ask a sub-agent to write multiple articles
 3. **Sub-agents read files themselves** — pass paths, not content
 4. **Sub-agents return paths, not content** — keeps main session context minimal
-5. **Validation can run in parallel** — spawn validation sub-agents for multiple articles at once
+5. **Validation is SEPARATE** — use a different sub-agent for validation (see `sub-agent-validate-content.md`)
 6. **Commit after validation passes** — main session handles git, not sub-agents
 
 ---
@@ -255,3 +222,7 @@ If a writing sub-agent returns FAIL:
 3. **Third failure:** Escalate to user, continue with other articles
 
 Log all failures to PROJECT-TASKS.md under the relevant task.
+
+---
+
+*Reference `rules/sub-agent-rules.md` for complete orchestration guidelines.*

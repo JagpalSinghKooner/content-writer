@@ -996,3 +996,74 @@ Before publishing, ask:
 7. **Does it match the quality bar of the E-E-A-T examples?**
 
 If any answer is no, revise before publishing.
+
+---
+
+## Non-Interactive Mode
+
+When invoked by a sub-agent (see [Sub-Agent Rules](../../rules/sub-agent-rules.md)), this skill runs in non-interactive mode.
+
+### What Changes
+
+| Behaviour | Interactive | Non-Interactive |
+|-----------|-------------|-----------------|
+| Clarifying questions | Asked when needed | Never asked — all context must be in prompt |
+| Research prompts | May ask for direction | Uses provided context only |
+| Confirmation requests | May ask "Continue?" | Proceeds without confirmation |
+| Output format | Flexible | Structured return format only |
+
+### Requirements for Non-Interactive
+
+The sub-agent prompt must include:
+
+- [ ] Client profile path (for brand voice)
+- [ ] Positioning document path (for angle)
+- [ ] Pillar brief path (for keyword data)
+- [ ] Target keyword (explicit)
+- [ ] Word count target (explicit)
+- [ ] Output file path (where to write the article)
+- [ ] Completed articles list (for internal linking)
+
+### Return Format
+
+In non-interactive mode, return ONLY:
+
+```
+**Status:** PASS | FAIL
+
+**File Path:** {output_path}
+
+**Word Count:** {actual_word_count}
+
+**Issues (if FAIL):**
+- [List any validation failures]
+
+**Notes:**
+- [Any relevant context for the main session]
+```
+
+Do NOT return full article content — the main session reads from the file path if needed.
+
+### Missing Context Handling
+
+If required context is missing:
+
+1. Return FAIL status immediately
+2. List missing context in Issues
+3. Do NOT attempt to guess or ask for clarification
+
+Example:
+```
+**Status:** FAIL
+
+**Issues:**
+- Missing positioning document at provided path
+- Cannot determine article angle without positioning
+
+**Notes:**
+- Main session should verify file paths before re-spawning
+```
+
+---
+
+*Reference: `rules/sub-agent-rules.md` for complete sub-agent orchestration guidelines.*
