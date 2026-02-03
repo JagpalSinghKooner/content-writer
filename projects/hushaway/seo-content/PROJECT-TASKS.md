@@ -15,6 +15,7 @@
 | Task 8b: Twitter/X Distribution | PASS |
 | Task 8c: Newsletter Distribution | PASS |
 | Task 8d: Instagram Distribution | PASS |
+| Task 9: Start Autistic Meltdowns Pillar | PASS |
 
 ---
 
@@ -483,5 +484,36 @@
 
 ---
 
+## Task 9: Start Autistic Meltdowns Pillar
+
+**Objective:** Create pillar brief for Autistic Meltdowns with competitor analysis and content plan.
+
+**Acceptance Criteria:**
+- [x] Extract Autistic Meltdowns pillar from keyword brief
+- [x] Run deep competitor analysis on top ranking content
+- [x] Identify content gaps and angle opportunities
+- [x] Create article outline for pillar guide + supporting articles
+- [x] Output saved to `autistic-meltdowns/01-pillar-brief.md`
+
+**Starter Prompt:**
+> Run /start-pillar for Autistic Meltdowns. Extract the pillar from 00-keyword-brief.md. Focus on: (1) Deep competitor analysis of National Autistic Society, NHS Leicestershire Partnership Trust, Ambitious about Autism, and YouTube meltdown content; (2) Identify the MASSIVE gap—NO competitor provides sound/audio solutions beyond "try calming music"; (3) Plan 7 articles covering: understanding meltdowns, what to play during, after school meltdowns, meltdown recovery, meltdown vs shutdown, preventing meltdowns, pillar guide. Position all content toward The Open Sanctuary as primary CTA.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `autistic-meltdowns/01-pillar-brief.md` with all 7 sections: strategic context, keyword table (22 keywords mapped), competitor analysis (National Autistic Society, NHS Leicestershire, Ambitious about Autism, YouTube channels), content plan (7 articles), angle opportunities (5 identified), internal linking map, and publishing order.
+- **Decisions:**
+  - Primary angle: "What to Play NOW" — the single biggest gap in competitor content. Every source says "try calming music" but NONE tell parents what to actually play.
+  - Top competitors: National Autistic Society (DR 70-80, comprehensive but no audio solutions), NHS Leicestershire (DR 90+, clinical, brief sound mention), Ambitious about Autism (DR 50-60, youth voice, no tools)
+  - CRITICAL GAP: Sound/audio-based calming solutions are virtually absent from ALL mainstream guidance. YouTube fills this with generic content not designed for ND children.
+  - 7 articles planned: 6 supporting + 1 pillar guide (publishes last)
+  - Article 01 "Understanding Autism Meltdowns" is foundation — all other articles reference concepts it introduces
+  - Article 02 "What to Play During Meltdown" is the conversion driver — publish second
+- **Next:** Run `/positioning-angles` to develop unified positioning for all 7 articles. Primary angle established ("What to Play NOW"); need secondary angles per article and consistency check.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-03 (Task 8d Instagram Distribution PASS)*
+*Last updated: 2026-02-03 (Task 9 Start Autistic Meltdowns Pillar PASS)*
