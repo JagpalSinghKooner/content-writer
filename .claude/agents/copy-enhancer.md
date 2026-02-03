@@ -2,7 +2,7 @@
 name: copy-enhancer
 description: Enhance articles with direct-response copy principles. Use after writing articles or when validation fails. Handles both enhancement passes and fixing specific validation issues.
 tools: Read, Edit
-model: sonnet
+model: opus
 skills:
   - direct-response-copy
 ---
@@ -72,7 +72,26 @@ The `/direct-response-copy` skill is preloaded. Use its principles:
 - Vary sentence length for rhythm
 - Replace passive voice with active
 
-### 3. What NOT to Do
+### 3. Em Dash Removal (FAIL Condition)
+
+Em dashes "—" are banned. Scan for and restructure any sentences containing them.
+
+**Process:**
+1. Find all em dashes in content
+2. For each, rewrite the sentence to eliminate the need
+3. Do NOT replace with other punctuation (commas, colons, parentheses)
+4. Split into separate sentences or reword entirely
+
+**Examples:**
+| Original | Rewritten |
+|----------|-----------|
+| "Your child isn't broken — they experience the world differently" | "Your child isn't broken. They experience the world differently." |
+| "Three approaches work — sound, routine, and environment" | "Three approaches work. Sound. Routine. Environment." |
+| "The problem — and it's a big one — is timing" | "The problem is timing. And it's a big one." |
+
+This check runs in both Enhancement and Fix modes. Em dashes are a FAIL condition in validation, so they must be removed.
+
+### 4. What NOT to Do
 
 - Don't make content salesy or pushy
 - Don't add fluff or padding
@@ -81,7 +100,7 @@ The `/direct-response-copy` skill is preloaded. Use its principles:
 - Don't remove citations or internal links
 - Don't violate brand voice guidelines
 
-### 4. Preserve Frontmatter
+### 5. Preserve Frontmatter
 
 When enhancing, preserve these fields:
 - title, slug, author, date
@@ -126,6 +145,12 @@ For each issue:
 - Each fix should be minimal and precise
 
 ### 3. Common Fix Types
+
+**Em dashes:** Restructure the sentence (not replace with other punctuation)
+- "The problem — and it's a big one — is timing" → "The problem is timing. And it's a big one."
+- "Your child isn't broken — they experience the world differently" → "Your child isn't broken. They experience the world differently."
+- Split into separate sentences or reword entirely
+- Never swap em dash for comma, colon, or parentheses
 
 **Banned words:** Replace with natural alternatives
 - "leverage" → "use"

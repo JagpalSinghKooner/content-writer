@@ -19,7 +19,7 @@
 | Task 13: Update CLAUDE.md - Slug Format Rules | pending |
 | Task 14: Update content-validator.md - New Validation Checks | pending |
 | Task 15: Update seo-writer.md - H1/Slug/Em-Dash Instructions | pending |
-| Task 16: Update copy-enhancer.md - Em Dash Fix Mode | pending |
+| Task 16: Update copy-enhancer.md - Em Dash Fix Mode | PASS |
 | Task 17: Update common-mistakes.md - New Patterns | pending |
 | Task 18: Fix HushAway Profile CTAs | pending |
 
@@ -370,16 +370,23 @@
 **Objective:** Add em dash detection and fix to the copy enhancer's enhancement checklist.
 
 **Acceptance Criteria:**
-- [ ] Add Em Dash Removal section to Enhancement Pass workflow
-- [ ] Document as FAIL condition that must be fixed
-- [ ] Include process: find → restructure (not replace)
-- [ ] Include before/after examples
-- [ ] Ensure this check runs in both Enhancement and Fix modes
+- [x] Add Em Dash Removal section to Enhancement Pass workflow
+- [x] Document as FAIL condition that must be fixed
+- [x] Include process: find → restructure (not replace)
+- [x] Include before/after examples
+- [x] Ensure this check runs in both Enhancement and Fix modes
 
 **Starter Prompt:**
 > Implement Task 16: Update copy-enhancer.md with em dash fix capability. Add "Em Dash Removal (FAIL Condition)" section to the Enhancement Pass. Document process: scan for "—", restructure each sentence (not replace with other punctuation), split into separate sentences or reword. Include before/after table. Ensure this check applies to both Enhancement and Fix modes. Reference plan file for exact content. Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Added em dash fix capability to copy-enhancer.md in two places: (1) New section "### 3. Em Dash Removal (FAIL Condition)" in Enhancement Pass with 4-step process and before/after examples table, (2) Added "Em dashes" as first item in Common Fix Types table in Fix Mode with restructuring guidance
+- **Decisions:** Placed em dash section before "What NOT to Do" in Enhancement Pass since it's an active check that must run. Added explicit note that this check runs in both Enhancement and Fix modes. Em dashes listed first in Common Fix Types to match priority as FAIL condition.
+- **Next:** Task 17 adds em dash overuse, keyword-only slugs, and H1 without hook patterns to common-mistakes.md
 
 ---
 
