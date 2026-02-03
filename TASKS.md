@@ -8,7 +8,7 @@
 | Task 8: Document Sub-Agent Orchestration in CLAUDE.md | PASS |
 | Task 9: Create Sub-Agent Template | PASS |
 | Task 10: Update seo-content Skill | PASS |
-| Task 11: Execute ADHD Sleep Pillar - Tier 1 | pending |
+| Task 11: Execute ADHD Sleep Pillar - Tier 1 | PASS |
 | Task 12: Execute ADHD Sleep Pillar - Tier 2 | pending |
 | Task 13: Execute ADHD Sleep Pillar - Tier 3 | pending |
 | Task 14: Execute ADHD Sleep Pillar - Tier 4 | pending |
@@ -143,15 +143,22 @@
 - Target keyword: adhd child won't sleep
 
 **Acceptance Criteria:**
-- [ ] Writing sub-agent creates Article 1
-- [ ] Validation sub-agent validates Article 1
-- [ ] Article passes validation
-- [ ] Committed to git
+- [x] Writing sub-agent creates Article 1
+- [x] Validation sub-agent validates Article 1
+- [x] Article passes validation
+- [x] Committed to git
 
 **Starter Prompt:**
 > Execute Tier 1 of ADHD Sleep pillar for HushAway®. Read the pillar brief at projects/hushaway/seo-content/adhd-sleep/01-pillar-brief.md and positioning at 02-positioning.md. Spawn writing sub-agent for Article 1 (Why Your ADHD Child Won't Sleep), then validation sub-agent. Commit if PASS.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Article 1 "Why Your ADHD Child Won't Sleep (And What Actually Helps)" created at `projects/hushaway/seo-content/adhd-sleep/articles/01-adhd-child-wont-sleep.md`. 2,247 words. 3 E-E-A-T citations (Southampton NHS, Journal of Clinical Sleep Medicine, Frontiers in Psychiatry). Self-validated by writing sub-agent + independently validated by validation sub-agent. Both returned PASS.
+- **Decisions:** Used placeholder links for Articles 2, 4, and Pillar Guide (7) as they don't exist yet. Followed brand voice (warm, parent-to-parent). UK English throughout.
+- **Next:** Task 12 generates Tier 2 articles (2, 3, 4, 6) in parallel. Article 1 now available for internal linking from Tier 2 articles.
 
 ---
 
