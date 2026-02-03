@@ -1,9 +1,9 @@
 ---
 # Core metadata
 title: "Racing Thoughts at Bedtime: How to Quiet an ADHD Brain That Won't Switch Off"
-meta_title: "ADHD Racing Thoughts at Bedtime | Quieting Your Child's Mind"
+meta_title: "ADHD Racing Thoughts at Bedtime | Quiet Your Child's Mind"
 meta_description: "Your child's ADHD racing thoughts at bedtime aren't defiance - they're neurobiology. Learn why forcing quiet fails and what actually helps the brain settle."
-slug: "adhd-racing-thoughts"
+slug: "quieting-adhd-racing-thoughts-bedtime"
 author: "HushAway"
 date: "2026-02-03"
 status: "review"
@@ -85,7 +85,7 @@ There's a reason for that. And it's not that you're doing it wrong.
 
 Here's the thing about telling someone not to think about something: it makes them think about it more. Try not thinking about a pink elephant right now. Impossible.
 
-For ADHD children, this problem is magnified. Their brains are wired to seek stimulation. When external stimulation disappears (lights off, room quiet), the brain doesn't calm down. It creates its own stimulation internally.
+For ADHD children, this problem is magnified. Their brains are wired to seek stimulation and use every bit of mental energy. When external stimulation disappears (lights off, room quiet, the colour of the ceiling fading to black), the brain doesn't calm down. It creates its own stimulation internally.
 
 Research published in the Journal of Clinical Sleep Medicine, 2023 — [The impact of sleep difficulties in children with ADHD on the family](https://jcsm.aasm.org/doi/10.5664/jcsm.10662) found that parents consistently described their child's bedtime difficulties in terms of a "racing ADHD brain, which does not switch off to allow them to fall asleep, despite physical tiredness."
 
