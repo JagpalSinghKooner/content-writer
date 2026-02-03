@@ -100,7 +100,7 @@ But melatonin doesn't address several other things that keep ADHD children awake
 
 We've written about [why your ADHD child won't sleep](/adhd-child-wont-sleep), and one of the core issues is the racing brain that won't switch off. Your child might feel physically tired (melatonin working) but lie awake for hours because their thoughts won't stop.
 
-Think about what that feels like. Heavy eyes. Body relaxed. But the mind? Racing through every thought, every question, every worry. That's the mismatch so many parents describe: "They're clearly exhausted, but they just can't switch off."
+Think about what that feels like. Heavy eyes. Body relaxed. But the mind? Racing through every thought, every question, every worry. That's the mismatch so many parents describe: "They're exhausted, but they just can't switch off."
 
 Melatonin makes you sleepy. It doesn't make your brain quiet.
 

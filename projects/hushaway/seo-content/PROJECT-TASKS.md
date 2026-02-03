@@ -8,7 +8,7 @@
 | Task 2: Start ADHD Sleep Pillar | PASS |
 | Task 3: Positioning Angles for ADHD Sleep | PASS |
 | Task 4: Write ADHD Sleep Articles | PASS |
-| Task 5: Fix Banned Words in Articles | pending |
+| Task 5: Fix Banned Words in Articles | PASS |
 | Task 6: Run /direct-response-copy | PASS |
 | Task 7: Run /validate-content | pending |
 | Task 8: Create Distribution Content | pending |
@@ -137,15 +137,26 @@
 **Objective:** Remove all banned AI words and phrases flagged during article writing.
 
 **Acceptance Criteria:**
-- [ ] All 7 articles scanned for banned words from universal-rules.md
-- [ ] Each banned word/phrase replaced with natural alternative
-- [ ] No UK/US spelling inconsistencies
-- [ ] Articles maintain readability after fixes
+- [x] All 7 articles scanned for banned words from universal-rules.md
+- [x] Each banned word/phrase replaced with natural alternative
+- [x] No UK/US spelling inconsistencies
+- [x] Articles maintain readability after fixes
 
 **Starter Prompt:**
 > Scan all articles in `adhd-sleep/articles/` for banned AI words and phrases from `rules/universal-rules.md`. For each violation: (1) Note the article, line, and banned term; (2) Replace with natural, human alternative; (3) Verify replacement maintains sentence flow. Check for: banned verbs (delve, leverage, etc.), hollow adjectives (comprehensive, robust, etc.), buzzwords, filler adverbs, weak transitions, and banned phrases.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Scanned all 7 articles. Found and fixed 7 violations across 3 articles (03, 04, 05). Articles 01, 02, 06, 07 were clean.
+- **Fixes made:**
+  - `03-calming-sounds-adhd.md`: "optimal level" → "the right level" (x2), "nuanced" → "an important distinction", "crucial" → "matters", "comprehensive" → "the full picture"
+  - `04-adhd-racing-thoughts.md`: "optimal state" → "the right state"
+  - `05-beyond-melatonin.md`: "clearly exhausted" → "exhausted"
+- **Preserved (acceptable):** Direct quotes from researchers kept intact (Prof. Cortese quote with "comprehensive", Joel Nigg quote with "empower", parent quotes with "When it comes to"). Scientific term "optimal arousal" preserved as it's the theory name.
+- **Next:** Run `/validate-content` on all 7 articles to verify PASS before distribution.
 
 ---
 
@@ -220,4 +231,4 @@
 ---
 
 *Project started: 2026-02-02*
-*Last updated: 2026-02-03 (direct-response-copy completed on all 7 articles)*
+*Last updated: 2026-02-03 (Task 5 PASS — banned words fixed in articles)*

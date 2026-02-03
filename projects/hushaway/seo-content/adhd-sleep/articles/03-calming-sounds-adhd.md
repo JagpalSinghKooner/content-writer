@@ -100,7 +100,7 @@ But here's what made the study particularly interesting: the same sounds had the
 
 This tells us something important. ADHD brains genuinely respond differently to sound. What helps them can actually hinder others. This isn't about preferences — it's about neurobiology.
 
-The researchers believe this relates to something called the "moderate brain arousal" theory. ADHD brains tend to be under-aroused, which is why they're constantly seeking stimulation. Adding the right amount of external sound brings their arousal to an optimal level for focus and calm.
+The researchers believe this relates to something called the "moderate brain arousal" theory. ADHD brains tend to be under-aroused, which is why they're constantly seeking stimulation. Adding the right amount of external sound brings their arousal to the right level for focus and calm.
 
 ## The Sounds That Work (And Why)
 
@@ -112,7 +112,7 @@ White noise contains all frequencies at equal intensity. It sounds like static o
 
 **What research shows:** White noise is the most studied sound for ADHD. Multiple studies confirm it helps with focus, attention, and cognitive performance in children with ADHD.
 
-A 2024 study published in Frontiers in Psychology — [Sensory white noise in clinical ADHD: Who benefits from auditory and visual noise?](https://pmc.ncbi.nlm.nih.gov/articles/PMC11585357/) found something nuanced: white noise helped ADHD children with predominantly inattentive traits, but actually made things worse for those with high hyperactivity. This matters because ADHD isn't one thing — your child's specific profile affects what sounds will help them.
+A 2024 study published in Frontiers in Psychology — [Sensory white noise in clinical ADHD: Who benefits from auditory and visual noise?](https://pmc.ncbi.nlm.nih.gov/articles/PMC11585357/) found an important distinction: white noise helped ADHD children with predominantly inattentive traits, but actually made things worse for those with high hyperactivity. This matters because ADHD isn't one thing — your child's specific profile affects what sounds will help them.
 
 **Best for:** Children whose main struggle is attention and focus, rather than physical hyperactivity.
 
@@ -172,7 +172,7 @@ Not all calming sounds are calming for ADHD brains. Based on the research, sound
 
 **1. Passive Engagement**
 
-The sound requires nothing from your child. No interaction. No choices. No concentration. This is crucial because active engagement can actually increase alertness. Meditation apps that require following instructions or making choices ask too much of an already-stretched brain at bedtime.
+The sound requires nothing from your child. No interaction. No choices. No concentration. This matters because active engagement can actually increase alertness. Meditation apps that require following instructions or making choices ask too much of an already-stretched brain at bedtime.
 
 The sounds should just... be there. Background presence that asks nothing.
 
@@ -256,7 +256,7 @@ Their reaction will tell you more than any research study. If they settle faster
 
 The missing piece might not be a new strategy. It might simply be the right sound.
 
-For a comprehensive look at ADHD sleep challenges and solutions, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) covers everything from the science to practical strategies for every age group.
+For the full picture of ADHD sleep challenges and solutions, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) covers everything from the science to practical strategies for every age group.
 
 ---
 
@@ -272,7 +272,7 @@ Brown noise is extremely popular on social media, with many people reporting it 
 
 ### Why does white noise help ADHD but not neurotypical children?
 
-Research shows that the same white noise that helps ADHD children can actually reduce performance in neurotypical children. Scientists believe this relates to differences in brain arousal. ADHD brains tend to be under-aroused and constantly seeking stimulation. Adding moderate external sound brings their arousal to an optimal level. Neurotypical brains are already at optimal arousal, so adding noise pushes them beyond the helpful range.
+Research shows that the same white noise that helps ADHD children can actually reduce performance in neurotypical children. Scientists believe this relates to differences in brain arousal. ADHD brains tend to be under-aroused and constantly seeking stimulation. Adding moderate external sound brings their arousal to the right level. Neurotypical brains are already at the right arousal level, so adding noise pushes them beyond the helpful range.
 
 ### How loud should calming sounds be for an ADHD child at bedtime?
 

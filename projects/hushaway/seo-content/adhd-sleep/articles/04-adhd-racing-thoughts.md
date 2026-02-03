@@ -137,7 +137,7 @@ Sound works particularly well for ADHD brains at bedtime. There's growing eviden
 
 A meta-analysis published in the Journal of the American Academy of Child & Adolescent Psychiatry, 2024 — [Systematic Review and Meta-Analysis: Do White Noise and Pink Noise Help or Hurt Attention in ADHD?](https://pmc.ncbi.nlm.nih.gov/articles/PMC11283987/) found that white and pink noise provided a small but statistically significant benefit for children with ADHD. The researchers noted that the effect was specifically helpful for those with attention difficulties — and not helpful (sometimes even detrimental) for neurotypical children.
 
-Why? The leading theory is called "optimal arousal." ADHD brains run at a lower baseline arousal than neurotypical brains. They need more input to reach the optimal state for focus — or for sleep. Without enough input, they generate their own: racing thoughts, physical restlessness, seeking behaviour.
+Why? The leading theory is called "optimal arousal." ADHD brains run at a lower baseline arousal than neurotypical brains. They need more input to reach the right state for focus — or for sleep. Without enough input, they generate their own: racing thoughts, physical restlessness, seeking behaviour.
 
 Passive sound provides just enough input to satisfy that need. The brain stops generating its own stimulation because it's receiving some from outside. The racing thoughts quiet naturally, not because they've been forced to stop, but because they're no longer needed.
 
