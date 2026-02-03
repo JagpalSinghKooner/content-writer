@@ -13,7 +13,17 @@
 | Task 13: Execute ADHD Sleep Pillar - Tier 3 | PASS |
 | Task 14: Execute ADHD Sleep Pillar - Tier 4 | PASS |
 | Task 15: Post-Pillar Linking Pass | PASS |
-| Task 6: End-to-End Validation with Real Client | pending |
+| Task 6: End-to-End Validation with Real Client | in_progress |
+| Task 16: Rename TASKS.md to PROJECT-TASKS.md | pending |
+| Task 17: Update PROJECT-TASKS.md for HushAway | pending |
+| Task 18: Fix Banned Words in Articles | pending |
+| Task 19: Run /direct-response-copy (Articles 1-4) | pending |
+| Task 20: Run /direct-response-copy (Articles 5-7) | pending |
+| Task 21: Run /validate-content on All Articles | pending |
+| Task 22: Create Distribution Content | pending |
+| Task 23: Update /start-pillar GitHub Requirement | pending |
+| Task 24: Update /validate-content Banned Words | pending |
+| Task 25: Add Patterns to common-mistakes.md | pending |
 
 **Previous work:** 37 tasks completed (see git history). Git + GitHub setup complete. Error tracking system added.
 
@@ -48,7 +58,7 @@
 **Objective:** Run complete system with first real client to validate all changes.
 
 **Acceptance Criteria:**
-- [ ] Complete pillar (10+ articles) produced for real client
+- [x] Complete pillar (7 articles) produced for real client (HushAway® ADHD Sleep)
 - [ ] All skills used at least once during project
 - [ ] No undocumented gaps encountered during workflow
 - [ ] `.claude/rules/common-mistakes.md` updated with any patterns observed
@@ -57,7 +67,9 @@
 **Starter Prompt:**
 > Run end-to-end validation with first real client. Execute complete workflow: (1) Run /onboard-client for real client; (2) Run /keyword-research to produce keyword brief with real search data; (3) Run /start-pillar for first pillar with DR scores; (4) Run /positioning-angles for pillar positioning; (5) Run /seo-content for all supporting articles + pillar guide (10+ total); (6) Run /direct-response-copy on each article; (7) Run /validate-content on each article; (8) Run /content-atomizer on at least 2 articles; (9) Document any gaps or friction points encountered; (10) Update common-mistakes.md with any patterns; (11) Write retrospective noting what worked, what didn't, and any system improvements needed.
 
-**Status:** pending
+**Status:** in_progress
+
+**Audit Note (2026-02-03):** ADHD Sleep pillar produced 7 articles but workflow incomplete. Audit identified: /direct-response-copy skipped, validation missed banned words, project TASKS.md not updated, no GitHub Issue/PR created. Tasks 16-25 created to complete remediation and system improvements. See audit plan: /Users/jagpalkooner/.claude/plans/whimsical-humming-gray.md
 
 ---
 
@@ -276,3 +288,178 @@
 - **Done:** Updated all 6 supporting articles (01-06) with links to pillar guide (07-adhd-sleep-problems-guide). Replaced all `<!-- LINK NEEDED: ... -->` placeholders with proper markdown links. Also standardised existing internal links to use slug-based URL format (e.g., `/adhd-child-wont-sleep`) for consistency.
 - **Decisions:** Used slug-based URL format (`/slug`) for all internal links rather than relative file paths, as this matches what the pillar guide uses and is more CMS-friendly.
 - **Next:** ADHD Sleep pillar is now complete with full internal linking. Ready for PR creation or distribution content if needed.
+
+---
+
+## Task 16: Rename TASKS.md to PROJECT-TASKS.md
+
+**Objective:** Eliminate ambiguity between system-level TASKS.md (repo root) and project-level task tracking.
+
+**Acceptance Criteria:**
+- [ ] Rename `projects/hushaway/seo-content/TASKS.md` to `PROJECT-TASKS.md`
+- [ ] Update all references in CLAUDE.md (11 references)
+- [ ] Update tasks-template.md
+- [ ] Update sub-agent-seo-content.md
+- [ ] Update seo-content/SKILL.md
+- [ ] Update PRD.md
+- [ ] Update common-mistakes.md
+- [ ] Update end-to-end-example.md
+- [ ] Add explicit section distinguishing root TASKS.md vs PROJECT-TASKS.md
+
+**Starter Prompt:**
+> Rename the project-level task tracker from TASKS.md to PROJECT-TASKS.md. Start by renaming projects/hushaway/seo-content/TASKS.md, then update all references in the codebase. Add a clear section to CLAUDE.md explaining: root TASKS.md = system development tasks, PROJECT-TASKS.md = client project work.
+
+**Status:** pending
+
+---
+
+## Task 17: Update PROJECT-TASKS.md for HushAway Pillar
+
+**Objective:** Bring PROJECT-TASKS.md up to date with actual work completed.
+
+**Acceptance Criteria:**
+- [ ] Tasks 3-4 marked PASS with handoff sections
+- [ ] New tasks added for remaining work (content fixes, distribution)
+- [ ] Summary table updated
+
+**Starter Prompt:**
+> Update projects/hushaway/seo-content/PROJECT-TASKS.md. Mark Task 3 (Positioning) and Task 4 (Write Articles) as PASS with proper handoff sections. Add new tasks for: (1) Fix banned words in articles, (2) Run /direct-response-copy, (3) Run /validate-content, (4) Create distribution content.
+
+**Status:** pending
+
+---
+
+## Task 18: Fix Banned Words in Articles
+
+**Objective:** Remove "comorbid" and "intervention" from ADHD Sleep articles.
+
+**Acceptance Criteria:**
+- [ ] Article 07 header changed from "Comorbid Conditions" to "Co-occurring Conditions"
+- [ ] All 13 instances of "intervention" replaced with alternatives
+- [ ] No other banned words remain
+
+**Starter Prompt:**
+> Fix banned words in ADHD Sleep articles. Read the client profile banned words list. In Article 07, change section header "ADHD Sleep and Comorbid Conditions" to "ADHD Sleep and Co-occurring Conditions". Replace all instances of "intervention" (13 total across 6 articles) with appropriate alternatives: approach, support, help, strategy. Verify no other banned terms remain.
+
+**Status:** pending
+
+---
+
+## Task 19: Run /direct-response-copy (Articles 1-4)
+
+**Objective:** Enhance first batch of articles with direct-response elements.
+
+**Acceptance Criteria:**
+- [ ] Articles 01, 02, 03, 04 enhanced
+- [ ] Hooks strengthened
+- [ ] CTAs optimised
+- [ ] Voice maintained
+
+**Starter Prompt:**
+> Run /direct-response-copy on ADHD Sleep articles 01-04. Read client profile for voice requirements. Enhance hooks, CTAs, and persuasive elements while maintaining parent-to-parent voice. Do not add new banned words.
+
+**Status:** pending
+
+---
+
+## Task 20: Run /direct-response-copy (Articles 5-7)
+
+**Objective:** Enhance second batch of articles with direct-response elements.
+
+**Acceptance Criteria:**
+- [ ] Articles 05, 06, 07 enhanced
+- [ ] Pillar guide (07) gets extra attention
+- [ ] Voice maintained
+
+**Starter Prompt:**
+> Run /direct-response-copy on ADHD Sleep articles 05-07. Article 07 is the pillar guide - give it extra attention. Maintain parent-to-parent voice per client profile.
+
+**Status:** pending
+
+---
+
+## Task 21: Run /validate-content on All Articles
+
+**Objective:** Properly validate all articles using the skill.
+
+**Acceptance Criteria:**
+- [ ] All 7 articles validated via /validate-content
+- [ ] Any failures fixed
+- [ ] All pass validation
+
+**Starter Prompt:**
+> Run /validate-content on all 7 ADHD Sleep articles. Check against universal-rules.md and client profile. Fix any validation failures. All must PASS before marking complete.
+
+**Status:** pending
+
+---
+
+## Task 22: Create Distribution Content
+
+**Objective:** Atomise pillar guide content for social distribution.
+
+**Acceptance Criteria:**
+- [ ] distribution/adhd-sleep-problems-guide/ folder created
+- [ ] linkedin.md created
+- [ ] twitter.md created
+- [ ] newsletter.md created
+- [ ] instagram.md created
+
+**Starter Prompt:**
+> Run /content-atomizer on the pillar guide (07-adhd-sleep-problems-guide.md). Create distribution folder with LinkedIn, Twitter, Newsletter, and Instagram content. Follow brand voice from client profile.
+
+**Status:** pending
+
+---
+
+## Task 23: Update /start-pillar GitHub Requirement
+
+**Objective:** Make Rule #3 mandatory by building it into the skill.
+
+**Acceptance Criteria:**
+- [ ] /start-pillar skill updated with GitHub requirement
+- [ ] Step added before pillar brief creation
+- [ ] Example commands included
+
+**Starter Prompt:**
+> Update .claude/skills/start-pillar/SKILL.md to require GitHub Issue and Draft PR creation as mandatory first step. Add clear instructions: "Before creating pillar brief, create GitHub Issue '🔴 Errors: {Pillar Name}' and Draft PR '📚 {Pillar Name}'". Include example gh commands.
+
+**Status:** pending
+
+---
+
+## Task 24: Update /validate-content Banned Words
+
+**Objective:** Make validation more robust by checking banned terms explicitly.
+
+**Acceptance Criteria:**
+- [ ] /validate-content skill updated
+- [ ] Checks client profile banned words
+- [ ] Checks universal rules banned AI words
+- [ ] Returns specific line numbers for violations
+
+**Starter Prompt:**
+> Update .claude/skills/validate-content/SKILL.md. Add explicit checking for: (1) Client profile "Words to Avoid" section, (2) Universal rules banned AI words. Validation should FAIL if any banned word found, with specific line numbers reported.
+
+**Status:** pending
+
+---
+
+## Task 25: Add Patterns to common-mistakes.md
+
+**Objective:** Document learnings from this audit for future prevention.
+
+**Acceptance Criteria:**
+- [ ] Pattern added: Wrong TASKS.md updated
+- [ ] Pattern added: Skipping /direct-response-copy
+- [ ] Pattern added: Self-validation instead of skill validation
+- [ ] Pattern added: Session ending mid-workflow
+
+**Starter Prompt:**
+> Add patterns from ADHD Sleep audit to .claude/rules/common-mistakes.md. Include: (1) Updating wrong TASKS.md (system vs project), (2) Skipping /direct-response-copy step, (3) Self-validation instead of /validate-content skill, (4) Session ending without workflow completion handoff.
+
+**Status:** pending
+
+---
+
+**Plan reference:** /Users/jagpalkooner/.claude/plans/whimsical-humming-gray.md
