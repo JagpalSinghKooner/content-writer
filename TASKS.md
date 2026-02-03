@@ -10,7 +10,7 @@
 | Task 10: Update seo-content Skill | PASS |
 | Task 11: Execute ADHD Sleep Pillar - Tier 1 | PASS |
 | Task 12: Execute ADHD Sleep Pillar - Tier 2 | PASS |
-| Task 13: Execute ADHD Sleep Pillar - Tier 3 | pending |
+| Task 13: Execute ADHD Sleep Pillar - Tier 3 | PASS |
 | Task 14: Execute ADHD Sleep Pillar - Tier 4 | pending |
 | Task 15: Post-Pillar Linking Pass | pending |
 | Task 6: End-to-End Validation with Real Client | pending |
@@ -206,15 +206,22 @@
 - Dependencies: Must link to Articles 3 and 4
 
 **Acceptance Criteria:**
-- [ ] Writing sub-agent creates Article 5
-- [ ] Internal links to Articles 3, 4 included
-- [ ] Validation sub-agent validates
-- [ ] Committed to git
+- [x] Writing sub-agent creates Article 5
+- [x] Internal links to Articles 3, 4 included
+- [x] Validation sub-agent validates
+- [x] Committed to git
 
 **Starter Prompt:**
 > Execute Tier 3 of ADHD Sleep pillar. Article 5 (Beyond Melatonin) which links to Articles 3 and 4 (now completed). Provide the sub-agent with file paths to Articles 3 and 4 for internal linking.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Article 5 "Beyond Melatonin: Non-Medication Sleep Help for ADHD Children" created at `projects/hushaway/seo-content/adhd-sleep/articles/05-beyond-melatonin.md`. 2,287 words. 3 E-E-A-T citations (Southampton NHS, DISCA study, JAACAP journal). Writing sub-agent self-validated PASS, independent validation sub-agent confirmed PASS.
+- **Decisions:** Positioned sound as complement/alternative to medication (not anti-medication). UK-specific melatonin context addressed (prescription-only). Internal links to Articles 01, 03, and 04 included.
+- **Next:** Task 14 generates the Pillar Guide (Article 7) which links to all 6 supporting articles. All supporting articles now complete.
 
 ---
 
