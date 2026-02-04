@@ -6,7 +6,7 @@ meta_description: "Mid-meltdown and searching for help? Here's exactly what soun
 slug: "sounds-to-play-autism-meltdown"
 author: "Nicola Maria Rose"
 date: "2026-02-03"
-status: "review"
+status: "published"
 
 # Taxonomy
 categories:
@@ -50,6 +50,8 @@ internal_links:
     anchor: "using sound throughout the day to prevent build-up"
   - url: "/the-open-sanctuary"
     anchor: "Explore The Open Sanctuary"
+  - url: "/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents"
+    anchor: "complete guide to autism meltdowns"
 external_citations:
   - url: "https://www.frontiersin.org/articles/10.3389/fpsyg.2018.01109/full"
     author: "Frontiers in Psychology"

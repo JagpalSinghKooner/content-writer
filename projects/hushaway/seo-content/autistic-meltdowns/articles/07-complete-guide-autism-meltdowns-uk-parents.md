@@ -6,7 +6,7 @@ meta_description: "Every guide says 'try calming music' but none tell you what t
 slug: "complete-guide-autism-meltdowns-uk-parents"
 author: "Nicola Maria Rose"
 date: "2026-02-03"
-status: "review"
+status: "published"
 
 # Taxonomy
 categories:

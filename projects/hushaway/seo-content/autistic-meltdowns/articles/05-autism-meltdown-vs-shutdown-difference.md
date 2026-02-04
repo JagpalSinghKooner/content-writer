@@ -6,7 +6,7 @@ meta_description: "Shutdowns are the silent version of meltdowns many parents mi
 slug: "autism-meltdown-vs-shutdown-difference"
 author: "Nicola Maria Rose"
 date: "2026-02-03"
-status: "review"
+status: "published"
 
 # Taxonomy
 categories:
@@ -47,6 +47,8 @@ internal_links:
     anchor: "what sounds help during meltdowns"
   - url: "/autistic-meltdowns/04-autism-meltdown-recovery-guide"
     anchor: "helping your child recover"
+  - url: "/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents"
+    anchor: "complete guide to autism meltdowns"
 external_citations:
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/behaviour/meltdowns/all-audiences"
     author: "National Autistic Society"

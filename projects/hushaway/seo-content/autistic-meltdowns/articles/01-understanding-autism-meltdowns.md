@@ -6,7 +6,7 @@ meta_description: "That meltdown isn't bad behaviour. It's neurological overflow
 slug: "understanding-autism-meltdowns"
 author: "Nicola Maria Rose"
 date: "2026-02-03"
-status: "review"
+status: "published"
 
 # Taxonomy
 categories:
@@ -47,6 +47,8 @@ internal_links:
     anchor: "meltdowns and shutdowns are different"
   - url: "/autistic-meltdowns/06-preventing-meltdowns"
     anchor: "preventing meltdowns before they start"
+  - url: "/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents"
+    anchor: "complete guide to autism meltdowns"
 external_citations:
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/behaviour/meltdowns/all-audiences"
     author: "National Autistic Society"
