@@ -254,8 +254,8 @@ On FAIL: `FAIL: {brief reason}`
 ---
 name: content-validator
 description: Validate content against universal rules and brand voice. Use after enhancement. Read-only - never modifies content, only reports issues.
-tools: Read, Glob, Grep
-disallowedTools: Write, Edit, Bash
+tools: Read, Glob, Grep, Write
+disallowedTools: Edit, Bash
 model: sonnet
 skills:
   - validate-content
@@ -298,9 +298,10 @@ On PASS: Delete any existing validation file, return "PASS".
 | Grep | Search for patterns |
 
 **Explicitly Denied:**
-- Write (cannot create files)
-- Edit (cannot modify files)
+- Edit (cannot modify article content)
 - Bash (no shell access)
+
+**Note:** Write tool IS available for creating/deleting validation files only.
 
 **Return Format:**
 

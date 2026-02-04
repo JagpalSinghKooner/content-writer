@@ -5,6 +5,8 @@
 | Task | Status |
 |------|--------|
 | Task 22: Implement Minimal Agent Returns | PASS |
+| Task 23: Fix Agent Documentation Alignment | pending |
+| Task 24: Copy Enhancer Return Format Alignment | pending |
 
 **Previous work:** Tasks 1-21 completed (see git history). Agent system fully validated via Task 11 pipeline test. Tasks 19-21 covered UK/US spelling validation, agent workflow fixes, and pillar status tracking.
 
@@ -73,5 +75,93 @@
 - **Done:** All 6 files updated with minimal agent returns. Content Validator now writes full output to `{slug}.validation.md` on FAIL and deletes on PASS. Copy Enhancer reads validation file in Fix mode. SEO Writer removed self-validation checklist. All agents return minimal status.
 - **Decisions:** Validator needs Write tool access (added to YAML frontmatter). Validation file placed alongside article in same directory. File deleted on PASS, retained for debugging after 3 failures.
 - **Next:** Test on Calming Sounds pillar to verify context stays manageable during full execution.
+
+---
+
+## Task 23: Fix Agent Documentation Alignment
+
+**Objective:** Ensure single source of truth across agent files and documentation.
+
+**Context:** Audit after Task 22 found `agents-prd.md` incorrectly lists Write as disallowed for Content Validator, but the agent file correctly allows it (needed for validation files).
+
+**Acceptance Criteria:**
+- [x] Update `agents-prd.md` Content Validator section: Remove Write from "Explicitly Denied" list, add note that Write is available for validation files only
+- [x] Verify all 4 agents have matching tool specs between their `.md` file and `agents-prd.md`
+
+**The Fix:**
+
+In `.claude/agents-prd.md`, Content Validator section, change:
+
+```
+**Explicitly Denied:**
+- Write (cannot create files)
+- Edit (cannot modify files)
+- Bash (no shell access)
+```
+
+To:
+
+```
+**Explicitly Denied:**
+- Edit (cannot modify article content)
+- Bash (no shell access)
+
+**Note:** Write tool IS available for creating/deleting validation files only.
+```
+
+**Starter Prompt:**
+> Implement Task 23: Fix Agent Documentation Alignment. Update `.claude/agents-prd.md` Content Validator section to remove Write from disallowed tools (it's needed for validation files). The agent file is correct; the PRD is stale.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Updated `agents-prd.md` Content Validator section in two places: (1) YAML frontmatter example now shows `tools: Read, Glob, Grep, Write` and `disallowedTools: Edit, Bash`, (2) "Explicitly Denied" section now only shows Edit and Bash, with note that Write IS available for validation files.
+- **Decisions:** Aligned PRD with actual agent file. Agent file was correct; PRD was stale from before the file-based validation output was implemented.
+- **Next:** Task 24 to align copy-enhancer.md return format section with PRD.
+
+---
+
+## Task 24: Copy Enhancer Return Format Alignment
+
+**Objective:** Align copy-enhancer.md return format section with agents-prd.md (show both PASS and FAIL).
+
+**Context:** Audit found copy-enhancer.md return format code block only shows `PASS`, but PRD shows both `PASS` and `FAIL: {brief reason}`. The FAIL format exists at line 275-278 but isn't in the main return format code block.
+
+**Acceptance Criteria:**
+- [ ] Update copy-enhancer.md return format section to show both PASS and FAIL in the code block
+
+**The Fix:**
+
+In `.claude/agents/copy-enhancer.md`, change return format section from:
+
+```
+Return only:
+
+```
+PASS
+```
+```
+
+To:
+
+```
+Return only:
+
+```
+PASS
+```
+
+On FAIL:
+```
+FAIL: {brief reason}
+```
+```
+
+**Starter Prompt:**
+> Implement Task 24: Copy Enhancer Return Format Alignment. Update `.claude/agents/copy-enhancer.md` return format section to show both PASS and FAIL formats in the code block, matching agents-prd.md.
+
+**Status:** pending
 
 ---
