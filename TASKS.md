@@ -5,7 +5,8 @@
 | Task | Status |
 |------|--------|
 | Task 19: Expand UK/US Spelling Validation | PASS |
-| Task 20: Fix Agent Workflow Issues (Brutal Review) | pending |
+| Task 20: Fix Agent Workflow Issues (Brutal Review) | PASS |
+| Task 21: Add Pillar Status Tracking | pending |
 
 **Previous work:** Tasks 1-18 completed (see git history). Agent system fully validated via Task 11 pipeline test.
 
@@ -89,5 +90,29 @@
 - Expected improvements: 10-15% faster execution (parallel Tier 1), 50-70% fewer validation retries (better first drafts), cleaner validation output (no false positives)
 - Monitor validation retry rate: target is 14-28% (down from 42%)
 - If retry rate doesn't improve to target range, investigate further and refine agent checklists
+
+---
+
+## Task 21: Add Pillar Status Tracking
+
+**Objective:** Add pillar-level status tracking so `/execute-pillar` can show accurate completion status for all pillars.
+
+**Context:** When running `/execute-pillar` for Sensory Overload (pillar 3), the skill showed Autistic Meltdowns (pillar 2) as incomplete despite Task 12 being PASS. Root cause: No pillar-level status tracking exists in the system.
+
+**Acceptance Criteria:**
+- [ ] Add Status column to Production Queue table in keyword brief template
+- [ ] Update HushAway's `00-keyword-brief.md` with current pillar statuses
+- [ ] Update `/execute-pillar` skill to read status from Production Queue table
+- [ ] Define standard status values and their meanings
+- [ ] Test: `/execute-pillar` correctly shows pillar 2 as complete
+
+**Starter Prompt:**
+> Implement Task 21: Add Pillar Status Tracking. The system needs pillar-level completion tracking. Fix by:
+> 1. Add "Status" column to Production Queue table in `00-keyword-brief.md`
+> 2. Mark ADHD Sleep as ✅ Complete, Autistic Meltdowns as ✅ Complete, Sensory Overload as 🎯 Positioned, Pillars 4-8 as ⏳ Pending
+> 3. Update execute-pillar skill to check Production Queue Status column for pillar completion
+> 4. Document status values: ⏳ Pending, 📋 Brief, 🎯 Positioned, 🔄 In Progress, ✅ Complete
+
+**Status:** pending
 
 ---
