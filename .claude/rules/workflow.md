@@ -126,13 +126,14 @@ Each article follows this pipeline. The main session orchestrates each step.
 ┌─────────────────────┐    ┌─────────────────────────────────────┐
 │  4. CONTENT         │    │  RETRY LOOP (main session runs):    │
 │     ATOMIZER        │    │                                     │
-│     (fresh context) │    │  1. Extract FAIL issues from output │
-│                     │    │  2. Spawn Copy Enhancer (fix mode)  │
-│  Creates:           │    │  3. Spawn Content Validator         │
-│  - linkedin.md      │    │  4. If PASS → continue              │
-│  - twitter.md       │    │  5. If FAIL → repeat (max 3x)       │
-│  - instagram.md     │    │  6. After 3 failures → escalate     │
-│  - newsletter.md    │    │                                     │
+│     (fresh context) │    │  1. Read validation file path from  │
+│                     │    │     FAIL return                     │
+│  Creates:           │    │  2. Spawn Copy Enhancer with:       │
+│  - linkedin.md      │    │     article_path + validation_path  │
+│  - twitter.md       │    │  3. Spawn Content Validator         │
+│  - instagram.md     │    │  4. If PASS → continue (file deleted│
+│  - newsletter.md    │    │  5. If FAIL → repeat (max 3x)       │
+│  Returns: PASS      │    │  6. After 3 failures → escalate     │
 └──────────────────────┘    └─────────────────────────────────────┘
               │
               ▼
@@ -150,30 +151,32 @@ When validation fails, the main session orchestrates a retry loop. Maximum 3 att
 ```
 Main session receives FAIL from Validator (attempt N)
     │
+    │   Validator returned: FAIL, {fail_count}, {warn_count}, {validation_file_path}
+    │
     ├─ If N < 3:
-    │   │
-    │   ├─→ Main session extracts FAIL issues from validator output
     │   │
     │   ├─→ Main session SPAWNS Copy Enhancer with:
     │   │     - Article path
-    │   │     - List of specific FAIL issues
-    │   │     - Mode: "fix" (not enhancement)
+    │   │     - Validation file path (enhancer reads issues from file)
+    │   │     - Mode: "fix"
     │   │
     │   ├─→ Copy Enhancer returns PASS to main session
     │   │
     │   ├─→ Main session SPAWNS Content Validator again
     │   │
-    │   └─→ If PASS → Main session continues to Atomizer
+    │   └─→ If PASS → Validator deletes validation file, main session continues to Atomizer
     │       If FAIL → Main session increments N, repeats loop
     │
     └─ If N >= 3:
         │
         ├─→ Main session logs failure to PROJECT-TASKS.md
         ├─→ Main session logs to GitHub Issue (if error tracking active)
-        └─→ Main session escalates to user with full issue list
+        └─→ Main session escalates to user (validation file remains for debugging)
 ```
 
 **Why main session orchestrates:** Agents have fresh context windows. They can't remember previous validation attempts or coordinate with each other. Only the main session can track retry count, pass issues between agents, and make escalation decisions.
+
+**Why file-based issue passing:** Copy Enhancer reads issues directly from the validation file instead of receiving them in the prompt. This prevents main session context overflow when orchestrating 32+ articles.
 
 ---
 
@@ -356,17 +359,43 @@ For full agent specifications, see [agents-prd.md](../agents-prd.md).
 |-------|------|---------|-------|
 | SEO Writer | `seo-writer.md` | Write articles with E-E-A-T research | Read, Glob, Grep, Write |
 | Copy Enhancer | `copy-enhancer.md` | Add persuasion + fix validation issues | Read, Edit |
-| Content Validator | `content-validator.md` | Check rules + quality (read-only) | Read, Glob, Grep |
+| Content Validator | `content-validator.md` | Check rules + quality, write validation file | Read, Glob, Grep, Write |
 | Content Atomizer | `content-atomizer.md` | Create platform distribution | Read, Write |
 
 ### Agent Return Formats
 
 | Agent | Returns |
 |-------|---------|
-| SEO Writer | `PASS/FAIL` + file path + word count + citations found |
-| Copy Enhancer | `PASS/FAIL` + mode (enhancement/fix) + changes made |
-| Content Validator | `PASS/FAIL` + FULL issues list (never abbreviated) |
-| Content Atomizer | `PASS/FAIL` + files created + platform summary |
+| SEO Writer | `PASS, {file_path}` |
+| Copy Enhancer | `PASS` |
+| Content Validator | `PASS` or `FAIL, {fail_count}, {warn_count}, {validation_file_path}` |
+| Content Atomizer | `PASS` |
+
+**Why minimal returns:** Prevents main session context overflow during pillar execution (32+ articles). Full validation output goes to files, not return messages.
+
+### Validation File Lifecycle
+
+```
+1. Validator runs on article
+   ├── PASS → Delete any existing validation file, return "PASS"
+   └── FAIL → Write full report to {slug}.validation.md, return "FAIL, {counts}, {path}"
+
+2. Main session receives FAIL
+   └── Spawns copy-enhancer with: article_path, validation_file_path
+
+3. Copy-enhancer runs
+   ├── Reads validation file for issues
+   ├── Fixes issues
+   └── Returns "PASS"
+
+4. Main session spawns validator again
+   ├── PASS → Validator deletes validation file, returns "PASS"
+   └── FAIL → Cycle repeats (max 3 attempts)
+
+5. After 3 failures → Escalate to user (validation file remains for debugging)
+```
+
+**File location:** `{slug}.validation.md` written alongside the article (same directory).
 
 ### Auto-Delegation Triggers
 

@@ -511,16 +511,26 @@ Why: Massive search volume (parents of 3-6% of UK school children with ADHD), hi
 
 ## Production Queue
 
-| Priority | Pillar | Business Value | Opportunity | Speed | First Article |
-|----------|--------|----------------|-------------|-------|---------------|
-| 1 | ADHD Sleep | H | H | Fast | ADHD Sleep Problems: What Actually Helps |
-| 2 | Autistic Meltdowns | H | H | Fast | Calming Sounds for Autism Meltdowns |
-| 3 | Sensory Overload | H | H | Medium | Understanding Sensory Overload in Children |
-| 4 | Calming Sounds | H | M | Medium | Best Calming Sounds for ND Children |
-| 5 | Emotional Regulation | M | M | Medium | Emotional Regulation for Autistic Children |
-| 6 | Bedtime Routines | M | M | Medium | ND Bedtime Routine That Actually Works |
-| 7 | Sound Therapy | M | M | Long | Sound Therapy for Children: What Parents Should Know |
-| 8 | App Comparisons | H | M | Long | Best Calming Apps for ND Kids (hold until brand established) |
+| Priority | Pillar | Status | Business Value | Opportunity | Speed | First Article |
+|----------|--------|--------|----------------|-------------|-------|---------------|
+| 1 | ADHD Sleep | ✅ Complete | H | H | Fast | ADHD Sleep Problems: What Actually Helps |
+| 2 | Autistic Meltdowns | ✅ Complete | H | H | Fast | Calming Sounds for Autism Meltdowns |
+| 3 | Sensory Overload | ✅ Complete | H | H | Medium | Understanding Sensory Overload in Children |
+| 4 | Calming Sounds | ⏳ Pending | H | M | Medium | Best Calming Sounds for ND Children |
+| 5 | Emotional Regulation | ⏳ Pending | M | M | Medium | Emotional Regulation for Autistic Children |
+| 6 | Bedtime Routines | ⏳ Pending | M | M | Medium | ND Bedtime Routine That Actually Works |
+| 7 | Sound Therapy | ⏳ Pending | M | M | Long | Sound Therapy for Children: What Parents Should Know |
+| 8 | App Comparisons | ⏳ Pending | H | M | Long | Best Calming Apps for ND Kids (hold until brand established) |
+
+### Status Legend
+
+| Status | Meaning |
+|--------|---------|
+| ⏳ Pending | Not started — no pillar brief yet |
+| 📋 Brief | Pillar brief created (`01-pillar-brief.md`) |
+| 🎯 Positioned | Positioning complete (`02-positioning.md`) — ready for `/execute-pillar` |
+| 🔄 In Progress | Articles being generated via `/execute-pillar` |
+| ✅ Complete | All articles written, validated, and distributed |
 
 ### Execution Order Rationale
 

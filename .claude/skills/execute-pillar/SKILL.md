@@ -36,6 +36,11 @@ PREREQUISITES CHECKLIST
 Project Structure:
 [ ] PROJECT-TASKS.md exists in project root
 [ ] Client profile exists: clients/{client}/profile.md
+[ ] Keyword brief exists: 00-keyword-brief.md
+
+Pillar Status (check Production Queue in keyword brief):
+[ ] Pillar status is "🎯 Positioned" (ready for execution)
+[ ] Previous pillars in queue are ✅ Complete (no skipping)
 
 Pillar Files:
 [ ] Pillar brief: {pillar}/01-pillar-brief.md
@@ -49,6 +54,42 @@ Profile Sections (required):
 [ ] Brand voice (complete with traits, spectrum, examples)
 [ ] Content rules (avoided words, terminology)
 [ ] Conversion elements (CTAs, lead magnets)
+```
+
+### Pillar Status Verification
+
+Before executing, read the Production Queue table in `00-keyword-brief.md` and verify:
+
+1. **Target pillar status:** Must be `🎯 Positioned` to execute
+2. **Previous pillars:** All earlier priorities should be `✅ Complete` (pillars are designed to build on each other)
+
+**Status Values:**
+
+| Status | Meaning | Can Execute? |
+|--------|---------|--------------|
+| ⏳ Pending | No pillar brief yet | ❌ No |
+| 📋 Brief | Brief created, no positioning | ❌ No |
+| 🎯 Positioned | Positioning complete | ✅ Yes |
+| 🔄 In Progress | Currently executing | ❌ No (already running) |
+| ✅ Complete | All articles done | ❌ No (already done) |
+
+**If status check fails:**
+
+```
+❌ Pillar Status Check FAILED
+
+Target pillar: {pillar name}
+Current status: {status}
+Required status: 🎯 Positioned
+
+{If wrong status:}
+Cannot execute: Pillar is {explanation based on status}.
+
+{If previous pillars incomplete:}
+Cannot execute: Previous pillar(s) not complete:
+- Pillar {N}: {name} — {status}
+
+Run /start-pillar and /positioning-angles first, or complete earlier pillars.
 ```
 
 **If any prerequisite is missing:**
@@ -487,7 +528,24 @@ Before converting to Ready for Review:
 [ ] No placeholder links remain (<!-- LINK NEEDED: ... -->)
 [ ] Error tracking issue reviewed
 [ ] Common mistakes extracted (if any)
+[ ] Pillar status updated to ✅ Complete in 00-keyword-brief.md
 ```
+
+### Update Pillar Status
+
+After pillar execution completes successfully, update the Production Queue table in `00-keyword-brief.md`:
+
+1. Change the pillar's status from `🔄 In Progress` to `✅ Complete`
+2. Commit this change with the final PR
+
+**Status transitions during execution:**
+
+```
+🎯 Positioned → 🔄 In Progress (when execution starts)
+🔄 In Progress → ✅ Complete (when PR is ready for review)
+```
+
+This ensures the next `/execute-pillar` run correctly shows which pillars are complete.
 
 ---
 
@@ -580,7 +638,8 @@ Use this checklist to track pillar execution:
 ## Pillar Execution: {Pillar Name}
 
 ### Setup
-- [ ] Prerequisites verified
+- [ ] Prerequisites verified (including pillar status = 🎯 Positioned)
+- [ ] Pillar status updated to 🔄 In Progress in 00-keyword-brief.md
 - [ ] Pillar branch created
 - [ ] Error tracking Issue created
 - [ ] Draft PR created
@@ -610,6 +669,7 @@ Use this checklist to track pillar execution:
 - [ ] Final commit pushed
 
 ### Completion
+- [ ] Pillar status updated to ✅ Complete in 00-keyword-brief.md
 - [ ] PR converted to Ready for Review
 - [ ] Error patterns extracted
 - [ ] GitHub Issue closed

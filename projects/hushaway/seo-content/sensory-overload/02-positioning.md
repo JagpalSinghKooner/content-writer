@@ -1,5 +1,53 @@
 # Positioning: Sensory Overload
 
+## Market Sophistication Analysis
+
+**Current Stage:** Stage 3 (Mechanism Introducer)
+
+**Evidence:**
+- Parents have heard "reduce sensory input" and "create a calm environment" countless times
+- They've tried weighted blankets, fidgets, ear defenders, sensory rooms, quiet corners
+- High skepticism because generic advice hasn't worked during peak overload
+- They need to understand WHY sound can HELP when their child is already overwhelmed by sound
+- The market is ready for a mechanism that explains the paradox
+
+**Critical finding:** Perplexity research across 6 major UK competitors revealed:
+
+> "The positive therapeutic potential of carefully selected, appropriately timed sound input remains underemphasized."
+
+Every competitor positions sound as a PROBLEM to reduce. None position it as THE SOLUTION.
+
+**Implication:** Lead with the mechanism (passive listening, controlled frequencies) and address the paradox directly (the right sound calms, the wrong sound overwhelms). Parents won't trust "play sounds" unless we explain WHY it works when other sounds hurt.
+
+---
+
+## The Transformation
+
+**From:** Helpless during sensory overload. Watching your child's nervous system flood with no tool that works in the moment. Weighted blankets rejected. Fidgets thrown. Ear defenders ripped off. Nothing that works when they're already overwhelmed.
+
+**To:** Having a zero-demand tool that works during peak overload. Understanding which sounds help which states. Confident about when to use sound throughout the day (not just crisis response). Feeling prepared instead of powerless.
+
+---
+
+## The Unique Mechanism
+
+**The Auditory Anchor:** Sound that gives the overwhelmed nervous system something predictable to land on, without adding demands.
+
+Why sound works when other tools fail during peak overload:
+- Weighted blankets require touch tolerance (often rejected when skin is hypersensitive)
+- Fidgets require motor control (unavailable when overwhelmed)
+- Ear defenders block sound but don't provide regulation (absence isn't presence)
+- Breathing exercises require cognitive load (the prefrontal cortex is offline)
+- Deep pressure requires physical proximity (sometimes too much)
+
+**Sound bypasses all of this.** Press play. Step back. Let the sound work.
+
+**The mechanism explained:** The overwhelmed nervous system can't process instructions, can't tolerate touch, can't coordinate movement. But it can receive predictable auditory input passively. Controlled frequencies and ASMR give the brain something stable to anchor to when everything else feels chaotic. It's not about blocking sound (ear defenders do that). It's about providing the RIGHT sound as a regulation tool.
+
+**The paradox resolution:** "My child is sound-sensitive" doesn't mean all sound hurts. Unpredictable, uncontrolled sound overwhelms. Predictable, sensory-safe sound regulates. The right sound calms. The wrong sound destroys. HushAway provides the right sound.
+
+---
+
 ## Primary Angle (Pillar Guide)
 
 **Article:** Complete Guide to Sensory Overload in Children
@@ -203,6 +251,13 @@ When writing each article, extract these elements from its angle:
 
 ---
 
-*Positioning document created: 2026-02-03*
+**Voice reminder:** All angles must be delivered in warm, parent-to-parent voice per client profile. Not clinical. Not OT jargon. One exhausted parent sharing what actually works with another.
+
+**Paradox reminder:** Every article should acknowledge (not avoid) the apparent contradiction: "Why would I play sounds for a sound-sensitive child?" Address it directly. Predictable vs unpredictable. Controlled vs chaotic. Designed for sensitive ears vs random noise.
+
+---
+
+*Positioning created via /positioning-angles*
+*Last updated: 2026-02-04*
 *Pillar: Sensory Overload*
 *Next step: Run /seo-content to begin writing articles, starting with Article 1 (Understanding Sensory Overload)*

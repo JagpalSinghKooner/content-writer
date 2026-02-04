@@ -19,6 +19,8 @@
 | Task 10: Positioning Angles for Autistic Meltdowns | PASS |
 | Task 11: Start Sensory Overload Pillar | PASS |
 | Task 12: Execute Autistic Meltdowns Pillar | PASS |
+| Task 13: Positioning Angles for Sensory Overload | PASS |
+| Task 14: Execute Sensory Overload Pillar | PASS |
 
 ---
 
@@ -633,5 +635,85 @@
 
 ---
 
+## Task 13: Positioning Angles for Sensory Overload
+
+**Objective:** Develop unified positioning for Sensory Overload pillar that differentiates from clinical/generic content.
+
+**Acceptance Criteria:**
+- [x] Market sophistication assessed (Stage 3, mechanism-focused)
+- [x] Primary angle identified for pillar guide ("Sound AS THE Solution")
+- [x] Secondary angles for each supporting article (7 articles)
+- [x] Consistency check across all angles
+- [x] Output saved to `sensory-overload/02-positioning.md`
+
+**Starter Prompt:**
+> Run /positioning-angles for Sensory Overload pillar. Input: sensory-overload/01-pillar-brief.md + clients/hushaway/profile.md. Focus on: (1) The MASSIVE gap—every competitor positions sound as problem to reduce, none as solution; (2) The paradox—sound-sensitive children CAN benefit from therapeutic sound (predictable vs unpredictable); (3) Passive listening as zero-demand tool during peak overload; (4) Sound as the missing sensory system in sensory diets. Maintain parent-to-parent voice.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Enhanced `sensory-overload/02-positioning.md` with complete positioning framework. Added Market Sophistication Analysis (Stage 3), Transformation section, and Unique Mechanism section ("The Auditory Anchor"). Previous document had angles but was missing these required sections.
+- **Decisions:**
+  - Primary angle: "Sound AS THE Solution" — the ONLY angle available in the market. Every competitor frames sound as problem to reduce (ear defenders, quiet spaces). HushAway positions sound as THE PRIMARY TOOL.
+  - Unique mechanism: The Auditory Anchor. Sound gives the overwhelmed nervous system something predictable to land on without adding demands.
+  - The Paradox: "My child is sound-sensitive" doesn't mean all sound hurts. Unpredictable sound overwhelms. Predictable, sensory-safe sound regulates.
+  - Secondary angles extend (not repeat) primary:
+    - Article 01: "Sensory overload is neurological, not behavioural" (foundation)
+    - Article 02: "The right sound is active support" (conversion driver)
+    - Article 03: "Therapeutic sound ≠ triggering noise" (objection handler)
+    - Article 04: "Sound as first-through-the-door tool" (after school)
+    - Article 05: "Sound fills the gap when tactile fails" (tools comparison)
+    - Article 06: "Auditory input is the missing sensory system" (sensory diet)
+    - Article 07: "Sound for post-overload recovery" (recovery)
+  - Consistency check passed: All angles connect to "sound as regulation tool, not problem to reduce"
+  - Voice: Warm parent-to-parent per client profile throughout
+- **Next:** Execute Sensory Overload pillar: run `/execute-pillar` or write articles with `/seo-content` following positioning and publishing order from pillar brief.
+
+---
+
+## Task 14: Execute Sensory Overload Pillar
+
+**Objective:** Generate all articles and distribution content for the Sensory Overload pillar.
+
+**Acceptance Criteria:**
+- [x] All 8 articles written (7 supporting + 1 pillar guide)
+- [x] All articles pass /validate-content
+- [x] Article statuses updated to "review"
+- [x] Distribution content created for all 8 articles
+- [x] Post-pillar linking pass complete (no LINK NEEDED placeholders)
+- [x] All changes committed to pillar branch
+- [x] PR #9 ready for review
+
+**Starter Prompt:**
+> Run /execute-pillar for Sensory Overload. Pillar brief and positioning already exist. Execute tier-based workflow: (1) Create pillar branch and error tracking; (2) Tier 1: Article 01 (foundation); (3) Tier 2: Article 02 (conversion driver); (4) Tier 3: Articles 03-06 in parallel; (5) Tier 4: Article 07 (recovery); (6) Final Tier: Article 08 (pillar guide); (7) Post-pillar linking pass; (8) Commit and create PR.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Executed complete Sensory Overload pillar workflow. All 8 articles written, validated, and distributed. Created GitHub Issue #8 for error tracking (closed, no errors). Created PR #9.
+- **Results:**
+  - Article 01: Understanding Sensory Overload (4,127 words) — PASS
+  - Article 02: Calming Sounds for Sensory Overload (2,315 words) — PASS
+  - Article 03: Sound Sensitivity in Children (2,048 words) — PASS
+  - Article 04: After-School Sensory Overload (2,347 words) — PASS
+  - Article 05: Sensory Tools That Actually Work (2,341 words) — PASS
+  - Article 06: Sensory Diet for Children (2,389 words) — PASS
+  - Article 07: Recovering from Sensory Overload (2,143 words) — PASS
+  - Article 08: Complete Guide (Pillar Guide) (4,892 words) — PASS
+  - **Total:** 22,602 words, 8 articles, 32 distribution files, all PASS validation
+- **Decisions:**
+  - Tier-based parallel execution: 5 tiers to handle article dependencies
+  - All articles use primary angle "Sound AS THE Solution"
+  - Zero validation failures after retry loops
+  - Post-pillar linking pass completed with 5 placeholder links resolved
+  - Pillar status updated to ✅ Complete in keyword brief
+- **Next:** Merge PR #9 when ready. Then continue with Calming Sounds pillar (Priority 4): run `/start-pillar` for that pillar.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-04 (Task 12 Execute Autistic Meltdowns Pillar PASS)*
+*Last updated: 2026-02-04 (Task 14 Execute Sensory Overload Pillar PASS)*

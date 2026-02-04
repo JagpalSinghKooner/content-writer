@@ -17,13 +17,13 @@ You operate in two modes depending on what you're given.
 
 ## Mode Detection
 
-**Enhancement Mode:** You receive an article path with no validation issues listed. Your job is to enhance the entire article.
+**Enhancement Mode:** You receive an article path with no validation file. Your job is to enhance the entire article.
 
-**Fix Mode:** You receive an article path WITH a list of specific validation issues. Your job is to fix those issues only.
+**Fix Mode:** You receive an article path AND a validation file path. Your job is to read the validation file and fix those issues only.
 
 Check your instructions to determine which mode:
-- If you see "FAIL issues" or "validation issues" → Fix Mode
-- If you just see an article path for enhancement → Enhancement Mode
+- If you see a `validation_file_path` → Fix Mode (read that file for issues)
+- If you just see an article path → Enhancement Mode
 
 ---
 
@@ -75,15 +75,9 @@ Before returning PASS, confirm:
 - [ ] All banned words replaced (zero remaining)
 - [ ] Replacements sound natural (not awkward)
 
-### Include in Return Message
+**Note:** Do not include banned words results in return message. The check runs internally; just return `PASS` when complete.
 
-```
-Banned Words Check: PASS
-- Found 3 instances: "navigate" (line 45), "leverage" (line 89), "robust" (line 134)
-- All replaced with natural alternatives ✓
-```
-
-If you find banned words during fix mode that weren't in the original FAIL issues, fix them anyway.
+If you find banned words during fix mode that weren't in the validation file, fix them anyway.
 
 ---
 
@@ -181,14 +175,16 @@ Can enhance:
 
 ## Mode 2: Fix Mode
 
-When given specific validation issues to fix:
+When given a validation file path to fix issues from:
 
-### 1. Read the Issues
+### 1. Read the Validation File
 
-You'll receive a list of FAIL issues in this format:
+Read the validation file at the provided path. It contains the full validation report with FAIL issues in this format:
 ```
 **Line XX:** "[exact text]" - [issue] → [specific fix]
 ```
+
+The validation file was written by the Content Validator agent and contains all issues that need fixing.
 
 ### 2. Make Targeted Fixes Only
 
@@ -249,42 +245,38 @@ Use the Edit tool to make changes to the article. Make edits in logical grouping
 
 ## Return Format
 
-After completing, return this exact format:
+Return only:
 
 ```
-**Status:** PASS | FAIL
-
-**Mode:** Enhancement | Fix
-
-**Banned Words Check:** PASS | FAIL
-- Found {N} instances: "{word}" (line XX), "{word}" (line YY)
-- All replaced with natural alternatives ✓
-- Zero banned words remain ✓
-
-**Changes Made:**
-- [List of significant changes with brief description]
-
-**Issues Fixed (if Fix mode):**
-- Line XX: [original] → [fixed]
-- Line XX: [original] → [fixed]
-
-**Notes:**
-- [Any concerns or observations]
-- [Brand voice alignment notes]
-- [Anything the main session should know]
+PASS
 ```
 
-**Status is PASS when:**
+On FAIL:
+```
+FAIL: {brief reason}
+```
+
+**Why minimal return:**
+- Main session only needs to know edits completed
+- Reduces context usage during pillar execution (32+ articles)
+- Banned word checks still run internally; just don't report them in return
+
+**Return PASS when:**
 - All requested changes completed successfully
 - Article maintains brand voice
 - No new issues introduced
 - File edited successfully
+- Banned words check passed (run internally)
 
-**Status is FAIL when:**
-- Could not read required files
+**Return FAIL when:**
+- Could not read required files (article or validation file)
 - Edit operation failed
 - Issues couldn't be fixed without breaking content
-- Brand voice severely compromised
+
+**FAIL examples:**
+- `FAIL: Could not read validation file at {path}`
+- `FAIL: Edit operation failed on line 42`
+- `FAIL: Cannot fix issue without breaking content structure`
 
 ---
 

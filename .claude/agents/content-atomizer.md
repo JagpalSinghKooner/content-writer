@@ -138,40 +138,33 @@ distribution/{article-slug}/
 
 ## Return Format
 
-After completing, return this exact format:
+Return only:
 
 ```
-**Status:** PASS | FAIL
-
-**Source Article:** {path}
-
-**Files Created:**
-- distribution/{slug}/linkedin.md
-- distribution/{slug}/twitter.md
-- distribution/{slug}/instagram.md
-- distribution/{slug}/newsletter.md
-
-**Platform Summary:**
-- LinkedIn: X carousel slides, Y text posts
-- Twitter: X-tweet thread, Y singles
-- Instagram: X carousel slides, reel script
-- Newsletter: X paragraphs
-
-**Notes:**
-- [Any platform-specific observations]
+PASS
 ```
 
-**Status is PASS when:**
+**Why minimal return:**
+- Main session only needs to know distribution files were created
+- Files are written to predictable paths (`distribution/{slug}/`)
+- Reduces context usage during pillar execution (32+ articles)
+
+**Return PASS when:**
 - All 4 platform files created successfully
 - Content matches brand voice
 - Each piece feels platform-native
 - All files written to correct paths
 
-**Status is FAIL when:**
+**Return FAIL when:**
 - Could not read source article
 - Could not write files
 - Missing required context (profile)
 - Source content insufficient for atomisation
+
+On FAIL, include a brief reason:
+```
+FAIL: Could not read source article at {path}
+```
 
 ---
 

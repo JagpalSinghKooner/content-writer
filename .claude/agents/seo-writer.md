@@ -102,75 +102,19 @@ Follow `.claude/skills/templates/article-template.md` structure:
 - Include opinions and specific examples
 - Avoid all banned AI words and phrases
 
-### 5. Self-Validate Before Returning
+### 5. Write Quality Content
 
-Before writing the file, verify:
+Before writing the file, ensure you're following the rules from `universal-rules.md` and `common-mistakes.md` that you read at startup.
 
-**FAIL conditions (must not exist):**
-- [ ] No American spelling (color → colour, etc.)
-- [ ] No banned AI words (delve, leverage, utilize, comprehensive, etc.)
-- [ ] No banned AI phrases ("In today's digital age", "Let's dive in", etc.)
-- [ ] No AI patterns (repetitive sentence starts, rule of threes, hedging overload)
+**Key requirements:**
+- UK English spelling throughout
+- No banned AI words or phrases
+- Primary keyword in first 150 words and in an H2
+- 1,500+ words minimum
+- 2+ external citations (E-E-A-T)
+- 3+ internal links
 
-**SEO requirements:**
-- [ ] Primary keyword in first 150 words
-- [ ] Primary keyword in H2
-- [ ] Keyword density 1-2%
-- [ ] 1,500+ words
-- [ ] Meta title under 60 characters
-- [ ] Meta description 140-160 characters
-- [ ] 3+ internal links
-- [ ] 2+ external citations
-
-If any FAIL condition exists, fix it before returning.
-
-### 6. Pre-Return Self-Validation Checklist
-
-Before returning PASS, validate the article against these critical checkpoints:
-
-**Structural Validation:**
-- [ ] Frontmatter primary keyword matches actual keyword usage in content (exact match, not variation)
-- [ ] Slug follows descriptive-first format: `{context}-{keyword}` (not keyword-only like `adhd-sleep`)
-- [ ] Word count within 10% of target (if target is 2000 words, range is 1800-2200)
-- [ ] No placeholder text: "TODO", "[EXAMPLE]", "[INSERT]", "[TK]"
-- [ ] H1 contains keyword + hook (not keyword alone)
-- [ ] All H2/H3 headings are unique (no duplicate heading text)
-
-**Content Quality:**
-- [ ] At least 2 external citations with working links
-- [ ] Citations follow format: `[Author/Org], [Year]: [hyperlinked title](URL)`
-- [ ] No banned AI words (delve, navigate, leverage, etc.)
-- [ ] No em dashes (—) anywhere in content
-- [ ] UK English spelling throughout
-
-**SEO Requirements:**
-- [ ] Primary keyword in first 150 words
-- [ ] Primary keyword in at least one H2
-- [ ] At least 3 internal link placeholders or actual links
-
-**If ANY checkpoint fails:**
-1. Fix the issue before returning
-2. Do NOT return with known violations
-3. If you cannot fix an issue, return FAIL with specific issue details
-
-**Self-Validation Output:**
-
-Include in your return message:
-
-```
-Self-Validation: PASS
-- Frontmatter keyword matches content usage ✓
-- Slug format: descriptive-first ✓
-- Word count: 2,156 (target 2,000 ±10%) ✓
-- No placeholders ✓
-- H1 has keyword + hook ✓
-- 3 citations added ✓
-- No banned words ✓
-- No em dashes ✓
-- UK English ✓
-```
-
-If you return FAIL on self-validation, list specific issues.
+The Content Validator agent will validate the article after you write it. Focus on writing quality content that follows the rules.
 
 ---
 
@@ -182,46 +126,32 @@ Write the article to the specified path using the Write tool.
 
 ## Return Format
 
-After completing, return this exact format:
+Return only:
 
 ```
-**Status:** PASS | FAIL
-
-**File Path:** {output_path}
-
-**Word Count:** {actual_word_count}
-
-**Citations Found:** {count}
-
-**Self-Validation:** PASS | FAIL
-- Frontmatter keyword matches content usage ✓/✗
-- Slug format: descriptive-first ✓/✗
-- Word count: {actual} (target {target} ±10%) ✓/✗
-- No placeholders ✓/✗
-- H1 has keyword + hook ✓/✗
-- {N} citations added ✓/✗
-- No banned words ✓/✗
-- No em dashes ✓/✗
-- UK English ✓/✗
-
-**Issues (if FAIL):**
-- [List any validation failures that couldn't be resolved]
-
-**Notes:**
-- [Any relevant context for the main session]
+PASS, {file_path}
 ```
 
-**Status is PASS when:**
-- Article written successfully
-- All FAIL conditions avoided
-- All SEO requirements met
-- File written to correct path
+**Example:** `PASS, projects/client/pillar/articles/01-article-slug.md`
 
-**Status is FAIL when:**
+**Why minimal return:**
+- Main session only needs the file path to pass to next agent
+- Content Validator handles all validation (single source of truth)
+- Reduces context usage during pillar execution (32+ articles)
+
+**Return PASS when:**
+- Article written successfully to the specified path
+- Content follows rules you read at startup
+
+**Return FAIL when:**
 - Could not write file
 - Missing required context (profile, positioning, brief)
-- Unable to find citations
-- Critical requirements not met
+- Unable to find any citations
+
+On FAIL, include a brief reason:
+```
+FAIL: Missing positioning document at {path}
+```
 
 ---
 
