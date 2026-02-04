@@ -1,8 +1,8 @@
 ---
 name: content-validator
-description: Validate content against universal rules and brand voice. Use after enhancement. Read-only - never modifies content, only reports issues.
-tools: Read, Glob, Grep
-disallowedTools: Write, Edit, Bash
+description: Validate content against universal rules and brand voice. Use after enhancement. Never modifies articles, only reports issues.
+tools: Read, Glob, Grep, Write
+disallowedTools: Edit, Bash
 model: sonnet
 skills:
   - validate-content
@@ -25,16 +25,18 @@ These files are the single source of truth for validation rules. Read them fresh
 
 ---
 
-## CRITICAL: Full Output Required
+## CRITICAL: File-Based Output
 
-The main session REQUIRES full validation output to make retry decisions.
+Full validation output goes to a file, not the return message. This prevents main session context overflow.
 
-**NEVER abbreviate. NEVER summarise. Return EVERYTHING.**
+**On FAIL:** Write full report to `{slug}.validation.md` alongside the article, then return minimal status.
 
-Without full output, the main session cannot:
-- Determine which issues need fixing
-- Pass specific issues to the Copy Enhancer
-- Decide whether to retry or escalate
+**On PASS:** Delete any existing validation file for this article, then return `PASS`.
+
+**Why file-based:**
+- Main session only needs PASS/FAIL to orchestrate
+- Copy Enhancer reads the validation file directly
+- Prevents context explosion during pillar execution (32+ articles)
 
 ---
 
@@ -433,10 +435,34 @@ WARN: Uses "cheap" but pillar positioning uses "affordable" — align terminolog
 
 ## Return Format
 
-**Return this EXACT format. Do not abbreviate any section.**
+### On PASS
+
+1. **Delete** any existing validation file: `{slug}.validation.md`
+2. **Return** only:
 
 ```
-## Validation Result: [PASS/FAIL]
+PASS
+```
+
+### On FAIL
+
+1. **Write** full validation report to `{slug}.validation.md` in the same directory as the article
+2. **Return** only:
+
+```
+FAIL, {fail_count}, {warn_count}, {validation_file_path}
+```
+
+**Example:** `FAIL, 3, 2, projects/client/pillar/articles/01-article-slug.validation.md`
+
+---
+
+## Validation File Format
+
+When writing `{slug}.validation.md`, use this FULL format. Do not abbreviate any section.
+
+```
+## Validation Result: FAIL
 
 **Article:** [filename]
 **Primary Keyword:** [keyword]
@@ -519,16 +545,20 @@ WARN: Uses "cheap" but pillar positioning uses "affordable" — align terminolog
 
 ## Status Determination
 
-**Status is PASS when:**
+**Return PASS when:**
 - Zero FAIL issues
 - All SEO requirements met
 - Schema validation passes
 - Content type checks pass
+- Delete any existing `{slug}.validation.md` file
+- Return only: `PASS`
 
-**Status is FAIL when:**
+**Return FAIL when:**
 - Any FAIL issue exists
 - Missing required context (profile, keyword)
 - Critical requirements not met
+- Write full report to `{slug}.validation.md`
+- Return only: `FAIL, {fail_count}, {warn_count}, {validation_file_path}`
 
 ---
 
@@ -539,10 +569,10 @@ WARN: Uses "cheap" but pillar positioning uses "affordable" — align terminolog
 | Read | Read article, profile, rules, positioning, pillar brief |
 | Glob | Find related files for pillar consistency check |
 | Grep | Search for patterns in content |
+| Write | Write validation file on FAIL, delete on PASS |
 
 **Tools NOT available (by design):**
-- Write — Validators don't create files
-- Edit — Validators don't modify content
+- Edit — Validators don't modify article content
 - Bash — No shell access needed
 
 ---

@@ -182,20 +182,14 @@ Do not output content that violates FAIL conditions.
 
 **Return Format:**
 ```
-**Status:** PASS | FAIL
-
-**File Path:** {output_path}
-
-**Word Count:** {actual_word_count}
-
-**Citations Found:** {count}
-
-**Issues (if FAIL):**
-- [List any validation failures]
-
-**Notes:**
-- [Any relevant context for the main session]
+PASS, {file_path}
 ```
+
+**Example:** `PASS, projects/client/pillar/articles/01-article-slug.md`
+
+On FAIL: `FAIL: {brief reason}`
+
+**Why minimal:** Content Validator is single source of truth for validation. Main session only needs file path to pass to next agent.
 
 ---
 
@@ -240,19 +234,14 @@ skills:
 
 **Return Format:**
 ```
-**Status:** PASS | FAIL
-
-**Mode:** Enhancement | Fix
-
-**Changes Made:**
-- [List of significant changes]
-
-**Issues Fixed (if Fix mode):**
-- [List issues that were addressed]
-
-**Notes:**
-- [Any concerns or observations]
+PASS
 ```
+
+On FAIL: `FAIL: {brief reason}`
+
+**Fix Mode:** Reads validation file at provided path instead of receiving issues in prompt.
+
+**Why minimal:** Main session only needs to know edits completed. Banned word checks run internally.
 
 ---
 
@@ -289,10 +278,11 @@ skills:
    - Phase 5: Readability Metrics
    - Phase 6: Pillar Consistency
 
-**CRITICAL: Full Output Required**
+**CRITICAL: File-Based Output**
 ```
-The main session REQUIRES full validation output to make retry decisions.
-NEVER abbreviate. NEVER summarize. Return EVERYTHING.
+Full validation output goes to {slug}.validation.md, NOT the return message.
+On FAIL: Write full report to file, return minimal status.
+On PASS: Delete any existing validation file, return "PASS".
 ```
 
 **Why rules are READ, not embedded:**
@@ -312,80 +302,23 @@ NEVER abbreviate. NEVER summarize. Return EVERYTHING.
 - Edit (cannot modify files)
 - Bash (no shell access)
 
-**Return Format (FULL - NEVER ABBREVIATED):**
+**Return Format:**
+
+On PASS:
 ```
-## Validation Result: [PASS/FAIL]
-
-**Article:** [filename]
-**Primary Keyword:** [keyword]
-**Word Count:** [count]
-**Client Profile:** [profile path]
-
----
-
-### FAIL Issues (must fix before publishing)
-
-1. **Line XX:** "[exact text]" - [issue] → [specific fix]
-2. **Line XX:** "[exact text]" - [issue] → [specific fix]
-[... ALL FAIL issues ...]
-
----
-
-### WARN Issues (should fix for quality)
-
-1. **Line XX:** [issue] → [suggestion]
-[... ALL WARN issues ...]
-
----
-
-### SEO Checklist
-
-- [x/✗] Primary keyword in first 150 words [actual position: word X]
-- [x/✗] Primary keyword in H2 [found in: "H2 text"]
-- [x/✗] Keyword density 1-2% [actual: X.X%]
-- [x/✗] Word count 1,500+ [actual: XXXX]
-- [x/✗] Meta title under 60 chars [actual: XX chars]
-- [x/✗] Meta description 140-160 chars [actual: XXX chars]
-- [x/✗] 3+ internal links [actual: X links]
-- [x/✗] Single H1 [found: X H1 tags]
-
----
-
-### Schema Validation
-
-- [x/✗] All required frontmatter fields present
-- [x/✗] Slug format valid [slug: "xxx-xxx-xxx"]
-- [x/✗] word_count matches actual
-- [x/✗] keyword_density matches actual
-
----
-
-### Readability Metrics
-
-| Metric | Score | Target | Status |
-|--------|-------|--------|--------|
-| Flesch-Kincaid Grade | X.X | 6-10 | ✓/✗ |
-| Flesch Reading Ease | XX | 60-70 | ✓/✗ |
-| Avg Sentence Length | XX words | <20 | ✓/✗ |
-| Longest Sentence | XX words | <40 | ✓/✗ |
-
----
-
-### Brand Voice
-
-- **Aligned:** Yes / No
-- **Tone Match:** [assessment]
-- **Terminology:** [any violations]
-- **Notes:** [any concerns]
-
----
-
-### Pillar Consistency
-
-- [x/✗] Article aligns with assigned angle
-- [x/✗] Internal links reference pillar articles
-- [x/✗] Messaging consistent with positioning
+PASS
 ```
+
+On FAIL:
+```
+FAIL, {fail_count}, {warn_count}, {validation_file_path}
+```
+
+**Example:** `FAIL, 3, 2, projects/client/pillar/articles/01-article-slug.validation.md`
+
+**Validation File:** Full report written to `{slug}.validation.md` alongside article on FAIL. Deleted on PASS.
+
+**Why file-based:** Prevents main session context overflow during pillar execution. Copy Enhancer reads validation file directly.
 
 ---
 
@@ -430,25 +363,12 @@ distribution/{article-slug}/
 
 **Return Format:**
 ```
-**Status:** PASS | FAIL
-
-**Source Article:** [path]
-
-**Files Created:**
-- distribution/{slug}/linkedin.md
-- distribution/{slug}/twitter.md
-- distribution/{slug}/instagram.md
-- distribution/{slug}/newsletter.md
-
-**Platform Summary:**
-- LinkedIn: X carousel slides, Y text posts
-- Twitter: X-tweet thread, Y singles
-- Instagram: X carousel slides, reel script
-- Newsletter: X paragraphs
-
-**Notes:**
-- [Any platform-specific observations]
+PASS
 ```
+
+On FAIL: `FAIL: {brief reason}`
+
+**Why minimal:** Files written to predictable paths (`distribution/{slug}/`). Main session only needs to know completion status.
 
 ---
 
@@ -462,26 +382,27 @@ distribution/{article-slug}/
 MAIN SESSION receives task
     │
     ├─→ Main session spawns SEO WRITER
-    │       └─→ Agent returns: PASS/FAIL + file path + word count
+    │       └─→ Agent returns: PASS, {file_path}
     │           └─→ Main session receives result
     │
     ├─→ Main session spawns COPY ENHANCER
-    │       └─→ Agent returns: PASS/FAIL + changes made
+    │       └─→ Agent returns: PASS
     │           └─→ Main session receives result
     │
     ├─→ Main session spawns CONTENT VALIDATOR
-    │       └─→ Agent returns: PASS/FAIL + FULL issues list
+    │       └─→ Agent returns: PASS or FAIL, {counts}, {validation_file_path}
     │           └─→ Main session receives result
     │                   │
     │                   ├─→ If PASS: Continue to atomizer
     │                   │
     │                   └─→ If FAIL: Main session spawns COPY ENHANCER (fix mode)
+    │                               - Passes: article_path, validation_file_path
     │                               └─→ Main session spawns VALIDATOR again
     │                               └─→ Repeat up to 3 times
     │                               └─→ After 3 failures: Escalate to user
     │
     ├─→ Main session spawns CONTENT ATOMIZER
-    │       └─→ Agent returns: PASS/FAIL + files created
+    │       └─→ Agent returns: PASS
     │           └─→ Main session receives result
     │
     └─→ Main session commits to git + updates PROJECT-TASKS.md
@@ -502,9 +423,10 @@ MAIN SESSION receives task
 ┌─────────────────────────────────────────────────────────────────┐
 │  1. SEO WRITER AGENT (fresh context)                            │
 │     - Reads: profile, positioning, brief                        │
-│     - Has preloaded: seo-content skill, universal-rules         │
+│     - Has preloaded: seo-content skill                          │
+│     - Reads at runtime: universal-rules, common-mistakes        │
 │     - Writes: Article to disk                                   │
-│     - Returns TO MAIN SESSION: file path + status + word count  │
+│     - Returns TO MAIN SESSION: PASS, {file_path}                │
 └─────────────────────────────────────────────────────────────────┘
                            │
                      spawns ▼ receives result
@@ -513,16 +435,18 @@ MAIN SESSION receives task
 │     - Receives from main session: Article path                  │
 │     - Has preloaded: direct-response-copy skill                 │
 │     - Edits: Article in place                                   │
-│     - Returns TO MAIN SESSION: status + changes made            │
+│     - Returns TO MAIN SESSION: PASS                             │
 └─────────────────────────────────────────────────────────────────┘
                            │
                      spawns ▼ receives result
 ┌─────────────────────────────────────────────────────────────────┐
-│  3. CONTENT VALIDATOR AGENT (fresh context, READ-ONLY)          │
+│  3. CONTENT VALIDATOR AGENT (fresh context)                     │
 │     - Receives from main session: Article path                  │
-│     - Has preloaded: validate-content skill, universal-rules    │
+│     - Has preloaded: validate-content skill                     │
+│     - Reads at runtime: universal-rules, common-mistakes        │
 │     - Checks: All 6 validation phases                           │
-│     - Returns TO MAIN SESSION: FULL output (PASS/FAIL + issues) │
+│     - On PASS: Deletes validation file, returns PASS            │
+│     - On FAIL: Writes to {slug}.validation.md, returns minimal  │
 └─────────────────────────────────────────────────────────────────┘
                            │
               ┌────────────┴────────────┐
@@ -536,13 +460,14 @@ MAIN SESSION receives task
 ┌─────────────────────┐    ┌─────────────────────────────────────┐
 │  4. CONTENT         │    │  RETRY LOOP (main session runs):    │
 │     ATOMIZER        │    │                                     │
-│     (fresh context) │    │  1. Extract FAIL issues from output │
-│                     │    │  2. Spawn Copy Enhancer (fix mode)  │
-│  Creates:           │    │  3. Spawn Content Validator         │
-│  - linkedin.md      │    │  4. If PASS → continue              │
-│  - twitter.md       │    │  5. If FAIL → repeat (max 3x)       │
-│  - instagram.md     │    │  6. After 3 failures → escalate     │
-│  - newsletter.md    │    │                                     │
+│     (fresh context) │    │  1. Read validation file path from  │
+│                     │    │     FAIL return                     │
+│  Creates:           │    │  2. Spawn Copy Enhancer with:       │
+│  - linkedin.md      │    │     article_path + validation_path  │
+│  - twitter.md       │    │  3. Spawn Content Validator         │
+│  - instagram.md     │    │  4. If PASS → continue (file deleted│
+│  - newsletter.md    │    │  5. If FAIL → repeat (max 3x)       │
+│  Returns: PASS      │    │  6. After 3 failures → escalate     │
 └──────────────────────┘    └─────────────────────────────────────┘
               │
               ▼
@@ -593,27 +518,27 @@ From pillar brief, identify dependencies:
 ```
 Main session receives FAIL from Validator (attempt N)
     │
+    │   Validator returned: FAIL, {fail_count}, {warn_count}, {validation_file_path}
+    │
     ├─ If N < 3:
-    │   │
-    │   ├─→ Main session extracts FAIL issues from validator output
     │   │
     │   ├─→ Main session SPAWNS Copy Enhancer with:
     │   │     - Article path
-    │   │     - List of specific FAIL issues
-    │   │     - Mode: "fix" (not enhancement)
+    │   │     - Validation file path (enhancer reads issues from file)
+    │   │     - Mode: "fix"
     │   │
     │   ├─→ Copy Enhancer returns PASS to main session
     │   │
     │   ├─→ Main session SPAWNS Content Validator again
     │   │
-    │   └─→ If PASS → Main session continues to Atomizer
+    │   └─→ If PASS → Validator deletes validation file, main session continues to Atomizer
     │       If FAIL → Main session increments N, repeats loop
     │
     └─ If N >= 3:
         │
         ├─→ Main session logs failure to PROJECT-TASKS.md
         ├─→ Main session logs to GitHub Issue (if error tracking active)
-        └─→ Main session escalates to user with full issue list
+        └─→ Main session escalates to user (validation file remains for debugging)
 ```
 
 **Why main session orchestrates:** Agents have fresh context windows. They can't remember previous validation attempts or coordinate with each other. Only the main session can track retry count, pass issues between agents, and make escalation decisions.
