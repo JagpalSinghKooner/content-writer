@@ -25,6 +25,7 @@
 | Task 16: Positioning Angles for Calming Sounds | PASS |
 | Task 17: Execute Calming Sounds Pillar | PASS |
 | Task 18: Start Emotional Regulation Pillar | PASS |
+| Task 19: Positioning Angles for Emotional Regulation | PASS |
 
 ---
 
@@ -879,5 +880,42 @@
 
 ---
 
+## Task 19: Positioning Angles for Emotional Regulation
+
+**Objective:** Develop unified positioning for Emotional Regulation pillar that differentiates from clinical/generic content.
+
+**Acceptance Criteria:**
+- [x] Market sophistication assessed (Stage 3, mechanism-focused)
+- [x] Primary angle identified for pillar guide ("The Missing Sound")
+- [x] Secondary angles for each supporting article (6 articles)
+- [x] Consistency check across all angles
+- [x] Output saved to `emotional-regulation/02-positioning.md`
+
+**Starter Prompt:**
+> Run /positioning-angles for Emotional Regulation pillar. Input: emotional-regulation/01-pillar-brief.md + clients/hushaway/profile.md. Focus on: (1) The MASSIVE gap—every competitor recommends breathing, fidgets, movement, calm boxes but NONE position sound as primary tool; (2) "Passive Beats Active" as unique mechanism—during dysregulation, children can't follow instructions, use fidgets, or make choices, but sound requires nothing; (3) Extend mechanism to co-regulation (sound regulates both parent and child); (4) Position calm corner sounds as "the missing piece" for commercial-intent searches. Maintain parent-to-parent voice.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `emotional-regulation/02-positioning.md` with unified positioning framework. Assessed market as Stage 3 (mechanism introducer)—parents have tried breathing, fidgets, Zones of Regulation but are skeptical because those tools fail during peak dysregulation. They need to understand WHY passive sound works differently.
+- **Decisions:**
+  - Primary angle: "The Missing Sound" — Every regulation resource recommends breathing, fidgets, movement, calm boxes. NONE position sound as primary tool. HushAway fills this gap.
+  - Unique mechanism: "Passive Listening" / "The Zero-Demand Tool" — Sound is the only tool that requires nothing from a child who can do nothing. Breathing requires cognition, fidgets require motor control, calm boxes require decisions. Sound just plays.
+  - Transformation: From "I've tried everything and nothing works during a meltdown" to "I have one tool that works precisely because it requires nothing."
+  - Secondary angles extend (not repeat) primary:
+    - Article 1: "It's neurology, not behaviour" (foundation)
+    - Article 2: "Generic strategies fail autistic children" (autism-specific)
+    - Article 3: "Work WITH the ADHD brain" (ADHD-specific)
+    - Article 4: "The one thing every calm corner guide forgets" (conversion driver)
+    - Article 5: "Sound regulates both of you at once" (co-regulation, unique angle)
+    - Article 6: "The first 60 seconds when your child can't do anything" (big feelings, crisis moment)
+  - Consistency check passed: All angles reinforce "passive beats active" without contradiction
+  - Voice: Warm parent-to-parent per client profile throughout
+- **Next:** Execute Emotional Regulation pillar: run `/execute-pillar` to write all 7 articles with validation, or write articles individually with `/seo-content` following positioning and publishing order from pillar brief.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-04 (Task 18 Start Emotional Regulation Pillar PASS)*
+*Last updated: 2026-02-04 (Task 19 Positioning Angles for Emotional Regulation PASS)*
