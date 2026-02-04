@@ -227,7 +227,7 @@ Signs that recovery will take longer:
 
 On these days, extend the protocol. Keep sounds playing. Reduce your expectations. Give them time.
 
-For strategies on longer recovery periods, our guide to [recovering from sensory overload](/sensory-overload/articles/07-sensory-overload-recovery)<!-- LINK NEEDED: 07-sensory-overload-recovery when published --> offers additional support.
+For strategies on longer recovery periods, our guide to [recovering from sensory overload](/sensory-overload/articles/07-recovering-sensory-overload-hours-after) offers additional support.
 
 ## What This Looks Like in Practice
 

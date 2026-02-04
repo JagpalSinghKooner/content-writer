@@ -277,7 +277,7 @@ This is why a sound-sensitive child who covers their ears at a fire alarm can fi
 
 It's not about sound being good or bad. It's about whether the sound signals safety or threat to the nervous system.
 
-If you're worried about whether sound can help your sound-sensitive child, read more about [sound sensitivity in children](#)<!-- LINK NEEDED: sound-sensitivity-children when published -->.
+If you're worried about whether sound can help your sound-sensitive child, read more about [sound sensitivity in children](/sensory-overload/articles/03-sound-sensitivity-children-auditory-hypersensitivity).
 
 ## Sensory Overload Across Different Conditions
 
@@ -333,7 +333,7 @@ What helps:
 
 And here's where sound comes in. While you might need to reduce overwhelming sound, introducing the right sound can help. Gentle, predictable audio gives the overwhelmed nervous system something stable to anchor to.
 
-This is the principle behind [calming sounds for sensory overload](#)<!-- LINK NEEDED: calming-sounds-sensory-overload when published -->. Not blocking sound, but providing the right kind.
+This is the principle behind [calming sounds for sensory overload](/sensory-overload/articles/02-guide-calming-sounds-sensory-overload). Not blocking sound, but providing the right kind.
 
 ### Prevention and Reduction
 
@@ -359,7 +359,7 @@ This is what a sensory diet looks like when it includes the auditory system. Mos
 
 And unlike physical sensory strategies that require your active involvement, sound can work in the background. Play it and get on with making dinner. Play it and sit quietly together. Play it and give yourself a moment to breathe too.
 
-For children who struggle with [after-school sensory overload](#)<!-- LINK NEEDED: after-school-sensory-overload when published -->, having calming sounds ready as they walk through the door can make the difference between meltdown and manageable.
+For children who struggle with [after-school sensory overload](/sensory-overload/articles/04-understanding-after-school-sensory-overload), having calming sounds ready as they walk through the door can make the difference between meltdown and manageable.
 
 ## What This Means for Your Family
 

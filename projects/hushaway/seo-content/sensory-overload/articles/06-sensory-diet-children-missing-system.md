@@ -194,7 +194,7 @@ Their nervous system has been through a storm. Recovery matters, and it's often 
 
 **What works:** Low-demand sound during the recovery period. Gentle frequencies that don't require attention or response. Let the sound do the regulating while your child rests.
 
-For more on this, see our guide to [recovering from sensory overload](/sensory-overload/articles/07-sensory-overload-recovery)<!-- LINK NEEDED: 07-sensory-overload-recovery when published -->.
+For more on this, see our guide to [recovering from sensory overload](/sensory-overload/articles/07-recovering-sensory-overload-hours-after).
 
 ## Sensory Activities That Work Better With Sound
 
