@@ -21,6 +21,7 @@
 | Task 12: Execute Autistic Meltdowns Pillar | PASS |
 | Task 13: Positioning Angles for Sensory Overload | PASS |
 | Task 14: Execute Sensory Overload Pillar | PASS |
+| Task 15: Start Calming Sounds Pillar | PASS |
 
 ---
 
@@ -715,5 +716,45 @@
 
 ---
 
+## Task 15: Start Calming Sounds Pillar
+
+**Objective:** Create pillar brief for Calming Sounds for Children with competitor analysis and content plan.
+
+**Acceptance Criteria:**
+- [x] Extract Calming Sounds pillar from keyword brief
+- [x] Run deep competitor analysis with Perplexity (DR estimates + content depth)
+- [x] Identify content gaps and angle opportunities
+- [x] Create article outline for pillar guide + supporting articles
+- [x] Output saved to `calming-sounds/01-pillar-brief.md`
+
+**Starter Prompt:**
+> Run /start-pillar for Calming Sounds. Extract the pillar from 00-keyword-brief.md. Focus on: (1) Deep competitor analysis of YouTube calming channels (Kiboy Sensory), Spotify playlists, Moshi Kids, Headspace Kids, and generic sleep apps; (2) Identify the gap—NO competitor specifically designs sounds for neurodivergent children with passive listening approach; (3) Plan 6+ articles covering: calming sounds overview, sleep sounds, sound types (ASMR/binaural/white noise), sounds by use case, free sounds, sounds vs music. Position all content toward The Open Sanctuary.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `calming-sounds/01-pillar-brief.md` with all 7 sections: strategic context, keyword table (22 keywords mapped), competitor analysis (7 UK competitors with DR estimates), content plan (7 articles: 6 supporting + 1 pillar guide), angle opportunities (5 identified), internal linking map, and publishing order.
+- **Decisions:**
+  - **CRITICAL GAP CONFIRMED:** Perplexity research across 7 major competitors revealed NO competitor combines ND-first design with passive listening. Market is either:
+    - Interactive apps (Moshi, Calm, Headspace) — require engagement, not passive
+    - Generic free options (CBeebies, YouTube) — not designed for ND children
+    - Hardware (Zenimal) — ND-focused but limited content (9 tracks vs HushAway's 22+ formats)
+  - **Primary angle:** "Designed FOR, not adapted FOR" — HushAway is the ONLY platform built from the ground up for ND children. All competitors either adapt adult content for kids (Calm, Headspace) or adapt generic kids content for ND (Moshi).
+  - **Top competitors identified:**
+    - Moshi Kids (DR 60-70): BAFTA award, NYU research, but NO dedicated ND content and requires interaction
+    - Calm Kids (DR 85-90): Celebrity narration, but generic kids content, not ND-specific
+    - Headspace Kids (DR 80-85): Age-stratified, but US-focused, requires following instructions
+    - CBeebies Radio (DR 95+): FREE and BBC trusted, but only 8 generic sounds
+    - Kiboy Sensory (YouTube): ND-specific but YouTube limitations (ads, screen-based)
+  - **7 articles planned:** 6 supporting + 1 pillar guide (publishes last)
+  - **Article 01** "Why Generic Sounds Don't Work for ND Children" is foundation — explains the problem before offering solutions
+  - **Article 02** "Sleep Sounds for Children" is conversion driver — high commercial intent
+  - **Article 03** "Sound Types Guide" fills MASSIVE gap — no UK content explains binaural beats/ASMR safety for children
+- **Next:** Run `/positioning-angles` to develop unified positioning for all 7 articles. Primary angle established ("Designed FOR, not adapted FOR"); need secondary angles per article and consistency check.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-04 (Task 14 Execute Sensory Overload Pillar PASS)*
+*Last updated: 2026-02-04 (Task 15 Start Calming Sounds Pillar PASS)*
