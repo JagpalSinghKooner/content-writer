@@ -21,6 +21,11 @@
 | Task 12: Execute Autistic Meltdowns Pillar | PASS |
 | Task 13: Positioning Angles for Sensory Overload | PASS |
 | Task 14: Execute Sensory Overload Pillar | PASS |
+| Task 15: Start Calming Sounds Pillar | PASS |
+| Task 16: Positioning Angles for Calming Sounds | PASS |
+| Task 17: Execute Calming Sounds Pillar | PASS |
+| Task 18: Start Emotional Regulation Pillar | PASS |
+| Task 19: Positioning Angles for Emotional Regulation | PASS |
 
 ---
 
@@ -715,5 +720,202 @@
 
 ---
 
+## Task 15: Start Calming Sounds Pillar
+
+**Objective:** Create pillar brief for Calming Sounds for Children with competitor analysis and content plan.
+
+**Acceptance Criteria:**
+- [x] Extract Calming Sounds pillar from keyword brief
+- [x] Run deep competitor analysis with Perplexity (DR estimates + content depth)
+- [x] Identify content gaps and angle opportunities
+- [x] Create article outline for pillar guide + supporting articles
+- [x] Output saved to `calming-sounds/01-pillar-brief.md`
+
+**Starter Prompt:**
+> Run /start-pillar for Calming Sounds. Extract the pillar from 00-keyword-brief.md. Focus on: (1) Deep competitor analysis of YouTube calming channels (Kiboy Sensory), Spotify playlists, Moshi Kids, Headspace Kids, and generic sleep apps; (2) Identify the gap—NO competitor specifically designs sounds for neurodivergent children with passive listening approach; (3) Plan 6+ articles covering: calming sounds overview, sleep sounds, sound types (ASMR/binaural/white noise), sounds by use case, free sounds, sounds vs music. Position all content toward The Open Sanctuary.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `calming-sounds/01-pillar-brief.md` with all 7 sections: strategic context, keyword table (22 keywords mapped), competitor analysis (7 UK competitors with DR estimates), content plan (7 articles: 6 supporting + 1 pillar guide), angle opportunities (5 identified), internal linking map, and publishing order.
+- **Decisions:**
+  - **CRITICAL GAP CONFIRMED:** Perplexity research across 7 major competitors revealed NO competitor combines ND-first design with passive listening. Market is either:
+    - Interactive apps (Moshi, Calm, Headspace) — require engagement, not passive
+    - Generic free options (CBeebies, YouTube) — not designed for ND children
+    - Hardware (Zenimal) — ND-focused but limited content (9 tracks vs HushAway's 22+ formats)
+  - **Primary angle:** "Designed FOR, not adapted FOR" — HushAway is the ONLY platform built from the ground up for ND children. All competitors either adapt adult content for kids (Calm, Headspace) or adapt generic kids content for ND (Moshi).
+  - **Top competitors identified:**
+    - Moshi Kids (DR 60-70): BAFTA award, NYU research, but NO dedicated ND content and requires interaction
+    - Calm Kids (DR 85-90): Celebrity narration, but generic kids content, not ND-specific
+    - Headspace Kids (DR 80-85): Age-stratified, but US-focused, requires following instructions
+    - CBeebies Radio (DR 95+): FREE and BBC trusted, but only 8 generic sounds
+    - Kiboy Sensory (YouTube): ND-specific but YouTube limitations (ads, screen-based)
+  - **7 articles planned:** 6 supporting + 1 pillar guide (publishes last)
+  - **Article 01** "Why Generic Sounds Don't Work for ND Children" is foundation — explains the problem before offering solutions
+  - **Article 02** "Sleep Sounds for Children" is conversion driver — high commercial intent
+  - **Article 03** "Sound Types Guide" fills MASSIVE gap — no UK content explains binaural beats/ASMR safety for children
+- **Next:** Run `/positioning-angles` to develop unified positioning for all 7 articles. Primary angle established ("Designed FOR, not adapted FOR"); need secondary angles per article and consistency check.
+
+---
+
+## Task 16: Positioning Angles for Calming Sounds
+
+**Objective:** Develop unified positioning for Calming Sounds pillar that differentiates from generic/interactive competitors.
+
+**Acceptance Criteria:**
+- [x] Market sophistication assessed (Stage 3, mechanism-focused)
+- [x] Primary angle identified for pillar guide ("Designed FOR, not adapted FOR")
+- [x] Secondary angles for each supporting article (6 articles)
+- [x] Consistency check across all angles
+- [x] Output saved to `calming-sounds/02-positioning.md`
+
+**Starter Prompt:**
+> Run /positioning-angles for Calming Sounds pillar. Input: calming-sounds/01-pillar-brief.md + clients/hushaway/profile.md. Focus on: (1) The massive gap—every competitor either adapts adult content for kids (Calm, Headspace) or adapts generic kids content for ND (Moshi); (2) "Designed FOR vs adapted FOR" as the unique mechanism; (3) Passive listening as zero-demand differentiator; (4) Evidence-based clarity on sound types (ASMR, binaural, white noise) to fill UK content gap. Maintain parent-to-parent voice.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `calming-sounds/02-positioning.md` with unified positioning framework. Assessed market as Stage 3 (mechanism introducer)—parents are skeptical of generic calming sounds and need to understand WHY ND-first design matters.
+- **Decisions:**
+  - Primary angle: "Designed FOR, not adapted FOR" — HushAway is the ONLY platform built from the ground up for neurodivergent children. Every competitor either adapts adult content for kids or adapts generic kids content for ND.
+  - Unique mechanism: ND-first design + passive listening. Generic sounds add cognitive load (choices, instructions). HushAway sounds require nothing—just press play.
+  - Transformation: From "calming sounds don't work for my child" to "calming sounds work because these were designed for my child"
+  - Secondary angles extend (not repeat) primary:
+    - Article 01: "Generic sounds fail because they're a design mismatch" (foundation, creates demand)
+    - Article 02: "Match the sound to the sleep problem" (specificity vs generic)
+    - Article 03: "Evidence-based clarity on sound types" (authority, fills UK gap)
+    - Article 04: "The right sound for this moment" (practical, situational)
+    - Article 05: "Free AND ND-first" (removes barrier, converts to Open Sanctuary)
+    - Article 06: "Why sounds work when music doesn't" (deepens passive listening mechanism)
+  - Consistency check passed: All angles connect to "designed FOR vs adapted FOR"
+  - Voice: Warm parent-to-parent per client profile throughout
+- **Next:** Execute Calming Sounds pillar: run `/execute-pillar` to write all 7 articles with validation, or write articles individually with `/seo-content` following positioning and publishing order from pillar brief.
+
+---
+
+## Task 17: Execute Calming Sounds Pillar
+
+**Objective:** Generate all articles and distribution content for the Calming Sounds pillar.
+
+**Acceptance Criteria:**
+- [x] All 7 articles written (6 supporting + 1 pillar guide)
+- [x] All articles pass /validate-content
+- [x] Article statuses updated to "review"
+- [x] Distribution content created for all 7 articles
+- [x] Post-pillar linking pass complete (no LINK NEEDED placeholders)
+- [x] All changes committed to pillar branch
+- [x] PR #11 ready for review
+
+**Starter Prompt:**
+> Run /execute-pillar for Calming Sounds. Pillar brief and positioning already exist. Execute tier-based workflow: (1) Create pillar branch and error tracking; (2) Tier 1: Article 01 (foundation); (3) Tier 2: Article 02 (conversion driver); (4) Tier 3: Article 03 (sound types guide); (5) Tier 4: Articles 04-06 in parallel; (6) Final Tier: Article 07 (pillar guide); (7) Post-pillar linking pass; (8) Commit and create PR.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Executed complete Calming Sounds pillar workflow. All 7 articles written, validated, and distributed. Created GitHub Issue #10 for error tracking (closed, no errors). Created PR #11 (ready for review).
+- **Results:**
+  - Article 01: Why Generic Calming Sounds Don't Work for ND Children (2,156 words) — PASS
+  - Article 02: Sleep Sounds for Children: Which Type Actually Helps (2,247 words) — PASS
+  - Article 03: ASMR, Binaural Beats, White Noise: A Parent's Guide (2,847 words) — PASS
+  - Article 04: Calming Sounds for Every Situation (2,412 words) — PASS
+  - Article 05: Free Calming Sounds for Children UK (1,756 words) — PASS
+  - Article 06: Calming Sounds vs Music: What's the Difference? (1,785 words) — PASS
+  - Article 07: Complete Guide to Calming Sounds for Children (4,847 words) — PASS
+  - **Total:** ~18,050 words, 7 articles, 28 distribution files, all PASS validation
+- **Decisions:**
+  - Tier-based parallel execution: 5 tiers to handle article dependencies
+  - All articles use primary angle "Designed FOR, not adapted FOR"
+  - Zero validation failures logged to error tracking Issue
+  - Post-pillar linking pass completed with 2 placeholder links resolved
+  - Pillar status updated to ✅ Complete in keyword brief
+- **Next:** Merge PR #11 when ready. First 4 priority pillars (ADHD Sleep, Autistic Meltdowns, Sensory Overload, Calming Sounds) are now complete. Continue with Pillar 5 (Emotional Regulation) if desired.
+
+---
+
+## Task 18: Start Emotional Regulation Pillar
+
+**Objective:** Create pillar brief for Emotional Regulation with competitor analysis and content plan.
+
+**Acceptance Criteria:**
+- [x] Extract Emotional Regulation pillar from keyword brief
+- [x] Run deep competitor analysis with Perplexity (DR estimates + content depth)
+- [x] Identify content gaps and angle opportunities
+- [x] Create article outline for pillar guide + supporting articles
+- [x] Output saved to `emotional-regulation/01-pillar-brief.md`
+
+**Starter Prompt:**
+> Run /start-pillar for Emotional Regulation. Extract the pillar from 00-keyword-brief.md. Focus on: (1) Deep competitor analysis of NHS, YoungMinds, Anna Freud Centre, local authority resources, and specialist therapy organisations; (2) Identify the MASSIVE gap—NO competitor positions sound/audio as PRIMARY regulation tool, all focus on breathing, fidgets, Zones of Regulation; (3) Plan 7 articles covering: understanding regulation, autism-specific, ADHD-specific, calm corner sounds, co-regulation through sound, big feelings practical guide, pillar guide. Position sound as THE missing tool in emotional regulation guidance.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `emotional-regulation/01-pillar-brief.md` with all 8 sections: strategic context, keyword table (20 keywords mapped), competitor analysis (5 UK competitors with DR estimates), content plan (7 articles: 6 supporting + 1 pillar guide), angle opportunities (5 identified), internal linking map, publishing order, and key messaging.
+- **Decisions:**
+  - **CRITICAL GAP CONFIRMED:** Perplexity research across 5 major UK competitor types revealed NO competitor positions sound as PRIMARY regulation tool. Market is saturated with:
+    - Breathing exercises (universal across all resources)
+    - Fidget toys and sensory tools
+    - Zones of Regulation framework (dominant in schools)
+    - Calm boxes with physical items
+    - Movement and rhythmic activity
+  - **Primary angle:** "The Missing Sound" — Every regulation resource recommends breathing, fidgets, movement, calm boxes. NONE position sound as primary tool. HushAway fills this gap.
+  - **Top competitors identified:**
+    - NHS Resources (DR 60-75): Zones of Regulation, clinical authority, comprehensive but no sound tools
+    - YoungMinds (DR 55-68): Therapeutic, parent validation, similar warm tone to HushAway but no audio approaches
+    - Anna Freud Centre (DR 50-65): Academic credibility, early years focus, no sound-based regulation
+    - Local Authority Resources (DR 40-60): Practical calm box guides, sound only mentioned as "calm music"
+    - Specialist Therapy Orgs (DR 30-50): ND-specific understanding but still no systematic sound guidance
+  - **Unique mechanism:** "Passive Beats Active" — During peak dysregulation, children can't follow breathing instructions (requires cognition), use fidgets (requires motor control), or engage with calm boxes (requires decisions). Sound requires NOTHING—just press play.
+  - **7 articles planned:** 6 supporting + 1 pillar guide (publishes last)
+  - **Article 1** "Understanding Emotional Regulation" is foundation — explains why ND kids struggle
+  - **Article 4** "Calm Corner Sounds" is conversion driver — direct commercial intent, links to Open Sanctuary
+- **Next:** Run `/positioning-angles` to develop unified positioning for all 7 articles. Primary angle established ("The Missing Sound"); need secondary angles per article and consistency check.
+
+---
+
+## Task 19: Positioning Angles for Emotional Regulation
+
+**Objective:** Develop unified positioning for Emotional Regulation pillar that differentiates from clinical/generic content.
+
+**Acceptance Criteria:**
+- [x] Market sophistication assessed (Stage 3, mechanism-focused)
+- [x] Primary angle identified for pillar guide ("The Missing Sound")
+- [x] Secondary angles for each supporting article (6 articles)
+- [x] Consistency check across all angles
+- [x] Output saved to `emotional-regulation/02-positioning.md`
+
+**Starter Prompt:**
+> Run /positioning-angles for Emotional Regulation pillar. Input: emotional-regulation/01-pillar-brief.md + clients/hushaway/profile.md. Focus on: (1) The MASSIVE gap—every competitor recommends breathing, fidgets, movement, calm boxes but NONE position sound as primary tool; (2) "Passive Beats Active" as unique mechanism—during dysregulation, children can't follow instructions, use fidgets, or make choices, but sound requires nothing; (3) Extend mechanism to co-regulation (sound regulates both parent and child); (4) Position calm corner sounds as "the missing piece" for commercial-intent searches. Maintain parent-to-parent voice.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `emotional-regulation/02-positioning.md` with unified positioning framework. Assessed market as Stage 3 (mechanism introducer)—parents have tried breathing, fidgets, Zones of Regulation but are skeptical because those tools fail during peak dysregulation. They need to understand WHY passive sound works differently.
+- **Decisions:**
+  - Primary angle: "The Missing Sound" — Every regulation resource recommends breathing, fidgets, movement, calm boxes. NONE position sound as primary tool. HushAway fills this gap.
+  - Unique mechanism: "Passive Listening" / "The Zero-Demand Tool" — Sound is the only tool that requires nothing from a child who can do nothing. Breathing requires cognition, fidgets require motor control, calm boxes require decisions. Sound just plays.
+  - Transformation: From "I've tried everything and nothing works during a meltdown" to "I have one tool that works precisely because it requires nothing."
+  - Secondary angles extend (not repeat) primary:
+    - Article 1: "It's neurology, not behaviour" (foundation)
+    - Article 2: "Generic strategies fail autistic children" (autism-specific)
+    - Article 3: "Work WITH the ADHD brain" (ADHD-specific)
+    - Article 4: "The one thing every calm corner guide forgets" (conversion driver)
+    - Article 5: "Sound regulates both of you at once" (co-regulation, unique angle)
+    - Article 6: "The first 60 seconds when your child can't do anything" (big feelings, crisis moment)
+  - Consistency check passed: All angles reinforce "passive beats active" without contradiction
+  - Voice: Warm parent-to-parent per client profile throughout
+- **Next:** Execute Emotional Regulation pillar: run `/execute-pillar` to write all 7 articles with validation, or write articles individually with `/seo-content` following positioning and publishing order from pillar brief.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-04 (Task 14 Execute Sensory Overload Pillar PASS)*
+*Last updated: 2026-02-04 (Task 19 Positioning Angles for Emotional Regulation PASS)*
