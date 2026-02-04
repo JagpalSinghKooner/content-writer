@@ -22,6 +22,7 @@
 | Task 13: Positioning Angles for Sensory Overload | PASS |
 | Task 14: Execute Sensory Overload Pillar | PASS |
 | Task 15: Start Calming Sounds Pillar | PASS |
+| Task 16: Positioning Angles for Calming Sounds | PASS |
 
 ---
 
@@ -756,5 +757,42 @@
 
 ---
 
+## Task 16: Positioning Angles for Calming Sounds
+
+**Objective:** Develop unified positioning for Calming Sounds pillar that differentiates from generic/interactive competitors.
+
+**Acceptance Criteria:**
+- [x] Market sophistication assessed (Stage 3, mechanism-focused)
+- [x] Primary angle identified for pillar guide ("Designed FOR, not adapted FOR")
+- [x] Secondary angles for each supporting article (6 articles)
+- [x] Consistency check across all angles
+- [x] Output saved to `calming-sounds/02-positioning.md`
+
+**Starter Prompt:**
+> Run /positioning-angles for Calming Sounds pillar. Input: calming-sounds/01-pillar-brief.md + clients/hushaway/profile.md. Focus on: (1) The massive gap—every competitor either adapts adult content for kids (Calm, Headspace) or adapts generic kids content for ND (Moshi); (2) "Designed FOR vs adapted FOR" as the unique mechanism; (3) Passive listening as zero-demand differentiator; (4) Evidence-based clarity on sound types (ASMR, binaural, white noise) to fill UK content gap. Maintain parent-to-parent voice.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `calming-sounds/02-positioning.md` with unified positioning framework. Assessed market as Stage 3 (mechanism introducer)—parents are skeptical of generic calming sounds and need to understand WHY ND-first design matters.
+- **Decisions:**
+  - Primary angle: "Designed FOR, not adapted FOR" — HushAway is the ONLY platform built from the ground up for neurodivergent children. Every competitor either adapts adult content for kids or adapts generic kids content for ND.
+  - Unique mechanism: ND-first design + passive listening. Generic sounds add cognitive load (choices, instructions). HushAway sounds require nothing—just press play.
+  - Transformation: From "calming sounds don't work for my child" to "calming sounds work because these were designed for my child"
+  - Secondary angles extend (not repeat) primary:
+    - Article 01: "Generic sounds fail because they're a design mismatch" (foundation, creates demand)
+    - Article 02: "Match the sound to the sleep problem" (specificity vs generic)
+    - Article 03: "Evidence-based clarity on sound types" (authority, fills UK gap)
+    - Article 04: "The right sound for this moment" (practical, situational)
+    - Article 05: "Free AND ND-first" (removes barrier, converts to Open Sanctuary)
+    - Article 06: "Why sounds work when music doesn't" (deepens passive listening mechanism)
+  - Consistency check passed: All angles connect to "designed FOR vs adapted FOR"
+  - Voice: Warm parent-to-parent per client profile throughout
+- **Next:** Execute Calming Sounds pillar: run `/execute-pillar` to write all 7 articles with validation, or write articles individually with `/seo-content` following positioning and publishing order from pillar brief.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-04 (Task 15 Start Calming Sounds Pillar PASS)*
+*Last updated: 2026-02-04 (Task 16 Positioning Angles for Calming Sounds PASS)*
