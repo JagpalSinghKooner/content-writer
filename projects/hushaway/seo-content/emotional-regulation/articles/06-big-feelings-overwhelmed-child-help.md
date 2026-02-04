@@ -273,6 +273,8 @@ Press play. Wait. Stay close. Let the sound do what words can't.
 
 The storm will pass. And you'll both be there when it does.
 
+For the full picture of emotional regulation strategies and support, see our [Complete Guide to Emotional Regulation for Children](/emotional-regulation/articles/07-complete-guide-emotional-regulation-children).
+
 ## Try Sound Tonight
 
 If you want to explore sounds designed specifically for children who experience big feelings, The Open Sanctuary has a collection ready for you. These aren't generic sleep sounds or meditation tracks. They're created with neurodivergent and sensitive children in mind, built for the moments when other approaches fail.

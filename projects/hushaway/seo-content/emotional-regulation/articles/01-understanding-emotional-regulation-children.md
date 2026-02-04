@@ -204,11 +204,13 @@ This article is the foundation for understanding emotional regulation in childre
 
 In the rest of this series, we'll cover:
 
-- Specific strategies for autistic children whose sensory differences affect regulation<!-- LINK NEEDED: 02-emotional-regulation-autism when published -->
-- How ADHD affects emotional regulation and what helps<!-- LINK NEEDED: 03-emotional-regulation-adhd-child when published -->
-- The missing tool in every calm corner guide: what sounds to play<!-- LINK NEEDED: 04-calm-corner-sounds when published -->
-- Co-regulation through sound: how to stay calm when your child can't<!-- LINK NEEDED: 05-co-regulation-parent-child when published -->
-- What to do in the first 60 seconds of big feelings<!-- LINK NEEDED: 06-big-feelings-child when published -->
+- [Specific strategies for autistic children](/emotional-regulation/articles/02-guide-emotional-regulation-autistic-children) whose sensory differences affect regulation
+- [How ADHD affects emotional regulation](/emotional-regulation/articles/03-emotional-regulation-adhd-children) and what helps
+- [The missing tool in every calm corner guide](/emotional-regulation/articles/04-calm-corner-sounds-children): what sounds to play
+- [Co-regulation through sound](/emotional-regulation/articles/05-co-regulation-through-sound-parent-child): how to stay calm when your child can't
+- [What to do in the first 60 seconds of big feelings](/emotional-regulation/articles/06-big-feelings-overwhelmed-child-help)
+
+For the complete picture, see our [Complete Guide to Emotional Regulation for Children](/emotional-regulation/articles/07-complete-guide-emotional-regulation-children).
 
 For now, remember this: emotional regulation is a capacity, not just a skill. Your child's nervous system is doing its best. And with the right support, the right tools, and a bit of patience (with yourself as much as them), things can get easier.
 

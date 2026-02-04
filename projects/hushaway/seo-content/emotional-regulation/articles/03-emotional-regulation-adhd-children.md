@@ -201,7 +201,7 @@ Reduce your words to the minimum:
 
 Then stop talking. Really. Your calm presence does more than your words ever could. Stay nearby without demanding eye contact or conversation. Let them know you're there without adding pressure.
 
-This connects to co-regulation, which we'll cover in depth later in this series<!-- LINK NEEDED: 05-co-regulation-parent-child when published -->. Your regulated nervous system helps regulate theirs, but only if you're not adding verbal demands they can't process.
+This connects to co-regulation, which we cover in depth in our [co-regulation through sound guide](/emotional-regulation/articles/05-co-regulation-through-sound-parent-child). Your regulated nervous system helps regulate theirs, but only if you're not adding verbal demands they can't process.
 
 ### External Cues Over Internal Awareness
 
@@ -242,10 +242,12 @@ And the most important change of all? Stop blaming yourself or your child for st
 
 Emotional regulation for ADHD children is one piece of a larger picture. In this pillar, we're also covering:
 
-- Autism-specific emotional regulation strategies<!-- LINK NEEDED: 02-emotional-regulation-autism when published -->
-- The missing tool in every calm corner guide: what sounds to actually play<!-- LINK NEEDED: 04-calm-corner-sounds when published -->
-- Co-regulation through sound: staying calm when your child can't<!-- LINK NEEDED: 05-co-regulation-parent-child when published -->
-- What to do in the first 60 seconds of big feelings<!-- LINK NEEDED: 06-big-feelings-child when published -->
+- [Autism-specific emotional regulation strategies](/emotional-regulation/articles/02-guide-emotional-regulation-autistic-children)
+- [The missing tool in every calm corner guide](/emotional-regulation/articles/04-calm-corner-sounds-children): what sounds to actually play
+- [Co-regulation through sound](/emotional-regulation/articles/05-co-regulation-through-sound-parent-child): staying calm when your child can't
+- [What to do in the first 60 seconds of big feelings](/emotional-regulation/articles/06-big-feelings-overwhelmed-child-help)
+
+For the complete picture, see our [Complete Guide to Emotional Regulation for Children](/emotional-regulation/articles/07-complete-guide-emotional-regulation-children).
 
 Your child's ADHD makes emotional regulation harder. That's the reality. But harder doesn't mean impossible. It just means the tools that work look different from what the standard parenting books suggest.
 

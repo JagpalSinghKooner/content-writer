@@ -226,3 +226,5 @@ The sounds that work for co-regulation need to be designed with both nervous sys
 If you haven't found sounds that work for your family yet, explore [The Open Sanctuary](https://hushaway.com/the-open-sanctuary/). It's a good place to start discovering what actually helps.
 
 Because you shouldn't have to white-knuckle your way through your child's difficult moments. You shouldn't have to be the only one doing the regulating. And with the right sounds, you don't have to.
+
+For more strategies and the complete picture of emotional regulation support, see our [Complete Guide to Emotional Regulation for Children](/emotional-regulation/articles/07-complete-guide-emotional-regulation-children).

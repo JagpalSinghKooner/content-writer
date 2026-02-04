@@ -268,6 +268,8 @@ Your child's calm corner is incomplete without them.
 
 Tonight, complete it. Open The Open Sanctuary and see what changes.
 
+For more on emotional regulation strategies beyond the calm corner, see our [Complete Guide to Emotional Regulation for Children](/emotional-regulation/articles/07-complete-guide-emotional-regulation-children).
+
 ## FAQ
 
 ### What calm corner sounds work best for children?

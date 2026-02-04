@@ -253,6 +253,8 @@ It's respecting their neurology. It's actually paying attention to what they nee
 
 One quiet moment can change a whole day for a child. For autistic children, that quiet moment often matters even more.
 
+For the complete picture of emotional regulation across all children, including practical tools and strategies, see our [Complete Guide to Emotional Regulation for Children](/emotional-regulation/articles/07-complete-guide-emotional-regulation-children).
+
 If you'd like to try a different approach tonight, explore The Open Sanctuary. Sounds designed for your child's nervous system, ready when you need them.
 
 ## FAQ
