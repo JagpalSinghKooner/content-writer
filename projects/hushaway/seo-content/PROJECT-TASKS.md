@@ -24,6 +24,7 @@
 | Task 15: Start Calming Sounds Pillar | PASS |
 | Task 16: Positioning Angles for Calming Sounds | PASS |
 | Task 17: Execute Calming Sounds Pillar | PASS |
+| Task 18: Start Emotional Regulation Pillar | PASS |
 
 ---
 
@@ -836,5 +837,47 @@
 
 ---
 
+## Task 18: Start Emotional Regulation Pillar
+
+**Objective:** Create pillar brief for Emotional Regulation with competitor analysis and content plan.
+
+**Acceptance Criteria:**
+- [x] Extract Emotional Regulation pillar from keyword brief
+- [x] Run deep competitor analysis with Perplexity (DR estimates + content depth)
+- [x] Identify content gaps and angle opportunities
+- [x] Create article outline for pillar guide + supporting articles
+- [x] Output saved to `emotional-regulation/01-pillar-brief.md`
+
+**Starter Prompt:**
+> Run /start-pillar for Emotional Regulation. Extract the pillar from 00-keyword-brief.md. Focus on: (1) Deep competitor analysis of NHS, YoungMinds, Anna Freud Centre, local authority resources, and specialist therapy organisations; (2) Identify the MASSIVE gap—NO competitor positions sound/audio as PRIMARY regulation tool, all focus on breathing, fidgets, Zones of Regulation; (3) Plan 7 articles covering: understanding regulation, autism-specific, ADHD-specific, calm corner sounds, co-regulation through sound, big feelings practical guide, pillar guide. Position sound as THE missing tool in emotional regulation guidance.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `emotional-regulation/01-pillar-brief.md` with all 8 sections: strategic context, keyword table (20 keywords mapped), competitor analysis (5 UK competitors with DR estimates), content plan (7 articles: 6 supporting + 1 pillar guide), angle opportunities (5 identified), internal linking map, publishing order, and key messaging.
+- **Decisions:**
+  - **CRITICAL GAP CONFIRMED:** Perplexity research across 5 major UK competitor types revealed NO competitor positions sound as PRIMARY regulation tool. Market is saturated with:
+    - Breathing exercises (universal across all resources)
+    - Fidget toys and sensory tools
+    - Zones of Regulation framework (dominant in schools)
+    - Calm boxes with physical items
+    - Movement and rhythmic activity
+  - **Primary angle:** "The Missing Sound" — Every regulation resource recommends breathing, fidgets, movement, calm boxes. NONE position sound as primary tool. HushAway fills this gap.
+  - **Top competitors identified:**
+    - NHS Resources (DR 60-75): Zones of Regulation, clinical authority, comprehensive but no sound tools
+    - YoungMinds (DR 55-68): Therapeutic, parent validation, similar warm tone to HushAway but no audio approaches
+    - Anna Freud Centre (DR 50-65): Academic credibility, early years focus, no sound-based regulation
+    - Local Authority Resources (DR 40-60): Practical calm box guides, sound only mentioned as "calm music"
+    - Specialist Therapy Orgs (DR 30-50): ND-specific understanding but still no systematic sound guidance
+  - **Unique mechanism:** "Passive Beats Active" — During peak dysregulation, children can't follow breathing instructions (requires cognition), use fidgets (requires motor control), or engage with calm boxes (requires decisions). Sound requires NOTHING—just press play.
+  - **7 articles planned:** 6 supporting + 1 pillar guide (publishes last)
+  - **Article 1** "Understanding Emotional Regulation" is foundation — explains why ND kids struggle
+  - **Article 4** "Calm Corner Sounds" is conversion driver — direct commercial intent, links to Open Sanctuary
+- **Next:** Run `/positioning-angles` to develop unified positioning for all 7 articles. Primary angle established ("The Missing Sound"); need secondary angles per article and consistency check.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-04 (Task 17 Execute Calming Sounds Pillar PASS)*
+*Last updated: 2026-02-04 (Task 18 Start Emotional Regulation Pillar PASS)*

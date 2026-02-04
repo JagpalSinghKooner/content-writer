@@ -517,7 +517,7 @@ Why: Massive search volume (parents of 3-6% of UK school children with ADHD), hi
 | 2 | Autistic Meltdowns | ✅ Complete | H | H | Fast | Calming Sounds for Autism Meltdowns |
 | 3 | Sensory Overload | ✅ Complete | H | H | Medium | Understanding Sensory Overload in Children |
 | 4 | Calming Sounds | ✅ Complete | H | M | Medium | Best Calming Sounds for ND Children |
-| 5 | Emotional Regulation | ⏳ Pending | M | M | Medium | Emotional Regulation for Autistic Children |
+| 5 | Emotional Regulation | 📋 Brief | M | M | Medium | Emotional Regulation for Autistic Children |
 | 6 | Bedtime Routines | ⏳ Pending | M | M | Medium | ND Bedtime Routine That Actually Works |
 | 7 | Sound Therapy | ⏳ Pending | M | M | Long | Sound Therapy for Children: What Parents Should Know |
 | 8 | App Comparisons | ⏳ Pending | H | M | Long | Best Calming Apps for ND Kids (hold until brand established) |
