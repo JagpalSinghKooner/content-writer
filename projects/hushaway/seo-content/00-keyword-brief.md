@@ -515,7 +515,7 @@ Why: Massive search volume (parents of 3-6% of UK school children with ADHD), hi
 |----------|--------|--------|----------------|-------------|-------|---------------|
 | 1 | ADHD Sleep | ✅ Complete | H | H | Fast | ADHD Sleep Problems: What Actually Helps |
 | 2 | Autistic Meltdowns | ✅ Complete | H | H | Fast | Calming Sounds for Autism Meltdowns |
-| 3 | Sensory Overload | 🔄 In Progress | H | H | Medium | Understanding Sensory Overload in Children |
+| 3 | Sensory Overload | ✅ Complete | H | H | Medium | Understanding Sensory Overload in Children |
 | 4 | Calming Sounds | ⏳ Pending | H | M | Medium | Best Calming Sounds for ND Children |
 | 5 | Emotional Regulation | ⏳ Pending | M | M | Medium | Emotional Regulation for Autistic Children |
 | 6 | Bedtime Routines | ⏳ Pending | M | M | Medium | ND Bedtime Routine That Actually Works |
