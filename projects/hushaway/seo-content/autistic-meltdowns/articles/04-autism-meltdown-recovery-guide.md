@@ -6,7 +6,7 @@ meta_description: "The meltdown ended. But your child's still not okay. Here's w
 slug: "autism-meltdown-recovery-guide"
 author: "Nicola Maria Rose"
 date: "2026-02-03"
-status: "review"
+status: "published"
 
 # Taxonomy
 categories:
@@ -46,6 +46,8 @@ internal_links:
     anchor: "what sounds to play during a meltdown"
   - url: "/autistic-meltdowns/03-after-school-meltdowns"
     anchor: "after-school meltdowns"
+  - url: "/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents"
+    anchor: "complete guide to autism meltdowns"
 external_citations:
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/behaviour/meltdowns/all-audiences"
     author: "National Autistic Society"

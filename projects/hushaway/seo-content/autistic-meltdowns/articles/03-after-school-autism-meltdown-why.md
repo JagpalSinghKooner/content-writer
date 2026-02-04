@@ -6,7 +6,7 @@ meta_description: "Your child holds it together all day, then explodes the momen
 slug: "after-school-autism-meltdown-why"
 author: "Nicola Maria Rose"
 date: "2026-02-03"
-status: "review"
+status: "published"
 
 # Taxonomy
 categories:
@@ -47,6 +47,8 @@ internal_links:
     anchor: "what to actually play during a meltdown"
   - url: "/autistic-meltdowns/04-meltdown-recovery"
     anchor: "recovery after the meltdown"
+  - url: "/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents"
+    anchor: "complete guide to autism meltdowns"
 external_citations:
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/behaviour/meltdowns/all-audiences"
     author: "National Autistic Society"
