@@ -251,6 +251,11 @@ Return only:
 PASS
 ```
 
+On FAIL:
+```
+FAIL: {brief reason}
+```
+
 **Why minimal return:**
 - Main session only needs to know edits completed
 - Reduces context usage during pillar execution (32+ articles)
@@ -268,10 +273,10 @@ PASS
 - Edit operation failed
 - Issues couldn't be fixed without breaking content
 
-On FAIL, include a brief reason:
-```
-FAIL: Could not read validation file at {path}
-```
+**FAIL examples:**
+- `FAIL: Could not read validation file at {path}`
+- `FAIL: Edit operation failed on line 42`
+- `FAIL: Cannot fix issue without breaking content structure`
 
 ---
 

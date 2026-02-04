@@ -5,8 +5,8 @@
 | Task | Status |
 |------|--------|
 | Task 22: Implement Minimal Agent Returns | PASS |
-| Task 23: Fix Agent Documentation Alignment | pending |
-| Task 24: Copy Enhancer Return Format Alignment | pending |
+| Task 23: Fix Agent Documentation Alignment | PASS |
+| Task 24: Copy Enhancer Return Format Alignment | PASS |
 
 **Previous work:** Tasks 1-21 completed (see git history). Agent system fully validated via Task 11 pipeline test. Tasks 19-21 covered UK/US spelling validation, agent workflow fixes, and pillar status tracking.
 
@@ -130,7 +130,7 @@ To:
 **Context:** Audit found copy-enhancer.md return format code block only shows `PASS`, but PRD shows both `PASS` and `FAIL: {brief reason}`. The FAIL format exists at line 275-278 but isn't in the main return format code block.
 
 **Acceptance Criteria:**
-- [ ] Update copy-enhancer.md return format section to show both PASS and FAIL in the code block
+- [x] Update copy-enhancer.md return format section to show both PASS and FAIL in the code block
 
 **The Fix:**
 
@@ -162,6 +162,13 @@ FAIL: {brief reason}
 **Starter Prompt:**
 > Implement Task 24: Copy Enhancer Return Format Alignment. Update `.claude/agents/copy-enhancer.md` return format section to show both PASS and FAIL formats in the code block, matching agents-prd.md.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Updated `copy-enhancer.md` return format section to show both PASS and FAIL formats in code blocks, matching `agents-prd.md` format. Added FAIL examples section.
+- **Decisions:** Moved FAIL format into a code block directly after the PASS code block for visual consistency. Kept detailed "Return PASS when" and "Return FAIL when" sections, added concrete FAIL examples.
+- **Next:** All agent documentation alignment tasks complete. System ready for pillar execution.
 
 ---
