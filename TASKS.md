@@ -4,171 +4,65 @@
 
 | Task | Status |
 |------|--------|
-| Task 22: Implement Minimal Agent Returns | PASS |
-| Task 23: Fix Agent Documentation Alignment | PASS |
-| Task 24: Copy Enhancer Return Format Alignment | PASS |
-
-**Previous work:** Tasks 1-21 completed (see git history). Agent system fully validated via Task 11 pipeline test. Tasks 19-21 covered UK/US spelling validation, agent workflow fixes, and pillar status tracking.
+| Task 20: Create audit-pillar Skill | pending |
+| Task 21: Test audit-pillar on Single Pillar | pending |
+| Task 22: Run Full Audit Across All Pillars | pending |
 
 ---
 
-## Task 22: Implement Minimal Agent Returns
+## Task 20: Create audit-pillar Skill
 
-**Objective:** Reduce agent return verbosity to prevent main session context overflow during pillar execution.
-
-**Context:** Sensory Overload pillar execution hit 100% context window. Root cause: agents return too much data to main session (full validation reports ~1000+ words, self-validation checklists, banned word checks). 32 verbose returns = context explosion by Tier 5. Full analysis in `agent-audit-2.md`.
-
-**The Fix:** Minimal returns. Main session only needs PASS/FAIL to orchestrate. Detailed output goes to files for consuming agents to read.
+**Objective:** Create the `/audit-pillar` skill that re-validates existing content against current rules.
 
 **Acceptance Criteria:**
-- [x] Update `content-validator.md`: Write full output to `{slug}.validation.md` on FAIL, delete file on PASS, return only `PASS` or `FAIL, {fail_count}, {warn_count}, {file_path}`
-- [x] Update `copy-enhancer.md`: In Fix mode, read validation file from path provided; remove banned words check from return (keep internal); return only `PASS`
-- [x] Update `seo-writer.md`: Remove self-validation checklist entirely (validator is single source of truth); return only `PASS, {file_path}`
-- [x] Update `content-atomizer.md`: Simplify return to just `PASS`
-- [x] Update `agents-prd.md`: Update all 4 return format specs to minimal versions
-- [x] Update `workflow.md`: Update Agent Return Formats section, update retry logic (3 attempts max, no fail_count threshold), document validation file lifecycle
-
-**New Return Formats:**
-
-| Agent | New Return Format |
-|-------|-------------------|
-| SEO Writer | `PASS, {file_path}` |
-| Copy Enhancer | `PASS` |
-| Content Validator | `PASS` or `FAIL, {fail_count}, {warn_count}, {validation_file_path}` |
-| Content Atomizer | `PASS` |
-
-**Validation File Lifecycle:**
-1. FAIL: Validator writes full report to `{slug}.validation.md`, returns minimal
-2. Main session spawns copy-enhancer with article path + validation file path
-3. Copy-enhancer reads validation file, fixes issues, returns `PASS`
-4. Main session spawns validator again
-5. PASS: Validator deletes validation file, returns `PASS`
-6. After 3 failures: Escalate (validation file remains for debugging)
-
-**Implementation Order:**
-1. content-validator.md (highest impact)
-2. copy-enhancer.md (must update to read from file)
-3. seo-writer.md (remove self-validation)
-4. content-atomizer.md (simplify return)
-5. agents-prd.md (update specs)
-6. workflow.md (update docs)
+- [ ] Created `.claude/skills/audit-pillar/SKILL.md` with full skill definition
+- [ ] Skill follows execute-pillar orchestration pattern (main session spawns agents)
+- [ ] Supports `{pillar-name}` parameter for single pillar
+- [ ] Supports `--fix` flag for auto-fix mode
+- [ ] Supports `--all` flag for all pillars
+- [ ] Generates `audit-summary.md` in pillar directory
+- [ ] Updated CLAUDE.md skills table with `/audit-pillar`
+- [ ] Deleted `audit-pillar.md` spec file from root (absorbed into skill)
 
 **Starter Prompt:**
-> Implement Task 22: Minimal Agent Returns. Based on `agent-audit-2.md` analysis, update 6 files to reduce agent return verbosity:
->
-> 1. `.claude/agents/content-validator.md` — Write full output to `{slug}.validation.md` on FAIL, delete on PASS, return only `PASS` or `FAIL, {counts}, {path}`
-> 2. `.claude/agents/copy-enhancer.md` — Read validation file in Fix mode, return only `PASS`
-> 3. `.claude/agents/seo-writer.md` — Remove self-validation checklist, return only `PASS, {file_path}`
-> 4. `.claude/agents/content-atomizer.md` — Return only `PASS`
-> 5. `.claude/agents-prd.md` — Update all 4 return format specs
-> 6. `.claude/rules/workflow.md` — Update return formats, retry logic (3 max), validation file lifecycle
->
-> Full plan at `task-22-plan.md`
->
-> After implementation, test on Calming Sounds pillar to verify context stays manageable.
+> Create the `/audit-pillar` skill following the specification in `audit-pillar.md` at repo root. Use the orchestration pattern from `.claude/skills/execute-pillar/SKILL.md`. The skill spawns content-validator agents in parallel for all articles, aggregates results into `audit-summary.md`, and optionally runs copy-enhancer fix loops. Reference `.claude/agents/content-validator.md` and `.claude/agents/copy-enhancer.md` for agent return formats. After creating the skill, add it to the skills table in `.claude/CLAUDE.md` and delete the root spec file.
 
-**Status:** PASS
+**Status:** pending
 
 ---
 
-**Handoff:**
-- **Done:** All 6 files updated with minimal agent returns. Content Validator now writes full output to `{slug}.validation.md` on FAIL and deletes on PASS. Copy Enhancer reads validation file in Fix mode. SEO Writer removed self-validation checklist. All agents return minimal status.
-- **Decisions:** Validator needs Write tool access (added to YAML frontmatter). Validation file placed alongside article in same directory. File deleted on PASS, retained for debugging after 3 failures.
-- **Next:** Test on Calming Sounds pillar to verify context stays manageable during full execution.
+## Task 21: Test audit-pillar on Single Pillar
 
----
-
-## Task 23: Fix Agent Documentation Alignment
-
-**Objective:** Ensure single source of truth across agent files and documentation.
-
-**Context:** Audit after Task 22 found `agents-prd.md` incorrectly lists Write as disallowed for Content Validator, but the agent file correctly allows it (needed for validation files).
+**Objective:** Validate the skill works correctly on one pillar before running across all.
 
 **Acceptance Criteria:**
-- [x] Update `agents-prd.md` Content Validator section: Remove Write from "Explicitly Denied" list, add note that Write is available for validation files only
-- [x] Verify all 4 agents have matching tool specs between their `.md` file and `agents-prd.md`
-
-**The Fix:**
-
-In `.claude/agents-prd.md`, Content Validator section, change:
-
-```
-**Explicitly Denied:**
-- Write (cannot create files)
-- Edit (cannot modify files)
-- Bash (no shell access)
-```
-
-To:
-
-```
-**Explicitly Denied:**
-- Edit (cannot modify article content)
-- Bash (no shell access)
-
-**Note:** Write tool IS available for creating/deleting validation files only.
-```
+- [ ] `/audit-pillar adhd-sleep` completes without error
+- [ ] `adhd-sleep/audit-summary.md` created with correct format
+- [ ] All 7 articles validated with correct PASS/FAIL counts
+- [ ] Issue categories correctly aggregated
+- [ ] `/audit-pillar adhd-sleep --fix` runs retry loop correctly
+- [ ] Validation files deleted after PASS
 
 **Starter Prompt:**
-> Implement Task 23: Fix Agent Documentation Alignment. Update `.claude/agents-prd.md` Content Validator section to remove Write from disallowed tools (it's needed for validation files). The agent file is correct; the PRD is stale.
+> Run `/audit-pillar adhd-sleep` to test the skill on the ADHD Sleep pillar (7 articles). Verify the audit-summary.md is created at `projects/hushaway/seo-content/adhd-sleep/audit-summary.md`. Check that all articles are validated and results match expected format. Then run `/audit-pillar adhd-sleep --fix` to test the auto-fix workflow. Confirm retry loop works (max 3 attempts) and validation files are cleaned up on PASS.
 
-**Status:** PASS
-
----
-
-**Handoff:**
-- **Done:** Updated `agents-prd.md` Content Validator section in two places: (1) YAML frontmatter example now shows `tools: Read, Glob, Grep, Write` and `disallowedTools: Edit, Bash`, (2) "Explicitly Denied" section now only shows Edit and Bash, with note that Write IS available for validation files.
-- **Decisions:** Aligned PRD with actual agent file. Agent file was correct; PRD was stale from before the file-based validation output was implemented.
-- **Next:** Task 24 to align copy-enhancer.md return format section with PRD.
+**Status:** pending
 
 ---
 
-## Task 24: Copy Enhancer Return Format Alignment
+## Task 22: Run Full Audit Across All Pillars
 
-**Objective:** Align copy-enhancer.md return format section with agents-prd.md (show both PASS and FAIL).
-
-**Context:** Audit found copy-enhancer.md return format code block only shows `PASS`, but PRD shows both `PASS` and `FAIL: {brief reason}`. The FAIL format exists at line 275-278 but isn't in the main return format code block.
+**Objective:** Audit all 4 HushAway pillars and fix any issues found.
 
 **Acceptance Criteria:**
-- [x] Update copy-enhancer.md return format section to show both PASS and FAIL in the code block
-
-**The Fix:**
-
-In `.claude/agents/copy-enhancer.md`, change return format section from:
-
-```
-Return only:
-
-```
-PASS
-```
-```
-
-To:
-
-```
-Return only:
-
-```
-PASS
-```
-
-On FAIL:
-```
-FAIL: {brief reason}
-```
-```
+- [ ] `/audit-pillar --all` validates all 29 articles across 4 pillars
+- [ ] Each pillar has `audit-summary.md` with results
+- [ ] `/audit-pillar --all --fix` fixes all fixable issues
+- [ ] Any escalated articles (3+ failures) documented
+- [ ] Patterns extracted to `common-mistakes.md` if 3+ occurrences
+- [ ] Git commit with all fixes
 
 **Starter Prompt:**
-> Implement Task 24: Copy Enhancer Return Format Alignment. Update `.claude/agents/copy-enhancer.md` return format section to show both PASS and FAIL formats in the code block, matching agents-prd.md.
+> Run `/audit-pillar --all` to validate all HushAway pillars: adhd-sleep (7), autistic-meltdowns (7), calming-sounds (7), sensory-overload (8). Review all audit-summary.md files. Then run `/audit-pillar --all --fix` to auto-fix issues. Document any escalated articles. Extract recurring patterns (3+ occurrences) to `.claude/rules/common-mistakes.md`. Commit all changes with message "Audit all pillars against current rules".
 
-**Status:** PASS
-
----
-
-**Handoff:**
-- **Done:** Updated `copy-enhancer.md` return format section to show both PASS and FAIL formats in code blocks, matching `agents-prd.md` format. Added FAIL examples section.
-- **Decisions:** Moved FAIL format into a code block directly after the PASS code block for visual consistency. Kept detailed "Return PASS when" and "Return FAIL when" sections, added concrete FAIL examples.
-- **Next:** All agent documentation alignment tasks complete. System ready for pillar execution.
-
----
+**Status:** pending

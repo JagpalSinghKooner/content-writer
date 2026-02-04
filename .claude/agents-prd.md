@@ -67,8 +67,8 @@ This document defines a 4-agent system for high-volume SEO content generation. E
 
 | Agent | File | Purpose | Model | Fresh Context |
 |-------|------|---------|-------|---------------|
-| **SEO Writer** | `seo-writer.md` | Write articles with E-E-A-T research | Sonnet | Yes |
-| **Copy Enhancer** | `copy-enhancer.md` | Add persuasion + fix validation issues | Sonnet | Yes |
+| **SEO Writer** | `seo-writer.md` | Write articles with E-E-A-T research | Opus | Yes |
+| **Copy Enhancer** | `copy-enhancer.md` | Add persuasion + fix validation issues | Opus | Yes |
 | **Content Validator** | `content-validator.md` | Check rules + quality (read-only) | Sonnet | Yes |
 | **Content Atomizer** | `content-atomizer.md` | Create platform distribution | Sonnet | Yes |
 
@@ -130,7 +130,7 @@ The `/execute-pillar` skill documents the **full pillar execution workflow** tha
 name: seo-writer
 description: Write SEO-optimized articles with E-E-A-T research and citations. Use proactively when writing articles, blog posts, or content for keywords.
 tools: Read, Glob, Grep, Write
-model: sonnet
+model: opus
 skills:
   - seo-content
 ---
@@ -203,7 +203,7 @@ On FAIL: `FAIL: {brief reason}`
 name: copy-enhancer
 description: Enhance articles with direct-response copy principles. Use after writing articles or when validation fails. Handles both enhancement passes and fixing specific validation issues.
 tools: Read, Edit
-model: sonnet
+model: opus
 skills:
   - direct-response-copy
 ---
