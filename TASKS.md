@@ -360,18 +360,25 @@
 **Objective:** Run validation-only audit on the Emotional Regulation pillar (7 articles).
 
 **Acceptance Criteria:**
-- [ ] `/audit-pillar emotional-regulation` completes without errors
-- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/emotional-regulation/audit-summary.md`
-- [ ] All 7 articles validated with correct PASS/FAIL counts
-- [ ] Link audit completed
-- [ ] Citation URL validation completed
-- [ ] Cross-article consistency checked
-- [ ] Issues documented in handoff for auto-fix planning
+- [x] `/audit-pillar emotional-regulation` completes without errors
+- [x] `audit-summary.md` created at `projects/hushaway/seo-content/emotional-regulation/audit-summary.md`
+- [x] All 7 articles validated with correct PASS/FAIL counts
+- [x] Link audit completed
+- [x] Citation URL validation completed
+- [x] Cross-article consistency checked
+- [x] Issues documented in handoff for auto-fix planning
 
 **Starter Prompt:**
 > Run `/audit-pillar emotional-regulation` to validate the Emotional Regulation pillar (7 articles). Validation-only mode (no --fix). Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Audit completed for Emotional Regulation pillar (7 articles). audit-summary.md created with all required sections.
+- **Decisions:** All 7 articles FAIL primarily due to incorrect internal link format (71 instances using `/pillar/articles/nn-slug` instead of `/{slug}`). 3 broken citation URLs (404). Positioning alignment is strong across all articles. No banned AI words or em dashes found.
+- **Next:** Run `--fix` to auto-correct internal link format issues. Manually resolve 3 broken citation URLs (zonesofregulation.com, nhs.uk/emotions, hushaway.com/the-open-sanctuary). Address clinical term "intervention" in article 07.
 
 ---
 
