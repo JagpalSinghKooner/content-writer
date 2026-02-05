@@ -28,6 +28,7 @@
 | Task 19: Positioning Angles for Emotional Regulation | PASS |
 | Task 20: Execute Emotional Regulation Pillar | PASS |
 | Task 21: Start Bedtime Routines Pillar | PASS |
+| Task 22: Positioning Angles for Bedtime Routines | PASS |
 
 ---
 
@@ -999,5 +1000,43 @@
 
 ---
 
+## Task 22: Positioning Angles for Bedtime Routines
+
+**Objective:** Develop unified positioning for Bedtime Routines pillar that differentiates from clinical/generic content.
+
+**Acceptance Criteria:**
+- [x] Market sophistication assessed (Stage 3, mechanism-focused)
+- [x] Primary angle identified for pillar guide ("Sound as THE Core Element")
+- [x] Secondary angles for each supporting article (6 articles)
+- [x] Consistency check across all angles
+- [x] Output saved to `bedtime-routines/02-positioning.md`
+
+**Starter Prompt:**
+> Run /positioning-angles for Bedtime Routines pillar. Input: bedtime-routines/01-pillar-brief.md + clients/hushaway/profile.md. Focus on: (1) The MASSIVE gap—every competitor mentions sound in passing ("try calming music") but NONE position it as primary tool or tell parents WHAT to play WHEN; (2) "Sound as THE Core Element" as primary angle—not an afterthought; (3) Unique mechanism has two parts: Specificity (WHAT to play WHEN WHY) + Passive Listening (requires nothing during struggle); (4) Secondary angles by article: foundation (neurology not behaviour), conversion driver (the WHAT nobody told you), visual integration, ADHD racing brain, autism predictability, anxiety presence. Maintain parent-to-parent voice.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `bedtime-routines/02-positioning.md` with unified positioning framework. Assessed market as Stage 3 (mechanism introducer)—parents have tried "calming music" but are skeptical because generic advice didn't work. They need to understand WHY ND-designed sound is different.
+- **Decisions:**
+  - Primary angle: "Sound as THE Core Element, Not an Afterthought" — Every competitor gives routine structure + visual supports, then mentions sound in passing. HushAway positions sound as deserving EQUAL weight.
+  - Unique mechanism has two components:
+    1. **The WHAT Gap (Specificity):** No competitor says WHAT sounds, WHEN, or WHY. HushAway fills this.
+    2. **Passive Listening (Zero-Demand):** Sound requires nothing during the struggle. Racing ADHD brain gets anchor. Autistic predictability needs met.
+  - Secondary angles extend (not repeat) primary:
+    - Article 01: "It's neurology, not behaviour" (foundation, validates parents)
+    - Article 02: "The WHAT nobody told you" (conversion driver, fills specificity gap)
+    - Article 03: "Visuals work better WITH sound cues" (integration, not competition)
+    - Article 04: "Racing brain needs something to land on" (ADHD-specific mechanism)
+    - Article 05: "Predictability through sound" (autism-specific mechanism)
+    - Article 06: "Sound stays when you leave the room" (anxiety, presence without parent)
+  - Consistency check passed: All angles reinforce "sound as primary tool with specific guidance"
+  - Voice: Warm parent-to-parent per client profile throughout
+- **Next:** Execute Bedtime Routines pillar: run `/execute-pillar` to write all 7 articles with validation, or write articles individually with `/seo-content` following positioning and publishing order from pillar brief.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-05 (Task 21 Start Bedtime Routines Pillar PASS)*
+*Last updated: 2026-02-05 (Task 22 Positioning Angles for Bedtime Routines PASS)*
