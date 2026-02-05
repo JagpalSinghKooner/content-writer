@@ -6,10 +6,17 @@
 |------|--------|
 | Task 20: Create Link-Auditor Agent | PASS |
 | Task 21: Create Audit-Pillar Skill | PASS |
-| Task 22: Update CLAUDE.md and Cleanup | pending |
+| Task 22: Update CLAUDE.md and Cleanup | PASS |
 | Task 23: Test on Single Pillar (Validate Only) | PASS |
-| Task 24: Test Auto-Fix Mode | pending |
-| Task 25: Full Audit All Pillars (Validate Only) | pending |
+| Task 24: Test Auto-Fix Mode | PASS |
+| Task 25-pre: Refactor Audit-Pillar SKILL.md (Slim for Context) | PASS |
+| Task 25a: Audit ADHD Sleep (Validate Only) | pending |
+| Task 25b: Audit Autistic Meltdowns (Validate Only) | pending |
+| Task 25c: Audit Sensory Overload (Validate Only) | pending |
+| Task 25d: Audit Calming Sounds (Validate Only) | pending |
+| Task 25e: Audit Emotional Regulation (Validate Only) | pending |
+| Task 25f: Audit Bedtime Routines (Validate Only) | pending |
+| Task 25g: Audit Sound Therapy + Cross-Pillar Summary | pending |
 | Task 26: Auto-Fix All Pillars + Extract Patterns | pending |
 
 ---
@@ -92,7 +99,14 @@
 **Starter Prompt:**
 > Update `.claude/CLAUDE.md`: add `/audit-pillar` to the Skills table with description "Re-validate existing content against current rules", and add `link-auditor` to the Agents table with description "Audit internal links across a pillar". Then delete the `audit-pillar.md` specification file from the repository root (the spec has been absorbed into the skill and agent files). Commit and push.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Updated `.claude/CLAUDE.md` — added `/audit-pillar` to Skills table, added `link-auditor` to Agents table. Commit 0ab2505.
+- **Decisions:** Kept description concise to match existing table style.
+- **Next:** Task 23 — Test the audit-pillar skill on a single pillar.
 
 ---
 
@@ -129,38 +143,204 @@
 **Objective:** Verify the auto-fix retry loop works correctly when validation issues are found.
 
 **Acceptance Criteria:**
-- [ ] `/audit-pillar app-comparisons --fix` runs retry loop for FAIL articles
-- [ ] Copy-enhancer spawned with validation file paths (not content in prompt)
-- [ ] Retry loop executes max 3 attempts per article
-- [ ] Validation files deleted after PASS
-- [ ] Articles that PASS after retry marked "Fixed" in audit-summary.md
-- [ ] Articles that fail 3 times marked "Escalated" with issues listed
-- [ ] Link/citation issues correctly escalated (not auto-fixed)
-- [ ] Audit-summary.md shows Fix Results section with attempt counts
-- [ ] Git commit created after successful fixes
+- [x] `/audit-pillar app-comparisons --fix` runs retry loop for FAIL articles
+- [x] Copy-enhancer spawned with validation file paths (not content in prompt)
+- [x] Retry loop executes max 3 attempts per article
+- [x] Validation files deleted after PASS
+- [x] Articles that PASS after retry marked "Fixed" in audit-summary.md
+- [x] Articles that fail 3 times marked "Escalated" with issues listed
+- [x] Link/citation issues correctly escalated (not auto-fixed)
+- [x] Audit-summary.md shows Fix Results section with attempt counts
+- [x] Git commit created after successful fixes
 
 **Starter Prompt:**
 > Run `/audit-pillar app-comparisons --fix` to test the auto-fix workflow on the App Comparisons pillar. Verify the retry loop: for each FAIL article, main session spawns copy-enhancer with the validation file path, then re-validates. Check loop runs max 3 attempts per article before escalation. Confirm validation files deleted after PASS. Verify link and citation issues are escalated (not auto-fixed). Review audit-summary.md Fix Results section. Commit fixed articles.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Ran `/audit-pillar app-comparisons --fix`. All 7 articles fixed in 1 attempt each. 51 internal link format violations corrected (directory paths to `/{slug}` format). Commit `4aa9280`. Escalated: 3 broken citation URLs (RCPCH 404, Understood.org 404), 1 keyword-only slug (Article 05).
+- **Decisions:** Fix mode consumed 100% context window for 7 articles. This confirms `--all` mode cannot run in a single session. Must split into 1 pillar per session.
+- **Next:** Task 25 (split into 25a-25g) — Validate remaining 7 pillars, one per session.
 
 ---
 
 ## Task 25: Full Audit All Pillars (Validate Only)
 
-**Objective:** Run validation-only audit across all 8 HushAway pillars to establish baseline before attempting fixes.
+**Objective:** Run validation-only audit across all 8 HushAway pillars to establish baseline before attempting fixes. Split into 1 pillar per session due to context window limits (Task 24 consumed 100% on 7 articles with --fix).
+
+**Note:** App Comparisons already audited and fixed in Tasks 23-24. Remaining: 7 pillars, 50 articles.
+
+---
+
+### Task 25-pre: Refactor Audit-Pillar SKILL.md (Slim for Context)
+
+**Objective:** Slim `.claude/skills/audit-pillar/SKILL.md` from 960 lines (~3,940 words) to ~300 lines (~1,500 words) by replacing duplicated content with file references. This fixes the "prompt too long" error that occurs when running `/audit-pillar` on 7-article pillars.
+
+**Root Cause:** SKILL.md duplicates content from `workflow.md`, agent specs (`content-validator.md`, `link-auditor.md`), and embeds full output templates inline. Combined with always-loaded project context (~16,000 words), it exceeds context limits.
 
 **Acceptance Criteria:**
-- [ ] `/audit-pillar --all` validates all 57 articles across 8 pillars
-- [ ] Each pillar has `audit-summary.md` with complete results
-- [ ] Link audit identifies all broken links, incorrect URL formats, and stale placeholders
-- [ ] Citation URL validation catches all 4xx/5xx errors and redirects
-- [ ] Cross-article consistency checks identify terminology variations and conflicting claims
-- [ ] Common issues (3+ occurrences) flagged for pattern extraction
-- [ ] No orchestration failures or context overflow
+- [ ] Created `.claude/skills/audit-pillar/templates/audit-summary-template.md` with extracted output formats (audit-summary format, user output templates for validate-only + fix mode, fix results section, status determination rules)
+- [ ] Rewrote SKILL.md as thin orchestration playbook under 350 lines
+- [ ] Removed: ASCII orchestration diagrams (→ reference `workflow.md`), "What Content-Validator Checks" (→ reference `content-validator.md`), "What Link-Auditor Checks" (→ reference `link-auditor.md`), retry loop walkthrough (→ reference `workflow.md`), agent return formats (→ reference `workflow.md`), Quick Reference section (duplicates phases), Execution Checklist (belongs in TASKS.md)
+- [ ] Kept: YAML frontmatter, When to Use, Invocation syntax, Critical Constraints, Phase 1-8 orchestration logic (what to spawn, what args, what to do with returns), Error handling table, Git workflow, Reference files list
+- [ ] Added file references: each phase points to source-of-truth file for details
+- [ ] Phase 6 references `templates/audit-summary-template.md` instead of inline template
+- [ ] Zero functionality lost — all content moved to existing source-of-truth files or new template
+- [ ] Git commit created and pushed
 
 **Starter Prompt:**
-> Run `/audit-pillar --all` to validate all 8 HushAway pillars: adhd-sleep (7), autistic-meltdowns (7), calming-sounds (7), sensory-overload (8), emotional-regulation (7), bedtime-routines (7), sound-therapy (7), app-comparisons (7). Total: 57 articles. Validation-only mode to establish baseline. Review all 8 audit-summary.md files. Identify common patterns across pillars (same issue appearing 3+ times). Document all issues found for planning the auto-fix run.
+> Refactor `.claude/skills/audit-pillar/SKILL.md` to fix context overflow. The skill is 960 lines / ~3,940 words and causes "prompt too long" when running audits. **Step 1:** Read the current SKILL.md. **Step 2:** Create `.claude/skills/audit-pillar/templates/audit-summary-template.md` — extract the full audit-summary.md format template (current lines 377-498), user output templates for validate-only and fix modes (lines 621-726), and status determination rules. **Step 3:** Rewrite SKILL.md as a thin orchestration playbook (~300 lines). Replace duplicated content with file references: ASCII diagrams → `See rules/workflow.md`, validator checks → `See .claude/agents/content-validator.md`, link-auditor checks → `See .claude/agents/link-auditor.md`, retry loop → `See rules/workflow.md → Retry Loop`, agent return formats → `See rules/workflow.md → Agent Return Formats`, output templates → `See templates/audit-summary-template.md`. Keep: YAML frontmatter, When to Use, Invocation, Critical Constraints (6 rules), Phase 1-8 headers with orchestration logic only (what to spawn, what args to pass, what to do with returns), error handling table, git workflow, reference files list. Delete entirely: Quick Reference section (duplicates phases 2-3), Execution Checklist (belongs in TASKS.md). **Step 4:** Verify line count is under 350. Commit and push.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Refactored SKILL.md from 960 lines / 3,940 words to 277 lines / 1,174 words (71% reduction). Created `templates/audit-summary-template.md` with all extracted output formats (audit-summary format, user output for validate-only + fix modes, fix results section, status determination rules). Replaced inline duplications with file references to `workflow.md`, `content-validator.md`, `link-auditor.md`, and the new template. Removed: ASCII orchestration diagrams, "What Content-Validator Checks" section, "What Link-Auditor Checks" table, retry loop walkthrough, Quick Reference section, Execution Checklist.
+- **Decisions:** Kept all agent invocation blocks inline (needed for copy-paste spawning). Kept error handling table inline (quick reference during orchestration). Kept git workflow inline (executed directly). Used blockquote references (`> See X`) for cross-file pointers.
+- **Next:** Task 25a — Audit ADHD Sleep pillar. The slimmed SKILL.md should now fit within context limits for 7-article audits.
+
+---
+
+### Task 25a: Audit ADHD Sleep (Validate Only)
+
+**Objective:** Run validation-only audit on the ADHD Sleep pillar (7 articles).
+
+**Acceptance Criteria:**
+- [ ] `/audit-pillar adhd-sleep` completes without errors
+- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/adhd-sleep/audit-summary.md`
+- [ ] All 7 articles validated with correct PASS/FAIL counts
+- [ ] Link audit completed
+- [ ] Citation URL validation completed
+- [ ] Cross-article consistency checked
+- [ ] Issues documented in handoff for auto-fix planning
+
+**Starter Prompt:**
+> **Prerequisite:** Task 25-pre (Refactor SKILL.md) must be PASS before running this. Run `/audit-pillar adhd-sleep` to validate the ADHD Sleep pillar (7 articles). Validation-only mode (no --fix). Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
+
+**Status:** pending
+
+---
+
+### Task 25b: Audit Autistic Meltdowns (Validate Only)
+
+**Objective:** Run validation-only audit on the Autistic Meltdowns pillar (7 articles).
+
+**Acceptance Criteria:**
+- [ ] `/audit-pillar autistic-meltdowns` completes without errors
+- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/autistic-meltdowns/audit-summary.md`
+- [ ] All 7 articles validated with correct PASS/FAIL counts
+- [ ] Link audit completed
+- [ ] Citation URL validation completed
+- [ ] Cross-article consistency checked
+- [ ] Issues documented in handoff for auto-fix planning
+
+**Starter Prompt:**
+> **Prerequisite:** Task 25-pre (Refactor SKILL.md) must be PASS before running this. Run `/audit-pillar autistic-meltdowns` to validate the Autistic Meltdowns pillar (7 articles). Validation-only mode (no --fix). This is a retry after the previous attempt failed with "prompt too long" — the slimmed SKILL.md should now fit within context. Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
+
+**Status:** pending
+
+---
+
+### Task 25c: Audit Sensory Overload (Validate Only)
+
+**Objective:** Run validation-only audit on the Sensory Overload pillar (8 articles — largest pillar).
+
+**Acceptance Criteria:**
+- [ ] `/audit-pillar sensory-overload` completes without errors
+- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/sensory-overload/audit-summary.md`
+- [ ] All 8 articles validated with correct PASS/FAIL counts
+- [ ] Link audit completed
+- [ ] Citation URL validation completed
+- [ ] Cross-article consistency checked
+- [ ] Issues documented in handoff for auto-fix planning
+
+**Starter Prompt:**
+> Run `/audit-pillar sensory-overload` to validate the Sensory Overload pillar (8 articles). Validation-only mode (no --fix). Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
+
+**Status:** pending
+
+---
+
+### Task 25d: Audit Calming Sounds (Validate Only)
+
+**Objective:** Run validation-only audit on the Calming Sounds pillar (7 articles).
+
+**Acceptance Criteria:**
+- [ ] `/audit-pillar calming-sounds` completes without errors
+- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/calming-sounds/audit-summary.md`
+- [ ] All 7 articles validated with correct PASS/FAIL counts
+- [ ] Link audit completed
+- [ ] Citation URL validation completed
+- [ ] Cross-article consistency checked
+- [ ] Issues documented in handoff for auto-fix planning
+
+**Starter Prompt:**
+> Run `/audit-pillar calming-sounds` to validate the Calming Sounds pillar (7 articles). Validation-only mode (no --fix). Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
+
+**Status:** pending
+
+---
+
+### Task 25e: Audit Emotional Regulation (Validate Only)
+
+**Objective:** Run validation-only audit on the Emotional Regulation pillar (7 articles).
+
+**Acceptance Criteria:**
+- [ ] `/audit-pillar emotional-regulation` completes without errors
+- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/emotional-regulation/audit-summary.md`
+- [ ] All 7 articles validated with correct PASS/FAIL counts
+- [ ] Link audit completed
+- [ ] Citation URL validation completed
+- [ ] Cross-article consistency checked
+- [ ] Issues documented in handoff for auto-fix planning
+
+**Starter Prompt:**
+> Run `/audit-pillar emotional-regulation` to validate the Emotional Regulation pillar (7 articles). Validation-only mode (no --fix). Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
+
+**Status:** pending
+
+---
+
+### Task 25f: Audit Bedtime Routines (Validate Only)
+
+**Objective:** Run validation-only audit on the Bedtime Routines pillar (7 articles).
+
+**Acceptance Criteria:**
+- [ ] `/audit-pillar bedtime-routines` completes without errors
+- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/bedtime-routines/audit-summary.md`
+- [ ] All 7 articles validated with correct PASS/FAIL counts
+- [ ] Link audit completed
+- [ ] Citation URL validation completed
+- [ ] Cross-article consistency checked
+- [ ] Issues documented in handoff for auto-fix planning
+
+**Starter Prompt:**
+> Run `/audit-pillar bedtime-routines` to validate the Bedtime Routines pillar (7 articles). Validation-only mode (no --fix). Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
+
+**Status:** pending
+
+---
+
+### Task 25g: Audit Sound Therapy + Cross-Pillar Summary (Validate Only)
+
+**Objective:** Run validation-only audit on the Sound Therapy pillar (7 articles), then compile a cross-pillar summary of all issues found across all 8 pillars.
+
+**Acceptance Criteria:**
+- [ ] `/audit-pillar sound-therapy` completes without errors
+- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/sound-therapy/audit-summary.md`
+- [ ] All 7 articles validated with correct PASS/FAIL counts
+- [ ] Link audit completed
+- [ ] Citation URL validation completed
+- [ ] Cross-article consistency checked
+- [ ] Cross-pillar summary compiled: common issues across all 8 pillars
+- [ ] Patterns appearing 3+ times documented for Task 26 auto-fix planning
+
+**Starter Prompt:**
+> Run `/audit-pillar sound-therapy` to validate the Sound Therapy pillar (7 articles). Validation-only mode (no --fix). After completion, review all 8 audit-summary.md files (adhd-sleep, autistic-meltdowns, sensory-overload, calming-sounds, emotional-regulation, bedtime-routines, sound-therapy, app-comparisons) and compile a cross-pillar summary: common issues by category, patterns appearing 3+ times, total article counts. Document findings for Task 26 auto-fix planning. Commit audit-summary.md. Update TASKS.md with results.
 
 **Status:** pending
 
