@@ -330,7 +330,7 @@ You press play. That's it. The sound does the work while you catch your breath.
 
 Sound is powerful on its own. It becomes even more effective as part of a complete routine.
 
-Visual schedules reduce transition anxiety by showing what happens next<!-- LINK NEEDED: 03-visual-bedtime-routine when published -->. ADHD-specific strategies address the racing brain that sound helps anchor<!-- LINK NEEDED: 04-adhd-bedtime-routine when published -->. Autism-specific approaches build the deep predictability that makes sound signals meaningful<!-- LINK NEEDED: 05-autism-bedtime-routine when published -->.
+[Visual schedules reduce transition anxiety](/bedtime-routines/articles/visual-bedtime-routine-neurodivergent-children) by showing what happens next. [ADHD-specific strategies](/bedtime-routines/articles/adhd-bedtime-routine-that-works) address the racing brain that sound helps anchor. [Autism-specific approaches](/bedtime-routines/articles/autism-bedtime-routine-predictability-calm) build the deep predictability that makes sound signals meaningful. And for the [complete framework](/bedtime-routines/articles/complete-guide-bedtime-routines-neurodivergent-children), see our full guide to neurodivergent bedtime routines.
 
 Sound is the core element most parents miss. But it works best alongside other support.
 

@@ -226,11 +226,12 @@ A child whose brain races needs something to land on. A child with transition an
 
 In the articles that follow in this series, we'll cover specific strategies:
 
-- How sound can anchor bedtime routines<!-- LINK NEEDED: 02-sound-based-routine when published -->
-- Visual bedtime routines that reduce transition anxiety<!-- LINK NEEDED: 03-visual-routine when published -->
-- ADHD-specific bedtime strategies<!-- LINK NEEDED: 04-adhd-routine when published -->
-- Autism-specific approaches to bedtime predictability<!-- LINK NEEDED: 05-autism-routine when published -->
-- Managing bedtime anxiety<!-- LINK NEEDED: 06-bedtime-anxiety when published -->
+- [How sound can anchor bedtime routines](/bedtime-routines/articles/sound-based-bedtime-routine-nd-children)
+- [Visual bedtime routines that reduce transition anxiety](/bedtime-routines/articles/visual-bedtime-routine-neurodivergent-children)
+- [ADHD-specific bedtime strategies](/bedtime-routines/articles/adhd-bedtime-routine-that-works)
+- [Autism-specific approaches to bedtime predictability](/bedtime-routines/articles/autism-bedtime-routine-predictability-calm)
+- [Managing bedtime anxiety](/bedtime-routines/articles/bedtime-anxiety-sound-calm-answer)
+- [The complete guide to neurodivergent bedtime routines](/bedtime-routines/articles/complete-guide-bedtime-routines-neurodivergent-children)
 
 For now, remember this: neurodivergent bedtime struggles are real, they're neurological, and they respond to tools that work with your child's brain.
 

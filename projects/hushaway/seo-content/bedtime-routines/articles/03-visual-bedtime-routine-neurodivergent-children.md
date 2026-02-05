@@ -278,7 +278,7 @@ If you don't have a visual schedule yet, start there first. Pictures for the mai
 
 ## Beyond Visual Supports Alone
 
-Visual schedules are wonderful tools. They've helped thousands of neurodivergent children understand and cooperate with bedtime routines. But bedtime visual supports neurodivergent children use work even better when they're not working alone. For more on building a complete approach, see our<!-- LINK NEEDED: complete-guide-bedtime-routines-neurodivergent-children when published --> guide to bedtime routines for neurodivergent children.
+Visual schedules are wonderful tools. They've helped thousands of neurodivergent children understand and cooperate with bedtime routines. But bedtime visual supports neurodivergent children use work even better when they're not working alone. For more on building a complete approach, see our [complete guide to bedtime routines for neurodivergent children](/bedtime-routines/articles/complete-guide-bedtime-routines-neurodivergent-children).
 
 Visuals show what happens next. Sound helps your child's body actually transition.
 

@@ -257,4 +257,4 @@ For an anxious child, that's everything.
 
 **Want to try tonight?** The Open Sanctuary has soundscapes designed specifically for neurodivergent children with bedtime anxiety. Frequencies, ambient sounds, gentle ASMR. No sudden changes. No loops that restart. No silence breaking in at 2am. Just consistent, gentle audio that stays all night, so you don't have to. [Explore The Open Sanctuary](https://hushaway.com/open-sanctuary) and find what helps your child feel safe tonight.
 
-<!-- LINK NEEDED: 07-complete-guide-bedtime-routines-neurodivergent-children when published -->
+For the complete framework covering all aspects of neurodivergent bedtime routines, see our [comprehensive guide](/bedtime-routines/articles/complete-guide-bedtime-routines-neurodivergent-children).

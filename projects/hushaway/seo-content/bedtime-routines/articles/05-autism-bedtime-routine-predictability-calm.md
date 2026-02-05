@@ -344,7 +344,7 @@ This is valuable information about their sensory profile. It means that specific
 
 ### Can I use sound for my autistic child who also has ADHD?
 
-Yes. The approaches overlap significantly. For combined autism and ADHD, the priority is usually reducing transition anxiety first (the autism component), which then makes the racing-brain element (the ADHD component) more manageable. Start with the predictability-focused autism bedtime routine, then adjust based on what you observe<!-- LINK NEEDED: 04-adhd-bedtime-routine when published -->.
+Yes. The approaches overlap significantly. For combined autism and ADHD, the priority is usually reducing transition anxiety first (the autism component), which then makes the racing-brain element (the ADHD component) more manageable. Start with the predictability-focused autism bedtime routine, then adjust based on what you observe. See our [ADHD bedtime routine guide](/bedtime-routines/articles/adhd-bedtime-routine-that-works) for the racing-brain strategies.
 
 ### What volume should the sleep sounds be?
 
