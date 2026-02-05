@@ -34,6 +34,7 @@
 | Task 25: Positioning Angles for Sound Therapy | PASS |
 | Task 26: Execute Sound Therapy Pillar | PASS |
 | Task 27: Start App Comparisons Pillar | PASS |
+| Task 28: Positioning Angles for App Comparisons | PASS |
 
 ---
 
@@ -1241,5 +1242,44 @@
 
 ---
 
+## Task 28: Positioning Angles for App Comparisons
+
+**Objective:** Develop unified positioning for App Comparisons pillar that differentiates through "Designed FOR vs Adapted FOR" messaging.
+
+**Acceptance Criteria:**
+- [x] Market sophistication assessed (Stage 3, mechanism-focused)
+- [x] Primary angle identified for pillar guide ("Designed FOR vs Adapted FOR")
+- [x] Secondary angles for each supporting article (6 articles)
+- [x] Consistency check across all angles
+- [x] Output saved to `app-comparisons/02-positioning.md`
+
+**Starter Prompt:**
+> Run /positioning-angles for App Comparisons pillar. Input: app-comparisons/01-pillar-brief.md + clients/hushaway/profile.md. Focus on: (1) The MASSIVE gap—every competitor adapted mainstream content for ND kids, HushAway is the ONLY platform designed from the ground up; (2) "Designed FOR vs Adapted FOR" as primary angle—completely uncontested territory; (3) Passive listening as zero-demand advantage during dysregulation; (4) Position Big 3 (Moshi, Calm, Headspace) as adapted, then introduce HushAway as designed-first. Maintain parent-to-parent voice.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `app-comparisons/02-positioning.md` with unified positioning framework. Assessed market as Stage 3 (mechanism introducer)—parents have tried Calm, Headspace, Moshi and are skeptical because adapted apps failed their child. They need to understand WHY design origin matters.
+- **Decisions:**
+  - Primary angle: "Designed FOR vs Adapted FOR" — Every competitor adapted mainstream content for ND children. HushAway is the ONLY platform built from the ground up. This angle is completely uncontested.
+  - Unique mechanism has two components:
+    1. **Design Origin Difference:** Adapted apps carry original design assumptions (instruction-following, interaction) that break down for ND children during dysregulation.
+    2. **Zero-Demand Advantage:** Passive listening requires nothing when the child can do nothing.
+  - Secondary angles extend (not repeat) primary:
+    - Article 01: "Design mismatch, not child failure" (foundation, creates demand)
+    - Article 02: "Reviewed through an autism lens" (autism-specific evaluation)
+    - Article 03: "Works WITH the ADHD brain" (ADHD-specific mechanism)
+    - Article 04: "The fourth option you didn't know existed" (conversion driver)
+    - Article 05: "Free AND ND-first" (removes price barrier)
+    - Article 06: "Screen-free without sacrificing depth" (hybrid positioning)
+  - Consistency check passed: All angles reinforce "design origin determines effectiveness"
+  - Potential conflicts identified and resolved: competitor praise vs. positioning, free tier vs. paid value, screen-free advocacy vs. app positioning
+  - Voice: Warm parent-to-parent per client profile throughout
+- **Next:** Execute App Comparisons pillar: run `/execute-pillar` to write all 7 articles with validation, or write articles individually with `/seo-content` following positioning and publishing order from pillar brief.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-05 (Task 27 Start App Comparisons Pillar PASS)*
+*Last updated: 2026-02-05 (Task 28 Positioning Angles for App Comparisons PASS)*
