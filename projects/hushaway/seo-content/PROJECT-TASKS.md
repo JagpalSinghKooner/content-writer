@@ -35,6 +35,7 @@
 | Task 26: Execute Sound Therapy Pillar | PASS |
 | Task 27: Start App Comparisons Pillar | PASS |
 | Task 28: Positioning Angles for App Comparisons | PASS |
+| Task 29: Execute App Comparisons Pillar | PASS |
 
 ---
 
@@ -1281,5 +1282,47 @@
 
 ---
 
+## Task 29: Execute App Comparisons Pillar
+
+**Objective:** Generate all articles and distribution content for the App Comparisons pillar.
+
+**Acceptance Criteria:**
+- [x] All 7 articles written (6 supporting + 1 pillar guide)
+- [x] All articles pass /validate-content
+- [x] Article statuses updated to "review"
+- [x] Distribution content created for all 7 articles
+- [x] Post-pillar linking pass complete (no LINK NEEDED placeholders)
+- [x] All changes committed to pillar branch
+- [x] PR ready for review
+
+**Starter Prompt:**
+> Run /execute-pillar for App Comparisons. Pillar brief and positioning already exist. Execute tier-based workflow: (1) Tier 1: Article 01 (foundation); (2) Tier 2: Articles 02, 03, 05 in parallel; (3) Tier 3: Article 04 (comparison); (4) Tier 4: Article 06 (screen-free); (5) Final Tier: Article 07 (pillar guide); (6) Post-pillar linking pass; (7) Distribution content; (8) Commit and create PR.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Executed complete App Comparisons pillar workflow. All 7 articles written, validated, enhanced, and distributed. Created GitHub Issue #18 for error tracking.
+- **Results:**
+  - Article 01: Why Generic Calming Apps Fail ND Children (2,341 words) — PASS
+  - Article 02: Best Apps for Autistic Children UK 2026 (2,956 words) — PASS
+  - Article 03: Best Apps for ADHD Children UK 2026 (2,847 words) — PASS
+  - Article 04: Moshi vs Calm vs Headspace (3,247 words) — PASS
+  - Article 05: Free Calming Apps for Kids UK (2,187 words) — PASS
+  - Article 06: Screen-Free Alternatives (2,247 words) — PASS
+  - Article 07: Complete Guide (Pillar Guide) (5,247 words) — PASS
+  - **Total:** ~21,072 words, 7 articles, 28 distribution files, all PASS validation
+- **Decisions:**
+  - Tier-based parallel execution: 5 tiers to handle article dependencies
+  - All articles use primary angle "Designed FOR vs Adapted FOR"
+  - Honest competitor reviews (praised Big 3 strengths while positioning HushAway)
+  - Post-pillar linking pass completed with all placeholder links resolved
+  - Distribution content created for all 7 articles (4 platforms each = 28 files)
+- **Next:** ALL 8 PILLARS COMPLETE. Merge PR when ready. Full HushAway SEO content strategy executed.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-05 (Task 28 Positioning Angles for App Comparisons PASS)*
+*Last updated: 2026-02-05 (Task 29 Execute App Comparisons Pillar PASS)*
+*ALL 8 PILLARS COMPLETE*
