@@ -13,7 +13,7 @@
 | Task 25-pre2: Create Consistency-Checker Agent | PASS |
 | Task 25a: Audit ADHD Sleep (Validate Only) | PASS |
 | Task 25b: Audit Autistic Meltdowns (Validate Only) | PASS |
-| Task 25c: Audit Sensory Overload (Validate Only) | pending |
+| Task 25c: Audit Sensory Overload (Validate Only) | PASS |
 | Task 25d: Audit Calming Sounds (Validate Only) | pending |
 | Task 25e: Audit Emotional Regulation (Validate Only) | pending |
 | Task 25f: Audit Bedtime Routines (Validate Only) | pending |
@@ -306,18 +306,25 @@
 **Objective:** Run validation-only audit on the Sensory Overload pillar (8 articles — largest pillar).
 
 **Acceptance Criteria:**
-- [ ] `/audit-pillar sensory-overload` completes without errors
-- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/sensory-overload/audit-summary.md`
-- [ ] All 8 articles validated with correct PASS/FAIL counts
-- [ ] Link audit completed
-- [ ] Citation URL validation completed
-- [ ] Cross-article consistency checked
-- [ ] Issues documented in handoff for auto-fix planning
+- [x] `/audit-pillar sensory-overload` completes without errors
+- [x] `audit-summary.md` created at `projects/hushaway/seo-content/sensory-overload/audit-summary.md`
+- [x] All 8 articles validated with correct PASS/FAIL counts
+- [x] Link audit completed
+- [x] Citation URL validation completed
+- [x] Cross-article consistency checked
+- [x] Issues documented in handoff for auto-fix planning
 
 **Starter Prompt:**
 > Run `/audit-pillar sensory-overload` to validate the Sensory Overload pillar (8 articles). Validation-only mode (no --fix). Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Ran full 8-phase audit on Sensory Overload pillar (8 articles, 23,449 words). Phase 2: 8 content-validator agents in parallel (0 PASS, 8 FAIL). Phase 3: link-auditor agent found 50 format violations + 5 broken slug references + 7 missing bidirectional guide links. Phase 4: 19 citation URLs checked (11 working, 4 WARN from NCBI/PMC 403 bot-blocking, 4 FAIL from NHS/NAS/Understood.org/Frontiers 404). Phase 5: consistency-checker agent returned PASS (0 terminology issues, 0 conflicting claims, all 8 articles Strong positioning alignment). Phase 6: audit-summary.md written with all required sections.
+- **Decisions:** All 8 articles FAIL primarily due to systematic internal link format violations (50 instances of directory structure instead of `/{slug}` format) and slug number prefixes in frontmatter. Article 01 has unique broken link pattern (uses `/sensory-overload/{partial-slug}` instead of directory path). NCBI/PMC 403s marked WARN (bot-blocking, not broken). 4 broken citation URLs need replacement: NHS sensory-processing-disorder (Art 01, 08), NAS after-school-restraint-collapse (Art 04), Understood.org sensory-diet (Art 06), Frontiers fpsyg.2020.574461 (Art 07). New pattern: 0/7 supporting articles link back to pillar guide.
+- **Next:** Task 25d (Audit Calming Sounds). For Task 26 (auto-fix): All 8 articles need link format fix (`/{slug}` only). 8 slug number prefixes need removal. 5 broken slug references need correction. 7 missing bidirectional guide links need adding. 4 broken citation URLs need replacement.
 
 ---
 
