@@ -29,6 +29,7 @@
 | Task 20: Execute Emotional Regulation Pillar | PASS |
 | Task 21: Start Bedtime Routines Pillar | PASS |
 | Task 22: Positioning Angles for Bedtime Routines | PASS |
+| Task 23: Execute Bedtime Routines Pillar | PASS |
 
 ---
 
@@ -1038,5 +1039,46 @@
 
 ---
 
+## Task 23: Execute Bedtime Routines Pillar
+
+**Objective:** Generate all articles and distribution content for the Bedtime Routines pillar.
+
+**Acceptance Criteria:**
+- [x] All 7 articles written (6 supporting + 1 pillar guide)
+- [x] All articles pass /validate-content
+- [x] Article statuses updated to "review"
+- [x] Distribution content created for all 7 articles
+- [x] Post-pillar linking pass complete (no LINK NEEDED placeholders)
+- [x] All changes committed to pillar branch
+- [x] PR #15 ready for review
+
+**Starter Prompt:**
+> Run /execute-pillar for Bedtime Routines. Pillar brief and positioning already exist. Execute tier-based workflow: (1) Create pillar branch and error tracking; (2) Tier 1: Article 01 (foundation); (3) Tier 2: Article 02 (conversion driver); (4) Tier 3: Articles 03, 04, 05 in parallel; (5) Tier 4: Article 06 (anxiety); (6) Final Tier: Article 07 (pillar guide); (7) Post-pillar linking pass; (8) Commit and create PR.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Executed complete Bedtime Routines pillar workflow. All 7 articles written, validated, and distributed. Created GitHub Issue #14 for error tracking (closed, no errors). Created PR #15 (ready for review).
+- **Results:**
+  - Article 01: Why Bedtime is Harder for ND Children (2,456 words) — PASS
+  - Article 02: Sound-Based Bedtime Routine (2,698 words) — PASS
+  - Article 03: Visual Bedtime Routine (2,234 words) — PASS
+  - Article 04: ADHD Bedtime Routine (2,847 words) — PASS
+  - Article 05: Autism Bedtime Routine (2,847 words) — PASS
+  - Article 06: Bedtime Anxiety (2,412 words) — PASS
+  - Article 07: Complete Guide (Pillar Guide) (5,012 words) — PASS
+  - **Total:** ~20,506 words, 7 articles, 28 distribution files, all PASS validation
+- **Decisions:**
+  - Tier-based parallel execution: 5 tiers to handle article dependencies
+  - All articles use primary angle "Sound as THE Core Element"
+  - Zero errors requiring escalation (minor fixes resolved during execution)
+  - Post-pillar linking pass completed with all placeholder links resolved
+  - Pillar status updated to ✅ Complete in keyword brief
+- **Next:** Merge PR #15 when ready. First 6 priority pillars (ADHD Sleep, Autistic Meltdowns, Sensory Overload, Calming Sounds, Emotional Regulation, Bedtime Routines) are now complete. Continue with Pillar 7 (Sound Therapy) if desired.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-05 (Task 22 Positioning Angles for Bedtime Routines PASS)*
+*Last updated: 2026-02-05 (Task 23 Execute Bedtime Routines Pillar PASS)*
