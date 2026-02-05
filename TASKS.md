@@ -10,6 +10,7 @@
 | Task 23: Test on Single Pillar (Validate Only) | PASS |
 | Task 24: Test Auto-Fix Mode | PASS |
 | Task 25-pre: Refactor Audit-Pillar SKILL.md (Slim for Context) | PASS |
+| Task 25-pre2: Create Consistency-Checker Agent | pending |
 | Task 25a: Audit ADHD Sleep (Validate Only) | PASS |
 | Task 25b: Audit Autistic Meltdowns (Validate Only) | pending |
 | Task 25c: Audit Sensory Overload (Validate Only) | pending |
@@ -232,6 +233,46 @@
 
 ---
 
+### Task 25-pre2: Create Consistency-Checker Agent
+
+**Objective:** Build a `consistency-checker` agent that offloads Phase 5 (Cross-Article Consistency) from the audit-pillar main session into its own context window.
+
+**Acceptance Criteria:**
+- [x] Created `.claude/agents/consistency-checker.md` following link-auditor/content-validator pattern
+- [x] YAML frontmatter: name, description, tools (Read, Glob, Grep, Write), disallowedTools (Edit, Bash), model (sonnet)
+- [x] Agent reads positioning.md + client profile for marketing context (angles, terminology, brand voice)
+- [x] Agent reads all articles in the pillar
+- [x] Agent checks: terminology consistency (profile terms vs actual usage), conflicting claims (statistics/percentages across articles), positioning alignment (intro/conclusion vs assigned angle, rated Strong/Moderate/Weak)
+- [x] File-based output: writes `{pillar}/consistency-check.md` on FAIL, deletes on PASS
+- [x] Returns: `PASS` or `FAIL, {term_issues}, {claim_issues}, {alignment_issues}, {pillar}/consistency-check.md`
+- [x] Updated SKILL.md Phase 5: spawn consistency-checker agent instead of running in main session
+- [x] Updated SKILL.md Phase 6: read `{pillar}/consistency-check.md` for cross-article findings
+- [x] Updated SKILL.md Critical Constraint #6: "Cross-article consistency runs as consistency-checker agent"
+- [x] Added `consistency-checker` to Agents table in `.claude/CLAUDE.md`
+- [ ] Git commit created and pushed
+
+**Starter Prompt:**
+> Create the `consistency-checker` agent and update the audit-pillar skill to use it. Task 25b (autistic-meltdowns audit) failed with "prompt too long" because Phase 5 loads all 7 articles into main session context (~23K tokens). This agent moves that work into its own context window.
+>
+> **Step 1: Create agent.** Write `.claude/agents/consistency-checker.md` modelled after `.claude/agents/link-auditor.md` (same architecture: YAML frontmatter, read-only, file-based output, minimal return format). The agent checks cross-article consistency for a pillar: (1) Terminology consistency - extract key terms from positioning.md and profile, scan all articles for variations or prohibited terms; (2) Conflicting claims - extract statistics/percentages/recommendations across articles, flag contradictions; (3) Positioning alignment - check each article's intro/conclusion against its assigned angle from positioning.md (rate Strong/Moderate/Weak). Reads: all articles in pillar, positioning.md, client profile, universal-rules.md (terminology section). Writes: `{pillar}/consistency-check.md` on FAIL. Returns: `PASS` or `FAIL, {term_issues}, {claim_issues}, {alignment_issues}, {file_path}`.
+>
+> **Step 2: Update SKILL.md.** Edit `.claude/skills/audit-pillar/SKILL.md`: (a) Phase 5 - change from "Runs in main session" to spawn consistency-checker agent with invocation block; (b) Phase 6 - add step to read `{pillar}/consistency-check.md` for cross-article findings; (c) Critical Constraint #6 - change to "Cross-article consistency runs as consistency-checker agent".
+>
+> **Step 3: Update CLAUDE.md.** Add `consistency-checker` to the Agents table in `.claude/CLAUDE.md`.
+>
+> **Step 4: Commit and push.**
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created consistency-checker agent at `.claude/agents/consistency-checker.md`. Updated audit-pillar SKILL.md: Phase 5 now spawns consistency-checker agent instead of running in main session, Phase 6 reads `consistency-check.md` for cross-article findings, Critical Constraint #6 updated. Added consistency-checker to CLAUDE.md agents table (now 6 agents).
+- **Decisions:** Modelled after link-auditor.md architecture (YAML frontmatter, read-only, file-based output, minimal return). Three check categories: terminology (product names, prohibited terms, variations), conflicting claims (statistics, recommendations, definitions), positioning alignment (Strong/Moderate/Weak rating). Weak alignment is FAIL, moderate is WARN.
+- **Next:** Task 25b (Audit Autistic Meltdowns) can now proceed with consistency-checker agent handling Phase 5.
+
+---
+
 ### Task 25b: Audit Autistic Meltdowns (Validate Only)
 
 **Objective:** Run validation-only audit on the Autistic Meltdowns pillar (7 articles).
@@ -242,11 +283,12 @@
 - [ ] All 7 articles validated with correct PASS/FAIL counts
 - [ ] Link audit completed
 - [ ] Citation URL validation completed
-- [ ] Cross-article consistency checked
+- [ ] Cross-article consistency checked (via consistency-checker agent)
+- [ ] Session completes fully (commit + TASKS.md update within context)
 - [ ] Issues documented in handoff for auto-fix planning
 
 **Starter Prompt:**
-> **Prerequisite:** Task 25-pre (Refactor SKILL.md) must be PASS before running this. Run `/audit-pillar autistic-meltdowns` to validate the Autistic Meltdowns pillar (7 articles). Validation-only mode (no --fix). This is a retry after the previous attempt failed with "prompt too long" — the slimmed SKILL.md should now fit within context. Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
+> **Prerequisite:** Task 25-pre2 (Create Consistency-Checker Agent) must be PASS before running this. First, delete stale files from the failed previous attempt: `projects/hushaway/seo-content/autistic-meltdowns/audit-summary.md`, `link-audit.md`, and all `.validation.md` files in `articles/`. Then run `/audit-pillar autistic-meltdowns` to validate the Autistic Meltdowns pillar (7 articles). Validation-only mode (no --fix). Phase 5 now uses the consistency-checker agent instead of main session. Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
 
 **Status:** pending
 

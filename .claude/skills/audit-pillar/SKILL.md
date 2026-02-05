@@ -40,7 +40,7 @@ Do NOT use when:
 3. **Parallel validation** — Spawn all validators for a pillar simultaneously
 4. **Max 3 retry attempts** — Per article validation failure before escalation
 5. **Link/citation issues cannot auto-fix** — Always escalated for manual review
-6. **Cross-article consistency runs in main session** — Requires comparing multiple articles
+6. **Cross-article consistency runs as consistency-checker agent** — Offloaded to its own context window to avoid main session overflow
 
 ---
 
@@ -127,11 +127,22 @@ Runs in main session via Bash (no agent needed).
 
 ## Phase 5: Cross-Article Consistency
 
-Runs in main session (requires comparing multiple articles).
+Spawn one `consistency-checker` agent for the pillar.
 
-1. **Terminology consistency:** Extract key terms from positioning.md, scan all articles for variations
-2. **Conflicting claims:** Extract statistics/percentages/recommendations, compare across articles
-3. **Positioning alignment:** Check each article's intro/conclusion against its assigned angle (Strong/Moderate/Weak)
+```
+subagent_type: consistency-checker
+
+Task: Check cross-article consistency for pillar at {pillar_path}
+
+Inputs:
+- Pillar path: projects/hushaway/seo-content/{pillar}
+- Client profile: clients/hushaway/profile.md
+- Positioning: projects/hushaway/seo-content/{pillar}/02-positioning.md
+
+Expected Return: PASS or FAIL, {term_issues}, {claim_issues}, {alignment_issues}, {pillar}/consistency-check.md
+```
+
+> For consistency-checker check details, see `.claude/agents/consistency-checker.md`
 
 ---
 
@@ -142,7 +153,7 @@ Compile all results into `{pillar}/audit-summary.md`.
 1. Collect validation returns (PASS/FAIL + counts)
 2. Merge link audit findings
 3. Merge citation URL results
-4. Add cross-article consistency findings
+4. Read `{pillar}/consistency-check.md` for cross-article findings (if consistency-checker returned FAIL)
 5. Categorise issues by type
 6. Identify patterns (3+ occurrences)
 7. Write audit-summary.md
@@ -273,5 +284,6 @@ git push
 - `agents/content-validator.md` — Validation agent spec
 - `agents/copy-enhancer.md` — Auto-fix agent spec
 - `agents/link-auditor.md` — Link audit agent spec
+- `agents/consistency-checker.md` — Cross-article consistency agent spec
 - `skills/audit-pillar/templates/audit-summary-template.md` — Output format templates
 - `clients/hushaway/profile.md` — Brand voice

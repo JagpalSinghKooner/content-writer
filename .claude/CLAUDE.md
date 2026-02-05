@@ -515,7 +515,7 @@ Steps 4-7 of the content workflow (seo-content, direct-response-copy, validate-c
 
 ## Agents
 
-Four agents handle the automated content generation workflow (Steps 4-7). The main session orchestrates all agent execution.
+Six agents handle the automated content generation and audit workflows. The main session orchestrates all agent execution.
 
 | Agent | Purpose | Auto-Triggers On |
 |-------|---------|------------------|
@@ -524,6 +524,7 @@ Four agents handle the automated content generation workflow (Steps 4-7). The ma
 | **content-validator** | Check rules + quality (read-only) | After enhancement (automatic), "Validate this article" |
 | **content-atomizer** | Create platform distribution | "Create distribution content", "Atomize this article" |
 | **link-auditor** | Audit internal links across a pillar | After pillar complete, "Audit links in this pillar" |
+| **consistency-checker** | Check cross-article consistency across a pillar | During audit, "Check consistency across pillar" |
 
 **Agent Files:** Located in `.claude/agents/`
 
