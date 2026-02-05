@@ -4,65 +4,169 @@
 
 | Task | Status |
 |------|--------|
-| Task 20: Create audit-pillar Skill | pending |
-| Task 21: Test audit-pillar on Single Pillar | pending |
-| Task 22: Run Full Audit Across All Pillars | pending |
+| Task 20: Create Link-Auditor Agent | PASS |
+| Task 21: Create Audit-Pillar Skill | pending |
+| Task 22: Update CLAUDE.md and Cleanup | pending |
+| Task 23: Test on Single Pillar (Validate Only) | pending |
+| Task 24: Test Auto-Fix Mode | pending |
+| Task 25: Full Audit All Pillars (Validate Only) | pending |
+| Task 26: Auto-Fix All Pillars + Extract Patterns | pending |
 
 ---
 
-## Task 20: Create audit-pillar Skill
+## Task 20: Create Link-Auditor Agent
 
-**Objective:** Create the `/audit-pillar` skill that re-validates existing content against current rules.
+**Objective:** Build the `link-auditor` agent that validates internal links, checks URL formats, identifies stale placeholders, and analyses cross-pillar link coverage.
 
 **Acceptance Criteria:**
-- [ ] Created `.claude/skills/audit-pillar/SKILL.md` with full skill definition
-- [ ] Skill follows execute-pillar orchestration pattern (main session spawns agents)
-- [ ] Supports `{pillar-name}` parameter for single pillar
-- [ ] Supports `--fix` flag for auto-fix mode
-- [ ] Supports `--all` flag for all pillars
-- [ ] Generates `audit-summary.md` in pillar directory
-- [ ] Updated CLAUDE.md skills table with `/audit-pillar`
-- [ ] Deleted `audit-pillar.md` spec file from root (absorbed into skill)
+- [x] Created `.claude/agents/link-auditor.md` with complete agent specification
+- [x] YAML frontmatter includes: name, description, tools (Read, Glob, Grep, Write), disallowedTools (Edit, Bash), model (sonnet)
+- [x] Agent reads all articles in a pillar and extracts internal links from frontmatter and content
+- [x] Agent validates internal link URL format (must be `/{slug}`, not file paths)
+- [x] Agent detects broken links (href points to non-existent article)
+- [x] Agent identifies stale placeholders (`<!-- LINK NEEDED: ... -->` for articles that now exist)
+- [x] Agent analyses cross-pillar links (outbound and inbound)
+- [x] Agent verifies bidirectional pillar guide links (guide→supporting, supporting→guide)
+- [x] Agent returns: `PASS` or `FAIL, {broken_count}, {format_count}, {placeholder_count}, {pillar}/link-audit.md`
+- [x] On FAIL, agent writes detailed `link-audit.md` report with line-specific issues
 
 **Starter Prompt:**
-> Create the `/audit-pillar` skill following the specification in `audit-pillar.md` at repo root. Use the orchestration pattern from `.claude/skills/execute-pillar/SKILL.md`. The skill spawns content-validator agents in parallel for all articles, aggregates results into `audit-summary.md`, and optionally runs copy-enhancer fix loops. Reference `.claude/agents/content-validator.md` and `.claude/agents/copy-enhancer.md` for agent return formats. After creating the skill, add it to the skills table in `.claude/CLAUDE.md` and delete the root spec file.
+> Create the link-auditor agent at `.claude/agents/link-auditor.md` following the specification in `audit-pillar.md` (Link-Auditor Agent Specification section). Model the structure after `.claude/agents/content-validator.md` (another read-only auditing agent). The agent must extract internal links from both frontmatter `internal_links` arrays and markdown link syntax in content. Use Grep to find placeholder comments. Validate URL format against Rule 5a in `universal-rules.md` (must be `/{slug}` format). Write comprehensive link-audit.md reports on FAIL with line numbers and specific fixes.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `.claude/agents/link-auditor.md` with full 7-step workflow: read pillar structure, build slug registry (all pillars), extract links from 3 sources (frontmatter, markdown, placeholders), validate URL format (Rule 5a), check broken links, analyse cross-pillar coverage, verify bidirectional guide links. Includes complete link-audit.md report template with line-specific issues and fixes.
+- **Decisions:** Modelled after content-validator.md structure (read-only, file-based output, minimal return format). URL format detection uses 3 checks: multiple path segments, file extension, number prefix. Cross-pillar analysis reads all other pillar slugs for complete registry. Severity levels match audit-pillar.md spec exactly.
+- **Next:** Task 21 — Create the `/audit-pillar` skill at `.claude/skills/audit-pillar/SKILL.md` that orchestrates this agent alongside content-validator and copy-enhancer.
+
+---
+
+## Task 21: Create Audit-Pillar Skill
+
+**Objective:** Build the `/audit-pillar` skill orchestration workflow that re-validates existing content, checks link integrity, validates citation URLs, and optionally auto-fixes issues.
+
+**Acceptance Criteria:**
+- [ ] Created `.claude/skills/audit-pillar/SKILL.md` with complete skill definition
+- [ ] YAML frontmatter includes: name, description with trigger phrases
+- [ ] Skill supports `{pillar-name}` parameter for single pillar validation
+- [ ] Skill supports `--all` flag for all pillars
+- [ ] Skill supports `--fix` flag for auto-fix mode
+- [ ] Phase 1: Discovery — Parses args, finds articles, loads context files
+- [ ] Phase 2: Parallel Validation — Spawns content-validator for each article in parallel
+- [ ] Phase 3: Link Audit — Spawns link-auditor agent
+- [ ] Phase 4: Citation URL Validation — Runs bash HTTP HEAD requests on external citations
+- [ ] Phase 5: Cross-Article Consistency — Runs in main session (terminology, conflicting claims, positioning alignment)
+- [ ] Phase 6: Aggregation — Compiles all results into `audit-summary.md`
+- [ ] Phase 7: Auto-Fix (if --fix) — Retry loop spawning copy-enhancer (max 3 attempts)
+- [ ] Phase 8: Report — Outputs summary to user with escalated issues
+- [ ] Follows execute-pillar orchestration pattern (main session spawns all agents)
+- [ ] Uses file-based issue passing (validation files, not content in prompts)
+
+**Starter Prompt:**
+> Create the `/audit-pillar` skill at `.claude/skills/audit-pillar/SKILL.md` following the complete specification in `audit-pillar.md` at repo root. Model the orchestration pattern after `.claude/skills/execute-pillar/SKILL.md` (main session spawns all agents). Implement all 8 phases: Discovery, Parallel Validation (spawn content-validator for all articles), Link Audit (spawn link-auditor), Citation URL Validation (bash HTTP HEAD requests), Cross-Article Consistency (runs in main session), Aggregation (write audit-summary.md), Auto-Fix (retry loop with copy-enhancer if --fix flag), and Report. Reference `.claude/agents/content-validator.md` and `.claude/agents/copy-enhancer.md` for agent return formats. Ensure the retry loop reads validation file paths (not content) to prevent context overflow.
 
 **Status:** pending
 
 ---
 
-## Task 21: Test audit-pillar on Single Pillar
+## Task 22: Update CLAUDE.md and Cleanup
 
-**Objective:** Validate the skill works correctly on one pillar before running across all.
+**Objective:** Add `/audit-pillar` to the skills table in CLAUDE.md and remove the root spec file.
 
 **Acceptance Criteria:**
-- [ ] `/audit-pillar adhd-sleep` completes without error
-- [ ] `adhd-sleep/audit-summary.md` created with correct format
+- [ ] Added `/audit-pillar` to Skills table in `.claude/CLAUDE.md` with description "Re-validate existing content against current rules"
+- [ ] Added `link-auditor` to Agents table in `.claude/CLAUDE.md`
+- [ ] Deleted `audit-pillar.md` from repository root (spec absorbed into skill)
+- [ ] Git commit created and pushed
+
+**Starter Prompt:**
+> Update `.claude/CLAUDE.md`: add `/audit-pillar` to the Skills table with description "Re-validate existing content against current rules", and add `link-auditor` to the Agents table with description "Audit internal links across a pillar". Then delete the `audit-pillar.md` specification file from the repository root (the spec has been absorbed into the skill and agent files). Commit and push.
+
+**Status:** pending
+
+---
+
+## Task 23: Test on Single Pillar (Validate Only)
+
+**Objective:** Verify `/audit-pillar` works correctly in validation-only mode on one pillar before testing auto-fix or running across all pillars.
+
+**Acceptance Criteria:**
+- [ ] `/audit-pillar app-comparisons` completes without errors
+- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/app-comparisons/audit-summary.md`
 - [ ] All 7 articles validated with correct PASS/FAIL counts
-- [ ] Issue categories correctly aggregated
-- [ ] `/audit-pillar adhd-sleep --fix` runs retry loop correctly
-- [ ] Validation files deleted after PASS
+- [ ] Link audit report generated (if link issues found)
+- [ ] Citation URL validation completed for all external citations
+- [ ] Cross-article consistency checks executed
+- [ ] Issue categories correctly aggregated in audit-summary.md
+- [ ] Summary format matches specification in `audit-pillar.md`
 
 **Starter Prompt:**
-> Run `/audit-pillar adhd-sleep` to test the skill on the ADHD Sleep pillar (7 articles). Verify the audit-summary.md is created at `projects/hushaway/seo-content/adhd-sleep/audit-summary.md`. Check that all articles are validated and results match expected format. Then run `/audit-pillar adhd-sleep --fix` to test the auto-fix workflow. Confirm retry loop works (max 3 attempts) and validation files are cleaned up on PASS.
+> Run `/audit-pillar app-comparisons` to test the skill on the App Comparisons pillar (7 articles, most recently completed). This is validation-only mode (no --fix flag). Verify audit-summary.md is created with all required sections: Article Results table, Issue Categories, Link Audit Summary, External Citations, Frontmatter Accuracy, and Cross-Article Consistency. Check that content-validator agents spawned in parallel for all 7 articles. Verify link-auditor ran and produced either PASS or a link-audit.md report. Confirm citation URL checks ran. Review aggregated results for accuracy.
 
 **Status:** pending
 
 ---
 
-## Task 22: Run Full Audit Across All Pillars
+## Task 24: Test Auto-Fix Mode
 
-**Objective:** Audit all 4 HushAway pillars and fix any issues found.
+**Objective:** Verify the auto-fix retry loop works correctly when validation issues are found.
 
 **Acceptance Criteria:**
-- [ ] `/audit-pillar --all` validates all 29 articles across 4 pillars
-- [ ] Each pillar has `audit-summary.md` with results
-- [ ] `/audit-pillar --all --fix` fixes all fixable issues
-- [ ] Any escalated articles (3+ failures) documented
-- [ ] Patterns extracted to `common-mistakes.md` if 3+ occurrences
-- [ ] Git commit with all fixes
+- [ ] `/audit-pillar app-comparisons --fix` runs retry loop for FAIL articles
+- [ ] Copy-enhancer spawned with validation file paths (not content in prompt)
+- [ ] Retry loop executes max 3 attempts per article
+- [ ] Validation files deleted after PASS
+- [ ] Articles that PASS after retry marked "Fixed" in audit-summary.md
+- [ ] Articles that fail 3 times marked "Escalated" with issues listed
+- [ ] Link/citation issues correctly escalated (not auto-fixed)
+- [ ] Audit-summary.md shows Fix Results section with attempt counts
+- [ ] Git commit created after successful fixes
 
 **Starter Prompt:**
-> Run `/audit-pillar --all` to validate all HushAway pillars: adhd-sleep (7), autistic-meltdowns (7), calming-sounds (7), sensory-overload (8). Review all audit-summary.md files. Then run `/audit-pillar --all --fix` to auto-fix issues. Document any escalated articles. Extract recurring patterns (3+ occurrences) to `.claude/rules/common-mistakes.md`. Commit all changes with message "Audit all pillars against current rules".
+> Run `/audit-pillar app-comparisons --fix` to test the auto-fix workflow on the App Comparisons pillar. Verify the retry loop: for each FAIL article, main session spawns copy-enhancer with the validation file path, then re-validates. Check loop runs max 3 attempts per article before escalation. Confirm validation files deleted after PASS. Verify link and citation issues are escalated (not auto-fixed). Review audit-summary.md Fix Results section. Commit fixed articles.
+
+**Status:** pending
+
+---
+
+## Task 25: Full Audit All Pillars (Validate Only)
+
+**Objective:** Run validation-only audit across all 8 HushAway pillars to establish baseline before attempting fixes.
+
+**Acceptance Criteria:**
+- [ ] `/audit-pillar --all` validates all 57 articles across 8 pillars
+- [ ] Each pillar has `audit-summary.md` with complete results
+- [ ] Link audit identifies all broken links, incorrect URL formats, and stale placeholders
+- [ ] Citation URL validation catches all 4xx/5xx errors and redirects
+- [ ] Cross-article consistency checks identify terminology variations and conflicting claims
+- [ ] Common issues (3+ occurrences) flagged for pattern extraction
+- [ ] No orchestration failures or context overflow
+
+**Starter Prompt:**
+> Run `/audit-pillar --all` to validate all 8 HushAway pillars: adhd-sleep (7), autistic-meltdowns (7), calming-sounds (7), sensory-overload (8), emotional-regulation (7), bedtime-routines (7), sound-therapy (7), app-comparisons (7). Total: 57 articles. Validation-only mode to establish baseline. Review all 8 audit-summary.md files. Identify common patterns across pillars (same issue appearing 3+ times). Document all issues found for planning the auto-fix run.
+
+**Status:** pending
+
+---
+
+## Task 26: Auto-Fix All Pillars + Extract Patterns
+
+**Objective:** Run auto-fix mode across all pillars, fix validation issues, and extract recurring patterns to common-mistakes.md.
+
+**Acceptance Criteria:**
+- [ ] `/audit-pillar --all --fix` fixes all fixable issues across 8 pillars
+- [ ] Link/citation issues escalated for manual review (documented in audit-summary.md)
+- [ ] Articles failing 3+ validation attempts escalated with reasons documented
+- [ ] Recurring patterns (3+ occurrences) extracted to `.claude/rules/common-mistakes.md`
+- [ ] Each extracted pattern includes: pattern name, count, source pillars, example
+- [ ] Git commits created for each pillar's fixes
+- [ ] Escalated articles documented in central summary for user review
+- [ ] Post-fix validation confirms all auto-fixed articles now PASS
+
+**Starter Prompt:**
+> Run `/audit-pillar --all --fix` to auto-fix validation issues across all 8 HushAway pillars. Monitor the retry loop for each failing article (max 3 attempts via copy-enhancer). Document escalated articles (failed after 3 attempts or link/citation issues). After all pillars complete, review all audit-summary.md files and extract recurring patterns (3+ occurrences) to `.claude/rules/common-mistakes.md` using the Issue extraction template. Create git commits for each pillar's fixes. Compile final summary of escalated issues requiring manual review.
 
 **Status:** pending
