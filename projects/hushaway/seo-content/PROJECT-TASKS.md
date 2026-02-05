@@ -30,6 +30,7 @@
 | Task 21: Start Bedtime Routines Pillar | PASS |
 | Task 22: Positioning Angles for Bedtime Routines | PASS |
 | Task 23: Execute Bedtime Routines Pillar | PASS |
+| Task 24: Start Sound Therapy Pillar | PASS |
 
 ---
 
@@ -1080,5 +1081,47 @@
 
 ---
 
+## Task 24: Start Sound Therapy Pillar
+
+**Objective:** Create pillar brief for Sound Therapy for Children with competitor analysis and content plan.
+
+**Acceptance Criteria:**
+- [x] Extract Sound Therapy pillar from keyword brief
+- [x] Run deep competitor analysis with Perplexity (DR estimates + content depth)
+- [x] Identify content gaps and angle opportunities
+- [x] Create article outline for pillar guide + supporting articles
+- [x] Output saved to `sound-therapy/01-pillar-brief.md`
+
+**Starter Prompt:**
+> Run /start-pillar for Sound Therapy. Extract the pillar from 00-keyword-brief.md. Focus on: (1) Deep competitor analysis of Soundsory, SSP providers, Harley Row Clinic, The Calm Collective, The London Sound Healer, and Tomatis/AIT providers; (2) Identify the MASSIVE evidence transparency gap—NO competitor honestly discusses what research supports and what it doesn't; (3) Plan 7 articles covering: understanding sound therapy, evidence assessment, binaural beats safety, solfeggio frequencies, home sound therapy, sound vs music therapy, pillar guide. Position HushAway as the ONLY honest, evidence-transparent, ND-first sound therapy resource.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `sound-therapy/01-pillar-brief.md` with all 8 sections: strategic context, keyword table (20 keywords mapped), competitor analysis (6 UK competitors with DR estimates), content plan (7 articles: 6 supporting + 1 pillar guide), angle opportunities (5 identified), internal linking map, publishing order, and key messaging.
+- **Decisions:**
+  - **CRITICAL GAP CONFIRMED:** Perplexity research across 6 major UK competitor types revealed:
+    - ALL competitors are either service-based (require practitioners) or program-specific (only cover their methodology)
+    - NO competitor provides comprehensive parent education on sound therapy generally
+    - NO competitor honestly discusses evidence limitations (especially weak Tomatis/AIT evidence)
+    - NO competitor offers passive listening guidance for home use
+  - **Primary angle:** "The Evidence Gap" — Be the ONLY resource that honestly discusses what research supports and what it doesn't. Tomatis/AIT evidence is weak; binaural beats evidence is limited to adults. Transparency builds trust.
+  - **Secondary angle:** "No Practitioner Required" — All clinical competitors require expensive practitioner involvement. Position accessible home-based support.
+  - **Top competitors identified:**
+    - Soundsory (DR 45-60): Technology platform, bone conduction + movement, program-specific only
+    - SSP Providers (DR 40-60): Polyvagal Theory based, evidence-backed, but requires practitioner
+    - Harley Row Clinic (DR 35-50): Functional medicine, "exercise for the ear," geographic limits
+    - The Calm Collective (DR 30-45): Schools focus, not parent-facing
+    - Tomatis/AIT (DR 30-50): WEAK EVIDENCE BASE, very expensive (£1,200-2,000), vulnerable to honest positioning
+  - **7 articles planned:** 6 supporting + 1 pillar guide (publishes last)
+  - **Article 01** "Understanding Sound Therapy" is foundation — defines terms and categories
+  - **Article 02** "Does Sound Therapy Work?" is trust-builder — honest evidence assessment
+  - **Article 05** "Sound Therapy at Home" is conversion driver — direct commercial intent
+- **Next:** Run `/positioning-angles` to develop unified positioning for all 7 articles. Primary angle established ("The Evidence Gap"); need secondary angles per article and consistency check.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-05 (Task 23 Execute Bedtime Routines Pillar PASS)*
+*Last updated: 2026-02-05 (Task 24 Start Sound Therapy Pillar PASS)*
