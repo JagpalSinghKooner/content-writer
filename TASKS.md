@@ -10,7 +10,7 @@
 | Task 23: Test on Single Pillar (Validate Only) | PASS |
 | Task 24: Test Auto-Fix Mode | PASS |
 | Task 25-pre: Refactor Audit-Pillar SKILL.md (Slim for Context) | PASS |
-| Task 25a: Audit ADHD Sleep (Validate Only) | pending |
+| Task 25a: Audit ADHD Sleep (Validate Only) | PASS |
 | Task 25b: Audit Autistic Meltdowns (Validate Only) | pending |
 | Task 25c: Audit Sensory Overload (Validate Only) | pending |
 | Task 25d: Audit Calming Sounds (Validate Only) | pending |
@@ -210,18 +210,25 @@
 **Objective:** Run validation-only audit on the ADHD Sleep pillar (7 articles).
 
 **Acceptance Criteria:**
-- [ ] `/audit-pillar adhd-sleep` completes without errors
-- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/adhd-sleep/audit-summary.md`
-- [ ] All 7 articles validated with correct PASS/FAIL counts
-- [ ] Link audit completed
-- [ ] Citation URL validation completed
-- [ ] Cross-article consistency checked
-- [ ] Issues documented in handoff for auto-fix planning
+- [x] `/audit-pillar adhd-sleep` completes without errors
+- [x] `audit-summary.md` created at `projects/hushaway/seo-content/adhd-sleep/audit-summary.md`
+- [x] All 7 articles validated with correct PASS/FAIL counts
+- [x] Link audit completed
+- [x] Citation URL validation completed
+- [x] Cross-article consistency checked
+- [x] Issues documented in handoff for auto-fix planning
 
 **Starter Prompt:**
 > **Prerequisite:** Task 25-pre (Refactor SKILL.md) must be PASS before running this. Run `/audit-pillar adhd-sleep` to validate the ADHD Sleep pillar (7 articles). Validation-only mode (no --fix). Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Ran full 8-phase audit on ADHD Sleep pillar (7 articles, 18,524 words). Phase 2: 7 content-validator agents in parallel (5 PASS, 2 FAIL). Phase 3: link-auditor agent found 9 broken links. Phase 4: 15 citation URLs checked (10 working, 5 WARN from NCBI 403 bot-blocking). Phase 5: Cross-article consistency checked (terminology PASS, one statistics WARN in article 07, positioning all Strong). Phase 6: audit-summary.md written with all required sections.
+- **Decisions:** PMC/NCBI 403s marked WARN (bot-blocking, not broken). Article 04 slug mismatch is root cause of 9 broken links (frontmatter says `quieting-adhd-racing-thoughts-bedtime` but all links use `/adhd-racing-thoughts`). Keyword-only slugs flagged for articles 02 (`adhd-bedtime-routine`) and 03 (`calming-sounds-adhd`). Statistics discrepancy in article 07 ("73-78%" vs "73-85%") is WARN not FAIL (different claims: circadian vs general).
+- **Next:** Task 25b — Audit Autistic Meltdowns pillar. For Task 26 (auto-fix): Article 04 slug mismatch needs resolution (recommend changing slug to `adhd-racing-thoughts`). Articles 02/03 need descriptive slugs. Article 07 FAQ stats should be clarified.
 
 ---
 
