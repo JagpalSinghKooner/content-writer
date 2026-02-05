@@ -10,9 +10,9 @@
 | Task 23: Test on Single Pillar (Validate Only) | PASS |
 | Task 24: Test Auto-Fix Mode | PASS |
 | Task 25-pre: Refactor Audit-Pillar SKILL.md (Slim for Context) | PASS |
-| Task 25-pre2: Create Consistency-Checker Agent | pending |
+| Task 25-pre2: Create Consistency-Checker Agent | PASS |
 | Task 25a: Audit ADHD Sleep (Validate Only) | PASS |
-| Task 25b: Audit Autistic Meltdowns (Validate Only) | pending |
+| Task 25b: Audit Autistic Meltdowns (Validate Only) | PASS |
 | Task 25c: Audit Sensory Overload (Validate Only) | pending |
 | Task 25d: Audit Calming Sounds (Validate Only) | pending |
 | Task 25e: Audit Emotional Regulation (Validate Only) | pending |
@@ -249,7 +249,7 @@
 - [x] Updated SKILL.md Phase 6: read `{pillar}/consistency-check.md` for cross-article findings
 - [x] Updated SKILL.md Critical Constraint #6: "Cross-article consistency runs as consistency-checker agent"
 - [x] Added `consistency-checker` to Agents table in `.claude/CLAUDE.md`
-- [ ] Git commit created and pushed
+- [x] Git commit created and pushed
 
 **Starter Prompt:**
 > Create the `consistency-checker` agent and update the audit-pillar skill to use it. Task 25b (autistic-meltdowns audit) failed with "prompt too long" because Phase 5 loads all 7 articles into main session context (~23K tokens). This agent moves that work into its own context window.
@@ -278,19 +278,26 @@
 **Objective:** Run validation-only audit on the Autistic Meltdowns pillar (7 articles).
 
 **Acceptance Criteria:**
-- [ ] `/audit-pillar autistic-meltdowns` completes without errors
-- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/autistic-meltdowns/audit-summary.md`
-- [ ] All 7 articles validated with correct PASS/FAIL counts
-- [ ] Link audit completed
-- [ ] Citation URL validation completed
-- [ ] Cross-article consistency checked (via consistency-checker agent)
-- [ ] Session completes fully (commit + TASKS.md update within context)
-- [ ] Issues documented in handoff for auto-fix planning
+- [x] `/audit-pillar autistic-meltdowns` completes without errors
+- [x] `audit-summary.md` created at `projects/hushaway/seo-content/autistic-meltdowns/audit-summary.md`
+- [x] All 7 articles validated with correct PASS/FAIL counts
+- [x] Link audit completed
+- [x] Citation URL validation completed
+- [x] Cross-article consistency checked (via consistency-checker agent)
+- [x] Session completes fully (commit + TASKS.md update within context)
+- [x] Issues documented in handoff for auto-fix planning
 
 **Starter Prompt:**
 > **Prerequisite:** Task 25-pre2 (Create Consistency-Checker Agent) must be PASS before running this. First, delete stale files from the failed previous attempt: `projects/hushaway/seo-content/autistic-meltdowns/audit-summary.md`, `link-audit.md`, and all `.validation.md` files in `articles/`. Then run `/audit-pillar autistic-meltdowns` to validate the Autistic Meltdowns pillar (7 articles). Validation-only mode (no --fix). Phase 5 now uses the consistency-checker agent instead of main session. Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Ran full 8-phase audit on Autistic Meltdowns pillar (7 articles, 16,586 words). Phase 2: 7 content-validator agents in parallel (1 PASS, 6 FAIL). Phase 3: link-auditor agent found 51 format violations + 12 broken slug references. Phase 4: 13 citation URLs checked (7 working, 5 WARN from NCBI/Wiley/ScienceDirect/AAP 403 bot-blocking, 1 FAIL from Frontiers 404). Phase 5: consistency-checker agent found 0 terminology issues, 0 conflicting claims, all 7 articles Strong positioning alignment. Phase 6: audit-summary.md written with all required sections.
+- **Decisions:** Article 07 (pillar guide) is only article with correct `/{slug}` links (PASS validation). Articles 01-05 use Pattern A (`/autistic-meltdowns/{slug}`), Articles 06-07 use Pattern B (`/autistic-meltdowns/articles/{filename}`). 403 bot-blocking on NCBI/Wiley/ScienceDirect/AAP marked WARN (not broken). Consistency-checker FAIL was due to link format issues (overlaps with link-auditor), actual content consistency was all PASS.
+- **Next:** Task 25c (Audit Sensory Overload). For Task 26 (auto-fix): All articles need link format fix (`/{slug}` only). 12 broken slug references need manual slug correction. Article 03 has 1 broken citation URL (Frontiers fpsyg.2021.767782 returns 404). Article 02 missing link to pillar guide.
 
 ---
 
