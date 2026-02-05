@@ -27,6 +27,7 @@
 | Task 18: Start Emotional Regulation Pillar | PASS |
 | Task 19: Positioning Angles for Emotional Regulation | PASS |
 | Task 20: Execute Emotional Regulation Pillar | PASS |
+| Task 21: Start Bedtime Routines Pillar | PASS |
 
 ---
 
@@ -959,5 +960,44 @@
 
 ---
 
+## Task 21: Start Bedtime Routines Pillar
+
+**Objective:** Create pillar brief for Bedtime Routines with competitor analysis and content plan.
+
+**Acceptance Criteria:**
+- [x] Extract Bedtime Routines pillar from keyword brief
+- [x] Run deep competitor analysis with Perplexity (DR estimates + content depth)
+- [x] Identify content gaps and angle opportunities
+- [x] Create article outline for pillar guide + supporting articles
+- [x] Output saved to `bedtime-routines/01-pillar-brief.md`
+
+**Starter Prompt:**
+> Run /start-pillar for Bedtime Routines. Extract the pillar from 00-keyword-brief.md. Focus on: (1) Deep competitor analysis of National Autistic Society, NHS sleep resources, The Sleep Charity, The ADHD Centre, Beyond Autism, and Withersack Group; (2) Identify the MASSIVE gap—every competitor mentions sound in passing ("try calming music") but NO competitor positions sound as PRIMARY tool or explains WHAT to play WHEN; (3) Plan 7 articles covering: why bedtime is harder for ND children, sound-based bedtime routine (conversion driver), visual routine, ADHD-specific, autism-specific, bedtime anxiety, pillar guide. Position sound as THE core element missing from all competitor guidance.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `bedtime-routines/01-pillar-brief.md` with all 8 sections: strategic context, keyword table (22 keywords mapped), competitor analysis (6 UK competitors with DR estimates), content plan (7 articles: 6 supporting + 1 pillar guide), angle opportunities (5 identified), internal linking map, publishing order, and key messaging.
+- **Decisions:**
+  - **CRITICAL GAP CONFIRMED:** Perplexity research across 6 major UK competitors revealed that while ALL mention sound/audio in bedtime guidance, NONE position it as a PRIMARY tool:
+    - National Autistic Society: Mentions "calming music" in passing
+    - NHS Beds/Luton: "White noise might help" — no further detail
+    - The Sleep Charity: Background sound as optional add-on
+    - The ADHD Centre: Acknowledges "quietness makes ADHD brain race" but offers NO auditory solution
+    - Beyond Autism: NO audio/sound coverage AT ALL (focuses entirely on visual supports)
+    - Withersack Group: "Listening to calming music" — generic, no specifics
+  - **Primary angle:** "Sound as THE Core Element" — Every competitor gives routine structure (bath → pajamas → story → lights out) and emphasises visual supports. NO ONE positions sound as deserving equal weight or explains WHAT to play WHEN.
+  - **The WHAT Gap:** All competitors say "try calming music." None specify WHAT sounds, WHICH types for sleep onset vs. night waking, or HOW to integrate sound into routine steps.
+  - **Unique mechanism:** Passive listening as zero-effort tool for exhausted parents. Racing ADHD brain gets something to land on. Autistic anxiety soothed by predictable auditory input.
+  - **7 articles planned:** 6 supporting + 1 pillar guide (publishes last)
+  - **Article 01** "Why Bedtime is Harder for Neurodivergent Children" is foundation — validates neurological struggles
+  - **Article 02** "Sound-Based Bedtime Routine" is conversion driver — fills "what to play" gap, direct bridge to The Open Sanctuary
+  - **Articles 04 and 05** condition-specific (ADHD vs. autism) — different approaches for different brains
+- **Next:** Run `/positioning-angles` to develop unified positioning for all 7 articles. Primary angle established ("Sound as THE Core Element"); need secondary angles per article and consistency check.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-04 (Task 20 Execute Emotional Regulation Pillar PASS)*
+*Last updated: 2026-02-05 (Task 21 Start Bedtime Routines Pillar PASS)*
