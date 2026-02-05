@@ -38,9 +38,9 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/app-comparisons/articles/01-why-generic-calming-apps-fail-nd-children"
+  - url: "/why-generic-calming-apps-fail-nd-children"
     anchor: "why generic calming apps fail neurodivergent children"
-  - url: "/app-comparisons/articles/07-guide-best-calming-apps-nd-children-uk"
+  - url: "/guide-best-calming-apps-nd-children-uk"
     anchor: "complete guide to calming apps for neurodivergent children"
 external_citations:
   - url: "https://www.smilingmind.com.au/about"
@@ -189,7 +189,7 @@ The Open Sanctuary is HushAway's free tier. Not a trial. Not a limited preview. 
 
 **What makes it different:**
 
-Designed FOR neurodivergent children, not adapted from neurotypical content. We've written about [why generic calming apps fail neurodivergent children](/app-comparisons/articles/why-generic-calming-apps-fail-nd-children). The Open Sanctuary was built to avoid those failures from day one.
+Designed FOR neurodivergent children, not adapted from neurotypical content. We've written about [why generic calming apps fail neurodivergent children](/why-generic-calming-apps-fail-nd-children). The Open Sanctuary was built to avoid those failures from day one.
 
 Passive listening. No instructions to follow. No choices to make. No interactive elements demanding cognitive engagement during moments when your child can't give it. Just press play.
 
@@ -263,7 +263,7 @@ The Open Sanctuary exists because we believe ND families shouldn't have to pay p
 
 If you've tried free calming apps that didn't work for your ND child, the problem probably wasn't "free." The problem was that those apps weren't designed for your child's brain.
 
-For our complete recommendations on apps for neurodivergent children, including paid options with the features free apps can't offer, see our [complete guide to calming apps for neurodivergent children](/app-comparisons/articles/07-guide-best-calming-apps-nd-children-uk).
+For our complete recommendations on apps for neurodivergent children, including paid options with the features free apps can't offer, see our [complete guide to calming apps for neurodivergent children](/guide-best-calming-apps-nd-children-uk).
 
 One quiet moment can change a whole day for a child.
 

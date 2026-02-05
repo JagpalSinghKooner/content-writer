@@ -38,11 +38,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/app-comparisons/articles/01-why-generic-calming-apps-fail-nd-children"
+  - url: "/why-generic-calming-apps-fail-nd-children"
     anchor: "why most calming apps fail neurodivergent children"
-  - url: "/app-comparisons/articles/04-comparison-moshi-vs-calm-vs-headspace-nd-kids"
+  - url: "/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids"
     anchor: "detailed comparison of Moshi, Calm, and Headspace"
-  - url: "/app-comparisons/articles/07-guide-best-calming-apps-nd-children-uk"
+  - url: "/guide-best-calming-apps-nd-children-uk"
     anchor: "complete guide to calming apps for neurodivergent children"
   - url: "/the-open-sanctuary"
     anchor: "Explore The Open Sanctuary"
@@ -292,7 +292,7 @@ That's okay. Apps are tools, not requirements. If your child doesn't benefit fro
 
 For children who do respond to sound but haven't found the right app, the issue is usually design mismatch. Most apps weren't built for autistic brains. Finding one that was makes the difference.
 
-For a broader comparison including ADHD-specific needs, see our [detailed comparison of Moshi, Calm, and Headspace](/app-comparisons/articles/04-comparison-moshi-vs-calm-vs-headspace-nd-kids).
+For a broader comparison including ADHD-specific needs, see our [detailed comparison of Moshi, Calm, and Headspace](/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids).
 
 ## What to Try Tonight
 
@@ -306,7 +306,7 @@ If you're reading this at 9pm with bedtime looming, here's the practical guidanc
 
 One quiet moment can change a whole day for a child. The right sounds, designed for how your autistic child actually processes the world, can create those moments. Tonight could be the night you find what works.
 
-For the complete picture of calming apps for neurodivergent children, including options we haven't covered here, see our [complete guide to calming apps for neurodivergent children](/app-comparisons/articles/07-guide-best-calming-apps-nd-children-uk).
+For the complete picture of calming apps for neurodivergent children, including options we haven't covered here, see our [complete guide to calming apps for neurodivergent children](/guide-best-calming-apps-nd-children-uk).
 
 Ready to see if sound-based calm works for your child? [Explore The Open Sanctuary](/the-open-sanctuary) and find sounds designed for autistic processing.
 

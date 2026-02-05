@@ -40,17 +40,17 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/app-comparisons/articles/01-why-generic-calming-apps-fail-nd-children"
+  - url: "/why-generic-calming-apps-fail-nd-children"
     anchor: "why generic calming apps fail neurodivergent children"
-  - url: "/app-comparisons/articles/02-best-apps-autistic-children-uk"
+  - url: "/review-best-apps-autistic-children-uk"
     anchor: "best apps for autistic children"
-  - url: "/app-comparisons/articles/03-best-apps-adhd-children-uk"
+  - url: "/review-best-apps-adhd-children-uk"
     anchor: "best apps for ADHD children"
-  - url: "/app-comparisons/articles/04-comparison-moshi-vs-calm-vs-headspace-nd-kids"
+  - url: "/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids"
     anchor: "Moshi vs Calm vs Headspace comparison"
-  - url: "/app-comparisons/articles/05-free-calming-apps-kids-uk"
+  - url: "/free-calming-apps-kids-uk"
     anchor: "free calming apps for kids"
-  - url: "/app-comparisons/articles/06-guide-screen-free-calming-alternatives-kids"
+  - url: "/guide-screen-free-calming-alternatives-kids"
     anchor: "screen-free calming alternatives"
 external_citations:
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences/sensory-differences/all-audiences"
@@ -127,7 +127,7 @@ According to the National Autistic Society, 2024: [Sensory Differences](https://
 
 For ADHD children, the challenges are different but equally real. NICE guidance notes that sleep problems affect 25-50% of children with ADHD (NICE, 2024: [Attention deficit hyperactivity disorder: diagnosis and management](https://www.nice.org.uk/guidance/ng87)). The racing brain that won't switch off doesn't respond to "breathe in for four counts." The executive function needed to follow meditation instructions goes offline precisely when it's most needed.
 
-We've written extensively about [why generic calming apps fail neurodivergent children](/app-comparisons/articles/01-why-generic-calming-apps-fail-nd-children). The short version: they require things ND children can't provide during moments of dysregulation.
+We've written extensively about [why generic calming apps fail neurodivergent children](/why-generic-calming-apps-fail-nd-children). The short version: they require things ND children can't provide during moments of dysregulation.
 
 This is why your search keeps failing. The "best" apps are best for average children. Your child isn't average. And that's not a problem to fix. It's a difference to design for.
 
@@ -200,7 +200,7 @@ The story-based content can work well for children who respond to narrative. The
 
 Moshi wasn't designed for neurodivergent processing. There's no content specifically addressing auditory sensitivities. No frequency-based sounds for nervous system regulation. No ASMR designed for sensory differences. And the app's entertainment-first approach means lots of stimulating content mixed with calming content. Finding what works requires trial and error that many exhausted parents don't have energy for.
 
-**Our honest take:** Moshi works for some ND children, particularly those who respond to stories. But there's a distinction worth understanding: it's "adapted FOR" neurodivergent children, not "designed FOR" them. That difference matters more than you might think. We explore this in depth in our [Moshi vs Calm vs Headspace comparison](/app-comparisons/articles/04-comparison-moshi-vs-calm-vs-headspace-nd-kids).
+**Our honest take:** Moshi works for some ND children, particularly those who respond to stories. But there's a distinction worth understanding: it's "adapted FOR" neurodivergent children, not "designed FOR" them. That difference matters more than you might think. We explore this in depth in our [Moshi vs Calm vs Headspace comparison](/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids).
 
 ### Calm Kids
 
@@ -218,7 +218,7 @@ Honestly? Not much. Calm's approach centres on guided meditation, which requires
 
 Almost everything about Calm assumes neurotypical processing. The guided meditations require sustained attention. The interactive exercises demand cognitive engagement. The US-centric content and voices may not resonate with UK children. The absence of a free tier creates a barrier for families already juggling multiple app subscriptions.
 
-**Our honest take:** Calm is a high-quality app for the children it was designed for. Those children aren't neurodivergent. If your ND child has tried Calm and struggled, that's not their failure. It's a design mismatch. See our [Moshi vs Calm vs Headspace comparison](/app-comparisons/articles/04-comparison-moshi-vs-calm-vs-headspace-nd-kids) for the full breakdown.
+**Our honest take:** Calm is a high-quality app for the children it was designed for. Those children aren't neurodivergent. If your ND child has tried Calm and struggled, that's not their failure. It's a design mismatch. See our [Moshi vs Calm vs Headspace comparison](/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids) for the full breakdown.
 
 ### Headspace for Kids
 
@@ -253,7 +253,7 @@ The price. Genuinely free removes the financial barrier entirely. The evidence b
 
 Smiling Mind wasn't designed for neurodivergent children. The interface can be overwhelming with too many choices. The Australian accents may be unfamiliar to UK children. Users report technical issues: random logouts, streaming interruptions, crashes during routines. These reliability problems are particularly problematic for ND children who need predictability.
 
-**Our honest take:** Smiling Mind is the best free option for neurotypical children. For ND children, the generic content and technical reliability issues make it frustrating. We cover this in detail in our [free calming apps for kids](/app-comparisons/articles/05-free-calming-apps-kids-uk) guide.
+**Our honest take:** Smiling Mind is the best free option for neurotypical children. For ND children, the generic content and technical reliability issues make it frustrating. We cover this in detail in our [free calming apps for kids](/free-calming-apps-kids-uk) guide.
 
 ### Sleep Wise (Hunrosa)
 
@@ -288,7 +288,7 @@ More content than Zenimal with 192 audio journeys. Physical interaction (twist t
 
 Better content depth than Zenimal. But still designed for neurotypical processing. No frequency-based sounds. No ND-specific design.
 
-**Our honest take:** Screen-free devices solve one problem (screen time anxiety) but limit content options. We explore the hybrid approach in our [screen-free calming alternatives](/app-comparisons/articles/06-guide-screen-free-calming-alternatives-kids) guide.
+**Our honest take:** Screen-free devices solve one problem (screen time anxiety) but limit content options. We explore the hybrid approach in our [screen-free calming alternatives](/guide-screen-free-calming-alternatives-kids) guide.
 
 ## Best Calming App for Kids by Specific Need
 
@@ -304,7 +304,7 @@ The racing brain at bedtime. This is the number one struggle we hear about from 
 
 **ND-first approach:** Sounds that don't require following instructions. Frequencies that work with the nervous system directly. Stories designed for ND processing, not adapted from neurotypical content.
 
-For ADHD-specific sleep recommendations, see our [best apps for ADHD children](/app-comparisons/articles/03-best-apps-adhd-children-uk) guide.
+For ADHD-specific sleep recommendations, see our [best apps for ADHD children](/review-best-apps-adhd-children-uk) guide.
 
 ### For Emotional Regulation
 
@@ -376,7 +376,7 @@ Only one platform in the UK market took the second approach. HushAway was built 
 
 This means passive listening isn't an afterthought. It's the core architecture. Sensory-safe sound design isn't a filter applied to existing content. It's how every piece of audio is created. Frequency-based sounds aren't a premium add-on. They're central to the approach.
 
-For autistic children, this matters. See our [best apps for autistic children](/app-comparisons/articles/02-best-apps-autistic-children-uk) guide for why design origin determines effectiveness for autistic processing.
+For autistic children, this matters. See our [best apps for autistic children](/review-best-apps-autistic-children-uk) guide for why design origin determines effectiveness for autistic processing.
 
 ## Free Options Worth Knowing About
 
@@ -408,7 +408,7 @@ Technically free. Endless content. No shortage of "calming music for children" v
 
 The problems are obvious. Ads interrupt calming moments. Algorithmic recommendations pull children toward stimulating content. Screen time creeps. Quality varies wildly. No curation for ND needs.
 
-We've explored all these options in our [free calming apps for kids](/app-comparisons/articles/05-free-calming-apps-kids-uk) guide.
+We've explored all these options in our [free calming apps for kids](/free-calming-apps-kids-uk) guide.
 
 ## Screen-Free Alternatives
 
@@ -436,7 +436,7 @@ Play the app through a dedicated speaker. A Bluetooth speaker in the bedroom. A 
 
 HushAway works this way. Phone stays out of sight. Speaker plays the sounds. Your child gets ND-first audio without screen interaction.
 
-We've covered this in detail in our [screen-free calming alternatives](/app-comparisons/articles/06-guide-screen-free-calming-alternatives-kids) guide.
+We've covered this in detail in our [screen-free calming alternatives](/guide-screen-free-calming-alternatives-kids) guide.
 
 ## Making Your Choice
 
@@ -470,11 +470,11 @@ We can't promise HushAway® will work for every ND child. Every child is differe
 
 ### What's the best calming app for kids with ADHD?
 
-The best app for ADHD children offers immediate engagement without demands, passive listening that doesn't require instruction-following, and audio that gives the racing brain something to land on. Most mainstream apps fail on all three. Moshi's stories work for some ADHD children. HushAway's frequency-based sounds and passive approach were designed specifically for ADHD brains. See our complete [best apps for ADHD children](/app-comparisons/articles/03-best-apps-adhd-children-uk) guide.
+The best app for ADHD children offers immediate engagement without demands, passive listening that doesn't require instruction-following, and audio that gives the racing brain something to land on. Most mainstream apps fail on all three. Moshi's stories work for some ADHD children. HushAway's frequency-based sounds and passive approach were designed specifically for ADHD brains. See our complete [best apps for ADHD children](/review-best-apps-adhd-children-uk) guide.
 
 ### What's the best sleep app for children with autism?
 
-Autistic children need predictable audio without sudden changes, voices that don't overwhelm sensory processing, and content that doesn't require making choices during bedtime stress. Moshi's consistent stories work for some. HushAway's sensory-safe design and frequency-based sounds were built for autistic processing. See our [best apps for autistic children](/app-comparisons/articles/02-best-apps-autistic-children-uk) guide.
+Autistic children need predictable audio without sudden changes, voices that don't overwhelm sensory processing, and content that doesn't require making choices during bedtime stress. Moshi's consistent stories work for some. HushAway's sensory-safe design and frequency-based sounds were built for autistic processing. See our [best apps for autistic children](/review-best-apps-autistic-children-uk) guide.
 
 ### Is Moshi good for neurodivergent children?
 
@@ -482,7 +482,7 @@ Moshi works for some ND children, particularly those who respond to stories and 
 
 ### Why don't Calm and Headspace work for my child?
 
-Calm and Headspace centre on guided meditation, which requires following instructions during stress. For many ND children, the cognitive resources needed to follow instructions go offline precisely when they need calming support. It's not your child failing the app. It's the app failing your child. We explain this in detail in our [why generic calming apps fail ND children](/app-comparisons/articles/01-why-generic-calming-apps-fail-nd-children) guide.
+Calm and Headspace centre on guided meditation, which requires following instructions during stress. For many ND children, the cognitive resources needed to follow instructions go offline precisely when they need calming support. It's not your child failing the app. It's the app failing your child. We explain this in detail in our [why generic calming apps fail ND children](/why-generic-calming-apps-fail-nd-children) guide.
 
 ### What's the difference between "designed for" and "adapted for"?
 
@@ -490,7 +490,7 @@ Adapted apps started with neurotypical children and added features for ND childr
 
 ### Can I use calming apps without screen time?
 
-Yes. Any audio app can play through a Bluetooth speaker or smart speaker. The phone stays out of sight. Your child hears the audio without screen interaction. This hybrid approach gives you app convenience with screen-free delivery. We cover this in our [screen-free calming alternatives](/app-comparisons/articles/06-guide-screen-free-calming-alternatives-kids) guide.
+Yes. Any audio app can play through a Bluetooth speaker or smart speaker. The phone stays out of sight. Your child hears the audio without screen interaction. This hybrid approach gives you app convenience with screen-free delivery. We cover this in our [screen-free calming alternatives](/guide-screen-free-calming-alternatives-kids) guide.
 
 ### What are frequency-based sounds and do they help?
 

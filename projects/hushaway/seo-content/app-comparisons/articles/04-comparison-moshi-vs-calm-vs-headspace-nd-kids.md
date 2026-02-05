@@ -39,13 +39,13 @@ schema_type: "Review"
 
 # Links
 internal_links:
-  - url: "/app-comparisons/articles/01-why-generic-calming-apps-fail-nd-children"
+  - url: "/why-generic-calming-apps-fail-nd-children"
     anchor: "why generic calming apps fail neurodivergent children"
-  - url: "/app-comparisons/articles/02-best-apps-autistic-children-uk"
+  - url: "/review-best-apps-autistic-children-uk"
     anchor: "best apps for autistic children"
-  - url: "/app-comparisons/articles/03-best-apps-adhd-children-uk"
+  - url: "/review-best-apps-adhd-children-uk"
     anchor: "best apps for ADHD children"
-  - url: "/app-comparisons/articles/07-guide-best-calming-apps-nd-children-uk"
+  - url: "/guide-best-calming-apps-nd-children-uk"
     anchor: "comprehensive guide to calming apps for neurodivergent children"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6534423/"
@@ -94,7 +94,7 @@ And then... nothing. Or worse than nothing. Your autistic child covered their ea
 
 Here's what those glowing reviews won't tell you: Moshi, Calm, and Headspace were all designed for neurotypical children. Every single one of them. They weren't built for the children who need calming support most. They were built for easier children and marketed to yours.
 
-We've written about [why generic calming apps fail neurodivergent children](/app-comparisons/articles/01-why-generic-calming-apps-fail-nd-children) in detail. This article is about something more specific: comparing the Big 3 through a neurodivergent lens, and introducing the fourth option you probably didn't know existed.
+We've written about [why generic calming apps fail neurodivergent children](/why-generic-calming-apps-fail-nd-children) in detail. This article is about something more specific: comparing the Big 3 through a neurodivergent lens, and introducing the fourth option you probably didn't know existed.
 
 ## What Neurodivergent Children Actually Need
 
@@ -326,7 +326,7 @@ If you're reading this at 9pm with a dysregulated child, here's the practical ad
 
 **If you want something different:** The Open Sanctuary might be worth exploring. It's designed for exactly this moment: your child is struggling, you're exhausted, and you need something that works without demands. No subscription needed. No decisions required. Just sounds built from the ground up for neurodivergent children.
 
-For more detailed reviews, see our guides to [best apps for autistic children](/app-comparisons/articles/02-best-apps-autistic-children-uk) and [best apps for ADHD children](/app-comparisons/articles/03-best-apps-adhd-children-uk). And for the complete picture of all options available, including free alternatives, see our [comprehensive guide to calming apps for neurodivergent children](/app-comparisons/articles/07-guide-best-calming-apps-nd-children-uk).
+For more detailed reviews, see our guides to [best apps for autistic children](/review-best-apps-autistic-children-uk) and [best apps for ADHD children](/review-best-apps-adhd-children-uk). And for the complete picture of all options available, including free alternatives, see our [comprehensive guide to calming apps for neurodivergent children](/guide-best-calming-apps-nd-children-uk).
 
 One quiet moment can change a whole day for a child. The right sounds, designed for how your child actually processes the world, can create those moments.
 

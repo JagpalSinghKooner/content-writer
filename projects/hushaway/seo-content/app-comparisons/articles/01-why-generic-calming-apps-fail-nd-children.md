@@ -38,13 +38,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/app-comparisons/articles/02-best-apps-autistic-children-uk"
+  - url: "/review-best-apps-autistic-children-uk"
     anchor: "apps that actually work for autistic children"
-  - url: "/app-comparisons/articles/03-best-apps-adhd-children-uk"
+  - url: "/review-best-apps-adhd-children-uk"
     anchor: "apps designed for ADHD brains"
-  - url: "/app-comparisons/articles/04-comparison-moshi-vs-calm-vs-headspace-nd-kids"
+  - url: "/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids"
     anchor: "how the major apps compare for ND children"
-  - url: "/app-comparisons/articles/07-guide-best-calming-apps-nd-children-uk"
+  - url: "/guide-best-calming-apps-nd-children-uk"
     anchor: "guide to the best calming apps for neurodivergent children"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7082250/"
@@ -185,7 +185,7 @@ Your child isn't broken. The apps were designed for different brains. The failur
 
 When you're ready to try something different, look for approaches built from the ground up for neurodivergent children. Not adapted mainstream apps with "ND-friendly" marketing. Actual tools designed by people who understand how ND brains process sound, stress, and regulation.
 
-For autism-specific needs, explore [apps that actually work for autistic children](/app-comparisons/articles/02-best-apps-autistic-children-uk). For ADHD brains, see our guide to [apps designed for ADHD brains](/app-comparisons/articles/03-best-apps-adhd-children-uk).
+For autism-specific needs, explore [apps that actually work for autistic children](/review-best-apps-autistic-children-uk). For ADHD brains, see our guide to [apps designed for ADHD brains](/review-best-apps-adhd-children-uk).
 
 ## Signs an App Wasn't Designed for Your Child
 
@@ -219,7 +219,7 @@ That's not a comfortable truth. But it explains why you've been struggling. And 
 
 Understanding why generic calming apps fail is the first step. The next is finding what actually works for your child.
 
-We've compared [how the major apps compare for ND children](/app-comparisons/articles/04-comparison-moshi-vs-calm-vs-headspace-nd-kids) in detail. The differences matter more than most review sites acknowledge. For the complete picture, see our [guide to the best calming apps for neurodivergent children](/app-comparisons/articles/07-guide-best-calming-apps-nd-children-uk).
+We've compared [how the major apps compare for ND children](/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids) in detail. The differences matter more than most review sites acknowledge. For the complete picture, see our [guide to the best calming apps for neurodivergent children](/guide-best-calming-apps-nd-children-uk).
 
 For now, remember this: when calming apps don't work for your child, the design failed. Not them. Not you.
 

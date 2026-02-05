@@ -39,13 +39,13 @@ schema_type: "Review"
 
 # Links
 internal_links:
-  - url: "/app-comparisons/articles/04-comparison-moshi-vs-calm-vs-headspace-nd-kids"
+  - url: "/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids"
     anchor: "comparison of Moshi, Calm, and Headspace"
-  - url: "/app-comparisons/articles/01-why-generic-calming-apps-fail-nd-children"
+  - url: "/why-generic-calming-apps-fail-nd-children"
     anchor: "why generic calming apps fail neurodivergent children"
-  - url: "/app-comparisons/articles/05-free-calming-apps-kids-uk"
+  - url: "/free-calming-apps-kids-uk"
     anchor: "free calming app options"
-  - url: "/app-comparisons/articles/07-guide-best-calming-apps-nd-children-uk"
+  - url: "/guide-best-calming-apps-nd-children-uk"
     anchor: "complete guide to calming apps for neurodivergent children"
 external_citations:
   - url: "https://www.rcpch.ac.uk/resources/health-impacts-screen-time-guide-clinicians-parents"
@@ -228,7 +228,7 @@ Your child gets passive sound. You get screen-free delivery. And nobody has to a
 
 Some families use a small speaker in their child's room that stays there permanently. The phone lives elsewhere. The speaker becomes "the calm machine" rather than "mum's phone." That separation matters more than you'd think.
 
-We've written a full [comparison of Moshi, Calm, and Headspace](/app-comparisons/articles/04-comparison-moshi-vs-calm-vs-headspace-nd-kids) for neurodivergent children, and explored [why generic calming apps fail neurodivergent children](/app-comparisons/articles/01-why-generic-calming-apps-fail-nd-children). The same principles apply here: design origin matters. HushAway® was designed from the ground up for neurodivergent children, which means the content works even when delivered screen-free through a speaker.
+We've written a full [comparison of Moshi, Calm, and Headspace](/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids) for neurodivergent children, and explored [why generic calming apps fail neurodivergent children](/why-generic-calming-apps-fail-nd-children). The same principles apply here: design origin matters. HushAway® was designed from the ground up for neurodivergent children, which means the content works even when delivered screen-free through a speaker.
 
 ## Making the Right Choice for Your Family
 
@@ -264,7 +264,7 @@ There's no single answer to screen-free calming alternatives. The right choice d
 - You've tried limited-content devices and hit walls
 - You want to explore what actually works without device commitment
 
-If you're curious about [free calming app options](/app-comparisons/articles/05-free-calming-apps-kids-uk), The Open Sanctuary lets you explore ND-first sounds before committing to any approach. You can try different sound types through a speaker tonight and see what your child actually responds to.
+If you're curious about [free calming app options](/free-calming-apps-kids-uk), The Open Sanctuary lets you explore ND-first sounds before committing to any approach. You can try different sound types through a speaker tonight and see what your child actually responds to.
 
 ## One Final Thought
 
@@ -302,4 +302,4 @@ My Little Morphee offers significantly more content (192 sessions vs 12) and has
 
 ### What's the best screen-free calming alternative for bedtime?
 
-For bedtime specifically, white noise machines offer reliable, predictable sound for sleep onset. If your child needs variety or story-based content, the hybrid speaker approach lets you access different sounds nightly without screen exposure. Zenimal's three sleep soundscapes may suffice for children who find one that works and stick with it. For more options, see our [complete guide to calming apps for neurodivergent children](/app-comparisons/articles/07-guide-best-calming-apps-nd-children-uk).
+For bedtime specifically, white noise machines offer reliable, predictable sound for sleep onset. If your child needs variety or story-based content, the hybrid speaker approach lets you access different sounds nightly without screen exposure. Zenimal's three sleep soundscapes may suffice for children who find one that works and stick with it. For more options, see our [complete guide to calming apps for neurodivergent children](/guide-best-calming-apps-nd-children-uk).

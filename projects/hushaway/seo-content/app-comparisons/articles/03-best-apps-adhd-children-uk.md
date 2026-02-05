@@ -39,11 +39,11 @@ schema_type: "Review"
 
 # Links
 internal_links:
-  - url: "/app-comparisons/articles/01-why-generic-calming-apps-fail-nd-children"
+  - url: "/why-generic-calming-apps-fail-nd-children"
     anchor: "why generic calming apps fail neurodivergent children"
-  - url: "/app-comparisons/articles/04-comparison-moshi-vs-calm-vs-headspace-nd-kids"
+  - url: "/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids"
     anchor: "detailed comparison of Moshi, Calm, and Headspace"
-  - url: "/app-comparisons/articles/07-guide-best-calming-apps-nd-children-uk"
+  - url: "/guide-best-calming-apps-nd-children-uk"
     anchor: "complete guide to calming apps for neurodivergent children"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6534423/"
@@ -284,13 +284,13 @@ HushAway's binaural beats and brainwave content were designed specifically for t
 
 ## Understanding Why Generic Apps Fail ADHD Children
 
-If you've tried other calming apps without success, read our guide on [why generic calming apps fail neurodivergent children](/app-comparisons/articles/why-generic-calming-apps-fail-nd-children). The short version: they were designed for different brains.
+If you've tried other calming apps without success, read our guide on [why generic calming apps fail neurodivergent children](/why-generic-calming-apps-fail-nd-children). The short version: they were designed for different brains.
 
 ADHD diagnoses in the UK have increased substantially over the past decade (BMJ Archives of Disease in Childhood, 2024: [ADHD prevalence and diagnosis in UK children](https://adc.bmj.com/content/109/2/138)). More families than ever are looking for support. Yet most calming apps still treat ADHD children as an afterthought.
 
 The issue isn't that Calm or Headspace are bad apps. They're well-designed for their intended audience. The problem is that intended audience was never ADHD children. Features like "follow these instructions" and "complete this programme" actively work against how ADHD brains function.
 
-For a more detailed look at how the big three apps compare for neurodivergent children, see our [detailed comparison of Moshi, Calm, and Headspace](/app-comparisons/articles/04-comparison-moshi-vs-calm-vs-headspace-nd-kids).
+For a more detailed look at how the big three apps compare for neurodivergent children, see our [detailed comparison of Moshi, Calm, and Headspace](/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids).
 
 ## Quick Comparison: ADHD Apps for Kids UK
 
@@ -322,7 +322,7 @@ The apps that actually help share common characteristics: immediate engagement, 
 
 We built HushAway because those apps didn't exist when we needed them. If your ADHD child has struggled with generic calming apps, consider trying something designed for their brain from the start. The Open Sanctuary lets you explore without commitment.
 
-For our complete recommendations across all neurodivergent needs, see the [complete guide to calming apps for neurodivergent children](/app-comparisons/articles/07-guide-best-calming-apps-nd-children-uk).
+For our complete recommendations across all neurodivergent needs, see the [complete guide to calming apps for neurodivergent children](/guide-best-calming-apps-nd-children-uk).
 
 ---
 
