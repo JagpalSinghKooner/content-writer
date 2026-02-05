@@ -14,7 +14,7 @@
 | Task 25a: Audit ADHD Sleep (Validate Only) | PASS |
 | Task 25b: Audit Autistic Meltdowns (Validate Only) | PASS |
 | Task 25c: Audit Sensory Overload (Validate Only) | PASS |
-| Task 25d: Audit Calming Sounds (Validate Only) | pending |
+| Task 25d: Audit Calming Sounds (Validate Only) | PASS |
 | Task 25e: Audit Emotional Regulation (Validate Only) | pending |
 | Task 25f: Audit Bedtime Routines (Validate Only) | pending |
 | Task 25g: Audit Sound Therapy + Cross-Pillar Summary | pending |
@@ -333,18 +333,25 @@
 **Objective:** Run validation-only audit on the Calming Sounds pillar (7 articles).
 
 **Acceptance Criteria:**
-- [ ] `/audit-pillar calming-sounds` completes without errors
-- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/calming-sounds/audit-summary.md`
-- [ ] All 7 articles validated with correct PASS/FAIL counts
-- [ ] Link audit completed
-- [ ] Citation URL validation completed
-- [ ] Cross-article consistency checked
-- [ ] Issues documented in handoff for auto-fix planning
+- [x] `/audit-pillar calming-sounds` completes without errors
+- [x] `audit-summary.md` created at `projects/hushaway/seo-content/calming-sounds/audit-summary.md`
+- [x] All 7 articles validated with correct PASS/FAIL counts
+- [x] Link audit completed
+- [x] Citation URL validation completed
+- [x] Cross-article consistency checked
+- [x] Issues documented in handoff for auto-fix planning
 
 **Starter Prompt:**
 > Run `/audit-pillar calming-sounds` to validate the Calming Sounds pillar (7 articles). Validation-only mode (no --fix). Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Ran full 8-phase audit on Calming Sounds pillar (7 articles, 18,050 words). Phase 2: 7 content-validator agents in parallel (2 PASS, 5 FAIL). Phase 3: link-auditor agent found 28 format violations + 4 missing bidirectional guide links. Phase 4: 21 citation URLs checked (12 working, 6 WARN from NCBI/BMJ/AAP/Sage 403 bot-blocking, 3 FAIL from CHADD/NHS/Frontiers 404). Phase 5: consistency-checker agent returned PASS (0 terminology FAILs, 0 conflicting claims, all 7 articles Strong positioning alignment, 1 WARN for "dysregulated" in Art 06). Phase 6: audit-summary.md written with all required sections.
+- **Decisions:** Articles 05 and 06 pass content validation (no banned words, good SEO, correct UK English). All 7 articles FAIL due to systematic internal link format violations (directory paths instead of `/{slug}` format). 403 bot-blocking on NCBI/BMJ/AAP/Sage marked WARN (not broken). 4 articles (01, 03, 04, 06) missing bidirectional links back to pillar guide.
+- **Next:** Task 25e (Audit Emotional Regulation). For Task 26 (auto-fix): All 7 articles need link format fix (`/{slug}` only). 4 articles need bidirectional guide links added. 3 broken citation URLs need replacement (CHADD 404, NHS autism 404, Frontiers fpsyg.2020.564206 404, NHS every-mind-matters 404). Art 06 "dysregulated" should be replaced with "overwhelmed".
 
 ---
 
