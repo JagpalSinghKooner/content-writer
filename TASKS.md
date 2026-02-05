@@ -5,7 +5,7 @@
 | Task | Status |
 |------|--------|
 | Task 20: Create Link-Auditor Agent | PASS |
-| Task 21: Create Audit-Pillar Skill | pending |
+| Task 21: Create Audit-Pillar Skill | PASS |
 | Task 22: Update CLAUDE.md and Cleanup | pending |
 | Task 23: Test on Single Pillar (Validate Only) | pending |
 | Task 24: Test Auto-Fix Mode | pending |
@@ -49,26 +49,33 @@
 **Objective:** Build the `/audit-pillar` skill orchestration workflow that re-validates existing content, checks link integrity, validates citation URLs, and optionally auto-fixes issues.
 
 **Acceptance Criteria:**
-- [ ] Created `.claude/skills/audit-pillar/SKILL.md` with complete skill definition
-- [ ] YAML frontmatter includes: name, description with trigger phrases
-- [ ] Skill supports `{pillar-name}` parameter for single pillar validation
-- [ ] Skill supports `--all` flag for all pillars
-- [ ] Skill supports `--fix` flag for auto-fix mode
-- [ ] Phase 1: Discovery — Parses args, finds articles, loads context files
-- [ ] Phase 2: Parallel Validation — Spawns content-validator for each article in parallel
-- [ ] Phase 3: Link Audit — Spawns link-auditor agent
-- [ ] Phase 4: Citation URL Validation — Runs bash HTTP HEAD requests on external citations
-- [ ] Phase 5: Cross-Article Consistency — Runs in main session (terminology, conflicting claims, positioning alignment)
-- [ ] Phase 6: Aggregation — Compiles all results into `audit-summary.md`
-- [ ] Phase 7: Auto-Fix (if --fix) — Retry loop spawning copy-enhancer (max 3 attempts)
-- [ ] Phase 8: Report — Outputs summary to user with escalated issues
-- [ ] Follows execute-pillar orchestration pattern (main session spawns all agents)
-- [ ] Uses file-based issue passing (validation files, not content in prompts)
+- [x] Created `.claude/skills/audit-pillar/SKILL.md` with complete skill definition
+- [x] YAML frontmatter includes: name, description with trigger phrases
+- [x] Skill supports `{pillar-name}` parameter for single pillar validation
+- [x] Skill supports `--all` flag for all pillars
+- [x] Skill supports `--fix` flag for auto-fix mode
+- [x] Phase 1: Discovery — Parses args, finds articles, loads context files
+- [x] Phase 2: Parallel Validation — Spawns content-validator for each article in parallel
+- [x] Phase 3: Link Audit — Spawns link-auditor agent
+- [x] Phase 4: Citation URL Validation — Runs bash HTTP HEAD requests on external citations
+- [x] Phase 5: Cross-Article Consistency — Runs in main session (terminology, conflicting claims, positioning alignment)
+- [x] Phase 6: Aggregation — Compiles all results into `audit-summary.md`
+- [x] Phase 7: Auto-Fix (if --fix) — Retry loop spawning copy-enhancer (max 3 attempts)
+- [x] Phase 8: Report — Outputs summary to user with escalated issues
+- [x] Follows execute-pillar orchestration pattern (main session spawns all agents)
+- [x] Uses file-based issue passing (validation files, not content in prompts)
 
 **Starter Prompt:**
 > Create the `/audit-pillar` skill at `.claude/skills/audit-pillar/SKILL.md` following the complete specification in `audit-pillar.md` at repo root. Model the orchestration pattern after `.claude/skills/execute-pillar/SKILL.md` (main session spawns all agents). Implement all 8 phases: Discovery, Parallel Validation (spawn content-validator for all articles), Link Audit (spawn link-auditor), Citation URL Validation (bash HTTP HEAD requests), Cross-Article Consistency (runs in main session), Aggregation (write audit-summary.md), Auto-Fix (retry loop with copy-enhancer if --fix flag), and Report. Reference `.claude/agents/content-validator.md` and `.claude/agents/copy-enhancer.md` for agent return formats. Ensure the retry loop reads validation file paths (not content) to prevent context overflow.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `.claude/skills/audit-pillar/SKILL.md` with complete 8-phase orchestration workflow. YAML frontmatter with name, description, and trigger phrases. All phases implemented: Discovery (arg parsing, article globbing, context loading), Parallel Validation (content-validator per article), Link Audit (link-auditor agent), Citation URL Validation (bash HTTP HEAD with curl), Cross-Article Consistency (terminology, conflicting claims, positioning alignment in main session), Aggregation (audit-summary.md with full report format), Auto-Fix (retry loop with copy-enhancer, max 3 attempts, file-based issue passing), Report (user-facing output with escalated issues).
+- **Decisions:** Modelled after execute-pillar SKILL.md structure (main session orchestrates, agents return minimal status). Multi-pillar (`--all`) runs sequentially per pillar (parallel would exhaust context). Fix loop runs parallel within a pillar (all FAIL articles fixed simultaneously, then re-validated simultaneously). Link/citation/consistency issues always escalated (never auto-fixed). Audit summary committed but validation files are not. 403 responses on citation HEAD requests retry with GET before marking WARN.
+- **Next:** Task 22 — Update CLAUDE.md to add `/audit-pillar` to Skills table and `link-auditor` to Agents table, then delete root `audit-pillar.md` spec file.
 
 ---
 
