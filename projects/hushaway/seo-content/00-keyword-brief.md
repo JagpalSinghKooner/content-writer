@@ -520,7 +520,7 @@ Why: Massive search volume (parents of 3-6% of UK school children with ADHD), hi
 | 5 | Emotional Regulation | ✅ Complete | M | M | Medium | Emotional Regulation for Autistic Children |
 | 6 | Bedtime Routines | ✅ Complete | M | M | Medium | ND Bedtime Routine That Actually Works |
 | 7 | Sound Therapy | ✅ Complete | M | M | Long | Sound Therapy for Children: What Parents Should Know |
-| 8 | App Comparisons | ⏳ Pending | H | M | Long | Best Calming Apps for ND Kids (hold until brand established) |
+| 8 | App Comparisons | 📋 Brief | H | M | Long | Best Calming Apps for ND Kids |
 
 ### Status Legend
 

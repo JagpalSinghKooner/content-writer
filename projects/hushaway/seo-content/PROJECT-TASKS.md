@@ -33,6 +33,7 @@
 | Task 24: Start Sound Therapy Pillar | PASS |
 | Task 25: Positioning Angles for Sound Therapy | PASS |
 | Task 26: Execute Sound Therapy Pillar | PASS |
+| Task 27: Start App Comparisons Pillar | PASS |
 
 ---
 
@@ -1203,5 +1204,42 @@
 
 ---
 
+## Task 27: Start App Comparisons Pillar
+
+**Objective:** Create pillar brief for App Comparisons with competitor analysis and content plan.
+
+**Acceptance Criteria:**
+- [x] Extract App Comparisons pillar from keyword brief
+- [x] Run deep competitor analysis with Perplexity (DR estimates + content depth)
+- [x] Identify content gaps and angle opportunities
+- [x] Create article outline for pillar guide + supporting articles
+- [x] Output saved to `app-comparisons/01-pillar-brief.md`
+
+**Starter Prompt:**
+> Run /start-pillar for App Comparisons. Extract the pillar from 00-keyword-brief.md. Focus on: (1) Deep competitor analysis of Moshi Kids, Calm Kids, Headspace for Kids, Smiling Mind, Sleep Wise, and Zenimal; (2) Identify the MASSIVE gap—NO competitor is designed FROM THE GROUND UP for neurodivergent children (all adapted mainstream content); (3) Plan 7 articles covering: why generic apps fail ND children, autism-specific apps, ADHD-specific apps, head-to-head comparison, free apps, screen-free alternatives, pillar guide. Position HushAway as the ONLY "designed FOR vs adapted FOR" option.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `app-comparisons/01-pillar-brief.md` with all 8 sections: strategic context, keyword table (19 keywords mapped), competitor analysis (6 UK competitors with DR estimates and detailed gaps), content plan (7 articles: 6 supporting + 1 pillar guide), angle opportunities (5 identified), internal linking map, publishing order, and key messaging.
+- **Decisions:**
+  - **CRITICAL GAP CONFIRMED:** Perplexity research across 6 major competitors revealed NO competitor is designed FROM THE GROUND UP for ND children:
+    - Moshi Kids (UK leader): Passive listening but NOT ND-designed—emergent use by ND parents
+    - Calm Kids (DR 85-90): Premium US app, requires interaction, NOT ND-designed
+    - Headspace for Kids (DR 80-85): Clinical positioning, requires instruction-following, NOT ND-designed
+    - Smiling Mind (FREE): Australian, technical issues, NOT ND-designed
+    - Sleep Wise (SEND-specific): ND-designed but NARROW (sleep only, guidance not sounds)
+    - Zenimal (screen-free): ND-aware but limited content (9 meditations)
+  - **Primary angle:** "Designed FOR vs Adapted FOR" — HushAway is the ONLY platform built from the ground up for ND children. Every competitor adapted mainstream content. This angle is completely uncontested.
+  - **Secondary angle:** "Passive Listening: The Zero-Demand Advantage" — Most apps require interaction during dysregulation; HushAway requires nothing.
+  - **7 articles planned:** 6 supporting + 1 pillar guide (publishes last)
+  - **Article 01** "Why Generic Calming Apps Fail ND Children" is foundation — creates demand for ND-first design
+  - **Article 04** "Moshi vs Calm vs Headspace" is conversion driver — positions HushAway as fourth option parents didn't know existed
+- **Next:** Run `/positioning-angles` to develop unified positioning for all 7 articles. Primary angle established ("Designed FOR vs Adapted FOR"); need secondary angles per article and consistency check.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-05 (Task 26 Execute Sound Therapy Pillar PASS)*
+*Last updated: 2026-02-05 (Task 27 Start App Comparisons Pillar PASS)*
