@@ -509,6 +509,7 @@ Steps 4-7 of the content workflow (seo-content, direct-response-copy, validate-c
 | `/validate-content` | Check content against rules before publishing |
 | `/orchestrator` | Route to correct skill when unsure where to start |
 | `/execute-pillar` | Run complete pillar execution workflow with agent orchestration |
+| `/audit-pillar` | Re-validate existing content against current rules |
 
 ---
 
@@ -522,6 +523,7 @@ Four agents handle the automated content generation workflow (Steps 4-7). The ma
 | **copy-enhancer** | Add persuasion + fix validation issues | "Enhance this article", "Fix these issues" |
 | **content-validator** | Check rules + quality (read-only) | After enhancement (automatic), "Validate this article" |
 | **content-atomizer** | Create platform distribution | "Create distribution content", "Atomize this article" |
+| **link-auditor** | Audit internal links across a pillar | After pillar complete, "Audit links in this pillar" |
 
 **Agent Files:** Located in `.claude/agents/`
 
