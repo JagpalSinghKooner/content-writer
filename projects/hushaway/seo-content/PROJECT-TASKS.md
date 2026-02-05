@@ -31,6 +31,7 @@
 | Task 22: Positioning Angles for Bedtime Routines | PASS |
 | Task 23: Execute Bedtime Routines Pillar | PASS |
 | Task 24: Start Sound Therapy Pillar | PASS |
+| Task 25: Positioning Angles for Sound Therapy | PASS |
 
 ---
 
@@ -1123,5 +1124,42 @@
 
 ---
 
+## Task 25: Positioning Angles for Sound Therapy
+
+**Objective:** Develop unified positioning for Sound Therapy pillar that differentiates through evidence transparency.
+
+**Acceptance Criteria:**
+- [x] Market sophistication assessed (Stage 3, mechanism-focused)
+- [x] Primary angle identified for pillar guide ("Evidence Transparency")
+- [x] Secondary angles for each supporting article (6 articles)
+- [x] Consistency check across all angles
+- [x] Output saved to `sound-therapy/02-positioning.md`
+
+**Starter Prompt:**
+> Run /positioning-angles for Sound Therapy pillar. Input: sound-therapy/01-pillar-brief.md + clients/hushaway/profile.md. Focus on: (1) The MASSIVE evidence transparency gap—every competitor makes claims without evidence assessment; (2) "Truth through transparency" as primary angle—the only guide that gives evidence, not just promises; (3) Unique mechanism: Passive listening + honest evidence discussion; (4) Position Tomatis/AIT weak evidence directly—competitor vulnerability; (5) Secondary angles: foundation (clarity before claims), evidence deep-dive, binaural safety, solfeggio nuance, home accessibility, passive vs active distinction. Maintain parent-to-parent voice.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `sound-therapy/02-positioning.md` with unified positioning framework. Assessed market as Stage 3 (mechanism introducer)—parents are skeptical of sound therapy claims and need honest evidence assessment. No competitor provides this.
+- **Decisions:**
+  - Primary angle: "Evidence Transparency" — While everyone else tells you what sound therapy CAN do, HushAway is the only resource telling you what it actually DOES—with evidence to prove it (and honesty to admit what's unproven).
+  - Unique mechanism: Transparency as trust mechanism. Every competitor makes claims. No competitor assesses evidence. First-mover advantage on honest positioning wins long-term trust.
+  - Secondary angles extend (not repeat) primary:
+    - Article 1: "Transparency starts with clarity" (foundation, explains before claiming)
+    - Article 2: "The honest answer nobody else gives" (evidence deep-dive, core of primary angle)
+    - Article 3: "The safety guide parents search for but nobody writes" (binaural, limited evidence honesty)
+    - Article 4: "Evidence meets tradition" (solfeggio, nuanced middle ground)
+    - Article 5: "No practitioner required" (home therapy, accessibility)
+    - Article 6: "The critical difference parents miss" (passive vs active distinction)
+  - Consistency check passed: All angles reinforce "transparency as differentiator"
+  - Potential conflicts identified and resolved: Solfeggio endorsement vs evidence rigor, home therapy vs professional credibility, evidence fatigue vs hope
+  - Voice: Warm parent-to-parent per client profile throughout
+- **Next:** Execute Sound Therapy pillar: run `/execute-pillar` to write all 7 articles with validation, or write articles individually with `/seo-content` following positioning and publishing order from pillar brief.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-05 (Task 24 Start Sound Therapy Pillar PASS)*
+*Last updated: 2026-02-05 (Task 25 Positioning Angles for Sound Therapy PASS)*
