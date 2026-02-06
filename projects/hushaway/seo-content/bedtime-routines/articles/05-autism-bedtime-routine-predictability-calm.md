@@ -43,7 +43,7 @@ internal_links:
     anchor: "why bedtime is harder for neurodivergent children"
   - url: "/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children"
     anchor: "sound-based bedtime routine"
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "sensory overload"
   - url: "/emotional-regulation/articles/01-understanding-emotional-regulation-children"
     anchor: "emotional regulation"
@@ -86,7 +86,7 @@ The numbers are stark. According to the National Autistic Society, 2024: [Sleep 
 
 If you're exhausted and wondering why bedtime feels so much harder in your house, you're not imagining it. The struggle is real, and it has a reason.
 
-If you've read about [why bedtime is harder for neurodivergent children](/bedtime-routines/articles/01-why-bedtime-harder-neurodivergent-children), you'll know that ADHD brains struggle with racing thoughts at night. The ADHD mind comes alive when the world gets quiet.
+If you've read about [why bedtime is harder for neurodivergent children](/why-bedtime-harder-neurodivergent-children), you'll know that ADHD brains struggle with racing thoughts at night. The ADHD mind comes alive when the world gets quiet.
 
 Autistic bedtime struggles work differently. The core challenge is transition anxiety, not stimulation.
 
@@ -149,7 +149,7 @@ It fills the silence that so often triggers bedtime anxiety. Sound becomes a for
 
 ## Building an Autism Bedtime Routine with Sound
 
-A [sound-based bedtime routine](/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children) works by matching specific sounds to specific transitions. For autistic children, consistency matters more than anything else.
+A [sound-based bedtime routine](/sound-based-bedtime-routine-nd-children) works by matching specific sounds to specific transitions. For autistic children, consistency matters more than anything else.
 
 Here's how to build it, phase by phase.
 
@@ -344,7 +344,7 @@ This is valuable information about their sensory profile. It means that specific
 
 ### Can I use sound for my autistic child who also has ADHD?
 
-Yes. The approaches overlap significantly. For combined autism and ADHD, the priority is usually reducing transition anxiety first (the autism component), which then makes the racing-brain element (the ADHD component) more manageable. Start with the predictability-focused autism bedtime routine, then adjust based on what you observe. See our [ADHD bedtime routine guide](/bedtime-routines/articles/adhd-bedtime-routine-that-works) for the racing-brain strategies.
+Yes. The approaches overlap significantly. For combined autism and ADHD, the priority is usually reducing transition anxiety first (the autism component), which then makes the racing-brain element (the ADHD component) more manageable. Start with the predictability-focused autism bedtime routine, then adjust based on what you observe. See our [ADHD bedtime routine guide](/sound-anchored-adhd-bedtime-routine) for the racing-brain strategies.
 
 ### What volume should the sleep sounds be?
 

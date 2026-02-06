@@ -1,5 +1,5 @@
 ---
-source_article: "01-adhd-child-wont-sleep"
+source_article: "why-your-adhd-child-wont-sleep"
 platform: "newsletter"
 created: "2026-02-03"
 status: draft

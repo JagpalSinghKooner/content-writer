@@ -1,5 +1,5 @@
 ---
-source_article: "sound-therapy-vs-music-therapy"
+source_article: "parents-guide-sound-vs-music-therapy"
 platform: instagram
 created: "2026-02-05"
 status: draft

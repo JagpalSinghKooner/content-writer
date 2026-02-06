@@ -39,13 +39,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/adhd-child-wont-sleep"
+  - url: "/why-your-adhd-child-wont-sleep"
     anchor: "why your ADHD child won't sleep"
-  - url: "/calming-sounds-adhd"
+  - url: "/best-calming-sounds-adhd-children"
     anchor: "calming sounds for ADHD children"
   - url: "/adhd-racing-thoughts"
     anchor: "racing thoughts at bedtime"
-  - url: "/adhd-sleep-problems-guide"
+  - url: "/complete-guide-adhd-sleep-problems-uk"
     anchor: "complete guide to ADHD sleep"
 external_citations:
   - url: "https://www.uhs.nhs.uk/whats-new/press-releases/southampton-researchers-launch-new-study-to-help-children-with-adhd-sleep-better"
@@ -98,13 +98,13 @@ But melatonin doesn't address several other things that keep ADHD children awake
 
 ### It Doesn't Quiet the Racing Brain
 
-We've written about [why your ADHD child won't sleep](/adhd-child-wont-sleep), and one of the core issues is the racing brain that won't switch off. Your child might feel physically tired (melatonin working) but lie awake for hours because their thoughts won't stop.
+We've written about [why your ADHD child won't sleep](/why-your-adhd-child-wont-sleep), and one of the core issues is the racing brain that won't switch off. Your child might feel physically tired (melatonin working) but lie awake for hours because their thoughts won't stop.
 
 Think about what that feels like. Heavy eyes. Body relaxed. But the mind? Racing through every thought, every question, every worry. That's the mismatch so many parents describe: "They're exhausted, but they just can't switch off."
 
 Melatonin makes you sleepy. It doesn't make your brain quiet.
 
-For children whose primary struggle is [racing thoughts at bedtime](/adhd-racing-thoughts), melatonin addresses only part of the problem. They may feel drowsy and still be unable to fall asleep because their mind is generating its own stimulation.
+For children whose primary struggle is [racing thoughts at bedtime](/quieting-adhd-racing-thoughts-bedtime), melatonin addresses only part of the problem. They may feel drowsy and still be unable to fall asleep because their mind is generating its own stimulation.
 
 ### It Doesn't Teach Sleep Skills
 
@@ -161,7 +161,7 @@ Research increasingly supports the use of specific sounds for ADHD children. A m
 
 What makes this particularly relevant for sleep is the mechanism involved. ADHD brains tend to be under-aroused, which is why they constantly seek stimulation. At bedtime, when external stimulation drops, the brain creates its own. Passive sound provides just enough external input to satisfy that seeking behaviour without increasing alertness.
 
-We've explored this in detail in our guide to [calming sounds for ADHD children](/calming-sounds-adhd). The key is that the sound must be:
+We've explored this in detail in our guide to [calming sounds for ADHD children](/best-calming-sounds-adhd-children). The key is that the sound must be:
 
 - **Passive:** Requiring nothing from your child (no interaction, no concentration)
 - **Consistent:** No sudden changes or surprising elements
@@ -259,7 +259,7 @@ Try something tonight. No cost, no signup, no commitment. Just see if your child
 
 Melatonin might be part of your child's sleep solution. But it doesn't have to be the whole solution. And for many families, the missing piece isn't another medication. It's giving the ADHD brain what it actually needs at bedtime: something calm to think about instead of everything at once.
 
-For the complete picture of ADHD sleep challenges and solutions, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) brings together everything from the science to practical strategies for every situation.
+For the complete picture of ADHD sleep challenges and solutions, our [complete guide to ADHD sleep problems](/complete-guide-adhd-sleep-problems-uk) brings together everything from the science to practical strategies for every situation.
 
 ---
 

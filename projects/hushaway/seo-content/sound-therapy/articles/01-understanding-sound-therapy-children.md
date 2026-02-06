@@ -94,7 +94,7 @@ Examples include the Safe and Sound Protocol (SSP), Tomatis Method, and Auditory
 
 These approaches work on the theory that auditory processing can be trained or retrained. They often focus on the middle ear muscles and the connection between hearing and the nervous system.
 
-**What to know:** These programmes are expensive (often hundreds to thousands of pounds), require practitioner involvement, and have varying levels of research support. We cover the evidence for different approaches in [our evidence guide](/sound-therapy/02-does-sound-therapy-work).
+**What to know:** These programmes are expensive (often hundreds to thousands of pounds), require practitioner involvement, and have varying levels of research support. We cover the evidence for different approaches in [our evidence guide](/evidence-does-sound-therapy-work).
 
 ### 2. Binaural Beats and Brainwave Entrainment
 
@@ -108,7 +108,7 @@ Different frequency ranges are associated with different states:
 
 For neurodivergent children, parents often use binaural beats to support sleep onset, calm focus during homework, or recovery from sensory overload.
 
-**What to know:** Binaural beats require stereo headphones to work properly. The research in children is limited but growing. We explore this in our [guide to binaural beats for children](/sound-therapy/03-safety-guide-binaural-beats-children).
+**What to know:** Binaural beats require stereo headphones to work properly. The research in children is limited but growing. We explore this in our [guide to binaural beats for children](/safety-guide-binaural-beats-children).
 
 ### 3. Frequency-Based Sound Therapy
 
@@ -230,7 +230,7 @@ You don't need expensive equipment or practitioner visits to start. Tonight, eve
 
 **Create consistency:** If a particular sound helps at bedtime, use it every night. Consistency helps the sound itself become a calming cue. Your child's brain starts to associate that sound with "time to settle."
 
-For a detailed walkthrough on setting up sound therapy at home, see our guide to [sound therapy at home](/sound-therapy/05-sound-therapy-at-home). And for the complete picture, our [complete guide to sound therapy for children](/sound-therapy/complete-guide-sound-therapy-children) brings everything together.
+For a detailed walkthrough on setting up sound therapy at home, see our guide to [sound therapy at home](/parents-guide-sound-therapy-at-home). And for the complete picture, our [complete guide to sound therapy for children](/complete-guide-sound-therapy-children) brings everything together.
 
 ## The HushAway Approach
 

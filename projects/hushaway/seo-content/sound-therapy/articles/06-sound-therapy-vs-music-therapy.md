@@ -125,7 +125,7 @@ None of this is criticism. Music therapy helps many children beautifully. But it
 
 ## What Sound Therapy Actually Involves
 
-Sound therapy is an umbrella term for approaches that use specific sounds, frequencies, or sonic environments to support wellbeing. If you want to go deeper into understanding the different types of sound therapy, we've written a [detailed guide](/sound-therapy/01-understanding-sound-therapy-children) covering the various modalities.
+Sound therapy is an umbrella term for approaches that use specific sounds, frequencies, or sonic environments to support wellbeing. If you want to go deeper into understanding the different types of sound therapy, we've written a [detailed guide](/understanding-sound-therapy-children) covering the various modalities.
 
 The key feature: passive listening. Your child doesn't participate in a therapeutic relationship. They simply receive the sounds.
 
@@ -187,7 +187,7 @@ They're complementary, not competing.
 
 ## The Research Picture: What We Actually Know
 
-We believe in honesty about evidence. If you want the full picture, our article on [evidence supporting both approaches](/sound-therapy/02-does-sound-therapy-work) goes into detail about what research tells us.
+We believe in honesty about evidence. If you want the full picture, our article on [evidence supporting both approaches](/evidence-does-sound-therapy-work) goes into detail about what research tells us.
 
 The short version: music therapy has a stronger evidence base. More studies, more rigorous methodology, more consistent findings. The Cochrane review we mentioned earlier represents decades of research.
 
@@ -195,7 +195,7 @@ Sound therapy research is more mixed. Some approaches have promising early evide
 
 Does that mean music therapy is "better"? Not necessarily. It means we know more about it. And it means choosing based on your child's needs and capacity makes more sense than choosing based on research volume alone.
 
-If your child can engage with music therapy, the evidence supports it. If your child can't engage right now, an approach that requires nothing of them might still help, even if the evidence base is developing. For a comprehensive overview of all approaches, see our [complete guide to sound therapy for children](/sound-therapy/complete-guide-sound-therapy-children).
+If your child can engage with music therapy, the evidence supports it. If your child can't engage right now, an approach that requires nothing of them might still help, even if the evidence base is developing. For a comprehensive overview of all approaches, see our [complete guide to sound therapy for children](/complete-guide-sound-therapy-children).
 
 ## What About Music Therapy vs Sound Healing?
 
@@ -239,7 +239,7 @@ And if you've tried music therapy and it didn't work? That doesn't mean you fail
 
 ## Where to Start
 
-If you're curious about [what sound therapy actually involves](/sound-therapy/01-understanding-sound-therapy-children), we've created a foundation guide that explains the different types, from ASMR to binaural beats to solfeggio frequencies.
+If you're curious about [what sound therapy actually involves](/understanding-sound-therapy-children), we've created a foundation guide that explains the different types, from ASMR to binaural beats to solfeggio frequencies.
 
 If you're ready to try passive listening, The Open Sanctuary offers a library of sounds designed specifically for neurodivergent children. No appointments to book. No demands on your child. No effort required from you. Just press play and see what happens.
 

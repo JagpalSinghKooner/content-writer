@@ -39,11 +39,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "how sensory overload actually works"
-  - url: "/sensory-overload/articles/03-sound-sensitivity-children-auditory-hypersensitivity"
+  - url: "/sensory-overload/articles/understanding-sound-sensitivity-children"
     anchor: "sound sensitivity in children"
-  - url: "/sensory-overload/articles/02-calming-sounds-sensory-overload"
+  - url: "/sensory-overload/articles/guide-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
 external_citations:
   - url: "https://pubmed.ncbi.nlm.nih.gov/34285267/"
@@ -132,7 +132,7 @@ What neurodivergent children need in these moments is zero-demand audio. Press p
 
 Generic calming sounds are calibrated for average sensory processing. They assume a baseline response to certain frequencies, volumes, and textures.
 
-But there's no such thing as average when it comes to [how sensory overload actually works](/sensory-overload/articles/01-understanding-sensory-overload-children) in neurodivergent children.
+But there's no such thing as average when it comes to [how sensory overload actually works](/understanding-sensory-overload-children) in neurodivergent children.
 
 A sound that feels "soft" to most ears might land as sharp or intrusive to a child with auditory hypersensitivity. A frequency that's meant to be soothing might hit an uncomfortable resonance for a child whose hearing picks up different ranges.
 
@@ -180,7 +180,7 @@ The match matters more than the format. More than the app reviews. More than wha
 
 ## Finding the Right Match
 
-Understanding [sound sensitivity in children](/sensory-overload/articles/03-sound-sensitivity-children-auditory-hypersensitivity) is the first step toward finding sounds that actually help.
+Understanding [sound sensitivity in children](/understanding-sound-sensitivity-children) is the first step toward finding sounds that actually help.
 
 Every neurodivergent child is different. What works for one ADHD child might not work for another. What soothes one autistic child might agitate a second. That's normal.
 
@@ -202,7 +202,7 @@ Generic calming sounds fail neurodivergent children because they weren't designe
 
 This isn't about finding better generic options. It's about understanding that your child needs something built for how their brain actually works. Something that was created with them in mind from the very first sound.
 
-The good news? Content designed specifically for neurodivergent children exists. The [calming sounds for sensory overload](/sensory-overload/articles/02-calming-sounds-sensory-overload) that work are the ones that were created with sensory differences as the starting point, not an afterthought.
+The good news? Content designed specifically for neurodivergent children exists. The [calming sounds for sensory overload](/guide-calming-sounds-sensory-overload) that work are the ones that were created with sensory differences as the starting point, not an afterthought.
 
 If you've cycled through apps and playlists and white noise machines wondering what's wrong with your child, stop. Nothing is wrong with your child.
 

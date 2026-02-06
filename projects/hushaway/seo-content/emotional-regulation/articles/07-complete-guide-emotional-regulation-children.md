@@ -47,17 +47,17 @@ internal_links:
     anchor: "why emotional regulation is neurological"
   - url: "/emotional-regulation/articles/02-emotional-regulation-autistic-children"
     anchor: "emotional regulation for autistic children"
-  - url: "/emotional-regulation/articles/03-emotional-regulation-adhd-children"
+  - url: "/emotional-regulation/articles/tools-emotional-regulation-adhd-children"
     anchor: "emotional regulation for ADHD children"
-  - url: "/emotional-regulation/articles/04-calm-corner-sounds-children"
+  - url: "/emotional-regulation/articles/guide-calm-corner-sounds-children"
     anchor: "calm corner sounds"
   - url: "/emotional-regulation/articles/05-co-regulation-through-sound-parent-child"
     anchor: "co-regulation through sound"
   - url: "/emotional-regulation/articles/06-big-feelings-overwhelmed-child-help"
     anchor: "big feelings and overwhelm"
-  - url: "/adhd-sleep/articles/01-adhd-child-wont-sleep"
+  - url: "/adhd-sleep/articles/why-your-adhd-child-wont-sleep"
     anchor: "ADHD sleep struggles"
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "sensory overload"
   - url: "/autistic-meltdowns/articles/01-understanding-autism-meltdowns"
     anchor: "autistic meltdowns"
@@ -179,7 +179,7 @@ Emotional regulation is your nervous system's ability to manage feelings, proces
 
 It's about recovery. The bounce-back. How quickly and smoothly your child can return to baseline after something knocks them off course.
 
-For a more detailed exploration, our foundation article on [why emotional regulation is neurological](/emotional-regulation/articles/01-understanding-emotional-regulation-children) covers this in depth. But here's the key insight:
+For a more detailed exploration, our foundation article on [why emotional regulation is neurological](/understanding-emotional-regulation-children) covers this in depth. But here's the key insight:
 
 Emotional regulation isn't primarily a skill you teach. It's a capacity that develops based on your child's unique nervous system, their early experiences, and their neurological wiring.
 
@@ -237,7 +237,7 @@ This isn't about your child being difficult. It isn't about them refusing to use
 
 Telling them to "use their words" when their language centre is offline is like asking them to walk on a broken leg. The instruction makes sense. The execution is impossible.
 
-For a practical guide to what works in those critical first moments, see our article on [big feelings and overwhelm](/emotional-regulation/articles/06-big-feelings-overwhelmed-child-help). It covers the specific window when other tools fail and what you can do instead.
+For a practical guide to what works in those critical first moments, see our article on [big feelings and overwhelm](/big-feelings-overwhelmed-child-help). It covers the specific window when other tools fail and what you can do instead.
 
 ## Emotional Regulation for Neurodivergent Children
 
@@ -259,9 +259,9 @@ What does this mean practically?
 
 **Demands make things worse.** Every instruction, question, or choice adds cognitive load. During dysregulation, that load becomes unbearable. Even well-meaning questions like "What do you need?" can feel like impossible demands.
 
-Our detailed guide to [emotional regulation for autistic children](/emotional-regulation/articles/02-emotional-regulation-autistic-children) explains why generic strategies fail and what autism-specific approaches actually help.
+Our detailed guide to [emotional regulation for autistic children](/guide-emotional-regulation-autistic-children) explains why generic strategies fail and what autism-specific approaches actually help.
 
-For autistic children, the link between emotional dysregulation and [autistic meltdowns](/autistic-meltdowns/articles/01-understanding-autism-meltdowns) is direct. A meltdown isn't a tantrum or a choice. It's what happens when the nervous system is completely overwhelmed. Understanding this reframes which tools make sense.
+For autistic children, the link between emotional dysregulation and [autistic meltdowns](/understanding-autism-meltdowns) is direct. A meltdown isn't a tantrum or a choice. It's what happens when the nervous system is completely overwhelmed. Understanding this reframes which tools make sense.
 
 ### ADHD Children
 
@@ -275,9 +275,9 @@ For ADHD children, the picture is different but equally challenging. Shaw, Phili
 
 **Rejection hits harder.** Rejection Sensitive Dysphoria (RSD) means perceived criticism or rejection creates emotional pain that's genuinely devastating. Not disappointing. Devastating.
 
-Our guide to [emotional regulation for ADHD children](/emotional-regulation/articles/03-emotional-regulation-adhd-children) covers these differences and explains why tools must work WITH the ADHD brain instead of fighting against it.
+Our guide to [emotional regulation for ADHD children](/tools-emotional-regulation-adhd-children) covers these differences and explains why tools must work WITH the ADHD brain instead of fighting against it.
 
-The connection between ADHD emotional intensity and [ADHD sleep struggles](/adhd-sleep/articles/01-adhd-child-wont-sleep) is worth noting. A dysregulated day often leads to a difficult night. And sleep deprivation makes emotional regulation even harder the next day. Breaking this cycle requires tools that don't add cognitive demands.
+The connection between ADHD emotional intensity and [ADHD sleep struggles](/why-your-adhd-child-wont-sleep) is worth noting. A dysregulated day often leads to a difficult night. And sleep deprivation makes emotional regulation even harder the next day. Breaking this cycle requires tools that don't add cognitive demands.
 
 ### Why Passive Tools Matter for Neurodivergent Children
 
@@ -327,7 +327,7 @@ Here's how different sounds affect the nervous system:
 
 **Familiar sounds** provide comfort through recognition. The brain doesn't need to work to identify them. They're already categorised as safe.
 
-This is why [calming sounds designed for neurodivergent children](/calming-sounds/articles/07-complete-guide-calming-sounds-children) work differently than generic "relaxing music." Generic sounds often have unpredictable elements, complex harmonies, or sudden transitions that require active processing.
+This is why [calming sounds designed for neurodivergent children](/complete-guide-calming-sounds-children) work differently than generic "relaxing music." Generic sounds often have unpredictable elements, complex harmonies, or sudden transitions that require active processing.
 
 Purpose-designed sounds work with the nervous system, not against it. They're predictable enough to feel safe, consistent enough to allow settling, and gentle enough to not add sensory load.
 
@@ -341,7 +341,7 @@ Here's how to use sound practically for emotional regulation.
 
 If you've built a calm corner (and if you haven't, this is your sign), sound should be the foundation. Not an optional extra. Not something you add later. The foundation.
 
-Our guide to [calm corner sounds](/emotional-regulation/articles/04-calm-corner-sounds-children) covers this in detail, but here's the core principle: every emotional state has sounds that help.
+Our guide to [calm corner sounds](/guide-calm-corner-sounds-children) covers this in detail, but here's the core principle: every emotional state has sounds that help.
 
 **Green Zone (calm, focused):** Background ambient sounds support maintaining regulation. Think gentle soundscapes, soft nature sounds.
 
@@ -361,7 +361,7 @@ Emotional dysregulation doesn't only happen in meltdowns. It shows up throughout
 
 **Morning transitions:** When the day feels overwhelming before it's begun, steady ambient sound can provide an anchoring backdrop.
 
-**After school:** The [sensory overload](/sensory-overload/articles/01-understanding-sensory-overload-children) of a school day often means children arrive home with empty tanks. Sound can support the decompress without requiring anything from them.
+**After school:** The [sensory overload](/understanding-sensory-overload-children) of a school day often means children arrive home with empty tanks. Sound can support the decompress without requiring anything from them.
 
 **Homework time:** Regulation struggles often surface during demanding tasks. Background audio can support focus without adding cognitive load.
 
@@ -415,7 +415,7 @@ This is where sound becomes extraordinary.
 
 It regulates BOTH of you at once.
 
-Our detailed guide to [co-regulation through sound](/emotional-regulation/articles/05-co-regulation-through-sound-parent-child) explains the mechanism fully. But here's the essence: passive sound enters both nervous systems simultaneously. Neither of you needs to go first. Neither of you needs to do anything except exist in the same auditory space.
+Our detailed guide to [co-regulation through sound](/co-regulation-through-sound-parent-child) explains the mechanism fully. But here's the essence: passive sound enters both nervous systems simultaneously. Neither of you needs to go first. Neither of you needs to do anything except exist in the same auditory space.
 
 You don't need to fake calm while your body screams stress. You don't need to white-knuckle through your own activation while trying to project peace. The sound does the work for both of you.
 
@@ -462,7 +462,7 @@ The connection between emotional regulation and sleep is bidirectional. Poor reg
 
 Sound is one of the few tools that works effectively for both. It can support settling at bedtime. It can provide continuity through the night. It can ease morning wake-ups.
 
-For children with ADHD, whose [ADHD sleep struggles](/adhd-sleep/articles/01-adhd-child-wont-sleep) often compound emotional dysregulation, sound offers a non-demanding support that doesn't require the already-exhausted brain to do more work.
+For children with ADHD, whose [ADHD sleep struggles](/why-your-adhd-child-wont-sleep) often compound emotional dysregulation, sound offers a non-demanding support that doesn't require the already-exhausted brain to do more work.
 
 ### Long-Term Regulation Development
 

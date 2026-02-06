@@ -40,17 +40,17 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/adhd-child-wont-sleep"
+  - url: "/why-your-adhd-child-wont-sleep"
     anchor: "why your ADHD child won't sleep"
-  - url: "/adhd-bedtime-routine"
+  - url: "/parents-guide-adhd-bedtime-routine"
     anchor: "building an ADHD-friendly bedtime routine"
-  - url: "/calming-sounds-adhd"
+  - url: "/best-calming-sounds-adhd-children"
     anchor: "calming sounds for ADHD children"
   - url: "/adhd-racing-thoughts"
     anchor: "racing thoughts at bedtime"
-  - url: "/beyond-melatonin"
+  - url: "/beyond-melatonin-adhd-sleep-alternatives"
     anchor: "non-medication sleep help"
-  - url: "/adhd-sleep-vs-autism-sleep"
+  - url: "/parents-guide-adhd-vs-autism-sleep"
     anchor: "ADHD sleep vs autism sleep"
 external_citations:
   - url: "https://www.uhs.nhs.uk/whats-new/press-releases/southampton-researchers-launch-new-study-to-help-children-with-adhd-sleep-better"
@@ -117,7 +117,7 @@ The quieter the room, the louder the brain becomes.
 
 A landmark study by the University of Nottingham / Wellcome Trust, 2011: [Brain scans show children with ADHD have faulty off-switch for mind-wandering](https://wellcome.org/press-release/brain-scans-show-children-adhd-have-faulty-switch-mind-wandering) found that children with ADHD struggle to switch off the part of their brain responsible for daydreaming and spontaneous thoughts. At bedtime, with nothing interesting to focus on, that internal world takes over.
 
-We've written a detailed guide on [racing thoughts at bedtime](/adhd-racing-thoughts) if this is your child's main struggle. Understanding the mechanism is the first step to addressing it.
+We've written a detailed guide on [racing thoughts at bedtime](/quieting-adhd-racing-thoughts-bedtime) if this is your child's main struggle. Understanding the mechanism is the first step to addressing it.
 
 ### The Circadian Rhythm Difference
 
@@ -158,7 +158,7 @@ But here's the gap: most routine advice focuses on what happens AROUND sleep (ba
 
 An ADHD child can go through every step of a bedtime routine perfectly and still lie awake for hours because their brain hasn't been given what it needs to transition to sleep.
 
-We've written a complete guide to [building an ADHD-friendly bedtime routine](/adhd-bedtime-routine) that addresses this specific gap.
+We've written a complete guide to [building an ADHD-friendly bedtime routine](/parents-guide-adhd-bedtime-routine) that addresses this specific gap.
 
 ### "Remove Screen Time Before Bed"
 
@@ -188,7 +188,7 @@ The result is a child who is physically tired, mentally wired, and frustrated by
 
 Melatonin can be part of a sleep solution. But it's rarely the complete solution, especially when racing thoughts are involved.
 
-For more on this, including what to do when melatonin isn't enough, see our guide on [non-medication sleep help](/beyond-melatonin).
+For more on this, including what to do when melatonin isn't enough, see our guide on [non-medication sleep help](/beyond-melatonin-adhd-sleep-alternatives).
 
 ## The Missing Piece Nobody Talks About
 
@@ -226,7 +226,7 @@ Passive sound provides just enough external input to satisfy that need. The brai
 
 The key word is "passive." Active engagement (games, apps requiring choices, even some meditation programmes) can actually increase alertness. Passive listening allows the brain to downregulate naturally. It asks nothing of your child except presence.
 
-For a detailed look at which sounds work and why, see our complete guide to [calming sounds for ADHD children](/calming-sounds-adhd).
+For a detailed look at which sounds work and why, see our complete guide to [calming sounds for ADHD children](/best-calming-sounds-adhd-children).
 
 ### Why "Just Press Play" Matters for Exhausted Parents
 
@@ -277,7 +277,7 @@ This is often when ADHD diagnosis happens and when school demands make sleep mor
 - Impact of ADHD medication on sleep
 
 **What helps:**
-- [ADHD-friendly bedtime routine](/adhd-bedtime-routine) with passive sound element
+- [ADHD-friendly bedtime routine](/parents-guide-adhd-bedtime-routine) with passive sound element
 - Starting wind-down 45-60 minutes before target sleep time
 - Addressing racing thoughts with calming audio input
 - Working with the child's natural body clock where possible
@@ -350,7 +350,7 @@ Between 50-70% of autistic children also have ADHD. Sleep problems in these chil
 
 When both conditions are present, you need strategies that address both: sensory-safe environment (autism need) plus calming brain input (ADHD need).
 
-We've written a complete comparison of [ADHD sleep vs autism sleep](/adhd-sleep-vs-autism-sleep) that helps parents identify which challenges their child faces.
+We've written a complete comparison of [ADHD sleep vs autism sleep](/parents-guide-adhd-vs-autism-sleep) that helps parents identify which challenges their child faces.
 
 ### ADHD and Anxiety
 
@@ -399,11 +399,11 @@ Here's how to put this all together.
 
 What's the main issue keeping your child awake?
 
-**Racing thoughts?** Start with [calming sounds](/calming-sounds-adhd) that give the brain somewhere to focus.
+**Racing thoughts?** Start with [calming sounds](/best-calming-sounds-adhd-children) that give the brain somewhere to focus.
 
 **Circadian rhythm delay?** Consider adjusting bedtime to work WITH their body clock, while using light exposure and sound to gradually shift timing.
 
-**Bedtime resistance?** Focus on [routine](/adhd-bedtime-routine) with built-in transition support.
+**Bedtime resistance?** Focus on [routine](/parents-guide-adhd-bedtime-routine) with built-in transition support.
 
 **Medication effects?** Talk to your prescriber AND add non-medication support.
 
@@ -448,7 +448,7 @@ For some children, melatonin helps with the circadian delay while passive sound 
 
 For others, non-medication approaches are enough. You won't know until you try.
 
-See our guide on [non-medication sleep help](/beyond-melatonin) for more on when medication makes sense.
+See our guide on [non-medication sleep help](/beyond-melatonin-adhd-sleep-alternatives) for more on when medication makes sense.
 
 ## What to Expect: Realistic Timelines
 
@@ -605,7 +605,7 @@ This is a common worry, but it misunderstands how ADHD brains work. Neurotypical
 
 ### What if my child has both ADHD and autism?
 
-Children with both conditions often experience more severe sleep difficulties than those with either alone. ADHD causes racing thoughts and circadian delays; autism causes sensory sensitivities and transition difficulties. You'll need to address both: create a sensory-safe environment (autism need) and add calming input for the racing brain (ADHD need). See our guide on [ADHD sleep vs autism sleep](/adhd-sleep-vs-autism-sleep) for detailed guidance.
+Children with both conditions often experience more severe sleep difficulties than those with either alone. ADHD causes racing thoughts and circadian delays; autism causes sensory sensitivities and transition difficulties. You'll need to address both: create a sensory-safe environment (autism need) and add calming input for the racing brain (ADHD need). See our guide on [ADHD sleep vs autism sleep](/parents-guide-adhd-vs-autism-sleep) for detailed guidance.
 
 ### How long should I try sound-based approaches before giving up?
 

@@ -116,7 +116,7 @@ For autistic children and those with sensory processing differences, sound sensi
 
 **What works:** Carefully calibrated sounds with controlled frequency ranges. Audio specifically designed to avoid the frequencies that commonly trigger sensory discomfort. Sounds that are steady and predictable, without sudden changes in volume or texture.
 
-This is where [adapted for vs designed for](/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children) really matters. Generic sleep sounds aren't created with auditory hypersensitivity in mind. They might include frequency combinations that feel neutral to most ears but land as sharp or intrusive to sensitive processing.
+This is where [adapted for vs designed for](/why-generic-calming-sounds-dont-work-nd-children) really matters. Generic sleep sounds aren't created with auditory hypersensitivity in mind. They might include frequency combinations that feel neutral to most ears but land as sharp or intrusive to sensitive processing.
 
 **What doesn't work:** Most mainstream sleep sounds weren't calibrated for sensitive ears. Sounds with dynamic range or volume variations can trigger discomfort. And audio that includes harsh frequencies known to affect sensitive listeners often makes things worse, not better.
 
@@ -203,11 +203,11 @@ Sounds to help child sleep work best when they're part of a thoughtful whole. Th
 
 ## Finding Sounds Designed for Your Child
 
-Understanding [why generic calming sounds don't work](/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children) is the first step. Finding sounds that were actually designed for sensitive and neurodivergent children is the next.
+Understanding [why generic calming sounds don't work](/why-generic-calming-sounds-dont-work-nd-children) is the first step. Finding sounds that were actually designed for sensitive and neurodivergent children is the next.
 
 Most sleep sounds weren't created with sensory differences in mind. They weren't designed considering how an ADHD brain processes audio differently. They weren't calibrated for ears that hear frequencies others miss.
 
-That's not a criticism of those sounds. They work for many children. But if your child isn't one of them, and you've tried app after app without success, you need [sounds designed for neurodivergent children](/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children). Not sounds adapted from something created for someone else.
+That's not a criticism of those sounds. They work for many children. But if your child isn't one of them, and you've tried app after app without success, you need [sounds designed for neurodivergent children](/why-generic-calming-sounds-dont-work-nd-children). Not sounds adapted from something created for someone else.
 
 The Open Sanctuary at HushAway® was built specifically for this. Every sound created from the ground up for sensitive ears, racing brains, and anxious bedtimes. No interaction required. No choices to make at 10pm when everyone's exhausted.
 
@@ -223,7 +223,7 @@ If you've been cycling through generic sounds wondering what's wrong with your c
 
 Your child's sleep problem has a shape. The right sound matches that shape. Finding the match takes observation and patience, but it exists. We've seen it happen for families who had tried everything.
 
-For sounds designed specifically for sensitive and neurodivergent children, explore The Open Sanctuary. For a deeper understanding of which sounds work and why, see our [complete guide to calming sounds for children](/calming-sounds/articles/07-complete-guide-calming-sounds-children).
+For sounds designed specifically for sensitive and neurodivergent children, explore The Open Sanctuary. For a deeper understanding of which sounds work and why, see our [complete guide to calming sounds for children](/complete-guide-calming-sounds-children).
 
 Because the goal isn't finding the best sleep sounds for children. The goal is finding the right sleep sounds for your child. And that's a match worth finding.
 

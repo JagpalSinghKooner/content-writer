@@ -90,7 +90,7 @@ Each frequency is traditionally associated with particular benefits:
 
 We say "traditionally associated" because these claims come from ancient practice, not clinical research. That distinction matters.
 
-If you're new to sound-based approaches, our guide to [understanding sound therapy for children](/sound-therapy/01-understanding-sound-therapy-children) explains the broader landscape of options available to parents.
+If you're new to sound-based approaches, our guide to [understanding sound therapy for children](/understanding-sound-therapy-children) explains the broader landscape of options available to parents.
 
 ## The Evidence: What Research Actually Shows
 
@@ -167,7 +167,7 @@ Start with 15-20 minutes during calm activities. Homework. Drawing. Quiet play. 
 
 ### Combine With Other Approaches
 
-Solfeggio frequencies work well alongside other sound therapy approaches. Some parents layer them with [binaural beats for children](/sound-therapy/03-safety-guide-binaural-beats-children) or use them as part of a broader calming routine.
+Solfeggio frequencies work well alongside other sound therapy approaches. Some parents layer them with [binaural beats for children](/safety-guide-binaural-beats-children) or use them as part of a broader calming routine.
 
 They can also complement other sensory supports: dim lighting, reduced visual stimulation, comfortable textures.
 
@@ -205,7 +205,7 @@ We want to be clear about something: solfeggio frequencies should complement, no
 
 Anyone who tells you otherwise is overselling.
 
-Our [sound therapy evidence guide](/sound-therapy/02-does-sound-therapy-work) explores what research supports across different approaches, helping you build a realistic picture of what sound can and can't do. For the full overview of all approaches, see our [complete guide to sound therapy for children](/sound-therapy/complete-guide-sound-therapy-children).
+Our [sound therapy evidence guide](/evidence-does-sound-therapy-work) explores what research supports across different approaches, helping you build a realistic picture of what sound can and can't do. For the full overview of all approaches, see our [complete guide to sound therapy for children](/complete-guide-sound-therapy-children).
 
 ## Common Questions Parents Ask
 

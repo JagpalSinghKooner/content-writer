@@ -1,5 +1,5 @@
 ---
-source_article: "binaural-beats-children"
+source_article: "safety-guide-binaural-beats-children"
 platform: "instagram"
 created: "2026-02-05"
 status: draft

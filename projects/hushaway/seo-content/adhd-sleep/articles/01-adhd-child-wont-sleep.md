@@ -38,11 +38,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/adhd-bedtime-routine"
+  - url: "/parents-guide-adhd-bedtime-routine"
     anchor: "ADHD-friendly bedtime routine"
   - url: "/adhd-racing-thoughts"
     anchor: "racing thoughts at bedtime"
-  - url: "/adhd-sleep-problems-guide"
+  - url: "/complete-guide-adhd-sleep-problems-uk"
     anchor: "complete guide to ADHD sleep"
 external_citations:
   - url: "https://www.uhs.nhs.uk/whats-new/press-releases/southampton-researchers-launch-new-study-to-help-children-with-adhd-sleep-better"
@@ -139,7 +139,7 @@ But here's the gap: most routine advice focuses on what happens AROUND sleep (ba
 
 An ADHD child can go through every step of a bedtime routine perfectly and still lie awake for hours because their brain hasn't been given what it needs to transition to sleep.
 
-We've written about building an [ADHD-friendly bedtime routine](/adhd-bedtime-routine) that addresses this specific gap.
+We've written about building an [ADHD-friendly bedtime routine](/parents-guide-adhd-bedtime-routine) that addresses this specific gap.
 
 ### "Remove Screen Time Before Bed"
 
@@ -199,7 +199,7 @@ This is why HushAway® content is designed for passive listening. No tapping. No
 
 ## Dealing with Racing Thoughts at Bedtime
 
-If your child's main struggle is [racing thoughts at bedtime](/adhd-racing-thoughts), here's what's happening:
+If your child's main struggle is [racing thoughts at bedtime](/quieting-adhd-racing-thoughts-bedtime), here's what's happening:
 
 Their brain is doing its job. Processing the day, making connections, generating ideas. ADHD brains are often creative, curious, and full of energy precisely because they don't shut off easily.
 
@@ -237,7 +237,7 @@ You don't need another strategy. You don't need to try harder. You've already tr
 
 Your child's brain just needs something calm to land on. Maybe, tonight, this is it.
 
-For more on this topic, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) covers everything from the science of ADHD sleep to practical solutions for every age group.
+For more on this topic, our [complete guide to ADHD sleep problems](/complete-guide-adhd-sleep-problems-uk) covers everything from the science of ADHD sleep to practical solutions for every age group.
 
 ---
 

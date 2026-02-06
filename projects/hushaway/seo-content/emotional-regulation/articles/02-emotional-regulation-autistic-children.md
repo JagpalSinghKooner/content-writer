@@ -45,7 +45,7 @@ internal_links:
     anchor: "emotional regulation in children"
   - url: "/autistic-meltdowns/articles/01-understanding-autism-meltdowns"
     anchor: "autistic meltdowns"
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "sensory overload"
   - url: "/autistic-meltdowns/articles/07-complete-guide-autism-meltdowns-uk-parents"
     anchor: "our complete guide to autism meltdowns"
@@ -82,7 +82,7 @@ Here's what actually helps for emotional regulation autism: strategies that work
 
 ## Why Emotional Regulation Autism Approaches Must Be Different
 
-If you've read our foundation article on [emotional regulation in children](/emotional-regulation/articles/01-understanding-emotional-regulation-children), you know that all children develop regulatory capacity gradually. But for autistic children, the process looks and feels fundamentally different.
+If you've read our foundation article on [emotional regulation in children](/understanding-emotional-regulation-children), you know that all children develop regulatory capacity gradually. But for autistic children, the process looks and feels fundamentally different.
 
 Research confirms what you've probably sensed all along. Mazefsky, C.A. & White, S.W., 2019: [Emotion Regulation: Concepts and Practice in Autism Spectrum Disorder](https://journals.sagepub.com/doi/10.1177/1362361319877792) found that autistic individuals often experience emotions more intensely and have fewer automatic coping strategies available during distress.
 
@@ -159,7 +159,7 @@ Autism emotional dysregulation often has specific triggers that differ from neur
 
 **Transitions:** Moving from one activity to another requires cognitive flexibility. For autistic children, transitions can feel jarring and unpredictable, even routine ones.
 
-**Sensory environments:** The school hall, the supermarket, the birthday party. Environments that neurotypical children find merely stimulating can push your autistic child's nervous system past capacity. See our guide on [sensory overload](/sensory-overload/articles/01-understanding-sensory-overload-children) for more on this.
+**Sensory environments:** The school hall, the supermarket, the birthday party. Environments that neurotypical children find merely stimulating can push your autistic child's nervous system past capacity. See our guide on [sensory overload](/understanding-sensory-overload-children) for more on this.
 
 **Unexpected changes:** The substitute teacher. The cancelled outing. The different route home. Change threatens predictability, and predictability is regulatory.
 
@@ -211,7 +211,7 @@ Here's what helps when generic advice fails. These strategies account for how au
 
 ## Why Sound Works When Everything Else Fails
 
-If you've read [our complete guide to autism meltdowns](/autistic-meltdowns/articles/07-complete-guide-autism-meltdowns-uk-parents), you'll know that sound plays a particular role in supporting autistic nervous systems.
+If you've read [our complete guide to autism meltdowns](/complete-guide-autism-meltdowns-uk-parents), you'll know that sound plays a particular role in supporting autistic nervous systems.
 
 Here's why passive sound succeeds where active strategies fail:
 
@@ -253,7 +253,7 @@ It's respecting their neurology. It's actually paying attention to what they nee
 
 One quiet moment can change a whole day for a child. For autistic children, that quiet moment often matters even more.
 
-For the complete picture of emotional regulation across all children, including practical tools and strategies, see our [Complete Guide to Emotional Regulation for Children](/emotional-regulation/articles/07-complete-guide-emotional-regulation-children).
+For the complete picture of emotional regulation across all children, including practical tools and strategies, see our [Complete Guide to Emotional Regulation for Children](/complete-guide-emotional-regulation-children).
 
 If you'd like to try a different approach tonight, explore The Open Sanctuary. Sounds designed for your child's nervous system, ready when you need them.
 

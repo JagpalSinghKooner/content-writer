@@ -46,9 +46,9 @@ internal_links:
     anchor: "best apps for autistic children"
   - url: "/review-best-apps-adhd-children-uk"
     anchor: "best apps for ADHD children"
-  - url: "/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids"
+  - url: "/comparing-moshi-calm-headspace-nd-kids"
     anchor: "Moshi vs Calm vs Headspace comparison"
-  - url: "/free-calming-apps-kids-uk"
+  - url: "/guide-free-calming-apps-kids-uk"
     anchor: "free calming apps for kids"
   - url: "/guide-screen-free-calming-alternatives-kids"
     anchor: "screen-free calming alternatives"
@@ -200,7 +200,7 @@ The story-based content can work well for children who respond to narrative. The
 
 Moshi wasn't designed for neurodivergent processing. There's no content specifically addressing auditory sensitivities. No frequency-based sounds for nervous system regulation. No ASMR designed for sensory differences. And the app's entertainment-first approach means lots of stimulating content mixed with calming content. Finding what works requires trial and error that many exhausted parents don't have energy for.
 
-**Our honest take:** Moshi works for some ND children, particularly those who respond to stories. But there's a distinction worth understanding: it's "adapted FOR" neurodivergent children, not "designed FOR" them. That difference matters more than you might think. We explore this in depth in our [Moshi vs Calm vs Headspace comparison](/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids).
+**Our honest take:** Moshi works for some ND children, particularly those who respond to stories. But there's a distinction worth understanding: it's "adapted FOR" neurodivergent children, not "designed FOR" them. That difference matters more than you might think. We explore this in depth in our [Moshi vs Calm vs Headspace comparison](/comparing-moshi-calm-headspace-nd-kids).
 
 ### Calm Kids
 
@@ -218,7 +218,7 @@ Honestly? Not much. Calm's approach centres on guided meditation, which requires
 
 Almost everything about Calm assumes neurotypical processing. The guided meditations require sustained attention. The interactive exercises demand cognitive engagement. The US-centric content and voices may not resonate with UK children. The absence of a free tier creates a barrier for families already juggling multiple app subscriptions.
 
-**Our honest take:** Calm is a high-quality app for the children it was designed for. Those children aren't neurodivergent. If your ND child has tried Calm and struggled, that's not their failure. It's a design mismatch. See our [Moshi vs Calm vs Headspace comparison](/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids) for the full breakdown.
+**Our honest take:** Calm is a high-quality app for the children it was designed for. Those children aren't neurodivergent. If your ND child has tried Calm and struggled, that's not their failure. It's a design mismatch. See our [Moshi vs Calm vs Headspace comparison](/comparing-moshi-calm-headspace-nd-kids) for the full breakdown.
 
 ### Headspace for Kids
 
@@ -253,7 +253,7 @@ The price. Genuinely free removes the financial barrier entirely. The evidence b
 
 Smiling Mind wasn't designed for neurodivergent children. The interface can be overwhelming with too many choices. The Australian accents may be unfamiliar to UK children. Users report technical issues: random logouts, streaming interruptions, crashes during routines. These reliability problems are particularly problematic for ND children who need predictability.
 
-**Our honest take:** Smiling Mind is the best free option for neurotypical children. For ND children, the generic content and technical reliability issues make it frustrating. We cover this in detail in our [free calming apps for kids](/free-calming-apps-kids-uk) guide.
+**Our honest take:** Smiling Mind is the best free option for neurotypical children. For ND children, the generic content and technical reliability issues make it frustrating. We cover this in detail in our [free calming apps for kids](/guide-free-calming-apps-kids-uk) guide.
 
 ### Sleep Wise (Hunrosa)
 
@@ -408,7 +408,7 @@ Technically free. Endless content. No shortage of "calming music for children" v
 
 The problems are obvious. Ads interrupt calming moments. Algorithmic recommendations pull children toward stimulating content. Screen time creeps. Quality varies wildly. No curation for ND needs.
 
-We've explored all these options in our [free calming apps for kids](/free-calming-apps-kids-uk) guide.
+We've explored all these options in our [free calming apps for kids](/guide-free-calming-apps-kids-uk) guide.
 
 ## Screen-Free Alternatives
 

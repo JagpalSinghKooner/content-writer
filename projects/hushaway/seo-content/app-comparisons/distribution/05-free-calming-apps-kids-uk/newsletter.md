@@ -1,5 +1,5 @@
 ---
-source_article: "free-calming-apps-kids-uk"
+source_article: "guide-free-calming-apps-kids-uk"
 platform: "newsletter"
 created: "2026-02-05"
 status: draft

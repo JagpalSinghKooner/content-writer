@@ -114,7 +114,7 @@ This isn't bad behaviour. It's the masking debt coming due.
 
 ## The Sensory Bucket and School Days
 
-If you've read our guide on [what's actually happening inside their brain](/autistic-meltdowns/01-understanding-autism-meltdowns), you'll recognise the sensory bucket concept. Every sensory input, every social demand, every unexpected change adds water to an invisible bucket your child carries.
+If you've read our guide on [what's actually happening inside their brain](/understanding-autism-meltdowns), you'll recognise the sensory bucket concept. Every sensory input, every social demand, every unexpected change adds water to an invisible bucket your child carries.
 
 School fills that bucket faster than almost anything else.
 
@@ -202,7 +202,7 @@ You press play. The frequencies or ambient noise or gentle ASMR fill the space. 
 
 They just have to receive it.
 
-For specific guidance on [what to actually play during a meltdown](/autistic-meltdowns/02-what-to-play-during-meltdown), we've written a detailed guide. The short version: brown noise, pink noise, low frequencies, and consistent soundscapes tend to work best. Nothing with lyrics. Nothing with sudden changes. Nothing that requires attention.
+For specific guidance on [what to actually play during a meltdown](/sounds-to-play-autism-meltdown), we've written a detailed guide. The short version: brown noise, pink noise, low frequencies, and consistent soundscapes tend to work best. Nothing with lyrics. Nothing with sudden changes. Nothing that requires attention.
 
 ## Building an After School Reset Routine
 
@@ -278,7 +278,7 @@ When the meltdown arrives, you already know what to do. Reduce sensory input. St
 
 Sound can still help during the meltdown itself. If you have calming frequencies playing, let them continue. If not, quietly start them without announcement. The sound won't stop the meltdown, but it gives the nervous system something consistent while the overwhelm processes through.
 
-After the meltdown, your child will need time to rebuild. The [recovery after the meltdown](/autistic-meltdowns/autism-meltdown-recovery-guide) matters just as much as what you do during it. Sound supports that recovery too, keeping demands low while the nervous system slowly comes back online.
+After the meltdown, your child will need time to rebuild. The [recovery after the meltdown](/helping-child-recover-after-meltdown) matters just as much as what you do during it. Sound supports that recovery too, keeping demands low while the nervous system slowly comes back online.
 
 ## What Schools Don't See
 

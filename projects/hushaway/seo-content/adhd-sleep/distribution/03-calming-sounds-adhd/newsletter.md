@@ -1,5 +1,5 @@
 ---
-source_article: "03-calming-sounds-adhd"
+source_article: "best-calming-sounds-adhd-children"
 platform: "newsletter"
 created: "2026-02-03"
 status: draft
@@ -35,7 +35,7 @@ The article breaks down exactly which sounds work (white, pink, brown, ASMR, fre
 
 Read the full article to find out which calming sounds match your child's specific profile:
 
-[Best Calming Sounds for ADHD Children (Backed by Research)](/calming-sounds-adhd)
+[Best Calming Sounds for ADHD Children (Backed by Research)](/best-calming-sounds-adhd-children)
 
 And if you want to try something tonight, The Open Sanctuary has frequencies and soundscapes built for exactly this — just press play.
 

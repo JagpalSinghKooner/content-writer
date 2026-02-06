@@ -49,9 +49,9 @@ internal_links:
     anchor: "our complete guide to what sounds actually help during meltdowns"
   - url: "/autistic-meltdowns/articles/03-after-school-autism-meltdown-why"
     anchor: "why after-school meltdowns happen and how to help"
-  - url: "/autistic-meltdowns/articles/04-autism-meltdown-recovery-guide"
+  - url: "/helping-child-recover-after-meltdown"
     anchor: "what actually helps your child recover after a meltdown"
-  - url: "/autistic-meltdowns/articles/05-autism-meltdown-vs-shutdown-difference"
+  - url: "/understanding-meltdown-vs-shutdown"
     anchor: "the difference between meltdowns and shutdowns"
   - url: "/autistic-meltdowns/articles/06-preventing-autism-meltdowns-warning-signs"
     anchor: "preventing meltdowns and reading the warning signs"
@@ -130,7 +130,7 @@ When your child hits sensory or emotional overload, their nervous system switche
 
 This is why "calm down" doesn't work. Why reasoning fails. Why logical explanations mid-meltdown make things worse. The part of the brain that processes your words? It's simply not available.
 
-For the full neuroscience behind this, including the critical difference between meltdowns and tantrums, see our guide on [understanding what's actually happening during an autism meltdown](/autistic-meltdowns/articles/01-understanding-autism-meltdowns).
+For the full neuroscience behind this, including the critical difference between meltdowns and tantrums, see our guide on [understanding what's actually happening during an autism meltdown](/understanding-autism-meltdowns).
 
 ## The Three Phases Every Parent Needs to Understand
 
@@ -184,7 +184,7 @@ Your child's warning signs will be unique to them. Become a detective of their p
 
 The patterns are often clearer than you'd expect.
 
-For the complete guide to prevention strategies and reading your child's specific warning signs, including how sound fits into daily regulation, see [preventing meltdowns and reading the warning signs](/autistic-meltdowns/articles/06-preventing-autism-meltdowns-warning-signs).
+For the complete guide to prevention strategies and reading your child's specific warning signs, including how sound fits into daily regulation, see [preventing meltdowns and reading the warning signs](/preventing-autism-meltdowns-warning-signs).
 
 ### Building Daily Regulation
 
@@ -264,7 +264,7 @@ Give it time. Sound won't stop a meltdown instantly. Nothing does.
 
 What it does is give the nervous system something consistent to land on while the overwhelm runs its course.
 
-For specific sound recommendations, volume guidance, and detailed approaches, see [our complete guide to what sounds actually help during meltdowns](/autistic-meltdowns/articles/02-what-to-play-during-meltdown).
+For specific sound recommendations, volume guidance, and detailed approaches, see [our complete guide to what sounds actually help during meltdowns](/sounds-to-play-autism-meltdown).
 
 ## Phase Three: Recovery
 
@@ -301,7 +301,7 @@ All of this is normal. All of this makes sense when you understand what their bo
 
 **Be present without pressure.** Some children want you close. Others need space. Either is valid.
 
-For the full guide to recovery, including what doesn't help (immediate debriefing, punishment, forced apologies) and how to support yourself after the meltdown too, see [what actually helps your child recover after a meltdown](/autistic-meltdowns/articles/04-autism-meltdown-recovery-guide).
+For the full guide to recovery, including what doesn't help (immediate debriefing, punishment, forced apologies) and how to support yourself after the meltdown too, see [what actually helps your child recover after a meltdown](/helping-child-recover-after-meltdown).
 
 Now let's talk about why sound keeps appearing throughout this guide.
 
@@ -366,7 +366,7 @@ And maybe some calming sounds ready to play.
 
 Many parents find that having sound playing when their child walks in the door makes an enormous difference. Not talking. Not asking. Just ambient support while the nervous system discharges six hours of accumulated stress.
 
-For the full guide to after-school meltdowns, including how to build an effective reset routine, see [why after-school meltdowns happen and how to help](/autistic-meltdowns/articles/03-after-school-autism-meltdown-why).
+For the full guide to after-school meltdowns, including how to build an effective reset routine, see [why after-school meltdowns happen and how to help](/after-school-autism-meltdown-why).
 
 ### Public Meltdowns
 
@@ -424,7 +424,7 @@ Shutdowns need the same understanding and support as meltdowns. Just delivered d
 
 The dangerous thing about shutdowns is how easily they're overlooked. A child mid-meltdown demands attention. A child mid-shutdown can go unnoticed for hours. Days of shutdowns can pass before anyone realises something is wrong.
 
-For the full guide to recognising shutdowns, understanding how they differ from meltdowns, and how to support your child through both, see [the difference between meltdowns and shutdowns](/autistic-meltdowns/articles/05-autism-meltdown-vs-shutdown-difference).
+For the full guide to recognising shutdowns, understanding how they differ from meltdowns, and how to support your child through both, see [the difference between meltdowns and shutdowns](/understanding-meltdown-vs-shutdown).
 
 Now let's pull everything together into a practical toolkit you can use.
 

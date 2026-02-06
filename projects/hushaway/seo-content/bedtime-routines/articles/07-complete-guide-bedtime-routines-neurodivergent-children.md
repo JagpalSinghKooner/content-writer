@@ -45,7 +45,7 @@ internal_links:
     anchor: "sound-based bedtime routine"
   - url: "/bedtime-routines/articles/03-visual-bedtime-routine-neurodivergent-children"
     anchor: "visual bedtime routine"
-  - url: "/bedtime-routines/articles/04-adhd-bedtime-routine-that-works"
+  - url: "/bedtime-routines/articles/04-sound-anchored-adhd-bedtime-routine"
     anchor: "ADHD bedtime routine"
   - url: "/bedtime-routines/articles/05-autism-bedtime-routine-predictability-calm"
     anchor: "autism bedtime routine"
@@ -130,7 +130,7 @@ But sound? "Try calming music." Figure it out yourself.
 
 This matters because sound isn't background noise for neurodivergent children. It's a primary regulation tool. It gives the racing ADHD brain something to land on. It provides the predictable input autistic children crave. It stays present when parents leave the room, easing separation anxiety.
 
-Sound deserves the same detailed guidance as visual schedules and weighted blankets. That's what you'll find throughout this guide and our [sound-based bedtime routine](/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children) article.
+Sound deserves the same detailed guidance as visual schedules and weighted blankets. That's what you'll find throughout this guide and our [sound-based bedtime routine](/sound-based-bedtime-routine-nd-children) article.
 
 ## Why Bedtime is Different for Neurodivergent Children
 
@@ -142,7 +142,7 @@ According to the National Autistic Society, 2024: [Sleep and autism](https://www
 
 These aren't discipline problems. This is neurology. And it's not your fault.
 
-If you want the full explanation of what's happening in your child's brain at bedtime, our article on [why bedtime is harder for neurodivergent children](/bedtime-routines/articles/01-why-bedtime-harder-neurodivergent-children) goes deep. But here's the short version:
+If you want the full explanation of what's happening in your child's brain at bedtime, our article on [why bedtime is harder for neurodivergent children](/why-bedtime-harder-neurodivergent-children) goes deep. But here's the short version:
 
 **The ADHD brain won't switch off.** During the day, there are distractions, activities, demands. At night, when everything goes quiet, the ADHD brain finally has space to think. Every thought that was pushed aside since breakfast comes rushing back. Racing thoughts don't respond to "just close your eyes."
 
@@ -219,7 +219,7 @@ For autistic brains, sound provides the sameness that reduces anxiety. When the 
 - Sounds designed without high frequencies that cause alertness
 - Options without sudden elements (drops, birds, mechanical sounds)
 
-Our complete [sound-based bedtime routine](/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children) guide provides detailed protocols for each stage of bedtime, including volume guidance, timing, and what to do when specific sounds don't work.
+Our complete [sound-based bedtime routine](/sound-based-bedtime-routine-nd-children) guide provides detailed protocols for each stage of bedtime, including volume guidance, timing, and what to do when specific sounds don't work.
 
 And if you want to try tonight? The Open Sanctuary has sounds designed specifically for neurodivergent children. No subscription required to start exploring.
 
@@ -286,7 +286,7 @@ Visual schedules do something important: they make the invisible visible.
 
 For children who struggle with uncertainty, seeing what comes next reduces anxiety. For children who struggle with transitions, having a checkpoint to complete gives the change a purpose. For children who struggle with time, pictures ground the sequence in something concrete.
 
-Our detailed guide on [visual bedtime routine](/bedtime-routines/articles/03-visual-bedtime-routine-neurodivergent-children) covers templates and implementation. Here's the overview:
+Our detailed guide on [visual bedtime routine](/visual-bedtime-routine-neurodivergent-children) covers templates and implementation. Here's the overview:
 
 ### Types of Visual Supports
 
@@ -321,7 +321,7 @@ Each picture matches a sound phase. The brain receives consistency from multiple
 
 ADHD creates specific bedtime challenges that require specific strategies. Generic advice often makes things worse because it doesn't account for how the ADHD brain works.
 
-If your child has ADHD and bedtime involves hours of "just one more thing" followed by wide-awake-at-midnight, our [ADHD bedtime routine](/bedtime-routines/articles/04-adhd-bedtime-routine-that-works) guide goes deep. Here's the core framework:
+If your child has ADHD and bedtime involves hours of "just one more thing" followed by wide-awake-at-midnight, our [ADHD bedtime routine](/sound-anchored-adhd-bedtime-routine) guide goes deep. Here's the core framework:
 
 ### Why Quiet Makes It Worse
 
@@ -368,7 +368,7 @@ The last point matters. Making the sound the authority removes parent-child conf
 
 Autistic children often need something different from ADHD strategies. Where ADHD struggles with an unfocused brain, autism often struggles with unpredictability and transition.
 
-Our complete [autism bedtime routine](/bedtime-routines/articles/05-autism-bedtime-routine-predictability-calm) guide covers this in depth. Here's the framework:
+Our complete [autism bedtime routine](/autism-bedtime-routine-predictability-calm) guide covers this in depth. Here's the framework:
 
 ### Why Sameness Matters
 
@@ -410,7 +410,7 @@ For children with bedtime anxiety, the moment you leave the room is the moment e
 
 You've been there. The creeping backwards towards the door. The hand on the handle. The little voice: "Don't go."
 
-Our guide on [bedtime anxiety](/bedtime-routines/articles/06-bedtime-anxiety-sound-calm-answer) covers the full approach. Here's the core principle:
+Our guide on [bedtime anxiety](/bedtime-anxiety-sound-calm-answer) covers the full approach. Here's the core principle:
 
 ### Why Sound Bridges the Gap
 
@@ -592,4 +592,4 @@ One quiet moment can change a whole day for a child.
 
 ---
 
-*This guide is part of the HushAway® bedtime routines series. For specific strategies, explore our articles on [why bedtime is harder for neurodivergent children](/bedtime-routines/articles/01-why-bedtime-harder-neurodivergent-children), [sound-based bedtime routines](/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children), [visual bedtime routines](/bedtime-routines/articles/03-visual-bedtime-routine-neurodivergent-children), [ADHD bedtime](/bedtime-routines/articles/04-adhd-bedtime-routine-that-works), [autism bedtime](/bedtime-routines/articles/05-autism-bedtime-routine-predictability-calm), and [bedtime anxiety](/bedtime-routines/articles/06-bedtime-anxiety-sound-calm-answer).*
+*This guide is part of the HushAway® bedtime routines series. For specific strategies, explore our articles on [why bedtime is harder for neurodivergent children](/why-bedtime-harder-neurodivergent-children), [sound-based bedtime routines](/sound-based-bedtime-routine-nd-children), [visual bedtime routines](/visual-bedtime-routine-neurodivergent-children), [ADHD bedtime](/sound-anchored-adhd-bedtime-routine), [autism bedtime](/autism-bedtime-routine-predictability-calm), and [bedtime anxiety](/bedtime-anxiety-sound-calm-answer).*

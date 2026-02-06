@@ -414,24 +414,31 @@ Built the audit system (link-auditor agent, consistency-checker agent, audit-pil
 - Also: strip any `nn-` number prefix from slugs in links
 
 **Acceptance Criteria:**
-- [ ] All internal links follow `/{slug}` format (single path segment after leading slash)
-- [ ] No directory paths remain in any internal link URL
-- [ ] No file extensions (.md) in any link URL
-- [ ] No number prefixes (01-, 02-, etc.) in any link slug
-- [ ] Grep for `/adhd-sleep/` in markdown links returns 0
-- [ ] Grep for `/autistic-meltdowns/` in markdown links returns 0
-- [ ] Grep for `/sensory-overload/` in markdown links returns 0
-- [ ] Grep for `/calming-sounds/` in markdown links returns 0
-- [ ] Grep for `/emotional-regulation/` in markdown links returns 0
-- [ ] Grep for `/bedtime-routines/` in markdown links returns 0
-- [ ] Grep for `/sound-therapy/` in markdown links returns 0
-- [ ] Every resulting link slug matches a known frontmatter slug from an actual article
-- [ ] Git commit created
+- [x] All internal links follow `/{slug}` format (single path segment after leading slash)
+- [x] No directory paths remain in any internal link URL
+- [x] No file extensions (.md) in any link URL
+- [x] No number prefixes (01-, 02-, etc.) in any link slug
+- [x] Grep for `/adhd-sleep/` in markdown links returns 0
+- [x] Grep for `/autistic-meltdowns/` in markdown links returns 0
+- [x] Grep for `/sensory-overload/` in markdown links returns 0
+- [x] Grep for `/calming-sounds/` in markdown links returns 0
+- [x] Grep for `/emotional-regulation/` in markdown links returns 0
+- [x] Grep for `/bedtime-routines/` in markdown links returns 0
+- [x] Grep for `/sound-therapy/` in markdown links returns 0
+- [x] Every resulting link slug matches a known frontmatter slug from an actual article
+- [x] Git commit created
 
 **Starter Prompt:**
 > Fix internal link format across 7 pillars in `projects/hushaway/seo-content/` (App Comparisons already done). For each article, find all markdown links that use directory-structure URLs like `](/pillar/articles/nn-slug)` or `](/pillar/slug)` and replace with `](/slug)`. Strip any number prefixes (01-, 02-, etc.) from the slug portion. After all changes, verify: (1) grep for each pillar name followed by `/` in markdown link URLs — expect 0 matches for all 7 pillars, (2) cross-reference every resulting link slug against the master list of all 57 frontmatter slugs to confirm no broken links. Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Fixed internal link format across all 8 pillars (7 remaining + 1 leftover in App Comparisons). 50 files modified total (46 articles/distribution + 4 additional broken slug fixes). Converted 61 unique URL patterns from directory-structure format (`/pillar/articles/nn-slug`, `/pillar/nn-slug`, `/pillar/slug`) to clean `/{slug}` format. Also fixed 4 instances of `/adhd-racing-thoughts` (wrong slug) → `/quieting-adhd-racing-thoughts-bedtime` (correct frontmatter slug).
+- **Decisions:** Left `/the-open-sanctuary` links untouched (2 occurrences) — these are CMS product links, not article slugs. Left `.validation.md` files untouched (old artifacts, not publishable content). Mapped old file-based slugs to current frontmatter slugs where they differed (e.g., `02-what-to-play-during-meltdown` → `sounds-to-play-autism-meltdown`).
+- **Next:** Task 40 (Fix HushAway Internal URL — replace `the-open-sanctuary` with waitlist URL in emotional-regulation article 05).
 
 ---
 

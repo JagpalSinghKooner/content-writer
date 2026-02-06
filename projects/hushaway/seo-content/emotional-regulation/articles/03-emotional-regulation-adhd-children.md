@@ -42,11 +42,11 @@ schema_type: "Article"
 internal_links:
   - url: "/emotional-regulation/articles/01-understanding-emotional-regulation-children"
     anchor: "emotional regulation in children"
-  - url: "/adhd-sleep/articles/01-adhd-child-wont-sleep"
+  - url: "/adhd-sleep/articles/why-your-adhd-child-wont-sleep"
     anchor: "ADHD sleep struggles"
   - url: "/adhd-sleep/articles/04-adhd-racing-thoughts"
     anchor: "racing thoughts at bedtime"
-  - url: "/adhd-sleep/articles/03-calming-sounds-adhd"
+  - url: "/adhd-sleep/articles/best-calming-sounds-adhd-children"
     anchor: "calming sounds for ADHD"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4282137/"
@@ -75,7 +75,7 @@ The tools that actually help must work WITH the ADHD brain, not against it. That
 
 ## Why Emotional Regulation Is Harder for ADHD Children
 
-If you've read our guide to [emotional regulation in children](/emotional-regulation/articles/01-understanding-emotional-regulation-children), you know that all children develop this capacity gradually. But for children with ADHD, it's not just developing slowly. It's developing differently.
+If you've read our guide to [emotional regulation in children](/understanding-emotional-regulation-children), you know that all children develop this capacity gradually. But for children with ADHD, it's not just developing slowly. It's developing differently.
 
 Shaw, Philip et al., 2014: [Emotion Dysregulation in Attention Deficit Hyperactivity Disorder](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4282137/) found that emotional dysregulation is a core feature of ADHD, not a side effect. The research shows that the same brain differences affecting attention also affect emotional control.
 
@@ -169,7 +169,7 @@ This is where many parents find unexpected success. Sound doesn't require your c
 
 When you press play on calming audio, you're providing immediate sensory input that their nervous system can respond to automatically. No attention required.
 
-Our article on [calming sounds for ADHD](/adhd-sleep/articles/03-calming-sounds-adhd) covers this in detail for sleep contexts, but the principle applies to emotional regulation too. Predictable, gentle sound gives the ADHD brain something to anchor to without adding demands.
+Our article on [calming sounds for ADHD](/best-calming-sounds-adhd-children) covers this in detail for sleep contexts, but the principle applies to emotional regulation too. Predictable, gentle sound gives the ADHD brain something to anchor to without adding demands.
 
 Want to try this tonight? The Open Sanctuary has sounds designed specifically for neurodivergent children. No decisions, no setup, no asking your child to do anything. Just press play and let the sound do the work while you both catch your breath.
 
@@ -201,7 +201,7 @@ Reduce your words to the minimum:
 
 Then stop talking. Really. Your calm presence does more than your words ever could. Stay nearby without demanding eye contact or conversation. Let them know you're there without adding pressure.
 
-This connects to co-regulation, which we cover in depth in our [co-regulation through sound guide](/emotional-regulation/articles/05-co-regulation-through-sound-parent-child). Your regulated nervous system helps regulate theirs, but only if you're not adding verbal demands they can't process.
+This connects to co-regulation, which we cover in depth in our [co-regulation through sound guide](/co-regulation-through-sound-parent-child). Your regulated nervous system helps regulate theirs, but only if you're not adding verbal demands they can't process.
 
 ### External Cues Over Internal Awareness
 
@@ -220,7 +220,7 @@ This one catches many parents by surprise.
 
 We can't talk about ADHD emotional control without mentioning sleep. If your child isn't sleeping well, their emotional regulation capacity is reduced before their day even starts.
 
-[ADHD sleep struggles](/adhd-sleep/articles/01-adhd-child-wont-sleep) are incredibly common. Racing thoughts, difficulty transitioning to rest, and delayed sleep onset all mean your child may be running on empty. Our guide to [racing thoughts at bedtime](/adhd-sleep/articles/04-adhd-racing-thoughts) covers specific strategies for that particular challenge.
+[ADHD sleep struggles](/why-your-adhd-child-wont-sleep) are incredibly common. Racing thoughts, difficulty transitioning to rest, and delayed sleep onset all mean your child may be running on empty. Our guide to [racing thoughts at bedtime](/quieting-adhd-racing-thoughts-bedtime) covers specific strategies for that particular challenge.
 
 A tired ADHD brain has even less capacity for emotional regulation. If daytime meltdowns are frequent, improving sleep might be the single most effective thing you can do.
 
@@ -242,12 +242,12 @@ And the most important change of all? Stop blaming yourself or your child for st
 
 Emotional regulation for ADHD children is one piece of a larger picture. In this pillar, we're also covering:
 
-- [Autism-specific emotional regulation strategies](/emotional-regulation/articles/02-guide-emotional-regulation-autistic-children)
-- [The missing tool in every calm corner guide](/emotional-regulation/articles/04-calm-corner-sounds-children): what sounds to actually play
-- [Co-regulation through sound](/emotional-regulation/articles/05-co-regulation-through-sound-parent-child): staying calm when your child can't
-- [What to do in the first 60 seconds of big feelings](/emotional-regulation/articles/06-big-feelings-overwhelmed-child-help)
+- [Autism-specific emotional regulation strategies](/guide-emotional-regulation-autistic-children)
+- [The missing tool in every calm corner guide](/guide-calm-corner-sounds-children): what sounds to actually play
+- [Co-regulation through sound](/co-regulation-through-sound-parent-child): staying calm when your child can't
+- [What to do in the first 60 seconds of big feelings](/big-feelings-overwhelmed-child-help)
 
-For the complete picture, see our [Complete Guide to Emotional Regulation for Children](/emotional-regulation/articles/07-complete-guide-emotional-regulation-children).
+For the complete picture, see our [Complete Guide to Emotional Regulation for Children](/complete-guide-emotional-regulation-children).
 
 Your child's ADHD makes emotional regulation harder. That's the reality. But harder doesn't mean impossible. It just means the tools that work look different from what the standard parenting books suggest.
 

@@ -141,7 +141,7 @@ It's what remains after you leave.
 
 Sound provides presence without physical presence. Think about what that means. Your child isn't consciously thinking "the sound means safety." Their nervous system is responding to continuity. No abrupt change. No scary silence. No alarm bells telling their brain to scan for threats.
 
-This is especially powerful for neurodivergent children. If you've read about [why bedtime is harder for neurodivergent children](/bedtime-routines/articles/01-why-bedtime-harder-neurodivergent-children), you'll know that these children often have heightened auditory awareness. They notice changes that neurotypical children filter out. When sound stays consistent, that heightened awareness becomes an asset. Instead of scanning for threats, they're wrapped in familiarity.
+This is especially powerful for neurodivergent children. If you've read about [why bedtime is harder for neurodivergent children](/why-bedtime-harder-neurodivergent-children), you'll know that these children often have heightened auditory awareness. They notice changes that neurotypical children filter out. When sound stays consistent, that heightened awareness becomes an asset. Instead of scanning for threats, they're wrapped in familiarity.
 
 ## How Sound Addresses Each Fear
 
@@ -175,7 +175,7 @@ The core fear: "The silence lets my thoughts get loud."
 
 Sound gives the anxious brain something external to focus on. Instead of spiralling through worries, their attention has somewhere to rest. Not active engagement, not distraction. Just something to land on.
 
-If you've read about [sound-based bedtime routines](/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children), you'll recognise this as the "anchor" effect. The brain needs something to hold onto. Without external input, it creates internal noise. An anxious child lying in silence isn't experiencing peace. They're experiencing an echo chamber of every worry they've ever had.
+If you've read about [sound-based bedtime routines](/sound-based-bedtime-routine-nd-children), you'll recognise this as the "anchor" effect. The brain needs something to hold onto. Without external input, it creates internal noise. An anxious child lying in silence isn't experiencing peace. They're experiencing an echo chamber of every worry they've ever had.
 
 Sound provides healthy external input that quiets the internal chatter.
 
@@ -231,7 +231,7 @@ Not all sounds work equally for anxious children. After working with hundreds of
 - Nature sounds with variation (rain that intensifies, wind that gusts)
 - Audio that stops after a set time (the silence wakes them, and you're back at square one)
 
-If you're exploring sound options, our [sound-based bedtime routine](/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children) guide explains the different types in detail. For autistic children dealing with fear of dark autism specifically, the [autism bedtime routine](/bedtime-routines/articles/05-autism-bedtime-routine-predictability-calm) article covers how predictability reduces anxiety.
+If you're exploring sound options, our [sound-based bedtime routine](/sound-based-bedtime-routine-nd-children) guide explains the different types in detail. For autistic children dealing with fear of dark autism specifically, the [autism bedtime routine](/autism-bedtime-routine-predictability-calm) article covers how predictability reduces anxiety.
 
 ## When Sound Isn't Enough
 
@@ -257,4 +257,4 @@ For an anxious child, that's everything.
 
 **Want to try tonight?** The Open Sanctuary has soundscapes designed specifically for neurodivergent children with bedtime anxiety. Frequencies, ambient sounds, gentle ASMR. No sudden changes. No loops that restart. No silence breaking in at 2am. Just consistent, gentle audio that stays all night, so you don't have to. [Explore The Open Sanctuary](https://hushaway.com/open-sanctuary) and find what helps your child feel safe tonight.
 
-For the complete framework covering all aspects of neurodivergent bedtime routines, see our [comprehensive guide](/bedtime-routines/articles/complete-guide-bedtime-routines-neurodivergent-children).
+For the complete framework covering all aspects of neurodivergent bedtime routines, see our [comprehensive guide](/complete-guide-nd-bedtime-routines).

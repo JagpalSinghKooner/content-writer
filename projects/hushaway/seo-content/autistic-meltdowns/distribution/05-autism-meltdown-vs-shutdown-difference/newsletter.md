@@ -1,5 +1,5 @@
 ---
-source_article: "autism-meltdown-vs-shutdown-difference"
+source_article: "understanding-meltdown-vs-shutdown"
 platform: "newsletter"
 created: "2026-02-03"
 status: draft

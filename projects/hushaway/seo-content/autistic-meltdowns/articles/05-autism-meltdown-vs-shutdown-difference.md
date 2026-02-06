@@ -45,7 +45,7 @@ internal_links:
     anchor: "what happens during an autism meltdown"
   - url: "/autistic-meltdowns/02-what-to-play-during-meltdown"
     anchor: "what sounds help during meltdowns"
-  - url: "/autistic-meltdowns/04-autism-meltdown-recovery-guide"
+  - url: "/helping-child-recover-after-meltdown"
     anchor: "helping your child recover"
   - url: "/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents"
     anchor: "complete guide to autism meltdowns"
@@ -100,7 +100,7 @@ But inside? They're drowning. In silence.
 
 Both meltdowns and shutdowns come from the same place: nervous system overload.
 
-Too much sensory input. Too much emotional demand. Too much change. Too many expectations. The bucket has overflowed (we explain [what happens during an autism meltdown](/autistic-meltdowns/01-understanding-autism-meltdowns) in detail).
+Too much sensory input. Too much emotional demand. Too much change. Too many expectations. The bucket has overflowed (we explain [what happens during an autism meltdown](/understanding-autism-meltdowns) in detail).
 
 The difference? It's all in how the overwhelm comes out.
 
@@ -182,7 +182,7 @@ Here's what actually helps:
 
 **Offer sound, not words.** This is where passive audio becomes powerful. Gentle soundscapes or low frequencies give the nervous system something safe to land on without adding any demands. No interaction required. No choices to make. Just background calm that signals "you're safe."
 
-For ideas on [what sounds help during meltdowns](/autistic-meltdowns/02-what-to-play-during-meltdown), see our guide. Many of these same approaches work for shutdowns, though you might choose even quieter, simpler sounds. During shutdown, the goal is to reduce input, not introduce new stimulation.
+For ideas on [what sounds help during meltdowns](/sounds-to-play-autism-meltdown), see our guide. Many of these same approaches work for shutdowns, though you might choose even quieter, simpler sounds. During shutdown, the goal is to reduce input, not introduce new stimulation.
 
 ## How Sound Helps Differently for Shutdowns
 
@@ -209,7 +209,7 @@ The beauty of passive audio is that it asks nothing of your child. No interactio
 
 The shutdown ends. But your child doesn't immediately bounce back to normal.
 
-Just like with meltdown recovery (we've written more about [helping your child recover here](/autistic-meltdowns/04-autism-meltdown-recovery-guide)), there's a period after a shutdown where they're fragile. Sometimes more fragile than after a meltdown, because shutdowns can last longer and drain more deeply.
+Just like with meltdown recovery (we've written more about [helping your child recover here](/helping-child-recover-after-meltdown)), there's a period after a shutdown where they're fragile. Sometimes more fragile than after a meltdown, because shutdowns can last longer and drain more deeply.
 
 They might be:
 - Exhausted, physically and mentally, sometimes for hours
@@ -232,7 +232,7 @@ Watch for early warning signs. If your child is getting quieter than usual, taki
 
 Building regulation into the day helps too. Rather than waiting for crisis, using calming sounds and sensory breaks throughout the day keeps the bucket from overflowing in the first place. Think of it as maintenance rather than emergency response.
 
-We'll cover this more in our article on [preventing meltdowns before they start](/autistic-meltdowns/preventing-autism-meltdowns-warning-signs).
+We'll cover this more in our article on [preventing meltdowns before they start](/preventing-autism-meltdowns-warning-signs).
 
 ## The Quiet Crisis
 

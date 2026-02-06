@@ -1,5 +1,5 @@
 ---
-source_article: "calming-sounds-every-situation-anxiety-focus-transitions"
+source_article: "guide-calming-sounds-every-situation"
 platform: instagram
 created: "2026-02-04"
 status: draft

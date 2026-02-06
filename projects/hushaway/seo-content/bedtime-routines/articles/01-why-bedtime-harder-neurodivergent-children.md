@@ -39,13 +39,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/adhd-sleep/articles/01-adhd-child-wont-sleep"
+  - url: "/adhd-sleep/articles/01-why-your-adhd-child-wont-sleep"
     anchor: "ADHD sleep difficulties"
   - url: "/adhd-sleep/articles/04-adhd-racing-thoughts"
     anchor: "racing thoughts at night"
   - url: "/emotional-regulation/articles/01-understanding-emotional-regulation-children"
     anchor: "emotional regulation"
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "sensory overload"
 external_citations:
   - url: "https://www.sleepfoundation.org/mental-health/adhd-and-sleep"
@@ -124,7 +124,7 @@ Think about what bedtime really means for your child.
 
 They're leaving behind the known: being awake, with you, doing familiar things. They're entering the unknown: alone, in the dark, unconscious, unable to control what happens next.
 
-For children who struggle with [emotional regulation](/emotional-regulation/articles/01-understanding-emotional-regulation-children), this isn't "resisting bedtime." It's genuine fear about what comes next. And autistic children often experience this acutely.
+For children who struggle with [emotional regulation](/understanding-emotional-regulation-children), this isn't "resisting bedtime." It's genuine fear about what comes next. And autistic children often experience this acutely.
 
 They're not being difficult. They're scared.
 
@@ -142,7 +142,7 @@ The ADHD brain doesn't have an off switch. When the day's distractions disappear
 
 This isn't worry by choice. It's a brain without the natural braking system that helps neurotypical children slow down at night.
 
-Children with [ADHD sleep difficulties](/adhd-sleep/articles/01-adhd-child-wont-sleep) often describe it as their mind being "too loud" at night. They can't switch it off because there's no switch.
+Children with [ADHD sleep difficulties](/why-your-adhd-child-wont-sleep) often describe it as their mind being "too loud" at night. They can't switch it off because there's no switch.
 
 And the body follows. Restless legs that won't stay still. Tossing and turning. An inability to get comfortable that has nothing to do with the mattress and everything to do with a nervous system still running at full speed.
 
@@ -162,7 +162,7 @@ For children with sensory processing differences, these aren't background detail
 
 You can't fall asleep while your brain is tracking every creak, every shadow, every unexpected sensation.
 
-Children experiencing [sensory overload](/sensory-overload/articles/01-understanding-sensory-overload-children) from their day may find bedtime especially challenging. Their nervous system is still processing hours of accumulated sensory input from school, activities, and home life. Bedtime isn't rest. It's the first quiet moment where everything catches up.
+Children experiencing [sensory overload](/understanding-sensory-overload-children) from their day may find bedtime especially challenging. Their nervous system is still processing hours of accumulated sensory input from school, activities, and home life. Bedtime isn't rest. It's the first quiet moment where everything catches up.
 
 ### 4. Melatonin and Circadian Rhythm Differences
 
@@ -192,7 +192,7 @@ Understanding the neurology is step one. Step two is finding tools that work wit
 
 **Predictability beyond routine.** Routines tell your child what happens next. But neurodivergent children often need deeper predictability: knowing not just the sequence but the sensory experience of each step. The same sounds. The same lighting. The same words at the same moment. Consistency in tiny details creates safety.
 
-**Something for the brain to land on.** This is where sound becomes powerful. For children with [racing thoughts at night](/adhd-sleep/articles/04-adhd-racing-thoughts), silence is the enemy. Their brain fills the quiet with thoughts. But passive sound gives the brain something to focus on without demanding anything back.
+**Something for the brain to land on.** This is where sound becomes powerful. For children with [racing thoughts at night](/quieting-adhd-racing-thoughts-bedtime), silence is the enemy. Their brain fills the quiet with thoughts. But passive sound gives the brain something to focus on without demanding anything back.
 
 No meditation instructions to follow. No breathing exercises to remember. Just sound that provides an anchor.
 
@@ -226,12 +226,12 @@ A child whose brain races needs something to land on. A child with transition an
 
 In the articles that follow in this series, we'll cover specific strategies:
 
-- [How sound can anchor bedtime routines](/bedtime-routines/articles/sound-based-bedtime-routine-nd-children)
-- [Visual bedtime routines that reduce transition anxiety](/bedtime-routines/articles/visual-bedtime-routine-neurodivergent-children)
-- [ADHD-specific bedtime strategies](/bedtime-routines/articles/adhd-bedtime-routine-that-works)
-- [Autism-specific approaches to bedtime predictability](/bedtime-routines/articles/autism-bedtime-routine-predictability-calm)
-- [Managing bedtime anxiety](/bedtime-routines/articles/bedtime-anxiety-sound-calm-answer)
-- [The complete guide to neurodivergent bedtime routines](/bedtime-routines/articles/complete-guide-bedtime-routines-neurodivergent-children)
+- [How sound can anchor bedtime routines](/sound-based-bedtime-routine-nd-children)
+- [Visual bedtime routines that reduce transition anxiety](/visual-bedtime-routine-neurodivergent-children)
+- [ADHD-specific bedtime strategies](/sound-anchored-adhd-bedtime-routine)
+- [Autism-specific approaches to bedtime predictability](/autism-bedtime-routine-predictability-calm)
+- [Managing bedtime anxiety](/bedtime-anxiety-sound-calm-answer)
+- [The complete guide to neurodivergent bedtime routines](/complete-guide-nd-bedtime-routines)
 
 For now, remember this: neurodivergent bedtime struggles are real, they're neurological, and they respond to tools that work with your child's brain.
 

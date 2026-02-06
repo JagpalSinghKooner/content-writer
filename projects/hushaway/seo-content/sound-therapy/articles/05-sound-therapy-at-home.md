@@ -139,7 +139,7 @@ If you're using headphones, look for:
 
 ## Sound Therapy at Home: Matching Sounds to Situations
 
-Different sounds support different needs. This is where [understanding what sound therapy actually is](/sound-therapy/01-understanding-sound-therapy-children) helps, because you can make better choices about what to try when.
+Different sounds support different needs. This is where [understanding what sound therapy actually is](/understanding-sound-therapy-children) helps, because you can make better choices about what to try when.
 
 Here's a practical breakdown of what works when.
 
@@ -183,7 +183,7 @@ Here's a practical breakdown of what works when.
 ### For focus and homework time
 
 **What often works:**
-- Binaural beats (see [our binaural beats guide](/sound-therapy/03-safety-guide-binaural-beats-children) for proper use)
+- Binaural beats (see [our binaural beats guide](/safety-guide-binaural-beats-children) for proper use)
 - White, pink, or brown noise
 - Lo-fi ambient music without lyrics
 - Nature sounds that don't have bird calls or other attention-grabbing elements
@@ -252,7 +252,7 @@ What it can do is provide one more tool in your toolkit. A way to make hard mome
 
 Sometimes one quiet moment changes a whole day. That's worth having.
 
-Being realistic about [what the evidence actually shows](/sound-therapy/02-does-sound-therapy-work) helps you use sound therapy appropriately while avoiding disappointment.
+Being realistic about [what the evidence actually shows](/evidence-does-sound-therapy-work) helps you use sound therapy appropriately while avoiding disappointment.
 
 ## Common Mistakes with Home Sound Therapy
 
@@ -320,7 +320,7 @@ The goal isn't to replace appropriate professional help. It's to have tools you 
 
 That's what sound therapy at home is really about. Support that fits your life, not the other way around.
 
-For the complete picture of all sound therapy approaches and how home-based support fits in, see our [complete guide to sound therapy for children](/sound-therapy/complete-guide-sound-therapy-children).
+For the complete picture of all sound therapy approaches and how home-based support fits in, see our [complete guide to sound therapy for children](/complete-guide-sound-therapy-children).
 
 ## FAQ
 

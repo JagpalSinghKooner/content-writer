@@ -39,7 +39,7 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "understanding sensory overload"
   - url: "/sensory-overload/articles/02-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
@@ -84,7 +84,7 @@ The hum of the refrigerator isn't background noise. It's constant, inescapable i
 
 According to the National Autistic Society, 2024: [Sensory differences](https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences/sensory-differences/all-audiences), many autistic people experience hypersensitivity to sounds. This can make everyday environments feel overwhelming, unpredictable, and exhausting.
 
-If you've read our guide on [understanding sensory overload](/sensory-overload/articles/01-understanding-sensory-overload-children), you'll know this isn't a choice or a behaviour problem. It's neurological. The filtering system that typically dampens irrelevant sounds doesn't work the same way in children with auditory hypersensitivity.
+If you've read our guide on [understanding sensory overload](/understanding-sensory-overload-children), you'll know this isn't a choice or a behaviour problem. It's neurological. The filtering system that typically dampens irrelevant sounds doesn't work the same way in children with auditory hypersensitivity.
 
 Every sound comes through at equal importance. Every sound demands processing. And eventually, the brain simply runs out of capacity.
 
@@ -132,7 +132,7 @@ ASMR, solfeggio frequencies, and carefully designed soundscapes give the nervous
 
 In simple terms: certain sounds actively calm the body. Not by being absent, but by being present in exactly the right way.
 
-Our guide on [calming sounds for sensory overload](/sensory-overload/articles/02-calming-sounds-sensory-overload) explains the science behind this in more detail. But for now, here's what matters: this isn't theory. Parents use this every day.
+Our guide on [calming sounds for sensory overload](/guide-calming-sounds-sensory-overload) explains the science behind this in more detail. But for now, here's what matters: this isn't theory. Parents use this every day.
 
 ## Therapeutic Sound vs Triggering Noise: What's Different
 

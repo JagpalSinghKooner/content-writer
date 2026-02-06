@@ -41,7 +41,7 @@ schema_type: "Article"
 internal_links:
   - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
     anchor: "why generic calming sounds often miss the mark"
-  - url: "/calming-sounds/articles/03-asmr-binaural-beats-white-noise-parents-guide-sound-types"
+  - url: "/calming-sounds/articles/03-parents-guide-asmr-children-research"
     anchor: "our full guide to sound types"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5474940/"
@@ -78,7 +78,7 @@ Research backs this up. Chanda & Levitin, 2013: [The neurochemistry of music](ht
 
 Here's what this means in practice: the frequencies and patterns that calm an anxious brain aren't the same ones that help a distracted brain focus. The rhythm that eases your child into sleep won't help them concentrate on maths homework.
 
-And for neurodivergent children, the mismatch goes deeper. When sounds don't match the moment, they can actually increase overwhelm rather than help. That's why [generic calming sounds often miss the mark](/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children) for these children.
+And for neurodivergent children, the mismatch goes deeper. When sounds don't match the moment, they can actually increase overwhelm rather than help. That's why [generic calming sounds often miss the mark](/why-generic-calming-sounds-dont-work-nd-children) for these children.
 
 ## Sounds for an Anxious Child
 
@@ -281,7 +281,7 @@ Everything in this guide is a starting point. Your child will have individual re
 
 What matters is paying attention to what actually helps. Not what "should" help based on general advice. Not what works for your friend's child. What works for yours.
 
-For a deeper understanding of different sound types and how they work, see [our full guide to sound types](/calming-sounds/articles/03-asmr-binaural-beats-white-noise-parents-guide-sound-types).
+For a deeper understanding of different sound types and how they work, see [our full guide to sound types](/parents-guide-asmr-children-research).
 
 The Open Sanctuary offers sounds designed specifically for neurodivergent and sensitive children. Unlike generic sound apps, the content is built for the specific ways these children process sound. Pick your trickiest moment this week. Try matching a sound to it. See what changes.
 

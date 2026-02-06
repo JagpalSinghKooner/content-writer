@@ -1,5 +1,5 @@
 ---
-source_article: "07-complete-guide-sound-therapy-children"
+source_article: "complete-guide-sound-therapy-children"
 platform: twitter
 created: "2026-02-05"
 status: draft

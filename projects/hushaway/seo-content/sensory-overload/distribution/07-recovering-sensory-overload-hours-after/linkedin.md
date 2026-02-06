@@ -1,5 +1,5 @@
 ---
-source_article: "07-recovering-sensory-overload-hours-after"
+source_article: "recovering-sensory-overload-hours-after"
 platform: "linkedin"
 created: "2026-02-04"
 status: draft

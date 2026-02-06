@@ -44,7 +44,7 @@ internal_links:
     anchor: "the sensory bucket"
   - url: "/autistic-meltdowns/articles/02-what-to-play-during-meltdown"
     anchor: "what sounds work during a meltdown"
-  - url: "/autistic-meltdowns/articles/04-autism-meltdown-recovery-guide"
+  - url: "/helping-child-recover-after-meltdown"
     anchor: "how to support recovery after a meltdown"
   - url: "/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents"
     anchor: "complete guide to autism meltdowns"
@@ -85,7 +85,7 @@ Life has seams in socks. Life has fluorescent lights and unexpected fire drills 
 
 The National Autistic Society, 2024: [Meltdowns - a guide for all audiences](https://www.autism.org.uk/advice-and-guidance/topics/behaviour/meltdowns/all-audiences) notes that meltdowns often result from a build-up of stress throughout the day. Not a single event. A build-up.
 
-Think about [the sensory bucket](/autistic-meltdowns/articles/01-understanding-autism-meltdowns). Every sensory input, every social demand, every small frustration adds water to that bucket.
+Think about [the sensory bucket](/understanding-autism-meltdowns). Every sensory input, every social demand, every small frustration adds water to that bucket.
 
 Here's what a typical school morning might add:
 
@@ -234,7 +234,7 @@ If your child tends to go inward rather than outward when overwhelmed, you'll ne
 
 Shutdowns can be easier to miss because they don't demand attention the way meltdowns do. No screaming. No throwing things. Just a child who seems to disappear inside themselves. But they're equally important to catch early.
 
-For more on recognising and supporting shutdowns, see our guide on [understanding the difference between meltdowns and shutdowns](/autistic-meltdowns/autism-meltdown-vs-shutdown-difference).
+For more on recognising and supporting shutdowns, see our guide on [understanding the difference between meltdowns and shutdowns](/understanding-meltdown-vs-shutdown).
 
 ## What About When Prevention Fails?
 
@@ -244,9 +244,9 @@ Even with the best prevention strategies, life will occasionally fill the bucket
 
 That's okay. Prevention isn't about perfection.
 
-When a meltdown happens despite prevention efforts, you shift from prevention mode to support mode. Knowing [what sounds work during a meltdown](/autistic-meltdowns/articles/02-what-to-play-during-meltdown) matters just as much as prevention, because you'll need both tools in your toolkit.
+When a meltdown happens despite prevention efforts, you shift from prevention mode to support mode. Knowing [what sounds work during a meltdown](/sounds-to-play-autism-meltdown) matters just as much as prevention, because you'll need both tools in your toolkit.
 
-And afterwards, understanding [how to support recovery after a meltdown](/autistic-meltdowns/articles/04-autism-meltdown-recovery-guide) helps your child's nervous system reset more quickly. That recovery time is itself a form of prevention for the next potential meltdown.
+And afterwards, understanding [how to support recovery after a meltdown](/helping-child-recover-after-meltdown) helps your child's nervous system reset more quickly. That recovery time is itself a form of prevention for the next potential meltdown.
 
 ## Building Your Prevention Toolkit
 

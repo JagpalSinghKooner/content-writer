@@ -42,7 +42,7 @@ internal_links:
     anchor: "apps that actually work for autistic children"
   - url: "/review-best-apps-adhd-children-uk"
     anchor: "apps designed for ADHD brains"
-  - url: "/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids"
+  - url: "/comparing-moshi-calm-headspace-nd-kids"
     anchor: "how the major apps compare for ND children"
   - url: "/guide-best-calming-apps-nd-children-uk"
     anchor: "guide to the best calming apps for neurodivergent children"
@@ -219,7 +219,7 @@ That's not a comfortable truth. But it explains why you've been struggling. And 
 
 Understanding why generic calming apps fail is the first step. The next is finding what actually works for your child.
 
-We've compared [how the major apps compare for ND children](/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids) in detail. The differences matter more than most review sites acknowledge. For the complete picture, see our [guide to the best calming apps for neurodivergent children](/guide-best-calming-apps-nd-children-uk).
+We've compared [how the major apps compare for ND children](/comparing-moshi-calm-headspace-nd-kids) in detail. The differences matter more than most review sites acknowledge. For the complete picture, see our [guide to the best calming apps for neurodivergent children](/guide-best-calming-apps-nd-children-uk).
 
 For now, remember this: when calming apps don't work for your child, the design failed. Not them. Not you.
 

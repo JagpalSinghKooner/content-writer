@@ -43,7 +43,7 @@ internal_links:
     anchor: "why bedtime is harder for neurodivergent children"
   - url: "/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children"
     anchor: "sound-based bedtime routine"
-  - url: "/calming-sounds/articles/03-asmr-binaural-beats-white-noise-parents-guide-sound-types"
+  - url: "/calming-sounds/articles/03-parents-guide-asmr-children-research"
     anchor: "guide to sound types"
 external_citations:
   - url: "https://www.sleepfoundation.org/mental-health/adhd-and-sleep"
@@ -175,7 +175,7 @@ Sound that fills the silence without demanding anything. Sound that gives the wa
 
 Think of it like giving a fidgeter something to hold. The hands stop searching because they have something. Sound does the same thing for a racing mind. It stops searching because it has something to tune into.
 
-If you've read about [why bedtime is harder for neurodivergent children](/bedtime-routines/articles/01-why-bedtime-harder-neurodivergent-children), you know that ADHD brains need external input to stop generating internal noise. Sound provides exactly that.
+If you've read about [why bedtime is harder for neurodivergent children](/why-bedtime-harder-neurodivergent-children), you know that ADHD brains need external input to stop generating internal noise. Sound provides exactly that.
 
 When your child listens to gentle, unchanging audio, their brain has something to focus on that isn't their own racing thoughts. The thoughts don't disappear. But they have somewhere to settle instead of spiralling.
 
@@ -227,7 +227,7 @@ If your child tolerates headphones, binaural beats can be especially effective. 
 
 For children who won't wear headphones, steady frequencies through a speaker still help. The binaural effect is lost, but the anchoring quality remains.
 
-For specific guidance on [sound types](/calming-sounds/articles/03-asmr-binaural-beats-white-noise-parents-guide-sound-types), including which work best for different challenges, we've created detailed breakdowns.
+For specific guidance on [sound types](/parents-guide-asmr-children-research), including which work best for different challenges, we've created detailed breakdowns.
 
 ### Stage 4: Sleep Onset and Overnight
 
@@ -325,7 +325,7 @@ No instructions to follow. No choices to make at bedtime. No engagement required
 
 Just press play and let their brain find something to land on.
 
-For a complete guide to building a [sound-based bedtime routine](/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children), including what sounds work best for different challenges, we've written specific guidance.
+For a complete guide to building a [sound-based bedtime routine](/sound-based-bedtime-routine-nd-children), including what sounds work best for different challenges, we've written specific guidance.
 
 One quiet moment can change a whole day for a child.
 

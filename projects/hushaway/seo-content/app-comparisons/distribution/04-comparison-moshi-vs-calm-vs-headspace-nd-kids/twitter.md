@@ -1,5 +1,5 @@
 ---
-source_article: "honest-comparison-moshi-vs-calm-vs-headspace-nd-kids"
+source_article: "comparing-moshi-calm-headspace-nd-kids"
 platform: twitter
 created: "2026-02-05"
 status: draft

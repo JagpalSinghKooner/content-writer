@@ -39,11 +39,11 @@ schema_type: "Review"
 
 # Links
 internal_links:
-  - url: "/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids"
+  - url: "/comparing-moshi-calm-headspace-nd-kids"
     anchor: "comparison of Moshi, Calm, and Headspace"
   - url: "/why-generic-calming-apps-fail-nd-children"
     anchor: "why generic calming apps fail neurodivergent children"
-  - url: "/free-calming-apps-kids-uk"
+  - url: "/guide-free-calming-apps-kids-uk"
     anchor: "free calming app options"
   - url: "/guide-best-calming-apps-nd-children-uk"
     anchor: "complete guide to calming apps for neurodivergent children"
@@ -228,7 +228,7 @@ Your child gets passive sound. You get screen-free delivery. And nobody has to a
 
 Some families use a small speaker in their child's room that stays there permanently. The phone lives elsewhere. The speaker becomes "the calm machine" rather than "mum's phone." That separation matters more than you'd think.
 
-We've written a full [comparison of Moshi, Calm, and Headspace](/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids) for neurodivergent children, and explored [why generic calming apps fail neurodivergent children](/why-generic-calming-apps-fail-nd-children). The same principles apply here: design origin matters. HushAway® was designed from the ground up for neurodivergent children, which means the content works even when delivered screen-free through a speaker.
+We've written a full [comparison of Moshi, Calm, and Headspace](/comparing-moshi-calm-headspace-nd-kids) for neurodivergent children, and explored [why generic calming apps fail neurodivergent children](/why-generic-calming-apps-fail-nd-children). The same principles apply here: design origin matters. HushAway® was designed from the ground up for neurodivergent children, which means the content works even when delivered screen-free through a speaker.
 
 ## Making the Right Choice for Your Family
 
@@ -264,7 +264,7 @@ There's no single answer to screen-free calming alternatives. The right choice d
 - You've tried limited-content devices and hit walls
 - You want to explore what actually works without device commitment
 
-If you're curious about [free calming app options](/free-calming-apps-kids-uk), The Open Sanctuary lets you explore ND-first sounds before committing to any approach. You can try different sound types through a speaker tonight and see what your child actually responds to.
+If you're curious about [free calming app options](/guide-free-calming-apps-kids-uk), The Open Sanctuary lets you explore ND-first sounds before committing to any approach. You can try different sound types through a speaker tonight and see what your child actually responds to.
 
 ## One Final Thought
 

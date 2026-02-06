@@ -1,5 +1,5 @@
 ---
-source_article: "calm-corner-sounds-children"
+source_article: "guide-calm-corner-sounds-children"
 platform: newsletter
 created: "2026-02-04"
 status: draft

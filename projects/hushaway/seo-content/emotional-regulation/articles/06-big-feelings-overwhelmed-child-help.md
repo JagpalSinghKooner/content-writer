@@ -41,7 +41,7 @@ schema_type: "Article"
 internal_links:
   - url: "/emotional-regulation/articles/01-understanding-emotional-regulation-children"
     anchor: "why emotional regulation is neurological"
-  - url: "/emotional-regulation/articles/04-calm-corner-sounds-children"
+  - url: "/emotional-regulation/articles/guide-calm-corner-sounds-children"
     anchor: "calm corner sounds"
   - url: "/autistic-meltdowns/articles/01-understanding-autism-meltdowns"
     anchor: "autism meltdowns"
@@ -94,7 +94,7 @@ Consider what typical calming strategies require:
 
 You're not imagining that none of this helps. It genuinely can't help when your child's brain is in alarm mode.
 
-If you want to understand [why emotional regulation is neurological](/emotional-regulation/articles/01-understanding-emotional-regulation-children), not behavioural, that foundation explains why some children struggle more than others. But right now, in this moment, theory doesn't matter. You need something practical.
+If you want to understand [why emotional regulation is neurological](/understanding-emotional-regulation-children), not behavioural, that foundation explains why some children struggle more than others. But right now, in this moment, theory doesn't matter. You need something practical.
 
 ## The First 60 Seconds: What Actually Helps an Overwhelmed Child
 
@@ -187,9 +187,9 @@ Not all sounds help. Some make things worse.
 
 The key is predictability. During overwhelm, the nervous system craves predictability. Anything unexpected, even something pleasant, can register as a threat.
 
-If you've set up a [calm corner sounds](/emotional-regulation/articles/04-calm-corner-sounds-children) system, you'll already have options ready. The best approach is to find what works for your child during calm times, then use those same sounds during the difficult moments. Familiarity is part of what makes them work.
+If you've set up a [calm corner sounds](/guide-calm-corner-sounds-children) system, you'll already have options ready. The best approach is to find what works for your child during calm times, then use those same sounds during the difficult moments. Familiarity is part of what makes them work.
 
-For children who experience [autism meltdowns](/autistic-meltdowns/articles/01-understanding-autism-meltdowns), sensory considerations become even more important. Sounds that work for neurotypical children might be too stimulating for autistic children, or the wrong type of stimulating. This is worth exploring separately from general overwhelm.
+For children who experience [autism meltdowns](/understanding-autism-meltdowns), sensory considerations become even more important. Sounds that work for neurotypical children might be too stimulating for autistic children, or the wrong type of stimulating. This is worth exploring separately from general overwhelm.
 
 ## Setting Up for Success Before the Next Storm
 
@@ -273,7 +273,7 @@ Press play. Wait. Stay close. Let the sound do what words can't.
 
 The storm will pass. And you'll both be there when it does.
 
-For the full picture of emotional regulation strategies and support, see our [Complete Guide to Emotional Regulation for Children](/emotional-regulation/articles/07-complete-guide-emotional-regulation-children).
+For the full picture of emotional regulation strategies and support, see our [Complete Guide to Emotional Regulation for Children](/complete-guide-emotional-regulation-children).
 
 ## Try Sound Tonight
 

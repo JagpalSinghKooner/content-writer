@@ -85,7 +85,7 @@ The National Autistic Society, 2024: [Meltdowns - a guide for all audiences](htt
 
 So let's be specific about what's actually happening.
 
-A meltdown isn't just an emotional outburst. It's a neurological event. Your child's nervous system went into overdrive. Their stress hormones spiked. Their thinking brain went offline, and their survival brain took over completely. If you want to understand [what's actually happening during a meltdown](/autistic-meltdowns/01-understanding-autism-meltdowns), we've covered the neuroscience in detail elsewhere.
+A meltdown isn't just an emotional outburst. It's a neurological event. Your child's nervous system went into overdrive. Their stress hormones spiked. Their thinking brain went offline, and their survival brain took over completely. If you want to understand [what's actually happening during a meltdown](/understanding-autism-meltdowns), we've covered the neuroscience in detail elsewhere.
 
 What matters here is this: you can't put a nervous system through that kind of storm and expect it to bounce back immediately. It's like expecting someone to run a marathon and then cook dinner straight after. The body needs time to recover. So does the brain. So does your child's sense of safety in the world.
 
@@ -177,7 +177,7 @@ This might mean turning off background music, asking siblings to play quietly el
 
 ### Use Sound as Ongoing Support
 
-If you've found sounds that help during meltdowns ([what sounds to play during a meltdown](/autistic-meltdowns/02-sounds-to-play-during-meltdown) covers this in detail), those same sounds can support recovery afterwards. Sound doesn't stop being helpful just because the visible crisis has ended.
+If you've found sounds that help during meltdowns ([what sounds to play during a meltdown](/sounds-to-play-autism-meltdown) covers this in detail), those same sounds can support recovery afterwards. Sound doesn't stop being helpful just because the visible crisis has ended.
 
 But there's an important difference in how you use it.
 
@@ -236,7 +236,7 @@ Sometimes the aftereffects of a meltdown last longer than hours. Days, even. You
 
 This is especially true after major meltdowns. After clusters of meltdowns close together. After meltdowns that happened in particularly stressful contexts like school, public places, or unfamiliar environments. The bigger the storm, the longer the recovery.
 
-If this sounds familiar (the pattern of [after-school meltdowns](/autistic-meltdowns/03-after-school-meltdowns) often includes extended recovery periods), be patient with yourself and with them. Keep demands low. Maintain sensory safety. Use sound for ongoing regulation support. Give it time.
+If this sounds familiar (the pattern of [after-school meltdowns](/after-school-autism-meltdown-why) often includes extended recovery periods), be patient with yourself and with them. Keep demands low. Maintain sensory safety. Use sound for ongoing regulation support. Give it time.
 
 It's incredibly frustrating when your child seems to be recovering, then tips back into another meltdown from almost nothing. But that's how a depleted nervous system works. The buffer that normally absorbs small frustrations is gone. It takes time to rebuild. Sometimes more time than you'd expect.
 

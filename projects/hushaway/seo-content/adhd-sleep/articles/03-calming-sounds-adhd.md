@@ -39,13 +39,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/adhd-child-wont-sleep"
+  - url: "/why-your-adhd-child-wont-sleep"
     anchor: "why your ADHD child won't sleep"
-  - url: "/adhd-bedtime-routine"
+  - url: "/parents-guide-adhd-bedtime-routine"
     anchor: "ADHD bedtime routine"
   - url: "/adhd-racing-thoughts"
     anchor: "racing thoughts at bedtime"
-  - url: "/adhd-sleep-problems-guide"
+  - url: "/complete-guide-adhd-sleep-problems-uk"
     anchor: "complete guide to ADHD sleep"
 external_citations:
   - url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11283987/"
@@ -80,7 +80,7 @@ This isn't guesswork. Two decades of research have been quietly uncovering why c
 
 Before we get into which sounds help, you need to understand why sound matters at all.
 
-If you've read about [why your ADHD child won't sleep](/adhd-child-wont-sleep), you already know the core problem: a brain that won't switch off. When the external world goes quiet at bedtime, the ADHD brain doesn't follow. Instead, it hunts for stimulation and usually finds it in racing thoughts, worries, or random tangents that keep your child awake for hours.
+If you've read about [why your ADHD child won't sleep](/why-your-adhd-child-wont-sleep), you already know the core problem: a brain that won't switch off. When the external world goes quiet at bedtime, the ADHD brain doesn't follow. Instead, it hunts for stimulation and usually finds it in racing thoughts, worries, or random tangents that keep your child awake for hours.
 
 Sound offers something counterintuitive: it gives the brain stimulation *so it stops seeking stimulation*.
 
@@ -228,9 +228,9 @@ If your child genuinely dislikes sound at bedtime, that's important information.
 
 Sound isn't a magic solution. For many ADHD children, it addresses one specific problem. The racing brain needs something to focus on, and sound gives it exactly that.
 
-It works best when combined with other elements of an [ADHD bedtime routine](/adhd-bedtime-routine) that works with your child's brain rather than against it.
+It works best when combined with other elements of an [ADHD bedtime routine](/parents-guide-adhd-bedtime-routine) that works with your child's brain rather than against it.
 
-And for children whose main struggle is [racing thoughts at bedtime](/adhd-racing-thoughts), sound can be particularly powerful because it gives those thoughts somewhere to land.
+And for children whose main struggle is [racing thoughts at bedtime](/quieting-adhd-racing-thoughts-bedtime), sound can be particularly powerful because it gives those thoughts somewhere to land.
 
 ## A Note on Volume and Safety
 
@@ -256,7 +256,7 @@ Their reaction will tell you more than any research study. If they settle faster
 
 The missing piece might not be a new strategy. It might simply be the right sound.
 
-For the full picture of ADHD sleep challenges and solutions, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) covers everything from the science to practical strategies for every age group.
+For the full picture of ADHD sleep challenges and solutions, our [complete guide to ADHD sleep problems](/complete-guide-adhd-sleep-problems-uk) covers everything from the science to practical strategies for every age group.
 
 ---
 

@@ -39,11 +39,11 @@ schema_type: "HowTo"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "what sensory overload actually is"
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "the signs of sensory overload"
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "the auditory system's role in regulation"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5618809/"
@@ -90,7 +90,7 @@ It requires nothing.
 
 Your child doesn't need to reach for it, hold it, or do anything with it. They don't need to follow instructions or coordinate their muscles. The sound simply exists in the space around them. It enters through their ears without asking permission.
 
-If you haven't already, read our guide on [what sensory overload actually is](/sensory-overload/articles/01-understanding-sensory-overload-children) to understand why the nervous system responds this way.
+If you haven't already, read our guide on [what sensory overload actually is](/understanding-sensory-overload-children) to understand why the nervous system responds this way.
 
 ## The Science Behind Sounds for Sensory Overload
 
@@ -146,7 +146,7 @@ Many children benefit from layered sounds, such as ASMR combined with gentle fre
 
 ## Matching Sounds to Sensory Profiles
 
-Your child's sensory profile affects which sounds will help. Understanding [the signs of sensory overload](/sensory-overload/articles/01-understanding-sensory-overload-children) in your specific child helps you choose the right approach.
+Your child's sensory profile affects which sounds will help. Understanding [the signs of sensory overload](/understanding-sensory-overload-children) in your specific child helps you choose the right approach.
 
 ### For Auditory Seekers
 
@@ -213,7 +213,7 @@ Sound-based wind-down might include:
 
 ### Recovery After Overload
 
-Even after a meltdown or shutdown passes, the nervous system needs recovery time. Understanding [the auditory system's role in regulation](/sensory-overload/articles/01-understanding-sensory-overload-children) helps explain why sound works here too.
+Even after a meltdown or shutdown passes, the nervous system needs recovery time. Understanding [the auditory system's role in regulation](/understanding-sensory-overload-children) helps explain why sound works here too.
 
 During recovery:
 

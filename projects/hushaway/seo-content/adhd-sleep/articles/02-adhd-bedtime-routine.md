@@ -38,13 +38,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/adhd-child-wont-sleep"
+  - url: "/why-your-adhd-child-wont-sleep"
     anchor: "why your ADHD child won't sleep"
-  - url: "/calming-sounds-adhd"
+  - url: "/best-calming-sounds-adhd-children"
     anchor: "calming sounds for ADHD children"
   - url: "/adhd-racing-thoughts"
     anchor: "racing thoughts at bedtime"
-  - url: "/adhd-sleep-problems-guide"
+  - url: "/complete-guide-adhd-sleep-problems-uk"
     anchor: "complete guide to ADHD sleep"
 external_citations:
   - url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12330042/"
@@ -103,7 +103,7 @@ For neurotypical children, this works. Remove the stimulation and the brain natu
 
 For ADHD children, it creates a vacuum.
 
-We've written about [why your ADHD child won't sleep](/adhd-child-wont-sleep) and the core issue is this: the ADHD brain doesn't have an "off switch" for thoughts. When you remove external stimulation, the internal stimulation ramps up. Racing thoughts. Random ideas. Worries. That song stuck on repeat.
+We've written about [why your ADHD child won't sleep](/why-your-adhd-child-wont-sleep) and the core issue is this: the ADHD brain doesn't have an "off switch" for thoughts. When you remove external stimulation, the internal stimulation ramps up. Racing thoughts. Random ideas. Worries. That song stuck on repeat.
 
 The quieter you make the room, the louder their brain becomes.
 
@@ -285,7 +285,7 @@ Tomorrow morning, you might find that bedtime went differently. Not perfectly. A
 
 And sometimes, different is all you need to keep going.
 
-For more on understanding why ADHD children struggle with sleep, read our guide on [why your ADHD child won't sleep](/adhd-child-wont-sleep). And for the complete picture, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) covers everything from the science to practical solutions.
+For more on understanding why ADHD children struggle with sleep, read our guide on [why your ADHD child won't sleep](/why-your-adhd-child-wont-sleep). And for the complete picture, our [complete guide to ADHD sleep problems](/complete-guide-adhd-sleep-problems-uk) covers everything from the science to practical solutions.
 
 ---
 

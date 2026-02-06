@@ -43,9 +43,9 @@ schema_type: "Article"
 internal_links:
   - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
     anchor: "why generic calming sounds don't work for neurodivergent children"
-  - url: "/calming-sounds/articles/02-sleep-sounds-children-which-type-helps"
+  - url: "/calming-sounds/articles/02-guide-matching-sleep-sounds-children"
     anchor: "matching sounds to your child's specific sleep problem"
-  - url: "/sensory-overload/articles/03-sound-sensitivity-children-auditory-hypersensitivity"
+  - url: "/sensory-overload/articles/understanding-sound-sensitivity-children"
     anchor: "sound sensitivity in children"
 external_citations:
   - url: "https://pubmed.ncbi.nlm.nih.gov/30311830/"
@@ -125,13 +125,13 @@ ASMR itself is just a category of gentle sounds and soft speech. There's nothing
 
 That last point matters most. Some children find whispering voices uncomfortable or even anxiety-provoking. Others find them deeply soothing. Your child's response is more important than any generalisation about ASMR.
 
-If you want to understand more about why one child might respond well while another doesn't, we've written about [why generic calming sounds don't work for neurodivergent children](/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children). The same principles apply to ASMR.
+If you want to understand more about why one child might respond well while another doesn't, we've written about [why generic calming sounds don't work for neurodivergent children](/why-generic-calming-sounds-dont-work-nd-children). The same principles apply to ASMR.
 
 ### The HushAway® Perspective on ASMR
 
 At HushAway®, we create ASMR content specifically for children, including those with sensory sensitivities. That means no sudden sounds, no inconsistent volume, no content that requires cognitive engagement.
 
-This matters because most ASMR online was made for adults and isn't designed with children's sensory processing in mind. Content that adults find relaxing can sometimes be overwhelming for sensitive children. Our approach: sounds [designed for neurodivergent brains](/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children), not adapted from adult content.
+This matters because most ASMR online was made for adults and isn't designed with children's sensory processing in mind. Content that adults find relaxing can sometimes be overwhelming for sensitive children. Our approach: sounds [designed for neurodivergent brains](/why-generic-calming-sounds-dont-work-nd-children), not adapted from adult content.
 
 ## Binaural Beats for Kids: The Honest Picture
 
@@ -176,7 +176,7 @@ Based on what families report, binaural beats for kids seem most helpful when:
 - The family approaches it as an experiment rather than a cure
 - It's used alongside other calming strategies, not as the only tool
 
-If your child has tried binaural beats and they haven't worked, that doesn't mean sound-based calming won't work. It means that particular type of sound isn't the right match for them. Finding the right match is about understanding your child's specific needs, which is something we explore in our guide to [matching sounds to your child's specific sleep problem](/calming-sounds/articles/02-sleep-sounds-children-which-type-helps).
+If your child has tried binaural beats and they haven't worked, that doesn't mean sound-based calming won't work. It means that particular type of sound isn't the right match for them. Finding the right match is about understanding your child's specific needs, which is something we explore in our guide to [matching sounds to your child's specific sleep problem](/guide-matching-sleep-sounds-children).
 
 ## White Noise, Pink Noise, Brown Noise: What's the Difference?
 
@@ -210,7 +210,7 @@ Here's where it gets practical:
 
 **White noise** works well for children who need strong masking of environmental sounds and don't find the higher frequencies irritating. Good for blocking out traffic noise or household activity.
 
-**Pink noise** often works better for children with [sound sensitivity](/sensory-overload/articles/03-sound-sensitivity-children-auditory-hypersensitivity). The reduced high frequencies are gentler on sensitive ears while still providing masking. Often preferred by children who find white noise "too sharp."
+**Pink noise** often works better for children with [sound sensitivity](/understanding-sound-sensitivity-children). The reduced high frequencies are gentler on sensitive ears while still providing masking. Often preferred by children who find white noise "too sharp."
 
 **Brown noise sleep kids** seems particularly popular among families of children with ADHD and autism. The deep, low rumble can feel grounding without being intrusive. Some children describe it as "cosy" or "like being wrapped up."
 
@@ -263,7 +263,7 @@ This is common, and it doesn't mean sound won't help your child. It often means 
 
 The sounds that work for neurotypical children often don't work for neurodivergent children. Not because there's anything wrong with your child, but because their brain processes sound differently. Finding sounds that work requires understanding that difference.
 
-We've written specifically about this in our article on [why generic calming sounds don't work for neurodivergent children](/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children).
+We've written specifically about this in our article on [why generic calming sounds don't work for neurodivergent children](/why-generic-calming-sounds-dont-work-nd-children).
 
 ## What About Combining Sound Types?
 

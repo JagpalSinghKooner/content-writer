@@ -35,7 +35,7 @@ You already have the equipment. A phone, a speaker, a quiet-ish space. That's it
 
 We've written a complete guide to getting started with sound therapy at home. No clinic visits. No practitioner fees. Just practical guidance you can use tonight.
 
-**Read the full guide:** [Sound Therapy at Home: The Parent's Guide](/sound-therapy/parents-guide-sound-therapy-at-home)
+**Read the full guide:** [Sound Therapy at Home: The Parent's Guide](/parents-guide-sound-therapy-at-home)
 
 ---
 
@@ -53,4 +53,4 @@ You'll learn:
 
 One quiet moment can change a whole day for a child. Here's how to create that moment.
 
-→ [Read the complete guide](/sound-therapy/parents-guide-sound-therapy-at-home)
+→ [Read the complete guide](/parents-guide-sound-therapy-at-home)

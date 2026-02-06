@@ -72,7 +72,7 @@ Think of it this way: visuals tell your child what's coming. Sound tells their n
 
 ## Why Visual Supports Work (And Why They're Not Enough Alone)
 
-Visual schedules work because they make the invisible visible. For children who struggle with [why bedtime is harder for neurodivergent children](/bedtime-routines/articles/01-why-bedtime-harder-neurodivergent-children), uncertainty is the enemy. What happens next? When does this end? What am I supposed to do?
+Visual schedules work because they make the invisible visible. For children who struggle with [why bedtime is harder for neurodivergent children](/why-bedtime-harder-neurodivergent-children), uncertainty is the enemy. What happens next? When does this end? What am I supposed to do?
 
 Pictures answer those questions. They remove the mental load of remembering the sequence. They make abstract time concrete.
 
@@ -96,7 +96,7 @@ Picture of bed + sound C = settling time
 
 After about two weeks of repetition, your child's nervous system starts responding to the sound before they even look at the visual. The sound becomes a trigger that starts the settling process, not just information explaining what's happening.
 
-This is why a [sound-based bedtime routine](/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children) works so well for neurodivergent children. Sound requires nothing from your child. They don't have to look at it, process it, or respond to it consciously. It just enters their ears and starts working on the nervous system.
+This is why a [sound-based bedtime routine](/sound-based-bedtime-routine-nd-children) works so well for neurodivergent children. Sound requires nothing from your child. They don't have to look at it, process it, or respond to it consciously. It just enters their ears and starts working on the nervous system.
 
 Visual schedules require attention. Your child has to look, interpret, and remember. That's mental work. And at 8pm, after a full day of school and sensory input, mental work is the last thing their tired brain wants to do.
 
@@ -278,7 +278,7 @@ If you don't have a visual schedule yet, start there first. Pictures for the mai
 
 ## Beyond Visual Supports Alone
 
-Visual schedules are wonderful tools. They've helped thousands of neurodivergent children understand and cooperate with bedtime routines. But bedtime visual supports neurodivergent children use work even better when they're not working alone. For more on building a complete approach, see our [complete guide to bedtime routines for neurodivergent children](/bedtime-routines/articles/complete-guide-bedtime-routines-neurodivergent-children).
+Visual schedules are wonderful tools. They've helped thousands of neurodivergent children understand and cooperate with bedtime routines. But bedtime visual supports neurodivergent children use work even better when they're not working alone. For more on building a complete approach, see our [complete guide to bedtime routines for neurodivergent children](/complete-guide-nd-bedtime-routines).
 
 Visuals show what happens next. Sound helps your child's body actually transition.
 

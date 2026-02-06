@@ -1,5 +1,5 @@
 ---
-source_article: "05-sensory-tools-children-sound-works"
+source_article: "sensory-tools-children-why-sound-works"
 platform: "linkedin"
 created: "2026-02-04"
 status: draft

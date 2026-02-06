@@ -1,5 +1,5 @@
 ---
-source_article: "emotional-regulation-adhd-children"
+source_article: "tools-emotional-regulation-adhd-children"
 platform: "linkedin"
 created: "2026-02-04"
 status: draft

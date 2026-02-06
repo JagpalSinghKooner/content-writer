@@ -1,5 +1,5 @@
 ---
-source_article: "06-sensory-diet-children-missing-system"
+source_article: "sensory-diet-children-missing-system"
 platform: "newsletter"
 created: "2026-02-04"
 status: draft

@@ -40,13 +40,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "what sensory overload actually is"
-  - url: "/sensory-overload/articles/02-guide-calming-sounds-sensory-overload"
+  - url: "/sensory-overload/articles/guide-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
-  - url: "/sensory-overload/articles/03-sound-sensitivity-children-auditory-hypersensitivity"
+  - url: "/sensory-overload/articles/understanding-sound-sensitivity-children"
     anchor: "sound sensitivity in children"
-  - url: "/sensory-overload/articles/04-understanding-after-school-sensory-overload"
+  - url: "/sensory-overload/articles/understanding-after-school-sensory-overload"
     anchor: "after-school meltdowns"
 external_citations:
   - url: "https://www.frontiersin.org/articles/10.3389/fpsyg.2020.574461/full"
@@ -142,7 +142,7 @@ Sound fits every requirement.
 
 Research in music therapy shows that predictable auditory input can support emotional regulation and help the nervous system return to baseline (Journal of Music Therapy, 2016: [Music Therapy and Emotion Regulation](https://pubmed.ncbi.nlm.nih.gov/27516408/)). The key word is predictable. Random sounds can re-trigger a sensitive system. But consistent, gentle, sensory-safe sound gives the brain something stable while it repairs.
 
-If you're not sure whether your child can tolerate sound during recovery, remember the distinction we cover in our article on [sound sensitivity in children](/sensory-overload/articles/03-sound-sensitivity-children-auditory-hypersensitivity). Triggering noise is unpredictable and uncontrolled. Therapeutic sound is consistent, volume-controlled, and designed for sensitive ears.
+If you're not sure whether your child can tolerate sound during recovery, remember the distinction we cover in our article on [sound sensitivity in children](/understanding-sound-sensitivity-children). Triggering noise is unpredictable and uncontrolled. Therapeutic sound is consistent, volume-controlled, and designed for sensitive ears.
 
 The right sound doesn't add demands. It creates a gentle container for recovery. You don't have to do anything. Just press play.
 
@@ -166,7 +166,7 @@ Keep gentle sound available. Some children will want it on continuously. Others 
 
 Children who've experienced sensory overload during the day often struggle to settle at night. The nervous system is on high alert, even hours later. Sleep sounds that are specifically designed for post-meltdown calm can help bridge that gap.
 
-For specific sound recommendations, see our guide on [calming sounds for sensory overload](/sensory-overload/articles/02-guide-calming-sounds-sensory-overload).
+For specific sound recommendations, see our guide on [calming sounds for sensory overload](/guide-calming-sounds-sensory-overload).
 
 ## Sensory Reset Versus Sensory Recovery
 
@@ -234,9 +234,9 @@ Here's what sensory overload recovery actually looks like in practice:
 
 If your child regularly experiences sensory overload, building in recovery time becomes part of how you structure the day.
 
-After school is a common overload time, as we discuss in our article on [after-school meltdowns](/sensory-overload/articles/04-understanding-after-school-sensory-overload). But even without a visible meltdown, many children are running on empty by 4pm. Building in a daily recovery window (low demands, gentle sound, no questions) can prevent overload from happening in the first place.
+After school is a common overload time, as we discuss in our article on [after-school meltdowns](/understanding-after-school-sensory-overload). But even without a visible meltdown, many children are running on empty by 4pm. Building in a daily recovery window (low demands, gentle sound, no questions) can prevent overload from happening in the first place.
 
-Understanding [what sensory overload actually is](/sensory-overload/articles/01-understanding-sensory-overload-children) helps you spot when recovery is needed before the crisis point.
+Understanding [what sensory overload actually is](/understanding-sensory-overload-children) helps you spot when recovery is needed before the crisis point.
 
 ## Sound as the Recovery Tool
 

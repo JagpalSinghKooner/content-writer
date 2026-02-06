@@ -90,7 +90,7 @@ Schools create beautiful calm corners with visual schedules, emotion cards, and 
 
 Here's why this matters so much: sound is the only regulation tool that works passively. Your child doesn't need to choose it, hold it, or engage with it. It simply enters the space. Their nervous system responds. No effort required from either of you.
 
-When we explored [emotional regulation in children](/emotional-regulation/articles/01-understanding-emotional-regulation-children), we explained why active tools fail during peak distress. The thinking brain goes offline. Instructions can't be processed. Choices can't be made.
+When we explored [emotional regulation in children](/understanding-emotional-regulation-children), we explained why active tools fail during peak distress. The thinking brain goes offline. Instructions can't be processed. Choices can't be made.
 
 Sound bypasses all of that.
 
@@ -190,7 +190,7 @@ You might be wondering whether you actually need specific calm corner sounds, or
 
 Here's what we've learned from working with neurodivergent children: generic calming music often doesn't work. Sometimes it makes things worse.
 
-We explain this in detail in our article on [why generic calming sounds often fail neurodivergent children](/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children). The short version: music designed for neurotypical relaxation often contains elements that are actively distressing for sensitive nervous systems. Unexpected key changes, complex harmonies, lyrics that require processing.
+We explain this in detail in our article on [why generic calming sounds often fail neurodivergent children](/why-generic-calming-sounds-dont-work-nd-children). The short version: music designed for neurotypical relaxation often contains elements that are actively distressing for sensitive nervous systems. Unexpected key changes, complex harmonies, lyrics that require processing.
 
 The sounds in The Open Sanctuary are designed differently. No surprises. No demands. Just predictable, sensory-safe audio that works with how neurodivergent nervous systems actually function. That's the difference.
 
@@ -250,7 +250,7 @@ These are starting points. Your child will show you what works for them.
 
 The Open Sanctuary is designed for exactly this kind of exploration. Try different sounds. Notice what your child's nervous system responds to. You might be surprised by what works. Many parents are.
 
-For a deeper exploration of different sound types and when to use them, see our guide on [calming sounds for different situations](/calming-sounds/articles/04-guide-calming-sounds-every-situation).
+For a deeper exploration of different sound types and when to use them, see our guide on [calming sounds for different situations](/guide-calming-sounds-every-situation).
 
 ## The Piece Every Guide Forgot
 
@@ -268,7 +268,7 @@ Your child's calm corner is incomplete without them.
 
 Tonight, complete it. Open The Open Sanctuary and see what changes.
 
-For more on emotional regulation strategies beyond the calm corner, see our [Complete Guide to Emotional Regulation for Children](/emotional-regulation/articles/07-complete-guide-emotional-regulation-children).
+For more on emotional regulation strategies beyond the calm corner, see our [Complete Guide to Emotional Regulation for Children](/complete-guide-emotional-regulation-children).
 
 ## FAQ
 

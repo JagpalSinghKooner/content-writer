@@ -39,7 +39,7 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "what sensory overload actually looks like"
   - url: "/sensory-overload/articles/02-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
@@ -142,7 +142,7 @@ Sound gives the nervous system something predictable to anchor to when everythin
 
 No effort from you. No demands on them. Just press play.
 
-For more on why certain sounds work and others don't, see our guide to [calming sounds for sensory overload](/sensory-overload/articles/02-calming-sounds-sensory-overload).
+For more on why certain sounds work and others don't, see our guide to [calming sounds for sensory overload](/guide-calming-sounds-sensory-overload).
 
 ## The After-School Reset Protocol
 
@@ -206,7 +206,7 @@ Avoid music with lyrics, complex melodies, or variable dynamics in this window. 
 
 ## Understanding What Sensory Overload Actually Looks Like
 
-If you're new to recognising sensory overwhelm in your child, it helps to understand [what sensory overload actually looks like](/sensory-overload/articles/01-understanding-sensory-overload-children). The after school meltdown sensory pattern is just one presentation of a nervous system that has received more input than it can process.
+If you're new to recognising sensory overwhelm in your child, it helps to understand [what sensory overload actually looks like](/understanding-sensory-overload-children). The after school meltdown sensory pattern is just one presentation of a nervous system that has received more input than it can process.
 
 School sensory overwhelm accumulates across the day. Your child might manage the morning, struggle after lunch, and crash completely by home time. The meltdown you see isn't caused by arriving home.
 
@@ -227,7 +227,7 @@ Signs that recovery will take longer:
 
 On these days, extend the protocol. Keep sounds playing. Reduce your expectations. Give them time.
 
-For strategies on longer recovery periods, our guide to [recovering from sensory overload](/sensory-overload/articles/07-recovering-sensory-overload-hours-after) offers additional support.
+For strategies on longer recovery periods, our guide to [recovering from sensory overload](/recovering-sensory-overload-hours-after) offers additional support.
 
 ## What This Looks Like in Practice
 

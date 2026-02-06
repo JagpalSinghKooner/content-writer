@@ -87,7 +87,7 @@ No vague suggestions. No "try calming music." Real, specific answers from parent
 
 Here's something most people don't tell you.
 
-When your child is mid-meltdown, their thinking brain has gone offline. The survival brain has taken over. That's why reasoning doesn't work. Why logic fails. Why "calm down" makes everything worse. (If you want to understand [what's actually happening during a meltdown](/autistic-meltdowns/01-understanding-autism-meltdowns), we've covered the neuroscience separately.)
+When your child is mid-meltdown, their thinking brain has gone offline. The survival brain has taken over. That's why reasoning doesn't work. Why logic fails. Why "calm down" makes everything worse. (If you want to understand [what's actually happening during a meltdown](/understanding-autism-meltdowns), we've covered the neuroscience separately.)
 
 And here's the problem with most calming tools. They all require something from your child:
 - Weighted blankets need them to tolerate touch (often impossible during meltdown)
@@ -244,7 +244,7 @@ The sounds that help when they're calm are likely to help during overwhelm. But 
 Not every meltdown is the same. Have options for:
 - **Early warning signs:** Gentler sounds to help regulate before things tip over
 - **Full meltdown:** Very consistent, predictable sounds with no variation
-- **[The recovery period after a meltdown](/autistic-meltdowns/autism-meltdown-recovery-guide):** Sounds that support the fragile nervous system as it rebuilds
+- **[The recovery period after a meltdown](/helping-child-recover-after-meltdown):** Sounds that support the fragile nervous system as it rebuilds
 
 What works at one stage might not work at another.
 
@@ -260,7 +260,7 @@ For meltdowns that happen outside the home, having sounds accessible on your pho
 
 ### Make It Part of Daily Regulation
 
-Sound doesn't have to be reserved for crisis moments. Using [sound throughout the day to prevent build-up](/autistic-meltdowns/preventing-autism-meltdowns-warning-signs) can help keep the "bucket" from filling too fast. Playing calming sounds during transitions, after school, or at bedtime builds familiarity and may reduce meltdown frequency over time.
+Sound doesn't have to be reserved for crisis moments. Using [sound throughout the day to prevent build-up](/preventing-autism-meltdowns-warning-signs) can help keep the "bucket" from filling too fast. Playing calming sounds during transitions, after school, or at bedtime builds familiarity and may reduce meltdown frequency over time.
 
 ## What If Sound Doesn't Help?
 

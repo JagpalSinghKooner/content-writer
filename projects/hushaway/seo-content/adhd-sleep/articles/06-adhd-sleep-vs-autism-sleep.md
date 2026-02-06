@@ -39,11 +39,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/adhd-child-wont-sleep"
+  - url: "/why-your-adhd-child-wont-sleep"
     anchor: "why your ADHD child won't sleep"
-  - url: "/calming-sounds-adhd"
+  - url: "/best-calming-sounds-adhd-children"
     anchor: "calming sounds for ADHD children"
-  - url: "/adhd-sleep-problems-guide"
+  - url: "/complete-guide-adhd-sleep-problems-uk"
     anchor: "complete guide to ADHD sleep problems"
 external_citations:
   - url: "https://www.nottsapc.nhs.uk/media/w4ydkpqq/sleeping-well-with-autism-and-adhd.pdf"
@@ -86,7 +86,7 @@ Getting this right matters because the wrong approach doesn't just fail. It can 
 
 ## How ADHD Affects Sleep
 
-If you've read our guide on [why your ADHD child won't sleep](/adhd-child-wont-sleep), you'll know the core issue: the ADHD brain doesn't have an easy "off switch."
+If you've read our guide on [why your ADHD child won't sleep](/why-your-adhd-child-wont-sleep), you'll know the core issue: the ADHD brain doesn't have an easy "off switch."
 
 ### The Racing Brain Problem
 
@@ -177,7 +177,7 @@ Children with both conditions need a layered approach:
 
 1. **Address sensory needs first.** Get the environment right (this helps both conditions)
 2. **Establish predictable routine.** This matters even more with dual diagnosis
-3. **Give the racing brain somewhere to go.** Sound can help here (see our guide on [calming sounds for ADHD children](/calming-sounds-adhd))
+3. **Give the racing brain somewhere to go.** Sound can help here (see our guide on [calming sounds for ADHD children](/best-calming-sounds-adhd-children))
 4. **Expect some variability.** Even with perfect routines, ADHD adds unpredictability
 
 The research is clear: children with both ADHD and autism have greater sleep challenges than either condition alone. This isn't your fault, and it's not your child's fault. It's the reality of managing two different types of brain wiring.
@@ -193,7 +193,7 @@ The racing brain needs input to settle. Not silence. Complete quiet often makes 
 - Something calm for the brain to focus on
 - Working with (not against) their natural body clock
 
-We've written extensively about this in our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide).
+We've written extensively about this in our [complete guide to ADHD sleep problems](/complete-guide-adhd-sleep-problems-uk).
 
 ### For Autism-Dominant Sleep Problems
 

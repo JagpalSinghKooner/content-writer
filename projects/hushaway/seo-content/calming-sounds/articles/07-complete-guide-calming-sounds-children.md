@@ -46,11 +46,11 @@ schema_type: "Article"
 internal_links:
   - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
     anchor: "why generic sounds fail neurodivergent children"
-  - url: "/calming-sounds/articles/02-sleep-sounds-children-which-type-helps"
+  - url: "/calming-sounds/articles/02-guide-matching-sleep-sounds-children"
     anchor: "sleep sounds for children"
-  - url: "/calming-sounds/articles/03-asmr-binaural-beats-white-noise-parents-guide-sound-types"
+  - url: "/calming-sounds/articles/03-parents-guide-asmr-children-research"
     anchor: "parent's guide to sound types"
-  - url: "/calming-sounds/articles/04-calming-sounds-every-situation-anxiety-focus-transitions"
+  - url: "/calming-sounds/articles/04-guide-calming-sounds-every-situation"
     anchor: "calming sounds for every situation"
   - url: "/calming-sounds/articles/05-free-calming-sounds-children-uk-options"
     anchor: "free calming sounds for children in the UK"
@@ -170,7 +170,7 @@ These differences mean:
 
 **Passive listening works when active engagement fails.** Meditation apps that require tapping, choosing, or responding add cognitive load at exactly the moment your child has none to spare. Press play, done. That's what actually helps.
 
-For a deeper look at why this mismatch happens, read our article on [why generic calming sounds fail neurodivergent children](/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children).
+For a deeper look at why this mismatch happens, read our article on [why generic calming sounds fail neurodivergent children](/why-generic-calming-sounds-dont-work-nd-children).
 
 ### The "Designed FOR" Difference
 
@@ -230,7 +230,7 @@ Some children respond best to carefully layered combinations of sound types. Sof
 
 At HushAway®, we call these combinations Kaleidoscopes. They're designed to provide more interest than single-sound options while maintaining the predictability neurodivergent children need.
 
-For a complete breakdown of these sound types with research context, see our [parent's guide to sound types](/calming-sounds/articles/03-asmr-binaural-beats-white-noise-parents-guide-sound-types).
+For a complete breakdown of these sound types with research context, see our [parent's guide to sound types](/parents-guide-asmr-children-research).
 
 ---
 
@@ -250,7 +250,7 @@ Sleep problems in neurodivergent children rarely have a single cause. Racing tho
 
 **Transition anxiety:** They can't move from being awake to being asleep. The change itself feels overwhelming. Gentle ASMR or soft ambient soundscapes can create a bridge. Something to focus on that's calming but not stimulating. Layered sounds like Kaleidoscopes give the brain something to settle into without demanding attention.
 
-Read more in our guide to [which sleep sounds help children settle](/calming-sounds/articles/02-sleep-sounds-children-which-type-helps).
+Read more in our guide to [which sleep sounds help children settle](/guide-matching-sleep-sounds-children).
 
 ### For Anxiety and Overwhelm
 
@@ -284,7 +284,7 @@ Sound can help bridge these gaps.
 
 **Meltdown recovery:** After a meltdown, the nervous system needs time to return to baseline. Gentle, familiar sounds can support this process without adding any demands. Keep choices to zero. Play something they've responded to before without asking questions or requiring engagement.
 
-For specific recommendations by situation, see our guide to [calming sounds for every situation](/calming-sounds/articles/04-calming-sounds-every-situation-anxiety-focus-transitions).
+For specific recommendations by situation, see our guide to [calming sounds for every situation](/guide-calming-sounds-every-situation).
 
 ---
 
@@ -324,7 +324,7 @@ Some children respond well to very simple, repetitive music that approaches the 
 
 The honest answer is: you'll need to observe your child to see what helps when. Every child is different, and yours knows best what works for their body and brain. But understanding the difference between sounds and music gives you a framework for experimenting.
 
-For more on this topic, read [calming sounds versus music](/calming-sounds/articles/06-calming-sounds-vs-music-children-difference).
+For more on this topic, read [calming sounds versus music](/calming-sounds-vs-music-children-difference).
 
 ---
 
@@ -353,7 +353,7 @@ What makes HushAway® different:
 - **UK-created.** Made by parents who understand UK families.
 - **Zero sensory triggers.** Every sound is reviewed for potential triggers before it enters the library.
 
-For a comparison of all free options available to UK families, read [free calming sounds for children in the UK](/calming-sounds/articles/05-free-calming-sounds-children-uk-options).
+For a comparison of all free options available to UK families, read [free calming sounds for children in the UK](/free-calming-sounds-children-uk-options).
 
 ---
 

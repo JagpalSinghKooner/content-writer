@@ -41,7 +41,7 @@ schema_type: "Review"
 internal_links:
   - url: "/why-generic-calming-apps-fail-nd-children"
     anchor: "why generic calming apps fail neurodivergent children"
-  - url: "/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids"
+  - url: "/comparing-moshi-calm-headspace-nd-kids"
     anchor: "detailed comparison of Moshi, Calm, and Headspace"
   - url: "/guide-best-calming-apps-nd-children-uk"
     anchor: "complete guide to calming apps for neurodivergent children"
@@ -290,7 +290,7 @@ ADHD diagnoses in the UK have increased substantially over the past decade (BMJ 
 
 The issue isn't that Calm or Headspace are bad apps. They're well-designed for their intended audience. The problem is that intended audience was never ADHD children. Features like "follow these instructions" and "complete this programme" actively work against how ADHD brains function.
 
-For a more detailed look at how the big three apps compare for neurodivergent children, see our [detailed comparison of Moshi, Calm, and Headspace](/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids).
+For a more detailed look at how the big three apps compare for neurodivergent children, see our [detailed comparison of Moshi, Calm, and Headspace](/comparing-moshi-calm-headspace-nd-kids).
 
 ## Quick Comparison: ADHD Apps for Kids UK
 

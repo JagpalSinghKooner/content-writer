@@ -115,7 +115,7 @@ This guide covers everything UK parents need to know about sound therapy for chi
 
 ## Sound Therapy Fundamentals: A Quick Overview
 
-Before we go deeper, here's a brief summary of what sound therapy actually means. For the full explanation of definitions, history, and how it all works, see our complete guide to [understanding sound therapy for children](/sound-therapy/01-understanding-sound-therapy-children).
+Before we go deeper, here's a brief summary of what sound therapy actually means. For the full explanation of definitions, history, and how it all works, see our complete guide to [understanding sound therapy for children](/understanding-sound-therapy-children).
 
 In short: sound therapy uses specific sounds, frequencies, or musical elements to support physical, emotional, or cognitive wellbeing. For children, it typically focuses on calming the nervous system, supporting emotional regulation, and helping with sleep or focus.
 
@@ -131,7 +131,7 @@ The most important distinction in children's sound therapy is between passive an
 
 Why does this matter? Because many children who could benefit from sound support can't engage with active approaches. When your child is mid-meltdown, overwhelmed after school, or fighting sleep at 10pm, the last thing they need is another demand. Passive listening meets them where they are. Press play. That's it.
 
-We explore this distinction fully in our comparison of [sound therapy versus music therapy](/sound-therapy/06-parents-guide-sound-vs-music-therapy). Both have value. They serve different purposes.
+We explore this distinction fully in our comparison of [sound therapy versus music therapy](/parents-guide-sound-vs-music-therapy). Both have value. They serve different purposes.
 
 ---
 
@@ -153,7 +153,7 @@ What parents need to know:
 - Research in children specifically is limited
 - Safety profile appears good, but start with lower volumes
 
-If binaural beats interest you, our dedicated guide to [binaural beats for children](/sound-therapy/03-safety-guide-binaural-beats-children) covers everything from safe use to what frequencies suit different ages.
+If binaural beats interest you, our dedicated guide to [binaural beats for children](/safety-guide-binaural-beats-children) covers everything from safe use to what frequencies suit different ages.
 
 ### Solfeggio Frequencies
 
@@ -163,7 +163,7 @@ Here's the honest truth: the evidence for specific therapeutic benefits from sol
 
 That said, many parents report their children find certain frequencies calming. Whether that's due to the specific frequency, the simple act of focused listening, or something else entirely, the practical outcome is the same: a calmer child. And at the end of a hard day, that's what matters.
 
-Our approach with solfeggio frequencies is "evidence meets tradition." We explain what research exists (limited), acknowledge the gaps, and give you practical guidance if you want to explore them. See our full guide to [solfeggio frequencies for children](/sound-therapy/04-solfeggio-frequencies-children).
+Our approach with solfeggio frequencies is "evidence meets tradition." We explain what research exists (limited), acknowledge the gaps, and give you practical guidance if you want to explore them. See our full guide to [solfeggio frequencies for children](/understanding-solfeggio-frequencies-children).
 
 ### ASMR Sounds and Soundscapes
 
@@ -189,7 +189,7 @@ This is the question every parent asks. And you deserve a straight answer, not m
 
 The honest truth: it depends on what you mean by "work" and which type of sound therapy you're asking about.
 
-We've written a dedicated guide on [what the evidence actually says](/sound-therapy/02-does-sound-therapy-work) about sound therapy effectiveness. Here's the summary:
+We've written a dedicated guide on [what the evidence actually says](/evidence-does-sound-therapy-work) about sound therapy effectiveness. Here's the summary:
 
 ### What Research Supports
 
@@ -257,7 +257,7 @@ Every child is different. That's not a cop-out; it's the truth. What calms one c
 
 Here's something that might surprise you: you don't need a practitioner, a clinic, or expensive equipment to use sound therapy with your child. Everything in this guide can be done at home with devices you already own. Tonight, if you want.
 
-For detailed implementation guidance, see our complete guide to [sound therapy at home](/sound-therapy/05-sound-therapy-at-home). Here's the framework.
+For detailed implementation guidance, see our complete guide to [sound therapy at home](/parents-guide-sound-therapy-at-home). Here's the framework.
 
 ### Equipment You Need
 
@@ -421,7 +421,7 @@ Here's what we know:
 
 We've been honest throughout this guide about what research supports and what it doesn't. That honesty is the foundation of trust. You deserve to know what you're trying before you try it.
 
-For deeper exploration of specific topics, we've created dedicated guides on [understanding sound therapy for children](/sound-therapy/01-understanding-sound-therapy-children), [what the evidence actually says](/sound-therapy/02-does-sound-therapy-work), [binaural beats for children](/sound-therapy/03-safety-guide-binaural-beats-children), [solfeggio frequencies for children](/sound-therapy/04-solfeggio-frequencies-children), [sound therapy at home](/sound-therapy/05-sound-therapy-at-home), and [sound therapy versus music therapy](/sound-therapy/06-parents-guide-sound-vs-music-therapy).
+For deeper exploration of specific topics, we've created dedicated guides on [understanding sound therapy for children](/understanding-sound-therapy-children), [what the evidence actually says](/evidence-does-sound-therapy-work), [binaural beats for children](/safety-guide-binaural-beats-children), [solfeggio frequencies for children](/understanding-solfeggio-frequencies-children), [sound therapy at home](/parents-guide-sound-therapy-at-home), and [sound therapy versus music therapy](/parents-guide-sound-vs-music-therapy).
 
 ### Your Next Step
 

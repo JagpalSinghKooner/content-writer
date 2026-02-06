@@ -39,9 +39,9 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "sensory overload guide"
-  - url: "/sensory-overload/articles/02-guide-calming-sounds-sensory-overload"
+  - url: "/sensory-overload/articles/guide-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
   - url: "/sensory-overload/articles/07-sensory-overload-recovery"
     anchor: "recovering from sensory overload"
@@ -152,13 +152,13 @@ This is the moment many parents dread.
 
 The hours after school are peak meltdown time. Your child has spent all day masking, holding it together, filtering sensory input. When they get home, the dam breaks.
 
-As we explain in our [sensory overload guide](/sensory-overload/articles/01-understanding-sensory-overload-children), this "restraint collapse" is the nervous system releasing what it's been containing all day.
+As we explain in our [sensory overload guide](/understanding-sensory-overload-children), this "restraint collapse" is the nervous system releasing what it's been containing all day.
 
 **What works:** Sound first. Before questions. Before snacks. Before screen time. Put on calming sounds the moment they walk through the door. Give their nervous system something regulating before asking anything of them.
 
 This is where therapeutic sound shines. Weighted blankets require touch tolerance (often low after school). Fidgets require motor control (depleted). Sound requires nothing. Just ears. Just presence. Just press play.
 
-For specific recommendations on which sounds work best, see our guide to [calming sounds for sensory overload](/sensory-overload/articles/02-guide-calming-sounds-sensory-overload).
+For specific recommendations on which sounds work best, see our guide to [calming sounds for sensory overload](/guide-calming-sounds-sensory-overload).
 
 ### Homework and Focus Time
 
@@ -194,7 +194,7 @@ Their nervous system has been through a storm. Recovery matters, and it's often 
 
 **What works:** Low-demand sound during the recovery period. Gentle frequencies that don't require attention or response. Let the sound do the regulating while your child rests.
 
-For more on this, see our guide to [recovering from sensory overload](/sensory-overload/articles/07-recovering-sensory-overload-hours-after).
+For more on this, see our guide to [recovering from sensory overload](/recovering-sensory-overload-hours-after).
 
 ## Sensory Activities That Work Better With Sound
 

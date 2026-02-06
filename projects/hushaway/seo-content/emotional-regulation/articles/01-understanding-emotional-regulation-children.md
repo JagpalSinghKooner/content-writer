@@ -40,11 +40,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "sensory overload"
   - url: "/autistic-meltdowns/articles/01-understanding-autism-meltdowns"
     anchor: "autistic meltdowns"
-  - url: "/adhd-sleep/articles/01-adhd-child-wont-sleep"
+  - url: "/adhd-sleep/articles/why-your-adhd-child-wont-sleep"
     anchor: "ADHD and sleep difficulties"
   - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
     anchor: "calming sounds designed for neurodivergent children"
@@ -109,11 +109,11 @@ It's not that your child won't. They can't.
 
 For neurodivergent children, this process is often more intense and more frequent.
 
-If your child has ADHD, their emotional intensity may be heightened from the start. Feelings arrive faster, bigger, and harder to shift. The [connection between ADHD and sleep difficulties](/adhd-sleep/articles/01-adhd-child-wont-sleep) often makes this worse. A tired brain regulates emotions far less effectively. (And if you're dealing with both ADHD and sleep battles, you know exactly what we mean.)
+If your child has ADHD, their emotional intensity may be heightened from the start. Feelings arrive faster, bigger, and harder to shift. The [connection between ADHD and sleep difficulties](/why-your-adhd-child-wont-sleep) often makes this worse. A tired brain regulates emotions far less effectively. (And if you're dealing with both ADHD and sleep battles, you know exactly what we mean.)
 
-For autistic children, the path to dysregulation looks different but feels equally overwhelming. Sensory input that neurotypical children barely notice can be genuinely distressing. What looks like "overreacting" is often a nervous system already running at full capacity, pushed past its limit by one more demand. We explore this in depth in our guide to [autistic meltdowns](/autistic-meltdowns/articles/01-understanding-autism-meltdowns).
+For autistic children, the path to dysregulation looks different but feels equally overwhelming. Sensory input that neurotypical children barely notice can be genuinely distressing. What looks like "overreacting" is often a nervous system already running at full capacity, pushed past its limit by one more demand. We explore this in depth in our guide to [autistic meltdowns](/understanding-autism-meltdowns).
 
-And for many children, [sensory overload](/sensory-overload/articles/01-understanding-sensory-overload-children) plays a significant role. Their nervous system is constantly working to filter and process more information than it can comfortably handle.
+And for many children, [sensory overload](/understanding-sensory-overload-children) plays a significant role. Their nervous system is constantly working to filter and process more information than it can comfortably handle.
 
 The Department for Education, 2018: [Mental Health and Behaviour in Schools](https://www.gov.uk/government/publications/mental-health-and-behaviour-in-schools--2) acknowledges that many behavioural difficulties stem from underlying developmental differences and unmet needs, not wilful noncompliance.
 
@@ -160,7 +160,7 @@ Your child can't follow breathing instructions, but they can be in a room where 
 
 The key difference: passive support doesn't require anything from your child. It simply provides a calming presence for their nervous system to settle into. No demands. No instructions. Just presence.
 
-This is why [calming sounds designed for neurodivergent children](/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children) can be so effective. Sound enters the environment without demanding anything. Your child doesn't need to choose it, engage with it, or even acknowledge it. Their nervous system can respond to the predictable audio input even when their conscious brain is overwhelmed.
+This is why [calming sounds designed for neurodivergent children](/why-generic-calming-sounds-dont-work-nd-children) can be so effective. Sound enters the environment without demanding anything. Your child doesn't need to choose it, engage with it, or even acknowledge it. Their nervous system can respond to the predictable audio input even when their conscious brain is overwhelmed.
 
 If you want to explore what this looks like in practice, The Open Sanctuary has a curated collection of sounds created specifically for sensitive and neurodivergent children. No interaction required. Just press play.
 
@@ -204,13 +204,13 @@ This article is the foundation for understanding emotional regulation in childre
 
 In the rest of this series, we'll cover:
 
-- [Specific strategies for autistic children](/emotional-regulation/articles/02-guide-emotional-regulation-autistic-children) whose sensory differences affect regulation
-- [How ADHD affects emotional regulation](/emotional-regulation/articles/03-emotional-regulation-adhd-children) and what helps
-- [The missing tool in every calm corner guide](/emotional-regulation/articles/04-calm-corner-sounds-children): what sounds to play
-- [Co-regulation through sound](/emotional-regulation/articles/05-co-regulation-through-sound-parent-child): how to stay calm when your child can't
-- [What to do in the first 60 seconds of big feelings](/emotional-regulation/articles/06-big-feelings-overwhelmed-child-help)
+- [Specific strategies for autistic children](/guide-emotional-regulation-autistic-children) whose sensory differences affect regulation
+- [How ADHD affects emotional regulation](/tools-emotional-regulation-adhd-children) and what helps
+- [The missing tool in every calm corner guide](/guide-calm-corner-sounds-children): what sounds to play
+- [Co-regulation through sound](/co-regulation-through-sound-parent-child): how to stay calm when your child can't
+- [What to do in the first 60 seconds of big feelings](/big-feelings-overwhelmed-child-help)
 
-For the complete picture, see our [Complete Guide to Emotional Regulation for Children](/emotional-regulation/articles/07-complete-guide-emotional-regulation-children).
+For the complete picture, see our [Complete Guide to Emotional Regulation for Children](/complete-guide-emotional-regulation-children).
 
 For now, remember this: emotional regulation is a capacity, not just a skill. Your child's nervous system is doing its best. And with the right support, the right tools, and a bit of patience (with yourself as much as them), things can get easier.
 

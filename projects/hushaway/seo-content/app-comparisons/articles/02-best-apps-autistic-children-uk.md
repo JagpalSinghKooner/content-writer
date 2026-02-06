@@ -40,7 +40,7 @@ schema_type: "Article"
 internal_links:
   - url: "/why-generic-calming-apps-fail-nd-children"
     anchor: "why most calming apps fail neurodivergent children"
-  - url: "/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids"
+  - url: "/comparing-moshi-calm-headspace-nd-kids"
     anchor: "detailed comparison of Moshi, Calm, and Headspace"
   - url: "/guide-best-calming-apps-nd-children-uk"
     anchor: "complete guide to calming apps for neurodivergent children"
@@ -83,7 +83,7 @@ For many autistic children, sound isn't just heard. It's felt. Research suggests
 
 This creates a fundamental problem: apps designed for the average child's sensory processing will, by definition, miss the mark for children whose sensory processing works differently.
 
-We've written about [why most calming apps fail neurodivergent children](/app-comparisons/why-generic-calming-apps-fail-nd-children) in detail. The short version: they require things autistic children often struggle to provide during moments of stress. Following instructions. Making choices. Processing rapid speech. Tolerating unpredictable audio.
+We've written about [why most calming apps fail neurodivergent children](/why-generic-calming-apps-fail-nd-children) in detail. The short version: they require things autistic children often struggle to provide during moments of stress. Following instructions. Making choices. Processing rapid speech. Tolerating unpredictable audio.
 
 ## What Autistic Children Actually Need from Apps
 
@@ -292,7 +292,7 @@ That's okay. Apps are tools, not requirements. If your child doesn't benefit fro
 
 For children who do respond to sound but haven't found the right app, the issue is usually design mismatch. Most apps weren't built for autistic brains. Finding one that was makes the difference.
 
-For a broader comparison including ADHD-specific needs, see our [detailed comparison of Moshi, Calm, and Headspace](/honest-comparison-moshi-vs-calm-vs-headspace-nd-kids).
+For a broader comparison including ADHD-specific needs, see our [detailed comparison of Moshi, Calm, and Headspace](/comparing-moshi-calm-headspace-nd-kids).
 
 ## What to Try Tonight
 

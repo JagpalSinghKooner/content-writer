@@ -1,5 +1,5 @@
 ---
-source_article: "08-complete-guide-sensory-overload-children"
+source_article: "complete-guide-sensory-overload-children"
 platform: "instagram"
 created: "2026-02-04"
 status: "draft"

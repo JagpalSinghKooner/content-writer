@@ -1,5 +1,5 @@
 ---
-source_article: "02-guide-calming-sounds-sensory-overload"
+source_article: "guide-calming-sounds-sensory-overload"
 platform: "twitter"
 created: "2026-02-04"
 status: draft

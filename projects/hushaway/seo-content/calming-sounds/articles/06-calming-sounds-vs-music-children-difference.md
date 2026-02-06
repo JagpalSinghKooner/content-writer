@@ -41,9 +41,9 @@ schema_type: "Article"
 internal_links:
   - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
     anchor: "why generic calming sounds often miss the mark for neurodivergent children"
-  - url: "/calming-sounds/articles/03-asmr-binaural-beats-white-noise-parents-guide-sound-types"
+  - url: "/calming-sounds/articles/03-parents-guide-asmr-children-research"
     anchor: "our guide to different sound types"
-  - url: "/sensory-overload/articles/02-calming-sounds-sensory-overload"
+  - url: "/sensory-overload/articles/guide-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
 external_citations:
   - url: "https://pubmed.ncbi.nlm.nih.gov/23727882/"
@@ -106,7 +106,7 @@ If you're comparing calming sounds to music, you might also wonder about the dif
 
 **Pink noise** reduces those higher frequencies, creating a deeper, softer sound. Think gentle rain or rustling leaves. Many parents find pink noise works better for sleep because it's gentler on sensitive ears.
 
-For a full breakdown of how different sounds affect children differently, see [our guide to different sound types](/calming-sounds/articles/03-asmr-binaural-beats-white-noise-parents-guide-sound-types).
+For a full breakdown of how different sounds affect children differently, see [our guide to different sound types](/parents-guide-asmr-children-research).
 
 The key point here: both white and pink noise require almost zero cognitive processing. Unlike music, they don't engage the thinking brain. They simply create a consistent audio environment.
 
@@ -142,7 +142,7 @@ If your child is already struggling, music might add to the load. Even calm musi
 
 Sounds don't ask for that. They provide a blanket of audio that masks distractions without creating new demands. It's like giving their brain permission to stop working.
 
-This is particularly true for neurodivergent children. If you've ever wondered [why generic calming sounds often miss the mark for neurodivergent children](/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children), the processing load is part of the answer. Sounds designed for ND brains consider sensory thresholds from the start.
+This is particularly true for neurodivergent children. If you've ever wondered [why generic calming sounds often miss the mark for neurodivergent children](/why-generic-calming-sounds-dont-work-nd-children), the processing load is part of the answer. Sounds designed for ND brains consider sensory thresholds from the start.
 
 ## How to Choose in the Moment
 
@@ -206,7 +206,7 @@ Calming sounds vs music children respond to isn't about one being right and one 
 
 If you haven't experimented with calming sounds, The Open Sanctuary from HushAway® offers a library of sounds designed specifically for children like yours. You can explore different sound types and see how your child responds. No pressure. Just options.
 
-For more on how sounds support children during [calming sounds for sensory overload](/sensory-overload/articles/02-calming-sounds-sensory-overload), that's worth reading too.
+For more on how sounds support children during [calming sounds for sensory overload](/guide-calming-sounds-sensory-overload), that's worth reading too.
 
 The goal isn't to replace music in your child's life. It's to add another tool to your toolkit. One that works when music doesn't. One that asks nothing of an already tired brain.
 

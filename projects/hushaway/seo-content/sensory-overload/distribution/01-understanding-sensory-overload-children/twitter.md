@@ -1,5 +1,5 @@
 ---
-source_article: "01-understanding-sensory-overload-children"
+source_article: "understanding-sensory-overload-children"
 platform: "twitter"
 created: "2026-02-04"
 status: "draft"

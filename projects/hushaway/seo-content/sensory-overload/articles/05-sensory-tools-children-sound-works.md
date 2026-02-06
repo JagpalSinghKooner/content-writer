@@ -38,7 +38,7 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "sensory overload actually is"
   - url: "/sensory-overload/articles/02-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
@@ -75,7 +75,7 @@ This isn't about which sensory toy has the best reviews. It's about understandin
 
 ## Why Most Calming Sensory Items Fail During Peak Overload
 
-To understand why popular sensory tools for children fall short during crisis, you need to understand what [sensory overload actually is](/sensory-overload/articles/01-understanding-sensory-overload-children). It's not a behaviour problem. It's not defiance. It's a neurological state where the brain floods with more input than it can process.
+To understand why popular sensory tools for children fall short during crisis, you need to understand what [sensory overload actually is](/understanding-sensory-overload-children). It's not a behaviour problem. It's not defiance. It's a neurological state where the brain floods with more input than it can process.
 
 And during peak overload, certain abilities simply go offline:
 
@@ -271,13 +271,13 @@ Press play. Step back. Don't ask questions. Don't offer choices. Let the sound d
 **After crisis:**
 Keep gentle sound playing during recovery. The nervous system is rebuilding and needs continued input that doesn't demand anything back.
 
-For more detail on which specific sounds work for which situations, see our guide on [calming sounds for sensory overload](/sensory-overload/articles/02-calming-sounds-sensory-overload).
+For more detail on which specific sounds work for which situations, see our guide on [calming sounds for sensory overload](/guide-calming-sounds-sensory-overload).
 
 ## When Sound Is Especially Important
 
 Some situations make sound the obvious choice:
 
-**After-school collapse.** When your child has held it together all day and comes home with nothing left, they can't engage with any tool that requires effort. Sound works the moment they walk through the door. No instructions needed. We cover this more in our article on [after-school meltdowns](/sensory-overload/articles/03-after-school-sensory-overload).
+**After-school collapse.** When your child has held it together all day and comes home with nothing left, they can't engage with any tool that requires effort. Sound works the moment they walk through the door. No instructions needed. We cover this more in our article on [after-school meltdowns](/understanding-after-school-sensory-overload).
 
 **Bedtime struggles.** When the day's sensory debt catches up and sleep feels impossible, sound provides the regulation that helps the brain settle. It doesn't require one more thing from an already exhausted child.
 

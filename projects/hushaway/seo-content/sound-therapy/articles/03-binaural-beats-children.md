@@ -90,7 +90,7 @@ The idea behind binaural beats is that this perceived frequency can encourage yo
 
 The theory suggests that listening to binaural beats at theta frequencies might help with relaxation, while beta frequencies might support focus and concentration.
 
-If you're new to sound-based approaches for children, our guide to [understanding sound therapy for children](/sound-therapy/01-understanding-sound-therapy-children) explains how these fit into the broader landscape.
+If you're new to sound-based approaches for children, our guide to [understanding sound therapy for children](/understanding-sound-therapy-children) explains how these fit into the broader landscape.
 
 ## Are Binaural Beats Safe for Children? What We Know
 
@@ -210,7 +210,7 @@ Here's a practical guide based on what you're trying to support:
 | Calm focus | Alpha (8-13 Hz) | Homework prep, transitions |
 | Active attention | Beta (13-20 Hz) | Before focused tasks |
 
-Don't obsess over exact frequencies. A 6 Hz theta beat and a 7 Hz theta beat aren't meaningfully different for practical purposes. For more on specific frequencies and their uses, see our guide on [solfeggio frequencies for children](/sound-therapy/04-solfeggio-frequencies-children).
+Don't obsess over exact frequencies. A 6 Hz theta beat and a 7 Hz theta beat aren't meaningfully different for practical purposes. For more on specific frequencies and their uses, see our guide on [solfeggio frequencies for children](/understanding-solfeggio-frequencies-children).
 
 ## Binaural Beats for ADHD Children
 
@@ -242,7 +242,7 @@ What we'd suggest:
 - Start with shorter sessions (10 minutes) to gauge tolerance
 - Alpha or theta frequencies tend to be gentler starting points than beta
 
-Here's what matters most: some autistic children prefer ambient soundscapes or nature sounds over the more "constructed" feeling of binaural beats. There's no hierarchy here. Whatever your child finds calming is the right choice for your child. Our guide to [sound therapy at home](/sound-therapy/05-sound-therapy-at-home) covers how to set up a supportive sound environment. For the full picture, see our [complete guide to sound therapy for children](/sound-therapy/complete-guide-sound-therapy-children).
+Here's what matters most: some autistic children prefer ambient soundscapes or nature sounds over the more "constructed" feeling of binaural beats. There's no hierarchy here. Whatever your child finds calming is the right choice for your child. Our guide to [sound therapy at home](/parents-guide-sound-therapy-at-home) covers how to set up a supportive sound environment. For the full picture, see our [complete guide to sound therapy for children](/complete-guide-sound-therapy-children).
 
 ## What Parents Often Get Wrong
 

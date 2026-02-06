@@ -46,19 +46,19 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/01-understanding-sensory-overload-children"
+  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
     anchor: "understanding what sensory overload actually is"
   - url: "/sensory-overload/articles/02-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
-  - url: "/sensory-overload/articles/03-sound-sensitivity-children-auditory-hypersensitivity"
+  - url: "/sensory-overload/articles/understanding-sound-sensitivity-children"
     anchor: "sound sensitivity and auditory hypersensitivity"
   - url: "/sensory-overload/articles/04-after-school-sensory-overload-meltdowns"
     anchor: "after-school meltdowns and sensory overload"
-  - url: "/sensory-overload/articles/05-sensory-tools-children-sound-works"
+  - url: "/sensory-overload/articles/sensory-tools-children-why-sound-works"
     anchor: "sensory tools that actually work"
-  - url: "/sensory-overload/articles/06-sensory-diet-children-missing-system"
+  - url: "/sensory-overload/articles/sensory-diet-children-missing-system"
     anchor: "building a sensory diet for your child"
-  - url: "/sensory-overload/articles/07-recovering-sensory-overload-hours-after"
+  - url: "/sensory-overload/articles/recovering-sensory-overload-hours-after"
     anchor: "recovering from sensory overload"
 external_citations:
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences"
@@ -133,7 +133,7 @@ Think of your child's nervous system like a computer with too many programmes ru
 
 For neurotypical children, the brain automatically filters out irrelevant sensory information. The hum of the fridge, the feel of socks, the flickering of a light, all of that gets filed away as unimportant. But for many neurodivergent children, particularly those with autism, ADHD, or sensory processing differences, that automatic filter doesn't work the same way. Everything comes in at full volume, all the time.
 
-We've written extensively about [understanding what sensory overload actually is](/sensory-overload/articles/01-understanding-sensory-overload-children), including the neurological basis and why some children are more vulnerable than others.
+We've written extensively about [understanding what sensory overload actually is](/understanding-sensory-overload-children), including the neurological basis and why some children are more vulnerable than others.
 
 But here's what matters most: this isn't something your child can control. And it isn't something they're doing to you.
 
@@ -211,7 +211,7 @@ The British Academy of Sound Therapy, 2023: [Benefits of Sound Therapy](https://
 
 This is what we call the Auditory Anchor: sound that gives the flooded brain something safe and predictable to land on, without adding any demands.
 
-We've created an entire guide to [calming sounds for sensory overload](/sensory-overload/articles/02-calming-sounds-sensory-overload) that covers which specific sounds work for which situations.
+We've created an entire guide to [calming sounds for sensory overload](/guide-calming-sounds-sensory-overload) that covers which specific sounds work for which situations.
 
 But the principle is simple. When other tools fail because they require engagement, sound works because it asks for nothing.
 
@@ -257,7 +257,7 @@ The difference is:
 - **Control:** Your child (or you) controls the volume, the timing, the choice. This alone reduces the threat response.
 - **Design:** Sounds created for sensory-sensitive ears are fundamentally different from everyday environmental noise. They're crafted without harsh frequencies or jarring transitions.
 
-We've written a detailed guide on [sound sensitivity and auditory hypersensitivity](/sensory-overload/articles/03-sound-sensitivity-children-auditory-hypersensitivity) that addresses this in depth.
+We've written a detailed guide on [sound sensitivity and auditory hypersensitivity](/understanding-sound-sensitivity-children) that addresses this in depth.
 
 The short version: the right sound calms. The wrong sound destroys. They're not the same thing at all.
 
@@ -273,7 +273,7 @@ This is sometimes called "restraint collapse" or "after-school meltdown." It's n
 
 If this sounds familiar, you're not alone.
 
-Our guide to [after-school meltdowns and sensory overload](/sensory-overload/articles/04-after-school-sensory-overload-meltdowns) covers this in detail, but here's the key insight: sound should be the first thing you offer when they walk through the door.
+Our guide to [after-school meltdowns and sensory overload](/understanding-after-school-sensory-overload) covers this in detail, but here's the key insight: sound should be the first thing you offer when they walk through the door.
 
 Not questions about their day. Not snacks (yet). Not homework.
 
@@ -305,7 +305,7 @@ Let's be honest about sensory tools.
 
 Weighted blankets. Fidgets. Chewies. Sensory rooms. All of these have their place. But they also have limitations that become painfully obvious during peak overload.
 
-Our [guide to sensory tools that actually work](/sensory-overload/articles/05-sensory-tools-children-sound-works) compares different approaches, but here's the summary:
+Our [guide to sensory tools that actually work](/sensory-tools-children-why-sound-works) compares different approaches, but here's the summary:
 
 ### Weighted Blankets and Deep Pressure
 
@@ -353,7 +353,7 @@ Sound isn't just a crisis tool. It's a prevention tool.
 
 Used throughout the day, it becomes part of your child's sensory regulation system. Preventing overload rather than just responding to it.
 
-Our guide to [building a sensory diet for your child](/sensory-overload/articles/06-sensory-diet-children-missing-system) explains that traditional sensory diets focus on proprioceptive input (heavy work, pushing, pulling), vestibular input (swinging, spinning), and tactile input (textures, play-doh, sand).
+Our guide to [building a sensory diet for your child](/sensory-diet-children-missing-system) explains that traditional sensory diets focus on proprioceptive input (heavy work, pushing, pulling), vestibular input (swinging, spinning), and tactile input (textures, play-doh, sand).
 
 These are valuable. But auditory input is almost always missing.
 
@@ -413,7 +413,7 @@ Recovery.
 
 After sensory overload, after the meltdown has passed, your child isn't finished. Their nervous system has been through a crisis. They're exhausted. Often confused. Sometimes ashamed. This is the recovery phase, and it can last hours.
 
-Our guide to [recovering from sensory overload](/sensory-overload/articles/07-recovering-sensory-overload-hours-after) covers this in depth.
+Our guide to [recovering from sensory overload](/recovering-sensory-overload-hours-after) covers this in depth.
 
 But here's the key: recovery needs its own strategy.
 

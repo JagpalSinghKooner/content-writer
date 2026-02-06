@@ -81,11 +81,11 @@ Most websites selling sound therapy products won't tell you this: the evidence b
 
 That matters. You're an exhausted parent trying to help your child. You don't have time for things that don't work. And you definitely don't need another disappointment.
 
-So let's be clear about [what sound therapy actually is](/sound-therapy/01-understanding-sound-therapy-children) first. Then we'll look at what the research says about each type.
+So let's be clear about [what sound therapy actually is](/understanding-sound-therapy-children) first. Then we'll look at what the research says about each type.
 
 ## Does Sound Therapy Work for Autism and ADHD?
 
-The answer depends on which type you're asking about. Research quality varies wildly across [different types of sound therapy](/sound-therapy/01-understanding-sound-therapy-children).
+The answer depends on which type you're asking about. Research quality varies wildly across [different types of sound therapy](/understanding-sound-therapy-children).
 
 Here's the honest breakdown.
 
@@ -102,7 +102,7 @@ A Cochrane Review (the gold standard for medical evidence) analysed 26 studies i
 
 The review noted that music therapy was more effective than standard care alone. Effects showed up after as few as one weekly session over several months.
 
-One important point: music therapy typically requires a trained therapist and active participation from your child. It's different from [passive listening](/sound-therapy/01-understanding-sound-therapy-children) approaches where you simply press play.
+One important point: music therapy typically requires a trained therapist and active participation from your child. It's different from [passive listening](/understanding-sound-therapy-children) approaches where you simply press play.
 
 ### The Safe and Sound Protocol: Emerging Evidence
 
@@ -254,7 +254,7 @@ If you're considering sound therapy for your child, here's where we'd start.
 
 The Open Sanctuary gives you a place to explore sounds designed specifically for neurodivergent children. No pressure. No false promises. Just sounds to try with your child tonight.
 
-For a broader view of all the approaches covered here, see our [complete guide to sound therapy for children](/sound-therapy/complete-guide-sound-therapy-children).
+For a broader view of all the approaches covered here, see our [complete guide to sound therapy for children](/complete-guide-sound-therapy-children).
 
 We'd rather you find what genuinely helps than buy something that doesn't.
 

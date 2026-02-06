@@ -1,5 +1,5 @@
 ---
-source_article: "autism-meltdown-recovery-guide"
+source_article: "helping-child-recover-after-meltdown"
 platform: linkedin
 created: "2026-02-03"
 status: draft

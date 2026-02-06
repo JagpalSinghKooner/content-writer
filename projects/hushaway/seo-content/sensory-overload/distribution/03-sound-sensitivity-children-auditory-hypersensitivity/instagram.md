@@ -1,5 +1,5 @@
 ---
-source_article: "03-sound-sensitivity-children-auditory-hypersensitivity"
+source_article: "understanding-sound-sensitivity-children"
 platform: "instagram"
 created: "2026-02-04"
 status: draft

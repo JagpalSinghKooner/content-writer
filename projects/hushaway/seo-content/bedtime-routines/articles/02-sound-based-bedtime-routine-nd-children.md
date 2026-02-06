@@ -41,11 +41,11 @@ schema_type: "HowTo"
 internal_links:
   - url: "/bedtime-routines/articles/01-why-bedtime-harder-neurodivergent-children"
     anchor: "why bedtime is harder for neurodivergent children"
-  - url: "/calming-sounds/articles/02-sleep-sounds-children-which-type-helps"
+  - url: "/calming-sounds/articles/02-guide-matching-sleep-sounds-children"
     anchor: "which sound types help children sleep"
   - url: "/adhd-sleep/articles/04-adhd-racing-thoughts"
     anchor: "racing thoughts at night"
-  - url: "/calming-sounds/articles/03-asmr-binaural-beats-white-noise-parents-guide-sound-types"
+  - url: "/calming-sounds/articles/03-parents-guide-asmr-children-research"
     anchor: "guide to sound types"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5618824/"
@@ -82,13 +82,13 @@ This guide changes that. You'll know exactly what to play, when to play it, and 
 
 Most bedtime sound recommendations assume a neurotypical brain. And neurotypical brains at bedtime work differently from neurodivergent ones.
 
-If you've read about [why bedtime is harder for neurodivergent children](/bedtime-routines/articles/01-why-bedtime-harder-neurodivergent-children), you know the challenges: ADHD brains that won't switch off, autistic brains craving predictability, sensory systems still processing the day.
+If you've read about [why bedtime is harder for neurodivergent children](/why-bedtime-harder-neurodivergent-children), you know the challenges: ADHD brains that won't switch off, autistic brains craving predictability, sensory systems still processing the day.
 
 Generic calming music fails because:
 
 **It's unpredictable.** Classical music has tempo changes, dynamic shifts, instrumental surprises. For a child whose brain craves sameness, each unexpected note creates a tiny spike of alertness. Their nervous system stays on guard, waiting for the next change.
 
-**It requires processing.** Music with melodies and rhythms engages the brain in pattern-recognition. For a child with [racing thoughts at night](/adhd-sleep/articles/04-adhd-racing-thoughts), that's more mental activity at exactly the wrong time.
+**It requires processing.** Music with melodies and rhythms engages the brain in pattern-recognition. For a child with [racing thoughts at night](/quieting-adhd-racing-thoughts-bedtime), that's more mental activity at exactly the wrong time.
 
 **It stops.** Playlists end. Albums finish. And when the sound suddenly disappears, your child's brain snaps to attention. All that settling work, undone in silence.
 
@@ -198,7 +198,7 @@ Here's what you actually need to know. The breakdown of which sounds help childr
 
 **What to avoid:** Stories with exciting plots, surprises, or cliffhangers. Sleep narration should be gently boring. If your child is engaged wondering what happens next, their brain is active.
 
-For more detail on [which sound types help children sleep](/calming-sounds/articles/02-sleep-sounds-children-which-type-helps), including comparisons between different options, we've written a complete breakdown.
+For more detail on [which sound types help children sleep](/guide-matching-sleep-sounds-children), including comparisons between different options, we've written a complete breakdown.
 
 ## Building a Bedtime Sounds Routine: The Step-by-Step Guide
 
@@ -292,7 +292,7 @@ Different neurodivergent profiles benefit from different approaches. Here's a qu
 
 **Separation anxiety:** Gentle narration provides a sense of presence. Your child can feel "not alone" even after you leave the room. Sleep stories or soft-spoken content bridges the gap between your presence and independence.
 
-For a complete [guide to sound types](/calming-sounds/articles/03-asmr-binaural-beats-white-noise-parents-guide-sound-types), including how each works and when to choose them, we've written detailed breakdowns for each category.
+For a complete [guide to sound types](/parents-guide-asmr-children-research), including how each works and when to choose them, we've written detailed breakdowns for each category.
 
 ## What About Headphones?
 
@@ -330,7 +330,7 @@ You press play. That's it. The sound does the work while you catch your breath.
 
 Sound is powerful on its own. It becomes even more effective as part of a complete routine.
 
-[Visual schedules reduce transition anxiety](/bedtime-routines/articles/visual-bedtime-routine-neurodivergent-children) by showing what happens next. [ADHD-specific strategies](/bedtime-routines/articles/adhd-bedtime-routine-that-works) address the racing brain that sound helps anchor. [Autism-specific approaches](/bedtime-routines/articles/autism-bedtime-routine-predictability-calm) build the deep predictability that makes sound signals meaningful. And for the [complete framework](/bedtime-routines/articles/complete-guide-bedtime-routines-neurodivergent-children), see our full guide to neurodivergent bedtime routines.
+[Visual schedules reduce transition anxiety](/visual-bedtime-routine-neurodivergent-children) by showing what happens next. [ADHD-specific strategies](/sound-anchored-adhd-bedtime-routine) address the racing brain that sound helps anchor. [Autism-specific approaches](/autism-bedtime-routine-predictability-calm) build the deep predictability that makes sound signals meaningful. And for the [complete framework](/complete-guide-nd-bedtime-routines), see our full guide to neurodivergent bedtime routines.
 
 Sound is the core element most parents miss. But it works best alongside other support.
 

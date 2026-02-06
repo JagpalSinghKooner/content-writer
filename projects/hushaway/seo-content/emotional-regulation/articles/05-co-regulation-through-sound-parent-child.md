@@ -42,7 +42,7 @@ schema_type: "Article"
 internal_links:
   - url: "/emotional-regulation/articles/01-understanding-emotional-regulation-children"
     anchor: "emotional regulation in children"
-  - url: "/emotional-regulation/articles/04-calm-corner-sounds-children"
+  - url: "/emotional-regulation/articles/guide-calm-corner-sounds-children"
     anchor: "calm corner sounds"
   - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
     anchor: "calming sounds designed for neurodivergent children"
@@ -119,7 +119,7 @@ Stefan Koelsch, 2014: [Brain correlates of music-evoked emotions](https://www.nc
 
 But here's what makes sound unique as a co-regulation tool. It works on BOTH of you at the same time.
 
-When you press play on [calming sounds designed for neurodivergent children](/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children), the sound fills the space. It enters your nervous system. It enters your child's nervous system. Neither of you has to do anything. Neither of you has to go first.
+When you press play on [calming sounds designed for neurodivergent children](/why-generic-calming-sounds-dont-work-nd-children), the sound fills the space. It enters your nervous system. It enters your child's nervous system. Neither of you has to do anything. Neither of you has to go first.
 
 Read that again. Neither of you has to go first.
 
@@ -203,7 +203,7 @@ The most effective sounds for co-regulation share certain characteristics:
 
 **No sudden changes.** Startling sounds or unexpected shifts can retrigger stress responses in already-activated nervous systems.
 
-For more specific guidance on what sounds to use in different emotional states, see our guide to [calm corner sounds](/emotional-regulation/articles/04-calm-corner-sounds-children).
+For more specific guidance on what sounds to use in different emotional states, see our guide to [calm corner sounds](/guide-calm-corner-sounds-children).
 
 ## When Sound Is the Only Tool You Have Left
 
@@ -219,7 +219,7 @@ Sound isn't magic. It won't instantly end every meltdown or prevent every diffic
 
 ## Finding the Right Sounds
 
-Understanding [emotional regulation in children](/emotional-regulation/articles/01-understanding-emotional-regulation-children) helps you know why your child struggles. Understanding passive co-regulation through sound gives you a way through those struggles that doesn't leave you depleted.
+Understanding [emotional regulation in children](/understanding-emotional-regulation-children) helps you know why your child struggles. Understanding passive co-regulation through sound gives you a way through those struggles that doesn't leave you depleted.
 
 The sounds that work for co-regulation need to be designed with both nervous systems in mind. Calming without being boring. Predictable without being monotonous. Effective without requiring anything from either listener.
 
@@ -227,4 +227,4 @@ If you haven't found sounds that work for your family yet, explore [The Open San
 
 Because you shouldn't have to white-knuckle your way through your child's difficult moments. You shouldn't have to be the only one doing the regulating. And with the right sounds, you don't have to.
 
-For more strategies and the complete picture of emotional regulation support, see our [Complete Guide to Emotional Regulation for Children](/emotional-regulation/articles/07-complete-guide-emotional-regulation-children).
+For more strategies and the complete picture of emotional regulation support, see our [Complete Guide to Emotional Regulation for Children](/complete-guide-emotional-regulation-children).

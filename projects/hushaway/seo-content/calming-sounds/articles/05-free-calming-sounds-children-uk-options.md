@@ -42,9 +42,9 @@ schema_type: "Article"
 internal_links:
   - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
     anchor: "why generic sounds often miss the mark for neurodivergent children"
-  - url: "/calming-sounds/articles/02-sleep-sounds-children-which-type-helps"
+  - url: "/calming-sounds/articles/02-guide-matching-sleep-sounds-children"
     anchor: "which sleep sounds work best for different needs"
-  - url: "/calming-sounds/articles/03-asmr-binaural-beats-white-noise-parents-guide-sound-types"
+  - url: "/calming-sounds/articles/03-parents-guide-asmr-children-research"
     anchor: "our complete guide to sound types"
 external_citations:
   - url: "https://www.bbc.co.uk/cbeebies/grownups/calming-sounds"
@@ -85,7 +85,7 @@ Neither category was built with neurological differences in mind. That's not a c
 
 For many children, generic calming sounds work brilliantly. Your child presses play, the rain sounds start, everyone relaxes.
 
-For neurodivergent children, it's often different. Certain frequencies grate. The wrong voice jars. A sound that should calm actually irritates. We've explained [why generic sounds often miss the mark for neurodivergent children](/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children) if you want the full picture.
+For neurodivergent children, it's often different. Certain frequencies grate. The wrong voice jars. A sound that should calm actually irritates. We've explained [why generic sounds often miss the mark for neurodivergent children](/why-generic-calming-sounds-dont-work-nd-children) if you want the full picture.
 
 The good news: free doesn't have to mean generic. It just did until recently.
 
@@ -184,7 +184,7 @@ Sounds created with sensory sensitivities, processing differences, and the reali
 
 **Neurodivergent-first design** means the sounds were built for children who process the world differently. The National Autistic Society explains in their 2024 guidance, [Sensory Differences](https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences), that autistic people often experience sensory input differently. Sounds that seem mild to neurotypical ears can feel overwhelming or irritating to sensitive children. The Open Sanctuary was designed with these differences from the start, not as an afterthought.
 
-**Variety that actually matters** includes ASMR sounds, frequencies (including solfeggio), ambient soundscapes, and nature audio. This isn't random variety for the sake of it. Each sound type addresses different needs. Some children respond to frequencies. Others need texture-based ASMR. If you're curious about what these different sound types do, see [our complete guide to sound types](/calming-sounds/articles/03-asmr-binaural-beats-white-noise-parents-guide-sound-types).
+**Variety that actually matters** includes ASMR sounds, frequencies (including solfeggio), ambient soundscapes, and nature audio. This isn't random variety for the sake of it. Each sound type addresses different needs. Some children respond to frequencies. Others need texture-based ASMR. If you're curious about what these different sound types do, see [our complete guide to sound types](/parents-guide-asmr-children-research).
 
 **UK-created** means the content was made here, by people who understand UK families and UK children.
 
@@ -226,7 +226,7 @@ For bedtime specifically, three things matter:
 
 **Consistency supports routine.** If your child finds a sound that helps them settle, being able to play it every single night without interruption (no adverts, no expired trials) reinforces the bedtime signal.
 
-**Match the sound to the problem.** Racing thoughts respond to different audio than sensory sensitivity or transition anxiety. We've written about [which sleep sounds work best for different needs](/calming-sounds/articles/02-sleep-sounds-children-which-type-helps) if you want to go deeper.
+**Match the sound to the problem.** Racing thoughts respond to different audio than sensory sensitivity or transition anxiety. We've written about [which sleep sounds work best for different needs](/guide-matching-sleep-sounds-children) if you want to go deeper.
 
 For free sleep sounds children can use nightly without interruption, The Open Sanctuary and CBeebies are your strongest options. For neurodivergent children specifically, The Open Sanctuary's frequency-based and ASMR content often works where standard calming sounds don't.
 
@@ -254,7 +254,7 @@ If you're reading this because tonight's bedtime feels impossible, here's what w
 
 One quiet moment can change a whole day for a child. The right sound might give your child that moment tonight.
 
-**Explore The Open Sanctuary** and find sounds designed for your child's needs. For a deeper understanding of which sounds work and why, see our [complete guide to calming sounds for children](/calming-sounds/articles/07-complete-guide-calming-sounds-children).
+**Explore The Open Sanctuary** and find sounds designed for your child's needs. For a deeper understanding of which sounds work and why, see our [complete guide to calming sounds for children](/complete-guide-calming-sounds-children).
 
 ---
 
