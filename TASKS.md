@@ -7,7 +7,7 @@
 | Tasks 20-25h: Audit System Build + Full Audit | PASS (all completed) |
 | Task 26: Auto-Fix All Pillars + Extract Patterns | superseded |
 | Task 27: Fix Content-Validator Em Dash Detection | PASS |
-| Task 28: Fix SEO-Writer Agent Citation Format + URL Verification | pending |
+| Task 28: Fix SEO-Writer Agent Citation Format + URL Verification | PASS |
 | Task 29: Fix Em Dashes — ADHD Sleep Article 01 | pending |
 | Task 30: Fix Em Dashes — ADHD Sleep Article 02 | pending |
 | Task 31: Fix Em Dashes — ADHD Sleep Article 03 | pending |
@@ -93,17 +93,24 @@ Built the audit system (link-auditor agent, consistency-checker agent, audit-pil
 **Objective:** Fix two issues in the seo-writer agent: (1) citation template uses em dashes instead of colons, violating Rule 4b, (2) no URL verification before returning PASS, causing 19 broken citation URLs across 7 pillars.
 
 **Acceptance Criteria:**
-- [ ] Citation format template changed from `[Author], [Year] — [Title](URL)` to `[Author], [Year]: [Title](URL)`
-- [ ] All citation format examples in the agent spec updated to use colons
-- [ ] URL verification step added: check each citation URL returns 200 before returning PASS
-- [ ] 403 responses flagged as WARN (bot protection, likely valid)
-- [ ] 404 responses flagged as FAIL (broken URL, must replace)
-- [ ] Git commit created
+- [x] Citation format template changed from `[Author], [Year] — [Title](URL)` to `[Author], [Year]: [Title](URL)`
+- [x] All citation format examples in the agent spec updated to use colons
+- [x] URL verification step added: check each citation URL returns 200 before returning PASS
+- [x] 403 responses flagged as WARN (bot protection, likely valid)
+- [x] 404 responses flagged as FAIL (broken URL, must replace)
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read `.claude/agents/seo-writer.md`. Fix two issues: (1) Change ALL citation format references from em dash separator `— [Title](URL)` to colon separator `: [Title](URL)` to match universal-rules.md Rule 6. Search the entire file for em dashes and replace in citation contexts. (2) Add a URL verification step: before the agent returns PASS, it must check that all external citation URLs return HTTP 200. Flag 403s as WARN (bot protection), flag 404s as FAIL (broken). Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Updated `.claude/agents/seo-writer.md` with two changes: (1) Replaced all 6 em dashes in the file. Citation format on line 63 changed from `— [hyperlinked title](URL)` to `: [hyperlinked title](URL)`. Five other em dashes (descriptive separators on lines 20-21 and 33-35) replaced with parenthetical format to comply with Rule 4b. (2) Added new section "6. Verify Citation URLs" between Output and Return Format. Agent must now check every citation URL before returning PASS, with a status table (200=PASS, 403=WARN, 404=FAIL with replacement required, 5xx/timeout=WARN). Return format updated to support WARN annotations.
+- **Decisions:** Used parenthetical format `(description)` instead of colons for non-citation em dashes, keeping consistency with the descriptive style. 5xx and timeout responses treated as WARN (not FAIL) since they're typically temporary.
+- **Next:** Tasks 29-36 (fix em dashes in actual articles) or Task 37 (slug changes).
 
 ---
 
