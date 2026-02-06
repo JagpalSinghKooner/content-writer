@@ -3,7 +3,7 @@
 title: "Neurodivergent Bedtime Routine: The Complete UK Parent's Guide to Sound, Structure, and Sleep"
 meta_title: "Neurodivergent Bedtime Routine: Complete UK Guide"
 meta_description: "The authoritative UK guide to neurodivergent bedtime routines. Learn why sound is the missing element and get ADHD, autism, and anxiety-specific strategies."
-slug: "complete-guide-bedtime-routines-neurodivergent-children"
+slug: "complete-guide-nd-bedtime-routines"
 author: "Nicola Maria Rose"
 date: "2026-02-05"
 status: "review"

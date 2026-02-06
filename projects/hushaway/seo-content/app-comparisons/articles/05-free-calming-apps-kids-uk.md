@@ -3,7 +3,7 @@
 title: "Free Calming Apps for Kids UK: What's Actually Worth Using (And the ND-First Option You Didn't Know Existed)"
 meta_title: "Free Calming Apps for Kids UK: What Actually Works"
 meta_description: "Looking for a free calming app for kids? We review Smiling Mind, CBeebies, YouTube options and the only free app designed for neurodivergent children."
-slug: "free-calming-apps-kids-uk"
+slug: "guide-free-calming-apps-kids-uk"
 author: "Nicola Maria Rose"
 date: "2026-02-05"
 status: "review"

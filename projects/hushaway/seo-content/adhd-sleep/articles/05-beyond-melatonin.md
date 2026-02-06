@@ -3,7 +3,7 @@
 title: "Beyond Melatonin: Non-Medication Sleep Help for ADHD Children"
 meta_title: "Non-Medication ADHD Sleep Help UK | What Parents Need to Know"
 meta_description: "Looking for non-medication ADHD sleep help? Discover what UK parents need to know about melatonin alternatives and zero-effort solutions that actually work."
-slug: "beyond-melatonin"
+slug: "beyond-melatonin-adhd-sleep-alternatives"
 author: "HushAway"
 date: "2026-02-03"
 status: "review"

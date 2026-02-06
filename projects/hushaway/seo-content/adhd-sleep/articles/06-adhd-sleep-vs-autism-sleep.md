@@ -3,7 +3,7 @@
 title: "ADHD Sleep vs Autism Sleep: A Parent's Guide to the Differences"
 meta_title: "ADHD Sleep vs Autism Sleep | Understanding the Differences"
 meta_description: "ADHD and autism cause different sleep problems. Learn how to identify which challenges your child faces and find solutions that actually fit their needs."
-slug: "adhd-sleep-vs-autism-sleep"
+slug: "parents-guide-adhd-vs-autism-sleep"
 author: "HushAway"
 date: "2026-02-03"
 status: "review"

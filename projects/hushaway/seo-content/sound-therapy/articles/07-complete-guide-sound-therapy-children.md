@@ -3,7 +3,7 @@
 title: "Sound Therapy for Children: What Actually Works (And What the Research Really Says)"
 meta_title: "Sound Therapy for Children UK: Complete Guide (2026)"
 meta_description: "The honest UK guide to sound therapy for children. What research supports, what's unproven, and how to use it at home. Evidence-first, no promises."
-slug: "07-complete-guide-sound-therapy-children"
+slug: "complete-guide-sound-therapy-children"
 author: "Nicola Maria Rose"
 date: "2026-02-05"
 status: "review"

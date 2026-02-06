@@ -3,7 +3,7 @@
 title: "ASMR for Children: What the Research Shows (And What Parents Need to Know)"
 meta_title: "ASMR, Binaural Beats, White Noise for Children: A Guide"
 meta_description: "Is ASMR safe for children? What does the research actually show? A UK parent's honest guide to sound types that help kids calm down and sleep."
-slug: "asmr-binaural-beats-white-noise-parents-guide-sound-types"
+slug: "parents-guide-asmr-children-research"
 author: "HushAway®"
 date: "2026-02-04"
 status: "review"

@@ -3,7 +3,7 @@
 title: "Meltdown vs Shutdown: The Quiet Crisis Your Child Might Be Hiding"
 meta_title: "Autism Shutdown vs Meltdown: Key Differences Explained"
 meta_description: "Shutdowns are the silent version of meltdowns many parents miss. Learn the difference between autism meltdowns and shutdowns, and how to help each."
-slug: "autism-meltdown-vs-shutdown-difference"
+slug: "understanding-meltdown-vs-shutdown"
 author: "Nicola Maria Rose"
 date: "2026-02-03"
 status: "published"

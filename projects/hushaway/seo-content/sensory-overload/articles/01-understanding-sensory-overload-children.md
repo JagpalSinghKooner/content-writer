@@ -3,7 +3,7 @@
 title: "Understanding Sensory Overload in Children: What's Really Happening in Their Brain"
 meta_title: "Sensory Overload Child: What It Is & Why Sound Helps"
 meta_description: "Sensory overload in children isn't bad behaviour. Learn what causes it, spot the symptoms, and discover why the auditory system holds the key to regulation."
-slug: "01-understanding-sensory-overload-children"
+slug: "understanding-sensory-overload-children"
 author: "Nicola Maria Rose"
 date: "2026-02-04"
 status: "review"

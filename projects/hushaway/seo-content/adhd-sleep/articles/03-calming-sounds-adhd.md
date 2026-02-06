@@ -3,7 +3,7 @@
 title: "Best Calming Sounds for ADHD Children (Backed by Research)"
 meta_title: "Calming Sounds for ADHD Children | What Actually Works"
 meta_description: "Not all sounds calm ADHD brains. Discover which calming sounds actually work for ADHD children and the science behind why they help with sleep and focus."
-slug: "calming-sounds-adhd"
+slug: "best-calming-sounds-adhd-children"
 author: "HushAway"
 date: "2026-02-03"
 status: "review"

@@ -3,7 +3,7 @@
 title: "ADHD Bedtime Routine That Actually Works (From Parents Who've Tried Everything)"
 meta_title: "ADHD Bedtime Routine That Actually Works | UK Parent Guide"
 meta_description: "Your ADHD bedtime routine fails because it's designed for neurotypical brains. Build a routine that works WITH racing thoughts, not against them."
-slug: "adhd-bedtime-routine"
+slug: "parents-guide-adhd-bedtime-routine"
 author: "HushAway"
 date: "2026-02-03"
 status: "review"

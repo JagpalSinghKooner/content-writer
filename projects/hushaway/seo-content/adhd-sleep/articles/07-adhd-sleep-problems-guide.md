@@ -3,7 +3,7 @@
 title: "ADHD Sleep Problems: The Complete UK Parent's Guide"
 meta_title: "ADHD Sleep Problems in Children | UK Parent's Guide"
 meta_description: "75% of ADHD children have sleep problems. Discover why generic advice fails, what UK research says, and the missing piece that actually helps."
-slug: "adhd-sleep-problems-guide"
+slug: "complete-guide-adhd-sleep-problems-uk"
 author: "HushAway"
 date: "2026-02-03"
 status: "review"

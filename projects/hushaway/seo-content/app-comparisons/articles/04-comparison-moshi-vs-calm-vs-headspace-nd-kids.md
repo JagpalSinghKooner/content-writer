@@ -3,7 +3,7 @@
 title: "Moshi vs Calm vs Headspace: Which is Best for Neurodivergent Kids? (Plus the Fourth Option You Didn't Know Existed)"
 meta_title: "Moshi vs Calm vs Headspace for ND Kids | Honest Comparison"
 meta_description: "Comparing Moshi vs Calm vs Headspace for neurodivergent children. We review which actually works for autistic and ADHD kids, plus the ND-first alternative."
-slug: "honest-comparison-moshi-vs-calm-vs-headspace-nd-kids"
+slug: "comparing-moshi-calm-headspace-nd-kids"
 author: "Nicola Maria Rose"
 date: "2026-02-05"
 status: "review"

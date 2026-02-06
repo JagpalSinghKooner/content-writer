@@ -3,7 +3,7 @@
 title: "Sensory Overload Recovery: The Hours After No One Talks About"
 meta_title: "Sensory Overload Recovery: What Helps After a Meltdown"
 meta_description: "Sensory overload recovery takes time. Learn how sound helps children rebuild regulation after meltdowns, plus the post-meltdown calm strategies that work."
-slug: "07-recovering-sensory-overload-hours-after"
+slug: "recovering-sensory-overload-hours-after"
 author: "Nicola Maria Rose"
 date: "2026-02-04"
 status: "review"

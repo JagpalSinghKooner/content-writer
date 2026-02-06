@@ -3,7 +3,7 @@
 title: "Why Your ADHD Child Won't Sleep (And What Actually Helps)"
 meta_title: "Why Your ADHD Child Won't Sleep | What Actually Works"
 meta_description: "Your ADHD child won't sleep because their brain is wired differently. Discover why generic sleep advice fails and what actually helps ADHD kids settle."
-slug: "adhd-child-wont-sleep"
+slug: "why-your-adhd-child-wont-sleep"
 author: "HushAway"
 date: "2026-02-03"
 status: "review"

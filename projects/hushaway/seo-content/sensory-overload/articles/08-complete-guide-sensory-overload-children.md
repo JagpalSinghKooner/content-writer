@@ -3,7 +3,7 @@
 title: "Sensory Overload in Children: The Complete Guide to Understanding, Calming, and Supporting Your Child"
 meta_title: "Sensory Overload Child: Complete UK Parent Guide"
 meta_description: "A UK parent's guide to sensory overload in children. Learn why it happens, how to recognise it, and why the right sound calms when everything else fails."
-slug: "08-complete-guide-sensory-overload-children"
+slug: "complete-guide-sensory-overload-children"
 author: "Nicola Maria Rose"
 date: "2026-02-04"
 status: "review"

@@ -3,7 +3,7 @@
 title: "Sound Sensitivity in Children: Why the Right Sound Calms and the Wrong Sound Triggers"
 meta_title: "Auditory Hypersensitivity Child: When Sound Helps"
 meta_description: "Auditory hypersensitivity in children doesn't mean all sound is bad. Learn why therapeutic sounds calm while everyday noise overwhelms your sound-sensitive child."
-slug: "03-sound-sensitivity-children-auditory-hypersensitivity"
+slug: "understanding-sound-sensitivity-children"
 author: "Nicola Maria Rose"
 date: "2026-02-04"
 status: "review"

@@ -3,7 +3,7 @@
 title: "Sound Therapy vs Music Therapy: The Critical Difference Parents Miss"
 meta_title: "Sound Therapy vs Music Therapy: Key Differences for Children"
 meta_description: "Sound therapy vs music therapy explained for parents. Learn why passive listening works differently from active engagement and which might suit your child."
-slug: "sound-therapy-vs-music-therapy"
+slug: "parents-guide-sound-vs-music-therapy"
 author: "Nicola Maria Rose"
 date: "2026-02-05"
 status: "review"

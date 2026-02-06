@@ -3,7 +3,7 @@
 title: "Sleep Sounds for Children: How to Match the Right Sound to Your Child's Sleep Problem"
 meta_title: "Sleep Sounds for Children: Which Type Actually Helps"
 meta_description: "Sleep sounds for children work when matched to the problem. Racing brain, sensory sensitivity, and transition anxiety each need different audio. Here's how to find the right match."
-slug: "sleep-sounds-children-which-type-helps"
+slug: "guide-matching-sleep-sounds-children"
 author: "HushAway®"
 date: "2026-02-04"
 status: "review"

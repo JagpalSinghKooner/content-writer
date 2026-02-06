@@ -3,7 +3,7 @@
 title: "Calming Sounds for Sensory Overload: The Zero-Demand Solution That Actually Works"
 meta_title: "Calming Sounds for Sensory Overload in Children"
 meta_description: "Discover how calming sounds help sensory overload in children when weighted blankets and fidgets fail. Passive sound works when everything else is too much."
-slug: "02-guide-calming-sounds-sensory-overload"
+slug: "guide-calming-sounds-sensory-overload"
 author: "Nicola Maria Rose"
 date: "2026-02-04"
 status: "review"

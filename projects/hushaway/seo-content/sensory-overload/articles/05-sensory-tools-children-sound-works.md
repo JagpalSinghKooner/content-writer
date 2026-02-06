@@ -3,7 +3,7 @@
 title: "Sensory Tools for Children: Why Sound Works When Weighted Blankets Don't"
 meta_title: "Sensory Tools for Children: Why Sound Works"
 meta_description: "Discover which sensory tools for children actually work during overload. Learn why sound succeeds when weighted blankets, fidgets, and other tactile tools fail."
-slug: "05-sensory-tools-children-sound-works"
+slug: "sensory-tools-children-why-sound-works"
 author: "Nicola Maria Rose"
 date: "2026-02-04"
 status: "review"

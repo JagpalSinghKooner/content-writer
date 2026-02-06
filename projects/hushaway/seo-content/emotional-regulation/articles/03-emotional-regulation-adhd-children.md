@@ -3,7 +3,7 @@
 title: "Emotional Regulation for ADHD Children: Tools That Work WITH the ADHD Brain"
 meta_title: "Emotional Regulation ADHD Child | Tools That Actually Work"
 meta_description: "Help your ADHD child with emotional regulation using tools that work with their brain, not against it. Practical strategies for ADHD emotional outbursts."
-slug: "emotional-regulation-adhd-children"
+slug: "tools-emotional-regulation-adhd-children"
 author: "HushAway®"
 date: "2026-02-04"
 status: "review"

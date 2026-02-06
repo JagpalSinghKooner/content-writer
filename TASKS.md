@@ -351,17 +351,17 @@ Built the audit system (link-auditor agent, consistency-checker agent, audit-pil
 | App Comparisons | 05 | `free-calming-apps-kids-uk` | `guide-free-calming-apps-kids-uk` | 31 |
 
 **Acceptance Criteria:**
-- [ ] All 28 articles have new slug in frontmatter `slug:` field
-- [ ] Grep for each of the 28 old slugs in frontmatter returns 0 matches
-- [ ] Grep for each new slug returns exactly 1 match per slug
-- [ ] All new slugs are under 50 characters
-- [ ] No filenames changed
+- [x] All 28 articles have new slug in frontmatter `slug:` field
+- [x] Grep for each of the 28 old slugs in frontmatter returns 0 matches
+- [x] Grep for each new slug returns exactly 1 match per slug
+- [x] All new slugs are under 50 characters
+- [x] No filenames changed
 - [ ] Git commit created
 
 **Starter Prompt:**
 > Apply the slug mapping table from TASKS.md Task 37. For each of the 28 articles, edit ONLY the frontmatter `slug:` field to the new value. Do NOT rename any files. After all changes, verify: (1) grep for each old slug value in frontmatter across all articles — expect 0, (2) grep for each new slug — expect exactly 1 match each. Commit when done.
 
-**Status:** pending
+**Status:** in_progress
 
 ---
 

@@ -3,7 +3,7 @@
 title: "Sensory Diet for Children: The Missing Sensory System No One Talks About"
 meta_title: "Sensory Diet for Children: The Missing System"
 meta_description: "Most sensory diets focus on heavy work and movement. But auditory input is the fastest sensory system for regulation. Here's how to add sound."
-slug: "06-sensory-diet-children-missing-system"
+slug: "sensory-diet-children-missing-system"
 author: "Nicola Maria Rose"
 date: "2026-02-04"
 status: "review"

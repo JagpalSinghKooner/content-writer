@@ -3,7 +3,7 @@
 title: "After the Meltdown: What Actually Helps Your Autistic Child Recover"
 meta_title: "Autism Meltdown Recovery: What Helps Afterwards"
 meta_description: "The meltdown ended. But your child's still not okay. Here's what actually happens in the hours after, and how to support recovery without adding more demands."
-slug: "autism-meltdown-recovery-guide"
+slug: "helping-child-recover-after-meltdown"
 author: "Nicola Maria Rose"
 date: "2026-02-03"
 status: "published"

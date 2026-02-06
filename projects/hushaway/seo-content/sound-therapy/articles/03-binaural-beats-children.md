@@ -3,7 +3,7 @@
 title: "Binaural Beats for Children: The Safety Guide Every Parent Needs"
 meta_title: "Binaural Beats for Children: A Parent's Safety Guide"
 meta_description: "Are binaural beats safe for children? Learn what parents need to know about binaural beats for ADHD, autism, and focus. Evidence-based guidance for UK families."
-slug: "binaural-beats-children"
+slug: "safety-guide-binaural-beats-children"
 author: "Nicola Maria Rose"
 date: "2026-02-05"
 status: "review"

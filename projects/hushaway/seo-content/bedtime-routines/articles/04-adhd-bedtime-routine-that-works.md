@@ -3,7 +3,7 @@
 title: "ADHD Bedtime Routine: Why Sound Anchors the Brain That Won't Switch Off"
 meta_title: "ADHD Bedtime Routine That Actually Works | UK Guide"
 meta_description: "Your ADHD child's brain won't switch off at bedtime. Learn why sound anchors racing thoughts and how to build an ADHD bedtime routine that actually works."
-slug: "adhd-bedtime-routine-that-works"
+slug: "sound-anchored-adhd-bedtime-routine"
 author: "Nicola Maria Rose"
 date: "2026-02-05"
 status: "review"

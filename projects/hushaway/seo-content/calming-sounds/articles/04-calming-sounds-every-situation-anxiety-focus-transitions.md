@@ -3,7 +3,7 @@
 title: "Calming Sounds for Every Situation: What to Play for Anxiety, Focus, Transitions, and Beyond"
 meta_title: "Calming Sounds for Anxious Child: Situation-by-Situation"
 meta_description: "Need sounds for an anxious child, focus time, or car journeys? A practical guide matching the right calming sound to every tricky moment in your day."
-slug: "calming-sounds-every-situation-anxiety-focus-transitions"
+slug: "guide-calming-sounds-every-situation"
 author: "HushAway®"
 date: "2026-02-04"
 status: "review"

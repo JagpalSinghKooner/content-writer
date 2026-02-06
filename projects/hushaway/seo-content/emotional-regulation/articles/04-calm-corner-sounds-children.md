@@ -3,7 +3,7 @@
 title: "Calm Corner Sounds: The One Thing Every Calm Corner Guide Forgets to Include"
 meta_title: "Calm Corner Sounds for Children | What to Play"
 meta_description: "Every calm corner guide tells you what objects to include. None tell you what sounds to play. Here's the missing piece for helping your child calm down."
-slug: "calm-corner-sounds-children"
+slug: "guide-calm-corner-sounds-children"
 author: "HushAway®"
 date: "2026-02-04"
 status: "review"

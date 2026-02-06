@@ -3,7 +3,7 @@
 title: "After-School Sensory Overload: Why They Melt Down at Home (and What to Play First)"
 meta_title: "After-School Sensory Overload: Meltdowns Explained"
 meta_description: "Why your child melts down after school and what to play first. Understand sensory overload after school and the reset that works."
-slug: "04-understanding-after-school-sensory-overload"
+slug: "understanding-after-school-sensory-overload"
 author: "Nicola Maria Rose"
 date: "2026-02-04"
 status: "review"
