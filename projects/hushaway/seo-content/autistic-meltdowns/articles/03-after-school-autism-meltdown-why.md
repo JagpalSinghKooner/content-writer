@@ -62,6 +62,10 @@ external_citations:
     author: "Mantzalas et al."
     year: "2022"
     title: "What Is Autistic Burnout? A Thematic Analysis of Posts on Two Online Platforms"
+  - url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7313636/"
+    author: "Raymaker et al."
+    year: "2020"
+    title: "Defining Autistic Burnout"
 ---
 
 3:47pm. The school door opens.
@@ -94,7 +98,7 @@ Six hours of fluorescent lighting. Corridors that echo unpredictably. A timetabl
 
 Research published in Autism Research, 2022: [Camouflaging in autism: A systematic review](https://pubmed.ncbi.nlm.nih.gov/35637364/) describes how many autistic individuals spend significant mental energy suppressing their natural responses and behaviours to fit into neurotypical environments. This conscious and unconscious effort to "pass" has a name: masking.
 
-And masking has a cost.
+And masking has a cost. Raymaker et al., 2020: [Defining Autistic Burnout](https://pmc.ncbi.nlm.nih.gov/articles/PMC7313636/) describes autistic burnout as chronic exhaustion, loss of skills, and reduced tolerance to stimulation, often resulting from sustained masking and unmet support needs.
 
 Here's what that looks like for your child:
 

@@ -76,6 +76,10 @@ external_citations:
     author: "NHS"
     year: "2024"
     title: "Getting a diagnosis of autism"
+  - url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10765015/"
+    author: "Zaatar et al."
+    year: "2023"
+    title: "The transformative power of music: Insights into neuroplasticity, health, and disease"
 ---
 
 ## Table of Contents
@@ -193,7 +197,7 @@ We've written a dedicated guide on [what the evidence actually says](/evidence-d
 
 ### What Research Supports
 
-**Calming effects:** Multiple studies show that certain sounds can reduce physiological markers of stress, including heart rate and cortisol levels. This is relatively well established.
+**Calming effects:** Multiple studies show that certain sounds can reduce physiological markers of stress, including heart rate and cortisol levels. This is relatively well established. Zaatar et al., 2023: [The transformative power of music: Insights into neuroplasticity, health, and disease](https://pmc.ncbi.nlm.nih.gov/articles/PMC10765015/) reviews how music engages diverse brain networks and can modulate neural activity, supporting the neurological basis for sound's calming effects on children.
 
 **Sleep support:** Music and ambient sounds have been shown to improve sleep onset and quality in children. The specific mechanisms vary, but the practical effect is consistent across studies.
 

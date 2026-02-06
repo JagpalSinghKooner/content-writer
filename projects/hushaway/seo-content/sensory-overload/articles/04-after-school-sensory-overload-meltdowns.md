@@ -54,6 +54,10 @@ external_citations:
     author: "National Autistic Society"
     year: "2024"
     title: "Meltdowns: A Guide for All Audiences"
+  - url: "https://www.autism.org.uk/advice-and-guidance/professional-practice/autistic-burnout"
+    author: "National Autistic Society"
+    year: "2024"
+    title: "Understanding Autistic Burnout"
 ---
 
 Your child walks through the door. You smile. You ask how their day was.
@@ -94,7 +98,7 @@ The after school meltdown sensory parents describe isn't bad behaviour. It's not
 
 There's a name for what you're seeing: restraint collapse.
 
-National Autistic Society, 2024: [Meltdowns: A Guide for All Audiences](https://www.autism.org.uk/advice-and-guidance/topics/behaviour/meltdowns/all-audiences) describes it as the release of emotion, stress, and sensory overload that builds up during the school day. Your child has been "masking" or holding it together in an environment that demands constant regulation. Home is safe. Home means they can finally let go.
+National Autistic Society, 2024: [Meltdowns: A Guide for All Audiences](https://www.autism.org.uk/advice-and-guidance/topics/behaviour/meltdowns/all-audiences) describes it as the release of emotion, stress, and sensory overload that builds up during the school day. Your child has been "masking" or holding it together in an environment that demands constant regulation. Home is safe. Home means they can finally let go. The National Autistic Society, 2024: [Understanding Autistic Burnout](https://www.autism.org.uk/advice-and-guidance/professional-practice/autistic-burnout) explains that this pattern of sustained masking followed by collapse is a recognised feature of autistic burnout, characterised by exhaustion, skill loss, and reduced tolerance to stimulation.
 
 Research supports what parents have always known. Crane et al., 2021: [Experiences of autism acceptance and mental health in autistic adults](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7474833/) found that the effort of camouflaging autistic traits in social environments leads to significant mental and physical exhaustion. Children experience this same exhaustion, often without the language to explain it.
 

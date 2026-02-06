@@ -58,6 +58,10 @@ external_citations:
     author: "Gregory and Eley"
     year: "2005"
     title: "Sleep Problems, Anxiety and Cognitive Style in School-Aged Children"
+  - url: "https://www.healthychildren.org/English/healthy-living/sleep/Pages/separation-anxiety-and-sleeping.aspx"
+    author: "American Academy of Pediatrics"
+    year: "2022"
+    title: "Separation Anxiety & Sleeping Trouble in Young Children"
 ---
 
 # Bedtime Anxiety in Children: Why Sound Stays When You Leave the Room
@@ -95,7 +99,7 @@ Research confirms what you're experiencing. According to Kushnir and Sadeh, 2019
 
 Bedtime anxiety in a child typically stems from four fears. Understanding which ones drive your child's behaviour makes all the difference.
 
-**Fear of separation.** Your child has been with you all day. Bedtime means being alone. For some children, "goodnight" feels like abandonment. It doesn't matter that you'll be downstairs. Their nervous system registers one thing: alone means unsafe.
+**Fear of separation.** Your child has been with you all day. Bedtime means being alone. For some children, "goodnight" feels like abandonment. It doesn't matter that you'll be downstairs. Their nervous system registers one thing: alone means unsafe. The American Academy of Pediatrics, 2022: [Separation Anxiety & Sleeping Trouble in Young Children](https://www.healthychildren.org/English/healthy-living/sleep/Pages/separation-anxiety-and-sleeping.aspx) confirms that separation anxiety commonly disrupts sleep, typically emerging in the second half of a child's first year and sometimes persisting well into the toddler years.
 
 **Fear of the dark.** This isn't childish imagination. The dark genuinely changes sensory input. Your child can't see threats. Can't orient themselves. Their brain starts scanning for danger. Every creak becomes a footstep. Every shadow becomes a shape.
 

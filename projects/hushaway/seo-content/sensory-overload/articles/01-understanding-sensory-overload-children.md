@@ -60,6 +60,10 @@ external_citations:
     author: "National Autistic Society"
     year: "2024"
     title: "Sensory differences"
+  - url: "https://www.sheffieldchildrens.nhs.uk/services/child-development-and-neurodisability/sensory-processing-difficulties/"
+    author: "Sheffield Children's NHS"
+    year: "2024"
+    title: "Sensory Processing Difficulties"
 ---
 
 ## Table of Contents
@@ -308,7 +312,7 @@ ADHD-related sensory overload may look like:
 
 Sensory processing disorder (SPD) is a condition where sensory processing differences are the primary issue, rather than being part of another condition. Children with SPD may have sensory overload without having autism or ADHD.
 
-A sensory processing disorder child in the UK may face challenges getting formal recognition, as SPD isn't universally recognised as a standalone diagnosis. But the sensory differences are real and need addressing, regardless of diagnostic labels.
+A sensory processing disorder child in the UK may face challenges getting formal recognition, as SPD isn't universally recognised as a standalone diagnosis. Sheffield Children's NHS, 2024: [Sensory Processing Difficulties](https://www.sheffieldchildrens.nhs.uk/services/child-development-and-neurodisability/sensory-processing-difficulties/) explains that sensory processing is how the body takes in and makes sense of information, and provides practical strategies for managing sensory challenges in daily life. The sensory differences are real and need addressing, regardless of diagnostic labels.
 
 ### Highly Sensitive Children
 

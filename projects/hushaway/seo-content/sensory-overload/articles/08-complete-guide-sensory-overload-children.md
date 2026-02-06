@@ -81,6 +81,10 @@ external_citations:
     author: "British Academy of Sound Therapy"
     year: "2023"
     title: "Benefits of Sound Therapy"
+  - url: "https://www.sheffieldchildrens.nhs.uk/services/child-development-and-neurodisability/sensory-processing-difficulties/"
+    author: "Sheffield Children's NHS"
+    year: "2024"
+    title: "Sensory Processing Difficulties"
 ---
 
 ## Table of Contents
@@ -131,7 +135,7 @@ Sensory overload isn't a behaviour problem or a choice. It's what happens when y
 
 Think of your child's nervous system like a computer with too many programmes running. Eventually, it freezes. That's sensory overload. The system can't keep up with the input, so it crashes.
 
-For neurotypical children, the brain automatically filters out irrelevant sensory information. The hum of the fridge, the feel of socks, the flickering of a light, all of that gets filed away as unimportant. But for many neurodivergent children, particularly those with autism, ADHD, or sensory processing differences, that automatic filter doesn't work the same way. Everything comes in at full volume, all the time.
+For neurotypical children, the brain automatically filters out irrelevant sensory information. The hum of the fridge, the feel of socks, the flickering of a light, all of that gets filed away as unimportant. But for many neurodivergent children, particularly those with autism, ADHD, or sensory processing differences, that automatic filter doesn't work the same way. Everything comes in at full volume, all the time. As Sheffield Children's NHS, 2024: [Sensory Processing Difficulties](https://www.sheffieldchildrens.nhs.uk/services/child-development-and-neurodisability/sensory-processing-difficulties/) explains, sensory processing is how the body takes in and makes sense of information, and when this process works differently, it can affect everyday activities including dressing, eating, bathing, and sleep.
 
 We've written extensively about [understanding what sensory overload actually is](/understanding-sensory-overload-children), including the neurological basis and why some children are more vulnerable than others.
 
