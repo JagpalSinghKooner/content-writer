@@ -44,8 +44,6 @@ Content is **rejected** if any of these rules are violated.
 
 Use British spelling throughout. American spelling = automatic fail.
 
-UK English follows predictable patterns. Learn the patterns, catch the violations.
-
 ---
 
 #### Pattern 1: -our / -or
@@ -69,8 +67,6 @@ UK uses **-our**, US uses **-or**.
 | odour | odor |
 | vigour | vigor |
 | rumour | rumor |
-
-**Derived forms:** The -our is retained in most derivatives: colourful, behaviour**al**, favourite**s**, labouring. Exception: honorary, humorous, vigorous drop the 'u'.
 
 ---
 
@@ -98,10 +94,6 @@ UK prefers **-ise**, US uses **-ize**.
 | minimise | minimize |
 | maximise | maximize |
 
-**Derived forms:** Pattern extends to nouns and other forms: organisation, realisation, specialisation, prioritisation, customisation.
-
-**Note:** Some words are ALWAYS -ise in both UK and US: advertise, advise, comprise, compromise, despise, devise, disguise, exercise, improvise, revise, supervise, surprise, televise. These derive from different roots.
-
 ---
 
 #### Pattern 3: -re / -er
@@ -121,8 +113,6 @@ UK uses **-re**, US uses **-er**.
 | spectre | specter |
 | manoeuvre | maneuver |
 
-**Derived forms:** Pattern retained in compounds and derivatives: centred, metrication, fibreboard. Exception: central, metric (same in both).
-
 ---
 
 #### Pattern 4: -ce / -se (Nouns vs Verbs)
@@ -136,11 +126,6 @@ UK distinguishes nouns (-ce) from verbs (-se). US often uses -se for both.
 | licence | license | noun (UK verb is "license") |
 | pretence | pretense | noun |
 | practise | practice | verb (UK noun is "practice") |
-
-**UK Rule:** Licence/practice = noun. License/practise = verb.
-**US Rule:** License/practice for both.
-
-**Example:** "I need a licence to practise medicine" (UK) vs "I need a license to practice medicine" (US).
 
 ---
 
@@ -163,10 +148,6 @@ UK doubles the final consonant before suffixes. US often doesn't.
 | signalling | signaling |
 | marvellous | marvelous |
 
-**The Rule:** UK doubles -l before -ed, -ing, -er, -ery. US keeps single -l.
-
-**Derived forms:** This extends to all suffixed forms: travellers, cancellations, modellers.
-
 ---
 
 #### Pattern 6: -ogue / -og
@@ -180,8 +161,6 @@ UK uses **-ogue**, US often drops the -ue.
 | analogue | analog |
 | prologue | prolog |
 
-**Note:** US is inconsistent here. "Catalog" is common in US, but "dialogue" is often kept. For UK content, always use -ogue.
-
 ---
 
 #### Pattern 7: -ence / -ense
@@ -193,8 +172,6 @@ Some words differ in this suffix.
 | defence | defense |
 | offence | offense |
 | pretence | pretense |
-
-**Note:** "License" follows different rules (see Pattern 4).
 
 ---
 
@@ -240,24 +217,6 @@ UK and US differ on directional/prepositional suffixes.
 | afterwards | afterward | UK prefers -s |
 | whilst | while | UK accepts both; whilst is more formal |
 | amongst | among | UK accepts both; amongst is more formal |
-
-**Note:** Both forms are technically acceptable in UK English, but the -s forms are more traditionally British. For maximum UK authenticity, use the -s forms.
-
----
-
-#### Quick Validation Checklist
-
-When checking content, search for these US patterns:
-
-1. **-or endings:** color, behavior, favor, honor, harbor, neighbor
-2. **-ize endings:** organize, realize, memorize, specialize, optimize
-3. **-er endings:** center, meter, theater, fiber, liter
-4. **Single -l:** traveling, canceled, modeling, jewelry
-5. **-og endings:** catalog, dialog, analog
-6. **-ense endings:** defense, offense, pretense
-7. **Common traps:** gray, check (financial), program, aluminum, pajamas, tire, curb, mold, skeptic
-
-**Total patterns: 8 categories, 48+ word pairs**
 
 ---
 
@@ -540,24 +499,6 @@ Use this format for all external citations:
 - [ ] Publication year is included
 - [ ] Link opens in context (not broken or paywalled without note)
 
-**Preferred Sources:**
-- Peer-reviewed studies and academic journals
-- Government publications (.gov, .gov.uk)
-- Official documentation and whitepapers
-- Industry reports from recognised bodies
-- Primary sources (original research, interviews)
-- Established news outlets with editorial standards
-
-**Sources to Avoid:**
-- Content farms (eHow, Buzzle, article directories)
-- Sources older than 3 years (unless foundational/historical)
-- Wikipedia (use it to find primary sources, don't cite it directly)
-- Social media posts (unless quoting a verified expert)
-- Competitor content
-- Sites with excessive ads or poor design
-- Sources without clear authorship or dates
-- Aggregator sites that don't add original insight
-
 **Minimum Requirements:**
 - [ ] At least 2 external citations per 1,500 words
 - [ ] Citations support claims, not just decorate content
@@ -575,155 +516,26 @@ Content is **flagged** but not rejected. Fix if possible.
 
 Formal writing sounds robotic. Use contractions naturally.
 
-| Stiff ✗ | Natural ✓ |
-|---------|-----------|
-| it is | it's |
-| you are | you're |
-| we are | we're |
-| do not | don't |
-| cannot | can't |
-| would not | wouldn't |
-| they are | they're |
-| that is | that's |
-
 ---
 
 ### Monotonous Sentence Length
 
-Vary your rhythm.
-
-- ✗ All sentences 15-20 words
-- ✓ Mix short punchy sentences with longer explanatory ones
-- ✓ Occasional one-word sentences. Like this.
+Vary your rhythm. Mix short punchy sentences with longer explanatory ones.
 
 ---
 
 ### No Personal Voice
 
-Content should feel like a human wrote it.
-
-- ✗ Pure information dump
-- ✓ Include opinions ("We've found that...")
-- ✓ Share experiences ("In our experience...")
-- ✓ Take positions ("The best approach is...")
+Content should feel like a human wrote it. Include opinions, share experiences, take positions.
 
 ---
 
 ### No Specific Examples
 
-Vague content doesn't convert.
-
-- ✗ "This can save you time"
-- ✓ "This saves our clients 4 hours per week on average"
-- ✗ "Many businesses struggle with..."
-- ✓ "73% of businesses struggle with..."
+Vague content doesn't convert. Use specific numbers, percentages, and concrete examples.
 
 ---
 
 ### Passive Voice Overuse
 
-Active voice is stronger.
-
-- ✗ "The report was written by our team"
-- ✓ "Our team wrote the report"
-- ✗ "Results can be achieved by following..."
-- ✓ "Follow these steps to achieve results"
-
----
-
-## Terminology
-
-Standard definitions for terms used across all skills. Use these consistently.
-
-### Hook
-
-**Definition:** An opening that grabs attention — the first line, first paragraph, headline, or first slide that stops the scroll.
-
-**Where it appears:**
-- **Articles:** The opening paragraph or intro section
-- **Emails:** The subject line and first sentence
-- **Newsletters:** The opening section before the main content
-- **Distribution:** The first slide (carousels), first line (text posts), first 3 seconds (video)
-
-**A good hook:**
-- Stops the scroll
-- Creates curiosity or tension
-- Self-selects the right audience
-- Promises value without giving everything away
-
----
-
-### CTA (Call to Action)
-
-**Definition:** What you want the reader to do next — the specific action you're asking them to take.
-
-**Every piece of content should have ONE clear CTA.** Multiple CTAs = no CTAs.
-
----
-
-### Soft CTA
-
-**Definition:** A low-commitment action that moves the reader closer without requiring much from them.
-
-**Examples:**
-- Reply to this email
-- Save this for later
-- Follow for more
-- Share with someone who needs this
-- Comment your thoughts
-- Drop a 🔥 if this resonated
-
-**When to use:** Early in a relationship (welcome emails, value content), social posts, newsletters. Build engagement before asking for commitment.
-
----
-
-### Hard CTA
-
-**Definition:** A high-commitment action that requires the reader to invest time, money, or significant effort.
-
-**Examples:**
-- Buy now
-- Sign up
-- Book a call
-- Start your trial
-- Join the programme
-- Get instant access
-
-**When to use:** Conversion emails, sales pages, pitch content, landing pages. Only after trust is established.
-
----
-
-### CTA Placement by Content Type
-
-| Content Type | Primary CTA Type | Notes |
-|--------------|------------------|-------|
-| **SEO articles** | Soft (internal links, newsletter signup) | Hard CTAs feel salesy in educational content |
-| **Welcome emails** | Soft (reply, engage) | Build relationship first |
-| **Nurture emails** | Soft | Continue value delivery |
-| **Conversion emails** | Hard | The pitch sequence |
-| **Newsletters** | Soft (occasionally hard for offers) | Primarily value-driven |
-| **Distribution (social)** | Soft | Engagement over conversion |
-| **Landing pages** | Hard | Purpose is conversion |
-
----
-
-## Quick Reference
-
-### Before Publishing, Check:
-
-**FAIL (Must Fix):**
-1. ✗ Any American spelling?
-2. ✗ Any banned words? (53 words)
-3. ✗ Any banned phrases?
-4. ✗ Any AI patterns?
-4b. ✗ Any em dashes (—)?
-5. ✗ SEO requirements met? (H1 has keyword + hook? Headings unique?)
-5a. ✗ Internal links use `/{slug}` format? (No file paths or directories)
-6. ✗ E-E-A-T citations present and properly formatted?
-
-**WARN (Should Fix):**
-1. ⚠ Using contractions?
-2. ⚠ Varied sentence length?
-3. ⚠ Personal voice present?
-4. ⚠ Specific examples included?
-5. ⚠ Active voice dominant?
+Active voice is stronger. Prefer active constructions over passive ones.

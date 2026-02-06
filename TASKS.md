@@ -9,9 +9,9 @@
 | Task 46: Fix Broken Citation URLs (404s) | PASS |
 | Task 47: Replace 5 Removed Citations | PASS |
 | **Context Cleanup (file-cleanup.md)** | |
-| Task 48: Create branch + Move non-rules out of `rules/` | pending |
-| Task 49: Trim `workflow.md` | pending |
-| Task 50: Verify Steps 1-2 (Hard Stop) | pending |
+| Task 48: Create branch + Move non-rules out of `rules/` | PASS |
+| Task 49: Trim `workflow.md` | PASS |
+| Task 50: Verify Steps 1-2 (Hard Stop) | PASS |
 | Task 51: Trim `universal-rules.md` | pending |
 | Task 52: Slim `CLAUDE.md` | pending |
 | Task 53: Final verification + PR | pending |
@@ -104,9 +104,9 @@ Full plan documented in `file-cleanup.md` (project root). Goal: reduce auto-load
 
 | Task | Status |
 |------|--------|
-| Task 48: Create branch + Move non-rules out of `rules/` | pending |
-| Task 49: Trim `workflow.md` | pending |
-| Task 50: Verify Steps 1-2 (Hard Stop) | pending |
+| Task 48: Create branch + Move non-rules out of `rules/` | PASS |
+| Task 49: Trim `workflow.md` | PASS |
+| Task 50: Verify Steps 1-2 (Hard Stop) | PASS |
 | Task 51: Trim `universal-rules.md` | pending |
 | Task 52: Slim `CLAUDE.md` | pending |
 | Task 53: Final verification + PR | pending |
@@ -250,7 +250,14 @@ Full plan documented in `file-cleanup.md` (project root). Goal: reduce auto-load
 **Starter Prompt:**
 > Read `file-cleanup.md` lines 146-149 for Hard Stop context. Read `TASKS.md` Task 50 for steps. Count lines in each auto-loaded file: `.claude/CLAUDE.md`, `.claude/rules/universal-rules.md`, `.claude/rules/workflow.md`. List contents of `.claude/rules/` to confirm only 2 files remain. Grep `.claude/` for `rules/common-mistakes` and `rules/client-profile-requirements` to confirm zero broken references. Report total auto-loaded line count and write handoff with go/no-go recommendation for Steps 3-4. No commit needed — this is verification only.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Verified all acceptance criteria for Steps 1-2 hard stop checkpoint. Auto-loaded line count is 1,448 (590 + 729 + 129), a 39% reduction from 2,368 baseline — beating the ~1,770 target by 322 lines. `rules/` confirmed to contain exactly 2 files. `references/` confirmed to contain both moved files. Grep confirmed zero broken `rules/common-mistakes` or `rules/client-profile-requirements` references. All 10 `references/` path references across 8 files verified correct.
+- **Decisions:** GO for Steps 3-4. The 39% reduction already proves the approach works. Steps 3-4 target ~470 additional lines (180 from universal-rules.md, 290 from CLAUDE.md) which would bring total to ~978 lines, hitting the ~999 target.
+- **Next:** Task 51 (Trim `universal-rules.md`) — Step 3 of 4. Medium risk: requires careful preservation of all FAIL rules and word lists while removing explanatory notes and WARN examples.
 
 ---
 
@@ -286,23 +293,30 @@ Full plan documented in `file-cleanup.md` (project root). Goal: reduce auto-load
 8. Commit
 
 **Acceptance Criteria:**
-- [ ] `universal-rules.md` is ~549 lines (down from ~729)
-- [ ] All 8 UK English pattern tables intact with all word pairs
-- [ ] All 53 banned words present
-- [ ] All banned phrases present
-- [ ] All AI pattern rules present
-- [ ] Em dash rule intact
-- [ ] SEO requirements intact
-- [ ] Internal link format rule intact
-- [ ] Citation format + minimums intact
-- [ ] WARN rules present as one-line descriptions
-- [ ] Terminology definitions added to `agents/consistency-checker.md`
-- [ ] Git commit created
+- [x] `universal-rules.md` is ~549 lines (down from ~729) — actual: 542 lines
+- [x] All 8 UK English pattern tables intact with all word pairs
+- [x] All 53 banned words present
+- [x] All banned phrases present
+- [x] All AI pattern rules present
+- [x] Em dash rule intact
+- [x] SEO requirements intact
+- [x] Internal link format rule intact
+- [x] Citation format + minimums intact
+- [x] WARN rules present as one-line descriptions
+- [x] Terminology definitions added to `agents/consistency-checker.md`
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read `file-cleanup.md` Step 3 (lines 153-190) for full context. Read `TASKS.md` Task 51 for execution steps. Read `.claude/rules/universal-rules.md` in full. Remove: explanatory notes between UK pattern tables, WARN example tables, Terminology section (Hook/CTA definitions), Quick Validation Checklist, citation source lists. Keep ALL FAIL rules, ALL word pair tables, ALL 53 banned words, ALL banned phrases, ALL AI patterns, em dash rule, SEO requirements, internal link format, citation format/minimums. Copy Terminology definitions inline to `.claude/agents/consistency-checker.md`. Verify all FAIL rules survived. Commit as `Cleanup Step 3/4: Trim universal-rules.md`.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Trimmed `universal-rules.md` from 730 to 542 lines (~188 lines removed). Removed: explanatory notes between UK pattern tables, WARN example tables, Terminology section, Quick Validation Checklist, citation preferred/avoided source lists. Added terminology definitions (Hook, CTA, Soft/Hard CTA, CTA Placement table) inline to `agents/consistency-checker.md` Before Starting section.
+- **Decisions:** Kept one-line pattern descriptions (e.g. "UK uses -our, US uses -or") as they serve as table labels. Condensed WARN rules to heading + one-line description only.
+- **Next:** Task 52 (Slim `CLAUDE.md`) — Step 4 of 4, LOW risk. Compress reference material that duplicates info in skills, agents, and workflow.md.
 
 ---
 
@@ -398,6 +412,50 @@ Full plan documented in `file-cleanup.md` (project root). Goal: reduce auto-load
 
 **Starter Prompt:**
 > Read `file-cleanup.md` Summary (lines 239-246) and Branch Strategy (lines 287-299). Read `TASKS.md` Task 53 for steps. Count lines in `.claude/CLAUDE.md`, `.claude/rules/universal-rules.md`, `.claude/rules/workflow.md`. Verify `rules/` has exactly 2 files, `references/` has exactly 2 files. Grep for broken paths (`rules/common-mistakes`, `rules/client-profile-requirements`). Grep for all FAIL rule headers in universal-rules.md. Grep for Rule #1, #2, #3 in CLAUDE.md. Create PR for `cleanup/context-slim` → `main`. Update TASKS.md summary table.
+
+**Status:** pending
+
+---
+
+## Task 54: Convert Tables to Lists Across Auto-Loaded Files
+
+**Objective:** Convert all remaining markdown tables to structured lists in the 3 auto-loaded files (`CLAUDE.md`, `universal-rules.md`, `workflow.md`). Tables cost tokens on overhead (pipe delimiters, separator rows, alignment padding) and require the model to map cells back to column headers. Lists are self-contained per line, more token-efficient, and consistent with the "no ASCII diagrams" direction.
+
+**Context:** Run this AFTER Tasks 50-53 are complete. Tasks 51/52 will remove some tables entirely — this task only converts tables that survive those tasks. An inventory of all 35 original tables was produced during planning. After Tasks 51-52, expect ~20-25 tables remaining.
+
+**Execution Steps:**
+
+1. Read each auto-loaded file in full. Identify all remaining markdown tables (lines starting with `|`).
+2. Convert each table using the appropriate pattern:
+
+   **Instructional tables** (workflow steps, branch strategy, validation checkpoints, tier identification, link timing, CTA placement) → **numbered or bullet lists** where each item is a self-contained sentence:
+   - Before: `| 1 | /keyword-research | Manual | Client profile | 00-keyword-brief.md |`
+   - After: `1. /keyword-research (Manual) — Client profile → 00-keyword-brief.md`
+
+   **Reference/lookup pairs** (UK/US spelling, contractions, good/bad examples, agent specs) → **inline parenthetical lists**:
+   - Before: `| colour | color |`
+   - After: `- colour (not color)`
+
+   **Matrix tables** (scope matrix showing which rules apply to which content types) → **grouped bullets**:
+   - Before: `| UK English | ✓ | ✓ | ✓ | ✓ | ✓ |`
+   - After: `- **UK English:** Articles, Emails, Newsletters, Lead Magnets, Distribution`
+
+3. After converting each file, verify no information was lost by comparing content before and after.
+4. Count lines in each file and report totals.
+5. Grep for any remaining `|---|` separator rows to confirm zero tables remain.
+6. Commit.
+
+**Acceptance Criteria:**
+- [ ] Zero markdown tables remain in `CLAUDE.md`
+- [ ] Zero markdown tables remain in `universal-rules.md`
+- [ ] Zero markdown tables remain in `workflow.md`
+- [ ] All information from tables preserved in list format
+- [ ] Grep for `|---|` returns 0 results across all 3 files
+- [ ] Line counts reported (before and after this task)
+- [ ] Git commit created
+
+**Starter Prompt:**
+> Read `TASKS.md` Task 54 for full context and conversion patterns. Read each auto-loaded file: `.claude/CLAUDE.md`, `.claude/rules/universal-rules.md`, `.claude/rules/workflow.md`. Find all remaining markdown tables (grep for lines starting with `|`). Convert each table to the appropriate list format: instructional → numbered/bullet lists, lookup pairs → inline parenthetical, matrices → grouped bullets. Verify no information lost. Grep for `|---|` to confirm zero tables remain. Report line counts. Commit as `Cleanup Step 5: Convert tables to lists across auto-loaded files`.
 
 **Status:** pending
 

@@ -62,8 +62,30 @@ You will receive these from the main session:
    - Key claims and differentiators
    - Core terminology established for this pillar
 
-3. Read universal rules — extract:
-   - Terminology section (if applicable)
+3. Read universal rules — extract content rules
+
+### Terminology Definitions
+
+Use these when checking terminology consistency across articles.
+
+**Hook:** An opening that grabs attention: the first line, first paragraph, headline, or first slide that stops the scroll. Appears as: opening paragraph (articles), subject line + first sentence (emails), opening section (newsletters), first slide/line/3 seconds (distribution). A good hook stops the scroll, creates curiosity or tension, self-selects the right audience, and promises value without giving everything away.
+
+**CTA (Call to Action):** What you want the reader to do next. Every piece of content should have ONE clear CTA. Multiple CTAs = no CTAs.
+
+**Soft CTA:** A low-commitment action (reply, save, follow, share, comment). Use early in a relationship: welcome emails, value content, social posts, newsletters.
+
+**Hard CTA:** A high-commitment action (buy, sign up, book a call, start trial, join programme). Use in conversion emails, sales pages, pitch content, landing pages. Only after trust is established.
+
+**CTA Placement by Content Type:**
+
+| Content Type | Primary CTA Type |
+|--------------|------------------|
+| SEO articles | Soft |
+| Welcome/Nurture emails | Soft |
+| Conversion emails | Hard |
+| Newsletters | Soft (occasionally hard) |
+| Distribution (social) | Soft |
+| Landing pages | Hard |
 
 ### Step 2: Read All Articles
 
