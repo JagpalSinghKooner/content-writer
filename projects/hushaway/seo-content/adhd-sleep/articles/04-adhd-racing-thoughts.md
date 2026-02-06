@@ -75,7 +75,7 @@ And your child's brain? It's just getting started.
 
 If your child has ADHD racing thoughts at bedtime, you know this scene by heart. The quieter the room gets, the louder their brain becomes.
 
-You've tried telling them to close their eyes. Think of nothing. Count sheep. *Just relax*. You've tried asking nicely. Then firmly. Then — at 10:30pm, exhausted — begging.
+You've tried telling them to close their eyes. Think of nothing. Count sheep. *Just relax*. You've tried asking nicely. Then firmly. By 10:30pm you're exhausted and begging.
 
 None of it works.
 
@@ -87,7 +87,7 @@ Here's the thing about telling someone not to think about something: it makes th
 
 For ADHD children, this problem is magnified. Their brains are wired to seek stimulation and use every bit of mental energy. When external stimulation disappears (lights off, room quiet, the colour of the ceiling fading to black), the brain doesn't calm down. It creates its own stimulation internally.
 
-Research published in the Journal of Clinical Sleep Medicine, 2023 — [The impact of sleep difficulties in children with ADHD on the family](https://jcsm.aasm.org/doi/10.5664/jcsm.10662) found that parents consistently described their child's bedtime difficulties in terms of a "racing ADHD brain, which does not switch off to allow them to fall asleep, despite physical tiredness."
+Research published in the Journal of Clinical Sleep Medicine, 2023: [The impact of sleep difficulties in children with ADHD on the family](https://jcsm.aasm.org/doi/10.5664/jcsm.10662) found that parents consistently described their child's bedtime difficulties in terms of a "racing ADHD brain, which does not switch off to allow them to fall asleep, despite physical tiredness."
 
 One parent in the study said: "He's always overthinking things and worried about stuff." Another described bedtime as "hostile ground" because the nightly struggle had become so exhausting for everyone.
 
@@ -99,7 +99,7 @@ When neurotypical children lie down to sleep, something shifts in their brain. A
 
 ADHD brains don't do this automatically.
 
-A landmark study from the University of Nottingham, funded by the Wellcome Trust — [Brain scans show children with ADHD have faulty off-switch for mind-wandering](https://wellcome.org/press-release/brain-scans-show-children-adhd-have-faulty-switch-mind-wandering) — discovered something remarkable. Children with ADHD struggle to "switch off" the part of their brain responsible for daydreaming and spontaneous thoughts.
+A landmark study discovered something remarkable about ADHD brains at rest. University of Nottingham / Wellcome Trust, 2011: [Brain scans show children with ADHD have faulty off-switch for mind-wandering](https://wellcome.org/press-release/brain-scans-show-children-adhd-have-faulty-switch-mind-wandering). Children with ADHD struggle to "switch off" the part of their brain responsible for daydreaming and spontaneous thoughts.
 
 Dr Elizabeth Liddle, who led the research, explained: "The off-switch for their internal world seems to need a greater incentive to function properly and allow them to attend to their task."
 
@@ -111,13 +111,13 @@ The racing thoughts your child experiences aren't a choice. They're the natural 
 
 Most sleep advice treats racing thoughts as something to overcome. Relax harder. Think of nothing. Clear your mind.
 
-This approach fails ADHD children for one simple reason: it asks them to do the one thing their brain can't do — stop seeking stimulation.
+This approach fails ADHD children for one simple reason: it asks them to stop seeking stimulation, the one thing their brain can't do.
 
 Think of it like asking someone with a broken thermostat to just feel the right temperature. The mechanism that should regulate this automatically doesn't work the same way.
 
 When we remove all stimulation (dark room, no screens, no sounds), we're not giving an ADHD brain what it needs to calm down. We're creating a vacuum. And the brain fills that vacuum with the only stimulation available: its own thoughts.
 
-This is why your child can be physically exhausted — yawning, heavy-eyed, barely able to stand — and still lie awake for hours. Their body is ready for sleep. Their brain hasn't received the signal to stop.
+This is why your child can be physically exhausted. Yawning. Heavy-eyed. Barely able to stand. And still lying awake for hours. Their body is ready for sleep. Their brain hasn't received the signal to stop.
 
 We've explored this more deeply in our article on [why ADHD children struggle to sleep](/adhd-child-wont-sleep). The racing thoughts are often the core issue keeping everything else from working.
 
@@ -127,7 +127,7 @@ Here's what changes everything: instead of trying to stop the racing thoughts, y
 
 You can't force an ADHD brain to think about nothing. That's like telling water not to flow. But you can redirect where the water flows. You can give it a channel.
 
-The ADHD brain at bedtime is seeking stimulation. Fine. Give it stimulation — just the right kind. Something steady. Something calming. Something that occupies that seeking part of the brain without revving it up further.
+The ADHD brain at bedtime is seeking stimulation. Fine. Give it stimulation. Just the right kind. Something steady. Something calming. Something that occupies that seeking part of the brain without revving it up further.
 
 This is the principle behind passive listening. Instead of asking your child to create calm internally (which their brain struggles to do), you provide calm externally. The brain latches onto it. The racing thoughts have somewhere to land.
 
@@ -135,9 +135,9 @@ This is the principle behind passive listening. Instead of asking your child to 
 
 Sound works particularly well for ADHD brains at bedtime. There's growing evidence for this.
 
-A meta-analysis published in the Journal of the American Academy of Child & Adolescent Psychiatry, 2024 — [Systematic Review and Meta-Analysis: Do White Noise and Pink Noise Help or Hurt Attention in ADHD?](https://pmc.ncbi.nlm.nih.gov/articles/PMC11283987/) found that white and pink noise provided a small but statistically significant benefit for children with ADHD. The researchers noted that the effect was specifically helpful for those with attention difficulties — and not helpful (sometimes even detrimental) for neurotypical children.
+A meta-analysis published in the Journal of the American Academy of Child & Adolescent Psychiatry, 2024: [Systematic Review and Meta-Analysis: Do White Noise and Pink Noise Help or Hurt Attention in ADHD?](https://pmc.ncbi.nlm.nih.gov/articles/PMC11283987/) found that white and pink noise provided a small but statistically significant benefit for children with ADHD. The researchers noted that the effect was specifically helpful for children with attention difficulties. For neurotypical children, it was not helpful and sometimes even detrimental.
 
-Why? The leading theory is called "optimal arousal." ADHD brains run at a lower baseline arousal than neurotypical brains. They need more input to reach the right state for focus — or for sleep. Without enough input, they generate their own: racing thoughts, physical restlessness, seeking behaviour.
+Why? The leading theory is called "optimal arousal." ADHD brains run at a lower baseline arousal than neurotypical brains. They need more input to reach the right state for focus or sleep. Without enough input, they generate their own: racing thoughts, physical restlessness, seeking behaviour.
 
 Passive sound provides just enough input to satisfy that need. The brain stops generating its own stimulation because it's receiving some from outside. The racing thoughts quiet naturally, not because they've been forced to stop, but because they're no longer needed.
 
@@ -156,7 +156,7 @@ What works is sound that:
 
 This is why we designed HushAway® content specifically for passive listening. Your child doesn't need to do anything. Press play, and the sound gives their racing brain somewhere calm to focus.
 
-Frequencies, ambient soundscapes, gentle stories that don't require attention — these work because they occupy the brain without demanding anything from it. For more on which sounds work and why, we've written a guide to [calming sounds for ADHD children](/calming-sounds-adhd).
+Frequencies, ambient soundscapes, gentle stories that don't require attention. They work because they occupy the brain without demanding anything from it. For more on which sounds work and why, we've written a guide to [calming sounds for ADHD children](/calming-sounds-adhd).
 
 ## What This Looks Like in Practice
 
@@ -170,11 +170,11 @@ Instead of:
 You get:
 - Lights off → Calming sound → Brain focuses on sound → Racing thoughts have nowhere to go → Sleep comes easier
 
-Many parents notice the shift within days. Not that every night becomes perfect — ADHD sleep remains more variable than neurotypical sleep. But the hours-long battles become manageable. The racing thoughts slow. The questions at bedtime reduce because the brain is occupied elsewhere.
+Many parents notice the shift within days. Not that every night becomes perfect. ADHD sleep remains more variable than neurotypical sleep. But the hours-long battles become manageable. The racing thoughts slow. The questions at bedtime reduce because the brain is occupied elsewhere.
 
 ## What About Anxiety-Driven Racing Thoughts?
 
-For some ADHD children, the racing thoughts aren't random — they're worried. Fears about tomorrow. Social replays. Anxiety that spirals.
+For some ADHD children, the racing thoughts aren't random. They're worried. Fears about tomorrow. Social replays. Anxiety that spirals.
 
 Research confirms this connection. The study in the Journal of Clinical Sleep Medicine noted that "difficulties settling at bedtime could be heavily influenced by children experiencing anxiety, fears, and overthinking."
 
@@ -186,7 +186,7 @@ For children with significant anxiety alongside ADHD, passive listening becomes 
 
 By 8pm, you're done.
 
-Breakfast negotiations. School stress. After-school meltdowns. Homework battles. Dinner chaos. You've got nothing left — not patience, not energy, not one more creative strategy to try.
+Breakfast negotiations. School stress. After-school meltdowns. Homework battles. Dinner chaos. You've got nothing left. No patience. No energy. Not one more creative strategy to try.
 
 The last thing you need is a complicated approach that requires your active supervision while your child lies there not sleeping.
 
@@ -198,7 +198,7 @@ Passive listening requires nothing from you beyond pressing a button. No system 
 
 You put on the sound. You leave the room. The sound does the work.
 
-For parents who've tried everything — who've followed every piece of advice, adjusted every variable, blamed themselves more times than they can count — this simplicity feels almost suspicious.
+If you've tried everything, followed every piece of advice, adjusted every variable, and blamed yourself more times than you can count, this simplicity probably feels suspicious.
 
 But sometimes easy is exactly what exhausted families need. Sometimes the solution isn't trying harder. It's trying something different.
 
@@ -215,7 +215,7 @@ Consider building it in like this:
 
 This way, the sound catches racing thoughts before they start. Your child's brain doesn't get the chance to fill the silence with its own content.
 
-If you're building an [ADHD-friendly bedtime routine](/adhd-bedtime-routine), sound fits naturally as the final element — the thing that carries your child from "in bed" to "asleep."
+If you're building an [ADHD-friendly bedtime routine](/adhd-bedtime-routine), sound fits naturally as the final element. It's the thing that carries your child from "in bed" to "asleep."
 
 ## What If It Doesn't Work Immediately?
 
@@ -223,13 +223,13 @@ Some children respond to passive sound within the first few nights. Others need 
 
 If your child is used to racing thoughts filling the silence, the presence of sound might initially feel strange. Some children notice it and comment. Some want to change it or control it.
 
-This tends to pass. Within a week, most children stop noticing the sound consciously — which is exactly when it starts working best. The brain accepts it as background input and settles.
+This tends to pass. Within a week, most children stop noticing the sound consciously. That's exactly when it starts working best. The brain accepts it as background input and settles.
 
 If your child actively resists, try different sounds. Some children prefer frequencies. Some prefer nature sounds. Some prefer gentle storytelling. The variety in The Open Sanctuary lets you experiment without cost.
 
 ## What You Can Try Tonight
 
-Racing thoughts at bedtime aren't something your child chooses. They're not being difficult. They're not being defiant. Their brain genuinely needs something to focus on — and when you don't provide it, the brain creates its own content.
+Racing thoughts at bedtime aren't something your child chooses. They're not being difficult. They're not being defiant. Their brain genuinely needs something to focus on. When you don't provide it, the brain creates its own content.
 
 Usually at 10pm. Usually about octopuses.
 
@@ -245,7 +245,7 @@ One quiet moment can change a whole day for a child.
 
 Sometimes, that moment starts the night before.
 
-For the full picture of ADHD and sleep, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) brings everything together — from the science to practical solutions for every challenge.
+For the full picture of ADHD and sleep, our [complete guide to ADHD sleep problems](/adhd-sleep-problems-guide) covers everything from the science to practical solutions for every challenge.
 
 ---
 
@@ -253,19 +253,19 @@ For the full picture of ADHD and sleep, our [complete guide to ADHD sleep proble
 
 ### Why does my ADHD child's mind race more at bedtime than during the day?
 
-During the day, there's constant external stimulation — school, activities, screens, conversation. Your child's brain is occupied. At bedtime, when that stimulation disappears, the brain doesn't simply quiet down. It looks for stimulation elsewhere and finds it internally: racing thoughts, random ideas, worries, questions. The quieter the environment, the louder the internal world becomes.
+During the day, there's constant external stimulation. School, activities, screens, conversation. Your child's brain is occupied. At bedtime, when that stimulation disappears, the brain doesn't simply quiet down. It looks for stimulation elsewhere and finds it internally: racing thoughts, random ideas, worries, questions. The quieter the environment, the louder the internal world becomes.
 
 ### Is it normal for ADHD children to ask lots of questions at bedtime?
 
-Very normal. The questions that emerge at bedtime ("What happens when we die?" "Did dinosaurs have feelings?") aren't stalling tactics. They're the brain searching for stimulation. Your child isn't choosing to think these thoughts — their brain is generating them automatically in the absence of external input. Redirecting with calming sound reduces this because the brain has something else to focus on.
+Very normal. The questions that emerge at bedtime ("What happens when we die?" "Did dinosaurs have feelings?") aren't stalling tactics. They're the brain searching for stimulation. Your child isn't choosing to think these thoughts. Their brain generates them automatically in the absence of external input. Redirecting with calming sound reduces this because the brain has something else to focus on.
 
 ### Will background sound stop my child learning to fall asleep on their own?
 
-This is a common worry, but it misunderstands how ADHD brains work. Neurotypical children can learn to self-soothe because their brains naturally quiet down. ADHD brains don't have this automatic function. Using sound isn't a crutch — it's providing what the brain needs to reach a calm state. Many adults with ADHD use sound to sleep throughout their lives, and it supports rather than hinders healthy sleep.
+This is a common worry, but it misunderstands how ADHD brains work. Neurotypical children can learn to self-soothe because their brains naturally quiet down. ADHD brains don't have this automatic function. Using sound isn't a crutch. It provides what the brain needs to reach a calm state. Many adults with ADHD use sound to sleep throughout their lives, and it supports rather than hinders healthy sleep.
 
 ### My child says they can't stop thinking. How do I explain what's happening?
 
-You might say: "Your brain is really good at thinking, and it doesn't have an easy off-switch. That's not bad — it means you're creative and curious. But at bedtime, your brain needs something calm to think about instead of lots of different thoughts. The sounds we play give your busy brain something relaxing to focus on, so all those other thoughts can take a rest."
+You might say: "Your brain is really good at thinking, and it doesn't have an easy off-switch. That's not bad. It means you're creative and curious. But at bedtime, your brain needs something calm to think about instead of lots of different thoughts. The sounds we play give your busy brain something relaxing to focus on, so all those other thoughts can take a rest."
 
 ### How long should it take for racing thoughts to reduce with sound?
 
