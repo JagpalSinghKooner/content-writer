@@ -72,7 +72,7 @@ Here's something that often gets lost in the conversation: melatonin isn't the o
 
 In the UK, melatonin requires a prescription for children. It's often the first (and sometimes only) thing clinicians suggest for ADHD sleep problems. But research is increasingly clear that non-medication ADHD sleep help deserves more attention than it typically receives.
 
-This guide is for UK parents who want to understand all their options — not just the pharmaceutical ones.
+This guide is for UK parents who want to understand all their options, not just the pharmaceutical ones.
 
 ## The Melatonin Reality for UK Parents
 
@@ -108,7 +108,7 @@ For children whose primary struggle is [racing thoughts at bedtime](/adhd-racing
 
 ### It Doesn't Teach Sleep Skills
 
-The DISCA Sleep Study, a major UK research project, emphasises that parents need to be "actively involved in the management of the sleep problems of their children." According to DISCA Sleep Study / University of Southampton, 2025 — [Digital Sleep Support for Children with ADHD](https://www.discasleep.org.uk/for-professionals), face-to-face behavioural sleep approaches are effective for managing insomnia in children with ADHD.
+The DISCA Sleep Study, a major UK research project, emphasises that parents need to be "actively involved in the management of the sleep problems of their children." According to DISCA Sleep Study / University of Southampton, 2025: [Digital Sleep Support for Children with ADHD](https://www.discasleep.org.uk/for-professionals), face-to-face behavioural sleep approaches are effective for managing insomnia in children with ADHD.
 
 Here's the practical reality: Melatonin is something you take. It's not something that builds lasting sleep habits or addresses the underlying behaviours and environmental factors that contribute to poor sleep. When melatonin is stopped, the sleep problems often return if nothing else has changed.
 
@@ -212,7 +212,7 @@ If sleep problems are severe, if your child is suffering during the day, if fami
 
 ## What This Looks Like in Practice
 
-Say you've tried melatonin and it helps a bit, but your child still takes ages to fall asleep. You're not alone — this is one of the most common things we hear from parents.
+Say you've tried melatonin and it helps a bit, but your child still takes ages to fall asleep. You're not alone. This is one of the most common things we hear from parents.
 
 **What you're dealing with right now:**
 - Melatonin given 30 minutes before bed
@@ -223,7 +223,7 @@ Say you've tried melatonin and it helps a bit, but your child still takes ages t
 **Adding non-medication help:**
 
 1. Keep the melatonin (it's helping with initial drowsiness)
-2. Start passive sound as your child gets into bed — before the racing thoughts take hold
+2. Start passive sound as your child gets into bed, before the racing thoughts take hold
 3. The sound runs continuously through the settling period
 4. The brain has somewhere to focus instead of generating its own content
 
@@ -253,7 +253,7 @@ For the racing brain issue, passive sound is one of the most accessible, zero-ef
 
 Here's what that looks like in practice: Tonight, as your child gets into bed, you press play on a calming sound. That's it. No remembering techniques. No charts to fill in. Just sound that gives their brain somewhere to land instead of racing through every thought from the day.
 
-The Open Sanctuary from HushAway® offers free sounds designed for sensitive and neurodivergent children. We built it because we needed it too — something that works for ADHD brains, requires nothing from exhausted parents, and actually helps.
+The Open Sanctuary from HushAway® offers free sounds designed for sensitive and neurodivergent children. We built it because we needed it too. Something that works for ADHD brains, requires nothing from exhausted parents, and actually helps.
 
 Try something tonight. No cost, no signup, no commitment. Just see if your child's brain responds to having something calm to focus on.
 
