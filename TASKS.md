@@ -9,7 +9,7 @@
 | Task 27: Fix Content-Validator Em Dash Detection | PASS |
 | Task 28: Fix SEO-Writer Agent Citation Format + URL Verification | PASS |
 | Task 29: Fix Em Dashes — ADHD Sleep Article 01 | PASS |
-| Task 30: Fix Em Dashes — ADHD Sleep Article 02 | pending |
+| Task 30: Fix Em Dashes — ADHD Sleep Article 02 | PASS |
 | Task 31: Fix Em Dashes — ADHD Sleep Article 03 | pending |
 | Task 32: Fix Em Dashes — ADHD Sleep Article 04 | pending |
 | Task 33: Fix Em Dashes — ADHD Sleep Article 05 | pending |
@@ -143,19 +143,24 @@ Built the audit system (link-auditor agent, consistency-checker agent, audit-pil
 **Objective:** Remove all 31 em dashes from `02-adhd-bedtime-routine.md` by restructuring sentences (body text) and replacing with colons (citations).
 
 **Acceptance Criteria:**
-- [ ] All 31 em dashes removed from article
-- [ ] Citation em dashes replaced with colons: `[Author], [Year]: [Title](URL)`
-- [ ] Body text em dashes restructured into separate sentences or natural alternatives (not just swapped for commas/colons)
-- [ ] Content meaning preserved — no information lost
-- [ ] Grep for "—" in file returns 0 matches
-- [ ] Git commit created
+- [x] All 31 em dashes removed from article
+- [x] Citation em dashes replaced with colons: `[Author], [Year]: [Title](URL)`
+- [x] Body text em dashes restructured into separate sentences or natural alternatives (not just swapped for commas/colons)
+- [x] Content meaning preserved — no information lost
+- [x] Grep for "—" in file returns 0 matches
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read `projects/hushaway/seo-content/adhd-sleep/articles/02-adhd-bedtime-routine.md`. Find all 31 em dashes (—). Two types exist: (1) Citation format: `Research from X, 2024 — [Title](URL)` → replace `—` with `:` so it becomes `Research from X, 2024: [Title](URL)`. (2) Body text: restructure each sentence naturally per Rule 4b. Do NOT just swap em dashes for commas or colons — rewrite naturally. After all changes, run grep for "—" to verify 0 remain. Commit when done.
 
-**Status:** pending
+**Status:** PASS
 
 ---
+
+**Handoff:**
+- **Done:** Removed all em dashes from 31 lines in `02-adhd-bedtime-routine.md`. 4 citation-format em dashes replaced with colons (lines 92, 110, 122, 132). 6 time-label em dashes replaced with colons (lines 130, 134, 138, 142, 148, 156). 21 body-text em dashes restructured into natural sentences (split into separate sentences, rewrote parenthetical asides, converted inline lists).
+- **Decisions:** Time labels (e.g. `**6:30pm — Physical wind-down**`) treated as a third category alongside citations and body text. Colons are the natural format for schedule labels. Line 268 (triple em dash) fully restructured into staccato fragments for emotional impact rather than keeping the listing pattern.
+- **Next:** Task 31 (Fix em dashes in ADHD Sleep Article 03, 25 em dashes).
 
 ## Task 31: Fix Em Dashes — ADHD Sleep Article 03
 
