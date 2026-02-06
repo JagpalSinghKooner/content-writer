@@ -71,7 +71,7 @@ Bath at 7. Teeth by 7:15. Story at 7:30. Lights out at 8.
 
 By 9:30? Still awake.
 
-Racing thoughts. Endless questions. Getting up for water. Needing the toilet. Finding reasons — any reason — to leave their room.
+Racing thoughts. Endless questions. Getting up for water. Needing the toilet. Finding any reason at all to leave their room.
 
 You've been consistent. You've been patient. You've followed every piece of advice anyone has ever given you.
 
@@ -89,7 +89,7 @@ This works beautifully for neurotypical children. Their brains take those enviro
 
 ADHD brains don't follow that script.
 
-Research published in PubMed Central, 2025 — [Facilitating sleep initiation in children with ADHD and sleep problems](https://pmc.ncbi.nlm.nih.gov/articles/PMC12330042/) found that children with ADHD specifically identified "the importance of individualised approaches" to bedtime. One-size-fits-all routines consistently failed them.
+Research published in PubMed Central, 2025: [Facilitating sleep initiation in children with ADHD and sleep problems](https://pmc.ncbi.nlm.nih.gov/articles/PMC12330042/) found that children with ADHD specifically identified "the importance of individualised approaches" to bedtime. One-size-fits-all routines consistently failed them.
 
 The children in this study described a critical insight: they needed "a balance between activity and rest" and environmental factors that worked for their specific brain. Generic routines missed this entirely.
 
@@ -107,7 +107,7 @@ We've written about [why your ADHD child won't sleep](/adhd-child-wont-sleep) an
 
 The quieter you make the room, the louder their brain becomes.
 
-According to the Journal of Clinical Sleep Medicine, 2023 — [The impact of sleep difficulties in children with ADHD on the family](https://pmc.ncbi.nlm.nih.gov/articles/PMC10545997/), children with ADHD experience "anxiety, fears, and overthinking" at bedtime. Parents in this study described bedtime as "hostile ground" — the part of the day they dreaded most.
+According to the Journal of Clinical Sleep Medicine, 2023: [The impact of sleep difficulties in children with ADHD on the family](https://pmc.ncbi.nlm.nih.gov/articles/PMC10545997/), children with ADHD experience "anxiety, fears, and overthinking" at bedtime. Parents in this study described bedtime as "hostile ground." It was the part of the day they dreaded most.
 
 One parent said: "Bedtime becomes hostile ground, doesn't it? It's the time that you come to dread because you know, it's like, 'here we go again.'"
 
@@ -117,9 +117,9 @@ The routine isn't failing because you're not consistent enough. It's failing bec
 
 ## Building an ADHD Bedtime Routine That Works
 
-An effective ADHD bedtime routine needs the same structure as a neurotypical routine — consistency matters even more for ADHD children — but with one addition: something that occupies the racing brain.
+An effective ADHD bedtime routine needs the same structure as a neurotypical routine. Consistency matters even more for ADHD children. But it needs one addition: something that occupies the racing brain.
 
-The DISCA Study (University of Southampton), 2024 — [Digital Intervention for Sleep in Children with ADHD](https://www.discasleep.org.uk/for-professionals) identified this gap in current guidance. They note that "professionals rarely receive training in sleep" and often resort to melatonin as a "one-size-fits-all" approach. But melatonin makes you feel sleepy — it doesn't address the brain that stays active despite feeling tired.
+The DISCA Study (University of Southampton), 2024: [Digital Intervention for Sleep in Children with ADHD](https://www.discasleep.org.uk/for-professionals) identified this gap in current guidance. They note that "professionals rarely receive training in sleep" and often resort to melatonin as a "one-size-fits-all" approach. But melatonin makes you feel sleepy. It doesn't address the brain that stays active despite feeling tired.
 
 The children who sleep well have routines that include calming INPUT, not just the removal of stimulating input.
 
@@ -127,33 +127,33 @@ The children who sleep well have routines that include calming INPUT, not just t
 
 Here's a bedtime routine that actually works for ADHD brains. Notice what's different from the standard advice:
 
-**6:30pm — Physical wind-down**
+**6:30pm: Physical wind-down**
 
-Some gentle movement. Nothing intense, but enough to let the body release energy. A walk around the garden. Stretching. Dancing to one favourite song. The Derbyshire Healthcare NHS Foundation Trust, 2024 — [Understanding ADHD & Sleep](https://www.derbyshirehealthcareft.nhs.uk/application/files/2416/1157/8122/Sleep_Infromation__Advice_v2.pdf) recommends "gentle exercise late afternoon" like walking, trampoline, or dancing.
+Some gentle movement. Nothing intense, but enough to let the body release energy. A walk around the garden. Stretching. Dancing to one favourite song. The Derbyshire Healthcare NHS Foundation Trust, 2024: [Understanding ADHD & Sleep](https://www.derbyshirehealthcareft.nhs.uk/application/files/2416/1157/8122/Sleep_Infromation__Advice_v2.pdf) recommends "gentle exercise late afternoon" like walking, trampoline, or dancing.
 
-**7:00pm — Bath or shower**
+**7:00pm: Bath or shower**
 
 Warm water helps lower core body temperature afterward, which signals sleep to the body. This step stays the same as standard advice.
 
-**7:20pm — Teeth and pyjamas**
+**7:20pm: Teeth and pyjamas**
 
 Keep this predictable. Same order every night. ADHD brains struggle with transitions, so consistent sequences reduce resistance.
 
-**7:30pm — Quiet connection**
+**7:30pm: Quiet connection**
 
 This is where most routines stop. Story time, then lights out.
 
-But for ADHD children, this is where the work actually begins. Their brain is about to be left alone with nothing to do — and it will find something to do, usually racing thoughts.
+But for ADHD children, this is where the work actually begins. Their brain is about to be left alone with nothing to do. And it will find something to do, usually racing thoughts.
 
-**7:45pm — The missing piece: Passive sound**
+**7:45pm: The missing piece, passive sound**
 
 This is what standard routines leave out.
 
-Before lights out, give the brain something calming to focus on. Not something that requires engagement (that increases alertness). Passive sound — frequencies, gentle ambient audio, or soft soundscapes — gives racing thoughts somewhere to land.
+Before lights out, give the brain something calming to focus on. Not something that requires engagement (that increases alertness). Passive sound like frequencies, gentle ambient audio, or soft soundscapes gives racing thoughts somewhere to land.
 
 The brain that was hunting for stimulation now has it. But in a form that leads toward sleep rather than away from it.
 
-**8:00pm — Lights out, sound continues**
+**8:00pm: Lights out, sound continues**
 
 Your child lies in the dark, but they're not alone with their thoughts. The sound continues, occupying the part of the brain that would otherwise be racing.
 
@@ -163,15 +163,15 @@ This is the difference between an hour of lying awake and actually falling aslee
 
 Let's talk about why this works when other additions to routine don't.
 
-Meditation apps? Most require active engagement — focus on your breathing, follow the instructions, participate. For ADHD children, this adds cognitive demands at exactly the moment they need fewer demands.
+Meditation apps? Most require active engagement. Focus on your breathing, follow the instructions, participate. For ADHD children, this adds cognitive demands at exactly the moment they need fewer demands.
 
 Music? It depends. Songs with lyrics engage the language centres of the brain. Familiar music triggers memories and associations. Neither leads toward sleep.
 
-Passive sound is different. Frequencies, soundscapes, ASMR sounds designed for calming — these require nothing from your child. No focus. No participation. No decisions.
+Passive sound is different. Frequencies, soundscapes, and ASMR sounds designed for calming require nothing from your child. No focus. No participation. No decisions.
 
 They simply give the seeking brain something to settle on.
 
-Research shows children with ADHD respond to their environment differently. The right sensory input helps regulate their arousal levels. The wrong input increases alertness. Passive listening — audio that asks nothing except presence — allows the brain to downregulate naturally.
+Research shows children with ADHD respond to their environment differently. The right sensory input helps regulate their arousal levels. The wrong input increases alertness. Passive listening allows the brain to downregulate naturally. The audio asks nothing except presence.
 
 This is why HushAway® content is designed for passive listening. No tapping required. No choices to make. No interaction needed. Just press play and let the sound do the work.
 
@@ -179,7 +179,7 @@ This is why HushAway® content is designed for passive listening. No tapping req
 
 By 7pm, you're done.
 
-Breakfast negotiations. School run. Work. Homework. The after-school explosion. Dinner. You've got nothing left — not patience, not energy, not one more ounce of "let's try being calm about this."
+Breakfast negotiations. School run. Work. Homework. The after-school explosion. Dinner. You've got nothing left. Not patience, not energy, not one more ounce of "let's try being calm about this."
 
 The last thing you need is a complicated bedtime approach that requires your active management for the next two hours.
 
@@ -205,23 +205,23 @@ Start the calming sounds. Give those thoughts somewhere to go.
 
 ### "I'm not tired"
 
-ADHD children often have a delayed circadian rhythm — their melatonin kicks in about 45 minutes later than neurotypical children. They're telling the truth. Their body doesn't feel tired yet.
+ADHD children often have a delayed circadian rhythm. Their melatonin kicks in about 45 minutes later than neurotypical children. They're telling the truth. Their body doesn't feel tired yet.
 
 But here's the key: you can start the settling process before the body feels ready. The calming input helps the brain wind down even when the body hasn't caught up yet.
 
 ### "Just one more thing"
 
-The endless requests — water, toilet, questions — are often attempts to manage anxiety or avoid the discomfort of being alone with racing thoughts.
+The endless requests for water, trips to the toilet, and sudden questions are often attempts to manage anxiety or avoid the discomfort of being alone with racing thoughts.
 
 Address the root cause. "I know your brain doesn't want to be alone. Here's something to keep it company."
 
 ### Getting up repeatedly
 
-If your child keeps leaving the room, they're likely seeking stimulation their brain is craving. Instead of fighting this battle, provide appropriate stimulation IN the bed — the passive sound that meets their need without requiring them to leave.
+If your child keeps leaving the room, they're likely seeking stimulation their brain is craving. Instead of fighting this battle, provide appropriate stimulation IN the bed. Passive sound meets their need without requiring them to leave.
 
 ## What About Screen Time?
 
-Standard advice says no screens before bed. The blue light argument is real — screens can delay melatonin production.
+Standard advice says no screens before bed. The blue light argument is real. Screens can delay melatonin production.
 
 But here's what the research also shows: for many ADHD children, screens serve a regulatory function. They provide external stimulation that helps the brain focus and calm.
 
@@ -231,7 +231,7 @@ The answer isn't simply "remove screens." It's "replace what screens were provid
 
 That replacement is passive sound. It gives the brain the input it's seeking, but in a form designed for settling rather than stimulating.
 
-A practical approach: screens off at the start of the wind-down routine, passive sound starting before lights out. The brain still gets input — just the right kind.
+A practical approach: screens off at the start of the wind-down routine, passive sound starting before lights out. The brain still gets input. Just the right kind.
 
 ## The Consistency Question
 
@@ -251,7 +251,7 @@ While you're building the longer-term routine, here are immediate things that he
 
 **Lower your energy first.** Children with ADHD are highly attuned to parental stress. If you're tense and rushed at bedtime, they'll mirror that state. Take a breath before starting the routine. Your calm becomes their calm.
 
-**Reduce decisions.** Every choice requires executive function — something already depleted by end of day. "Do you want the blue or red pyjamas?" becomes a crisis. Just hand them the pyjamas.
+**Reduce decisions.** Every choice requires executive function. By end of day, that's already depleted. "Do you want the blue or red pyjamas?" becomes a crisis. Just hand them the pyjamas.
 
 **Prepare for transitions.** "In five minutes we're starting the bedtime routine." ADHD brains struggle with sudden changes. Advance warning helps.
 
@@ -265,7 +265,7 @@ While you're building the longer-term routine, here are immediate things that he
 
 Imagine tonight going differently.
 
-Same routine as always — bath, teeth, pyjamas, story. But at 7:45, you press play on something calm. Your child lies down and instead of the familiar pattern — lights out, brain racing, calling out, getting up, getting up again — there's something else.
+Same routine as always. Bath, teeth, pyjamas, story. But at 7:45, you press play on something calm. Your child lies down and the familiar pattern doesn't happen. No brain racing. No calling out. No getting up again and again. There's something else.
 
 The sound gives their brain somewhere to land. Not silence to fight against. Not darkness that makes every thought louder. Just gentle, calming input that meets their brain exactly where it is.
 
@@ -277,11 +277,11 @@ Not every night will be like this. ADHD sleep is variable; that's the nature of 
 
 You don't need to rebuild your entire routine. You just need to add the one thing that's been missing.
 
-The Open Sanctuary from HushAway® is free. No signup. No cost. No catch. We built it for sensitive and neurodivergent children — because we needed it for our own kids first, and nothing else was working.
+The Open Sanctuary from HushAway® is free. No signup. No cost. No catch. We built it for sensitive and neurodivergent children because we needed it for our own kids first. Nothing else was working.
 
 Tonight, after story time, press play on something from the night time collection. That's the only change.
 
-Tomorrow morning, you might find that bedtime went differently. Not perfectly — ADHD sleep is always variable. But *differently*.
+Tomorrow morning, you might find that bedtime went differently. Not perfectly. ADHD sleep is always variable. But *differently*.
 
 And sometimes, different is all you need to keep going.
 
@@ -293,11 +293,11 @@ For more on understanding why ADHD children struggle with sleep, read our guide 
 
 ### How long should an ADHD bedtime routine take?
 
-Plan for 45-60 minutes from start to lights out. This gives enough time for each transition without rushing. Rushed routines increase anxiety, which makes settling harder. The calming sound portion should continue after lights out — this isn't part of the "active" routine time but extends the settling support.
+Plan for 45-60 minutes from start to lights out. This gives enough time for each transition without rushing. Rushed routines increase anxiety, which makes settling harder. The calming sound portion should continue after lights out. This isn't part of the "active" routine time but extends the settling support.
 
 ### What if my child resists every part of the routine?
 
-Resistance often signals overwhelm or too many demands. Simplify the routine to absolute essentials: teeth, toilet, bed, sound. Add other elements back gradually once the basics are established. Also consider timing — starting too early when the body genuinely isn't tired creates unnecessary battles.
+Resistance often signals overwhelm or too many demands. Simplify the routine to absolute essentials: teeth, toilet, bed, sound. Add other elements back gradually once the basics are established. Also consider timing. Starting too early when the body genuinely isn't tired creates unnecessary battles.
 
 ### Should the bedtime routine be the same on weekends?
 
@@ -305,7 +305,7 @@ Research shows inconsistent sleep schedules between weekdays and weekends worsen
 
 ### My child says the calming sounds are "boring." Should I force them?
 
-"Boring" often means "not stimulating enough to override my racing thoughts." This actually suggests the sounds need to be different, not more engaging. Try different sound types — some children respond better to nature sounds, others to frequencies, others to gentle stories. The goal is something absorbing enough to occupy the brain without requiring active attention.
+"Boring" often means "not stimulating enough to override my racing thoughts." This actually suggests the sounds need to be different, not more engaging. Try different sound types. Some children respond better to nature sounds, others to frequencies, others to gentle stories. The goal is something absorbing enough to occupy the brain without requiring active attention.
 
 ### How long until an ADHD bedtime routine starts working?
 
@@ -313,4 +313,4 @@ Expect 4-6 weeks before the routine is embedded. You may see improvements in the
 
 ### Does medication affect which bedtime routine works?
 
-Stimulant ADHD medication can extend sleep onset time, meaning your child takes longer to fall asleep even when following a routine. The timing of medication matters — discuss with your prescriber if evening doses seem to affect sleep. The passive sound element becomes even more valuable when medication extends that transition period.
+Stimulant ADHD medication can extend sleep onset time, meaning your child takes longer to fall asleep even when following a routine. The timing of medication matters. Discuss with your prescriber if evening doses seem to affect sleep. The passive sound element becomes even more valuable when medication extends that transition period.
