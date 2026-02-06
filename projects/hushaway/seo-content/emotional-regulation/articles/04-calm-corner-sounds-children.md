@@ -176,7 +176,7 @@ You've got the cushions. You've got the fidget toys. Now let's add sound properl
 
 **Pre-load sounds your child responds to.** Don't make yourself search through options during a crisis. Know which sounds work and have them ready to go. The Open Sanctuary lets you save favourites for exactly this reason. Do this when things are calm, not when they're not.
 
-**Test volume when everyone's calm.** Sound that feels comfortable when you're regulated can feel overwhelming during dysregulation. Start quieter than you think necessary.
+**Test volume when everyone's calm.** Sound that feels comfortable when you're calm can feel overwhelming when your child is overwhelmed. Start quieter than you think necessary.
 
 **Consider headphones for older children.** Some children, particularly autistic children, find headphones helpful. They block out unpredictable environmental noise while providing predictable calming sounds. Others find headphones intolerable. You know your child best.
 
@@ -274,7 +274,7 @@ For more on emotional regulation strategies beyond the calm corner, see our [Com
 
 ### What calm corner sounds work best for children?
 
-The best calm corner sounds depend on your child's emotional state. For meltdowns (Red Zone), use low-frequency sounds, ASMR, or ambient audio without surprises. For building calm (Yellow Zone), predictable patterns work well. For maintaining focus (Green Zone), try binaural beats. Avoid music with lyrics during dysregulation.
+The best calm corner sounds depend on your child's emotional state. For meltdowns (Red Zone), use low-frequency sounds, ASMR, or ambient audio without surprises. For building calm (Yellow Zone), predictable patterns work well. For maintaining focus (Green Zone), try binaural beats. Avoid music with lyrics when your child is overwhelmed.
 
 ### Can I just use regular calming music in a calm corner?
 
@@ -282,7 +282,7 @@ Generic calming music often contains elements that distress sensitive nervous sy
 
 ### How loud should calm corner sounds be?
 
-Quieter than you might expect. During dysregulation, sound that feels comfortable when you're calm can feel overwhelming. Start at a low volume and observe your child's response. Many children respond best to sound that's present but not dominant in the environment.
+Quieter than you might expect. When your child is overwhelmed, sound that feels comfortable during calm moments can feel too much. Start at a low volume and observe your child's response. Many children respond best to sound that's present but not dominant in the environment.
 
 ### Do calm corner sounds work with the Zones of Regulation?
 

@@ -166,7 +166,7 @@ You don't need to overthink this. Most parents develop an instinct for it within
 | Morning routine | Music | Energising and mood-lifting |
 | Post-meltdown | Sounds | Minimal cognitive demand |
 | Car journey (content) | Music | Connection and entertainment |
-| Car journey (dysregulated) | Sounds | Reduce stimulation |
+| Car journey (overwhelmed) | Sounds | Reduce stimulation |
 
 ## Passive Listening: The HushAway® Approach
 

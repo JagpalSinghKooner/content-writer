@@ -77,7 +77,7 @@ The tools that actually help must work WITH the ADHD brain, not against it. That
 
 If you've read our guide to [emotional regulation in children](/understanding-emotional-regulation-children), you know that all children develop this capacity gradually. But for children with ADHD, it's not just developing slowly. It's developing differently.
 
-Shaw, Philip et al., 2014: [Emotion Dysregulation in Attention Deficit Hyperactivity Disorder](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4282137/) found that emotional dysregulation is a core feature of ADHD, not a side effect. The research shows that the same brain differences affecting attention also affect emotional control.
+Shaw, Philip et al., 2014: [Emotion Dysregulation in Attention Deficit Hyperactivity Disorder](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4282137/) found that emotional overwhelm is a core feature of ADHD, not a side effect. The research shows that the same brain differences affecting attention also affect emotional control.
 
 What does this mean in your home? Your ADHD child experiences emotions more intensely, more quickly, and with less ability to pause before reacting. That meltdown over the "wrong" breakfast cereal? It's not manipulation. It's a brain that can't dial down the intensity.
 
@@ -129,14 +129,14 @@ This is where most parenting advice fails ADHD families.
 
 Most emotional regulation strategies assume a child can:
 
-1. Notice they're becoming dysregulated (before the explosion)
+1. Notice they're becoming overwhelmed (before the explosion)
 2. Remember a coping strategy in the moment
 3. Execute that strategy with enough focus to make it work
 4. Wait for the strategy to take effect
 
 ADHD challenges every single one of these steps.
 
-**Noticing early signs:** ADHD affects interoception, the ability to sense what's happening inside your body. Your child may genuinely not notice they're getting dysregulated until they're already past the point of no return.
+**Noticing early signs:** ADHD affects interoception, the ability to sense what's happening inside your body. Your child may genuinely not notice they're getting overwhelmed until they're already past the point of no return.
 
 **Remembering strategies:** Working memory is impaired in ADHD. The breathing exercise they practised yesterday? Gone when they need it. Not because they didn't try, but because ADHD brains don't reliably retrieve information under stress.
 
@@ -212,7 +212,7 @@ Since ADHD impairs noticing internal states, use external cues to support regula
 - A specific sound that signals "regulation time" consistently
 - Physical objects that serve as regulation anchors (a weighted blanket, a specific cushion)
 
-The pattern: if a strategy relies on your child noticing what's happening inside them, it probably won't work during dysregulation. Strategies that provide external structure work better.
+The pattern: if a strategy relies on your child noticing what's happening inside them, it probably won't work when they're overwhelmed. Strategies that provide external structure work better.
 
 ## The Connection Between Sleep and Emotional Regulation
 
@@ -267,7 +267,7 @@ Rejection sensitive dysphoria (RSD) is an intense emotional response to real or 
 
 ### Why don't breathing exercises work for my ADHD child?
 
-Breathing exercises require sustained attention, working memory (remembering to do them), and the ability to wait for delayed results. ADHD impairs all three. During emotional dysregulation, asking your child to use these cognitive functions often fails because those exact functions are offline.
+Breathing exercises require sustained attention, working memory (remembering to do them), and the ability to wait for delayed results. ADHD impairs all three. During emotional overwhelm, asking your child to use these cognitive functions often fails because those exact functions are offline.
 
 ### What helps ADHD emotional outbursts in the moment?
 

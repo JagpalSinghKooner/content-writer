@@ -95,7 +95,7 @@ Because emotional regulation isn't just a skill you teach. It's a capacity that 
 
 Imagine you're learning to drive. In the quiet car park, you remember all the rules perfectly. Mirror, signal, manoeuvre. But put you on a busy motorway in rush hour, and suddenly your brain goes blank. You know the rules. You just can't access them under pressure.
 
-This is exactly what happens during emotional dysregulation. Your child might practise breathing exercises beautifully during calm moments. But when they're flooded with emotion? Their brain's alarm system has taken over. The skills they know disappear.
+This is exactly what happens during emotional overwhelm. Your child might practise breathing exercises beautifully during calm moments. But when they're flooded with emotion? Their brain's alarm system has taken over. The skills they know disappear.
 
 Research from developmental psychology confirms this. Thompson, Ross A., 2014: [Stress and Child Development](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4774859/) explains that during high stress, the prefrontal cortex (the thinking brain) essentially goes offline. The amygdala (the alarm system) takes control.
 
@@ -111,15 +111,15 @@ For neurodivergent children, this process is often more intense and more frequen
 
 If your child has ADHD, their emotional intensity may be heightened from the start. Feelings arrive faster, bigger, and harder to shift. The [connection between ADHD and sleep difficulties](/why-your-adhd-child-wont-sleep) often makes this worse. A tired brain regulates emotions far less effectively. (And if you're dealing with both ADHD and sleep battles, you know exactly what we mean.)
 
-For autistic children, the path to dysregulation looks different but feels equally overwhelming. Sensory input that neurotypical children barely notice can be genuinely distressing. What looks like "overreacting" is often a nervous system already running at full capacity, pushed past its limit by one more demand. We explore this in depth in our guide to [autistic meltdowns](/understanding-autism-meltdowns).
+For autistic children, the path to overwhelm looks different but feels equally intense. Sensory input that neurotypical children barely notice can be genuinely distressing. What looks like "overreacting" is often a nervous system already running at full capacity, pushed past its limit by one more demand. We explore this in depth in our guide to [autistic meltdowns](/understanding-autism-meltdowns).
 
 And for many children, [sensory overload](/understanding-sensory-overload-children) plays a significant role. Their nervous system is constantly working to filter and process more information than it can comfortably handle.
 
 The Department for Education, 2018: [Mental Health and Behaviour in Schools](https://www.gov.uk/government/publications/mental-health-and-behaviour-in-schools--2) acknowledges that many behavioural difficulties stem from underlying developmental differences and unmet needs, not wilful noncompliance.
 
-## What Emotional Dysregulation Actually Looks Like
+## What Emotional Overwhelm Actually Looks Like
 
-Emotional dysregulation doesn't always look like screaming and crying. It can show up as:
+Emotional overwhelm doesn't always look like screaming and crying. It can show up as:
 
 - Sudden anger or aggression that seems to come from nowhere
 - Withdrawal and shutting down (going quiet, not responding)
@@ -132,13 +132,13 @@ Sometimes, you'll see it most clearly at home after school. Your child held it t
 
 Sound familiar?
 
-This isn't bad behaviour. It's delayed dysregulation. Their nervous system finally feels safe enough to release what it's been holding.
+This isn't bad behaviour. It's delayed overwhelm. Their nervous system finally feels safe enough to release what it's been holding.
 
 ## Why the Usual Strategies Often Fail
 
 Here's the uncomfortable truth most parenting resources won't say: standard emotional regulation advice is designed for neurotypical children in calm moments.
 
-Breathing exercises require your child to follow multi-step instructions. During dysregulation, their ability to process language is compromised.
+Breathing exercises require your child to follow multi-step instructions. During overwhelm, their ability to process language is compromised.
 
 Fidget toys require fine motor control and decision-making. Both are impaired when the stress response is activated.
 
@@ -150,7 +150,7 @@ None of these strategies are bad. They're just the wrong tool for the wrong mome
 
 Mind, 2023: [Understanding and Managing Emotions](https://www.mind.org.uk/information-support/for-children-and-young-people/emotions/) offers helpful guidance on emotional awareness, but even they acknowledge that recognising emotions is far easier when calm than when distressed.
 
-## What Actually Helps During Dysregulation
+## What Actually Helps During Overwhelm
 
 If active strategies require participation your child can't give, what does work?
 
@@ -164,11 +164,11 @@ This is why [calming sounds designed for neurodivergent children](/why-generic-c
 
 If you want to explore what this looks like in practice, The Open Sanctuary has a curated collection of sounds created specifically for sensitive and neurodivergent children. No interaction required. Just press play.
 
-We'll cover specific sound strategies in depth in the other articles in this series. For now, the principle matters most: the best tools for the moment of dysregulation are the ones that require nothing from a child who can give nothing.
+We'll cover specific sound strategies in depth in the other articles in this series. For now, the principle matters most: the best tools for the moment of overwhelm are the ones that require nothing from a child who can give nothing.
 
 ## Building Regulation Capacity Over Time
 
-Understanding the moment of dysregulation is only half the picture. The other half is building your child's regulatory capacity over time, so their window of tolerance gradually expands.
+Understanding the moment of overwhelm is only half the picture. The other half is building your child's regulatory capacity over time, so their window of tolerance gradually expands.
 
 This doesn't mean practising breathing exercises until they're perfect (though that can help some children). It means:
 
@@ -176,13 +176,13 @@ This doesn't mean practising breathing exercises until they're perfect (though t
 
 **Co-regulation first.** Children learn to regulate by being regulated. When you stay calm (even if you're faking it, and we've all been there), your nervous system helps theirs settle. This is called co-regulation, and it's the foundation of self-regulation.
 
-**Repair after rupture.** Every time your child has a big feeling and recovers safely with you, they're building neural pathways. They're learning that distress is survivable and that calm comes back. The goal isn't to prevent all dysregulation (that's impossible anyway). It's to help them return to calm afterwards.
+**Repair after rupture.** Every time your child has a big feeling and recovers safely with you, they're building neural pathways. They're learning that distress is survivable and that calm comes back. The goal isn't to prevent all overwhelm (that's impossible anyway). It's to help them return to calm afterwards.
 
 **Meeting them where they are.** If your child can practise breathing during calm moments, brilliant. If they can't, don't force it. Find the entry point that works for their nervous system, not the one that works for neurotypical children.
 
 ## The Reframe That Changes Everything
 
-When you understand emotional dysregulation as neurological rather than behavioural, everything shifts.
+When you understand emotional overwhelm as neurological rather than behavioural, everything shifts.
 
 You stop blaming yourself for not having the magic words.
 
@@ -240,4 +240,4 @@ Tools that require nothing from your child work best during peak dysregulation. 
 
 ### When should I be concerned about my child's emotional regulation?
 
-Consider seeking professional support if your child's emotional reactions are significantly more intense or frequent than peers, if they're struggling at school or with friendships due to emotional outbursts, or if the whole family is exhausted from managing constant dysregulation. Your GP can refer you to appropriate services.
+Consider seeking professional support if your child's emotional reactions are significantly more intense or frequent than peers, if they're struggling at school or with friendships due to emotional outbursts, or if the whole family is exhausted from managing constant overwhelm. Your GP can refer you to appropriate services.

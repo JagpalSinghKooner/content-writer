@@ -94,13 +94,13 @@ In practical terms, this means your child's experience is genuinely different fr
 
 **Sensory input compounds the problem.** While neurotypical children might find a bright, busy environment merely distracting, your autistic child's nervous system may be using every bit of its capacity just to filter the input. There's nothing left for emotional processing.
 
-**Demands make things worse.** Every instruction, every question, every choice adds cognitive load. During dysregulation, that load becomes unbearable.
+**Demands make things worse.** Every instruction, every question, every choice adds cognitive load. During overwhelm, that load becomes unbearable.
 
 This isn't a parenting failure or a character flaw. It's how your child's brain processes the world. Understanding this changes which tools make sense.
 
 ## What Generic Strategies Actually Require
 
-Here's the uncomfortable truth about standard emotional regulation advice: it demands exactly what autistic children can't give during dysregulation.
+Here's the uncomfortable truth about standard emotional regulation advice: it demands exactly what autistic children can't give when they're overwhelmed.
 
 **Breathing exercises require:**
 - Understanding and following verbal instructions
@@ -108,7 +108,7 @@ Here's the uncomfortable truth about standard emotional regulation advice: it de
 - Body awareness to control breath rhythm
 - Cognitive capacity to count or follow a pattern
 
-During autism emotional dysregulation, your child's verbal processing is compromised. Their ability to follow multi-step instructions disappears. Asking them to breathe in for four counts and out for six? It's like asking someone to solve a maths problem while their house is on fire.
+When your autistic child is emotionally overwhelmed, their verbal processing is compromised. Their ability to follow multi-step instructions disappears. Asking them to breathe in for four counts and out for six? It's like asking someone to solve a maths problem while their house is on fire.
 
 **Calm-down corners with multiple options require:**
 - Decision-making (which item do I want?)
@@ -129,7 +129,7 @@ Many autistic children already find these processes challenging when calm. Durin
 - Motor planning
 - Body awareness
 - Proprioceptive processing
-- Physical safety (some dysregulated children move erratically)
+- Physical safety (some overwhelmed children move erratically)
 
 For autistic children whose motor planning is affected or whose bodies feel overwhelming during distress, this adds demand rather than relief.
 
@@ -155,7 +155,7 @@ That's actually doing quite a lot.
 
 ## Understanding Your Autistic Child's Emotional Triggers
 
-Autism emotional dysregulation often has specific triggers that differ from neurotypical children. Recognising these patterns helps you intervene earlier, before the overwhelm becomes unmanageable.
+Emotional overwhelm in autistic children often has specific triggers that differ from neurotypical children. Recognising these patterns helps you intervene earlier, before the overwhelm becomes unmanageable.
 
 **Transitions:** Moving from one activity to another requires cognitive flexibility. For autistic children, transitions can feel jarring and unpredictable, even routine ones.
 
@@ -167,15 +167,15 @@ Autism emotional dysregulation often has specific triggers that differ from neur
 
 **Accumulated demands:** Your child might handle one challenge fine. Two, perhaps. But the cumulative load builds invisibly until something small becomes the final straw.
 
-**Interoceptive signals:** Hunger, tiredness, illness, temperature discomfort. Autistic children often struggle to identify these internal states until they become overwhelming. By the time they recognise they're hungry, they're already dysregulated.
+**Interoceptive signals:** Hunger, tiredness, illness, temperature discomfort. Autistic children often struggle to identify these internal states until they become overwhelming. By the time they recognise they're hungry, they're already overwhelmed.
 
-Knowing your child's specific triggers helps you spot early warning signs and adjust the environment before full dysregulation hits.
+Knowing your child's specific triggers helps you spot early warning signs and adjust the environment before the overwhelm hits.
 
 ## Practical Strategies That Actually Work
 
 Here's what helps when generic advice fails. These strategies account for how autistic nervous systems actually process and recover.
 
-### Before Dysregulation: Building Capacity
+### Before Overwhelm: Building Capacity
 
 **Reduce baseline demands.** An autistic child whose daily life is full of small stressors has less capacity for emotional regulation. Audit your routines for hidden demands. Can anything become more predictable? More sensory-friendly?
 
@@ -183,9 +183,9 @@ Here's what helps when generic advice fails. These strategies account for how au
 
 **Build sensory regulation into daily life.** Regular doses of calming sensory input (sound, deep pressure, movement) can help keep your child's nervous system from running at maximum capacity all the time.
 
-**Identify early warning signs.** Learn what your child's pre-dysregulation looks like. Increased stimming? Withdrawal? Louder voice? Earlier intervention means easier recovery.
+**Identify early warning signs.** Learn what your child looks like before the overwhelm takes hold. Increased stimming? Withdrawal? Louder voice? Earlier intervention means easier recovery.
 
-### During Dysregulation: The Zero-Demand Approach
+### During Overwhelm: The Zero-Demand Approach
 
 **Stop talking (or talk minimally).** Your instinct is to comfort with words. But language processing is compromised. Keep verbal input to bare essentials. "I'm here" is enough.
 
@@ -195,11 +195,11 @@ Here's what helps when generic advice fails. These strategies account for how au
 
 **Don't demand engagement.** Your child doesn't need to look at you, respond to you, or acknowledge the support you're providing. Just being there matters.
 
-**Ensure safety.** If your child is at risk of harming themselves or others during intense dysregulation, physical safety takes priority. The Department for Education, 2015: [SEND Code of Practice](https://www.gov.uk/government/publications/send-code-of-practice-0-to-25) emphasises that behaviour is communication and should be responded to with understanding, not punishment.
+**Ensure safety.** If your child is at risk of harming themselves or others during intense overwhelm, physical safety takes priority. The Department for Education, 2015: [SEND Code of Practice](https://www.gov.uk/government/publications/send-code-of-practice-0-to-25) emphasises that behaviour is communication and should be responded to with understanding, not punishment.
 
 **Wait.** This is the hardest part. Recovery takes time. Trying to speed it up by adding more input typically backfires.
 
-### After Dysregulation: Repair and Reset
+### After Overwhelm: Repair and Reset
 
 **Don't rush.** Even when the visible crisis has passed, your child's nervous system is still recovering. Keep demands low for longer than feels necessary.
 
@@ -233,7 +233,7 @@ You might be wondering: if I just play sounds and reduce demands, won't my child
 
 Actually, the opposite is true.
 
-Self-regulation builds from co-regulation. Your child learns to calm by experiencing calm with you. Every time they dysregulate and then recover safely in your presence, their nervous system is learning. The pathway from distress to calm becomes more familiar.
+Self-regulation builds from co-regulation. Your child learns to calm by experiencing calm with you. Every time they become overwhelmed and then recover safely in your presence, their nervous system is learning. The pathway from distress to calm becomes more familiar.
 
 Pushing skills during the moment of crisis doesn't teach regulation. It teaches that support isn't available when things are hardest.
 
@@ -261,7 +261,7 @@ If you'd like to try a different approach tonight, explore The Open Sanctuary. S
 
 ### Why do standard regulation strategies fail for autistic children?
 
-Standard strategies assume children can follow verbal instructions, make choices, and engage cognitively during distress. Autistic children often experience more intense emotions and have their processing capacity further reduced during dysregulation, making these demands impossible to meet.
+Standard strategies assume children can follow verbal instructions, make choices, and engage cognitively during distress. Autistic children often experience more intense emotions and have their processing capacity further reduced during overwhelm, making these demands impossible to meet.
 
 ### What is autism emotional dysregulation?
 
@@ -273,7 +273,7 @@ During the moment of overwhelm, reduce demands completely. Stop talking (or mini
 
 ### Should I still teach my autistic child breathing exercises?
 
-Breathing exercises can be helpful when practised during calm moments, but they typically don't work during active dysregulation. Consider them a preventive tool rather than an in-the-moment strategy. Focus on passive support during actual distress.
+Breathing exercises can be helpful when practised during calm moments, but they typically don't work when your child is actively overwhelmed. Consider them a preventive tool rather than an in-the-moment strategy. Focus on passive support during actual distress.
 
 ### Why does my autistic child meltdown after school?
 
@@ -281,4 +281,4 @@ After-school meltdowns often result from accumulated demands. Your child spent t
 
 ### When should I seek professional support for my autistic child's emotional regulation?
 
-Consider seeking support if your child's dysregulation is causing significant distress for them or the family, affecting their ability to participate in daily life, becoming more frequent or intense over time, or putting anyone's safety at risk. Your GP can refer to appropriate autism and mental health services.
+Consider seeking support if your child's emotional overwhelm is causing significant distress for them or the family, affecting their ability to participate in daily life, becoming more frequent or intense over time, or putting anyone's safety at risk. Your GP can refer to appropriate autism and mental health services.

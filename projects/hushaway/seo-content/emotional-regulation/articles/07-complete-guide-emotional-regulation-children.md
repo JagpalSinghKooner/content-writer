@@ -129,7 +129,7 @@ Think about it. Every calm corner guide tells you what objects to include. None 
 
 Sound works differently. It enters through the ears and reaches the nervous system without requiring any participation. Your child doesn't need to engage. They just need to be in the room.
 
-This guide brings together everything we know about emotional regulation in children. Why some children struggle more than others. What actually happens in the brain during dysregulation. And why sound might be the missing piece that makes everything else in your toolkit actually usable.
+This guide brings together everything we know about emotional regulation in children. Why some children struggle more than others. What actually happens in the brain during overwhelm. And why sound might be the missing piece that makes everything else in your toolkit actually usable.
 
 We'll cover the science. The practical applications. The specific approaches that work for neurodivergent children when standard advice falls flat.
 
@@ -157,7 +157,7 @@ Here's the gap nobody talks about: every single one of these strategies requires
 
 Breathing exercises need them to follow instructions. Fidget tools need them to make a choice and coordinate their hands. Visual supports need them to look, process, and respond. Movement needs body awareness and motor planning. Talking needs language access and emotional vocabulary.
 
-When your child is genuinely dysregulated, their thinking brain has gone offline. Thompson, Ross A., 2014: [Stress and Child Development](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4774859/) confirms what you've observed at home: during high stress, the prefrontal cortex essentially shuts down. The skills your child knows and practises during calm moments become temporarily inaccessible.
+When your child is genuinely overwhelmed, their thinking brain has gone offline. Thompson, Ross A., 2014: [Stress and Child Development](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4774859/) confirms what you've observed at home: during high stress, the prefrontal cortex essentially shuts down. The skills your child knows and practises during calm moments become temporarily inaccessible.
 
 So what's left?
 
@@ -209,7 +209,7 @@ The tools they know so well have completely vanished.
 
 Here's what's happening: It's like learning to drive. In a quiet car park, your child remembers all the rules. Mirror, signal, manoeuvre. Put them on a busy motorway in rush hour? The rules vanish. They know them. They just can't access them under pressure.
 
-This is exactly what happens during emotional dysregulation.
+This is exactly what happens during emotional overwhelm.
 
 Your child might practise breathing exercises beautifully during calm moments. But when they're flooded with feeling? Those exercises might as well not exist. The brain pathways that connect "I feel upset" to "I should try breathing" have temporarily disconnected.
 
@@ -217,7 +217,7 @@ This isn't defiance. It isn't laziness. It isn't them choosing not to use their 
 
 The tools are simply unavailable.
 
-Let's break down why each traditional tool fails during peak dysregulation:
+Let's break down why each traditional tool fails at the peak of overwhelm:
 
 **Breathing exercises** require: Following multi-step verbal instructions. Motor planning for breath control. Sustained attention. Working memory to hold the pattern.
 
@@ -231,7 +231,7 @@ Let's break down why each traditional tool fails during peak dysregulation:
 
 Every single item on this list depends on the prefrontal cortex.
 
-And during dysregulation, the prefrontal cortex has essentially gone dark.
+And during overwhelm, the prefrontal cortex has essentially gone dark.
 
 This isn't about your child being difficult. It isn't about them refusing to use strategies. Their brain literally cannot access these skills in that moment.
 
@@ -257,15 +257,15 @@ What does this mean practically?
 
 **Sensory input compounds everything.** The nervous system is already working overtime to process environmental sensory input. There's no spare capacity for managing emotions on top.
 
-**Demands make things worse.** Every instruction, question, or choice adds cognitive load. During dysregulation, that load becomes unbearable. Even well-meaning questions like "What do you need?" can feel like impossible demands.
+**Demands make things worse.** Every instruction, question, or choice adds cognitive load. During overwhelm, that load becomes unbearable. Even well-meaning questions like "What do you need?" can feel like impossible demands.
 
 Our detailed guide to [emotional regulation for autistic children](/guide-emotional-regulation-autistic-children) explains why generic strategies fail and what autism-specific approaches actually help.
 
-For autistic children, the link between emotional dysregulation and [autistic meltdowns](/understanding-autism-meltdowns) is direct. A meltdown isn't a tantrum or a choice. It's what happens when the nervous system is completely overwhelmed. Understanding this reframes which tools make sense.
+For autistic children, the link between emotional overwhelm and [autistic meltdowns](/understanding-autism-meltdowns) is direct. A meltdown isn't a tantrum or a choice. It's what happens when the nervous system is completely overwhelmed. Understanding this reframes which tools make sense.
 
 ### ADHD Children
 
-For ADHD children, the picture is different but equally challenging. Shaw, Philip et al., 2014: [Emotion Dysregulation in Attention Deficit Hyperactivity Disorder](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4282137/) found that emotional dysregulation is a core feature of ADHD, not a side effect. The same brain differences affecting attention also affect emotional control.
+For ADHD children, the picture is different but equally challenging. Shaw, Philip et al., 2014: [Emotion Dysregulation in Attention Deficit Hyperactivity Disorder](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4282137/) found that emotional overwhelm is a core feature of ADHD, not a side effect. The same brain differences affecting attention also affect emotional control.
 
 **Emotions are instant.** There's no gradual build-up, no warning phase. Feelings flip to full intensity immediately.
 
@@ -277,7 +277,7 @@ For ADHD children, the picture is different but equally challenging. Shaw, Phili
 
 Our guide to [emotional regulation for ADHD children](/tools-emotional-regulation-adhd-children) covers these differences and explains why tools must work WITH the ADHD brain instead of fighting against it.
 
-The connection between ADHD emotional intensity and [ADHD sleep struggles](/why-your-adhd-child-wont-sleep) is worth noting. A dysregulated day often leads to a difficult night. And sleep deprivation makes emotional regulation even harder the next day. Breaking this cycle requires tools that don't add cognitive demands.
+The connection between ADHD emotional intensity and [ADHD sleep struggles](/why-your-adhd-child-wont-sleep) is worth noting. An overwhelming day often leads to a difficult night. And sleep deprivation makes emotional regulation even harder the next day. Breaking this cycle requires tools that don't add cognitive demands.
 
 ### Why Passive Tools Matter for Neurodivergent Children
 
@@ -313,7 +313,7 @@ This isn't wishful thinking. It's neuroscience.
 
 Porges, Stephen W., 2011: [The Polyvagal Theory](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3680170/) explains how the auditory system has direct connections to the parts of the brain that regulate our physiological state. Certain sound characteristics (predictable rhythms, certain frequencies, gentle transitions) signal safety to the nervous system without requiring conscious processing.
 
-Your child's thinking brain doesn't need to engage. The sound bypasses it entirely and speaks directly to the survival brain that's running the show during dysregulation.
+Your child's thinking brain doesn't need to engage. The sound bypasses it entirely and speaks directly to the survival brain that's running the show during overwhelm.
 
 We call this the "zero-demand tool." Sound works precisely because it asks nothing.
 
@@ -357,7 +357,7 @@ Build it into the calm corner routine during Green Zone moments. Let familiarity
 
 ### Sound for Different Situations
 
-Emotional dysregulation doesn't only happen in meltdowns. It shows up throughout the day:
+Emotional overwhelm doesn't only happen in meltdowns. It shows up throughout the day:
 
 **Morning transitions:** When the day feels overwhelming before it's begun, steady ambient sound can provide an anchoring backdrop.
 
@@ -365,7 +365,7 @@ Emotional dysregulation doesn't only happen in meltdowns. It shows up throughout
 
 **Homework time:** Regulation struggles often surface during demanding tasks. Background audio can support focus without adding cognitive load.
 
-**Bedtime:** An unsettled day doesn't magically resolve at lights-out. Sound can bridge the gap between daytime dysregulation and sleep.
+**Bedtime:** An unsettled day doesn't magically resolve at lights-out. Sound can bridge the gap between daytime overwhelm and sleep.
 
 **Recovery after meltdowns:** The meltdown itself is traumatic for the nervous system. Sound can support the slow return to baseline without rushing the process.
 
@@ -403,7 +403,7 @@ Because that's what happens. Your child's distress doesn't stay contained in the
 
 This is called neuroception. It happens automatically, below conscious awareness. By the time you've decided to stay calm, your body is already responding to the threat.
 
-So how do you regulate yourself while simultaneously supporting your dysregulated child?
+So how do you regulate yourself while simultaneously supporting your overwhelmed child?
 
 Most advice suggests you go first. Breathe deeply. Ground yourself. Find your calm. Then extend that calm to your child.
 
@@ -462,7 +462,7 @@ The connection between emotional regulation and sleep is bidirectional. Poor reg
 
 Sound is one of the few tools that works effectively for both. It can support settling at bedtime. It can provide continuity through the night. It can ease morning wake-ups.
 
-For children with ADHD, whose [ADHD sleep struggles](/why-your-adhd-child-wont-sleep) often compound emotional dysregulation, sound offers a non-demanding support that doesn't require the already-exhausted brain to do more work.
+For children with ADHD, whose [ADHD sleep struggles](/why-your-adhd-child-wont-sleep) often compound emotional overwhelm, sound offers a non-demanding support that doesn't require the already-exhausted brain to do more work.
 
 ### Long-Term Regulation Development
 
@@ -488,7 +488,7 @@ We want to be clear about this. Sound can help with day-to-day regulation, crisi
 
 Consider seeking additional professional input if:
 
-- Dysregulation is severely impacting your child's daily functioning at school, home, or socially
+- Emotional overwhelm is severely impacting your child's daily functioning at school, home, or socially
 - Meltdowns are becoming more frequent or more intense over time despite consistent strategies
 - Your child is at risk of harming themselves or others during episodes
 - You suspect underlying conditions (autism, ADHD, anxiety, sensory processing differences) that haven't been assessed

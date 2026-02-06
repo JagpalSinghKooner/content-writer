@@ -162,7 +162,7 @@ When sounds are created specifically for neurodivergent children, the entire app
 
 **Predictable where it matters.** Transitions are handled differently. Changes that might happen in generic content without warning are either removed or made gradual enough that sensitive processing can adapt.
 
-**Silence as a feature.** Unlike typical calming content that might use silence as dramatic effect, content designed for ND children uses silence intentionally and sparingly, understanding that unexpected quiet can be as dysregulating as unexpected noise.
+**Silence as a feature.** Unlike typical calming content that might use silence as dramatic effect, content designed for ND children uses silence intentionally and sparingly, understanding that unexpected quiet can be as overwhelming as unexpected noise.
 
 This is the difference between sounds that hope to work for everyone and sounds that are built from the ground up for how specific brains actually function. One approach crosses its fingers. The other is designed to work.
 
