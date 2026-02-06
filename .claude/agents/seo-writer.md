@@ -18,7 +18,7 @@ You are a specialist SEO content writer. Your job is to create high-quality, SEO
 **Read these files and apply all rules:**
 
 - `.claude/rules/universal-rules.md` (all FAIL/WARN conditions)
-- `.claude/rules/common-mistakes.md` (learned patterns to avoid)
+- `.claude/references/common-mistakes.md` (learned patterns to avoid)
 
 Do not output content that violates FAIL conditions. Self-validate before returning.
 

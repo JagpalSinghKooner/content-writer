@@ -8,6 +8,13 @@
 | Task 45: Regenerate Cross-Pillar Summary + Create PR | pending |
 | Task 46: Fix Broken Citation URLs (404s) | PASS |
 | Task 47: Replace 5 Removed Citations | PASS |
+| **Context Cleanup (file-cleanup.md)** | |
+| Task 48: Create branch + Move non-rules out of `rules/` | pending |
+| Task 49: Trim `workflow.md` | pending |
+| Task 50: Verify Steps 1-2 (Hard Stop) | pending |
+| Task 51: Trim `universal-rules.md` | pending |
+| Task 52: Slim `CLAUDE.md` | pending |
+| Task 53: Final verification + PR | pending |
 
 ### Execution Rules
 
@@ -88,5 +95,305 @@
   - Citation #3 (sound-therapy/07) was changed from the proposed "Koelsch et al., 2019" (PMC6633293 was actually Brancucci et al., 2011) to Zaatar et al., 2023: "The transformative power of music: Insights into neuroplasticity, health, and disease" (PMC10765015), which better supports the sound-brain state claims.
   - All other 4 citations used as proposed and verified working.
 - **Next:** Task 45 (Regenerate Cross-Pillar Summary + Create PR) remains pending.
+
+---
+
+## Context Cleanup: Slim Down Auto-Loaded `.claude/` Files
+
+Full plan documented in `file-cleanup.md` (project root). Goal: reduce auto-loaded context from 2,368 lines to ~999 lines (58% reduction) with zero functionality loss.
+
+| Task | Status |
+|------|--------|
+| Task 48: Create branch + Move non-rules out of `rules/` | pending |
+| Task 49: Trim `workflow.md` | pending |
+| Task 50: Verify Steps 1-2 (Hard Stop) | pending |
+| Task 51: Trim `universal-rules.md` | pending |
+| Task 52: Slim `CLAUDE.md` | pending |
+| Task 53: Final verification + PR | pending |
+
+### Execution Rules
+
+- **Branch:** `cleanup/context-slim` (created in Task 48)
+- **Plan:** `file-cleanup.md` in project root is the single source of truth
+- **Sequence:** One task per context window, verify, commit, then next
+- **Commit format:** `Cleanup Step {N}/4: {Description}` (see file-cleanup.md for full format)
+- **Rollback:** Each step is a separate commit. Revert with `git revert <commit>`
+
+---
+
+## Task 48: Create Branch + Move Non-Rules Out of `rules/`
+
+**Objective:** Create the feature branch and move 2 non-rule files from `rules/` to a new `references/` directory. Update ALL path references across the codebase. This is Step 1 from `file-cleanup.md` (saves 598 lines, ZERO risk).
+
+**Context:** Read `file-cleanup.md` Step 1 (lines 73-109) for the full rationale. Two files in `rules/` are not behavioural rules: `client-profile-requirements.md` (pure reference table) and `common-mistakes.md` (learned patterns file). Both are auto-loaded into every request but neither needs to be. Agents read `common-mistakes.md` explicitly at runtime via "Before Starting" sections.
+
+**Execution Steps:**
+1. Create branch `cleanup/context-slim` from `main`
+2. Create `.claude/references/` directory
+3. `git mv .claude/rules/client-profile-requirements.md .claude/references/client-profile-requirements.md`
+4. `git mv .claude/rules/common-mistakes.md .claude/references/common-mistakes.md`
+5. Grep the entire `.claude/` directory for `rules/common-mistakes` and `rules/client-profile-requirements` to find ALL path references
+6. Update every reference to point to `references/` instead of `rules/` — files include (at minimum):
+   - `.claude/CLAUDE.md` (2 links: line ~98 and ~542)
+   - `.claude/agents/seo-writer.md` (line ~21)
+   - `.claude/agents/content-validator.md` (line ~22)
+   - `.claude/agents-prd.md` (lines ~162, ~676, ~898 file structure diagram)
+   - `.claude/skills/audit-pillar/SKILL.md` (line ~282)
+   - `.claude/skills/validate-content/SKILL.md` (line ~909)
+7. Re-grep to confirm zero remaining `rules/common-mistakes` or `rules/client-profile-requirements` references
+8. Commit with format from `file-cleanup.md` Branch Strategy section
+
+**Acceptance Criteria:**
+- [x] Branch `cleanup/context-slim` created
+- [x] `.claude/references/` directory exists with both files (content unchanged)
+- [x] `.claude/rules/client-profile-requirements.md` deleted
+- [x] `.claude/rules/common-mistakes.md` deleted
+- [x] Grep for `rules/common-mistakes` returns 0 results across `.claude/`
+- [x] Grep for `rules/client-profile-requirements` returns 0 results across `.claude/`
+- [x] Git commit created
+
+**Starter Prompt:**
+> Read `file-cleanup.md` Step 1 (lines 73-109) for full context. Read `TASKS.md` Task 48 for execution steps. Create branch `cleanup/context-slim`. Create `.claude/references/` directory. Git mv both `rules/client-profile-requirements.md` and `rules/common-mistakes.md` to `references/`. Then grep the entire `.claude/` directory for `rules/common-mistakes` and `rules/client-profile-requirements` to find ALL path references — update every one to point to `references/` instead of `rules/`. Re-grep to confirm zero remaining old-path references. Commit as `Cleanup Step 1/4: Move non-rules out of rules/`.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created branch `cleanup/context-slim`. Moved `client-profile-requirements.md` and `common-mistakes.md` from `rules/` to new `references/` directory via `git mv`. Updated all 9 path references across 7 files: CLAUDE.md (3), agents-prd.md (3), seo-writer.md (1), content-validator.md (1), validate-content/SKILL.md (1), audit-pillar/SKILL.md (1). Re-grep confirmed zero remaining old-path references.
+- **Decisions:** Used `replace_all` on agents-prd.md since it had 3 occurrences of the same path string. All other files had unique strings so used targeted replacements.
+- **Next:** Task 49 (Trim workflow.md). Stay on `cleanup/context-slim` branch.
+
+---
+
+## Task 49: Trim `workflow.md`
+
+**Objective:** De-duplicate and trim `workflow.md` from ~451 lines to ~150 lines by removing ASCII diagrams, duplicate sections, and verbose implementation detail. This is Step 2 from `file-cleanup.md` (saves ~301 lines, LOW risk).
+
+**Context:** Read `file-cleanup.md` Step 2 (lines 112-144) for the full rationale. `workflow.md` contains large sections duplicated from `CLAUDE.md`, ASCII pipeline diagrams (visual aids, not rules), and supplementary detail that agents don't read.
+
+**Execution Steps:**
+1. Read current `workflow.md` in full
+2. Read `file-cleanup.md` Step 2 to confirm what to remove vs keep
+3. **Remove** these sections:
+   - Validation Checkpoints (duplicate of CLAUDE.md)
+   - Internal Linking Strategy (duplicate of CLAUDE.md)
+   - Error Logging (duplicate of CLAUDE.md Rule #3)
+   - File Structure + Numbering (duplicate of CLAUDE.md)
+   - Main Session Orchestration ASCII diagram
+   - Single Article Pipeline ASCII diagram
+   - Retry Loop ASCII diagram
+   - Tier-Based Execution ASCII diagram
+   - Validation file lifecycle detail
+   - Auto-delegation triggers table
+4. **Keep** these sections (~150 lines):
+   - Workflow Overview table (7 steps)
+   - Critical Constraint: Agents Cannot Spawn Agents (full text)
+   - Orchestration rules (text descriptions, not diagrams)
+   - Retry Loop rules (max 3 attempts, escalation — text, not diagram)
+   - Tier-Based Execution rules (parallel within tiers, sequential across — text, not diagram)
+   - Agent Reference table + return formats
+5. Verify kept content is intact and makes sense as a standalone document
+6. Grep for `workflow.md` references across agents/skills — confirm nothing specifically references the removed sections
+7. Commit
+
+**Acceptance Criteria:**
+- [ ] `workflow.md` is ~150 lines (down from ~451)
+- [ ] Workflow Overview table intact
+- [ ] "Agents Cannot Spawn Agents" constraint intact
+- [ ] Orchestration rules preserved as text (diagrams removed)
+- [ ] Retry rules preserved as text (diagram removed)
+- [ ] Tier rules preserved as text (diagram removed)
+- [ ] Agent Reference table + return formats intact
+- [ ] No references elsewhere point to specifically removed sections
+- [ ] Git commit created
+
+**Starter Prompt:**
+> Read `file-cleanup.md` Step 2 (lines 112-144) for full context. Read `TASKS.md` Task 49 for execution steps. Read `.claude/rules/workflow.md` in full. Remove all ASCII diagrams, duplicate sections (Validation Checkpoints, Internal Linking Strategy, Error Logging, File Structure), auto-delegation triggers table, and validation file lifecycle detail. Keep: Workflow Overview table, Agents Cannot Spawn constraint, orchestration/retry/tier rules as text descriptions, and Agent Reference table + return formats. Target ~150 lines. Commit as `Cleanup Step 2/4: Trim workflow.md`.
+
+**Status:** pending
+
+---
+
+## Task 50: Verify Steps 1-2 (Hard Stop)
+
+**Objective:** Count the new auto-loaded line total after Steps 1-2. Verify no broken references. This is the Hard Stop checkpoint from `file-cleanup.md` (line 146-149). Do NOT proceed to Steps 3-4 until this passes.
+
+**Context:** Read `file-cleanup.md` lines 146-149. Steps 1-2 should save ~899 lines (38% reduction). The remaining files auto-loaded are: `CLAUDE.md`, `rules/universal-rules.md`, `rules/workflow.md`. Expected total: ~1,770 lines (down from 2,368).
+
+**Execution Steps:**
+1. Count lines in each auto-loaded file:
+   - `wc -l .claude/CLAUDE.md`
+   - `wc -l .claude/rules/universal-rules.md`
+   - `wc -l .claude/rules/workflow.md`
+   - Confirm `rules/` contains ONLY these 2 files (no common-mistakes, no client-profile-requirements)
+2. Sum total auto-loaded lines and compare to target (~1,770)
+3. Grep across `.claude/` for any broken references:
+   - `rules/common-mistakes` should return 0 results
+   - `rules/client-profile-requirements` should return 0 results
+4. Verify `references/common-mistakes.md` and `references/client-profile-requirements.md` exist with correct content
+5. Spot-check that agents reference the correct paths (seo-writer, content-validator)
+6. Report findings in TASKS.md handoff
+
+**Acceptance Criteria:**
+- [ ] Auto-loaded line count reported (target: ~1,770 or lower)
+- [ ] `rules/` directory contains only `universal-rules.md` and `workflow.md`
+- [ ] Zero broken path references found
+- [ ] `references/` directory contains both moved files
+- [ ] Handoff written with line counts and go/no-go recommendation for Steps 3-4
+
+**Starter Prompt:**
+> Read `file-cleanup.md` lines 146-149 for Hard Stop context. Read `TASKS.md` Task 50 for steps. Count lines in each auto-loaded file: `.claude/CLAUDE.md`, `.claude/rules/universal-rules.md`, `.claude/rules/workflow.md`. List contents of `.claude/rules/` to confirm only 2 files remain. Grep `.claude/` for `rules/common-mistakes` and `rules/client-profile-requirements` to confirm zero broken references. Report total auto-loaded line count and write handoff with go/no-go recommendation for Steps 3-4. No commit needed — this is verification only.
+
+**Status:** pending
+
+---
+
+## Task 51: Trim `universal-rules.md`
+
+**Objective:** Trim `universal-rules.md` from ~729 lines to ~549 lines by removing verbose explanatory notes, example tables, and definitions that aren't validation rules. Keep ALL FAIL rules, word lists, and banned word lists intact. This is Step 3 from `file-cleanup.md` (saves ~180 lines, MEDIUM risk).
+
+**Context:** Read `file-cleanup.md` Step 3 (lines 153-190) for the full rationale and removal/keep lists. Also requires one agent update: move Terminology definitions inline to `agents/consistency-checker.md`.
+
+**Execution Steps:**
+1. Read current `universal-rules.md` in full
+2. Read `file-cleanup.md` Step 3 for what to remove vs keep
+3. **Remove** (~180 lines):
+   - Explanatory notes between UK pattern tables (~70 lines): "Derived forms...", "Note: Some words are ALWAYS -ise...", "Note: US is inconsistent here...", etc.
+   - WARN condition example tables (~60 lines): contraction table, sentence length examples, passive voice examples
+   - Terminology section (~75 lines): Hook, CTA, Soft CTA, Hard CTA definitions + CTA Placement table
+   - Quick Validation Checklist at bottom (~15 lines): redundant summary
+   - Citation preferred/avoided source lists (~20 lines)
+4. **Keep ALL of these intact (do NOT remove):**
+   - Scope matrix
+   - Rule 1: UK English — ALL 8 pattern tables with ALL 48+ word pairs (tables only)
+   - Rule 2: ALL 53 banned words
+   - Rule 3: ALL banned phrases
+   - Rule 4: ALL AI patterns
+   - Rule 4b: No Em Dashes (full)
+   - Rule 5: SEO Requirements (full checklist)
+   - Rule 5a: Internal Link Format (full)
+   - Rule 6: External Citations — format + minimum requirements
+   - WARN rule names + one-line descriptions
+5. **Agent update:** Copy Terminology definitions (Hook, CTA, Soft/Hard CTA, CTA Placement table) into `agents/consistency-checker.md` Before Starting section (~30 lines compressed)
+6. Verify all FAIL rules still present (grep for each rule header)
+7. Verify banned word count still 53
+8. Commit
+
+**Acceptance Criteria:**
+- [ ] `universal-rules.md` is ~549 lines (down from ~729)
+- [ ] All 8 UK English pattern tables intact with all word pairs
+- [ ] All 53 banned words present
+- [ ] All banned phrases present
+- [ ] All AI pattern rules present
+- [ ] Em dash rule intact
+- [ ] SEO requirements intact
+- [ ] Internal link format rule intact
+- [ ] Citation format + minimums intact
+- [ ] WARN rules present as one-line descriptions
+- [ ] Terminology definitions added to `agents/consistency-checker.md`
+- [ ] Git commit created
+
+**Starter Prompt:**
+> Read `file-cleanup.md` Step 3 (lines 153-190) for full context. Read `TASKS.md` Task 51 for execution steps. Read `.claude/rules/universal-rules.md` in full. Remove: explanatory notes between UK pattern tables, WARN example tables, Terminology section (Hook/CTA definitions), Quick Validation Checklist, citation source lists. Keep ALL FAIL rules, ALL word pair tables, ALL 53 banned words, ALL banned phrases, ALL AI patterns, em dash rule, SEO requirements, internal link format, citation format/minimums. Copy Terminology definitions inline to `.claude/agents/consistency-checker.md`. Verify all FAIL rules survived. Commit as `Cleanup Step 3/4: Trim universal-rules.md`.
+
+**Status:** pending
+
+---
+
+## Task 52: Slim `CLAUDE.md`
+
+**Objective:** Slim `CLAUDE.md` from ~590 lines to ~300 lines by removing/compressing reference material that duplicates information in skills, agents, and workflow.md. This is Step 4 from `file-cleanup.md` (saves ~290 lines, LOW risk).
+
+**Context:** Read `file-cleanup.md` Step 4 (lines 193-233) for the full removal/keep lists.
+
+**Execution Steps:**
+1. Read current `CLAUDE.md` in full
+2. Read `file-cleanup.md` Step 4 for what to remove vs keep
+3. **Remove/compress** (~290 lines):
+   - Phase 2 Content Generation detailed table → 2-line pointer to `rules/workflow.md`
+   - File structure diagram → remove (agents/skills know it)
+   - Distribution folder examples → remove (content-atomizer knows its format)
+   - Platform file format tables → remove (skills handle this)
+   - Slug comparison table → keep slug rules as bullets, drop before/after table
+   - Agent-Automated Execution detail → 3-line summary + pointer to `rules/workflow.md`
+   - Skills table → remove entirely (skills are self-documenting)
+   - Agents table → compress to 2 lines + "see `.claude/agents/`"
+   - Templates section → compress to 2 lines + "see `.claude/skills/templates/`"
+   - Reference Materials table → compress to 1 line
+   - Rules links section → compress to 2 lines
+   - Example Workflow reference → remove
+4. **Keep intact (~300 lines):**
+   - Task Tracking: Two Systems
+   - Session Start Protocol
+   - Rule #1: Task Execution (full)
+   - Rule #2: Git Workflow (full)
+   - Rule #3: Error Tracking (full)
+   - Phase 1: Client Onboarding (brief)
+   - File Naming Conventions (table + slug rules as bullets + article numbering)
+   - Internal Linking Strategy (single source of truth)
+   - Validation Checkpoints table (single source of truth)
+   - Cross-Pillar Linking rules
+5. Verify all 3 rules fully present
+6. Verify pointers to workflow.md, agents folder, templates folder are correct paths
+7. Commit
+
+**Acceptance Criteria:**
+- [ ] `CLAUDE.md` is ~300 lines (down from ~590)
+- [ ] Task Tracking: Two Systems section intact
+- [ ] Session Start Protocol intact
+- [ ] Rule #1 (Task Execution) fully intact
+- [ ] Rule #2 (Git Workflow) fully intact
+- [ ] Rule #3 (Error Tracking) fully intact
+- [ ] File Naming Conventions present (compressed)
+- [ ] Internal Linking Strategy intact
+- [ ] Validation Checkpoints intact
+- [ ] Cross-Pillar Linking intact
+- [ ] All pointers to other files resolve correctly
+- [ ] Git commit created
+
+**Starter Prompt:**
+> Read `file-cleanup.md` Step 4 (lines 193-233) for full context. Read `TASKS.md` Task 52 for execution steps. Read `.claude/CLAUDE.md` in full. Remove/compress: Phase 2 detailed table, file structure diagram, distribution examples, platform format tables, slug comparison table (keep bullets), agent-automated execution detail, Skills table, Agents table, Templates section, Reference Materials table, Rules links, Example Workflow reference. Replace removed sections with brief pointers where appropriate. Keep intact: Task Tracking, Session Start Protocol, Rules 1-3 (full), File Naming (compressed), Internal Linking, Validation Checkpoints, Cross-Pillar Linking. Verify all pointers resolve. Commit as `Cleanup Step 4/4: Slim CLAUDE.md`.
+
+**Status:** pending
+
+---
+
+## Task 53: Final Verification + PR
+
+**Objective:** Count final auto-loaded line total, verify all references resolve, and create PR for the `cleanup/context-slim` branch.
+
+**Context:** Read `file-cleanup.md` Summary table (lines 239-246). Target: ~999 total auto-loaded lines (58% reduction from 2,368). Read Branch Strategy (lines 287-299) for PR format.
+
+**Execution Steps:**
+1. Count lines in each auto-loaded file:
+   - `wc -l .claude/CLAUDE.md`
+   - `wc -l .claude/rules/universal-rules.md`
+   - `wc -l .claude/rules/workflow.md`
+2. Sum total and compare to ~999 target
+3. Verify `rules/` directory contains exactly 2 files
+4. Verify `references/` directory contains exactly 2 files
+5. Grep for any broken paths across `.claude/`:
+   - `rules/common-mistakes` → should return 0
+   - `rules/client-profile-requirements` → should return 0
+6. Verify all FAIL rules still present in universal-rules.md (grep for rule headers)
+7. Verify all 3 CLAUDE.md rules present (grep for "Rule #1", "Rule #2", "Rule #3")
+8. Create PR for `cleanup/context-slim` → `main` with:
+   - Title: `Cleanup: Slim auto-loaded context from 2,368 to ~999 lines`
+   - Body: Summary of all 4 steps, line counts before/after, what was preserved
+9. Update TASKS.md summary table
+
+**Acceptance Criteria:**
+- [ ] Total auto-loaded lines reported (target: ~999)
+- [ ] Zero broken path references
+- [ ] All FAIL rules confirmed present
+- [ ] All 3 CLAUDE.md rules confirmed present
+- [ ] PR created with summary
+- [ ] TASKS.md summary table updated
+
+**Starter Prompt:**
+> Read `file-cleanup.md` Summary (lines 239-246) and Branch Strategy (lines 287-299). Read `TASKS.md` Task 53 for steps. Count lines in `.claude/CLAUDE.md`, `.claude/rules/universal-rules.md`, `.claude/rules/workflow.md`. Verify `rules/` has exactly 2 files, `references/` has exactly 2 files. Grep for broken paths (`rules/common-mistakes`, `rules/client-profile-requirements`). Grep for all FAIL rule headers in universal-rules.md. Grep for Rule #1, #2, #3 in CLAUDE.md. Create PR for `cleanup/context-slim` → `main`. Update TASKS.md summary table.
+
+**Status:** pending
 
 ---

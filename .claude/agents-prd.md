@@ -159,7 +159,7 @@ The system prompt should include:
 ```
 Before writing, read these files and apply all rules:
 - `.claude/rules/universal-rules.md` — All FAIL/WARN conditions
-- `.claude/rules/common-mistakes.md` — Learned patterns to avoid
+- `.claude/references/common-mistakes.md` — Learned patterns to avoid
 
 Do not output content that violates FAIL conditions.
 ```
@@ -268,7 +268,7 @@ skills:
    ```
    Before validating, read these files:
    - `.claude/rules/universal-rules.md` — All FAIL/WARN conditions
-   - `.claude/rules/common-mistakes.md` — Learned patterns to check
+   - `.claude/references/common-mistakes.md` — Learned patterns to check
    ```
 3. All 6 validation phases:
    - Phase 1: Universal Rules Check
@@ -673,7 +673,7 @@ Steps 1-3 remain manual interactive skills (require user decisions). Steps 4-7 a
 
 Read these files and apply all rules:
 - `.claude/rules/universal-rules.md` — All FAIL/WARN conditions
-- `.claude/rules/common-mistakes.md` — Learned patterns to avoid
+- `.claude/references/common-mistakes.md` — Learned patterns to avoid
 
 Do not output content that violates FAIL conditions.
 ```

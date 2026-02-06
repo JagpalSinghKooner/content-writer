@@ -279,7 +279,7 @@ git push
 ## Reference Files
 
 - `rules/universal-rules.md` — Validation checks
-- `rules/common-mistakes.md` — Learned patterns
+- `references/common-mistakes.md` — Learned patterns
 - `rules/workflow.md` — Orchestration patterns, retry loop, agent return formats
 - `agents/content-validator.md` — Validation agent spec
 - `agents/copy-enhancer.md` — Auto-fix agent spec

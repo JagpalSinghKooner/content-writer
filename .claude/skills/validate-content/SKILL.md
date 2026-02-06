@@ -906,7 +906,7 @@ If auto-retry fails:
 
 If the same issue appears 3+ times in content (or across multiple pieces):
 
-1. Suggest addition to `.claude/rules/common-mistakes.md`
+1. Suggest addition to `.claude/references/common-mistakes.md`
 2. Use the template format from that file
 3. Human approves/rejects addition
 4. Future content avoids the pattern

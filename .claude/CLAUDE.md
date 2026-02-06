@@ -95,7 +95,7 @@ Every project uses this structure:
 
 **If you skip this rule, the work fails.**
 
-See [Common Mistakes](rules/common-mistakes.md) for recurring violations of this rule.
+See [Common Mistakes](references/common-mistakes.md) for recurring violations of this rule.
 
 ### STOP: Before Completing Any Task
 
@@ -539,8 +539,8 @@ Six agents handle the automated content generation and audit workflows. The main
 ## Rules
 
 - [Universal Rules](rules/universal-rules.md) - UK English, banned AI words, SEO requirements
-- [Common Mistakes](rules/common-mistakes.md) - Learned patterns (grows over time)
-- [Client Profile Requirements](rules/client-profile-requirements.md) - Which profile fields each skill needs
+- [Common Mistakes](references/common-mistakes.md) - Learned patterns (grows over time)
+- [Client Profile Requirements](references/client-profile-requirements.md) - Which profile fields each skill needs
 - [Workflow Rules](rules/workflow.md) - Agent orchestration, execution pipeline, retry loops
 
 ---
