@@ -66,39 +66,39 @@ You've tried the sounds.
 
 White noise machines. Rain recordings. Those "brown noise" videos that social media promised would fix everything.
 
-Maybe they helped. Or maybe — and this is the frustrating part — they made things worse.
+Maybe they helped. Or maybe they made things worse. That's the frustrating part.
 
 Here's what nobody told you: not all calming sounds calm ADHD brains.
 
 Some sounds that work brilliantly for neurotypical children can actually increase alertness in ADHD kids. Others cause irritation. A few even trigger meltdowns.
 
-The calming sounds that actually work for ADHD children share specific properties. They match how the ADHD brain processes stimulation — and most generic "sleep sounds" don't.
+The calming sounds that actually work for ADHD children share specific properties. They match how the ADHD brain processes stimulation. Most generic "sleep sounds" don't.
 
-This isn't guesswork. Two decades of research have been quietly uncovering why certain sounds help ADHD brains settle — and why others backfire.
+This isn't guesswork. Two decades of research have been quietly uncovering why certain sounds help ADHD brains settle and why others backfire.
 
 ## Why Sound Works Differently for ADHD Brains
 
 Before we get into which sounds help, you need to understand why sound matters at all.
 
-If you've read about [why your ADHD child won't sleep](/adhd-child-wont-sleep), you already know the core problem: a brain that won't switch off. When the external world goes quiet at bedtime, the ADHD brain doesn't follow. Instead, it hunts for stimulation — and usually finds it in racing thoughts, worries, or random tangents that keep your child awake for hours.
+If you've read about [why your ADHD child won't sleep](/adhd-child-wont-sleep), you already know the core problem: a brain that won't switch off. When the external world goes quiet at bedtime, the ADHD brain doesn't follow. Instead, it hunts for stimulation and usually finds it in racing thoughts, worries, or random tangents that keep your child awake for hours.
 
 Sound offers something counterintuitive: it gives the brain stimulation *so it stops seeking stimulation*.
 
 Think of it this way. An ADHD brain in a silent room is like a hungry person in an empty kitchen. It opens every cupboard, checks the fridge, opens the cupboards again. Hunting. Restless. Unable to settle until it finds *something*.
 
-But give that brain the right kind of input — steady, calming, requiring nothing in return — and the searching stops. The brain has what it needs. It settles.
+But give that brain the right kind of input, something steady and calming that requires nothing in return, and the searching stops. The brain has what it needs. It settles.
 
 This explains why the same white noise machine that helps your neurotypical niece sleep might leave your ADHD child wide awake. Their brain has different needs. And once you understand those needs, you can meet them.
 
 ## What the Research Actually Shows
 
-A major meta-analysis published in the Journal of the American Academy of Child & Adolescent Psychiatry, 2024 — [Systematic Review and Meta-Analysis: Do White Noise and Pink Noise Help With Task Performance in Youth With ADHD](https://pmc.ncbi.nlm.nih.gov/articles/PMC11283987/) looked at 13 studies involving 335 children and young adults with ADHD. The findings were clear:
+A major meta-analysis published in the Journal of the American Academy of Child & Adolescent Psychiatry, 2024: [Systematic Review and Meta-Analysis: Do White Noise and Pink Noise Help With Task Performance in Youth With ADHD](https://pmc.ncbi.nlm.nih.gov/articles/PMC11283987/) looked at 13 studies involving 335 children and young adults with ADHD. The findings were clear:
 
 White and pink noise produced a small but statistically significant improvement in cognitive performance for those with ADHD.
 
 But here's what made the study particularly interesting: the same sounds had the opposite effect on children without ADHD. For neurotypical children, white and pink noise slightly reduced their performance.
 
-This tells us something important. ADHD brains genuinely respond differently to sound. What helps them can actually hinder others. This isn't about preferences — it's about neurobiology.
+This tells us something important. ADHD brains genuinely respond differently to sound. What helps them can actually hinder others. This isn't about preferences. It's about neurobiology.
 
 The researchers believe this relates to something called the "moderate brain arousal" theory. ADHD brains tend to be under-aroused, which is why they're constantly seeking stimulation. Adding the right amount of external sound brings their arousal to the right level for focus and calm.
 
@@ -112,7 +112,7 @@ White noise contains all frequencies at equal intensity. It sounds like static o
 
 **What research shows:** White noise is the most studied sound for ADHD. Multiple studies confirm it helps with focus, attention, and cognitive performance in children with ADHD.
 
-A 2024 study published in Frontiers in Psychology — [Sensory white noise in clinical ADHD: Who benefits from auditory and visual noise?](https://pmc.ncbi.nlm.nih.gov/articles/PMC11585357/) found an important distinction: white noise helped ADHD children with predominantly inattentive traits, but actually made things worse for those with high hyperactivity. This matters because ADHD isn't one thing — your child's specific profile affects what sounds will help them.
+A 2024 study published in Frontiers in Psychology: [Sensory white noise in clinical ADHD: Who benefits from auditory and visual noise?](https://pmc.ncbi.nlm.nih.gov/articles/PMC11585357/) found an important distinction: white noise helped ADHD children with predominantly inattentive traits, but actually made things worse for those with high hyperactivity. This matters because ADHD isn't one thing. Your child's specific profile affects what sounds will help them.
 
 **Best for:** Children whose main struggle is attention and focus, rather than physical hyperactivity.
 
@@ -138,11 +138,11 @@ This doesn't mean brown noise doesn't work. Conceptually, it operates on similar
 
 ### Nature Sounds
 
-Rain, thunderstorms, ocean waves, forest soundscapes — these are what most people think of when they imagine "relaxing sounds."
+Rain, thunderstorms, ocean waves, forest soundscapes. These are what most people think of when they imagine "relaxing sounds."
 
 **What research shows:** Nature sounds can help with relaxation, but they're not the same as the random noise patterns of white, pink, or brown noise. Nature sounds have patterns, rhythms, and variations that the brain can track and engage with.
 
-For some ADHD children, this engagement is helpful — it gives the brain something predictable to follow. For others, the variations within nature sounds (a thunder crack, a bird call, a wave crescendo) can pull attention and prevent settling.
+For some ADHD children, this engagement is helpful because it gives the brain something predictable to follow. For others, the variations within nature sounds (a thunder crack, a bird call, a wave crescendo) can pull attention and prevent settling.
 
 **Best for:** Children who find pure noise sounds boring or unsatisfying. Nature sounds offer more variety while still being calming.
 
@@ -150,11 +150,11 @@ For some ADHD children, this engagement is helpful — it gives the brain someth
 
 ASMR (Autonomous Sensory Meridian Response) sounds include whispering, gentle tapping, brushing sounds, and other soft, close-up audio. These have exploded in popularity, with millions of ASMR videos available online.
 
-**What research shows:** Research from the University of Sheffield found that ASMR can reduce heart rate and increase feelings of calmness and relaxation in people who respond to it. The key phrase is "in people who respond to it" — not everyone does.
+**What research shows:** Research from the University of Sheffield found that ASMR can reduce heart rate and increase feelings of calmness and relaxation in people who respond to it. The key phrase is "in people who respond to it." Not everyone does.
 
-For ADHD children, ASMR presents a paradox. Some children with ADHD have heightened sensory sensitivity that makes them more responsive to ASMR triggers. Others have the same sensitivity but experience these sounds as irritating or overwhelming — a response closer to misophonia (hatred of certain sounds).
+For ADHD children, ASMR presents a paradox. Some children with ADHD have heightened sensory sensitivity that makes them more responsive to ASMR triggers. Others have the same sensitivity but experience these sounds as irritating or overwhelming. This response is closer to misophonia (hatred of certain sounds).
 
-**Best for:** Children who already enjoy gentle, intimate sounds. Don't force ASMR if your child finds it uncomfortable — this is one area where individual response varies hugely.
+**Best for:** Children who already enjoy gentle, intimate sounds. Don't force ASMR if your child finds it uncomfortable. Individual response varies hugely here.
 
 ### Frequencies and Binaural Beats
 
@@ -178,13 +178,13 @@ The sounds should just... be there. Background presence that asks nothing.
 
 **2. Consistency Without Silence**
 
-ADHD brains struggle with sudden changes — including sudden silence. Sounds that work tend to be continuous without jarring variations. A consistent rain sound works. Thunder claps that interrupt every few minutes might not.
+ADHD brains struggle with sudden changes. That includes sudden silence. Sounds that work tend to be continuous without jarring variations. A consistent rain sound works. Thunder claps that interrupt every few minutes might not.
 
 **3. The Right Level of Stimulation**
 
 This is individual, but the goal is sounds that are interesting enough to occupy the seeking part of the brain without being so interesting that they capture full attention.
 
-Joel Nigg, lead author of the 2024 meta-analysis and professor at Oregon Health & Science University, explained it this way in Oregon Health & Science University, 2024 — [White, pink noise improve focus for children with ADHD](https://news.ohsu.edu/2024/08/09/white-pink-noise-improve-focus-for-children-with-adhd-ohsu-study-shows): "Our priority is identifying new and improved tools to empower each individual to live their healthiest and most productive life."
+Joel Nigg, lead author of the 2024 meta-analysis and professor at Oregon Health & Science University, explained it this way in Oregon Health & Science University, 2024: [White, pink noise improve focus for children with ADHD](https://news.ohsu.edu/2024/08/09/white-pink-noise-improve-focus-for-children-with-adhd-ohsu-study-shows): "Our priority is identifying new and improved tools to empower each individual to live their healthiest and most productive life."
 
 He noted that while additional research is needed, these results point to "a possible low-cost, low-risk approach that may benefit youths with ADHD."
 
@@ -206,7 +206,7 @@ Begin with pure white or pink noise. These have the strongest research backing a
 
 ### Watch for the Right Signs
 
-Good signs: Your child's body relaxes. Their breathing slows. They stop fidgeting as much. They might say the sound is "boring" — which is actually perfect. You want boring.
+Good signs: Your child's body relaxes. Their breathing slows. They stop fidgeting as much. They might say the sound is "boring." That's actually perfect. You want boring.
 
 Warning signs: Increased restlessness. Covering ears. Complaining that the sound is annoying. These suggest the particular sound isn't right (not that sound in general won't work).
 
@@ -218,7 +218,7 @@ If your child is highly hyperactive, you might need to experiment more carefully
 
 ### Consider Layered Sounds
 
-Some children respond well to sounds that combine elements — rain with underlying bass tones, or ocean waves with a consistent white noise layer underneath. These can provide the consistency of noise with the natural quality that some children prefer.
+Some children respond well to sounds that combine elements like rain with underlying bass tones, or ocean waves with a consistent white noise layer underneath. These can provide the consistency of noise with the natural quality that some children prefer.
 
 ### Don't Force It
 
@@ -226,7 +226,7 @@ If your child genuinely dislikes sound at bedtime, that's important information.
 
 ## Using Sound as Part of the Bigger Picture
 
-Sound isn't a magic solution. It's one tool that, for many ADHD children, addresses a specific problem — the racing brain that needs something to focus on.
+Sound isn't a magic solution. For many ADHD children, it addresses one specific problem. The racing brain needs something to focus on, and sound gives it exactly that.
 
 It works best when combined with other elements of an [ADHD bedtime routine](/adhd-bedtime-routine) that works with your child's brain rather than against it.
 
@@ -236,17 +236,17 @@ And for children whose main struggle is [racing thoughts at bedtime](/adhd-racin
 
 One caution from the researchers: volume matters. Playing sounds too loud, especially through headphones, can damage hearing over time. Studies suggest youth often listen to audio at higher volumes than adults would.
 
-Keep sound at a moderate level — audible but not dominant. Your child should be able to hear you speak over it without you raising your voice. If using headphones (for binaural beats), limit duration and keep volume low.
+Keep sound at a moderate level. It should be audible but not dominant. Your child should be able to hear you speak over it without you raising your voice. If using headphones (for binaural beats), limit duration and keep volume low.
 
 ## Finding What Works for Your Child
 
 Not every sound works for every brain. That's just the reality of ADHD.
 
-But the research is clear: for many children with ADHD, the right sound genuinely helps. It gives the brain what it's seeking — input — in a form that leads toward sleep instead of away from it.
+But the research is clear: for many children with ADHD, the right sound genuinely helps. It gives the brain the input it's been seeking, but in a form that leads toward sleep instead of away from it.
 
 And it requires zero effort from you or your child. No new habits to build. No behaviours to track. Just sound.
 
-The Open Sanctuary from HushAway® is our free collection built specifically for sensitive and neurodivergent children. Frequencies. Soundscapes. ASMR content. All designed for passive listening — no interaction required, no engagement needed.
+The Open Sanctuary from HushAway® is our free collection built specifically for sensitive and neurodivergent children. Frequencies. Soundscapes. ASMR content. All designed for passive listening. No interaction required. No engagement needed.
 
 We built it because we needed it too. Nothing else was working for our own kids.
 
@@ -264,11 +264,11 @@ For the full picture of ADHD sleep challenges and solutions, our [complete guide
 
 ### What is the best calming sound for ADHD children?
 
-Research most strongly supports white and pink noise for ADHD children. A 2024 meta-analysis found these sounds produced measurable improvements in focus and cognitive performance specifically in children with ADHD. However, individual responses vary — some children prefer the softer quality of pink noise, while others respond better to nature sounds or ASMR. The best approach is to try different options and observe your child's response.
+Research most strongly supports white and pink noise for ADHD children. A 2024 meta-analysis found these sounds produced measurable improvements in focus and cognitive performance specifically in children with ADHD. However, individual responses vary. Some children prefer the softer quality of pink noise, while others respond better to nature sounds or ASMR. The best approach is to try different options and observe your child's response.
 
 ### Does brown noise actually help ADHD?
 
-Brown noise is extremely popular on social media, with many people reporting it helps their ADHD symptoms. However, there are currently no published scientific studies specifically examining brown noise and ADHD. The 2024 meta-analysis that confirmed benefits of white and pink noise noted that no studies of brown noise were identified. Brown noise may well be helpful — it operates on similar principles — but we can't point to peer-reviewed evidence confirming this yet.
+Brown noise is extremely popular on social media, with many people reporting it helps their ADHD symptoms. However, there are currently no published scientific studies specifically examining brown noise and ADHD. The 2024 meta-analysis that confirmed benefits of white and pink noise noted that no studies of brown noise were identified. Brown noise may well be helpful because it operates on similar principles. But we can't point to peer-reviewed evidence confirming this yet.
 
 ### Why does white noise help ADHD but not neurotypical children?
 
@@ -276,8 +276,8 @@ Research shows that the same white noise that helps ADHD children can actually r
 
 ### How loud should calming sounds be for an ADHD child at bedtime?
 
-Keep the volume moderate — audible but not dominant. You should be able to speak to your child without raising your voice over the sound. Researchers caution that playing sounds too loud, especially through headphones, can damage hearing over time. For bedtime use, think "gentle background presence" rather than "immersive audio experience."
+Keep the volume moderate. It should be audible but not dominant. You should be able to speak to your child without raising your voice over the sound. Researchers caution that playing sounds too loud, especially through headphones, can damage hearing over time. For bedtime use, think "gentle background presence" rather than "immersive audio experience."
 
 ### Can ASMR sounds help ADHD children sleep?
 
-ASMR can help some ADHD children but not others. Research shows ASMR can reduce heart rate and increase calmness in people who respond to it. Some children with ADHD have heightened sensory sensitivity that makes them very responsive to ASMR triggers like whispering and tapping. However, the same sensitivity can cause other children to find these sounds irritating or uncomfortable. Pay attention to your child's response — if they find ASMR annoying or agitating, it's not the right choice for them.
+ASMR can help some ADHD children but not others. Research shows ASMR can reduce heart rate and increase calmness in people who respond to it. Some children with ADHD have heightened sensory sensitivity that makes them very responsive to ASMR triggers like whispering and tapping. However, the same sensitivity can cause other children to find these sounds irritating or uncomfortable. Pay attention to your child's response. If they find ASMR annoying or agitating, it's not the right choice for them.
