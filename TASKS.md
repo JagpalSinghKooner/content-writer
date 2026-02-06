@@ -14,8 +14,8 @@
 | Task 32: Fix Em Dashes — ADHD Sleep Article 04 | PASS |
 | Task 33: Fix Em Dashes — ADHD Sleep Article 05 | PASS |
 | Task 34: Fix Em Dashes — ADHD Sleep Article 06 | PASS |
-| Task 35: Fix Em Dashes — ADHD Sleep Article 07 | pending |
-| Task 36: Fix Em Dashes — Bedtime Routines Article 07 | pending |
+| Task 35: Fix Em Dashes — ADHD Sleep Article 07 | PASS |
+| Task 36: Fix Em Dashes — Bedtime Routines Article 07 | PASS |
 | Task 37: Apply Approved Slug Changes (28 articles) | pending |
 | Task 38: Cascade Slug References Across All Files | pending |
 | Task 39: Fix Internal Link Format (/{slug}) | pending |
@@ -34,7 +34,7 @@ Built the audit system (link-auditor agent, consistency-checker agent, audit-pil
 
 | Issue | Real Count | Source |
 |-------|:----------:|--------|
-| Em dashes | 172 across 8 article files | `grep "—"` across all articles |
+| Em dashes | ~~172~~ 0 remaining | `grep "—"` across all articles |
 | Non-compliant slugs | 28 articles | Frontmatter extraction of all 57 |
 | Internal link format wrong | ~314 links across 7 pillars | Cross-pillar summary |
 | Missing guide links | 14 articles across 4 pillars | Link auditor |
@@ -267,17 +267,24 @@ Built the audit system (link-auditor agent, consistency-checker agent, audit-pil
 **Objective:** Remove all 44 em dashes from `07-adhd-sleep-problems-guide.md` by restructuring sentences (body text) and replacing with colons (citations). This is the highest count article.
 
 **Acceptance Criteria:**
-- [ ] All 44 em dashes removed from article
-- [ ] Citation em dashes replaced with colons: `[Author], [Year]: [Title](URL)`
-- [ ] Body text em dashes restructured into separate sentences or natural alternatives (not just swapped for commas/colons)
-- [ ] Content meaning preserved — no information lost
-- [ ] Grep for "—" in file returns 0 matches
-- [ ] Git commit created
+- [x] All 44 em dashes removed from article
+- [x] Citation em dashes replaced with colons: `[Author], [Year]: [Title](URL)`
+- [x] Body text em dashes restructured into separate sentences or natural alternatives (not just swapped for commas/colons)
+- [x] Content meaning preserved — no information lost
+- [x] Grep for "—" in file returns 0 matches
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read `projects/hushaway/seo-content/adhd-sleep/articles/07-adhd-sleep-problems-guide.md`. Find all 44 em dashes (—). This is the pillar guide with the highest em dash count. Two types exist: (1) Citation format: `Research from X, 2024 — [Title](URL)` → replace `—` with `:` so it becomes `Research from X, 2024: [Title](URL)`. (2) Body text: restructure each sentence naturally per Rule 4b. Do NOT just swap em dashes for commas or colons — rewrite naturally. After all changes, run grep for "—" to verify 0 remain. Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Removed all 44 em dashes from `07-adhd-sleep-problems-guide.md`. 6 citation em dashes replaced with colons (lines 104, 118, 126, 138, 181, 213). Line 118 had two em dashes framing a citation link (University of Nottingham / Wellcome Trust) and was restructured to match the standard citation pattern with year added. 38 body text em dashes restructured: sentence splits for standalone clauses, punchy fragments for emphasis, rewording for parenthetical asides. Grep confirms 0 remain. Committed as `7b88adc`.
+- **Decisions:** Line 118 (double em dash around citation) restructured from narrative framing to standard citation format, adding the year (2011) from frontmatter. Line 145 ("That phrase — 'failure on toast' — probably resonates") inverted to lead with the quote. Line 219 (double em dash parenthetical describing input qualities) collapsed into a tighter sentence. Line 432 (double em dash parenthetical) restructured from "Starting X — condition — means Y" to "If you start X, condition, Y" pattern.
+- **Next:** Task 36 (Fix 1 em dash in Bedtime Routines Article 07, then FINAL VERIFICATION across all 8 pillars).
 
 ---
 
@@ -286,16 +293,23 @@ Built the audit system (link-auditor agent, consistency-checker agent, audit-pil
 **Objective:** Remove the 1 em dash from `07-complete-guide-bedtime-routines-neurodivergent-children.md`.
 
 **Acceptance Criteria:**
-- [ ] Em dash removed from article
-- [ ] Sentence restructured naturally (not just swapped for other punctuation)
-- [ ] Grep for "—" in file returns 0 matches
-- [ ] Final check: grep for "—" across ALL articles in entire seo-content/ directory returns 0 matches (confirms all em dashes across all pillars are now gone)
-- [ ] Git commit created
+- [x] Em dash removed from article
+- [x] Sentence restructured naturally (not just swapped for other punctuation)
+- [x] Grep for "—" in file returns 0 matches
+- [x] Final check: grep for "—" across ALL articles in entire seo-content/ directory returns 0 matches (confirms all em dashes across all pillars are now gone)
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read `projects/hushaway/seo-content/bedtime-routines/articles/07-complete-guide-bedtime-routines-neurodivergent-children.md`. Find the 1 em dash (—) and restructure the sentence naturally per Rule 4b. After fixing, run a FINAL VERIFICATION: grep for "—" across ALL article files in the entire `projects/hushaway/seo-content/` directory to confirm 0 em dashes remain in any article across all 8 pillars. Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Removed the 1 em dash from line 352 of `07-complete-guide-bedtime-routines-neurodivergent-children.md`. Restructured `"revenge bedtime procrastination" —` into a full stop followed by a new sentence. Final verification: grepped all `**/articles/*.md` files across `projects/hushaway/seo-content/`. Zero em dashes in any article across all 8 pillars (only matches were in `.validation.md` report files). Committed as `ea8120e`.
+- **Decisions:** Used full stop + new sentence ("It means staying awake...") rather than a colon, because the definition clause was long enough to stand alone.
+- **Next:** Task 37 (Apply approved slug changes to 28 articles).
 
 ---
 
