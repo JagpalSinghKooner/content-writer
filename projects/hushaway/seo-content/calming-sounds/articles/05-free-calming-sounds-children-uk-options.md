@@ -40,11 +40,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
+  - url: "/why-generic-calming-sounds-dont-work-nd-children"
     anchor: "why generic sounds often miss the mark for neurodivergent children"
-  - url: "/calming-sounds/articles/02-guide-matching-sleep-sounds-children"
+  - url: "/guide-matching-sleep-sounds-children"
     anchor: "which sleep sounds work best for different needs"
-  - url: "/calming-sounds/articles/03-parents-guide-asmr-children-research"
+  - url: "/parents-guide-asmr-children-research"
     anchor: "our complete guide to sound types"
 external_citations:
   - url: "https://www.bbc.co.uk/cbeebies/grownups/calming-sounds"
@@ -180,7 +180,7 @@ Sounds created with sensory sensitivities, processing differences, and the reali
 
 **What makes it different:**
 
-**Passive listening** means no tapping, no choices, no cognitive load. Think about what happens when your child is overwhelmed. Asking them to navigate an app, scroll through options, or make selections adds demand to an already overloaded system. The Open Sanctuary works on one principle: press play.
+**Passive listening** means no tapping, no choices, no cognitive load. Think about what happens when your child is overwhelmed. Asking them to use an app, scroll through options, or make selections adds demand to an already overloaded system. The Open Sanctuary works on one principle: press play.
 
 **Neurodivergent-first design** means the sounds were built for children who process the world differently. The National Autistic Society explains in their 2024 guidance, [Sensory Differences](https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences), that autistic people often experience sensory input differently. Sounds that seem mild to neurotypical ears can feel overwhelming or irritating to sensitive children. The Open Sanctuary was designed with these differences from the start, not as an afterthought.
 

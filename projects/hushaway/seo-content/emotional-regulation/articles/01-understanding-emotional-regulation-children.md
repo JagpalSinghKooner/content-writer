@@ -40,13 +40,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
+  - url: "/understanding-sensory-overload-children"
     anchor: "sensory overload"
-  - url: "/autistic-meltdowns/articles/01-understanding-autism-meltdowns"
+  - url: "/understanding-autism-meltdowns"
     anchor: "autistic meltdowns"
-  - url: "/adhd-sleep/articles/why-your-adhd-child-wont-sleep"
+  - url: "/why-your-adhd-child-wont-sleep"
     anchor: "ADHD and sleep difficulties"
-  - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
+  - url: "/why-generic-calming-sounds-dont-work-nd-children"
     anchor: "calming sounds designed for neurodivergent children"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4774859/"

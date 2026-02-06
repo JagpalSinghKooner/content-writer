@@ -40,13 +40,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
+  - url: "/understanding-sensory-overload-children"
     anchor: "what sensory overload actually is"
-  - url: "/sensory-overload/articles/guide-calming-sounds-sensory-overload"
+  - url: "/guide-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
-  - url: "/sensory-overload/articles/understanding-sound-sensitivity-children"
+  - url: "/understanding-sound-sensitivity-children"
     anchor: "sound sensitivity in children"
-  - url: "/sensory-overload/articles/understanding-after-school-sensory-overload"
+  - url: "/understanding-after-school-sensory-overload"
     anchor: "after-school meltdowns"
 external_citations:
   - url: "https://www.frontiersin.org/articles/10.3389/fpsyg.2020.574461/full"

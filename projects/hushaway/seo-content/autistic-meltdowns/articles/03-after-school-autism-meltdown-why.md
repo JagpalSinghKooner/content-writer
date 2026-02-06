@@ -41,13 +41,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/autistic-meltdowns/01-understanding-autism-meltdowns"
+  - url: "/understanding-autism-meltdowns"
     anchor: "what's actually happening inside their brain"
-  - url: "/autistic-meltdowns/02-what-to-play-during-meltdown"
+  - url: "/sounds-to-play-autism-meltdown"
     anchor: "what to actually play during a meltdown"
-  - url: "/autistic-meltdowns/04-meltdown-recovery"
+  - url: "/helping-child-recover-after-meltdown"
     anchor: "recovery after the meltdown"
-  - url: "/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents"
+  - url: "/complete-guide-autism-meltdowns-uk-parents"
     anchor: "complete guide to autism meltdowns"
 external_citations:
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/behaviour/meltdowns/all-audiences"
@@ -90,7 +90,7 @@ They explode because home is where they finally feel safe enough to stop pretend
 
 Think about what a school day actually costs your child's brain. Not the work. The invisible labour.
 
-Six hours of fluorescent lighting. Corridors that echo unpredictably. A timetable that changes without warning. Twenty-eight other children to navigate, read, and respond to. Sitting still when every cell wants to move. Processing instructions that come too fast, from adults who don't pause to check understanding. Filtering sounds that neurotypical children don't even notice.
+Six hours of fluorescent lighting. Corridors that echo unpredictably. A timetable that changes without warning. Twenty-eight other children to manage, read, and respond to. Sitting still when every cell wants to move. Processing instructions that come too fast, from adults who don't pause to check understanding. Filtering sounds that neurotypical children don't even notice.
 
 Research published in Autism Research, 2022: [Camouflaging in autism: A systematic review](https://pubmed.ncbi.nlm.nih.gov/35637364/) describes how many autistic individuals spend significant mental energy suppressing their natural responses and behaviours to fit into neurotypical environments. This conscious and unconscious effort to "pass" has a name: masking.
 

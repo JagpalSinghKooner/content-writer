@@ -39,9 +39,9 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
+  - url: "/why-generic-calming-sounds-dont-work-nd-children"
     anchor: "why generic calming sounds often miss the mark"
-  - url: "/calming-sounds/articles/03-parents-guide-asmr-children-research"
+  - url: "/parents-guide-asmr-children-research"
     anchor: "our full guide to sound types"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5474940/"

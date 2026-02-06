@@ -39,13 +39,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/adhd-sleep/articles/01-why-your-adhd-child-wont-sleep"
+  - url: "/why-your-adhd-child-wont-sleep"
     anchor: "ADHD sleep difficulties"
-  - url: "/adhd-sleep/articles/04-adhd-racing-thoughts"
+  - url: "/quieting-adhd-racing-thoughts-bedtime"
     anchor: "racing thoughts at night"
-  - url: "/emotional-regulation/articles/01-understanding-emotional-regulation-children"
+  - url: "/understanding-emotional-regulation-children"
     anchor: "emotional regulation"
-  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
+  - url: "/understanding-sensory-overload-children"
     anchor: "sensory overload"
 external_citations:
   - url: "https://www.sleepfoundation.org/mental-health/adhd-and-sleep"

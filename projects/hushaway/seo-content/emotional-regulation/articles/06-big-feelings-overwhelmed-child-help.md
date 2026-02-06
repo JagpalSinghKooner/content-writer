@@ -39,11 +39,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/emotional-regulation/articles/01-understanding-emotional-regulation-children"
+  - url: "/understanding-emotional-regulation-children"
     anchor: "why emotional regulation is neurological"
-  - url: "/emotional-regulation/articles/guide-calm-corner-sounds-children"
+  - url: "/guide-calm-corner-sounds-children"
     anchor: "calm corner sounds"
-  - url: "/autistic-meltdowns/articles/01-understanding-autism-meltdowns"
+  - url: "/understanding-autism-meltdowns"
     anchor: "autism meltdowns"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4774859/"

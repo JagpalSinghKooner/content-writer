@@ -39,13 +39,13 @@ schema_type: "HowTo"
 
 # Links
 internal_links:
-  - url: "/bedtime-routines/articles/01-why-bedtime-harder-neurodivergent-children"
+  - url: "/why-bedtime-harder-neurodivergent-children"
     anchor: "why bedtime is harder for neurodivergent children"
-  - url: "/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children"
+  - url: "/sound-based-bedtime-routine-nd-children"
     anchor: "sound-based bedtime routine"
-  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
+  - url: "/understanding-sensory-overload-children"
     anchor: "sensory overload"
-  - url: "/emotional-regulation/articles/01-understanding-emotional-regulation-children"
+  - url: "/understanding-emotional-regulation-children"
     anchor: "emotional regulation"
 external_citations:
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/physical-health/sleep"

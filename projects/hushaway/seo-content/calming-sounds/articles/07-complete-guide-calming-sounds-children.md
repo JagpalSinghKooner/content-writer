@@ -44,17 +44,17 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
+  - url: "/why-generic-calming-sounds-dont-work-nd-children"
     anchor: "why generic sounds fail neurodivergent children"
-  - url: "/calming-sounds/articles/02-guide-matching-sleep-sounds-children"
+  - url: "/guide-matching-sleep-sounds-children"
     anchor: "sleep sounds for children"
-  - url: "/calming-sounds/articles/03-parents-guide-asmr-children-research"
+  - url: "/parents-guide-asmr-children-research"
     anchor: "parent's guide to sound types"
-  - url: "/calming-sounds/articles/04-guide-calming-sounds-every-situation"
+  - url: "/guide-calming-sounds-every-situation"
     anchor: "calming sounds for every situation"
-  - url: "/calming-sounds/articles/05-free-calming-sounds-children-uk-options"
+  - url: "/free-calming-sounds-children-uk-options"
     anchor: "free calming sounds for children in the UK"
-  - url: "/calming-sounds/articles/06-calming-sounds-vs-music-children-difference"
+  - url: "/calming-sounds-vs-music-children-difference"
     anchor: "calming sounds versus music"
 external_citations:
   - url: "https://pubmed.ncbi.nlm.nih.gov/33879361/"

@@ -39,11 +39,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
+  - url: "/understanding-sensory-overload-children"
     anchor: "understanding sensory overload"
-  - url: "/sensory-overload/articles/02-calming-sounds-sensory-overload"
+  - url: "/guide-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
-  - url: "/sensory-overload/articles/02-calming-sounds-sensory-overload"
+  - url: "/guide-calming-sounds-sensory-overload"
     anchor: "how passive sound works"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6879775/"

@@ -39,11 +39,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
+  - url: "/why-generic-calming-sounds-dont-work-nd-children"
     anchor: "why generic calming sounds don't work"
-  - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
+  - url: "/why-generic-calming-sounds-dont-work-nd-children"
     anchor: "sounds designed for neurodivergent children"
-  - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
+  - url: "/why-generic-calming-sounds-dont-work-nd-children"
     anchor: "adapted for vs designed for"
 external_citations:
   - url: "https://pubmed.ncbi.nlm.nih.gov/29691100/"

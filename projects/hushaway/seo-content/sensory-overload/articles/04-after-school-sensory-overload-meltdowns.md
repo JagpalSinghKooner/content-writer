@@ -39,11 +39,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
+  - url: "/understanding-sensory-overload-children"
     anchor: "what sensory overload actually looks like"
-  - url: "/sensory-overload/articles/02-calming-sounds-sensory-overload"
+  - url: "/guide-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
-  - url: "/sensory-overload/articles/07-sensory-overload-recovery"
+  - url: "/recovering-sensory-overload-hours-after"
     anchor: "recovering from sensory overload"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7474833/"

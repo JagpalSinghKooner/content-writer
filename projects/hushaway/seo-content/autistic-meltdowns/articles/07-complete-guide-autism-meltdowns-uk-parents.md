@@ -43,17 +43,17 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/autistic-meltdowns/articles/01-understanding-autism-meltdowns"
+  - url: "/understanding-autism-meltdowns"
     anchor: "understanding what's actually happening during an autism meltdown"
-  - url: "/autistic-meltdowns/articles/02-what-to-play-during-meltdown"
+  - url: "/sounds-to-play-autism-meltdown"
     anchor: "our complete guide to what sounds actually help during meltdowns"
-  - url: "/autistic-meltdowns/articles/03-after-school-autism-meltdown-why"
+  - url: "/after-school-autism-meltdown-why"
     anchor: "why after-school meltdowns happen and how to help"
   - url: "/helping-child-recover-after-meltdown"
     anchor: "what actually helps your child recover after a meltdown"
   - url: "/understanding-meltdown-vs-shutdown"
     anchor: "the difference between meltdowns and shutdowns"
-  - url: "/autistic-meltdowns/articles/06-preventing-autism-meltdowns-warning-signs"
+  - url: "/preventing-autism-meltdowns-warning-signs"
     anchor: "preventing meltdowns and reading the warning signs"
 external_citations:
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/behaviour/meltdowns/all-audiences"

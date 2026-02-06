@@ -40,11 +40,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sound-therapy/01-understanding-sound-therapy-children"
+  - url: "/understanding-sound-therapy-children"
     anchor: "what sound therapy actually is"
-  - url: "/sound-therapy/01-understanding-sound-therapy-children"
+  - url: "/understanding-sound-therapy-children"
     anchor: "different types of sound therapy"
-  - url: "/sound-therapy/01-understanding-sound-therapy-children"
+  - url: "/understanding-sound-therapy-children"
     anchor: "passive listening"
 external_citations:
   - url: "https://pubmed.ncbi.nlm.nih.gov/29232055/"

@@ -42,15 +42,15 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/autistic-meltdowns/01-understanding-autism-meltdowns"
+  - url: "/understanding-autism-meltdowns"
     anchor: "what's actually happening during a meltdown"
-  - url: "/autistic-meltdowns/04-meltdown-recovery"
+  - url: "/helping-child-recover-after-meltdown"
     anchor: "the recovery period after a meltdown"
-  - url: "/autistic-meltdowns/06-preventing-meltdowns"
+  - url: "/preventing-autism-meltdowns-warning-signs"
     anchor: "using sound throughout the day to prevent build-up"
   - url: "https://www.hushaway.com/join-the-waitlist"
     anchor: "Explore The Open Sanctuary"
-  - url: "/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents"
+  - url: "/complete-guide-autism-meltdowns-uk-parents"
     anchor: "complete guide to autism meltdowns"
 external_citations:
   - url: "https://www.frontiersin.org/articles/10.3389/fpsyg.2018.01109/full"
@@ -155,7 +155,7 @@ During a meltdown, wordless is always better.
 
 ### Unpredictable Changes
 
-Any sound that shifts suddenly. Music that builds to a crescendo. Nature sounds that go from quiet to loud. Playlists that jump between different tracks. These unpredictable changes can feel threatening to an already dysregulated nervous system.
+Any sound that shifts suddenly. Music that builds to a crescendo. Nature sounds that go from quiet to loud. Playlists that jump between different tracks. These unpredictable changes can feel threatening to an already overwhelmed nervous system.
 
 Consistency is everything. If the sound changes, even positively, it's another thing the brain has to process.
 

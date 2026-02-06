@@ -41,11 +41,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/calming-sounds-sensory-overload"
+  - url: "/guide-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
-  - url: "/sensory-overload/after-school-sensory-overload"
+  - url: "/understanding-after-school-sensory-overload"
     anchor: "after-school sensory overload"
-  - url: "/sensory-overload/sound-sensitivity-children"
+  - url: "/understanding-sound-sensitivity-children"
     anchor: "sound sensitivity in children"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6879775/"
@@ -243,7 +243,7 @@ This speed exists because, evolutionarily, sound was our early warning system. W
 
 The auditory nerve connects directly to the brainstem, which controls our automatic survival responses. It has rapid pathways to the amygdala and limbic system, the emotional centres of the brain. It also connects to the vagus nerve, which regulates our calm-down response.
 
-This means sound has a direct line to the parts of the brain that control how regulated or dysregulated we feel.
+This means sound has a direct line to the parts of the brain that control how regulated or overwhelmed we feel.
 
 Put simply: sound reaches the emotional brain faster than anything else. And that's both the problem and the solution.
 
@@ -326,7 +326,7 @@ When your child is in full sensory overload, their thinking brain is offline. Th
 
 What helps:
 - Reduce sensory input immediately (dim lights, reduce noise, create space)
-- Stay calm yourself (your dysregulation will increase theirs)
+- Stay calm yourself (your stress will increase theirs)
 - Provide a safe space if possible
 - Minimise demands (don't ask questions or give instructions)
 - Offer, but don't force, comfort

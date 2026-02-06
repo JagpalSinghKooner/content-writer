@@ -39,11 +39,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/emotional-regulation/articles/01-understanding-emotional-regulation-children"
+  - url: "/understanding-emotional-regulation-children"
     anchor: "emotional regulation in children"
-  - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
+  - url: "/why-generic-calming-sounds-dont-work-nd-children"
     anchor: "why generic calming sounds often fail neurodivergent children"
-  - url: "/calming-sounds/articles/04-guide-calming-sounds-every-situation"
+  - url: "/guide-calming-sounds-every-situation"
     anchor: "calming sounds for different situations"
 external_citations:
   - url: "https://www.zonesofregulation.com/learn-more.html"

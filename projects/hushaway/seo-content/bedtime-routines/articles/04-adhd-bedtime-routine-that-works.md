@@ -39,11 +39,11 @@ schema_type: "HowTo"
 
 # Links
 internal_links:
-  - url: "/bedtime-routines/articles/01-why-bedtime-harder-neurodivergent-children"
+  - url: "/why-bedtime-harder-neurodivergent-children"
     anchor: "why bedtime is harder for neurodivergent children"
-  - url: "/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children"
+  - url: "/sound-based-bedtime-routine-nd-children"
     anchor: "sound-based bedtime routine"
-  - url: "/calming-sounds/articles/03-parents-guide-asmr-children-research"
+  - url: "/parents-guide-asmr-children-research"
     anchor: "guide to sound types"
 external_citations:
   - url: "https://www.sleepfoundation.org/mental-health/adhd-and-sleep"

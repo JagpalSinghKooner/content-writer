@@ -40,11 +40,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/emotional-regulation/articles/01-understanding-emotional-regulation-children"
+  - url: "/understanding-emotional-regulation-children"
     anchor: "emotional regulation in children"
-  - url: "/emotional-regulation/articles/guide-calm-corner-sounds-children"
+  - url: "/guide-calm-corner-sounds-children"
     anchor: "calm corner sounds"
-  - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
+  - url: "/why-generic-calming-sounds-dont-work-nd-children"
     anchor: "calming sounds designed for neurodivergent children"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3680170/"

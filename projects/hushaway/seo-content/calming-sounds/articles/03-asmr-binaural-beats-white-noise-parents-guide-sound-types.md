@@ -41,11 +41,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
+  - url: "/why-generic-calming-sounds-dont-work-nd-children"
     anchor: "why generic calming sounds don't work for neurodivergent children"
-  - url: "/calming-sounds/articles/02-guide-matching-sleep-sounds-children"
+  - url: "/guide-matching-sleep-sounds-children"
     anchor: "matching sounds to your child's specific sleep problem"
-  - url: "/sensory-overload/articles/understanding-sound-sensitivity-children"
+  - url: "/understanding-sound-sensitivity-children"
     anchor: "sound sensitivity in children"
 external_citations:
   - url: "https://pubmed.ncbi.nlm.nih.gov/30311830/"

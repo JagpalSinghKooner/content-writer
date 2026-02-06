@@ -39,11 +39,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
+  - url: "/understanding-sensory-overload-children"
     anchor: "sensory overload guide"
-  - url: "/sensory-overload/articles/guide-calming-sounds-sensory-overload"
+  - url: "/guide-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
-  - url: "/sensory-overload/articles/07-sensory-overload-recovery"
+  - url: "/recovering-sensory-overload-hours-after"
     anchor: "recovering from sensory overload"
 external_citations:
   - url: "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2017.00118/full"

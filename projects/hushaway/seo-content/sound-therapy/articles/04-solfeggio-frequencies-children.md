@@ -39,11 +39,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sound-therapy/01-understanding-sound-therapy-children"
+  - url: "/understanding-sound-therapy-children"
     anchor: "understanding sound therapy for children"
-  - url: "/sound-therapy/03-safety-guide-binaural-beats-children"
+  - url: "/safety-guide-binaural-beats-children"
     anchor: "binaural beats for children"
-  - url: "/sound-therapy/02-does-sound-therapy-work"
+  - url: "/evidence-does-sound-therapy-work"
     anchor: "sound therapy evidence guide"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6979038/"

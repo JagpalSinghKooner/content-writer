@@ -43,17 +43,17 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sound-therapy/01-understanding-sound-therapy-children"
+  - url: "/understanding-sound-therapy-children"
     anchor: "understanding sound therapy for children"
-  - url: "/sound-therapy/02-does-sound-therapy-work"
+  - url: "/evidence-does-sound-therapy-work"
     anchor: "what the evidence actually says"
-  - url: "/sound-therapy/03-safety-guide-binaural-beats-children"
+  - url: "/safety-guide-binaural-beats-children"
     anchor: "binaural beats for children"
-  - url: "/sound-therapy/04-solfeggio-frequencies-children"
+  - url: "/understanding-solfeggio-frequencies-children"
     anchor: "solfeggio frequencies for children"
-  - url: "/sound-therapy/05-sound-therapy-at-home"
+  - url: "/parents-guide-sound-therapy-at-home"
     anchor: "sound therapy at home"
-  - url: "/sound-therapy/06-parents-guide-sound-vs-music-therapy"
+  - url: "/parents-guide-sound-vs-music-therapy"
     anchor: "sound therapy versus music therapy"
 external_citations:
   - url: "https://pubmed.ncbi.nlm.nih.gov/33041752/"

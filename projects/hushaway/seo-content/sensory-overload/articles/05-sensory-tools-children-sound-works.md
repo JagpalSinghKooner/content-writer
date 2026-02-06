@@ -38,11 +38,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
+  - url: "/understanding-sensory-overload-children"
     anchor: "sensory overload actually is"
-  - url: "/sensory-overload/articles/02-calming-sounds-sensory-overload"
+  - url: "/guide-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
-  - url: "/sensory-overload/articles/03-after-school-sensory-overload"
+  - url: "/understanding-after-school-sensory-overload"
     anchor: "after-school meltdowns"
 external_citations:
   - url: "https://www.frontiersin.org/articles/10.3389/fnins.2020.00576/full"
@@ -143,7 +143,7 @@ Here's an honest look at the most popular sensory tools for children. When they 
 - During overload when jaw muscles are tense
 - When the child has oral sensitivities
 - When anything touching the face feels intolerable
-- When gagging or choking risk increases with dysregulation
+- When gagging or choking risk increases with overwhelm
 
 **The limitation:** Chewing requires coordinated movement and often feels wrong when the body is already in distress.
 

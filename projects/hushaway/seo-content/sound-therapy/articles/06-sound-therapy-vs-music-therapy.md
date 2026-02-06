@@ -41,11 +41,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sound-therapy/01-understanding-sound-therapy-children"
+  - url: "/understanding-sound-therapy-children"
     anchor: "understanding the different types of sound therapy"
-  - url: "/sound-therapy/02-does-sound-therapy-work"
+  - url: "/evidence-does-sound-therapy-work"
     anchor: "evidence supporting both approaches"
-  - url: "/sound-therapy/01-understanding-sound-therapy-children"
+  - url: "/understanding-sound-therapy-children"
     anchor: "what sound therapy actually involves"
 external_citations:
   - url: "https://www.musictherapy.org/about/quotes/"
@@ -156,7 +156,7 @@ Music therapy works particularly well when your child:
 
 If your child lights up when music comes on, loves instruments, or connects well with adults, music therapy might be brilliant for them. The active engagement is a feature, not a bug. It provides structure, relationship, and purposeful activity.
 
-Music therapy also offers something sound therapy can't: the therapeutic relationship itself. For some children, that connection with a caring professional is transformative.
+Music therapy also offers something sound therapy can't: the therapeutic relationship itself. For some children, that connection with a caring professional changes everything.
 
 ## When Sound Therapy Might Be the Better Choice
 

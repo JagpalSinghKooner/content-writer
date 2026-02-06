@@ -39,11 +39,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/bedtime-routines/articles/01-why-bedtime-harder-neurodivergent-children"
+  - url: "/why-bedtime-harder-neurodivergent-children"
     anchor: "why bedtime is harder for neurodivergent children"
-  - url: "/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children"
+  - url: "/sound-based-bedtime-routine-nd-children"
     anchor: "sound-based bedtime routine"
-  - url: "/bedtime-routines/articles/05-autism-bedtime-routine-predictability-calm"
+  - url: "/autism-bedtime-routine-predictability-calm"
     anchor: "autism bedtime routine"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6361831/"

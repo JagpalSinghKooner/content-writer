@@ -38,6 +38,7 @@
 | Task 29: Execute App Comparisons Pillar | PASS |
 | Task 37: Update Frontmatter Slugs (28 Articles) | PASS |
 | Task 38: Cascade Slug References to New Slugs | PASS |
+| Task 44: Fix Frontmatter internal_links URL Format | PASS |
 
 ---
 
@@ -1370,6 +1371,43 @@
 
 ---
 
+## Task 44: Fix Frontmatter internal_links URL Format
+
+**Objective:** Change all frontmatter `internal_links` `url:` fields from directory-structure format (`/pillar/articles/slug`) to `/{slug}` format across all 8 pillars.
+
+**Acceptance Criteria:**
+- [x] All sensory-overload articles fixed (8 articles, 22 URL changes)
+- [x] All autistic-meltdowns articles fixed (7 articles, 26 URL changes)
+- [x] All sound-therapy articles fixed (7 articles, 21 URL changes)
+- [x] All emotional-regulation articles fixed (7 articles, 24 URL changes)
+- [x] All bedtime-routines articles fixed (7 articles, 22 URL changes)
+- [x] All calming-sounds articles fixed (7 articles, 20 URL changes)
+- [x] Verification grep confirms 0 directory-format URLs remain in any article
+- [x] External links (https://) not modified
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Fixed 135 directory-format URLs across 43 articles in 6 pillars. The adhd-sleep and app-comparisons pillars already had correct `/{slug}` format. Every `url:` field inside `internal_links:` YAML blocks now uses the `/{slug}` format matching the target article's frontmatter slug.
+- **Decisions:**
+  - Scope expanded beyond originally specified 4 pillars: bedtime-routines and calming-sounds articles also had directory-format cross-pillar references that needed fixing
+  - Old slug variants (with file number prefixes like `01-`, `02-`) were mapped to the correct current slug from each article's frontmatter
+  - External links (`https://` URLs) left untouched
+  - Body text links were not changed (only frontmatter `internal_links` url: fields)
+- **Changes per pillar:**
+  - sensory-overload: 8 articles, 22 URL changes
+  - autistic-meltdowns: 7 articles, 26 URL changes
+  - sound-therapy: 7 articles, 21 URL changes
+  - emotional-regulation: 7 articles, 24 URL changes
+  - bedtime-routines: 7 articles, 22 URL changes
+  - calming-sounds: 7 articles, 20 URL changes
+  - **Total: 43 articles, 135 URL changes**
+- **Next:** All frontmatter internal links now use correct `/{slug}` format. No further URL format fixes needed.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-06 (Task 38 Cascade Slug References PASS)*
+*Last updated: 2026-02-06 (Task 44 Fix Frontmatter internal_links URL Format PASS)*
 *ALL 8 PILLARS COMPLETE*

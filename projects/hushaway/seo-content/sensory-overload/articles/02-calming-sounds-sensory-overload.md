@@ -39,11 +39,11 @@ schema_type: "HowTo"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
+  - url: "/understanding-sensory-overload-children"
     anchor: "what sensory overload actually is"
-  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
+  - url: "/understanding-sensory-overload-children"
     anchor: "the signs of sensory overload"
-  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
+  - url: "/understanding-sensory-overload-children"
     anchor: "the auditory system's role in regulation"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5618809/"

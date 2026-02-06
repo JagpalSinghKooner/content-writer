@@ -41,13 +41,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/autistic-meltdowns/02-what-to-play-during-meltdown"
+  - url: "/sounds-to-play-autism-meltdown"
     anchor: "what to actually play during a meltdown"
-  - url: "/autistic-meltdowns/05-meltdown-vs-shutdown"
+  - url: "/understanding-meltdown-vs-shutdown"
     anchor: "meltdowns and shutdowns are different"
-  - url: "/autistic-meltdowns/06-preventing-meltdowns"
+  - url: "/preventing-autism-meltdowns-warning-signs"
     anchor: "preventing meltdowns before they start"
-  - url: "/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents"
+  - url: "/complete-guide-autism-meltdowns-uk-parents"
     anchor: "complete guide to autism meltdowns"
 external_citations:
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/behaviour/meltdowns/all-audiences"

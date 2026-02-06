@@ -39,17 +39,17 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/bedtime-routines/articles/01-why-bedtime-harder-neurodivergent-children"
+  - url: "/why-bedtime-harder-neurodivergent-children"
     anchor: "why bedtime is harder for neurodivergent children"
-  - url: "/bedtime-routines/articles/02-sound-based-bedtime-routine-nd-children"
+  - url: "/sound-based-bedtime-routine-nd-children"
     anchor: "sound-based bedtime routine"
-  - url: "/bedtime-routines/articles/03-visual-bedtime-routine-neurodivergent-children"
+  - url: "/visual-bedtime-routine-neurodivergent-children"
     anchor: "visual bedtime routine"
-  - url: "/bedtime-routines/articles/04-sound-anchored-adhd-bedtime-routine"
+  - url: "/sound-anchored-adhd-bedtime-routine"
     anchor: "ADHD bedtime routine"
-  - url: "/bedtime-routines/articles/05-autism-bedtime-routine-predictability-calm"
+  - url: "/autism-bedtime-routine-predictability-calm"
     anchor: "autism bedtime routine"
-  - url: "/bedtime-routines/articles/06-bedtime-anxiety-sound-calm-answer"
+  - url: "/bedtime-anxiety-sound-calm-answer"
     anchor: "bedtime anxiety"
 external_citations:
   - url: "https://www.sleepfoundation.org/mental-health/adhd-and-sleep"
@@ -178,7 +178,7 @@ Sound requires nothing. Just press play.
 
 No interaction. No choices. No demands. No more "can you try deep breathing with me?" when they're already past the point of following instructions. Sound works on the nervous system without asking anything in return.
 
-This is what we call passive listening. And for exhausted, overwhelmed, or dysregulated children, passive input is the only input that gets through.
+This is what we call passive listening. And for exhausted or overwhelmed children, passive input is the only input that gets through.
 
 For exhausted parents? It's the only input that doesn't require you to do one more thing perfectly.
 

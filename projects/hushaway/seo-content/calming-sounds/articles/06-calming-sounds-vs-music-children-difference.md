@@ -39,11 +39,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
+  - url: "/why-generic-calming-sounds-dont-work-nd-children"
     anchor: "why generic calming sounds often miss the mark for neurodivergent children"
-  - url: "/calming-sounds/articles/03-parents-guide-asmr-children-research"
+  - url: "/parents-guide-asmr-children-research"
     anchor: "our guide to different sound types"
-  - url: "/sensory-overload/articles/guide-calming-sounds-sensory-overload"
+  - url: "/guide-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
 external_citations:
   - url: "https://pubmed.ncbi.nlm.nih.gov/23727882/"

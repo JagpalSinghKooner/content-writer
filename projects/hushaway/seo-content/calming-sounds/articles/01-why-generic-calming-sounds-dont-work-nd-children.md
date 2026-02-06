@@ -39,11 +39,11 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
+  - url: "/understanding-sensory-overload-children"
     anchor: "how sensory overload actually works"
-  - url: "/sensory-overload/articles/understanding-sound-sensitivity-children"
+  - url: "/understanding-sound-sensitivity-children"
     anchor: "sound sensitivity in children"
-  - url: "/sensory-overload/articles/guide-calming-sounds-sensory-overload"
+  - url: "/guide-calming-sounds-sensory-overload"
     anchor: "calming sounds for sensory overload"
 external_citations:
   - url: "https://pubmed.ncbi.nlm.nih.gov/34285267/"

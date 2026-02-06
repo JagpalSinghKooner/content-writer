@@ -40,13 +40,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/emotional-regulation/articles/01-understanding-emotional-regulation-children"
+  - url: "/understanding-emotional-regulation-children"
     anchor: "emotional regulation in children"
-  - url: "/adhd-sleep/articles/why-your-adhd-child-wont-sleep"
+  - url: "/why-your-adhd-child-wont-sleep"
     anchor: "ADHD sleep struggles"
-  - url: "/adhd-sleep/articles/04-adhd-racing-thoughts"
+  - url: "/quieting-adhd-racing-thoughts-bedtime"
     anchor: "racing thoughts at bedtime"
-  - url: "/adhd-sleep/articles/best-calming-sounds-adhd-children"
+  - url: "/best-calming-sounds-adhd-children"
     anchor: "calming sounds for ADHD"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4282137/"

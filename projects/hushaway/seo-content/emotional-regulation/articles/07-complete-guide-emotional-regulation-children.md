@@ -43,25 +43,25 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/emotional-regulation/articles/01-understanding-emotional-regulation-children"
+  - url: "/understanding-emotional-regulation-children"
     anchor: "why emotional regulation is neurological"
-  - url: "/emotional-regulation/articles/02-emotional-regulation-autistic-children"
+  - url: "/guide-emotional-regulation-autistic-children"
     anchor: "emotional regulation for autistic children"
-  - url: "/emotional-regulation/articles/tools-emotional-regulation-adhd-children"
+  - url: "/tools-emotional-regulation-adhd-children"
     anchor: "emotional regulation for ADHD children"
-  - url: "/emotional-regulation/articles/guide-calm-corner-sounds-children"
+  - url: "/guide-calm-corner-sounds-children"
     anchor: "calm corner sounds"
-  - url: "/emotional-regulation/articles/05-co-regulation-through-sound-parent-child"
+  - url: "/co-regulation-through-sound-parent-child"
     anchor: "co-regulation through sound"
-  - url: "/emotional-regulation/articles/06-big-feelings-overwhelmed-child-help"
+  - url: "/big-feelings-overwhelmed-child-help"
     anchor: "big feelings and overwhelm"
-  - url: "/adhd-sleep/articles/why-your-adhd-child-wont-sleep"
+  - url: "/why-your-adhd-child-wont-sleep"
     anchor: "ADHD sleep struggles"
-  - url: "/sensory-overload/articles/understanding-sensory-overload-children"
+  - url: "/understanding-sensory-overload-children"
     anchor: "sensory overload"
-  - url: "/autistic-meltdowns/articles/01-understanding-autism-meltdowns"
+  - url: "/understanding-autism-meltdowns"
     anchor: "autistic meltdowns"
-  - url: "/calming-sounds/articles/07-complete-guide-calming-sounds-children"
+  - url: "/complete-guide-calming-sounds-children"
     anchor: "complete guide to calming sounds"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4774859/"
@@ -173,7 +173,7 @@ We already know sound helps. We've just never put it at the centre of the regula
 
 ## Understanding Emotional Regulation: The Neurological Reality
 
-Before we go further, let's get clear on what emotional regulation actually means. And more importantly, what it isn't.
+Before we go further, let's get clear on what emotional regulation actually means. And what it isn't.
 
 Emotional regulation is your nervous system's ability to manage feelings, process stress, and return to a calm baseline. It's not about suppressing emotions. It's not about never getting upset. It's not about being "good."
 
@@ -507,7 +507,7 @@ Sound-based regulation is compatible with and complementary to:
 - Medication management (where appropriate)
 - Educational accommodations
 
-The goal isn't to replace professional support. It's to have tools that help your family today, while you navigate the often lengthy pathways to formal assessment and intervention.
+The goal isn't to replace professional support. It's to have tools that help your family today, during the often lengthy wait for formal assessment and intervention.
 
 Because waiting lists are long. And your child needs help now.
 

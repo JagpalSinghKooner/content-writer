@@ -40,13 +40,13 @@ schema_type: "Article"
 
 # Links
 internal_links:
-  - url: "/autistic-meltdowns/articles/01-understanding-autism-meltdowns"
+  - url: "/understanding-autism-meltdowns"
     anchor: "the sensory bucket"
-  - url: "/autistic-meltdowns/articles/02-what-to-play-during-meltdown"
+  - url: "/sounds-to-play-autism-meltdown"
     anchor: "what sounds work during a meltdown"
   - url: "/helping-child-recover-after-meltdown"
     anchor: "how to support recovery after a meltdown"
-  - url: "/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents"
+  - url: "/complete-guide-autism-meltdowns-uk-parents"
     anchor: "complete guide to autism meltdowns"
 external_citations:
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/behaviour/meltdowns/all-audiences"
