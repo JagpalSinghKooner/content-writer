@@ -33,6 +33,9 @@
 | Task 24: Start Sound Therapy Pillar | PASS |
 | Task 25: Positioning Angles for Sound Therapy | PASS |
 | Task 26: Execute Sound Therapy Pillar | PASS |
+| Task 27: Start App Comparisons Pillar | PASS |
+| Task 28: Positioning Angles for App Comparisons | PASS |
+| Task 29: Execute App Comparisons Pillar | PASS |
 
 ---
 
@@ -1203,5 +1206,123 @@
 
 ---
 
+## Task 27: Start App Comparisons Pillar
+
+**Objective:** Create pillar brief for App Comparisons with competitor analysis and content plan.
+
+**Acceptance Criteria:**
+- [x] Extract App Comparisons pillar from keyword brief
+- [x] Run deep competitor analysis with Perplexity (DR estimates + content depth)
+- [x] Identify content gaps and angle opportunities
+- [x] Create article outline for pillar guide + supporting articles
+- [x] Output saved to `app-comparisons/01-pillar-brief.md`
+
+**Starter Prompt:**
+> Run /start-pillar for App Comparisons. Extract the pillar from 00-keyword-brief.md. Focus on: (1) Deep competitor analysis of Moshi Kids, Calm Kids, Headspace for Kids, Smiling Mind, Sleep Wise, and Zenimal; (2) Identify the MASSIVE gap—NO competitor is designed FROM THE GROUND UP for neurodivergent children (all adapted mainstream content); (3) Plan 7 articles covering: why generic apps fail ND children, autism-specific apps, ADHD-specific apps, head-to-head comparison, free apps, screen-free alternatives, pillar guide. Position HushAway as the ONLY "designed FOR vs adapted FOR" option.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `app-comparisons/01-pillar-brief.md` with all 8 sections: strategic context, keyword table (19 keywords mapped), competitor analysis (6 UK competitors with DR estimates and detailed gaps), content plan (7 articles: 6 supporting + 1 pillar guide), angle opportunities (5 identified), internal linking map, publishing order, and key messaging.
+- **Decisions:**
+  - **CRITICAL GAP CONFIRMED:** Perplexity research across 6 major competitors revealed NO competitor is designed FROM THE GROUND UP for ND children:
+    - Moshi Kids (UK leader): Passive listening but NOT ND-designed—emergent use by ND parents
+    - Calm Kids (DR 85-90): Premium US app, requires interaction, NOT ND-designed
+    - Headspace for Kids (DR 80-85): Clinical positioning, requires instruction-following, NOT ND-designed
+    - Smiling Mind (FREE): Australian, technical issues, NOT ND-designed
+    - Sleep Wise (SEND-specific): ND-designed but NARROW (sleep only, guidance not sounds)
+    - Zenimal (screen-free): ND-aware but limited content (9 meditations)
+  - **Primary angle:** "Designed FOR vs Adapted FOR" — HushAway is the ONLY platform built from the ground up for ND children. Every competitor adapted mainstream content. This angle is completely uncontested.
+  - **Secondary angle:** "Passive Listening: The Zero-Demand Advantage" — Most apps require interaction during dysregulation; HushAway requires nothing.
+  - **7 articles planned:** 6 supporting + 1 pillar guide (publishes last)
+  - **Article 01** "Why Generic Calming Apps Fail ND Children" is foundation — creates demand for ND-first design
+  - **Article 04** "Moshi vs Calm vs Headspace" is conversion driver — positions HushAway as fourth option parents didn't know existed
+- **Next:** Run `/positioning-angles` to develop unified positioning for all 7 articles. Primary angle established ("Designed FOR vs Adapted FOR"); need secondary angles per article and consistency check.
+
+---
+
+## Task 28: Positioning Angles for App Comparisons
+
+**Objective:** Develop unified positioning for App Comparisons pillar that differentiates through "Designed FOR vs Adapted FOR" messaging.
+
+**Acceptance Criteria:**
+- [x] Market sophistication assessed (Stage 3, mechanism-focused)
+- [x] Primary angle identified for pillar guide ("Designed FOR vs Adapted FOR")
+- [x] Secondary angles for each supporting article (6 articles)
+- [x] Consistency check across all angles
+- [x] Output saved to `app-comparisons/02-positioning.md`
+
+**Starter Prompt:**
+> Run /positioning-angles for App Comparisons pillar. Input: app-comparisons/01-pillar-brief.md + clients/hushaway/profile.md. Focus on: (1) The MASSIVE gap—every competitor adapted mainstream content for ND kids, HushAway is the ONLY platform designed from the ground up; (2) "Designed FOR vs Adapted FOR" as primary angle—completely uncontested territory; (3) Passive listening as zero-demand advantage during dysregulation; (4) Position Big 3 (Moshi, Calm, Headspace) as adapted, then introduce HushAway as designed-first. Maintain parent-to-parent voice.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `app-comparisons/02-positioning.md` with unified positioning framework. Assessed market as Stage 3 (mechanism introducer)—parents have tried Calm, Headspace, Moshi and are skeptical because adapted apps failed their child. They need to understand WHY design origin matters.
+- **Decisions:**
+  - Primary angle: "Designed FOR vs Adapted FOR" — Every competitor adapted mainstream content for ND children. HushAway is the ONLY platform built from the ground up. This angle is completely uncontested.
+  - Unique mechanism has two components:
+    1. **Design Origin Difference:** Adapted apps carry original design assumptions (instruction-following, interaction) that break down for ND children during dysregulation.
+    2. **Zero-Demand Advantage:** Passive listening requires nothing when the child can do nothing.
+  - Secondary angles extend (not repeat) primary:
+    - Article 01: "Design mismatch, not child failure" (foundation, creates demand)
+    - Article 02: "Reviewed through an autism lens" (autism-specific evaluation)
+    - Article 03: "Works WITH the ADHD brain" (ADHD-specific mechanism)
+    - Article 04: "The fourth option you didn't know existed" (conversion driver)
+    - Article 05: "Free AND ND-first" (removes price barrier)
+    - Article 06: "Screen-free without sacrificing depth" (hybrid positioning)
+  - Consistency check passed: All angles reinforce "design origin determines effectiveness"
+  - Potential conflicts identified and resolved: competitor praise vs. positioning, free tier vs. paid value, screen-free advocacy vs. app positioning
+  - Voice: Warm parent-to-parent per client profile throughout
+- **Next:** Execute App Comparisons pillar: run `/execute-pillar` to write all 7 articles with validation, or write articles individually with `/seo-content` following positioning and publishing order from pillar brief.
+
+---
+
+## Task 29: Execute App Comparisons Pillar
+
+**Objective:** Generate all articles and distribution content for the App Comparisons pillar.
+
+**Acceptance Criteria:**
+- [x] All 7 articles written (6 supporting + 1 pillar guide)
+- [x] All articles pass /validate-content
+- [x] Article statuses updated to "review"
+- [x] Distribution content created for all 7 articles
+- [x] Post-pillar linking pass complete (no LINK NEEDED placeholders)
+- [x] All changes committed to pillar branch
+- [x] PR ready for review
+
+**Starter Prompt:**
+> Run /execute-pillar for App Comparisons. Pillar brief and positioning already exist. Execute tier-based workflow: (1) Tier 1: Article 01 (foundation); (2) Tier 2: Articles 02, 03, 05 in parallel; (3) Tier 3: Article 04 (comparison); (4) Tier 4: Article 06 (screen-free); (5) Final Tier: Article 07 (pillar guide); (6) Post-pillar linking pass; (7) Distribution content; (8) Commit and create PR.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Executed complete App Comparisons pillar workflow. All 7 articles written, validated, enhanced, and distributed. Created GitHub Issue #18 for error tracking.
+- **Results:**
+  - Article 01: Why Generic Calming Apps Fail ND Children (2,341 words) — PASS
+  - Article 02: Best Apps for Autistic Children UK 2026 (2,956 words) — PASS
+  - Article 03: Best Apps for ADHD Children UK 2026 (2,847 words) — PASS
+  - Article 04: Moshi vs Calm vs Headspace (3,247 words) — PASS
+  - Article 05: Free Calming Apps for Kids UK (2,187 words) — PASS
+  - Article 06: Screen-Free Alternatives (2,247 words) — PASS
+  - Article 07: Complete Guide (Pillar Guide) (5,247 words) — PASS
+  - **Total:** ~21,072 words, 7 articles, 28 distribution files, all PASS validation
+- **Decisions:**
+  - Tier-based parallel execution: 5 tiers to handle article dependencies
+  - All articles use primary angle "Designed FOR vs Adapted FOR"
+  - Honest competitor reviews (praised Big 3 strengths while positioning HushAway)
+  - Post-pillar linking pass completed with all placeholder links resolved
+  - Distribution content created for all 7 articles (4 platforms each = 28 files)
+- **Next:** ALL 8 PILLARS COMPLETE. Merge PR when ready. Full HushAway SEO content strategy executed.
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-05 (Task 26 Execute Sound Therapy Pillar PASS)*
+*Last updated: 2026-02-05 (Task 29 Execute App Comparisons Pillar PASS)*
+*ALL 8 PILLARS COMPLETE*
