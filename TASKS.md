@@ -16,7 +16,7 @@
 | Task 25c: Audit Sensory Overload (Validate Only) | PASS |
 | Task 25d: Audit Calming Sounds (Validate Only) | PASS |
 | Task 25e: Audit Emotional Regulation (Validate Only) | pending |
-| Task 25f: Audit Bedtime Routines (Validate Only) | pending |
+| Task 25f: Audit Bedtime Routines (Validate Only) | PASS |
 | Task 25g: Audit Sound Therapy + Cross-Pillar Summary | pending |
 | Task 26: Auto-Fix All Pillars + Extract Patterns | pending |
 
@@ -387,18 +387,25 @@
 **Objective:** Run validation-only audit on the Bedtime Routines pillar (7 articles).
 
 **Acceptance Criteria:**
-- [ ] `/audit-pillar bedtime-routines` completes without errors
-- [ ] `audit-summary.md` created at `projects/hushaway/seo-content/bedtime-routines/audit-summary.md`
-- [ ] All 7 articles validated with correct PASS/FAIL counts
-- [ ] Link audit completed
-- [ ] Citation URL validation completed
-- [ ] Cross-article consistency checked
-- [ ] Issues documented in handoff for auto-fix planning
+- [x] `/audit-pillar bedtime-routines` completes without errors
+- [x] `audit-summary.md` created at `projects/hushaway/seo-content/bedtime-routines/audit-summary.md`
+- [x] All 7 articles validated with correct PASS/FAIL counts
+- [x] Link audit completed
+- [x] Citation URL validation completed
+- [x] Cross-article consistency checked
+- [x] Issues documented in handoff for auto-fix planning
 
 **Starter Prompt:**
 > Run `/audit-pillar bedtime-routines` to validate the Bedtime Routines pillar (7 articles). Validation-only mode (no --fix). Verify audit-summary.md is created with all required sections. Document all issues found. Commit audit-summary.md. Update TASKS.md with results.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Ran full 8-phase audit on Bedtime Routines pillar (7 articles, 20,506 words). Phase 2: 7 content-validator agents in parallel (5 PASS, 2 FAIL). Phase 3: link-auditor agent found 56 format violations + 2 missing bidirectional guide links. Phase 4: 15 citation URLs checked (7 working, 5 WARN from NCBI/PMC 403 bot-blocking, 4 FAIL from PubMed/NAS/SleepFoundation 404). Phase 5: consistency-checker agent returned PASS (0 terminology issues, 0 conflicting claims, all 7 articles Strong positioning alignment). Phase 6: audit-summary.md written with all required sections. Commit `5a59e1e`.
+- **Decisions:** All 7 articles FAIL primarily due to systematic internal link format violations (56 instances using `/bedtime-routines/articles/{slug}` or `/{pillar}/articles/{slug}` instead of `/{slug}`). 5 NCBI/PMC 403s marked WARN (bot-blocking, not broken). Content quality is excellent: no banned AI words, no em dashes, all positioning Strong, statistics consistent across articles. Only 2 articles (03, 07) caught by validators for link format; others missed it. 1 slug mismatch: Art 01 references `/adhd-sleep/articles/04-adhd-racing-thoughts` but actual slug is `quieting-adhd-racing-thoughts-bedtime`.
+- **Next:** Task 25g (Audit Sound Therapy + Cross-Pillar Summary). For Task 26 (auto-fix): All 7 articles need link format fix (`/{slug}` only). 12 cross-pillar links also need format fix. 2 articles (04, 05) need bidirectional guide links added. 4 broken citation URLs need replacement: PubMed 25928655 (Art 02), NAS visual-supports (Art 03), PubMed 28838255 (Art 03), SleepFoundation separation-anxiety (Art 06). 1 slug mismatch in cross-pillar link needs correction (Art 01).
 
 ---
 
