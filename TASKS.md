@@ -12,9 +12,10 @@
 | Task 48: Create branch + Move non-rules out of `rules/` | PASS |
 | Task 49: Trim `workflow.md` | PASS |
 | Task 50: Verify Steps 1-2 (Hard Stop) | PASS |
-| Task 51: Trim `universal-rules.md` | pending |
-| Task 52: Slim `CLAUDE.md` | pending |
-| Task 53: Final verification + PR | pending |
+| Task 51: Trim `universal-rules.md` | PASS |
+| Task 52: Slim `CLAUDE.md` | PASS |
+| Task 53: Final verification + PR | PASS |
+| Task 54: Convert tables to lists | pending |
 
 ### Execution Rules
 
@@ -107,9 +108,9 @@ Full plan documented in `file-cleanup.md` (project root). Goal: reduce auto-load
 | Task 48: Create branch + Move non-rules out of `rules/` | PASS |
 | Task 49: Trim `workflow.md` | PASS |
 | Task 50: Verify Steps 1-2 (Hard Stop) | PASS |
-| Task 51: Trim `universal-rules.md` | pending |
-| Task 52: Slim `CLAUDE.md` | pending |
-| Task 53: Final verification + PR | pending |
+| Task 51: Trim `universal-rules.md` | PASS |
+| Task 52: Slim `CLAUDE.md` | PASS |
+| Task 53: Final verification + PR | PASS |
 
 ### Execution Rules
 
@@ -410,17 +411,24 @@ Full plan documented in `file-cleanup.md` (project root). Goal: reduce auto-load
 9. Update TASKS.md summary table
 
 **Acceptance Criteria:**
-- [ ] Total auto-loaded lines reported (target: ~999)
-- [ ] Zero broken path references
-- [ ] All FAIL rules confirmed present
-- [ ] All 3 CLAUDE.md rules confirmed present
-- [ ] PR created with summary
-- [ ] TASKS.md summary table updated
+- [x] Total auto-loaded lines reported (target: ~999) — actual: 1,070 (55% reduction)
+- [x] Zero broken path references
+- [x] All FAIL rules confirmed present (8/8 rule headers)
+- [x] All 3 CLAUDE.md rules confirmed present
+- [x] PR created with summary
+- [x] TASKS.md summary table updated
 
 **Starter Prompt:**
 > Read `file-cleanup.md` Summary (lines 239-246) and Branch Strategy (lines 287-299). Read `TASKS.md` Task 53 for steps. Count lines in `.claude/CLAUDE.md`, `.claude/rules/universal-rules.md`, `.claude/rules/workflow.md`. Verify `rules/` has exactly 2 files, `references/` has exactly 2 files. Grep for broken paths (`rules/common-mistakes`, `rules/client-profile-requirements`). Grep for all FAIL rule headers in universal-rules.md. Grep for Rule #1, #2, #3 in CLAUDE.md. Create PR for `cleanup/context-slim` → `main`. Update TASKS.md summary table.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Final verification passed. Auto-loaded context: 1,070 lines (55% reduction from 2,368 baseline). CLAUDE.md: 400, universal-rules.md: 541, workflow.md: 129. All directories correct (rules/ has 2 files, references/ has 2 files). Zero broken path references. All 8 FAIL rule headers present. All 3 CLAUDE.md rules present. PR created.
+- **Decisions:** Final total is 1,070 instead of target ~999 because CLAUDE.md "keep intact" sections required ~400 lines (not ~300 as estimated). This is still a 55% reduction — close to the 58% target.
+- **Next:** Task 54 (Convert tables to lists) is the next optimisation pass, independent of this PR.
 
 ---
 
