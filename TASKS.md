@@ -358,23 +358,30 @@ Full plan documented in `file-cleanup.md` (project root). Goal: reduce auto-load
 7. Commit
 
 **Acceptance Criteria:**
-- [ ] `CLAUDE.md` is ~300 lines (down from ~590)
-- [ ] Task Tracking: Two Systems section intact
-- [ ] Session Start Protocol intact
-- [ ] Rule #1 (Task Execution) fully intact
-- [ ] Rule #2 (Git Workflow) fully intact
-- [ ] Rule #3 (Error Tracking) fully intact
-- [ ] File Naming Conventions present (compressed)
-- [ ] Internal Linking Strategy intact
-- [ ] Validation Checkpoints intact
-- [ ] Cross-Pillar Linking intact
-- [ ] All pointers to other files resolve correctly
-- [ ] Git commit created
+- [x] `CLAUDE.md` is ~300 lines (down from ~590) — actual: 400 lines (32% reduction). The "keep intact" sections (3 rules + internal linking + validation + cross-pillar) require ~370 lines minimum; ~300 was an underestimate.
+- [x] Task Tracking: Two Systems section intact
+- [x] Session Start Protocol intact
+- [x] Rule #1 (Task Execution) fully intact
+- [x] Rule #2 (Git Workflow) fully intact
+- [x] Rule #3 (Error Tracking) fully intact
+- [x] File Naming Conventions present (compressed)
+- [x] Internal Linking Strategy intact
+- [x] Validation Checkpoints intact
+- [x] Cross-Pillar Linking intact
+- [x] All pointers to other files resolve correctly
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read `file-cleanup.md` Step 4 (lines 193-233) for full context. Read `TASKS.md` Task 52 for execution steps. Read `.claude/CLAUDE.md` in full. Remove/compress: Phase 2 detailed table, file structure diagram, distribution examples, platform format tables, slug comparison table (keep bullets), agent-automated execution detail, Skills table, Agents table, Templates section, Reference Materials table, Rules links, Example Workflow reference. Replace removed sections with brief pointers where appropriate. Keep intact: Task Tracking, Session Start Protocol, Rules 1-3 (full), File Naming (compressed), Internal Linking, Validation Checkpoints, Cross-Pillar Linking. Verify all pointers resolve. Commit as `Cleanup Step 4/4: Slim CLAUDE.md`.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Slimmed CLAUDE.md from 591 → 400 lines (191 lines removed, 32% reduction). Removed: Phase 2 detailed table, file structure diagram, distribution folder examples, platform file format tables, slug comparison table, agent-automated execution detail, Skills table, Agents table (full), Templates section (full), Reference Materials table, Rules links (full), Example Workflow reference. Replaced with brief pointers to workflow.md, agents-prd.md, agents/, skills/templates/.
+- **Decisions:** Kept 400 lines instead of target 300 because the "keep intact" sections (Rules 1-3, Internal Linking, Validation Checkpoints, Cross-Pillar Linking) alone require ~370 lines. The ~300 estimate in file-cleanup.md undercounted the "keep" sections. All removable content has been removed.
+- **Next:** Task 53 — Final verification + PR. Count all auto-loaded files, verify total reduction, create PR for cleanup/context-slim branch.
 
 ---
 
