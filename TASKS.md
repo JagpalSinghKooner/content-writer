@@ -13,7 +13,7 @@
 | Task 31: Fix Em Dashes — ADHD Sleep Article 03 | PASS |
 | Task 32: Fix Em Dashes — ADHD Sleep Article 04 | PASS |
 | Task 33: Fix Em Dashes — ADHD Sleep Article 05 | PASS |
-| Task 34: Fix Em Dashes — ADHD Sleep Article 06 | pending |
+| Task 34: Fix Em Dashes — ADHD Sleep Article 06 | PASS |
 | Task 35: Fix Em Dashes — ADHD Sleep Article 07 | pending |
 | Task 36: Fix Em Dashes — Bedtime Routines Article 07 | pending |
 | Task 37: Apply Approved Slug Changes (28 articles) | pending |
@@ -241,17 +241,24 @@ Built the audit system (link-auditor agent, consistency-checker agent, audit-pil
 **Objective:** Remove all 24 em dashes from `06-adhd-sleep-vs-autism-sleep.md` by restructuring sentences (body text) and replacing with colons (citations).
 
 **Acceptance Criteria:**
-- [ ] All 24 em dashes removed from article
-- [ ] Citation em dashes replaced with colons: `[Author], [Year]: [Title](URL)`
-- [ ] Body text em dashes restructured into separate sentences or natural alternatives (not just swapped for commas/colons)
-- [ ] Content meaning preserved — no information lost
-- [ ] Grep for "—" in file returns 0 matches
-- [ ] Git commit created
+- [x] All 24 em dashes removed from article
+- [x] Citation em dashes replaced with colons: `[Author], [Year]: [Title](URL)`
+- [x] Body text em dashes restructured into separate sentences or natural alternatives (not just swapped for commas/colons)
+- [x] Content meaning preserved — no information lost
+- [x] Grep for "—" in file returns 0 matches
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read `projects/hushaway/seo-content/adhd-sleep/articles/06-adhd-sleep-vs-autism-sleep.md`. Find all 24 em dashes (—). Two types exist: (1) Citation format: `Research from X, 2024 — [Title](URL)` → replace `—` with `:` so it becomes `Research from X, 2024: [Title](URL)`. (2) Body text: restructure each sentence naturally per Rule 4b. Do NOT just swap em dashes for commas or colons — rewrite naturally. After all changes, run grep for "—" to verify 0 remain. Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Removed all 24 em dashes from `06-adhd-sleep-vs-autism-sleep.md`. 4 citation em dashes replaced with colons (lines 79, 103, 122, 167). 20 body text em dashes restructured: sentence splits for standalone clauses (lines 73, 85, 129, 133, 139, 145, 165, 191, 234), period-separated list labels (lines 178-181), and reworded phrasing for parenthetical asides (lines 107, 216, 220, 224, 238, 262). Grep confirms 0 remain. Committed as `9b20cf4`.
+- **Decisions:** Line 73 (double em dash framing "your child won't sleep") split into three punchy sentences. Lines 178-181 (numbered list with bold labels) used periods after bold text instead of em dashes. Line 224 (double em dash parenthetical defining "passive listening") restructured by moving the definition to a second sentence.
+- **Next:** Task 35 (Fix em dashes in ADHD Sleep Article 07, 44 em dashes — highest count article).
 
 ---
 
