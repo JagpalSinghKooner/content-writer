@@ -6,7 +6,7 @@
 |------|--------|
 | Tasks 20-25h: Audit System Build + Full Audit | PASS (all completed) |
 | Task 26: Auto-Fix All Pillars + Extract Patterns | superseded |
-| Task 27: Fix Content-Validator Em Dash Detection | in_progress |
+| Task 27: Fix Content-Validator Em Dash Detection | PASS |
 | Task 28: Fix SEO-Writer Agent Citation Format + URL Verification | pending |
 | Task 29: Fix Em Dashes — ADHD Sleep Article 01 | pending |
 | Task 30: Fix Em Dashes — ADHD Sleep Article 02 | pending |
@@ -67,16 +67,24 @@ Built the audit system (link-auditor agent, consistency-checker agent, audit-pil
 **Objective:** Add em dash detection rules to the content-validator agent so future audits catch em dashes. The audit reported 0 em dashes across all 57 articles, but raw grep found 172.
 
 **Acceptance Criteria:**
+**Acceptance Criteria:**
 - [x] content-validator.md includes em dash (—) detection in validation checks
 - [x] Detection covers both the — character and " - " substitute pattern
 - [x] Detection is in the correct validation phase (structural checks)
 - [x] FAIL severity assigned (per Rule 4b)
-- [ ] Git commit created
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read `.claude/agents/content-validator.md`. The validator currently misses em dashes entirely (audit reported 0 but grep found 172). Add em dash detection to the validation phases. The validator should: (1) search for the — character (U+2014), (2) search for " - " (space-hyphen-space) as a substitute pattern, (3) flag any occurrence as FAIL per universal-rules.md Rule 4b. Include line numbers in the report. Commit when done.
 
-**Status:** in_progress
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Updated section 1.5 of `.claude/agents/content-validator.md` with explicit Grep-based em dash detection. The old instruction was "Scan for em dashes" (vague, agent relied on visual scanning and missed all 172). New instruction mandates using Grep tool for both `—` (U+2014) and ` - ` (space-hyphen-space substitute), with exclusions for YAML frontmatter and markdown list items.
+- **Decisions:** Kept the check in Phase 1 (Universal Rules Check) at position 1.5 where it already existed. Added exclusion guidance for space-hyphen-space to prevent false positives on list items.
+- **Next:** Task 28 (Fix SEO-Writer citation format + URL verification) or Tasks 29-36 (fix actual em dashes in articles).
 
 ---
 
