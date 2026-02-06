@@ -356,12 +356,19 @@ Built the audit system (link-auditor agent, consistency-checker agent, audit-pil
 - [x] Grep for each new slug returns exactly 1 match per slug
 - [x] All new slugs are under 50 characters
 - [x] No filenames changed
-- [ ] Git commit created
+- [x] Git commit created
 
 **Starter Prompt:**
 > Apply the slug mapping table from TASKS.md Task 37. For each of the 28 articles, edit ONLY the frontmatter `slug:` field to the new value. Do NOT rename any files. After all changes, verify: (1) grep for each old slug value in frontmatter across all articles — expect 0, (2) grep for each new slug — expect exactly 1 match each. Commit when done.
 
-**Status:** in_progress
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Updated frontmatter `slug:` field in all 28 articles across 8 pillars (ADHD Sleep: 6, Autistic Meltdowns: 2, Bedtime Routines: 2, Calming Sounds: 3, Emotional Regulation: 2, Sensory Overload: 8, Sound Therapy: 3, App Comparisons: 2). No filenames changed. Verified: all 28 old slugs return 0 frontmatter matches, all 28 new slugs return exactly 1 match each. Committed as `fb15cba`.
+- **Decisions:** Only frontmatter `slug:` fields edited. Internal links and other references to old slugs still use old values (Task 38 handles cascading those changes).
+- **Next:** Task 38 (Cascade slug references across all files — update internal links, frontmatter `internal_links` arrays, and distribution `source_article` fields to use the new slugs).
 
 ---
 
