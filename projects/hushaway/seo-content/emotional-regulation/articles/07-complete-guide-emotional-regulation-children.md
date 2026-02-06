@@ -72,10 +72,10 @@ external_citations:
     author: "Porges, Stephen W."
     year: "2011"
     title: "The Polyvagal Theory: Neurophysiological Foundations of Emotions"
-  - url: "https://www.zonesofregulation.com/learn-more.html"
-    author: "Leah Kuypers"
-    year: "2011"
-    title: "The Zones of Regulation"
+  - url: "https://zonesofregulation.com/regulation-skills-experts/"
+    author: "Zones of Regulation"
+    year: "2024"
+    title: "Zones of Regulation Framework"
   - url: "https://journals.sagepub.com/doi/10.1177/1362361319877792"
     author: "Mazefsky, C.A. & White, S.W."
     year: "2019"
@@ -84,10 +84,10 @@ external_citations:
     author: "Shaw, Philip et al."
     year: "2014"
     title: "Emotion Dysregulation in Attention Deficit Hyperactivity Disorder"
-  - url: "https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/help-your-child-manage-emotions/"
+  - url: "https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/talk-to-children-about-feelings/"
     author: "NHS"
-    year: "2023"
-    title: "Help your child manage their emotions"
+    year: "2024"
+    title: "Talking to Your Child About Feelings"
 ---
 
 ## Table of Contents
@@ -193,7 +193,7 @@ Disappointment feels like devastation. Frustration triggers a full alarm respons
 
 This isn't a character issue. It isn't a parenting failure. It's neurology.
 
-The NHS, 2023: [Help your child manage their emotions](https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/help-your-child-manage-emotions/) offers helpful general guidance, but much of it assumes a child who can engage with verbal and cognitive strategies during distress. For many children, especially neurodivergent children, that assumption doesn't hold.
+The NHS, 2024: [Talking to Your Child About Feelings](https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/talk-to-children-about-feelings/) offers helpful general guidance, but much of it assumes a child who can engage with verbal and cognitive strategies during distress. For many children, especially neurodivergent children, that assumption doesn't hold.
 
 Understanding this changes everything. It means we need tools that work at the level of the nervous system, not tools that require the thinking brain. And that's exactly what passive sound provides.
 

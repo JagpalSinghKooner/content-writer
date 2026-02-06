@@ -51,10 +51,10 @@ external_citations:
     author: "BBC CBeebies"
     year: "2024"
     title: "CBeebies Radio Calming Sounds"
-  - url: "https://www.nhs.uk/conditions/autism/autism-and-everyday-life/help-with-everyday-life/"
+  - url: "https://www.nhs.uk/conditions/autism/autism-and-everyday-life/help-for-day-to-day-life/"
     author: "NHS"
-    year: "2024"
-    title: "Help with Everyday Life - Autism"
+    year: "2025"
+    title: "How to Help Your Autistic Child with Day-to-Day Life"
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences"
     author: "National Autistic Society"
     year: "2024"
@@ -218,7 +218,7 @@ Here's how to choose:
 
 Sleep. This is where most parents need calming sounds most urgently.
 
-The NHS notes in their 2024 guidance, [Help with Everyday Life - Autism](https://www.nhs.uk/conditions/autism/autism-and-everyday-life/help-with-everyday-life/), that many autistic children experience sleep difficulties. If bedtime is a battle in your house, you're not alone.
+The NHS notes in their 2025 guidance, [How to Help Your Autistic Child with Day-to-Day Life](https://www.nhs.uk/conditions/autism/autism-and-everyday-life/help-for-day-to-day-life/), that many autistic children experience sleep difficulties. If bedtime is a battle in your house, you're not alone.
 
 For bedtime specifically, three things matter:
 

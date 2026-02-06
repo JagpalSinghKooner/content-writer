@@ -58,10 +58,10 @@ external_citations:
     author: "Autism Research"
     year: "2022"
     title: "Camouflaging in autism: A systematic review"
-  - url: "https://www.frontiersin.org/articles/10.3389/fpsyg.2021.767782/full"
-    author: "Frontiers in Psychology"
-    year: "2021"
-    title: "Autistic Burnout: Understanding and Preventing Autistic Fatigue"
+  - url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8992925/"
+    author: "Mantzalas et al."
+    year: "2022"
+    title: "What Is Autistic Burnout? A Thematic Analysis of Posts on Two Online Platforms"
 ---
 
 3:47pm. The school door opens.
@@ -184,7 +184,7 @@ They need discharge. A way to let the accumulated stress flow out without adding
 
 Sound can do that.
 
-Research in Frontiers in Psychology, 2021: [Autistic Burnout: Understanding and Preventing Autistic Fatigue](https://www.frontiersin.org/articles/10.3389/fpsyg.2021.767782/full) highlights the importance of recovery time and reduced demands after periods of masking. Passive sensory support gives the nervous system something safe to anchor to while it resets.
+Research in Mantzalas et al., 2022: [What Is Autistic Burnout? A Thematic Analysis of Posts on Two Online Platforms](https://pmc.ncbi.nlm.nih.gov/articles/PMC8992925/) highlights the importance of recovery time and reduced demands after periods of masking. Passive sensory support gives the nervous system something safe to anchor to while it resets.
 
 But here's why sound works when other tools struggle.
 

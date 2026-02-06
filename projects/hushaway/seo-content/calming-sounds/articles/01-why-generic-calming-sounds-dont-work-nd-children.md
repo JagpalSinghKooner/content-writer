@@ -50,10 +50,10 @@ external_citations:
     author: "Tavassoli et al."
     year: "2021"
     title: "Sensory Processing in Autism: A Comprehensive Review"
-  - url: "https://chadd.org/about-adhd/sensory-processing-issues/"
+  - url: "https://chadd.org/topics/sensory-processing-disorder/"
     author: "CHADD"
-    year: "2023"
-    title: "Sensory Processing Issues and ADHD"
+    year: "2025"
+    title: "Sensory Processing Disorder"
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences"
     author: "National Autistic Society"
     year: "2024"
@@ -86,7 +86,7 @@ The assumption? What calms most people will calm everyone. Except it doesn't.
 
 But neurodivergent children don't process sound the way most people do. Research published in the Journal of Autism and Developmental Disorders shows that autistic individuals often experience [atypical sensory processing](https://pubmed.ncbi.nlm.nih.gov/34285267/), including heightened or reduced sensitivity to auditory input (Tavassoli et al., 2021). This isn't just a preference difference. It's a neurological reality.
 
-For children with ADHD, the story is similar but different. According to CHADD (Children and Adults with Attention-Deficit/Hyperactivity Disorder), [sensory processing challenges](https://chadd.org/about-adhd/sensory-processing-issues/) frequently accompany ADHD, affecting how children filter, organise, and respond to sensory information (CHADD, 2023).
+For children with ADHD, the story is similar but different. According to CHADD (Children and Adults with Attention-Deficit/Hyperactivity Disorder), [sensory processing challenges](https://chadd.org/topics/sensory-processing-disorder/) frequently accompany ADHD, affecting how children filter, organise, and respond to sensory information (CHADD, 2025).
 
 When you play generic calming sounds to a neurodivergent child, you're asking their brain to process audio that was never designed with their processing style in mind. It's like giving someone glasses with the wrong prescription and wondering why they still can't see.
 

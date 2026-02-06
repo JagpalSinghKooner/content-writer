@@ -49,7 +49,7 @@ internal_links:
   - url: "/understanding-after-school-sensory-overload"
     anchor: "after-school meltdowns"
 external_citations:
-  - url: "https://www.frontiersin.org/articles/10.3389/fpsyg.2020.574461/full"
+  - url: "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.574461/full"
     author: "Frontiers in Psychology"
     year: "2020"
     title: "The Role of Interoception in Emotional Regulation"
@@ -81,7 +81,7 @@ When a child experiences sensory overload, their nervous system becomes flooded 
 
 What people don't see is what happens next.
 
-After the peak passes, the nervous system doesn't just snap back to normal. Research on interoception and emotional regulation shows that recovery from heightened stress states requires active repair, not simply the absence of the stressor (Frontiers in Psychology, 2020: [The Role of Interoception in Emotional Regulation](https://www.frontiersin.org/articles/10.3389/fpsyg.2020.574461/full)).
+After the peak passes, the nervous system doesn't just snap back to normal. Research on interoception and emotional regulation shows that recovery from heightened stress states requires active repair, not simply the absence of the stressor (Frontiers in Psychology, 2020: [The Role of Interoception in Emotional Regulation](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.574461/full)).
 
 Think of it like a storm. The rain has stopped, but the ground is still flooded. The drains are still working to clear the water.
 

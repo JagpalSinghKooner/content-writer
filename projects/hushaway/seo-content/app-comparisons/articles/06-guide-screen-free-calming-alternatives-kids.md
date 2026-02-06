@@ -48,10 +48,10 @@ internal_links:
   - url: "/guide-best-calming-apps-nd-children-uk"
     anchor: "complete guide to calming apps for neurodivergent children"
 external_citations:
-  - url: "https://www.rcpch.ac.uk/resources/health-impacts-screen-time-guide-clinicians-parents"
-    author: "Royal College of Paediatrics and Child Health"
+  - url: "https://www.rcpch.ac.uk/news-events/news/build-screen-time-around-family-activities-not-other-way-round-parents-told"
+    author: "RCPCH"
     year: "2019"
-    title: "The health impacts of screen time: a guide for clinicians and parents"
+    title: "Build Screen Time Around Family Activities, Not the Other Way Round"
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences/sensory-differences/all-audiences"
     author: "National Autistic Society"
     year: "2024"
@@ -78,9 +78,9 @@ This guide reviews the main screen-free options available in the UK for neurodiv
 
 Here's the thing nobody tells you about screen time research: most of it isn't about calming apps.
 
-The Royal College of Paediatrics and Child Health published guidance in 2019 noting that screen time effects depend heavily on what children are doing with screens, not just how long they're on them. Passive consumption of stimulating content is very different from using a tool for a specific purpose.
+The RCPCH published guidance in 2019 noting that screen time effects depend heavily on what children are doing with screens, not just how long they're on them. Passive consumption of stimulating content is very different from using a tool for a specific purpose.
 
-Royal College of Paediatrics and Child Health, 2019: [The health impacts of screen time: a guide for clinicians and parents](https://www.rcpch.ac.uk/resources/health-impacts-screen-time-guide-clinicians-parents)
+RCPCH, 2019: [Build Screen Time Around Family Activities, Not the Other Way Round](https://www.rcpch.ac.uk/news-events/news/build-screen-time-around-family-activities-not-other-way-round-parents-told)
 
 But here's why the concern still matters for neurodivergent children. Many ND children already have higher screen exposure because screens are often the only thing that keeps them regulated during difficult moments. Adding calming apps to that total feels like losing ground.
 
@@ -138,7 +138,7 @@ The journey-based content is imaginative and well-produced. For children who res
 
 Despite the larger content library, My Little Morphee shares Zenimal's fundamental limitation: it wasn't designed for neurodivergent children.
 
-The guided journeys require imagination and instruction-following, which many ND children struggle with during dysregulation. If your child can't "imagine you're floating on a cloud" when their nervous system is activated, the entire session becomes counterproductive.
+The guided journeys require imagination and instruction-following, which many ND children struggle with during overwhelm. If your child can't "imagine you're floating on a cloud" when their nervous system is activated, the entire session becomes counterproductive.
 
 There's also no passive listening option. Every session involves some level of guided instruction. For children who need sound to wash over them without demands, this active approach works against their regulation needs.
 
@@ -168,7 +168,7 @@ Some children, particularly those with auditory processing differences, find the
 
 The limitation is obvious: white noise is just white noise. You can't switch to a story when your child needs distraction from anxious thoughts. You can't play binaural frequencies for focus. You can't access solfeggio tones for nervous system regulation.
 
-These devices solve one problem well but don't address the full range of calming needs that neurodivergent children experience. They're sleep aids, not comprehensive regulation tools.
+These devices solve one problem well but don't address the full range of calming needs that neurodivergent children experience. They're sleep aids, not full regulation tools.
 
 ### The Verdict
 
@@ -196,7 +196,7 @@ These tools require zero technology, zero electricity, and zero setup. They work
 
 ### What Doesn't Work for ND Children
 
-The limitation is that physical tools require physical interaction. During severe dysregulation, some children can't engage with anything. They're beyond the point where a fidget cube helps. They need passive input that doesn't require them to do anything.
+The limitation is that physical tools require physical interaction. During severe overwhelm, some children can't engage with anything. They're beyond the point where a fidget cube helps. They need passive input that doesn't require them to do anything.
 
 Physical tools also don't address racing thoughts, sleep onset difficulties, or auditory-based regulation needs. They're part of a toolkit, not the whole toolkit.
 
@@ -208,7 +208,7 @@ Every family raising a neurodivergent child should have sensory tools available.
 
 Here's what most screen-free alternatives miss: the problem isn't screens themselves. It's screens-as-default.
 
-What if you could have the depth of a comprehensive sound library with screen-free delivery?
+What if you could have the depth of a complete sound library with screen-free delivery?
 
 This is where HushAway® offers something different. Yes, it's an app. But it doesn't have to run on a screen your child interacts with. You can play HushAway® through a dedicated Bluetooth speaker while your phone stays in another room. Your child experiences sound without a glowing rectangle in front of them.
 
@@ -256,7 +256,7 @@ There's no single answer to screen-free calming alternatives. The right choice d
 - Your child needs proprioceptive or tactile input
 - Sound-based tools haven't worked
 - You want portable, no-setup options
-- They're able to engage with physical tools during dysregulation
+- They're able to engage with physical tools during overwhelm
 
 **Choose the hybrid approach (app on speaker) if:**
 - You want screen-free delivery with content depth
@@ -298,7 +298,7 @@ Dedicated devices like Zenimal and My Little Morphee work without screens, thoug
 
 ### How does My Little Morphee compare to Zenimal?
 
-My Little Morphee offers significantly more content (192 sessions vs 12) and has a tactile dial interface that many children enjoy. It's also more expensive (£79.99 vs £65). Both devices focus on guided content rather than passive sounds, which may limit their usefulness for ND children who struggle with instruction-following during dysregulation.
+My Little Morphee offers significantly more content (192 sessions vs 12) and has a tactile dial interface that many children enjoy. It's also more expensive (£79.99 vs £65). Both devices focus on guided content rather than passive sounds, which may limit their usefulness for ND children who struggle with instruction-following during overwhelm.
 
 ### What's the best screen-free calming alternative for bedtime?
 

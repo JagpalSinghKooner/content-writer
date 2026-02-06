@@ -65,10 +65,10 @@ external_citations:
     author: "Lunsford-Avery et al."
     year: "2019"
     title: "Sleep disturbances in adolescents with ADHD"
-  - url: "https://www.rcpch.ac.uk/resources/health-impacts-screen-time-guide-clinicians-parents"
-    author: "Royal College of Paediatrics and Child Health"
+  - url: "https://www.rcpch.ac.uk/news-events/news/build-screen-time-around-family-activities-not-other-way-round-parents-told"
+    author: "RCPCH"
     year: "2019"
-    title: "The health impacts of screen time: a guide for clinicians and parents"
+    title: "Build Screen Time Around Family Activities, Not the Other Way Round"
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6424546/"
     author: "Robertson & Simmons"
     year: "2023"
@@ -127,7 +127,7 @@ According to the National Autistic Society, 2024: [Sensory Differences](https://
 
 For ADHD children, the challenges are different but equally real. NICE guidance notes that sleep problems affect 25-50% of children with ADHD (NICE, 2024: [Attention deficit hyperactivity disorder: diagnosis and management](https://www.nice.org.uk/guidance/ng87)). The racing brain that won't switch off doesn't respond to "breathe in for four counts." The executive function needed to follow meditation instructions goes offline precisely when it's most needed.
 
-We've written extensively about [why generic calming apps fail neurodivergent children](/why-generic-calming-apps-fail-nd-children). The short version: they require things ND children can't provide during moments of dysregulation.
+We've written extensively about [why generic calming apps fail neurodivergent children](/why-generic-calming-apps-fail-nd-children). The short version: they require things ND children can't provide during moments of overwhelm.
 
 This is why your search keeps failing. The "best" apps are best for average children. Your child isn't average. And that's not a problem to fix. It's a difference to design for.
 
@@ -280,7 +280,7 @@ Not every solution needs to be an app. If you're worried about screen time (and 
 
 A palm-sized device with 9 guided meditations and 3 sleep soundscapes. No screen. No WiFi. One-time purchase.
 
-The concept is right: address screen anxiety directly. But the content is limited. Nine meditations will become repetitive quickly. And the guided approach still requires instruction-following that many ND children can't do during dysregulation.
+The concept is right: address screen anxiety directly. But the content is limited. Nine meditations will become repetitive quickly. And the guided approach still requires instruction-following that many ND children can't do when overwhelmed.
 
 **My Little Morphee (£55-70)**
 
@@ -502,7 +502,7 @@ The Open Sanctuary (HushAway's free tier) is the only free option designed from 
 
 ### My child has both autism and ADHD. What should I try?
 
-Many ND children have co-occurring conditions. The common thread is the need for passive listening (no instruction-following), sensory-safe design (no overwhelming audio), and zero-demand interaction (no choices during dysregulation). These needs overlap regardless of specific diagnosis. An ND-first app like HushAway addresses the shared needs rather than targeting one condition.
+Many ND children have co-occurring conditions. The common thread is the need for passive listening (no instruction-following), sensory-safe design (no overwhelming audio), and zero-demand interaction (no choices during overwhelm). These needs overlap regardless of specific diagnosis. An ND-first app like HushAway addresses the shared needs rather than targeting one condition.
 
 ### Where do I start?
 

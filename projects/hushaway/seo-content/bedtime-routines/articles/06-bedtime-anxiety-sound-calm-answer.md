@@ -50,10 +50,10 @@ external_citations:
     author: "Kushnir and Sadeh"
     year: "2019"
     title: "Sleep and Anxiety in Preschool Children"
-  - url: "https://www.sleepfoundation.org/children-and-sleep/separation-anxiety-and-sleep"
+  - url: "https://www.sleepfoundation.org/children-and-sleep"
     author: "Sleep Foundation"
     year: "2024"
-    title: "Separation Anxiety and Sleep in Children"
+    title: "Children and Sleep"
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3072849/"
     author: "Gregory and Eley"
     year: "2005"
@@ -135,7 +135,7 @@ Sound stays.
 
 When you leave the room, silence rushes in. But if sound is already playing, your leaving doesn't create emptiness. The auditory environment stays consistent. Your child's brain, which was bracing for the scary quiet, registers something different: same sound. Same as when Mum was here. Still safe.
 
-According to the Sleep Foundation, 2024: [Separation Anxiety and Sleep in Children](https://www.sleepfoundation.org/children-and-sleep/separation-anxiety-and-sleep), consistent bedtime routines help children feel secure. What they don't always mention is that the most powerful consistency isn't your actions during bedtime.
+According to the Sleep Foundation, 2024: [Children and Sleep](https://www.sleepfoundation.org/children-and-sleep), consistent bedtime routines help children feel secure. What they don't always mention is that the most powerful consistency isn't your actions during bedtime.
 
 It's what remains after you leave.
 

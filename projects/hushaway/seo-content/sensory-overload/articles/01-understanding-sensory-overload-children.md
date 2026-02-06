@@ -52,10 +52,10 @@ external_citations:
     author: "Thye et al."
     year: "2018"
     title: "The impact of atypical sensory processing on social impairments in autism spectrum disorder"
-  - url: "https://www.nhs.uk/conditions/sensory-processing-disorder/"
-    author: "NHS"
-    year: "2023"
-    title: "Sensory processing disorder"
+  - url: "https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences/sensory-differences/all-audiences"
+    author: "National Autistic Society"
+    year: "2024"
+    title: "Sensory Differences"
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences/sensory-differences/all-audiences"
     author: "National Autistic Society"
     year: "2024"
@@ -97,7 +97,7 @@ Think of it like a computer with too many programmes running at once. Eventually
 
 That's the simple explanation. The reality for children with sensory processing differences is more complicated, and more important to understand.
 
-According to the NHS, 2023: [Sensory processing disorder](https://www.nhs.uk/conditions/sensory-processing-disorder/), sensory processing differences mean the brain has trouble receiving and responding to information that comes through the senses. This isn't a behavioural choice. It's neurological.
+According to the National Autistic Society, 2024: [Sensory Differences](https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences/sensory-differences/all-audiences), sensory processing differences mean the brain has trouble receiving and responding to information that comes through the senses. This isn't a behavioural choice. It's neurological.
 
 For a neurotypical child, the brain automatically filters sensory input. The hum of the refrigerator, the tag in their shirt, the flickering overhead light. These things fade into the background. The brain decides they're not important and stops noticing them.
 

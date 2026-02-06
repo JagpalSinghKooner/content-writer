@@ -50,10 +50,10 @@ external_citations:
     author: "Thompson, Ross A."
     year: "2014"
     title: "Stress and Child Development"
-  - url: "https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/help-your-child-manage-emotions/"
+  - url: "https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/talk-to-children-about-feelings/"
     author: "NHS"
-    year: "2023"
-    title: "Help your child manage their emotions"
+    year: "2024"
+    title: "Talking to Your Child About Feelings"
   - url: "https://www.mind.org.uk/information-support/for-children-and-young-people/emotions/"
     author: "Mind"
     year: "2023"
@@ -132,7 +132,7 @@ Once your child's nervous system has had a chance to begin settling, usually aft
 
 Think of it like this: when someone is drowning, you don't start by teaching them to swim. You throw them a life ring first. Sound is the life ring. Everything else comes after.
 
-The NHS, 2023: [Help your child manage their emotions](https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/help-your-child-manage-emotions/) offers excellent guidance on supporting children with big feelings, including staying calm, acknowledging emotions, and helping them name what they feel. All of this is right. And all of it works better once you've cleared that first minute.
+The NHS, 2024: [Talking to Your Child About Feelings](https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/talk-to-children-about-feelings/) offers excellent guidance on supporting children with big feelings, including staying calm, acknowledging emotions, and helping them name what they feel. All of this is right. And all of it works better once you've cleared that first minute.
 
 After sound has done its initial work, you might:
 

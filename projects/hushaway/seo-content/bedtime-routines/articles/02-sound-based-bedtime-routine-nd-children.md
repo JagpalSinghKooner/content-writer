@@ -56,7 +56,7 @@ external_citations:
     author: "Rausch et al."
     year: "2018"
     title: "Influence of Binaural Beats on Brain Oscillations"
-  - url: "https://pubmed.ncbi.nlm.nih.gov/25928655/"
+  - url: "https://pubmed.ncbi.nlm.nih.gov/29924723/"
     author: "Poerio et al."
     year: "2018"
     title: "ASMR and Physiological Responses"
@@ -126,7 +126,7 @@ For sleep, frequencies in the delta range (1-4 Hz) are associated with deep slee
 
 If your child responds well to whispering, soft sounds, or gentle textures, ASMR might be the answer.
 
-Poerio et al., 2018: [ASMR and Physiological Responses](https://pubmed.ncbi.nlm.nih.gov/25928655/) found that people who experience ASMR show reduced heart rates and increased skin conductance levels while listening, indicating genuine physiological relaxation.
+Poerio et al., 2018: [ASMR and Physiological Responses](https://pubmed.ncbi.nlm.nih.gov/29924723/) found that people who experience ASMR show reduced heart rates and increased skin conductance levels while listening, indicating genuine physiological relaxation.
 
 Not every child experiences ASMR. Around 20% of the population responds strongly to it. But for those who do, it can be remarkably effective at shifting the nervous system from alert to settled.
 

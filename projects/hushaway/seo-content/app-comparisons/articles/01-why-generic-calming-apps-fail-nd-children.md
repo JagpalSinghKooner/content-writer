@@ -51,10 +51,10 @@ external_citations:
     author: "Kapp et al."
     year: "2019"
     title: "Autistic Community and the Neurodiversity Movement"
-  - url: "https://www.understood.org/articles/executive-function-disorder-adhd"
-    author: "Understood.org"
-    year: "2024"
-    title: "Executive Function and ADHD"
+  - url: "https://www.understood.org/en/articles/difference-between-executive-functioning-issues-and-adhd"
+    author: "Understood"
+    year: "2025"
+    title: "The Difference Between ADHD and Executive Function Challenges"
 ---
 
 # Why Generic Calming Apps Fail Neurodivergent Children: It's Not Your Child, It's the Design
@@ -85,7 +85,7 @@ For neurotypical children, this works reasonably well. Their prefrontal cortex (
 
 But neurodivergent children experience stress differently. During overwhelm, whether that's a meltdown, bedtime anxiety, or sensory flooding, their ability to follow instructions often goes offline entirely. The thinking part of their brain has already checked out. And no amount of "just breathe" will bring it back.
 
-According to Understood.org, 2024: [Executive Function and ADHD](https://www.understood.org/articles/executive-function-disorder-adhd), executive function differences mean that ADHD children struggle with working memory, flexible thinking, and self-control, particularly during stressful moments. The exact moments when calming apps are supposed to help are the moments when ND children can't use them.
+According to Understood, 2025: [The Difference Between ADHD and Executive Function Challenges](https://www.understood.org/en/articles/difference-between-executive-functioning-issues-and-adhd), executive function differences mean that ADHD children struggle with working memory, flexible thinking, and self-control, particularly during stressful moments. The exact moments when calming apps are supposed to help are the moments when ND children can't use them.
 
 ## Why "Close Your Eyes and Breathe" Doesn't Work
 
@@ -97,7 +97,7 @@ Sounds simple. For many neurodivergent children, it's impossible. Here's why:
 
 **Timing demands.** Counting while breathing requires split attention and working memory. For a child whose executive function is already compromised by stress, adding a cognitive task makes regulation harder, not easier.
 
-**The instruction-following paradox.** The child is dysregulated because they can't regulate. Asking them to follow instructions to regulate assumes they can already do the thing they're struggling to do.
+**The instruction-following paradox.** The child is overwhelmed because they can't regulate. Asking them to follow instructions to regulate assumes they can already do the thing they're struggling to do.
 
 **Auditory processing delays.** Many ND children process spoken instructions more slowly. By the time they've processed "breathe in," the app has moved on to "hold." They're perpetually behind, and that gap between where they are and where they should be creates more stress, not less.
 
@@ -105,7 +105,7 @@ Sounds simple. For many neurodivergent children, it's impossible. Here's why:
 
 Modern apps love interaction. Tap here. Choose this. Drag that. Select a character. Pick your adventure.
 
-This makes apps sticky and engaging for neurotypical children. But for neurodivergent kids, especially during dysregulation, every interaction is a demand. Every choice is cognitive load.
+This makes apps sticky and engaging for neurotypical children. But for neurodivergent kids, especially during overwhelm, every interaction is a demand. Every choice is cognitive load.
 
 Consider what happens when you ask an overwhelmed autistic child to make a choice:
 
@@ -231,7 +231,7 @@ One quiet moment can change a whole day for a child. The right sounds, designed 
 
 ### Why don't calming apps work for my neurodivergent child?
 
-Most calming apps were designed for neurotypical children and adapted later for ND audiences. They require instruction-following, interaction, and cognitive engagement during moments when ND children can't provide those things. The apps assume your child can regulate themselves enough to use a regulation tool, which is a cruel paradox for dysregulated children.
+Most calming apps were designed for neurotypical children and adapted later for ND audiences. They require instruction-following, interaction, and cognitive engagement during moments when ND children can't provide those things. The apps assume your child can regulate themselves enough to use a regulation tool, which is a cruel paradox for overwhelmed children.
 
 ### Are there any calming apps that actually work for ADHD?
 

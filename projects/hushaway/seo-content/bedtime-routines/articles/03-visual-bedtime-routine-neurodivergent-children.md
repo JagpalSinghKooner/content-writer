@@ -44,11 +44,11 @@ internal_links:
   - url: "/sound-based-bedtime-routine-nd-children"
     anchor: "sound-based bedtime routine"
 external_citations:
-  - url: "https://www.autism.org.uk/advice-and-guidance/topics/communication/visual-supports"
+  - url: "https://www.autism.org.uk/advice-and-guidance/topics/communication/communication-tools/visual-supports"
     author: "National Autistic Society"
     year: "2024"
     title: "Visual supports and autism"
-  - url: "https://pubmed.ncbi.nlm.nih.gov/28838255/"
+  - url: "https://pubmed.ncbi.nlm.nih.gov/25081593/"
     author: "Knight & Sartini"
     year: "2015"
     title: "A Comprehensive Literature Review of Visual Supports for Students with ASD"
@@ -76,9 +76,9 @@ Visual schedules work because they make the invisible visible. For children who 
 
 Pictures answer those questions. They remove the mental load of remembering the sequence. They make abstract time concrete.
 
-The National Autistic Society, 2024: [Visual supports and autism](https://www.autism.org.uk/advice-and-guidance/topics/communication/visual-supports) notes that visual supports help reduce anxiety by making expectations clear and providing a sense of control and predictability.
+The National Autistic Society, 2024: [Visual supports and autism](https://www.autism.org.uk/advice-and-guidance/topics/communication/communication-tools/visual-supports) notes that visual supports help reduce anxiety by making expectations clear and providing a sense of control and predictability.
 
-Knight & Sartini, 2015: [A Comprehensive Literature Review of Visual Supports for Students with ASD](https://pubmed.ncbi.nlm.nih.gov/28838255/) found consistent evidence that visual supports improve outcomes across multiple settings, including home routines.
+Knight & Sartini, 2015: [A Comprehensive Literature Review of Visual Supports for Students with ASD](https://pubmed.ncbi.nlm.nih.gov/25081593/) found consistent evidence that visual supports improve outcomes across multiple settings, including home routines.
 
 But here's what visual supports can't do on their own. They can't shift your child's nervous system state.
 

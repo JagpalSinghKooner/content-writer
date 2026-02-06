@@ -65,10 +65,10 @@ external_citations:
     author: "National Autistic Society"
     year: "2024"
     title: "Sensory Differences"
-  - url: "https://www.nhs.uk/conditions/sensory-processing-disorder/"
-    author: "NHS"
-    year: "2023"
-    title: "Sensory Processing Disorder"
+  - url: "https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences/sensory-differences/all-audiences"
+    author: "National Autistic Society"
+    year: "2024"
+    title: "Sensory Differences"
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8566186/"
     author: "Frontiers in Psychology"
     year: "2021"
@@ -143,7 +143,7 @@ Sensory overload looks different in different children.
 
 Some go inward. They become withdrawn, frozen, or nonverbal. Others go outward with what looks like a meltdown: screaming, running, hitting. Behaviour that seems extreme but is actually a nervous system in crisis.
 
-The NHS, 2023: [Sensory Processing Disorder](https://www.nhs.uk/conditions/sensory-processing-disorder/) notes that sensory processing issues can affect daily life, causing difficulties with learning, play, and social interactions.
+The National Autistic Society, 2024: [Sensory Differences](https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences/sensory-differences/all-audiences) notes that sensory processing issues can affect daily life, causing difficulties with learning, play, and social interactions.
 
 Common presentations include:
 

@@ -50,10 +50,10 @@ external_citations:
     author: "Chanda & Levitin"
     year: "2013"
     title: "The neurochemistry of music"
-  - url: "https://www.understood.org/en/articles/sensory-diet"
-    author: "Understood.org"
-    year: "2024"
-    title: "What is a sensory diet?"
+  - url: "https://www.understood.org/en/articles/sensory-diet-treatment-what-you-need-to-know"
+    author: "Understood"
+    year: "2025"
+    title: "What Is a Sensory Diet?"
 ---
 
 You've done everything the occupational therapist suggested.
@@ -78,7 +78,7 @@ Think of it like this: just like your body needs certain nutrients throughout th
 
 A sensory diet is a personalised plan of sensory activities spread throughout the day to help your child stay regulated. The term comes from occupational therapy, and the concept is simple: some children need more sensory input than others. Some need specific types. By giving them the right input at the right times, you help prevent the build-up that leads to meltdowns, shutdowns, and sensory overload.
 
-According to Understood.org, 2024: [What is a sensory diet?](https://www.understood.org/en/articles/sensory-diet), sensory diets are typically customised by occupational therapists and include activities targeting specific sensory systems.
+According to Understood, 2025: [What Is a Sensory Diet?](https://www.understood.org/en/articles/sensory-diet-treatment-what-you-need-to-know), sensory diets are typically customised by occupational therapists and include activities targeting specific sensory systems.
 
 Traditional sensory diets usually focus on three main systems:
 

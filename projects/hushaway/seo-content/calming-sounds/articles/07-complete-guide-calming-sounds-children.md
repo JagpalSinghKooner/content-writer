@@ -61,7 +61,7 @@ external_citations:
     author: "Poerio et al."
     year: "2018"
     title: "More than a feeling: Autonomous sensory meridian response (ASMR) is characterized by reliable changes in affect and physiology"
-  - url: "https://www.frontiersin.org/articles/10.3389/fpsyg.2020.564206/full"
+  - url: "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.564206/full"
     author: "Engelbregt et al."
     year: "2021"
     title: "Short- and long-term effects of binaural beats on EEG measures in healthy adults"
@@ -81,10 +81,10 @@ external_citations:
     author: "BBC"
     year: "2024"
     title: "CBeebies Radio"
-  - url: "https://www.nhs.uk/every-mind-matters/childrens-mental-health/sleep-problems-in-children/"
-    author: "NHS"
-    year: "2024"
-    title: "Sleep problems in children"
+  - url: "https://www.nhs.uk/every-mind-matters/supporting-others/childrens-mental-health/"
+    author: "NHS Every Mind Matters"
+    year: "2025"
+    title: "Looking After a Child or Young Person's Mental Health"
 ---
 
 ## Table of Contents
@@ -212,7 +212,7 @@ For children, ASMR content needs careful consideration. The triggers need to be 
 
 ### Binaural Beats and Frequencies
 
-Binaural beats work by playing slightly different frequencies in each ear. The brain perceives a third tone at the difference between them. Some research suggests this can influence brainwave patterns (Engelbregt et al., 2021: [Short- and long-term effects of binaural beats on EEG measures in healthy adults](https://www.frontiersin.org/articles/10.3389/fpsyg.2020.564206/full)).
+Binaural beats work by playing slightly different frequencies in each ear. The brain perceives a third tone at the difference between them. Some research suggests this can influence brainwave patterns (Engelbregt et al., 2021: [Short- and long-term effects of binaural beats on EEG measures in healthy adults](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.564206/full)).
 
 **Important for parents:** Most binaural beat research has been conducted on adults. We're honest about this because good information matters more than overpromising. The research on children specifically is limited. That said, many parents report their children respond well to binaural beats, particularly for focus and sleep.
 
@@ -242,7 +242,7 @@ This is where things get practical.
 
 ### For Sleep Struggles
 
-Sleep problems in neurodivergent children rarely have a single cause. Racing thoughts. Sensory sensitivity. Difficulty transitioning from waking to sleeping. Anxiety about being alone in the dark. The NHS notes that sleep difficulties are common in children and often require addressing the underlying causes rather than quick fixes (NHS, 2024: [Sleep problems in children](https://www.nhs.uk/every-mind-matters/childrens-mental-health/sleep-problems-in-children/)). The right sound depends on what's actually happening underneath the "won't sleep" surface.
+Sleep problems in neurodivergent children rarely have a single cause. Racing thoughts. Sensory sensitivity. Difficulty transitioning from waking to sleeping. Anxiety about being alone in the dark. The NHS notes that sleep difficulties are common in children and often require addressing the underlying causes rather than quick fixes (NHS Every Mind Matters, 2025: [Looking After a Child or Young Person's Mental Health](https://www.nhs.uk/every-mind-matters/supporting-others/childrens-mental-health/)). The right sound depends on what's actually happening underneath the "won't sleep" surface.
 
 **Racing brain at bedtime:** Your child lies awake with thoughts spinning. They can't switch off no matter how tired they are. You can see their exhaustion, but their brain won't cooperate. Try pink or brown noise to create a consistent background that gives the brain something neutral to rest on. Binaural beats designed for sleep may also help by supporting the transition to slower brainwaves.
 

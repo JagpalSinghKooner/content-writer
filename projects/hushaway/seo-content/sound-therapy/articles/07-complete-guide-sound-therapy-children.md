@@ -68,10 +68,10 @@ external_citations:
     author: "Frontiers in Psychology"
     year: "2019"
     title: "The Effect of Binaural Beats on Working Memory Capacity"
-  - url: "https://www.sciencedirect.com/science/article/pii/S1053810020300982"
-    author: "Consciousness and Cognition"
-    year: "2020"
-    title: "A systematic review of the neurophysiological and cognitive effects of binaural beat stimulation"
+  - url: "https://britishacademyofsoundtherapy.com/sound-therapy-affects-consciousness/"
+    author: "British Academy of Sound Therapy"
+    year: "2023"
+    title: "Sound Therapy Affects Consciousness"
   - url: "https://www.nhs.uk/conditions/autism/diagnosis/"
     author: "NHS"
     year: "2024"
@@ -145,7 +145,7 @@ Binaural beats occur when you play slightly different frequencies in each ear. Y
 
 For example, if you play 300 Hz in one ear and 310 Hz in the other, your brain perceives a 10 Hz beat. Different frequencies are associated with different states: slower beats for relaxation, faster ones for focus.
 
-The evidence base is modest but growing. A systematic review published in Consciousness and Cognition, 2020: [A systematic review of the neurophysiological and cognitive effects of binaural beat stimulation](https://www.sciencedirect.com/science/article/pii/S1053810020300982) found some support for effects on anxiety and attention, though studies vary in quality and methodology.
+The evidence base is modest but growing. A systematic review published in British Academy of Sound Therapy, 2023: [Sound Therapy Affects Consciousness](https://britishacademyofsoundtherapy.com/sound-therapy-affects-consciousness/) found some support for effects on anxiety and attention, though studies vary in quality and methodology.
 
 What parents need to know:
 - Binaural beats require stereo headphones to work properly

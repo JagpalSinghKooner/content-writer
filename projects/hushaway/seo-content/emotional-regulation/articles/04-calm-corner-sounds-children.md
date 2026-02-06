@@ -46,10 +46,10 @@ internal_links:
   - url: "/guide-calming-sounds-every-situation"
     anchor: "calming sounds for different situations"
 external_citations:
-  - url: "https://www.zonesofregulation.com/learn-more.html"
-    author: "Leah Kuypers"
-    year: "2011"
-    title: "The Zones of Regulation"
+  - url: "https://zonesofregulation.com/regulation-skills-experts/"
+    author: "Zones of Regulation"
+    year: "2024"
+    title: "Zones of Regulation Framework"
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5618809/"
     author: "Koelsch, Stefan"
     year: "2014"
@@ -74,7 +74,7 @@ That's a problem. When your child is overwhelmed, sound might be the only thing 
 
 ## Why Sound Is the Missing Tool in Calm Corners
 
-The Zones of Regulation framework, developed by Leah Kuypers, 2011: [The Zones of Regulation](https://www.zonesofregulation.com/learn-more.html), has transformed how schools and homes approach emotional regulation. The colour-coded system helps children identify their emotional state and choose appropriate calming strategies.
+The Zones of Regulation framework, developed by Zones of Regulation, 2024: [Zones of Regulation Framework](https://zonesofregulation.com/regulation-skills-experts/), has transformed how schools and homes approach emotional regulation. The colour-coded system helps children identify their emotional state and choose appropriate calming strategies.
 
 But here's what nobody mentions: every Zone has a sound component. And almost every calm corner ignores it completely.
 
