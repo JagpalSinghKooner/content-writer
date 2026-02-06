@@ -195,7 +195,7 @@ Sound therapy research is more mixed. Some approaches have promising early evide
 
 Does that mean music therapy is "better"? Not necessarily. It means we know more about it. And it means choosing based on your child's needs and capacity makes more sense than choosing based on research volume alone.
 
-If your child can engage with music therapy, the evidence supports it. If your child can't engage right now, an approach that requires nothing of them might still help, even if the evidence base is developing. For a comprehensive overview of all approaches, see our [complete guide to sound therapy for children](/sound-therapy/07-complete-guide-sound-therapy-children).
+If your child can engage with music therapy, the evidence supports it. If your child can't engage right now, an approach that requires nothing of them might still help, even if the evidence base is developing. For a comprehensive overview of all approaches, see our [complete guide to sound therapy for children](/sound-therapy/complete-guide-sound-therapy-children).
 
 ## What About Music Therapy vs Sound Healing?
 

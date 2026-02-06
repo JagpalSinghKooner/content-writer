@@ -40,7 +40,7 @@ schema_type: "Article"
 internal_links:
   - url: "/sound-therapy/02-does-sound-therapy-work"
     anchor: "our evidence guide"
-  - url: "/sound-therapy/03-binaural-beats-children"
+  - url: "/sound-therapy/03-safety-guide-binaural-beats-children"
     anchor: "guide to binaural beats for children"
   - url: "/sound-therapy/05-sound-therapy-at-home"
     anchor: "sound therapy at home"
@@ -108,7 +108,7 @@ Different frequency ranges are associated with different states:
 
 For neurodivergent children, parents often use binaural beats to support sleep onset, calm focus during homework, or recovery from sensory overload.
 
-**What to know:** Binaural beats require stereo headphones to work properly. The research in children is limited but growing. We explore this in our [guide to binaural beats for children](/sound-therapy/03-binaural-beats-children).
+**What to know:** Binaural beats require stereo headphones to work properly. The research in children is limited but growing. We explore this in our [guide to binaural beats for children](/sound-therapy/03-safety-guide-binaural-beats-children).
 
 ### 3. Frequency-Based Sound Therapy
 
@@ -230,7 +230,7 @@ You don't need expensive equipment or practitioner visits to start. Tonight, eve
 
 **Create consistency:** If a particular sound helps at bedtime, use it every night. Consistency helps the sound itself become a calming cue. Your child's brain starts to associate that sound with "time to settle."
 
-For a detailed walkthrough on setting up sound therapy at home, see our guide to [sound therapy at home](/sound-therapy/05-sound-therapy-at-home). And for the complete picture, our [complete guide to sound therapy for children](/sound-therapy/07-complete-guide-sound-therapy-children) brings everything together.
+For a detailed walkthrough on setting up sound therapy at home, see our guide to [sound therapy at home](/sound-therapy/05-sound-therapy-at-home). And for the complete picture, our [complete guide to sound therapy for children](/sound-therapy/complete-guide-sound-therapy-children) brings everything together.
 
 ## The HushAway Approach
 

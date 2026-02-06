@@ -31,7 +31,7 @@ These links use file paths or directory structures instead of the required `/{sl
 
 2. **01-understanding-autism-meltdowns.md** (line 46, frontmatter):
    - Current: `/autistic-meltdowns/05-meltdown-vs-shutdown`
-   - Should be: `/autism-meltdown-vs-shutdown-difference`
+   - Should be: `/understanding-meltdown-vs-shutdown`
    - Fix: Replace URL with frontmatter slug of target article
 
 3. **01-understanding-autism-meltdowns.md** (line 48, frontmatter):
@@ -55,8 +55,8 @@ These links use file paths or directory structures instead of the required `/{sl
    - Fix: Remove `/autistic-meltdowns/` directory prefix
 
 7. **01-understanding-autism-meltdowns.md** (line 215, content):
-   - Current: `/autistic-meltdowns/autism-meltdown-vs-shutdown-difference`
-   - Should be: `/autism-meltdown-vs-shutdown-difference`
+   - Current: `/autistic-meltdowns/understanding-meltdown-vs-shutdown`
+   - Should be: `/understanding-meltdown-vs-shutdown`
    - Fix: Remove `/autistic-meltdowns/` directory prefix
 
 8. **02-what-to-play-during-meltdown.md** (line 45, frontmatter):
@@ -66,7 +66,7 @@ These links use file paths or directory structures instead of the required `/{sl
 
 9. **02-what-to-play-during-meltdown.md** (line 47, frontmatter):
    - Current: `/autistic-meltdowns/04-meltdown-recovery`
-   - Should be: `/autism-meltdown-recovery-guide`
+   - Should be: `/helping-child-recover-after-meltdown`
    - Fix: Replace URL with correct slug
 
 10. **02-what-to-play-during-meltdown.md** (line 49, frontmatter):
@@ -80,8 +80,8 @@ These links use file paths or directory structures instead of the required `/{sl
     - Fix: Remove directory prefix and number prefix
 
 12. **02-what-to-play-during-meltdown.md** (line 247, content):
-    - Current: `/autistic-meltdowns/autism-meltdown-recovery-guide`
-    - Should be: `/autism-meltdown-recovery-guide`
+    - Current: `/autistic-meltdowns/helping-child-recover-after-meltdown`
+    - Should be: `/helping-child-recover-after-meltdown`
     - Fix: Remove `/autistic-meltdowns/` directory prefix
 
 13. **02-what-to-play-during-meltdown.md** (line 263, content):
@@ -101,7 +101,7 @@ These links use file paths or directory structures instead of the required `/{sl
 
 16. **03-after-school-autism-meltdown-why.md** (line 48, frontmatter):
     - Current: `/autistic-meltdowns/04-meltdown-recovery`
-    - Should be: `/autism-meltdown-recovery-guide`
+    - Should be: `/helping-child-recover-after-meltdown`
     - Fix: Replace URL with correct slug
 
 17. **03-after-school-autism-meltdown-why.md** (line 50, frontmatter):
@@ -120,76 +120,76 @@ These links use file paths or directory structures instead of the required `/{sl
     - Fix: Replace URL with correct slug
 
 20. **03-after-school-autism-meltdown-why.md** (line 281, content):
-    - Current: `/autistic-meltdowns/autism-meltdown-recovery-guide`
-    - Should be: `/autism-meltdown-recovery-guide`
+    - Current: `/autistic-meltdowns/helping-child-recover-after-meltdown`
+    - Should be: `/helping-child-recover-after-meltdown`
     - Fix: Remove `/autistic-meltdowns/` directory prefix
 
-21. **04-autism-meltdown-recovery-guide.md** (line 45, frontmatter):
+21. **04-helping-child-recover-after-meltdown.md** (line 45, frontmatter):
     - Current: `/autistic-meltdowns/02-sounds-to-play-autism-meltdown`
     - Should be: `/sounds-to-play-autism-meltdown`
     - Fix: Remove `/autistic-meltdowns/` directory prefix
 
-22. **04-autism-meltdown-recovery-guide.md** (line 47, frontmatter):
+22. **04-helping-child-recover-after-meltdown.md** (line 47, frontmatter):
     - Current: `/autistic-meltdowns/03-after-school-meltdowns`
     - Should be: `/after-school-autism-meltdown-why`
     - Fix: Replace URL with correct slug
 
-23. **04-autism-meltdown-recovery-guide.md** (line 49, frontmatter):
+23. **04-helping-child-recover-after-meltdown.md** (line 49, frontmatter):
     - Current: `/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents`
     - Should be: `/complete-guide-autism-meltdowns-uk-parents`
     - Fix: Remove directory prefix
 
-24. **04-autism-meltdown-recovery-guide.md** (line 88, content):
+24. **04-helping-child-recover-after-meltdown.md** (line 88, content):
     - Current: `/autistic-meltdowns/01-understanding-autism-meltdowns`
     - Should be: `/understanding-autism-meltdowns`
     - Fix: Remove directory prefix and number prefix
 
-25. **04-autism-meltdown-recovery-guide.md** (line 180, content):
+25. **04-helping-child-recover-after-meltdown.md** (line 180, content):
     - Current: `/autistic-meltdowns/02-sounds-to-play-during-meltdown`
     - Should be: `/sounds-to-play-autism-meltdown`
     - Fix: Replace URL with correct slug
 
-26. **04-autism-meltdown-recovery-guide.md** (line 239, content):
+26. **04-helping-child-recover-after-meltdown.md** (line 239, content):
     - Current: `/autistic-meltdowns/03-after-school-meltdowns`
     - Should be: `/after-school-autism-meltdown-why`
     - Fix: Replace URL with correct slug
 
-27. **05-autism-meltdown-vs-shutdown-difference.md** (line 44, frontmatter):
+27. **05-understanding-meltdown-vs-shutdown.md** (line 44, frontmatter):
     - Current: `/autistic-meltdowns/01-understanding-autism-meltdowns`
     - Should be: `/understanding-autism-meltdowns`
     - Fix: Remove directory prefix and number prefix
 
-28. **05-autism-meltdown-vs-shutdown-difference.md** (line 46, frontmatter):
+28. **05-understanding-meltdown-vs-shutdown.md** (line 46, frontmatter):
     - Current: `/autistic-meltdowns/02-what-to-play-during-meltdown`
     - Should be: `/sounds-to-play-autism-meltdown`
     - Fix: Replace URL with correct slug
 
-29. **05-autism-meltdown-vs-shutdown-difference.md** (line 48, frontmatter):
-    - Current: `/autistic-meltdowns/04-autism-meltdown-recovery-guide`
-    - Should be: `/autism-meltdown-recovery-guide`
+29. **05-understanding-meltdown-vs-shutdown.md** (line 48, frontmatter):
+    - Current: `/autistic-meltdowns/04-helping-child-recover-after-meltdown`
+    - Should be: `/helping-child-recover-after-meltdown`
     - Fix: Remove `/autistic-meltdowns/` directory prefix
 
-30. **05-autism-meltdown-vs-shutdown-difference.md** (line 50, frontmatter):
+30. **05-understanding-meltdown-vs-shutdown.md** (line 50, frontmatter):
     - Current: `/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents`
     - Should be: `/complete-guide-autism-meltdowns-uk-parents`
     - Fix: Remove directory prefix
 
-31. **05-autism-meltdown-vs-shutdown-difference.md** (line 103, content):
+31. **05-understanding-meltdown-vs-shutdown.md** (line 103, content):
     - Current: `/autistic-meltdowns/01-understanding-autism-meltdowns`
     - Should be: `/understanding-autism-meltdowns`
     - Fix: Remove directory prefix and number prefix
 
-32. **05-autism-meltdown-vs-shutdown-difference.md** (line 185, content):
+32. **05-understanding-meltdown-vs-shutdown.md** (line 185, content):
     - Current: `/autistic-meltdowns/02-what-to-play-during-meltdown`
     - Should be: `/sounds-to-play-autism-meltdown`
     - Fix: Replace URL with correct slug
 
-33. **05-autism-meltdown-vs-shutdown-difference.md** (line 212, content):
-    - Current: `/autistic-meltdowns/04-autism-meltdown-recovery-guide`
-    - Should be: `/autism-meltdown-recovery-guide`
+33. **05-understanding-meltdown-vs-shutdown.md** (line 212, content):
+    - Current: `/autistic-meltdowns/04-helping-child-recover-after-meltdown`
+    - Should be: `/helping-child-recover-after-meltdown`
     - Fix: Remove `/autistic-meltdowns/` directory prefix
 
-34. **05-autism-meltdown-vs-shutdown-difference.md** (line 235, content):
+34. **05-understanding-meltdown-vs-shutdown.md** (line 235, content):
     - Current: `/autistic-meltdowns/preventing-autism-meltdowns-warning-signs`
     - Should be: `/preventing-autism-meltdowns-warning-signs`
     - Fix: Remove `/autistic-meltdowns/` directory prefix (though slug is correct)
@@ -205,8 +205,8 @@ These links use file paths or directory structures instead of the required `/{sl
     - Fix: Remove directory structure and fix slug
 
 37. **06-preventing-autism-meltdowns-warning-signs.md** (line 47, frontmatter):
-    - Current: `/autistic-meltdowns/articles/04-autism-meltdown-recovery-guide`
-    - Should be: `/autism-meltdown-recovery-guide`
+    - Current: `/autistic-meltdowns/articles/04-helping-child-recover-after-meltdown`
+    - Should be: `/helping-child-recover-after-meltdown`
     - Fix: Remove `/autistic-meltdowns/articles/` directory structure
 
 38. **06-preventing-autism-meltdowns-warning-signs.md** (line 49, frontmatter):
@@ -225,8 +225,8 @@ These links use file paths or directory structures instead of the required `/{sl
     - Fix: Remove directory structure and fix slug
 
 41. **06-preventing-autism-meltdowns-warning-signs.md** (line 249, content):
-    - Current: `/autistic-meltdowns/articles/04-autism-meltdown-recovery-guide`
-    - Should be: `/autism-meltdown-recovery-guide`
+    - Current: `/autistic-meltdowns/articles/04-helping-child-recover-after-meltdown`
+    - Should be: `/helping-child-recover-after-meltdown`
     - Fix: Remove `/autistic-meltdowns/articles/` directory structure
 
 42. **07-complete-guide-autism-meltdowns-uk-parents.md** (line 46, frontmatter):
@@ -263,8 +263,8 @@ These links use file paths or directory structures instead of the required `/{sl
     - Fix: Remove directory structure and fix slug
 
 49. **07-complete-guide-autism-meltdowns-uk-parents.md** (line 304, content):
-    - Current: `/autistic-meltdowns/articles/04-autism-meltdown-recovery-guide`
-    - Should be: `/autism-meltdown-recovery-guide`
+    - Current: `/autistic-meltdowns/articles/04-helping-child-recover-after-meltdown`
+    - Should be: `/helping-child-recover-after-meltdown`
     - Fix: Remove `/autistic-meltdowns/articles/` directory structure
 
 50. **07-complete-guide-autism-meltdowns-uk-parents.md** (line 369, content):
@@ -273,8 +273,8 @@ These links use file paths or directory structures instead of the required `/{sl
     - Fix: Remove `/autistic-meltdowns/articles/` directory structure
 
 51. **07-complete-guide-autism-meltdowns-uk-parents.md** (line 427, content):
-    - Current: `/autistic-meltdowns/articles/05-autism-meltdown-vs-shutdown-difference`
-    - Should be: `/autism-meltdown-vs-shutdown-difference`
+    - Current: `/autistic-meltdowns/articles/05-understanding-meltdown-vs-shutdown`
+    - Should be: `/understanding-meltdown-vs-shutdown`
     - Fix: Remove `/autistic-meltdowns/articles/` directory structure
 
 ---
@@ -290,8 +290,8 @@ These links point to slugs that don't exist in any pillar OR use incorrect slug 
 
 2. **02-what-to-play-during-meltdown.md** (line 47, frontmatter):
    - URL: `/autistic-meltdowns/04-meltdown-recovery`
-   - Intended slug: `autism-meltdown-recovery-guide`
-   - Fix: Update to `/autism-meltdown-recovery-guide`
+   - Intended slug: `helping-child-recover-after-meltdown`
+   - Fix: Update to `/helping-child-recover-after-meltdown`
 
 3. **02-what-to-play-during-meltdown.md** (line 49, frontmatter):
    - URL: `/autistic-meltdowns/06-preventing-meltdowns`
@@ -305,43 +305,43 @@ These links point to slugs that don't exist in any pillar OR use incorrect slug 
 
 5. **03-after-school-autism-meltdown-why.md** (line 48, frontmatter):
    - URL: `/autistic-meltdowns/04-meltdown-recovery`
-   - Intended slug: `autism-meltdown-recovery-guide`
-   - Fix: Update to `/autism-meltdown-recovery-guide`
+   - Intended slug: `helping-child-recover-after-meltdown`
+   - Fix: Update to `/helping-child-recover-after-meltdown`
 
 6. **03-after-school-autism-meltdown-why.md** (line 205, content):
    - URL: `/autistic-meltdowns/02-what-to-play-during-meltdown`
    - Intended slug: `sounds-to-play-autism-meltdown`
    - Fix: Update to `/sounds-to-play-autism-meltdown`
 
-7. **04-autism-meltdown-recovery-guide.md** (line 47, frontmatter):
+7. **04-helping-child-recover-after-meltdown.md** (line 47, frontmatter):
    - URL: `/autistic-meltdowns/03-after-school-meltdowns`
    - Intended slug: `after-school-autism-meltdown-why`
    - Fix: Update to `/after-school-autism-meltdown-why`
 
-8. **04-autism-meltdown-recovery-guide.md** (line 180, content):
+8. **04-helping-child-recover-after-meltdown.md** (line 180, content):
    - URL: `/autistic-meltdowns/02-sounds-to-play-during-meltdown`
    - Actual slug: `sounds-to-play-autism-meltdown`
    - Fix: Update to `/sounds-to-play-autism-meltdown`
 
-9. **04-autism-meltdown-recovery-guide.md** (line 239, content):
+9. **04-helping-child-recover-after-meltdown.md** (line 239, content):
    - URL: `/autistic-meltdowns/03-after-school-meltdowns`
    - Intended slug: `after-school-autism-meltdown-why`
    - Fix: Update to `/after-school-autism-meltdown-why`
 
-10. **05-autism-meltdown-vs-shutdown-difference.md** (line 46, frontmatter):
+10. **05-understanding-meltdown-vs-shutdown.md** (line 46, frontmatter):
     - URL: `/autistic-meltdowns/02-what-to-play-during-meltdown`
     - Intended slug: `sounds-to-play-autism-meltdown`
     - Fix: Update to `/sounds-to-play-autism-meltdown`
 
-11. **05-autism-meltdown-vs-shutdown-difference.md** (line 185, content):
+11. **05-understanding-meltdown-vs-shutdown.md** (line 185, content):
     - URL: `/autistic-meltdowns/02-what-to-play-during-meltdown`
     - Intended slug: `sounds-to-play-autism-meltdown`
     - Fix: Update to `/sounds-to-play-autism-meltdown`
 
 12. **06-preventing-autism-meltdowns-warning-signs.md** (line 237, content):
-    - URL: `/autistic-meltdowns/autism-meltdown-vs-shutdown-difference`
-    - Correct slug exists: `autism-meltdown-vs-shutdown-difference`
-    - Fix: Remove `/autistic-meltdowns/` prefix to get `/autism-meltdown-vs-shutdown-difference`
+    - URL: `/autistic-meltdowns/understanding-meltdown-vs-shutdown`
+    - Correct slug exists: `understanding-meltdown-vs-shutdown`
+    - Fix: Remove `/autistic-meltdowns/` prefix to get `/understanding-meltdown-vs-shutdown`
 
 ---
 
@@ -396,8 +396,8 @@ No inbound cross-pillar links detected.
 | 01-understanding-autism-meltdowns.md | understanding-autism-meltdowns | Yes |
 | 02-what-to-play-during-meltdown.md | sounds-to-play-autism-meltdown | Yes |
 | 03-after-school-autism-meltdown-why.md | after-school-autism-meltdown-why | Yes |
-| 04-autism-meltdown-recovery-guide.md | autism-meltdown-recovery-guide | Yes |
-| 05-autism-meltdown-vs-shutdown-difference.md | autism-meltdown-vs-shutdown-difference | Yes |
+| 04-helping-child-recover-after-meltdown.md | helping-child-recover-after-meltdown | Yes |
+| 05-understanding-meltdown-vs-shutdown.md | understanding-meltdown-vs-shutdown | Yes |
 | 06-preventing-autism-meltdowns-warning-signs.md | preventing-autism-meltdowns-warning-signs | Yes |
 
 **All supporting articles are linked from the pillar guide.** ✓
@@ -409,8 +409,8 @@ No inbound cross-pillar links detected.
 | 01-understanding-autism-meltdowns.md | Yes |
 | 02-what-to-play-during-meltdown.md | No |
 | 03-after-school-autism-meltdown-why.md | Yes |
-| 04-autism-meltdown-recovery-guide.md | Yes |
-| 05-autism-meltdown-vs-shutdown-difference.md | Yes |
+| 04-helping-child-recover-after-meltdown.md | Yes |
+| 05-understanding-meltdown-vs-shutdown.md | Yes |
 | 06-preventing-autism-meltdowns-warning-signs.md | Yes |
 
 **Missing links TO pillar guide:**
@@ -429,7 +429,7 @@ Both patterns violate Rule 5a. Correct format is `/{slug}` only.
 
 **Secondary Problem:** Several links use shortened or incorrect slug names instead of the exact frontmatter slug:
 - `02-what-to-play-during-meltdown` should be `sounds-to-play-autism-meltdown`
-- `04-meltdown-recovery` should be `autism-meltdown-recovery-guide`
+- `04-meltdown-recovery` should be `helping-child-recover-after-meltdown`
 - `03-after-school-meltdowns` should be `after-school-autism-meltdown-why`
 - `06-preventing-meltdowns` should be `preventing-autism-meltdowns-warning-signs`
 
@@ -441,7 +441,7 @@ Both patterns violate Rule 5a. Correct format is `/{slug}` only.
 
 2. Manual slug corrections:
    - All instances of `02-what-to-play-during-meltdown` → `sounds-to-play-autism-meltdown`
-   - All instances of `04-meltdown-recovery` → `autism-meltdown-recovery-guide`
+   - All instances of `04-meltdown-recovery` → `helping-child-recover-after-meltdown`
    - All instances of `03-after-school-meltdowns` → `after-school-autism-meltdown-why`
    - All instances of `06-preventing-meltdowns` → `preventing-autism-meltdowns-warning-signs`
 

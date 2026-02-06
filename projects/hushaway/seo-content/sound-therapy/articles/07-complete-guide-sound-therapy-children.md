@@ -47,13 +47,13 @@ internal_links:
     anchor: "understanding sound therapy for children"
   - url: "/sound-therapy/02-does-sound-therapy-work"
     anchor: "what the evidence actually says"
-  - url: "/sound-therapy/03-binaural-beats-children"
+  - url: "/sound-therapy/03-safety-guide-binaural-beats-children"
     anchor: "binaural beats for children"
   - url: "/sound-therapy/04-solfeggio-frequencies-children"
     anchor: "solfeggio frequencies for children"
   - url: "/sound-therapy/05-sound-therapy-at-home"
     anchor: "sound therapy at home"
-  - url: "/sound-therapy/06-sound-therapy-vs-music-therapy"
+  - url: "/sound-therapy/06-parents-guide-sound-vs-music-therapy"
     anchor: "sound therapy versus music therapy"
 external_citations:
   - url: "https://pubmed.ncbi.nlm.nih.gov/33041752/"
@@ -131,7 +131,7 @@ The most important distinction in children's sound therapy is between passive an
 
 Why does this matter? Because many children who could benefit from sound support can't engage with active approaches. When your child is mid-meltdown, overwhelmed after school, or fighting sleep at 10pm, the last thing they need is another demand. Passive listening meets them where they are. Press play. That's it.
 
-We explore this distinction fully in our comparison of [sound therapy versus music therapy](/sound-therapy/06-sound-therapy-vs-music-therapy). Both have value. They serve different purposes.
+We explore this distinction fully in our comparison of [sound therapy versus music therapy](/sound-therapy/06-parents-guide-sound-vs-music-therapy). Both have value. They serve different purposes.
 
 ---
 
@@ -153,7 +153,7 @@ What parents need to know:
 - Research in children specifically is limited
 - Safety profile appears good, but start with lower volumes
 
-If binaural beats interest you, our dedicated guide to [binaural beats for children](/sound-therapy/03-binaural-beats-children) covers everything from safe use to what frequencies suit different ages.
+If binaural beats interest you, our dedicated guide to [binaural beats for children](/sound-therapy/03-safety-guide-binaural-beats-children) covers everything from safe use to what frequencies suit different ages.
 
 ### Solfeggio Frequencies
 
@@ -421,7 +421,7 @@ Here's what we know:
 
 We've been honest throughout this guide about what research supports and what it doesn't. That honesty is the foundation of trust. You deserve to know what you're trying before you try it.
 
-For deeper exploration of specific topics, we've created dedicated guides on [understanding sound therapy for children](/sound-therapy/01-understanding-sound-therapy-children), [what the evidence actually says](/sound-therapy/02-does-sound-therapy-work), [binaural beats for children](/sound-therapy/03-binaural-beats-children), [solfeggio frequencies for children](/sound-therapy/04-solfeggio-frequencies-children), [sound therapy at home](/sound-therapy/05-sound-therapy-at-home), and [sound therapy versus music therapy](/sound-therapy/06-sound-therapy-vs-music-therapy).
+For deeper exploration of specific topics, we've created dedicated guides on [understanding sound therapy for children](/sound-therapy/01-understanding-sound-therapy-children), [what the evidence actually says](/sound-therapy/02-does-sound-therapy-work), [binaural beats for children](/sound-therapy/03-safety-guide-binaural-beats-children), [solfeggio frequencies for children](/sound-therapy/04-solfeggio-frequencies-children), [sound therapy at home](/sound-therapy/05-sound-therapy-at-home), and [sound therapy versus music therapy](/sound-therapy/06-parents-guide-sound-vs-music-therapy).
 
 ### Your Next Step
 

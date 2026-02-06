@@ -242,7 +242,7 @@ What we'd suggest:
 - Start with shorter sessions (10 minutes) to gauge tolerance
 - Alpha or theta frequencies tend to be gentler starting points than beta
 
-Here's what matters most: some autistic children prefer ambient soundscapes or nature sounds over the more "constructed" feeling of binaural beats. There's no hierarchy here. Whatever your child finds calming is the right choice for your child. Our guide to [sound therapy at home](/sound-therapy/05-sound-therapy-at-home) covers how to set up a supportive sound environment. For the full picture, see our [complete guide to sound therapy for children](/sound-therapy/07-complete-guide-sound-therapy-children).
+Here's what matters most: some autistic children prefer ambient soundscapes or nature sounds over the more "constructed" feeling of binaural beats. There's no hierarchy here. Whatever your child finds calming is the right choice for your child. Our guide to [sound therapy at home](/sound-therapy/05-sound-therapy-at-home) covers how to set up a supportive sound environment. For the full picture, see our [complete guide to sound therapy for children](/sound-therapy/complete-guide-sound-therapy-children).
 
 ## What Parents Often Get Wrong
 

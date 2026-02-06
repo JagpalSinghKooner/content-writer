@@ -14,10 +14,10 @@
 | 01 | why-bedtime-harder-neurodivergent-children | PASS (0F, 2W) | FAIL (6 format) | PASS | Strong | FAIL |
 | 02 | sound-based-bedtime-routine-nd-children | PASS (0F, 0W) | FAIL (3 format) | FAIL (1 broken) | Strong | FAIL |
 | 03 | visual-bedtime-routine-neurodivergent-children | FAIL (3F, 0W) | FAIL (5 format) | FAIL (2 broken) | Strong | FAIL |
-| 04 | adhd-bedtime-routine-that-works | PASS (0F, 0W) | FAIL (4 format) | PASS | Strong | FAIL |
+| 04 | sound-anchored-adhd-bedtime-routine | PASS (0F, 0W) | FAIL (4 format) | PASS | Strong | FAIL |
 | 05 | autism-bedtime-routine-predictability-calm | PASS (0F, 0W) | FAIL (5 format) | PASS | Strong | FAIL |
 | 06 | bedtime-anxiety-sound-calm-answer | PASS (0F, 0W) | FAIL (7 format) | FAIL (1 broken) | Strong | FAIL |
-| 07 | complete-guide-bedtime-routines-nd-children (pillar guide) | FAIL (7F, 0W) | FAIL (14 format) | PASS | Strong | FAIL |
+| 07 | complete-guide-nd-bedtime-routines (pillar guide) | FAIL (7F, 0W) | FAIL (14 format) | PASS | Strong | FAIL |
 
 ---
 

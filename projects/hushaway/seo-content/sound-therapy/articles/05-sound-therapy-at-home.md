@@ -44,7 +44,7 @@ internal_links:
     anchor: "understanding what sound therapy actually is"
   - url: "/sound-therapy/02-does-sound-therapy-work"
     anchor: "what the evidence actually shows"
-  - url: "/sound-therapy/03-binaural-beats-children"
+  - url: "/sound-therapy/03-safety-guide-binaural-beats-children"
     anchor: "our binaural beats guide"
 external_citations:
   - url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10469527/"
@@ -183,7 +183,7 @@ Here's a practical breakdown of what works when.
 ### For focus and homework time
 
 **What often works:**
-- Binaural beats (see [our binaural beats guide](/sound-therapy/03-binaural-beats-children) for proper use)
+- Binaural beats (see [our binaural beats guide](/sound-therapy/03-safety-guide-binaural-beats-children) for proper use)
 - White, pink, or brown noise
 - Lo-fi ambient music without lyrics
 - Nature sounds that don't have bird calls or other attention-grabbing elements
@@ -320,7 +320,7 @@ The goal isn't to replace appropriate professional help. It's to have tools you 
 
 That's what sound therapy at home is really about. Support that fits your life, not the other way around.
 
-For the complete picture of all sound therapy approaches and how home-based support fits in, see our [complete guide to sound therapy for children](/sound-therapy/07-complete-guide-sound-therapy-children).
+For the complete picture of all sound therapy approaches and how home-based support fits in, see our [complete guide to sound therapy for children](/sound-therapy/complete-guide-sound-therapy-children).
 
 ## FAQ
 

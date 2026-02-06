@@ -14,8 +14,8 @@
 | 01 | understanding-autism-meltdowns | FAIL (1) | FAIL | PASS | PASS | FAIL |
 | 02 | sounds-to-play-autism-meltdown | FAIL (8) | FAIL | PASS | PASS | FAIL |
 | 03 | after-school-autism-meltdown-why | FAIL (7) | FAIL | FAIL (1 broken URL) | PASS | FAIL |
-| 04 | autism-meltdown-recovery-guide | FAIL (7) | FAIL | PASS | PASS | FAIL |
-| 05 | autism-meltdown-vs-shutdown-difference | FAIL (5) | FAIL | PASS | PASS | FAIL |
+| 04 | helping-child-recover-after-meltdown | FAIL (7) | FAIL | PASS | PASS | FAIL |
+| 05 | understanding-meltdown-vs-shutdown | FAIL (5) | FAIL | PASS | PASS | FAIL |
 | 06 | preventing-autism-meltdowns-warning-signs | FAIL (1) | FAIL | PASS | PASS | FAIL |
 | 07 | complete-guide-autism-meltdowns-uk-parents | PASS | FAIL | PASS | PASS | FAIL |
 
@@ -55,10 +55,10 @@ Several links use shortened or incorrect slug names instead of exact frontmatter
 | Incorrect Reference | Correct Slug |
 |-------------------|-------------|
 | `02-what-to-play-during-meltdown` | `sounds-to-play-autism-meltdown` |
-| `04-meltdown-recovery` | `autism-meltdown-recovery-guide` |
+| `04-meltdown-recovery` | `helping-child-recover-after-meltdown` |
 | `03-after-school-meltdowns` | `after-school-autism-meltdown-why` |
 | `06-preventing-meltdowns` | `preventing-autism-meltdowns-warning-signs` |
-| `05-meltdown-vs-shutdown` | `autism-meltdown-vs-shutdown-difference` |
+| `05-meltdown-vs-shutdown` | `understanding-meltdown-vs-shutdown` |
 
 ### Cross-Pillar Links
 

@@ -42,7 +42,7 @@ Internal links must use `/{slug}` format, not directory structures or file paths
 
 2. **Line 46** (frontmatter):
    - Found: `/autistic-meltdowns/05-meltdown-vs-shutdown`
-   - Should be: `/autism-meltdown-vs-shutdown-difference`
+   - Should be: `/understanding-meltdown-vs-shutdown`
 
 3. **Line 48** (frontmatter):
    - Found: `/autistic-meltdowns/06-preventing-meltdowns`
@@ -61,8 +61,8 @@ Internal links must use `/{slug}` format, not directory structures or file paths
    - Should be: `/preventing-autism-meltdowns-warning-signs`
 
 7. **Line 215** (content):
-   - Found: `/autistic-meltdowns/autism-meltdown-vs-shutdown-difference`
-   - Should be: `/autism-meltdown-vs-shutdown-difference`
+   - Found: `/autistic-meltdowns/understanding-meltdown-vs-shutdown`
+   - Should be: `/understanding-meltdown-vs-shutdown`
 
 #### Article 02: sounds-to-play-autism-meltdown.md
 
@@ -72,7 +72,7 @@ Internal links must use `/{slug}` format, not directory structures or file paths
 
 2. **Line 47** (frontmatter):
    - Found: `/autistic-meltdowns/04-meltdown-recovery`
-   - Should be: `/autism-meltdown-recovery-guide`
+   - Should be: `/helping-child-recover-after-meltdown`
 
 3. **Line 49** (frontmatter):
    - Found: `/autistic-meltdowns/06-preventing-meltdowns`
@@ -87,8 +87,8 @@ Internal links must use `/{slug}` format, not directory structures or file paths
    - Should be: `/understanding-autism-meltdowns`
 
 6. **Line 247** (content):
-   - Found: `/autistic-meltdowns/autism-meltdown-recovery-guide`
-   - Should be: `/autism-meltdown-recovery-guide`
+   - Found: `/autistic-meltdowns/helping-child-recover-after-meltdown`
+   - Should be: `/helping-child-recover-after-meltdown`
 
 7. **Line 263** (content):
    - Found: `/autistic-meltdowns/preventing-autism-meltdowns-warning-signs`
@@ -106,7 +106,7 @@ Internal links must use `/{slug}` format, not directory structures or file paths
 
 3. **Line 48** (frontmatter):
    - Found: `/autistic-meltdowns/04-meltdown-recovery`
-   - Should be: `/autism-meltdown-recovery-guide`
+   - Should be: `/helping-child-recover-after-meltdown`
 
 4. **Line 50** (frontmatter):
    - Found: `/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents`
@@ -121,10 +121,10 @@ Internal links must use `/{slug}` format, not directory structures or file paths
    - Should be: `/sounds-to-play-autism-meltdown`
 
 7. **Line 281** (content):
-   - Found: `/autistic-meltdowns/autism-meltdown-recovery-guide`
-   - Should be: `/autism-meltdown-recovery-guide`
+   - Found: `/autistic-meltdowns/helping-child-recover-after-meltdown`
+   - Should be: `/helping-child-recover-after-meltdown`
 
-#### Article 04: autism-meltdown-recovery-guide.md
+#### Article 04: helping-child-recover-after-meltdown.md
 
 1. **Line 44** (frontmatter):
    - Found: `/autistic-meltdowns/01-understanding-autism-meltdowns`
@@ -154,7 +154,7 @@ Internal links must use `/{slug}` format, not directory structures or file paths
    - Found: `/autistic-meltdowns/03-after-school-meltdowns`
    - Should be: `/after-school-autism-meltdown-why`
 
-#### Article 05: autism-meltdown-vs-shutdown-difference.md
+#### Article 05: understanding-meltdown-vs-shutdown.md
 
 1. **Line 44** (frontmatter):
    - Found: `/autistic-meltdowns/01-understanding-autism-meltdowns`
@@ -165,8 +165,8 @@ Internal links must use `/{slug}` format, not directory structures or file paths
    - Should be: `/sounds-to-play-autism-meltdown`
 
 3. **Line 48** (frontmatter):
-   - Found: `/autistic-meltdowns/04-autism-meltdown-recovery-guide`
-   - Should be: `/autism-meltdown-recovery-guide`
+   - Found: `/autistic-meltdowns/04-helping-child-recover-after-meltdown`
+   - Should be: `/helping-child-recover-after-meltdown`
 
 4. **Line 50** (frontmatter):
    - Found: `/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents`
@@ -181,8 +181,8 @@ Internal links must use `/{slug}` format, not directory structures or file paths
    - Should be: `/sounds-to-play-autism-meltdown`
 
 7. **Line 212** (content):
-   - Found: `/autistic-meltdowns/04-autism-meltdown-recovery-guide`
-   - Should be: `/autism-meltdown-recovery-guide`
+   - Found: `/autistic-meltdowns/04-helping-child-recover-after-meltdown`
+   - Should be: `/helping-child-recover-after-meltdown`
 
 #### Article 06: preventing-autism-meltdowns-warning-signs.md
 
@@ -195,8 +195,8 @@ Internal links must use `/{slug}` format, not directory structures or file paths
    - Should be: `/sounds-to-play-autism-meltdown`
 
 3. **Line 47** (frontmatter):
-   - Found: `/autistic-meltdowns/articles/04-autism-meltdown-recovery-guide`
-   - Should be: `/autism-meltdown-recovery-guide`
+   - Found: `/autistic-meltdowns/articles/04-helping-child-recover-after-meltdown`
+   - Should be: `/helping-child-recover-after-meltdown`
 
 4. **Line 49** (frontmatter):
    - Found: `/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents`
@@ -211,8 +211,8 @@ Internal links must use `/{slug}` format, not directory structures or file paths
    - Should be: `/sounds-to-play-autism-meltdown`
 
 7. **Line 249** (content):
-   - Found: `/autistic-meltdowns/articles/04-autism-meltdown-recovery-guide`
-   - Should be: `/autism-meltdown-recovery-guide`
+   - Found: `/autistic-meltdowns/articles/04-helping-child-recover-after-meltdown`
+   - Should be: `/helping-child-recover-after-meltdown`
 
 #### Article 07: complete-guide-autism-meltdowns-uk-parents.md
 
@@ -229,12 +229,12 @@ Internal links must use `/{slug}` format, not directory structures or file paths
    - Should be: `/after-school-autism-meltdown-why`
 
 4. **Line 52** (frontmatter):
-   - Found: `/autistic-meltdowns/articles/04-autism-meltdown-recovery-guide`
-   - Should be: `/autism-meltdown-recovery-guide`
+   - Found: `/autistic-meltdowns/articles/04-helping-child-recover-after-meltdown`
+   - Should be: `/helping-child-recover-after-meltdown`
 
 5. **Line 54** (frontmatter):
-   - Found: `/autistic-meltdowns/articles/05-autism-meltdown-vs-shutdown-difference`
-   - Should be: `/autism-meltdown-vs-shutdown-difference`
+   - Found: `/autistic-meltdowns/articles/05-understanding-meltdown-vs-shutdown`
+   - Should be: `/understanding-meltdown-vs-shutdown`
 
 6. **Line 56** (frontmatter):
    - Found: `/autistic-meltdowns/articles/06-preventing-autism-meltdowns-warning-signs`
@@ -253,16 +253,16 @@ Internal links must use `/{slug}` format, not directory structures or file paths
    - Should be: `/sounds-to-play-autism-meltdown`
 
 10. **Line 304** (content):
-    - Found: `/autistic-meltdowns/articles/04-autism-meltdown-recovery-guide`
-    - Should be: `/autism-meltdown-recovery-guide`
+    - Found: `/autistic-meltdowns/articles/04-helping-child-recover-after-meltdown`
+    - Should be: `/helping-child-recover-after-meltdown`
 
 11. **Line 369** (content):
     - Found: `/autistic-meltdowns/articles/03-after-school-autism-meltdown-why`
     - Should be: `/after-school-autism-meltdown-why`
 
 12. **Line 427** (content):
-    - Found: `/autistic-meltdowns/articles/05-autism-meltdown-vs-shutdown-difference`
-    - Should be: `/autism-meltdown-vs-shutdown-difference`
+    - Found: `/autistic-meltdowns/articles/05-understanding-meltdown-vs-shutdown`
+    - Should be: `/understanding-meltdown-vs-shutdown`
 
 **Total Internal Link Format Violations: 42 across all 7 articles**
 
@@ -307,8 +307,8 @@ Key terms are defined consistently:
 | 01-understanding-autism-meltdowns | Neurological foundation explanation | Strong | Establishes "what's actually happening" clearly. Positions sound as working because it's passive. |
 | 02-sounds-to-play-autism-meltdown | Direct answer to "what to play" | Strong | THE gap-filler article. Delivers specific sound types, what to avoid, how to introduce. |
 | 03-after-school-autism-meltdown-why | Masking debt and after-school pattern | Strong | Names the pattern ("masking debt"), positions home as safe space, sound as reset tool. |
-| 04-autism-meltdown-recovery-guide | Recovery focus (gap competitors miss) | Strong | Entirely focused on the overlooked aftermath. Sound positioned as ongoing support. |
-| 05-autism-meltdown-vs-shutdown-difference | Meltdown vs shutdown differentiation | Strong | Clear distinction between outward/inward overwhelm. Shutdown positioned as "quiet crisis." |
+| 04-helping-child-recover-after-meltdown | Recovery focus (gap competitors miss) | Strong | Entirely focused on the overlooked aftermath. Sound positioned as ongoing support. |
+| 05-understanding-meltdown-vs-shutdown | Meltdown vs shutdown differentiation | Strong | Clear distinction between outward/inward overwhelm. Shutdown positioned as "quiet crisis." |
 | 06-preventing-autism-meltdowns-warning-signs | Cumulative triggers, prevention as daily regulation | Strong | "Wrong socks weren't the problem" angle delivered. Sound positioned as daily prevention tool. |
 | 07-complete-guide-autism-meltdowns-uk-parents | Comprehensive pillar guide | Strong | Synthesises all angles. UK-specific context. Fills "what to actually play" gap for UK parents. |
 
@@ -329,8 +329,8 @@ None. No articles showing moderate alignment issues.
 | 01-understanding-autism-meltdowns | Strong | Warm parent-to-parent voice. "You've been there" opening. Avoids clinical jargon. |
 | 02-sounds-to-play-autism-meltdown | Strong | "You're in the thick of it right now" - empathetic, immediate. Natural UK English throughout. |
 | 03-after-school-autism-meltdown-why | Strong | "3:47pm. The school door opens." - specific, relatable. Validates parent experience. |
-| 04-autism-meltdown-recovery-guide | Strong | "The screaming has stopped. But they're not okay." - real parent experience captured. |
-| 05-autism-meltdown-vs-shutdown-difference | Strong | "The quiet crisis your child might be hiding" - positions overlooked experience. |
+| 04-helping-child-recover-after-meltdown | Strong | "The screaming has stopped. But they're not okay." - real parent experience captured. |
+| 05-understanding-meltdown-vs-shutdown | Strong | "The quiet crisis your child might be hiding" - positions overlooked experience. |
 | 06-preventing-autism-meltdowns-warning-signs | Strong | "It wasn't the socks" - immediately relatable, contrarian to standard trigger advice. |
 | 07-complete-guide-autism-meltdowns-uk-parents | Strong | UK-specific language ("NHS guidance", "National Autistic Society"). Parent frustration acknowledged. |
 

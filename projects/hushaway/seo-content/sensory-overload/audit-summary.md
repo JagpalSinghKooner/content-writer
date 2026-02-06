@@ -51,8 +51,8 @@
 
 **Broken Link Detail:**
 - Article 01 frontmatter: 3 broken slug references (uses partial slugs that don't match any article's frontmatter slug)
-- Articles 04, 05: reference non-existent slug `03-after-school-sensory-overload` (correct: `04-understanding-after-school-sensory-overload`)
-- Articles 04, 06: reference non-existent slug `07-sensory-overload-recovery` (correct: `07-recovering-sensory-overload-hours-after`)
+- Articles 04, 05: reference non-existent slug `03-after-school-sensory-overload` (correct: `understanding-after-school-sensory-overload`)
+- Articles 04, 06: reference non-existent slug `07-sensory-overload-recovery` (correct: `recovering-sensory-overload-hours-after`)
 
 ### Cross-Pillar Links
 

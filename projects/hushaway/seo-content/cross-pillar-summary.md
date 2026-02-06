@@ -150,7 +150,7 @@ These are WARN, not FAIL. The URLs are likely valid but return 403 to automated 
 | Pillar | Count | Root Cause |
 |--------|------:|-----------|
 | Autistic Meltdowns | 12 | Links use shortened/incorrect slug names (e.g., `02-what-to-play-during-meltdown` instead of `sounds-to-play-autism-meltdown`) |
-| ADHD Sleep | 9 | All reference `/adhd-racing-thoughts` but frontmatter slug is `quieting-adhd-racing-thoughts-bedtime` |
+| ADHD Sleep | 9 | All reference `/adhd-racing-thoughts` but frontmatter slug is `quieting-adhd-racing-thoughts-bedtime` (note: slug references updated in Task 38) |
 | Sensory Overload | 5 | Partial slugs that don't match any article's frontmatter |
 | Emotional Regulation | 2 | Filename/slug mismatch for article 02 |
 
@@ -165,11 +165,11 @@ These are WARN, not FAIL. The URLs are likely valid but return 403 to automated 
 
 | Pillar | Articles | Current Slug |
 |--------|----------|-------------|
-| ADHD Sleep | 02 | `adhd-bedtime-routine` |
-| ADHD Sleep | 03 | `calming-sounds-adhd` |
-| Sound Therapy | 03 | `binaural-beats-children` |
-| Sound Therapy | 06 | `sound-therapy-vs-music-therapy` |
-| App Comparisons | 05 | `free-calming-apps-kids-uk` |
+| ADHD Sleep | 02 | `parents-guide-adhd-bedtime-routine` |
+| ADHD Sleep | 03 | `best-calming-sounds-adhd-children` |
+| Sound Therapy | 03 | `safety-guide-binaural-beats-children` |
+| Sound Therapy | 06 | `parents-guide-sound-vs-music-therapy` |
+| App Comparisons | 05 | `guide-free-calming-apps-kids-uk` |
 
 **Auto-fix plan:** Editorial decision required. Changing slugs affects all internal links referencing them. Recommend batching slug changes with link format fixes.
 

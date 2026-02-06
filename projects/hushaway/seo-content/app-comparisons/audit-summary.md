@@ -15,8 +15,8 @@
 | 01 | why-generic-calming-apps-fail-nd-children | FAIL (8) → PASS | FAIL → PASS | PASS | PASS | PASS |
 | 02 | review-best-apps-autistic-children-uk | FAIL (3) → PASS | FAIL → PASS | PASS | PASS | PASS |
 | 03 | review-best-apps-adhd-children-uk | FAIL (6) → PASS | FAIL → PASS | PASS | PASS | PASS |
-| 04 | honest-comparison-moshi-vs-calm-vs-headspace-nd-kids | FAIL (8) → PASS | FAIL → PASS | PASS | PASS | PASS |
-| 05 | free-calming-apps-kids-uk | FAIL (3) → PASS | FAIL → PASS | PASS | PASS | PASS |
+| 04 | comparing-moshi-calm-headspace-nd-kids | FAIL (8) → PASS | FAIL → PASS | PASS | PASS | PASS |
+| 05 | guide-free-calming-apps-kids-uk | FAIL (3) → PASS | FAIL → PASS | PASS | PASS | PASS |
 | 06 | guide-screen-free-calming-alternatives-kids | FAIL (4) → PASS | FAIL → PASS | PASS | PASS | PASS |
 | 07 | guide-best-calming-apps-nd-children-uk (pillar guide) | FAIL (19) → PASS | FAIL → PASS | PASS | PASS | PASS |
 
@@ -150,4 +150,4 @@ No conflicting claims detected across articles.
 - Article 01: `https://www.understood.org/articles/executive-function-disorder-adhd` returns 404
 
 **Slug Issue (editorial decision):**
-- Article 05: Slug `free-calming-apps-kids-uk` is keyword-only. Consider changing to descriptive-first format like `guide-free-calming-apps-kids-uk`
+- Article 05: Slug updated from `free-calming-apps-kids-uk` to `guide-free-calming-apps-kids-uk` (fixed in Task 37)

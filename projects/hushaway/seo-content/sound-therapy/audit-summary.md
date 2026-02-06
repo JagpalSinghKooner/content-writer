@@ -13,10 +13,10 @@
 |---|---------|------------|-------|-----------|-------------|-------|
 | 01 | understanding-sound-therapy-children | FAIL (7) | FAIL | PASS | PASS | FAIL |
 | 02 | does-sound-therapy-work | FAIL (4) | FAIL | WARN (1) | PASS | FAIL |
-| 03 | binaural-beats-children | FAIL (2) | FAIL | PASS | PASS | FAIL |
+| 03 | safety-guide-binaural-beats-children | FAIL (2) | FAIL | PASS | PASS | FAIL |
 | 04 | solfeggio-frequencies-children | FAIL (4) | FAIL | PASS | PASS | FAIL |
 | 05 | sound-therapy-at-home | FAIL (6) | FAIL | PASS | PASS | FAIL |
-| 06 | sound-therapy-vs-music-therapy | FAIL (7) | FAIL | PASS | PASS | FAIL |
+| 06 | parents-guide-sound-vs-music-therapy | FAIL (7) | FAIL | PASS | PASS | FAIL |
 | 07 | complete-guide-sound-therapy-children | FAIL (13) | FAIL | FAIL (1) | PASS | FAIL |
 
 ---
@@ -99,11 +99,11 @@
 |---------|------------|-----------------|-------------|
 | 01 | PASS | PASS | PASS (descriptive-first) |
 | 02 | PASS | PASS | PASS (descriptive-first) |
-| 03 | PASS | PASS | FAIL (keyword-only: "binaural-beats-children") |
+| 03 | PASS | PASS | PASS (updated: "safety-guide-binaural-beats-children") |
 | 04 | PASS | PASS | PASS (descriptive-first) |
 | 05 | PASS | PASS | PASS (descriptive-first) |
-| 06 | PASS | PASS | FAIL (keyword-only: "sound-therapy-vs-music-therapy") |
-| 07 | PASS | PASS | FAIL (number prefix: "07-complete-guide-sound-therapy-children") |
+| 06 | PASS | PASS | PASS (updated: "parents-guide-sound-vs-music-therapy") |
+| 07 | PASS | PASS | PASS (updated: "complete-guide-sound-therapy-children") |
 
 ---
 

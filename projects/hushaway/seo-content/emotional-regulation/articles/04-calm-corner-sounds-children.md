@@ -43,7 +43,7 @@ internal_links:
     anchor: "emotional regulation in children"
   - url: "/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children"
     anchor: "why generic calming sounds often fail neurodivergent children"
-  - url: "/calming-sounds/articles/04-calming-sounds-every-situation-anxiety-focus-transitions"
+  - url: "/calming-sounds/articles/04-guide-calming-sounds-every-situation"
     anchor: "calming sounds for different situations"
 external_citations:
   - url: "https://www.zonesofregulation.com/learn-more.html"
@@ -250,7 +250,7 @@ These are starting points. Your child will show you what works for them.
 
 The Open Sanctuary is designed for exactly this kind of exploration. Try different sounds. Notice what your child's nervous system responds to. You might be surprised by what works. Many parents are.
 
-For a deeper exploration of different sound types and when to use them, see our guide on [calming sounds for different situations](/calming-sounds/articles/04-calming-sounds-every-situation-anxiety-focus-transitions).
+For a deeper exploration of different sound types and when to use them, see our guide on [calming sounds for different situations](/calming-sounds/articles/04-guide-calming-sounds-every-situation).
 
 ## The Piece Every Guide Forgot
 

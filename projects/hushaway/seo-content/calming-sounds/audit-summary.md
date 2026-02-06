@@ -12,9 +12,9 @@
 | # | Article | Validation | Links | Citations | Consistency | Final |
 |---|---------|------------|-------|-----------|-------------|-------|
 | 01 | why-generic-calming-sounds-dont-work-nd-children | FAIL (4) | FAIL (6) | PASS | Strong | FAIL |
-| 02 | sleep-sounds-children-which-type-helps | FAIL (3) | FAIL (3) | PASS | Strong | FAIL |
-| 03 | asmr-binaural-beats-white-noise-parents-guide-sound-types | FAIL (6) | FAIL (4) | PASS | Strong | FAIL |
-| 04 | calming-sounds-every-situation-anxiety-focus-transitions | FAIL (3) | FAIL (2) | PASS | Strong | FAIL |
+| 02 | guide-matching-sleep-sounds-children | FAIL (3) | FAIL (3) | PASS | Strong | FAIL |
+| 03 | parents-guide-asmr-children-research | FAIL (6) | FAIL (4) | PASS | Strong | FAIL |
+| 04 | guide-calming-sounds-every-situation | FAIL (3) | FAIL (2) | PASS | Strong | FAIL |
 | 05 | free-calming-sounds-children-uk-options | PASS | FAIL (3) | WARN (1) | Strong | FAIL |
 | 06 | calming-sounds-vs-music-children-difference | PASS | FAIL (4) | PASS | Strong | FAIL |
 | 07 | complete-guide-calming-sounds-children (pillar guide) | FAIL (12) | FAIL (6) | WARN (2) | Strong | FAIL |
@@ -62,8 +62,8 @@
 
 **Missing links TO pillar guide:**
 - 01-why-generic-calming-sounds-dont-work-nd-children.md
-- 03-asmr-binaural-beats-white-noise-parents-guide-sound-types.md
-- 04-calming-sounds-every-situation-anxiety-focus-transitions.md
+- 03-asmr-binaural-beats-white-noise-parents-guide-sound-types.md (slug: parents-guide-asmr-children-research)
+- 04-calming-sounds-every-situation-anxiety-focus-transitions.md (slug: guide-calming-sounds-every-situation)
 - 06-calming-sounds-vs-music-children-difference.md
 
 ---

@@ -36,6 +36,8 @@
 | Task 27: Start App Comparisons Pillar | PASS |
 | Task 28: Positioning Angles for App Comparisons | PASS |
 | Task 29: Execute App Comparisons Pillar | PASS |
+| Task 37: Update Frontmatter Slugs (28 Articles) | PASS |
+| Task 38: Cascade Slug References to New Slugs | PASS |
 
 ---
 
@@ -1323,6 +1325,51 @@
 
 ---
 
+## Task 38: Cascade Slug References to New Slugs
+
+**Objective:** Update ALL references to the 28 old slugs (changed in Task 37) across the entire `projects/hushaway/seo-content/` directory, excluding PROJECT-TASKS.md.
+
+**Acceptance Criteria:**
+- [x] All 28 old slug references updated in audit-summary.md files (8 pillars)
+- [x] All old slug references updated in consistency-check.md and link-audit.md files
+- [x] All old slug references updated in cross-pillar-summary.md
+- [x] All old slug references updated in validation files (.validation.md)
+- [x] All old slug references updated in article internal_links and body links
+- [x] All old slug references updated in distribution file source_article fields
+- [x] Substring cases handled correctly (new slugs containing old slugs not modified)
+- [x] PROJECT-TASKS.md excluded from changes (historical tracking)
+- [x] Filenames and directory names not changed
+- [x] Verification pass confirms no old slugs remain in non-exempt locations
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Cascaded all 28 slug changes across the entire seo-content directory. Updated references in:
+  - **cross-pillar-summary.md**: Updated keyword-only slug table (5 entries)
+  - **adhd-sleep/audit-summary.md**: Updated article table, frontmatter accuracy table, keyword-only slug note
+  - **emotional-regulation/audit-summary.md**: Updated article table, section headers, frontmatter table, and all "should be" correction targets (13+ replacements)
+  - **calming-sounds/audit-summary.md**: Updated article table and missing guide links
+  - **sound-therapy/audit-summary.md**: Updated article table and slug format table
+  - **bedtime-routines/audit-summary.md**: Updated article table entries
+  - **app-comparisons/audit-summary.md**: Updated article table and slug issue note
+  - **sensory-overload/audit-summary.md**: Updated broken link detail
+  - **autistic-meltdowns/audit-summary.md**: Updated article table and slug reference tables
+  - **autistic-meltdowns/link-audit.md**: Full replace of old slugs (40+ replacements)
+  - **autistic-meltdowns/consistency-check.md**: Full replace of old slugs (20+ replacements)
+  - **autistic-meltdowns/articles/*.validation.md**: Updated 5 validation files with new slug references
+  - **sound-therapy/articles/**: Removed `07-` prefix from 6 article internal links to pillar guide
+  - **emotional-regulation/articles/04-calm-corner-sounds-children.md**: Updated `calming-sounds-every-situation-anxiety-focus-transitions` to `guide-calming-sounds-every-situation`
+- **Decisions:**
+  - Old slug references in "Found" columns of audit reports were preserved (they document what currently exists in article files)
+  - "Should be" correction targets were updated to new slugs
+  - Filename references in audit reports were preserved (filenames not changing)
+  - Substring cases handled correctly: no new-slug references were accidentally modified
+- **Next:** Task 39 will fix the internal link path format (removing `/pillar/articles/` prefixes to use `/{slug}` format).
+
+---
+
 *Project started: 2026-02-02*
-*Last updated: 2026-02-05 (Task 29 Execute App Comparisons Pillar PASS)*
+*Last updated: 2026-02-06 (Task 38 Cascade Slug References PASS)*
 *ALL 8 PILLARS COMPLETE*

@@ -13,8 +13,8 @@
 |---|---------|------------|-------|-----------|-------------|-------|
 | 01 | understanding-emotional-regulation-children | FAIL (5) | FAIL | PASS | PASS | FAIL |
 | 02 | guide-emotional-regulation-autistic-children | FAIL (5) | FAIL | PASS | PASS | FAIL |
-| 03 | emotional-regulation-adhd-children | FAIL (9) | FAIL | PASS | PASS | FAIL |
-| 04 | calm-corner-sounds-children | PASS | FAIL | FAIL (1) | PASS | FAIL |
+| 03 | tools-emotional-regulation-adhd-children | FAIL (9) | FAIL | PASS | PASS | FAIL |
+| 04 | guide-calm-corner-sounds-children | PASS | FAIL | FAIL (1) | PASS | FAIL |
 | 05 | co-regulation-through-sound-parent-child | FAIL (6) | FAIL | FAIL (1) | PASS | FAIL |
 | 06 | big-feelings-overwhelmed-child-help | FAIL (4) | FAIL | FAIL (2) | PASS | FAIL |
 | 07 | complete-guide-emotional-regulation-children | FAIL (21) | FAIL | FAIL (2) | PASS | FAIL |
@@ -48,11 +48,11 @@ Every article in this pillar uses the incorrect format. Links use `/pillar/artic
 **Frontmatter (4):**
 - Line 43: `/sensory-overload/articles/01-understanding-sensory-overload-children` → `/understanding-sensory-overload-children`
 - Line 45: `/autistic-meltdowns/articles/01-understanding-autism-meltdowns` → `/understanding-autism-meltdowns`
-- Line 47: `/adhd-sleep/articles/01-adhd-child-wont-sleep` → `/adhd-child-wont-sleep`
+- Line 47: `/adhd-sleep/articles/01-adhd-child-wont-sleep` → `/why-your-adhd-child-wont-sleep`
 - Line 49: `/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children` → `/why-generic-calming-sounds-dont-work-nd-children`
 
 **Body (5):**
-- Line 112: `/adhd-sleep/articles/01-adhd-child-wont-sleep` → `/adhd-child-wont-sleep`
+- Line 112: `/adhd-sleep/articles/01-adhd-child-wont-sleep` → `/why-your-adhd-child-wont-sleep`
 - Line 114: `/autistic-meltdowns/articles/01-understanding-autism-meltdowns` → `/understanding-autism-meltdowns`
 - Line 116: `/sensory-overload/articles/01-understanding-sensory-overload-children` → `/understanding-sensory-overload-children`
 - Line 163: `/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children` → `/why-generic-calming-sounds-dont-work-nd-children`
@@ -74,47 +74,47 @@ Every article in this pillar uses the incorrect format. Links use `/pillar/artic
 - Line 214: `/autistic-meltdowns/articles/07-complete-guide-autism-meltdowns-uk-parents` → `/complete-guide-autism-meltdowns-uk-parents`
 - Line 256: `/emotional-regulation/articles/07-complete-guide-emotional-regulation-children` → `/complete-guide-emotional-regulation-children`
 
-#### Article 03: emotional-regulation-adhd-children (13 violations)
+#### Article 03: tools-emotional-regulation-adhd-children (13 violations)
 
 **Frontmatter (4):**
 - Line 43: `/emotional-regulation/articles/01-understanding-emotional-regulation-children` → `/understanding-emotional-regulation-children`
-- Line 45: `/adhd-sleep/articles/01-adhd-child-wont-sleep` → `/adhd-child-wont-sleep`
-- Line 47: `/adhd-sleep/articles/04-adhd-racing-thoughts` → `/adhd-racing-thoughts`
-- Line 49: `/adhd-sleep/articles/03-calming-sounds-adhd` → `/calming-sounds-adhd`
+- Line 45: `/adhd-sleep/articles/01-adhd-child-wont-sleep` → `/why-your-adhd-child-wont-sleep`
+- Line 47: `/adhd-sleep/articles/04-adhd-racing-thoughts` → `/quieting-adhd-racing-thoughts-bedtime`
+- Line 49: `/adhd-sleep/articles/03-calming-sounds-adhd` → `/best-calming-sounds-adhd-children`
 
 **Body (9):**
 - Line 78: `/emotional-regulation/articles/01-understanding-emotional-regulation-children` → `/understanding-emotional-regulation-children`
-- Line 172: `/adhd-sleep/articles/03-calming-sounds-adhd` → `/calming-sounds-adhd`
+- Line 172: `/adhd-sleep/articles/03-calming-sounds-adhd` → `/best-calming-sounds-adhd-children`
 - Line 204: `/emotional-regulation/articles/05-co-regulation-through-sound-parent-child` → `/co-regulation-through-sound-parent-child`
-- Line 223: `/adhd-sleep/articles/01-adhd-child-wont-sleep` → `/adhd-child-wont-sleep`
-- Line 223: `/adhd-sleep/articles/04-adhd-racing-thoughts` → `/adhd-racing-thoughts`
+- Line 223: `/adhd-sleep/articles/01-adhd-child-wont-sleep` → `/why-your-adhd-child-wont-sleep`
+- Line 223: `/adhd-sleep/articles/04-adhd-racing-thoughts` → `/quieting-adhd-racing-thoughts-bedtime`
 - Line 245: `/emotional-regulation/articles/02-guide-emotional-regulation-autistic-children` → `/guide-emotional-regulation-autistic-children`
-- Line 246: `/emotional-regulation/articles/04-calm-corner-sounds-children` → `/calm-corner-sounds-children`
+- Line 246: `/emotional-regulation/articles/04-calm-corner-sounds-children` → `/guide-calm-corner-sounds-children`
 - Line 247-248: 2 more internal links using incorrect format
 - Line 250: `/emotional-regulation/articles/07-complete-guide-emotional-regulation-children` → `/complete-guide-emotional-regulation-children`
 
-#### Article 04: calm-corner-sounds-children (6 violations)
+#### Article 04: guide-calm-corner-sounds-children (6 violations)
 
 **Frontmatter (3):**
 - Line 42: `/emotional-regulation/articles/01-understanding-emotional-regulation-children` → `/understanding-emotional-regulation-children`
 - Line 44: `/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children` → `/why-generic-calming-sounds-dont-work-nd-children`
-- Line 46: `/calming-sounds/articles/04-calming-sounds-every-situation-anxiety-focus-transitions` → `/calming-sounds-every-situation-anxiety-focus-transitions`
+- Line 46: `/calming-sounds/articles/04-calming-sounds-every-situation-anxiety-focus-transitions` → `/guide-calming-sounds-every-situation`
 
 **Body (3):**
 - Line 93: `/emotional-regulation/articles/01-understanding-emotional-regulation-children` → `/understanding-emotional-regulation-children`
 - Line 193: `/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children` → `/why-generic-calming-sounds-dont-work-nd-children`
-- Line 253: `/calming-sounds/articles/04-calming-sounds-every-situation-anxiety-focus-transitions` → `/calming-sounds-every-situation-anxiety-focus-transitions`
+- Line 253: `/calming-sounds/articles/04-calming-sounds-every-situation-anxiety-focus-transitions` → `/guide-calming-sounds-every-situation`
 
 #### Article 05: co-regulation-through-sound-parent-child (7 violations)
 
 **Frontmatter (3):**
 - Line 43: `/emotional-regulation/articles/01-understanding-emotional-regulation-children` → `/understanding-emotional-regulation-children`
-- Line 45: `/emotional-regulation/articles/04-calm-corner-sounds-children` → `/calm-corner-sounds-children`
+- Line 45: `/emotional-regulation/articles/04-calm-corner-sounds-children` → `/guide-calm-corner-sounds-children`
 - Line 47: `/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children` → `/why-generic-calming-sounds-dont-work-nd-children`
 
 **Body (4):**
 - Line 122: `/calming-sounds/articles/01-why-generic-calming-sounds-dont-work-nd-children` → `/why-generic-calming-sounds-dont-work-nd-children`
-- Line 206: `/emotional-regulation/articles/04-calm-corner-sounds-children` → `/calm-corner-sounds-children`
+- Line 206: `/emotional-regulation/articles/04-calm-corner-sounds-children` → `/guide-calm-corner-sounds-children`
 - Line 222: `/emotional-regulation/articles/01-understanding-emotional-regulation-children` → `/understanding-emotional-regulation-children`
 - Line 230: `/emotional-regulation/articles/07-complete-guide-emotional-regulation-children` → `/complete-guide-emotional-regulation-children`
 
@@ -122,12 +122,12 @@ Every article in this pillar uses the incorrect format. Links use `/pillar/artic
 
 **Frontmatter (3):**
 - Line 42: `/emotional-regulation/articles/01-understanding-emotional-regulation-children` → `/understanding-emotional-regulation-children`
-- Line 44: `/emotional-regulation/articles/04-calm-corner-sounds-children` → `/calm-corner-sounds-children`
+- Line 44: `/emotional-regulation/articles/04-calm-corner-sounds-children` → `/guide-calm-corner-sounds-children`
 - Line 46: `/autistic-meltdowns/articles/01-understanding-autism-meltdowns` → `/understanding-autism-meltdowns`
 
 **Body (4):**
 - Line 97: `/emotional-regulation/articles/01-understanding-emotional-regulation-children` → `/understanding-emotional-regulation-children`
-- Line 190: `/emotional-regulation/articles/04-calm-corner-sounds-children` → `/calm-corner-sounds-children`
+- Line 190: `/emotional-regulation/articles/04-calm-corner-sounds-children` → `/guide-calm-corner-sounds-children`
 - Line 192: `/autistic-meltdowns/articles/01-understanding-autism-meltdowns` → `/understanding-autism-meltdowns`
 - Line 276: `/emotional-regulation/articles/07-complete-guide-emotional-regulation-children` → `/complete-guide-emotional-regulation-children`
 
@@ -141,13 +141,13 @@ Every article in this pillar uses the incorrect format. Links use `/pillar/artic
 - Line 240: `/emotional-regulation/articles/06-big-feelings-overwhelmed-child-help` → `/big-feelings-overwhelmed-child-help`
 - Line 262: `/emotional-regulation/articles/02-emotional-regulation-autistic-children` → `/guide-emotional-regulation-autistic-children`
 - Line 264: `/autistic-meltdowns/articles/01-understanding-autism-meltdowns` → `/understanding-autism-meltdowns`
-- Line 278: `/emotional-regulation/articles/03-emotional-regulation-adhd-children` → `/emotional-regulation-adhd-children`
-- Line 280: `/adhd-sleep/articles/01-adhd-child-wont-sleep` → `/adhd-child-wont-sleep`
+- Line 278: `/emotional-regulation/articles/03-emotional-regulation-adhd-children` → `/tools-emotional-regulation-adhd-children`
+- Line 280: `/adhd-sleep/articles/01-adhd-child-wont-sleep` → `/why-your-adhd-child-wont-sleep`
 - Line 330: `/calming-sounds/articles/07-complete-guide-calming-sounds-children` → `/complete-guide-calming-sounds-children`
-- Line 344: `/emotional-regulation/articles/04-calm-corner-sounds-children` → `/calm-corner-sounds-children`
+- Line 344: `/emotional-regulation/articles/04-calm-corner-sounds-children` → `/guide-calm-corner-sounds-children`
 - Line 364: `/sensory-overload/articles/01-understanding-sensory-overload-children` → `/understanding-sensory-overload-children`
 - Line 418: `/emotional-regulation/articles/05-co-regulation-through-sound-parent-child` → `/co-regulation-through-sound-parent-child`
-- Line 465: `/adhd-sleep/articles/01-adhd-child-wont-sleep` → `/adhd-child-wont-sleep`
+- Line 465: `/adhd-sleep/articles/01-adhd-child-wont-sleep` → `/why-your-adhd-child-wont-sleep`
 
 ### Broken Internal Links (Slug Mismatch)
 
@@ -217,8 +217,8 @@ These URLs return 403 to automated requests (bot protection) but are likely vali
 |---------|------------|-----------------|----------|------|
 | 01-understanding-emotional-regulation-children | PASS (2418) | PASS (1.3%) | PASS | PASS |
 | 02-emotional-regulation-autistic-children | PASS (2312) | PASS (1.4%) | PASS | PASS |
-| 03-emotional-regulation-adhd-children | PASS (2398) | PASS (1.4%) | PASS | PASS |
-| 04-calm-corner-sounds-children | PASS (2456) | PASS (1.4%) | PASS | PASS |
+| 03-tools-emotional-regulation-adhd-children | PASS (2398) | PASS (1.4%) | PASS | PASS |
+| 04-guide-calm-corner-sounds-children | PASS (2456) | PASS (1.4%) | PASS | PASS |
 | 05-co-regulation-through-sound-parent-child | PASS (2047) | PASS (1.4%) | PASS | PASS |
 | 06-big-feelings-overwhelmed-child-help | PASS (2387) | PASS (1.4%) | PASS | PASS |
 | 07-complete-guide-emotional-regulation-children | PASS (4523) | PASS (1.4%) | PASS | PASS |

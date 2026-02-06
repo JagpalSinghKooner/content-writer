@@ -11,13 +11,13 @@
 
 | # | Article | Validation | Links | Citations | Frontmatter | Final |
 |---|---------|------------|-------|-----------|-------------|-------|
-| 01 | adhd-child-wont-sleep | PASS | FAIL (1) | PASS | PASS | FAIL |
-| 02 | adhd-bedtime-routine | FAIL (1) | FAIL (1) | PASS | PASS | FAIL |
-| 03 | calming-sounds-adhd | FAIL (1) | FAIL (1) | PASS | PASS | FAIL |
+| 01 | why-your-adhd-child-wont-sleep | PASS | FAIL (1) | PASS | PASS | FAIL |
+| 02 | parents-guide-adhd-bedtime-routine | FAIL (1) | FAIL (1) | PASS | PASS | FAIL |
+| 03 | best-calming-sounds-adhd-children | FAIL (1) | FAIL (1) | PASS | PASS | FAIL |
 | 04 | quieting-adhd-racing-thoughts-bedtime | PASS | PASS | PASS | PASS | PASS |
-| 05 | beyond-melatonin | PASS | FAIL (1) | PASS | PASS | FAIL |
-| 06 | adhd-sleep-vs-autism-sleep | PASS | PASS | PASS | PASS | PASS |
-| 07 | adhd-sleep-problems-guide | PASS | FAIL (1) | PASS | PASS | FAIL |
+| 05 | beyond-melatonin-adhd-sleep-alternatives | PASS | FAIL (1) | PASS | PASS | FAIL |
+| 06 | parents-guide-adhd-vs-autism-sleep | PASS | PASS | PASS | PASS | PASS |
+| 07 | complete-guide-adhd-sleep-problems-uk | PASS | FAIL (1) | PASS | PASS | FAIL |
 
 ---
 
@@ -25,7 +25,7 @@
 
 | Category | FAILs | WARNs | Articles |
 |----------|-------|-------|----------|
-| Keyword-Only Slug | 2 | 0 | 02, 03 |
+| Keyword-Only Slug (fixed in Task 37) | 2 | 0 | 02, 03 |
 | Broken Internal Links (slug mismatch) | 9 | 0 | 01, 02, 03, 05, 07 |
 | Citation URL 403 (bot-blocking) | 0 | 5 | 02, 03, 04, 06, 07 |
 | Statistics Inconsistency | 0 | 1 | 07 |
@@ -48,6 +48,7 @@
 **Fix Options:**
 - **Option A (recommended):** Change article 04 slug to `adhd-racing-thoughts` (matches how it's naturally referenced, shorter, user-friendly)
 - **Option B:** Update all 9 link references to `/quieting-adhd-racing-thoughts-bedtime`
+- **Note:** Slug references updated in Task 38
 
 ### Cross-Pillar Links
 
@@ -89,13 +90,13 @@
 
 | Article | word_count | keyword_density | Keywords |
 |---------|------------|-----------------|----------|
-| 01-adhd-child-wont-sleep | PASS (2247) | PASS (1.4%) | PASS |
-| 02-adhd-bedtime-routine | PASS (2412) | PASS (1.3%) | PASS |
-| 03-calming-sounds-adhd | PASS (2412) | PASS (1.3%) | PASS |
+| 01-why-your-adhd-child-wont-sleep | PASS (2247) | PASS (1.4%) | PASS |
+| 02-parents-guide-adhd-bedtime-routine | PASS (2412) | PASS (1.3%) | PASS |
+| 03-best-calming-sounds-adhd-children | PASS (2412) | PASS (1.3%) | PASS |
 | 04-adhd-racing-thoughts | PASS (2089) | PASS (1.3%) | PASS |
-| 05-beyond-melatonin | PASS (2542) | PASS (1.4%) | PASS |
-| 06-adhd-sleep-vs-autism-sleep | PASS (2124) | PASS (1.4%) | PASS |
-| 07-adhd-sleep-problems-guide | PASS (4698) | PASS (1.2%) | PASS |
+| 05-beyond-melatonin-adhd-sleep-alternatives | PASS (2542) | PASS (1.4%) | PASS |
+| 06-parents-guide-adhd-vs-autism-sleep | PASS (2124) | PASS (1.4%) | PASS |
+| 07-complete-guide-adhd-sleep-problems-uk | PASS (4698) | PASS (1.2%) | PASS |
 
 ---
 

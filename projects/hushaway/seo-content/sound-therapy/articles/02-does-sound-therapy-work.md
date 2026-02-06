@@ -254,7 +254,7 @@ If you're considering sound therapy for your child, here's where we'd start.
 
 The Open Sanctuary gives you a place to explore sounds designed specifically for neurodivergent children. No pressure. No false promises. Just sounds to try with your child tonight.
 
-For a broader view of all the approaches covered here, see our [complete guide to sound therapy for children](/sound-therapy/07-complete-guide-sound-therapy-children).
+For a broader view of all the approaches covered here, see our [complete guide to sound therapy for children](/sound-therapy/complete-guide-sound-therapy-children).
 
 We'd rather you find what genuinely helps than buy something that doesn't.
 
