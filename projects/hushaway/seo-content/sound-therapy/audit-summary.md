@@ -70,13 +70,13 @@
 |--------|-------|---------|
 | Working (200) | 15 | PubMed x5, Cochrane x2, BAMT, Epilepsy Action, Frontiers x3, AMTA, NHS, NICE |
 | WARN - 403 bot-blocking | 6 | journals.sagepub.com x2 (Art 01, 02), PMC x4 (Art 01, 02, 03, 04) |
-| FAIL - 404 | 1 | sciencedirect.com/S1053810020300982 (Art 07) |
+| FAIL - 404 | 0 | Fixed: sciencedirect URL replaced with britishacademyofsoundtherapy.com (Art 07) |
 
 **Broken Citation Details:**
 
 | Article | URL | Status | Action |
 |---------|-----|--------|--------|
-| 07 | https://www.sciencedirect.com/science/article/pii/S1053810020300982 | 404 | Replace with working URL |
+| 07 | https://britishacademyofsoundtherapy.com/sound-therapy-affects-consciousness/ | FIXED | Replaced sciencedirect 404 |
 
 **WARN Citation Details (bot-blocking, likely valid):**
 

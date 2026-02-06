@@ -140,7 +140,7 @@ Of the Big 3, Moshi comes closest to understanding what neurodivergent children 
 
 **Not designed for neurodivergent children.** This is the fundamental issue. Moshi was built for all children. Some ND children find content that works through trial and error. But the app doesn't distinguish between sensory-safe and potentially overwhelming content.
 
-**Content selection requires decisions.** The library is huge: 400+ stories, meditations, and sounds. When your child is dysregulated at 9pm, navigating this library to find the right content adds friction exactly when you can't afford it. You end up making the choice, which defeats the "just press play" ideal.
+**Content selection requires decisions.** The library is huge: 400+ stories, meditations, and sounds. When your child is overwhelmed at 9pm, navigating this library to find the right content adds friction exactly when you can't afford it. You end up making the choice, which defeats the "just press play" ideal.
 
 **Variable sensory safety.** Some Moshi content is gentle and predictable. Other content has dramatic moments, sound effects, or narrator voices that change pace suddenly. Without preview, you might land on something that triggers rather than soothes.
 
@@ -180,7 +180,7 @@ None of this means Calm is a bad app. It isn't. But for many neurodivergent chil
 
 **Guided meditation requires instruction-following.** This is Calm's core model. A voice guides your child through breathing exercises, visualisations, and mindfulness techniques. The app assumes your child can follow these instructions. Many ND children cannot, especially during the moments they need support most.
 
-**Interactive engagement required.** Calm isn't passive. The guided content asks children to participate: breathe this way, imagine that, notice this sensation. During dysregulation, every demand makes regulation harder.
+**Interactive engagement required.** Calm isn't passive. The guided content asks children to participate: breathe this way, imagine that, notice this sensation. During overwhelm, every demand makes regulation harder.
 
 **American content, American context.** The accents, references, and cultural assumptions are US-centric. For UK neurodivergent children who find unfamiliar accents disconcerting, this creates additional processing load.
 
@@ -192,7 +192,7 @@ None of this means Calm is a bad app. It isn't. But for many neurodivergent chil
 
 **Best for:** Neurotypical children, or neurodivergent children with mild attention differences who can engage with instruction-based content when already fairly regulated.
 
-**Not suitable for:** Autistic children with sensory sensitivities, ADHD children who can't follow instructions during dysregulation, or any ND child who needs support during acute distress.
+**Not suitable for:** Autistic children with sensory sensitivities, ADHD children who can't follow instructions when overwhelmed, or any ND child who needs support during acute distress.
 
 **ND suitability score:** 3/10. Beautiful app, wrong approach for ND brains.
 
@@ -234,7 +234,7 @@ The challenge for ND families isn't that Headspace is poorly made. It's that tea
 
 **Best for:** Families who want to teach meditation as a long-term skill, used during already-calm periods rather than crises. Neurotypical children, or ND children interested in learning mindfulness as a practice.
 
-**Not suitable for:** ADHD children during acute dysregulation, autistic children during meltdowns, or any situation where immediate passive support is needed.
+**Not suitable for:** ADHD children during acute overwhelm, autistic children during meltdowns, or any situation where immediate passive support is needed.
 
 **ND suitability score:** 2/10. Good meditation app, wrong tool for ND crisis moments.
 
@@ -292,7 +292,7 @@ When we designed HushAway®, we didn't start with "what makes a good calming app
 
 The answer: executive function goes offline. Following instructions becomes impossible. Making choices adds stress. Unpredictable audio triggers rather than soothes. Interactive demands make everything worse.
 
-So we designed the opposite: sound that requires nothing from your child. Sound that's completely predictable. Sound that works without cognitive engagement. Sound that meets dysregulation with zero demands.
+So we designed the opposite: sound that requires nothing from your child. Sound that's completely predictable. Sound that works without cognitive engagement. Sound that meets overwhelm with zero demands.
 
 This isn't complicated. It's just starting from the right place. The Big 3 apps started elsewhere and tried to stretch to reach ND children. HushAway® started with ND children and built specifically for them.
 
@@ -310,7 +310,7 @@ Your child is neurotypical or has very mild attention differences. They can enga
 
 ### Choose Headspace if:
 
-You want to teach meditation as a long-term practice. Your child is interested in learning mindfulness techniques. You're willing to invest time in building a consistent practice. You don't need support during acute dysregulation.
+You want to teach meditation as a long-term practice. Your child is interested in learning mindfulness techniques. You're willing to invest time in building a consistent practice. You don't need support during acute overwhelm.
 
 ### Choose HushAway® if:
 
@@ -318,7 +318,7 @@ Your child is neurodivergent and needs support during the hard moments. Generic 
 
 ## What to Try Tonight
 
-If you're reading this at 9pm with a dysregulated child, here's the practical advice:
+If you're reading this at 9pm with an overwhelmed child, here's the practical advice:
 
 **If you already have Moshi:** Find their gentlest sleep content. Avoid anything with "adventure" in the title. Look for consistent, calm narration without dramatic moments.
 
@@ -340,7 +340,7 @@ Explore The Open Sanctuary when you're ready.
 
 ### Which is better, Moshi or Calm, for a neurodivergent child?
 
-Moshi is better for most neurodivergent children. Moshi's passive listening approach requires less cognitive engagement than Calm's guided meditation. However, neither was designed specifically for ND children. Moshi works for some ND children some of the time, while Calm's instruction-based approach often fails during moments of dysregulation.
+Moshi is better for most neurodivergent children. Moshi's passive listening approach requires less cognitive engagement than Calm's guided meditation. However, neither was designed specifically for ND children. Moshi works for some ND children some of the time, while Calm's instruction-based approach often fails during moments of overwhelm.
 
 ### Why doesn't Headspace work for my ADHD child?
 

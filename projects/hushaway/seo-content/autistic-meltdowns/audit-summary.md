@@ -85,11 +85,11 @@ Several links use shortened or incorrect slug names instead of exact frontmatter
 |--------|-------|---------|
 | Working (200) | 7 | autism.org.uk, pubmed x2, frontiersin x3, ambitiousaboutautism |
 | Bot-Blocking (403) | 5 | NCBI PMC x3, Wiley, ScienceDirect, AAP |
-| Broken (404) | 1 | `frontiersin.org/articles/10.3389/fpsyg.2021.767782/full` (Article 03) |
+| Broken (404) | 0 | Fixed: frontiersin URL replaced with PMC8992925 (Article 03) |
 | Timeout | 0 | - |
 
 **Broken URL Details:**
-- Article 03 (after-school-autism-meltdown-why): Frontiers in Psychology, 2021: "Autistic Burnout: Understanding and Preventing Autistic Fatigue" returns 404. Needs replacement URL or removal.
+- Article 03 (after-school-autism-meltdown-why): FIXED. Replaced with Mantzalas et al., 2022: "What Is Autistic Burnout?" (https://pmc.ncbi.nlm.nih.gov/articles/PMC8992925/)
 
 **403 URLs (likely bot-blocking, not broken):**
 - `ncbi.nlm.nih.gov/pmc/articles/PMC7082250/` (Article 06)

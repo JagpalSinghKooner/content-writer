@@ -88,7 +88,7 @@ According to NICE guidance on ADHD management, sleep problems affect 25-50% of c
 
 At bedtime, the neurotypical brain starts winding down naturally. The ADHD brain often does the opposite, becoming more active as the body tires. Research published in the Journal of Attention Disorders found that adolescents with ADHD showed much higher rates of sleep onset difficulties, with racing thoughts being the primary cause (Lunsford-Avery et al., 2019: [Sleep disturbances in adolescents with ADHD](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6534423/)).
 
-This means any calming app that requires your child to "focus on your breath" or "imagine a peaceful place" has already failed. The ADHD brain can't hold that focus during peak dysregulation.
+This means any calming app that requires your child to "focus on your breath" or "imagine a peaceful place" has already failed. The ADHD brain can't hold that focus at the peak of overwhelm.
 
 ### What Actually Works for ADHD Brains
 
@@ -123,7 +123,7 @@ But Moshi wasn't designed for ADHD children specifically. Some content requires 
 - No interaction required during playback
 
 **Fights the ADHD brain:**
-- Content selection requires decisions during dysregulation
+- Content selection requires decisions during overwhelm
 - Some stories are too long for ADHD attention spans
 - No frequency-based sounds (binaural beats, solfeggio)
 - Becomes less effective as children age past 10
@@ -154,7 +154,7 @@ Why? Because Calm is built around guided meditation. Guided meditation requires 
 - US-centric content may feel unfamiliar to UK children
 - Higher price point than UK alternatives
 
-**Best for:** Neurotypical children, or ADHD children with mild symptoms who can engage with guided content. Not recommended for children who struggle with instruction-following during dysregulation.
+**Best for:** Neurotypical children, or ADHD children with mild symptoms who can engage with guided content. Not recommended for children who struggle with instruction-following when overwhelmed.
 
 **Price:** £52.99/year or £10.49/month
 
@@ -225,7 +225,7 @@ We need to be transparent here: HushAway is what we created. We built it because
 
 Everything about HushAway was designed for how ADHD brains actually work:
 
-**Immediate engagement:** Press play. That's it. No content selection during dysregulation. No decisions when executive function is offline. The sound starts immediately.
+**Immediate engagement:** Press play. That's it. No content selection during overwhelm. No decisions when executive function is offline. The sound starts immediately.
 
 **Passive listening:** Nothing requires your child to follow instructions, make choices, or sustain attention. The sound works whether your child is actively listening or not.
 

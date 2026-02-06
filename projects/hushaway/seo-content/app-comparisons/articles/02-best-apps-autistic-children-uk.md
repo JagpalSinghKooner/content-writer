@@ -145,7 +145,7 @@ The Sleep Stories are genuinely engaging, and many autism families report succes
 
 The content library is huge, which means unpredictability. Different narrators for different stories. Different musical styles across content. Some tracks have sudden sound effects or dramatic moments that might trigger sensitive listeners.
 
-Navigation requires choices. Which story tonight? Which series? For a child who struggles with decision-making during dysregulation, even this level of choice adds stress.
+Navigation requires choices. Which story tonight? Which series? For a child who struggles with decision-making during overwhelm, even this level of choice adds stress.
 
 **Autism verdict:** Can work well for some autistic children, particularly those who've found specific content they love. But it requires parent curation to identify the sensory-safe content, and the app itself doesn't distinguish between autism-appropriate and potentially triggering tracks.
 
@@ -175,7 +175,7 @@ The subscription cost is higher than UK alternatives. No free tier means no way 
 
 **The problems:** Headspace is fundamentally an instruction-based meditation app. Andy Puddicombe's teaching approach assumes children can learn and follow meditation techniques. For many autistic children, this assumption fails.
 
-The app asks children to close their eyes, follow breath patterns, and engage with guided exercises. During dysregulation, these are precisely the things autistic children cannot do. The app teaches meditation rather than providing immediate calm.
+The app asks children to close their eyes, follow breath patterns, and engage with guided exercises. When overwhelmed, these are precisely the things autistic children cannot do. The app teaches meditation rather than providing immediate calm.
 
 Also US-based with US pricing and US cultural context.
 

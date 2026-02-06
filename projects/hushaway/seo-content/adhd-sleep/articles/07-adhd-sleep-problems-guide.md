@@ -531,7 +531,7 @@ The goal is consistent application of the right approach, not just more of the s
 
 This seems logical but doesn't apply to ADHD brains. Physical tiredness and brain tiredness aren't the same thing. Your child can be physically exhausted. Yawning, heavy-eyed, struggling to stay upright. And their brain remains fully active.
 
-In fact, being overtired can make ADHD sleep problems WORSE. The body is desperate for rest while the brain becomes more dysregulated. This is why "letting them stay up until they're really tired" often backfires spectacularly.
+In fact, being overtired can make ADHD sleep problems WORSE. The body is desperate for rest while the brain becomes more overwhelmed. This is why "letting them stay up until they're really tired" often backfires spectacularly.
 
 ### "This Is Just a Phase"
 

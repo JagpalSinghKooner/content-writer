@@ -69,13 +69,13 @@
 ### 2. Broken Citation URLs (404)
 
 **Pillars:** 7/8 (all except ADHD Sleep)
-**Total unique URLs:** 19 (10 fixed, 9 remaining)
+**Total unique URLs:** 19
 
 **Auto-fixable:** No. Each requires manual replacement with a working URL or removal.
 
 | # | Broken URL | Pillar(s) | Article(s) |
 |---|-----------|-----------|------------|
-| 1 | ~~`frontiersin.org/articles/10.3389/fpsyg.2021.767782/full`~~ FIXED: pmc.ncbi.nlm.nih.gov/articles/PMC8992925/ | Autistic Meltdowns | 03 |
+| 1 | `frontiersin.org/articles/10.3389/fpsyg.2021.767782/full` | Autistic Meltdowns | 03 |
 | 2 | `nhs.uk/conditions/sensory-processing-disorder/` | Sensory Overload | 01, 08 |
 | 3 | `autism.org.uk/advice-and-guidance/topics/mental-health/after-school-restraint-collapse` | Sensory Overload | 04 |
 | 4 | `understood.org/en/articles/sensory-diet` | Sensory Overload | 06 |
@@ -87,13 +87,13 @@
 | 10 | `zonesofregulation.com/learn-more.html` | Emotional Regulation | 04, 07 |
 | 11 | `nhs.uk/mental-health/children-and-young-adults/advice-for-parents/help-your-child-manage-emotions/` | Emotional Regulation | 06, 07 |
 | 12 | `hushaway.com/the-open-sanctuary/` | Emotional Regulation | 05 |
-| 13 | ~~`pubmed.ncbi.nlm.nih.gov/25928655/`~~ FIXED (no longer in article) | Bedtime Routines | 02 |
-| 14 | ~~`autism.org.uk/.../visual-supports`~~ FIXED: updated to /communication-tools/visual-supports | Bedtime Routines | 03 |
-| 15 | ~~`pubmed.ncbi.nlm.nih.gov/28838255/`~~ FIXED (no longer in article) | Bedtime Routines | 03 |
-| 16 | ~~`sleepfoundation.org/.../separation-anxiety-and-sleep`~~ FIXED (no longer in article) | Bedtime Routines | 06 |
-| 17 | ~~`sciencedirect.com/.../S1053810020300982`~~ FIXED: britishacademyofsoundtherapy.com | Sound Therapy | 07 |
-| 18 | ~~`rcpch.ac.uk/resources/health-impacts-screen-time...`~~ FIXED: /news-events/news/build-screen-time... | App Comparisons | 06, 07 |
-| 19 | ~~`understood.org/articles/executive-function-disorder-adhd`~~ FIXED: /en/articles/difference-between... | App Comparisons | 01 |
+| 13 | `pubmed.ncbi.nlm.nih.gov/25928655/` | Bedtime Routines | 02 |
+| 14 | `autism.org.uk/advice-and-guidance/topics/communication/visual-supports` | Bedtime Routines | 03 |
+| 15 | `pubmed.ncbi.nlm.nih.gov/28838255/` | Bedtime Routines | 03 |
+| 16 | `sleepfoundation.org/children-and-sleep/separation-anxiety-and-sleep` | Bedtime Routines | 06 |
+| 17 | `sciencedirect.com/science/article/pii/S1053810020300982` | Sound Therapy | 07 |
+| 18 | `rcpch.ac.uk/resources/health-impacts-screen-time-guide-clinicians-parents` | App Comparisons | 06, 07 |
+| 19 | `understood.org/articles/executive-function-disorder-adhd` | App Comparisons | 01 |
 
 **Domain frequency in broken URLs:**
 - NHS (nhs.uk): 4 URLs

@@ -1,0 +1,24 @@
+<h1 dir="auto">EXAMPLE OF HOW A H1 IS WRITTEN</h1>
+<h2 dir="auto">EXAMPLE OF HOW A H2 IS WRITTEN</h2>
+<h3 dir="auto">EXAMPLE OF HOW A H2 IS WRITTEN</h3>
+
+
+<p dir="auto">
+  EXAMPLE OF A
+  <a
+    href="https://publications.aap.org/pediatrics/article/145/1/e20193447/36917"
+    target="_blank"
+    >LINK TO CITIATION</a
+  >
+  IS WRITTEN IN THE TEXT LIKE THIS
+</p>
+
+
+
+<ul>
+  <li data-preset-tag="p">
+    <p dir="auto">
+        THIS IS HOW A BULLET POINT LIST IS WRITTEN
+    </p>
+  </li>
+</ul>

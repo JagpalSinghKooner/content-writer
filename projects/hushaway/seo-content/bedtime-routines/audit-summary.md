@@ -27,7 +27,7 @@
 |----------|-------|-------|----------|
 | Incorrect Internal Link Format | 56 | 0 | 01, 02, 03, 04, 05, 06, 07 |
 | Missing Bidirectional Guide Links | 2 | 0 | 04, 05 |
-| Broken Citation URLs (404) | 4 | 0 | 02, 03, 06 |
+| Broken Citation URLs (404) | 0 | 0 | FIXED: 02, 03, 06 |
 | NCBI/PMC Bot-Blocking (403) | 0 | 5 | 01, 02, 04, 05, 06, 07 |
 | Cross-Pillar Link Format | 12 | 0 | 01, 02, 04, 05 |
 
@@ -74,15 +74,15 @@
 |--------|-------|---------|
 | Working (200) | 7 | sleepfoundation.org/adhd-and-sleep, autism.org.uk/sleep, pubmed/25554879, frontiersin.org/fnhum.2018.00288, frontiersin.org/fpsyg.2020.01982, nhs.uk/autism/other-conditions |
 | Bot-Blocking (403) | 5 | ncbi PMC4340974 (Art 01, 05), ncbi PMC6379245 (Art 04), ncbi PMC5618824 (Art 02, 07), ncbi PMC6361831 (Art 06), ncbi PMC3072849 (Art 06) |
-| Broken (404) | 4 | See below |
+| Broken (404) | 0 | All fixed (see below) |
 | Redirects | 0 | - |
 | Timeout | 0 | - |
 
 **Broken Citation URLs (404):**
-- Art 02: `https://pubmed.ncbi.nlm.nih.gov/25928655/` (Poerio et al. ASMR study)
-- Art 03: `https://www.autism.org.uk/advice-and-guidance/topics/communication/visual-supports` (NAS visual supports)
-- Art 03: `https://pubmed.ncbi.nlm.nih.gov/28838255/` (Knight & Sartini visual supports review)
-- Art 06: `https://www.sleepfoundation.org/children-and-sleep/separation-anxiety-and-sleep` (Sleep Foundation separation anxiety)
+- Art 02: FIXED (original broken URL no longer in article)
+- Art 03: FIXED - NAS URL updated to /communication-tools/visual-supports
+- Art 03: FIXED (original broken URL no longer in article)
+- Art 06: FIXED (original broken URL no longer in article)
 
 **Domain Frequency:** No issues (no domain cited more than twice per article).
 

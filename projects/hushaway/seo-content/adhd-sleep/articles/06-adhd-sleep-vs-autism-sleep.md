@@ -138,7 +138,7 @@ The NHS guidance notes that autistic children may have "difficulty settling, win
 
 While both ADHD and autistic children benefit from routine, the stakes feel different. For autistic children, unexpected changes to bedtime routine can cause genuine distress. Not just resistance, but real anxiety about things being "wrong."
 
-Interestingly, this can work both ways. Research shows that during periods of major change (like lockdowns), autistic children actually maintained more stable sleep patterns than ADHD children precisely because of their preference for sameness.
+This can work both ways, too. Research shows that during periods of major change (like lockdowns), autistic children actually maintained more stable sleep patterns than ADHD children precisely because of their preference for sameness.
 
 ### Melatonin Production Differences
 

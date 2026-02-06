@@ -64,12 +64,12 @@ Not audited in this run (single pillar audit).
 |--------|-------|---------|
 | Working (200) | 6 | pubmed, autism.org.uk, bbc.co.uk, nhs.uk, nice.org.uk, smilingmind.com.au |
 | Likely Bot Block (403) | 6 | adc.bmj.com, journals.sagepub.com, ncbi.nlm.nih.gov (x4) |
-| Broken (404) | 2 | rcpch.ac.uk (articles 06, 07), understood.org (article 01) |
+| Broken (404) | 0 | FIXED: rcpch.ac.uk (articles 06, 07), understood.org (article 01) |
 | Total Unique URLs | 14 | |
 
 **Broken Citation Details:**
-- `https://www.rcpch.ac.uk/resources/health-impacts-screen-time-guide-clinicians-parents` → 404 (used in articles 06, 07)
-- `https://www.understood.org/articles/executive-function-disorder-adhd` → 404 (used in article 01)
+- FIXED: rcpch.ac.uk URL updated to /news-events/news/build-screen-time-around-family-activities (articles 06, 07)
+- FIXED: understood.org URL updated to /en/articles/difference-between-executive-functioning-issues-and-adhd (article 01)
 
 **Domain Frequency Notes:**
 - ncbi.nlm.nih.gov: 5 references in article 07, 4 in article 04 (but these are unique studies, acceptable for pillar guide/comparison)

@@ -129,7 +129,7 @@ Limited specifically calming content. CBeebies Radio is broader than just relaxa
 
 Stories dominate over pure soundscapes. If your child needs non-verbal sound rather than narration, options are limited.
 
-Not designed for neurodivergent children. The content assumes typical processing. Stories with multiple characters, changing voices, and narrative tension may not suit ND children during dysregulation.
+Not designed for neurodivergent children. The content assumes typical processing. Stories with multiple characters, changing voices, and narrative tension may not suit ND children during overwhelm.
 
 Content rotation. BBC content comes and goes. Something that works for your child tonight might disappear next month.
 

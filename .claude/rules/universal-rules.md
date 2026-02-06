@@ -16,6 +16,7 @@ Not all rules apply to all content types. Use this matrix to determine which che
 | **4. AI Patterns** | ✓ | ✓ | ✓ | - | - |
 | **4b. No Em Dashes** | ✓ | ✓ | ✓ | ✓ | ✓ |
 | **5. SEO Requirements** | ✓ | - | - | - | - |
+| **5a. Internal Link Format** | ✓ | ✓ | ✓ | - | - |
 | **6. External Citations** | ✓ | Optional | Optional | - | - |
 | **Brand Voice** | ✓ | ✓ | ✓ | ✓ | ✓ |
 
@@ -489,6 +490,35 @@ Technical requirements for search optimisation.
 
 ---
 
+### 5a. Internal Link Format
+
+Internal links must use the article's frontmatter `slug` value, not file paths or directory structures.
+
+**Correct Format:** `/{slug}`
+
+The URL should be the exact slug from the target article's frontmatter, with a leading slash. No directories, no file extensions, no number prefixes.
+
+**Examples:**
+
+| Correct | Incorrect | Why Wrong |
+|---------|-----------|-----------|
+| `/why-generic-calming-apps-fail-nd-children` | `/app-comparisons/articles/01-why-generic-calming-apps-fail-nd-children` | Uses directory structure |
+| `/adhd-bedtime-routine` | `/adhd-sleep/articles/02-adhd-bedtime-routine.md` | Uses file path with extension |
+| `/calming-sounds-adhd` | `/01-calming-sounds-adhd` | Includes file number prefix |
+
+**Validation Checklist:**
+- [ ] Link URL is `/{slug}` format (single path segment after leading slash)
+- [ ] Slug matches target article's frontmatter `slug` field exactly
+- [ ] No file extensions (`.md`)
+- [ ] No directory structure (`/pillar/articles/...`)
+- [ ] No file number prefixes (`/01-...`)
+
+**Why this matters:**
+
+These articles will be uploaded to a CMS where URLs are defined by the slug, not the local file structure. Links using file paths will break in production.
+
+---
+
 ### 6. External Citations (E-E-A-T)
 
 Citations build trust and demonstrate expertise. Proper sourcing is a Google ranking factor.
@@ -688,6 +718,7 @@ Standard definitions for terms used across all skills. Use these consistently.
 4. ✗ Any AI patterns?
 4b. ✗ Any em dashes (—)?
 5. ✗ SEO requirements met? (H1 has keyword + hook? Headings unique?)
+5a. ✗ Internal links use `/{slug}` format? (No file paths or directories)
 6. ✗ E-E-A-T citations present and properly formatted?
 
 **WARN (Should Fix):**
