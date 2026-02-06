@@ -137,15 +137,28 @@ FAIL: Lines XX-XX: 3 consecutive sentences start with "This" - vary openers
 
 ### 1.5 Em Dash Check
 
-Scan for em dashes "—" anywhere in content. Any found = FAIL.
+Em dashes are an AI writing fingerprint per Rule 4b. They must be restructured, not replaced with other punctuation.
 
-Em dashes are an AI writing fingerprint. They must be restructured, not replaced with other punctuation.
+**Detection Method — use Grep for BOTH patterns:**
+
+1. **Em dash character (U+2014):** Use Grep to search the article file for the pattern `—`. This is the primary em dash character.
+2. **Space-hyphen-space substitute:** Use Grep to search for ` - ` (space, hyphen, space). Writers sometimes substitute this for em dashes. Exclude YAML frontmatter lines (lines starting with `- `) and markdown list items from this check.
+
+**CRITICAL:** Do NOT rely on visual scanning. You MUST use the Grep tool to search the article file for both patterns. Visual scanning misses em dashes that look like hyphens in some fonts. The Grep tool with `output_mode: "content"` will return line numbers automatically.
+
+**Any match from either pattern = FAIL.**
 
 **Output format:**
 ```
-FAIL: Line XX: Em dash found in "text — more text" → restructure as separate sentences
-FAIL: Line XX: Em dash found in "thing — explanation" → reword without dash
+FAIL: Line XX: Em dash (—) found in "text — more text" → restructure as separate sentences
+FAIL: Line XX: Em dash (—) found in "thing — explanation" → reword without dash
+FAIL: Line XX: Space-hyphen-space found in "text - more text" → likely em dash substitute, restructure sentence
 ```
+
+**What to exclude from space-hyphen-space check:**
+- YAML frontmatter list items (e.g., `  - item`)
+- Markdown bullet points (e.g., `- list item`)
+- Hyphenated compound words (e.g., `well-known` has no spaces around the hyphen)
 
 ### 1.6 H1 Validation
 
