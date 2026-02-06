@@ -186,17 +186,24 @@ Built the audit system (link-auditor agent, consistency-checker agent, audit-pil
 **Objective:** Remove all 21 em dashes from `04-adhd-racing-thoughts.md` by restructuring sentences (body text) and replacing with colons (citations).
 
 **Acceptance Criteria:**
-- [ ] All 21 em dashes removed from article
-- [ ] Citation em dashes replaced with colons: `[Author], [Year]: [Title](URL)`
-- [ ] Body text em dashes restructured into separate sentences or natural alternatives (not just swapped for commas/colons)
-- [ ] Content meaning preserved — no information lost
-- [ ] Grep for "—" in file returns 0 matches
-- [ ] Git commit created
+- [x] All 21 em dashes removed from article
+- [x] Citation em dashes replaced with colons: `[Author], [Year]: [Title](URL)`
+- [x] Body text em dashes restructured into separate sentences or natural alternatives (not just swapped for commas/colons)
+- [x] Content meaning preserved — no information lost
+- [x] Grep for "—" in file returns 0 matches
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read `projects/hushaway/seo-content/adhd-sleep/articles/04-adhd-racing-thoughts.md`. Find all 21 em dashes (—). Two types exist: (1) Citation format: `Research from X, 2024 — [Title](URL)` → replace `—` with `:` so it becomes `Research from X, 2024: [Title](URL)`. (2) Body text: restructure each sentence naturally per Rule 4b. Do NOT just swap em dashes for commas or colons — rewrite naturally. After all changes, run grep for "—" to verify 0 remain. Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Removed all em dashes from 04-adhd-racing-thoughts.md. 3 citation em dashes converted to colon format (lines 90, 102, 138). 18 body text em dashes restructured as separate sentences, punchy fragments, or reworded phrases. Grep confirms 0 remain. Committed as `4e94ad2`.
+- **Decisions:** Line 102 had two em dashes framing a citation link — restructured to separate the introductory sentence from the citation. Line 120 converted to punchy single-word fragments for rhythm. Line 201 switched from third-person "parents" framing to direct "you" address to match article voice.
+- **Next:** Task 33 — Fix em dashes in 05-beyond-melatonin.md (5 em dashes).
 
 ---
 
