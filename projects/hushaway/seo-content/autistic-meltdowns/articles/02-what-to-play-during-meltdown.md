@@ -48,7 +48,7 @@ internal_links:
     anchor: "the recovery period after a meltdown"
   - url: "/autistic-meltdowns/06-preventing-meltdowns"
     anchor: "using sound throughout the day to prevent build-up"
-  - url: "/the-open-sanctuary"
+  - url: "https://www.hushaway.com/join-the-waitlist"
     anchor: "Explore The Open Sanctuary"
   - url: "/autistic-meltdowns/07-complete-guide-autism-meltdowns-uk-parents"
     anchor: "complete guide to autism meltdowns"
@@ -306,7 +306,7 @@ The collection includes different sound types so you can discover what works for
 
 Because "try calming music" is only helpful if someone tells you what that actually means.
 
-[Explore The Open Sanctuary](/the-open-sanctuary)
+[Explore The Open Sanctuary](https://www.hushaway.com/join-the-waitlist)
 
 ---
 

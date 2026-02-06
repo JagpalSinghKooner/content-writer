@@ -447,15 +447,20 @@ Built the audit system (link-auditor agent, consistency-checker agent, audit-pil
 **Objective:** Replace the broken `hushaway.com/the-open-sanctuary/` URL with the correct waitlist URL `https://www.hushaway.com/join-the-waitlist` in Emotional Regulation article 05.
 
 **Acceptance Criteria:**
-- [ ] URL replaced in `projects/hushaway/seo-content/emotional-regulation/articles/05-co-regulation-through-sound-parent-child.md`
-- [ ] New URL is `https://www.hushaway.com/join-the-waitlist`
-- [ ] Grep for "the-open-sanctuary" across ALL articles returns 0 matches
-- [ ] Git commit created
+- [x] URL replaced in `projects/hushaway/seo-content/emotional-regulation/articles/05-co-regulation-through-sound-parent-child.md`
+- [x] New URL is `https://www.hushaway.com/join-the-waitlist`
+- [x] Grep for "the-open-sanctuary" across ALL articles returns 0 matches
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read `projects/hushaway/seo-content/emotional-regulation/articles/05-co-regulation-through-sound-parent-child.md`. Find the reference to `hushaway.com/the-open-sanctuary/` and replace the full URL with `https://www.hushaway.com/join-the-waitlist`. After fixing, grep for "the-open-sanctuary" across all articles in the entire seo-content directory to confirm 0 matches. Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+**Handoff:**
+- **Done:** Replaced all `the-open-sanctuary` URLs across 3 articles: emotional-regulation/05 (2 full URLs), autistic-meltdowns/02 (1 frontmatter + 1 body link), app-comparisons/02 (1 frontmatter + 1 body link). All now point to `https://www.hushaway.com/join-the-waitlist`. Grep confirms 0 matches in articles (remaining matches only in audit/summary report files).
+- **Decisions:** Updated all 3 articles, not just article 05, to achieve 0 grep matches across all articles. Kept anchor text "The Open Sanctuary" unchanged. Left audit-summary.md and link-audit.md references untouched (historical reports, not publishable content).
+- **Next:** Task 41 (Add Missing Bidirectional Guide Links).
 
 ---
 

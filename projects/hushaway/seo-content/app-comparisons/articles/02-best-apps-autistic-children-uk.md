@@ -44,7 +44,7 @@ internal_links:
     anchor: "detailed comparison of Moshi, Calm, and Headspace"
   - url: "/guide-best-calming-apps-nd-children-uk"
     anchor: "complete guide to calming apps for neurodivergent children"
-  - url: "/the-open-sanctuary"
+  - url: "https://www.hushaway.com/join-the-waitlist"
     anchor: "Explore The Open Sanctuary"
 external_citations:
   - url: "https://www.autism.org.uk/advice-and-guidance/topics/sensory-differences/sensory-differences/all-audiences"
@@ -308,7 +308,7 @@ One quiet moment can change a whole day for a child. The right sounds, designed 
 
 For the complete picture of calming apps for neurodivergent children, including options we haven't covered here, see our [complete guide to calming apps for neurodivergent children](/guide-best-calming-apps-nd-children-uk).
 
-Ready to see if sound-based calm works for your child? [Explore The Open Sanctuary](/the-open-sanctuary) and find sounds designed for autistic processing.
+Ready to see if sound-based calm works for your child? [Explore The Open Sanctuary](https://www.hushaway.com/join-the-waitlist) and find sounds designed for autistic processing.
 
 ---
 

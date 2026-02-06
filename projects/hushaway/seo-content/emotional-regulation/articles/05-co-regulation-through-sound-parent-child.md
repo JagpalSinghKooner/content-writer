@@ -167,7 +167,7 @@ Enough theory. Here's how to actually put this into practice.
 
 ### Before Overwhelm Hits
 
-Set up sound access in advance. Have a speaker or device in the areas where meltdowns commonly happen. Know which sounds work for your child. If you're not sure, start exploring in [The Open Sanctuary](https://hushaway.com/the-open-sanctuary/) during a calm moment. Test a few options so you know what to reach for when things get difficult.
+Set up sound access in advance. Have a speaker or device in the areas where meltdowns commonly happen. Know which sounds work for your child. If you're not sure, start exploring in [The Open Sanctuary](https://www.hushaway.com/join-the-waitlist) during a calm moment. Test a few options so you know what to reach for when things get difficult.
 
 Create a sound shortcut. Put a playlist on your phone's home screen. Set up a voice command if you use smart speakers. The goal is zero friction when you need it.
 
@@ -223,7 +223,7 @@ Understanding [emotional regulation in children](/understanding-emotional-regula
 
 The sounds that work for co-regulation need to be designed with both nervous systems in mind. Calming without being boring. Predictable without being monotonous. Effective without requiring anything from either listener.
 
-If you haven't found sounds that work for your family yet, explore [The Open Sanctuary](https://hushaway.com/the-open-sanctuary/). It's a good place to start discovering what actually helps.
+If you haven't found sounds that work for your family yet, explore [The Open Sanctuary](https://www.hushaway.com/join-the-waitlist). It's a good place to start discovering what actually helps.
 
 Because you shouldn't have to white-knuckle your way through your child's difficult moments. You shouldn't have to be the only one doing the regulating. And with the right sounds, you don't have to.
 
