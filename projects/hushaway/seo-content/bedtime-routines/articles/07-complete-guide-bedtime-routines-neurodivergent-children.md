@@ -349,7 +349,7 @@ For ADHD brains at bedtime:
 
 ### Managing "Revenge Bedtime Procrastination"
 
-Have you ever stayed up too late scrolling your phone after a demanding day? That's "revenge bedtime procrastination" — staying awake to reclaim personal time after a day with little control. Many ADHD children (and adults) experience exactly this. After a day with little control over their time, they resist sleep to reclaim autonomy.
+Have you ever stayed up too late scrolling your phone after a demanding day? That's "revenge bedtime procrastination." It means staying awake to reclaim personal time after a day with little control. Many ADHD children (and adults) experience exactly this. After a day with little control over their time, they resist sleep to reclaim autonomy.
 
 Signs: Your child isn't anxious or struggling. They're defiantly awake, wanting to do something, anything, other than sleep.
 
