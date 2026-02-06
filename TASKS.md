@@ -211,7 +211,12 @@ Full plan documented in `file-cleanup.md` (project root). Goal: reduce auto-load
 **Starter Prompt:**
 > Read `file-cleanup.md` Step 2 (lines 112-144) for full context. Read `TASKS.md` Task 49 for execution steps. Read `.claude/rules/workflow.md` in full. Remove all ASCII diagrams, duplicate sections (Validation Checkpoints, Internal Linking Strategy, Error Logging, File Structure), auto-delegation triggers table, and validation file lifecycle detail. Keep: Workflow Overview table, Agents Cannot Spawn constraint, orchestration/retry/tier rules as text descriptions, and Agent Reference table + return formats. Target ~150 lines. Commit as `Cleanup Step 2/4: Trim workflow.md`.
 
-**Status:** pending
+**Status:** PASS
+
+**Handoff:**
+- **Done:** Trimmed `workflow.md` from 451 lines to 129 lines (71% reduction). Removed all ASCII diagrams (4), duplicate sections (Validation Checkpoints, Internal Linking Strategy, Error Logging, File Structure), auto-delegation triggers table, and validation file lifecycle detail. Converted orchestration/retry/tier diagrams to concise text descriptions.
+- **Decisions:** Kept the "Why main session orchestrates" and "Why file-based issue passing" explanations as they contain unique rationale not duplicated elsewhere. Kept the Tier Identification table as it's a useful reference, not a diagram.
+- **Next:** Task 50 — Verify Steps 1-2 hard stop checkpoint. Count total auto-loaded lines and confirm no broken references.
 
 ---
 
