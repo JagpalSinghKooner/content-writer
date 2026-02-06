@@ -8,17 +8,15 @@ Rules that apply to ALL content. Violations result in FAIL (rejected) or WARN (f
 
 Not all rules apply to all content types. Use this matrix to determine which checks run for each content type.
 
-| Rule | Articles | Emails | Newsletters | Lead Magnets | Distribution |
-|------|:--------:|:------:|:-----------:|:------------:|:------------:|
-| **1. UK English** | ✓ | ✓ | ✓ | ✓ | ✓ |
-| **2. Banned AI Words** | ✓ | ✓ | ✓ | - | ✓ |
-| **3. Banned AI Phrases** | ✓ | ✓ | ✓ | - | - |
-| **4. AI Patterns** | ✓ | ✓ | ✓ | - | - |
-| **4b. No Em Dashes** | ✓ | ✓ | ✓ | ✓ | ✓ |
-| **5. SEO Requirements** | ✓ | - | - | - | - |
-| **5a. Internal Link Format** | ✓ | ✓ | ✓ | - | - |
-| **6. External Citations** | ✓ | Optional | Optional | - | - |
-| **Brand Voice** | ✓ | ✓ | ✓ | ✓ | ✓ |
+- **1. UK English:** Articles, Emails, Newsletters, Lead Magnets, Distribution
+- **2. Banned AI Words:** Articles, Emails, Newsletters, Distribution
+- **3. Banned AI Phrases:** Articles, Emails, Newsletters
+- **4. AI Patterns:** Articles, Emails, Newsletters
+- **4b. No Em Dashes:** Articles, Emails, Newsletters, Lead Magnets, Distribution
+- **5. SEO Requirements:** Articles only
+- **5a. Internal Link Format:** Articles, Emails, Newsletters
+- **6. External Citations:** Articles (optional for Emails, Newsletters)
+- **Brand Voice:** Articles, Emails, Newsletters, Lead Magnets, Distribution
 
 **Legend:**
 - **✓** — Rule applies, violations result in FAIL or WARN as defined
@@ -50,23 +48,21 @@ Use British spelling throughout. American spelling = automatic fail.
 
 UK uses **-our**, US uses **-or**.
 
-| UK ✓ | US ✗ |
-|------|------|
-| colour | color |
-| behaviour | behavior |
-| favourite | favorite |
-| honour | honor |
-| favour | favor |
-| humour | humor |
-| labour | labor |
-| harbour | harbor |
-| neighbour | neighbor |
-| flavour | flavor |
-| savour | savor |
-| vapour | vapor |
-| odour | odor |
-| vigour | vigor |
-| rumour | rumor |
+- colour (not color)
+- behaviour (not behavior)
+- favourite (not favorite)
+- honour (not honor)
+- favour (not favor)
+- humour (not humor)
+- labour (not labor)
+- harbour (not harbor)
+- neighbour (not neighbor)
+- flavour (not flavor)
+- savour (not savor)
+- vapour (not vapor)
+- odour (not odor)
+- vigour (not vigor)
+- rumour (not rumor)
 
 ---
 
@@ -74,25 +70,23 @@ UK uses **-our**, US uses **-or**.
 
 UK prefers **-ise**, US uses **-ize**.
 
-| UK ✓ | US ✗ |
-|------|------|
-| recognise | recognize |
-| organise | organize |
-| realise | realize |
-| analyse | analyze |
-| memorise | memorize |
-| specialise | specialize |
-| prioritise | prioritize |
-| apologise | apologize |
-| customise | customize |
-| summarise | summarize |
-| optimise | optimize |
-| emphasise | emphasize |
-| criticise | criticize |
-| capitalise | capitalize |
-| categorise | categorize |
-| minimise | minimize |
-| maximise | maximize |
+- recognise (not recognize)
+- organise (not organize)
+- realise (not realize)
+- analyse (not analyze)
+- memorise (not memorize)
+- specialise (not specialize)
+- prioritise (not prioritize)
+- apologise (not apologize)
+- customise (not customize)
+- summarise (not summarize)
+- optimise (not optimize)
+- emphasise (not emphasize)
+- criticise (not criticize)
+- capitalise (not capitalize)
+- categorise (not categorize)
+- minimise (not minimize)
+- maximise (not maximize)
 
 ---
 
@@ -100,18 +94,16 @@ UK prefers **-ise**, US uses **-ize**.
 
 UK uses **-re**, US uses **-er**.
 
-| UK ✓ | US ✗ |
-|------|------|
-| centre | center |
-| metre | meter |
-| theatre | theater |
-| fibre | fiber |
-| litre | liter |
-| calibre | caliber |
-| sombre | somber |
-| lustre | luster |
-| spectre | specter |
-| manoeuvre | maneuver |
+- centre (not center)
+- metre (not meter)
+- theatre (not theater)
+- fibre (not fiber)
+- litre (not liter)
+- calibre (not caliber)
+- sombre (not somber)
+- lustre (not luster)
+- spectre (not specter)
+- manoeuvre (not maneuver)
 
 ---
 
@@ -119,13 +111,11 @@ UK uses **-re**, US uses **-er**.
 
 UK distinguishes nouns (-ce) from verbs (-se). US often uses -se for both.
 
-| UK ✓ | US ✗ | Notes |
-|------|------|-------|
-| defence | defense | noun |
-| offence | offense | noun |
-| licence | license | noun (UK verb is "license") |
-| pretence | pretense | noun |
-| practise | practice | verb (UK noun is "practice") |
+- defence (not defense) - noun
+- offence (not offense) - noun
+- licence (not license) - noun; UK verb is "license"
+- pretence (not pretense) - noun
+- practise (not practice) - verb; UK noun is "practice"
 
 ---
 
@@ -133,20 +123,18 @@ UK distinguishes nouns (-ce) from verbs (-se). US often uses -se for both.
 
 UK doubles the final consonant before suffixes. US often doesn't.
 
-| UK ✓ | US ✗ |
-|------|------|
-| travelling | traveling |
-| travelled | traveled |
-| traveller | traveler |
-| cancelled | canceled |
-| cancelling | canceling |
-| modelling | modeling |
-| labelling | labeling |
-| counselling | counseling |
-| fuelling | fueling |
-| jewellery | jewelry |
-| signalling | signaling |
-| marvellous | marvelous |
+- travelling (not traveling)
+- travelled (not traveled)
+- traveller (not traveler)
+- cancelled (not canceled)
+- cancelling (not canceling)
+- modelling (not modeling)
+- labelling (not labeling)
+- counselling (not counseling)
+- fuelling (not fueling)
+- jewellery (not jewelry)
+- signalling (not signaling)
+- marvellous (not marvelous)
 
 ---
 
@@ -154,12 +142,10 @@ UK doubles the final consonant before suffixes. US often doesn't.
 
 UK uses **-ogue**, US often drops the -ue.
 
-| UK ✓ | US ✗ |
-|------|------|
-| catalogue | catalog |
-| dialogue | dialog |
-| analogue | analog |
-| prologue | prolog |
+- catalogue (not catalog)
+- dialogue (not dialog)
+- analogue (not analog)
+- prologue (not prolog)
 
 ---
 
@@ -167,11 +153,9 @@ UK uses **-ogue**, US often drops the -ue.
 
 Some words differ in this suffix.
 
-| UK ✓ | US ✗ |
-|------|------|
-| defence | defense |
-| offence | offense |
-| pretence | pretense |
+- defence (not defense)
+- offence (not offense)
+- pretence (not pretense)
 
 ---
 
@@ -179,29 +163,27 @@ Some words differ in this suffix.
 
 These don't follow patterns but are commonly confused.
 
-| UK ✓ | US ✗ | Notes |
-|------|------|-------|
-| grey | gray | Colour |
-| cheque | check | Financial instrument |
-| programme | program | Schedule/broadcast (but "computer program" in both) |
-| mum | mom | Parent |
-| aluminium | aluminum | Element (5 syllables UK, 4 US) |
-| draught | draft | Beer/air current |
-| pyjamas | pajamas | Sleepwear |
-| speciality | specialty | Area of expertise |
-| tyre | tire | Wheel rubber |
-| storey | story | Building level (but "story" for narrative) |
-| kerb | curb | Road edge (but "curb" as verb in both) |
-| mould | mold | Fungus/shape |
-| plough | plow | Farm tool |
-| sceptic | skeptic | Doubter |
-| enquiry | inquiry | Question (UK uses both; inquiry for formal investigation) |
-| ageing | aging | Getting older |
-| judgement | judgment | Legal/opinion (UK allows both; US prefers no 'e') |
-| acknowledgement | acknowledgment | Recognition |
-| aeroplane | airplane | Aircraft |
-| artefact | artifact | Historical object |
-| orientated | oriented | Direction (UK accepts both; US prefers oriented) |
+- grey (not gray) - colour
+- cheque (not check) - financial instrument
+- programme (not program) - schedule/broadcast; but "computer program" in both
+- mum (not mom) - parent
+- aluminium (not aluminum) - element (5 syllables UK, 4 US)
+- draught (not draft) - beer/air current
+- pyjamas (not pajamas) - sleepwear
+- speciality (not specialty) - area of expertise
+- tyre (not tire) - wheel rubber
+- storey (not story) - building level; but "story" for narrative
+- kerb (not curb) - road edge; but "curb" as verb in both
+- mould (not mold) - fungus/shape
+- plough (not plow) - farm tool
+- sceptic (not skeptic) - doubter
+- enquiry (not inquiry) - question; UK uses both; inquiry for formal investigation
+- ageing (not aging) - getting older
+- judgement (not judgment) - legal/opinion; UK allows both; US prefers no 'e'
+- acknowledgement (not acknowledgment) - recognition
+- aeroplane (not airplane) - aircraft
+- artefact (not artifact) - historical object
+- orientated (not oriented) - direction; UK accepts both; US prefers oriented
 
 ---
 
@@ -209,14 +191,12 @@ These don't follow patterns but are commonly confused.
 
 UK and US differ on directional/prepositional suffixes.
 
-| UK ✓ | US ✗ | Notes |
-|------|------|-------|
-| towards | toward | UK prefers -s |
-| forwards | forward | UK prefers -s |
-| backwards | backward | UK prefers -s |
-| afterwards | afterward | UK prefers -s |
-| whilst | while | UK accepts both; whilst is more formal |
-| amongst | among | UK accepts both; amongst is more formal |
+- towards (not toward) - UK prefers -s
+- forwards (not forward) - UK prefers -s
+- backwards (not backward) - UK prefers -s
+- afterwards (not afterward) - UK prefers -s
+- whilst (not while) - UK accepts both; whilst is more formal
+- amongst (not among) - UK accepts both; amongst is more formal
 
 ---
 
@@ -388,13 +368,11 @@ Swapping em dashes for commas, colons, or parentheses keeps the AI sentence stru
 
 **Restructuring Examples:**
 
-| AI Pattern (with em dash) | Human Alternative |
-|---------------------------|-------------------|
-| "Sleep tracking apps — like Oura and Whoop — can help" | "Sleep tracking apps like Oura and Whoop can help" |
-| "The solution — cognitive behavioural therapy — works" | "The solution is cognitive behavioural therapy, and it works" |
-| "One thing matters — consistency" | "One thing matters: consistency" OR "Consistency is the only thing that matters" |
-| "ADHD affects sleep — but not how you'd expect" | "ADHD affects sleep, but not how you'd expect" OR start a new sentence |
-| "The real problem — and this surprises most people — is timing" | "The real problem is timing. This surprises most people." |
+- "Sleep tracking apps — like Oura and Whoop — can help" → "Sleep tracking apps like Oura and Whoop can help"
+- "The solution — cognitive behavioural therapy — works" → "The solution is cognitive behavioural therapy, and it works"
+- "One thing matters — consistency" → "One thing matters: consistency" or "Consistency is the only thing that matters"
+- "ADHD affects sleep — but not how you'd expect" → "ADHD affects sleep, but not how you'd expect" or start a new sentence
+- "The real problem — and this surprises most people — is timing" → "The real problem is timing. This surprises most people."
 
 **Detection:**
 - Search for "—" (em dash character)
@@ -434,12 +412,10 @@ Technical requirements for search optimisation.
 
 **H1 Format Examples:**
 
-| Bad (Keyword Only) ✗ | Good (Keyword + Hook) ✓ |
-|---------------------|------------------------|
-| ADHD Sleep Problems | Why Your ADHD Brain Won't Let You Sleep |
-| Email Marketing Guide | Email Marketing Guide: Send Less, Sell More |
-| Content Strategy | The Content Strategy That Built a 7-Figure Business |
-| SEO Best Practices | SEO Best Practices the Experts Actually Use |
+- ✗ "ADHD Sleep Problems" → ✓ "Why Your ADHD Brain Won't Let You Sleep"
+- ✗ "Email Marketing Guide" → ✓ "Email Marketing Guide: Send Less, Sell More"
+- ✗ "Content Strategy" → ✓ "The Content Strategy That Built a 7-Figure Business"
+- ✗ "SEO Best Practices" → ✓ "SEO Best Practices the Experts Actually Use"
 
 **Why keyword-only H1s fail:**
 - Boring (no reason to click)
@@ -459,11 +435,9 @@ The URL should be the exact slug from the target article's frontmatter, with a l
 
 **Examples:**
 
-| Correct | Incorrect | Why Wrong |
-|---------|-----------|-----------|
-| `/why-generic-calming-apps-fail-nd-children` | `/app-comparisons/articles/01-why-generic-calming-apps-fail-nd-children` | Uses directory structure |
-| `/adhd-bedtime-routine` | `/adhd-sleep/articles/02-adhd-bedtime-routine.md` | Uses file path with extension |
-| `/calming-sounds-adhd` | `/01-calming-sounds-adhd` | Includes file number prefix |
+- ✓ `/why-generic-calming-apps-fail-nd-children` (not `/app-comparisons/articles/01-...` which uses directory structure)
+- ✓ `/adhd-bedtime-routine` (not `/adhd-sleep/articles/02-adhd-bedtime-routine.md` which uses file path with extension)
+- ✓ `/calming-sounds-adhd` (not `/01-calming-sounds-adhd` which includes file number prefix)
 
 **Validation Checklist:**
 - [ ] Link URL is `/{slug}` format (single path segment after leading slash)

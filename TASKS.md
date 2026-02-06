@@ -15,7 +15,7 @@
 | Task 51: Trim `universal-rules.md` | PASS |
 | Task 52: Slim `CLAUDE.md` | PASS |
 | Task 53: Final verification + PR | PASS |
-| Task 54: Convert tables to lists | pending |
+| Task 54: Convert tables to lists | PASS |
 
 ### Execution Rules
 
@@ -461,17 +461,24 @@ Full plan documented in `file-cleanup.md` (project root). Goal: reduce auto-load
 6. Commit.
 
 **Acceptance Criteria:**
-- [ ] Zero markdown tables remain in `CLAUDE.md`
-- [ ] Zero markdown tables remain in `universal-rules.md`
-- [ ] Zero markdown tables remain in `workflow.md`
-- [ ] All information from tables preserved in list format
-- [ ] Grep for `|---|` returns 0 results across all 3 files
-- [ ] Line counts reported (before and after this task)
-- [ ] Git commit created
+- [x] Zero markdown tables remain in `CLAUDE.md`
+- [x] Zero markdown tables remain in `universal-rules.md`
+- [x] Zero markdown tables remain in `workflow.md`
+- [x] All information from tables preserved in list format
+- [x] Grep for `|---|` returns 0 results across all 3 files
+- [x] Line counts reported (before and after this task)
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read `TASKS.md` Task 54 for full context and conversion patterns. Read each auto-loaded file: `.claude/CLAUDE.md`, `.claude/rules/universal-rules.md`, `.claude/rules/workflow.md`. Find all remaining markdown tables (grep for lines starting with `|`). Convert each table to the appropriate list format: instructional → numbered/bullet lists, lookup pairs → inline parenthetical, matrices → grouped bullets. Verify no information lost. Grep for `|---|` to confirm zero tables remain. Report line counts. Commit as `Cleanup Step 5: Convert tables to lists across auto-loaded files`.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Converted 24 tables to lists across all 3 auto-loaded files. CLAUDE.md: 7 tables (task tracking, branch strategy, error types, file naming, internal linking, cross-pillar, validation checkpoints). universal-rules.md: 13 tables (scope matrix, 10 UK spelling patterns, em dash examples, H1 examples, internal link examples). workflow.md: 4 tables (workflow overview, tier identification, agent reference, agent return formats).
+- **Decisions:** Used three conversion patterns per Task 54 spec: matrix → grouped bullets (scope matrix), lookup pairs → inline parenthetical with "not" (all UK spelling tables), instructional → numbered/bullet lists (workflow, validation checkpoints). Notes columns preserved inline with dash separator.
+- **Line counts:** Before: CLAUDE.md 400, universal-rules.md 541, workflow.md 129 = 1,070 total. After: CLAUDE.md 386, universal-rules.md 515, workflow.md 121 = 1,022 total. Net reduction: 48 lines (4.5%).
 
 ---

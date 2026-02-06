@@ -8,15 +8,13 @@ The single source of truth for content generation workflow. All agents and skill
 
 The content workflow has 7 steps: 3 manual (require user decisions) and 4 agent-automated.
 
-| Step | Skill | Mode | Input | Output |
-|------|-------|------|-------|--------|
-| 1 | `/keyword-research` | Manual | Client profile | `00-keyword-brief.md` |
-| 2 | `/start-pillar` | Manual | Keyword brief + pillar | `{pillar}/01-pillar-brief.md` |
-| 3 | `/positioning-angles` | Manual | Pillar brief + profile | `{pillar}/02-positioning.md` |
-| 4 | `/seo-content` | **Agent** | Positioning + profile | `{pillar}/articles/{nn}-{slug}.md` |
-| 5 | `/direct-response-copy` | **Agent** | Draft article | Updates article in place |
-| 6 | `/validate-content` | **Agent** | Final + rules | PASS/FAIL |
-| 7 | `/content-atomizer` | **Agent** | Final article | `{pillar}/distribution/{slug}/` |
+1. `/keyword-research` (Manual): Client profile → `00-keyword-brief.md`
+2. `/start-pillar` (Manual): Keyword brief + pillar → `{pillar}/01-pillar-brief.md`
+3. `/positioning-angles` (Manual): Pillar brief + profile → `{pillar}/02-positioning.md`
+4. `/seo-content` (Agent): Positioning + profile → `{pillar}/articles/{nn}-{slug}.md`
+5. `/direct-response-copy` (Agent): Draft article → updates article in place
+6. `/validate-content` (Agent): Final + rules → PASS/FAIL
+7. `/content-atomizer` (Agent): Final article → `{pillar}/distribution/{slug}/`
 
 **Manual Steps (1-3):** Interactive skills that require user decisions. Run one at a time with user input.
 
@@ -86,12 +84,10 @@ When generating multiple articles, execute in tiers based on internal linking de
 
 From the pillar brief, identify article dependencies:
 
-| Article Type | Links To | Tier |
-|--------------|----------|------|
-| Articles with no internal links needed | - | Tier 1 |
-| Articles that reference Tier 1 articles | Tier 1 | Tier 2 |
-| Articles that reference Tier 2 articles | Tier 2 | Tier 3 |
-| Pillar Guide (links to all) | All articles | Final |
+- Articles with no internal links needed → Tier 1
+- Articles that reference Tier 1 articles → Tier 2
+- Articles that reference Tier 2 articles → Tier 3
+- Pillar Guide (links to all articles) → Final tier
 
 ### Execution Rules
 
@@ -106,21 +102,17 @@ From the pillar brief, identify article dependencies:
 
 For full agent specifications, see [agents-prd.md](../agents-prd.md).
 
-| Agent | File | Purpose | Tools |
-|-------|------|---------|-------|
-| SEO Writer | `seo-writer.md` | Write articles with E-E-A-T research | Read, Glob, Grep, Write |
-| Copy Enhancer | `copy-enhancer.md` | Add persuasion + fix validation issues | Read, Edit |
-| Content Validator | `content-validator.md` | Check rules + quality, write validation file | Read, Glob, Grep, Write |
-| Content Atomizer | `content-atomizer.md` | Create platform distribution | Read, Write |
+- **SEO Writer** (`seo-writer.md`): Write articles with E-E-A-T research. Tools: Read, Glob, Grep, Write
+- **Copy Enhancer** (`copy-enhancer.md`): Add persuasion + fix validation issues. Tools: Read, Edit
+- **Content Validator** (`content-validator.md`): Check rules + quality, write validation file. Tools: Read, Glob, Grep, Write
+- **Content Atomizer** (`content-atomizer.md`): Create platform distribution. Tools: Read, Write
 
 ### Agent Return Formats
 
-| Agent | Returns |
-|-------|---------|
-| SEO Writer | `PASS, {file_path}` |
-| Copy Enhancer | `PASS` |
-| Content Validator | `PASS` or `FAIL, {fail_count}, {warn_count}, {validation_file_path}` |
-| Content Atomizer | `PASS` |
+- **SEO Writer:** returns `PASS, {file_path}`
+- **Copy Enhancer:** returns `PASS`
+- **Content Validator:** returns `PASS` or `FAIL, {fail_count}, {warn_count}, {validation_file_path}`
+- **Content Atomizer:** returns `PASS`
 
 **Why minimal returns:** Prevents main session context overflow during pillar execution (32+ articles). Full validation output goes to files, not return messages.
 

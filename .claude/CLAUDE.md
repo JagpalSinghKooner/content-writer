@@ -8,10 +8,8 @@ A content production system that creates SEO-optimised articles for any client. 
 
 This project uses **two separate task tracking files** for different purposes:
 
-| File | Location | Purpose |
-|------|----------|---------|
-| `TASKS.md` | Repository root | **System development tasks** — Building skills, rules, templates, and infrastructure for the content system itself |
-| `PROJECT-TASKS.md` | `/projects/{client}/{project}/` | **Client project work** — Tracking content creation tasks for specific client projects (keyword research, articles, distribution) |
+- **`TASKS.md`** (repository root): System development tasks. Building skills, rules, templates, and infrastructure for the content system itself.
+- **`PROJECT-TASKS.md`** (`/projects/{client}/{project}/`): Client project work. Tracking content creation tasks for specific client projects (keyword research, articles, distribution).
 
 **Why two files?**
 
@@ -155,11 +153,9 @@ After the final task in a pillar passes (pillar guide + distribution done):
 
 ### Branch Strategy
 
-| Scenario | Branch |
-|----------|--------|
-| Single pillar | Work on `main` or current branch |
-| Multiple pillars | Create `pillar/{pillar-name}` branch |
-| Client project | Create `client/{client-name}` branch |
+- Single pillar: work on `main` or current branch
+- Multiple pillars: create `pillar/{pillar-name}` branch
+- Client project: create `client/{client-name}` branch
 
 ### What NOT to Auto-Commit
 
@@ -197,11 +193,9 @@ Auto-comment to the Issue with this format:
 ```
 
 **Error Types:**
-| Type | When |
-|------|------|
-| `Validation FAIL` | `/validate-content` returns FAIL |
-| `Git Error` | Any git operation fails |
-| `Skill FAIL` | Any skill fails to complete |
+- `Validation FAIL`: `/validate-content` returns FAIL
+- `Git Error`: any git operation fails
+- `Skill FAIL`: any skill fails to complete
 
 **Examples:**
 ```
@@ -257,14 +251,12 @@ Follow the 7-step workflow: keyword research → start pillar → positioning �
 
 ### File Naming Conventions
 
-| File Type | Naming Pattern | Example |
-|-----------|----------------|---------|
-| Keyword brief | `00-keyword-brief.md` | `00-keyword-brief.md` |
-| Pillar brief | `01-pillar-brief.md` | `01-pillar-brief.md` |
-| Positioning | `02-positioning.md` | `02-positioning.md` |
-| Supporting articles | `{nn}-{slug}.md` | `01-beginners-guide-what-is-seo.md` |
-| Pillar guide | `{nn}-{slug}.md` (highest number) | `11-complete-guide-ai-marketing-strategy.md` |
-| Distribution | `distribution/{slug}/{platform}.md` | `distribution/beginners-guide-what-is-seo/linkedin.md` |
+- Keyword brief: `00-keyword-brief.md`
+- Pillar brief: `01-pillar-brief.md`
+- Positioning: `02-positioning.md`
+- Supporting articles: `{nn}-{slug}.md` (e.g. `01-beginners-guide-what-is-seo.md`)
+- Pillar guide: `{nn}-{slug}.md` with highest number (e.g. `11-complete-guide-ai-marketing-strategy.md`)
+- Distribution: `distribution/{slug}/{platform}.md` (e.g. `distribution/beginners-guide-what-is-seo/linkedin.md`)
 
 **Article Numbering:**
 
@@ -292,12 +284,10 @@ Complete ALL articles for one pillar before moving to the next. This ensures:
 
 Internal links are added at different times depending on link type:
 
-| Link Type | When to Add | Notes |
-|-----------|-------------|-------|
-| Links TO pillar guide | After pillar guide published | Go back and update all supporting articles |
-| Links BETWEEN supporting articles | During writing if target exists, or after both published | Use placeholder if target doesn't exist yet |
-| Links FROM pillar guide | During pillar guide writing | All supporting articles exist at this point |
-| Links FROM outside pillar | After pillar complete | Cross-pillar linking pass |
+- **Links TO pillar guide:** Add after pillar guide is published. Go back and update all supporting articles.
+- **Links BETWEEN supporting articles:** Add during writing if target exists, or after both are published. Use placeholder if target doesn't exist yet.
+- **Links FROM pillar guide:** Add during pillar guide writing. All supporting articles exist at this point.
+- **Links FROM outside pillar:** Add after pillar is complete (cross-pillar linking pass).
 
 **Placeholder Convention:**
 
@@ -327,11 +317,9 @@ Cross-pillar links connect related content across different topic clusters. Use 
 
 **When to Cross-Link:**
 
-| Scenario | Example |
-|----------|---------|
-| Topics naturally overlap | AI marketing tools article links to automation pillar guide |
-| Article mentions concept from another pillar | SEO article references email marketing best practices |
-| Supporting article could benefit from related pillar guide | How-to article links to comprehensive guide in adjacent topic |
+- Topics naturally overlap (e.g. AI marketing tools article links to automation pillar guide)
+- Article mentions a concept from another pillar (e.g. SEO article references email marketing best practices)
+- Supporting article could benefit from a related pillar guide (e.g. how-to article links to guide in adjacent topic)
 
 **Cross-Pillar Linking Pass:**
 
@@ -358,13 +346,11 @@ After completing the current pillar:
 
 Content validation happens at specific points in the workflow. Some checkpoints are automatic (run every time), others are manual (run on request).
 
-| Checkpoint | Trigger | What to Validate | Type |
-|------------|---------|------------------|------|
-| Post-draft | After `/seo-content` | Full article against universal rules | Automatic |
-| Post-enhancement | After `/direct-response-copy` | Full article + brand voice alignment | Automatic |
-| Pre-publish | Before changing status to "published" | Final validation (all checks) | Automatic |
-| Batch review | After pillar complete | All pillar articles for cross-article consistency | Manual |
-| Spot check | When issues suspected | Specific content on request | Manual |
+- **Post-draft** (Automatic): After `/seo-content`, validate full article against universal rules
+- **Post-enhancement** (Automatic): After `/direct-response-copy`, validate full article + brand voice alignment
+- **Pre-publish** (Automatic): Before changing status to "published", run final validation (all checks)
+- **Batch review** (Manual): After pillar complete, review all pillar articles for cross-article consistency
+- **Spot check** (Manual): When issues suspected, validate specific content on request
 
 **Automatic Checkpoints:**
 
