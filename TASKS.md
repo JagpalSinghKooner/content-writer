@@ -18,7 +18,7 @@
 | Task 25e: Audit Emotional Regulation (Validate Only) | pending |
 | Task 25f: Audit Bedtime Routines (Validate Only) | PASS |
 | Task 25g: Audit Sound Therapy (Validate Only) | pending |
-| Task 25h: Cross-Pillar Summary | pending |
+| Task 25h: Cross-Pillar Summary | PASS |
 | Task 26: Auto-Fix All Pillars + Extract Patterns | pending |
 
 ---
@@ -442,18 +442,23 @@
 **Objective:** Review all 8 audit-summary.md files and compile a cross-pillar summary of common issues for Task 26 auto-fix planning.
 
 **Acceptance Criteria:**
-- [ ] All 8 audit-summary.md files read (adhd-sleep, autistic-meltdowns, sensory-overload, calming-sounds, emotional-regulation, bedtime-routines, sound-therapy, app-comparisons)
-- [ ] Cross-pillar summary compiled: common issues by category across all 8 pillars
-- [ ] Patterns appearing 3+ times documented with pillar names and counts
-- [ ] Total article counts and PASS/FAIL breakdown per pillar
-- [ ] Broken citation URLs aggregated across all pillars
-- [ ] Findings documented for Task 26 auto-fix planning
-- [ ] Summary written to `projects/hushaway/seo-content/cross-pillar-summary.md`
+- [x] All 8 audit-summary.md files read (adhd-sleep, autistic-meltdowns, sensory-overload, calming-sounds, emotional-regulation, bedtime-routines, sound-therapy, app-comparisons)
+- [x] Cross-pillar summary compiled: common issues by category across all 8 pillars
+- [x] Patterns appearing 3+ times documented with pillar names and counts
+- [x] Total article counts and PASS/FAIL breakdown per pillar
+- [x] Broken citation URLs aggregated across all pillars
+- [x] Findings documented for Task 26 auto-fix planning
+- [x] Summary written to `projects/hushaway/seo-content/cross-pillar-summary.md`
 
 **Starter Prompt:**
 > Read all 8 audit-summary.md files under `projects/hushaway/seo-content/` (adhd-sleep, autistic-meltdowns, sensory-overload, calming-sounds, emotional-regulation, bedtime-routines, sound-therapy, app-comparisons). Compile a cross-pillar summary: common issues by category, patterns appearing 3+ times with pillar names and occurrence counts, total article counts (PASS/FAIL per pillar), aggregated broken citation URLs, and findings for Task 26 auto-fix planning. Write summary to `projects/hushaway/seo-content/cross-pillar-summary.md`. Commit. Update TASKS.md with results.
 
-**Status:** pending
+**Status:** PASS
+
+**Handoff:**
+- **Done:** Read all 8 audit-summary.md files. Compiled cross-pillar-summary.md with: per-pillar PASS/FAIL table (9 PASS, 48 FAIL across 57 articles), 6 patterns appearing 3+ times, 19 aggregated broken citation URLs, and a prioritised Task 26 auto-fix execution plan.
+- **Decisions:** Organised auto-fix into 6 priorities: (1) internal link format ~314 remaining instances across 7 pillars, (2) missing bidirectional guide links 14 articles, (3) broken slug references 28 instances, (4) broken citations 19 URLs requiring manual research, (5) keyword-only slugs 5 articles needing editorial decision, (6) clinical terminology ~30 instances.
+- **Next:** Task 26 should follow the execution order in cross-pillar-summary.md. Start by building a complete slug lookup table, then batch-fix link formats across all 7 unfixed pillars.
 
 ---
 
