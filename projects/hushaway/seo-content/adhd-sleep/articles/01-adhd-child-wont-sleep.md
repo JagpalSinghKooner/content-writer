@@ -65,7 +65,7 @@ Bath. Story. Same time every night. Blackout blinds. No screens. The whole routi
 
 And your ADHD child still won't sleep.
 
-10pm. Then 11pm. You can hear them up there — tossing, turning, calling out for water. One more question. One more trip to the toilet. By midnight, you're in tears on the sofa. They're wide awake.
+10pm. Then 11pm. You can hear them up there. Tossing, turning, calling out for water. One more question. One more trip to the toilet. By midnight, you're in tears on the sofa. They're wide awake.
 
 You've tried harder than most parents ever have to try.
 
@@ -79,7 +79,7 @@ This advice works beautifully for neurotypical children. Their brains respond to
 
 But ADHD brains don't work that way.
 
-Research from the University Hospital Southampton NHS Foundation Trust, 2022 — [Southampton researchers launch new study to help children with ADHD sleep better](https://www.uhs.nhs.uk/whats-new/press-releases/southampton-researchers-launch-new-study-to-help-children-with-adhd-sleep-better) found that almost 75% of children with ADHD have sleep problems. That's not a coincidence. That's neurobiology.
+Research from the University Hospital Southampton NHS Foundation Trust, 2022: [Southampton researchers launch new study to help children with ADHD sleep better](https://www.uhs.nhs.uk/whats-new/press-releases/southampton-researchers-launch-new-study-to-help-children-with-adhd-sleep-better) found that almost 75% of children with ADHD have sleep problems. That's not a coincidence. That's neurobiology.
 
 When you understand WHY your child's brain works differently at bedtime, you stop blaming yourself. And you can start finding solutions that actually fit.
 
@@ -89,7 +89,7 @@ Your child isn't being difficult. Their brain is doing exactly what ADHD brains 
 
 ### The Racing Thoughts Problem
 
-One mum in a UK sleep study described it perfectly: "When it comes to bedtime, feeling tired doesn't come naturally to him and he can lie in bed awake until midnight — his mind is racing."
+One mum in a UK sleep study described it perfectly: "When it comes to bedtime, feeling tired doesn't come naturally to him and he can lie in bed awake until midnight because his mind is racing."
 
 This is the core issue. When neurotypical children lie down, their brains naturally slow activity. Thoughts quiet. The body relaxes into sleep.
 
@@ -101,13 +101,13 @@ The quieter the room, the louder the brain becomes. That's why telling an ADHD c
 
 Here's something that might surprise you: ADHD brains often run on a different internal clock.
 
-Research published in Frontiers in Psychiatry, 2025 — [ADHD as a circadian rhythm disorder](https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1697900/full) found that 73-78% of children and adults with ADHD have a delayed sleep/wake cycle. Their melatonin (the sleep hormone) kicks in about 45 minutes later than neurotypical children.
+Research published in Frontiers in Psychiatry, 2025: [ADHD as a circadian rhythm disorder](https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1697900/full) found that 73-78% of children and adults with ADHD have a delayed sleep/wake cycle. Their melatonin (the sleep hormone) kicks in about 45 minutes later than neurotypical children.
 
 This means when you put your ADHD child to bed at 8pm because that's when children "should" go to bed, their brain genuinely isn't ready for sleep yet. They're not being defiant. Their body clock is running on a different schedule.
 
 ### The Hyperarousal Factor
 
-ADHD involves differences in how the brain regulates arousal. Some children with ADHD actually become MORE alert as the evening progresses — the opposite of what we'd expect.
+ADHD involves differences in how the brain regulates arousal. Some children with ADHD actually become MORE alert as the evening progresses. The opposite of what we'd expect.
 
 Their nervous system doesn't wind down easily. It needs more input to regulate, not less. Which is why the standard advice of removing all stimulation before bed can backfire spectacularly for ADHD children.
 
@@ -115,13 +115,13 @@ Their nervous system doesn't wind down easily. It needs more input to regulate, 
 
 Can we talk about the guilt for a moment?
 
-You've been told — by books, by well-meaning relatives, by that one mum at school pickup who never looks tired — that sleep problems are a parenting issue. That if you just stuck to the routine. If you just said "no" more firmly. If you just *tried harder*.
+You've been told it's a parenting issue. By books. By well-meaning relatives. By that one mum at school pickup who never looks tired. That if you just stuck to the routine. If you just said "no" more firmly. If you just *tried harder*.
 
 So you tried harder. And harder. And it still didn't work.
 
-Here's what the research actually says — and it might change how you feel about tonight.
+Here's what the research actually says. It might change how you feel about tonight.
 
-According to the Journal of Clinical Sleep Medicine, 2023 — [The impact of sleep difficulties in children with ADHD on the family](https://jcsm.aasm.org/doi/10.5664/jcsm.10662), children with ADHD move through sleep stages differently and sleep about one hour less per night than their non-ADHD peers. They experience less REM sleep, more frequent arousals, and lighter sleep overall.
+According to the Journal of Clinical Sleep Medicine, 2023: [The impact of sleep difficulties in children with ADHD on the family](https://jcsm.aasm.org/doi/10.5664/jcsm.10662), children with ADHD move through sleep stages differently and sleep about one hour less per night than their non-ADHD peers. They experience less REM sleep, more frequent arousals, and lighter sleep overall.
 
 This isn't about willpower or behaviour. This is about brain wiring.
 
@@ -145,7 +145,7 @@ We've written about building an [ADHD-friendly bedtime routine](/adhd-bedtime-ro
 
 The blue light argument is real. Screens can delay melatonin production.
 
-But for many ADHD children, screens serve a regulatory function. They provide the external stimulation that helps their brain focus and calm. Taking screens away without replacing that function leaves the brain hunting for stimulation — often finding it in racing thoughts, anxiety, or hyperactive behaviour.
+But for many ADHD children, screens serve a regulatory function. They provide the external stimulation that helps their brain focus and calm. Taking screens away without replacing that function leaves the brain hunting for stimulation. It often finds it in racing thoughts, anxiety, or hyperactive behaviour.
 
 The answer isn't simply "remove screens." It's "replace what screens were providing with something better for sleep."
 
@@ -153,13 +153,13 @@ The answer isn't simply "remove screens." It's "replace what screens were provid
 
 Physical activity does help. Research shows high-intensity physical activity during the day can reduce sleep problems in ADHD children.
 
-But exercise alone isn't enough if the brain still can't switch off at night. A physically tired child with an active ADHD brain will lie in bed exhausted and unable to sleep — which is almost worse, because now they're frustrated AND overtired.
+But exercise alone isn't enough if the brain still can't switch off at night. A physically tired child with an active ADHD brain will lie in bed exhausted and unable to sleep. That's almost worse, because now they're frustrated AND overtired.
 
 ## What Actually Works: A Different Approach
 
 The missing piece in ADHD sleep advice is this: the ADHD brain needs INPUT to calm down, not just the removal of input.
 
-When we try to create sleep by taking things away (screens, activity, stimulation), we leave the ADHD brain in a vacuum. And brains don't like vacuums. They fill them — usually with racing thoughts, anxiety, or restless energy.
+When we try to create sleep by taking things away (screens, activity, stimulation), we leave the ADHD brain in a vacuum. And brains don't like vacuums. They fill them. Usually with racing thoughts, anxiety, or restless energy.
 
 The solution is to give the brain something calming TO focus on, rather than fighting to focus on nothing.
 
@@ -169,7 +169,7 @@ This is where something shifts.
 
 The ADHD brain that won't switch off? It responds remarkably well to passive auditory input. Not music they need to interact with. Not meditation they need to concentrate on. Passive sound that gives the brain somewhere calm to land.
 
-Think about it: the racing thoughts happen because the brain is seeking stimulation. Give it the right kind of stimulation — steady, calming, requiring no effort — and those thoughts have somewhere to go.
+Think about it: the racing thoughts happen because the brain is seeking stimulation. Give it the right kind of stimulation. Steady, calming, requiring no effort. Those thoughts finally have somewhere to go.
 
 Frequencies, soundscapes, gentle ambient audio. These work because they occupy the part of the brain that would otherwise be racing.
 
@@ -177,7 +177,7 @@ This isn't about drowning out thoughts. It's about giving the brain what it natu
 
 ### Why "Just Press Play" Matters
 
-Here's something we understand — because we've lived it.
+Here's something we understand because we've lived it.
 
 By 8pm, you've got nothing left. Breakfast battles. School run. Work. Homework. After-school meltdowns. Dinner negotiations. You're running on empty. The last thing you need is another strategy that requires your energy, your focus, your patience.
 
@@ -193,7 +193,7 @@ Your child doesn't need to try. You don't need to supervise. The sounds give the
 
 We're not guessing here. Studies show that children with ADHD respond differently to their environment, and that the right sensory input can help regulate their arousal levels.
 
-The key is "passive." Active engagement (games, apps that require choices, even some meditation programmes) can actually increase alertness. Passive listening — audio that requires nothing from the child except presence — allows the brain to downregulate naturally.
+The key is "passive." Active engagement (games, apps that require choices, even some meditation programmes) can actually increase alertness. Passive listening allows the brain to downregulate naturally. The audio requires nothing from the child except presence.
 
 This is why HushAway® content is designed for passive listening. No tapping. No choices. No interaction required. Just sound that meets the ADHD brain where it is.
 
@@ -201,13 +201,13 @@ This is why HushAway® content is designed for passive listening. No tapping. No
 
 If your child's main struggle is [racing thoughts at bedtime](/adhd-racing-thoughts), here's what's happening:
 
-Their brain is doing its job — processing the day, making connections, generating ideas. ADHD brains are often creative, curious, and full of energy precisely because they don't shut off easily.
+Their brain is doing its job. Processing the day, making connections, generating ideas. ADHD brains are often creative, curious, and full of energy precisely because they don't shut off easily.
 
 The problem isn't the thoughts themselves. It's that there's nowhere for them to go.
 
 Sound gives thoughts somewhere to land. Instead of bouncing around the brain in an endless loop, they have something external to settle on. The brain stays occupied, but in a way that's compatible with sleep.
 
-Many parents notice the difference within days. Not that their child becomes a perfect sleeper overnight — but that the hours-long battles become manageable. The racing thoughts slow. The resistance reduces.
+Many parents notice the difference within days. Their child doesn't become a perfect sleeper overnight. But the hours-long battles become manageable. The racing thoughts slow. The resistance reduces.
 
 ## A Note on Melatonin
 
@@ -215,7 +215,7 @@ Many parents ask about melatonin, and it's worth addressing briefly.
 
 In the UK, melatonin requires a prescription for children. It's often the first thing clinicians suggest for ADHD sleep problems.
 
-Research shows melatonin can help — it addresses that delayed circadian rhythm we mentioned earlier. But here's what the research also shows: in 9 out of 10 cases, melatonin is prescribed without any supporting advice about behaviour, environment, or what to do when melatonin alone isn't enough.
+Research shows melatonin can help. It addresses that delayed circadian rhythm we mentioned earlier. But here's what the research also shows: in 9 out of 10 cases, melatonin is prescribed without any supporting advice about behaviour, environment, or what to do when melatonin alone isn't enough.
 
 Melatonin helps children feel sleepy. It doesn't help with the racing brain that stays active despite feeling tired.
 
@@ -227,7 +227,7 @@ If you've read this far, you're nodding.
 
 You know the midnight battles. The guilt. The lying awake in your own bed, exhausted, listening for those footsteps down the hallway.
 
-We built HushAway® because we were those parents. We needed something that actually worked — something that didn't require more from us when we had nothing left to give.
+We built HushAway® because we were those parents. We needed something that actually worked. Something that didn't require more from us when we had nothing left to give.
 
 The Open Sanctuary is our free collection of sounds for sensitive and neurodivergent children. No signup. No cost. No catch.
 
@@ -249,7 +249,7 @@ ADHD children can be physically exhausted while their brain remains highly activ
 
 ### Is it normal for ADHD children to take hours to fall asleep?
 
-Research shows that ADHD children have a delayed melatonin onset of about 45 minutes compared to neurotypical children, and many experience chronic sleep onset problems. Taking 1-2 hours to fall asleep is common, though not ideal. The good news is this can be addressed with the right approach — it's not something you or your child should just accept.
+Research shows that ADHD children have a delayed melatonin onset of about 45 minutes compared to neurotypical children, and many experience chronic sleep onset problems. Taking 1-2 hours to fall asleep is common, though not ideal. The good news is this can be addressed with the right approach. It's not something you or your child should just accept.
 
 ### Do weighted blankets help ADHD children sleep?
 
@@ -257,8 +257,8 @@ Some ADHD children find weighted blankets helpful because they provide proprioce
 
 ### Should I let my ADHD child stay up later if they're not tired?
 
-There's some logic to working with your child's natural circadian rhythm rather than fighting it. However, complete flexibility creates other problems — morning wake times for school don't move. The better approach is often to gently shift bedtime while providing what the brain needs to actually sleep at that time, rather than simply making bedtime later and later.
+There's some logic to working with your child's natural circadian rhythm rather than fighting it. However, complete flexibility creates other problems. Morning wake times for school don't move. The better approach is often to gently shift bedtime while providing what the brain needs to actually sleep at that time, rather than simply making bedtime later and later.
 
 ### Why does my ADHD child's sleep get worse during school terms?
 
-School creates additional demands on an already stretched system. The cognitive effort of school, social stress, sensory overload in classrooms, and the structure demands all accumulate. By evening, your child may be both exhausted AND overstimulated — a combination that makes sleep particularly difficult. This is when having a reliable calming tool becomes even more valuable.
+School creates additional demands on an already stretched system. The cognitive effort of school, social stress, sensory overload in classrooms, and the structure demands all accumulate. By evening, your child may be both exhausted AND overstimulated. That combination makes sleep particularly difficult. This is when having a reliable calming tool becomes even more valuable.
