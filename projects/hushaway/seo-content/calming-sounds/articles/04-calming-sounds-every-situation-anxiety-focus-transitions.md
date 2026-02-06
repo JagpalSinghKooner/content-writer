@@ -287,6 +287,8 @@ The Open Sanctuary offers sounds designed specifically for neurodivergent and se
 
 One quiet moment can change a whole day for a child. Sometimes it's just about finding the right sound for that moment.
 
+For a broader look at calming sounds and when to use them, see our [complete guide to calming sounds for children](/complete-guide-calming-sounds-children).
+
 ---
 
 ## FAQ

@@ -214,6 +214,8 @@ Because sometimes the most calming thing isn't a song.
 
 It's simply sound. Present, steady, asking nothing at all.
 
+For the full picture of how calming sounds support children, see our [complete guide to calming sounds for children](/complete-guide-calming-sounds-children).
+
 ---
 
 ## FAQ

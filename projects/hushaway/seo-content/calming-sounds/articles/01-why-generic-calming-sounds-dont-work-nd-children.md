@@ -214,6 +214,8 @@ Just press play.
 
 If you've been cycling through apps that weren't made for your child, you might find something different in The Open Sanctuary. It's a starting point for discovering sounds built for how their brain actually works. Because your child isn't the problem. The sounds have been.
 
+For a deeper look at what actually works, see our [complete guide to calming sounds for children](/complete-guide-calming-sounds-children).
+
 ---
 
 ## FAQ

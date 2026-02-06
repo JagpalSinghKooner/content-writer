@@ -313,6 +313,8 @@ The drawer full of sensory tools for children isn't complete without sound. Unli
 
 You can explore sounds designed specifically for sensitive and neurodivergent children in The Open Sanctuary. No commitment needed. Just press play and see what works for your child.
 
+For a broader look at sensory overload and how sound fits in, see our [comprehensive guide to sensory overload in children](/complete-guide-sensory-overload-children).
+
 ---
 
 ## FAQ

@@ -260,6 +260,8 @@ Your child isn't being difficult in the hours after a meltdown. They're recoveri
 
 And now you know how to help. Not by doing more. By creating the space for their nervous system to find its way back. One quiet hour at a time.
 
+For the full picture of sensory overload, from early signs to recovery, see our [comprehensive guide to sensory overload in children](/complete-guide-sensory-overload-children).
+
 ---
 
 ## FAQ

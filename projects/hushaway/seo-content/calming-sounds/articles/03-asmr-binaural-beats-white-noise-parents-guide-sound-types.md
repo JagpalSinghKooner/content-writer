@@ -299,6 +299,8 @@ If you want to explore what might work for your child, The Open Sanctuary offers
 
 One quiet moment can change a whole day for a child. Finding the right sound helps create those moments.
 
+For everything we know about calming sounds and how to use them, see our [complete guide to calming sounds for children](/complete-guide-calming-sounds-children).
+
 ---
 
 ## FAQ

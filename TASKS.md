@@ -475,19 +475,24 @@ Built the audit system (link-auditor agent, consistency-checker agent, audit-pil
 - Autistic Meltdowns: article 02 (1 article) → link to `complete-guide-autism-meltdowns-uk-parents`
 
 **Acceptance Criteria:**
-- [ ] All 7 Sensory Overload supporting articles contain link to pillar guide
-- [ ] All 4 Calming Sounds supporting articles contain link to pillar guide
-- [ ] Both Bedtime Routines supporting articles contain link to pillar guide
-- [ ] Autistic Meltdowns article 02 contains link to pillar guide
-- [ ] Links use correct `/{slug}` format with the pillar guide's current frontmatter slug
-- [ ] Links are placed contextually in the conclusion/final section (not just appended)
-- [ ] All 14 articles verified via grep to contain their pillar guide slug
-- [ ] Git commit created
+- [x] All 7 Sensory Overload supporting articles contain link to pillar guide
+- [x] All 4 Calming Sounds supporting articles contain link to pillar guide
+- [x] Both Bedtime Routines supporting articles contain link to pillar guide
+- [x] Autistic Meltdowns article 02 contains link to pillar guide
+- [x] Links use correct `/{slug}` format with the pillar guide's current frontmatter slug
+- [x] Links are placed contextually in the conclusion/final section (not just appended)
+- [x] All 14 articles verified via grep to contain their pillar guide slug
+- [x] Git commit created
 
 **Starter Prompt:**
 > Add a contextual link to the pillar guide in the conclusion or final section of each of these 14 articles. Use natural anchor text like "For the complete guide, see our [comprehensive guide to {topic}](/{pillar-guide-slug})." Use the pillar guide's CURRENT frontmatter slug (after Task 37 changes). Verify each article contains its guide link via grep. Commit when done.
 
-**Status:** pending
+**Status:** PASS
+
+**Handoff:**
+- **Done:** Added contextual pillar guide links to all 14 articles. Each link placed in the conclusion section before the FAQ, using natural anchor text with `/{slug}` format. Sensory Overload (7 articles) → `/complete-guide-sensory-overload-children`. Calming Sounds (4 articles) → `/complete-guide-calming-sounds-children`. Bedtime Routines (2 articles) → `/complete-guide-nd-bedtime-routines`. Autistic Meltdowns (1 article) → `/complete-guide-autism-meltdowns-uk-parents`.
+- **Decisions:** Varied anchor text across articles to avoid repetition while maintaining natural tone. All links placed before FAQ/separator, after the final body paragraph or CTA. Used "comprehensive guide to..." and "complete guide to..." phrasing for natural readability.
+- **Next:** Task 42 (Fix Clinical Terminology — replace "dysregulation"/"dysregulated" with "overwhelm"/"overwhelmed" in parent-facing body text).
 
 ---
 

@@ -262,6 +262,8 @@ Start with one sound type. Notice how your child responds. Try it at different t
 
 The child who covers their ears at fire alarms might become the child who asks for "their calm sound" after school. We've seen it happen more often than you'd expect.
 
+For the full picture of how sensory differences affect your child, see our [comprehensive guide to sensory overload in children](/complete-guide-sensory-overload-children).
+
 ## FAQ
 
 ### Can sound therapy help auditory processing disorder?

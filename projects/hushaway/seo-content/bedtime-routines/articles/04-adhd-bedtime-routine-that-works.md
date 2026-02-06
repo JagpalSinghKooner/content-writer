@@ -331,6 +331,8 @@ One quiet moment can change a whole day for a child.
 
 For ADHD children, that quiet moment starts when their racing brain finally has somewhere to settle. Tonight could be the first night.
 
+For the full picture of what works at bedtime, see our [complete guide to neurodivergent bedtime routines](/complete-guide-nd-bedtime-routines).
+
 ---
 
 ## FAQ

@@ -326,6 +326,8 @@ The Open Sanctuary from HushAway® offers sounds designed specifically for neuro
 
 Explore The Open Sanctuary tonight and find the sounds that help your child feel safe at bedtime.
 
+For more bedtime strategies across different needs, see our [complete guide to neurodivergent bedtime routines](/complete-guide-nd-bedtime-routines).
+
 ---
 
 ## Frequently Asked Questions

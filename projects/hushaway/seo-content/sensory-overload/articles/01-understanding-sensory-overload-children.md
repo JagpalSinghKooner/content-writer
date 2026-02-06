@@ -375,6 +375,8 @@ Press play. Step back. Let it work.
 
 If you're curious about what kinds of sounds actually help, HushAway's The Open Sanctuary offers a library of calming sounds designed specifically for sensitive and neurodivergent children. No apps to fiddle with. No interaction required from your overwhelmed child. Just press play and let the sound do what it does best: reach the parts of the brain that need it most.
 
+For the complete picture of sensory overload and how to support your child, see our [comprehensive guide to sensory overload in children](/complete-guide-sensory-overload-children).
+
 ---
 
 ## FAQ

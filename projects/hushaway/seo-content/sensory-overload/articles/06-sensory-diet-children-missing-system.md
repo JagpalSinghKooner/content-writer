@@ -250,6 +250,8 @@ You might find it's been the missing piece all along.
 
 The Open Sanctuary has sounds designed specifically for sensory regulation. Frequencies for calming. ASMR for focus. Sleep sounds for bedtime wind-down. Start there, see what your child responds to, and build from there.
 
+For everything you need to know about sensory overload, including signs and strategies, see our [comprehensive guide to sensory overload in children](/complete-guide-sensory-overload-children).
+
 ---
 
 ## FAQ

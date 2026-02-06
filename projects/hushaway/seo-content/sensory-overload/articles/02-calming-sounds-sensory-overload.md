@@ -293,6 +293,8 @@ Press play when your child needs it. That's all it takes.
 
 One quiet moment can change a whole day for a child.
 
+For more on understanding and supporting sensory overload, see our [comprehensive guide to sensory overload in children](/complete-guide-sensory-overload-children).
+
 ---
 
 ## FAQ

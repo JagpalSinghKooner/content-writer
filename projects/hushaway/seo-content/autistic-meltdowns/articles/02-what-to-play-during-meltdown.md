@@ -308,6 +308,8 @@ Because "try calming music" is only helpful if someone tells you what that actua
 
 [Explore The Open Sanctuary](https://www.hushaway.com/join-the-waitlist)
 
+For everything we know about supporting your child through meltdowns, see our [complete guide to autism meltdowns for UK parents](/complete-guide-autism-meltdowns-uk-parents).
+
 ---
 
 ## FAQ

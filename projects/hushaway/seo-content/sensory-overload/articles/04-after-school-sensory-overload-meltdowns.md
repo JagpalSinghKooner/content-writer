@@ -294,6 +294,8 @@ No setup required. No decisions to make. Just press play and let sound do the wo
 
 Because you've been holding it together all day too.
 
+For everything you need to know about sensory overload and what helps, see our [comprehensive guide to sensory overload in children](/complete-guide-sensory-overload-children).
+
 ---
 
 ## FAQ
