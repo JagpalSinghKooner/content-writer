@@ -1,9 +1,5 @@
 # Audit Summary Template
 
-Templates for audit-summary.md output and user-facing report formats.
-
----
-
 ## Audit Summary Format
 
 Write to `{pillar}/audit-summary.md`:
@@ -127,14 +123,6 @@ Write to `{pillar}/audit-summary.md`:
 
 ---
 
-## Status Determination
-
-- **PASS:** Zero FAILs across validation, links, and citations
-- **PARTIAL:** Some articles PASS, some FAIL
-- **FAIL:** All articles have at least one FAIL
-
----
-
 ## User Output: Validate Only
 
 ```
@@ -154,13 +142,10 @@ Full report: {pillar}/audit-summary.md
 
 {If escalated issues:}
 ⚠️ Issues Requiring Manual Review:
-
 Link Issues:
 - {article}: {issue description}
-
 Citation Issues:
 - {article}: {url} returned {status}
-
 Consistency Issues:
 - {articles}: {description}
 
@@ -193,16 +178,12 @@ Auto-Fix Results:
 
 {If escalated issues:}
 ⚠️ Escalated Issues (Manual Review Required):
-
 Content Issues (failed after 3 fix attempts):
 - {article}: {remaining issues summary}
-
 Link Issues (cannot auto-fix):
 - {article}: {issue description}
-
 Citation Issues (cannot auto-fix):
 - {article}: {url} returned {status}
-
 Consistency Issues (cannot auto-fix):
 - {articles}: {description}
 
@@ -217,7 +198,7 @@ Full report: {pillar}/audit-summary.md
 
 ## Fix Results Section (append to audit-summary.md)
 
-When `--fix` is used, append this section to `audit-summary.md`:
+When `--fix` is used, append to `audit-summary.md`:
 
 ```markdown
 ---

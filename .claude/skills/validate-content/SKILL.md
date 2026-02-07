@@ -728,11 +728,11 @@ When invoked by an agent (see `rules/workflow.md`), this skill runs in non-inter
 
 In non-interactive mode, return the COMPLETE validation output as defined in the Output Format section above. Do not abbreviate.
 
-The main session needs every FAIL issue with line numbers, every WARN issue, full SEO checklist, complete readability metrics, and brand voice assessment. Abbreviated output forces re-validation, defeating sub-agent isolation.
+The main session needs every FAIL issue with line numbers, every WARN issue, full SEO checklist, complete readability metrics, and brand voice assessment. Abbreviated output forces re-validation, defeating agent isolation.
 
 ### Requirements for Non-Interactive
 
-The sub-agent prompt must include:
+The agent prompt must include:
 
 - [ ] Article path to validate
 - [ ] Client profile path (for brand voice)

@@ -45,7 +45,7 @@ Extract:
 
 ### 2. Research for E-E-A-T Citations
 
-Use web search to find 2-4 authoritative citations. See `.claude/skills/seo-content/references/eeat-patterns.md` for sourcing patterns.
+Use `mcp__perplexity__perplexity_research` to find 2-4 authoritative citations. See `.claude/skills/seo-content/references/eeat-patterns.md` for sourcing patterns.
 
 **Preferred sources:**
 - Peer-reviewed studies and academic journals
@@ -138,4 +138,4 @@ FAIL: Missing positioning document at {path}
 - **Grep**: Search for patterns in codebase
 - **Write**: Create the article file
 
-**Note:** If Perplexity MCP is enabled, use `mcp__perplexity__*` tools for E-E-A-T research. Otherwise, use `WebSearch` for finding authoritative citations.
+**Note:** Use `mcp__perplexity__*` tools for E-E-A-T research. Prefer `perplexity_research` for deep sourcing and `perplexity_search` for finding specific citations.

@@ -5,25 +5,6 @@ description: "Interview to build a complete client profile for SEO content gener
 
 # Client Onboarding Workflow
 
-Every piece of content needs context. Without knowing who you're writing for, what makes them different, and how they sound—you're guessing.
-
-This skill runs once per client. It builds the foundation that every other skill draws from.
-
----
-
-## The goal
-
-Create a complete client profile that captures:
-- What they do (and for whom)
-- What makes them different
-- How they should sound
-- What to avoid
-- What success looks like
-
-The output is a markdown file that other skills reference. No more asking the same questions on every brief.
-
----
-
 ## How to run
 
 Start with the minimum: the client's product or service description.
@@ -40,7 +21,7 @@ Then I'll interview you. Takes 10-15 minutes for a thorough profile.
 
 ## The interview
 
-I'll ask questions in natural conversation. You don't need to answer everything—skip what doesn't apply.
+I'll ask questions in natural conversation. Skip what doesn't apply.
 
 ### Section 1: Company Basics
 
@@ -195,7 +176,7 @@ Where do you land on these dimensions?
 
 **Vocabulary patterns:**
 - Signature words or phrases you repeat?
-- Industry jargon level—heavy, moderate, light, or translated?
+- Industry jargon level: heavy, moderate, light, or translated?
 - Any words that feel distinctly "you"?
 - Strong feelings about profanity or edgy language?
 
@@ -217,79 +198,21 @@ Where do you land on these dimensions?
 
 ---
 
-## Interview tips
-
-**Be specific:** "Busy marketers" is vague. "Marketing managers at B2B SaaS companies with 50-200 employees who don't have a dedicated content team" is useful.
-
-**Share examples:** If you love how a competitor writes, tell me. If you hate industry cliches, list them.
-
-**It's okay to skip:** Not every section applies to every business. Skip what doesn't fit.
-
-**Think about edge cases:** What questions do you always have to answer? What objections come up repeatedly?
-
----
-
 ## Output
 
-After the interview, I'll create:
-
-```
-/clients/{client-name}/profile.md
-```
-
-This profile includes:
-- All interview responses, organised
-- Extracted patterns and insights
-- Ready-to-reference sections for other skills
-
-Every content skill reads this profile. Update it when things change.
+Creates `/clients/{client-name}/profile.md` with all interview responses organised into ready-to-reference sections. Every content skill reads this profile.
 
 ---
 
-## After onboarding
+## Updating Profiles
 
-Once the profile exists, you can:
-
-1. **Run keyword research:** `/keyword-research` reads the profile for context
-2. **Generate content:** `/seo-content` matches the brand voice
-3. **Write emails:** `/email-sequences` uses CTAs and tone
-4. **Create social posts:** `/content-atomizer` maintains voice across platforms
-
-The profile is the foundation. Build it once, use it everywhere.
+- Re-run relevant sections with `/onboard-client` specifying `Update: [client-name]` and `Section: [section name]`
+- Triggers: new products/services, audience shifts, voice evolution, new competitors, changed goals
 
 ---
 
-## Updating profiles
+## Completeness Check
 
-Profiles aren't static. Update when:
-
-- You launch new products/services
-- Target audience shifts
-- Brand voice evolves
-- New competitors emerge
-- Goals change
-
-Just re-run relevant sections:
-
-```
-/onboard-client
-
-Update: [client-name]
-Section: Brand Voice
-
-[new information]
-```
-
----
-
-## The test
-
-A good profile answers these questions without needing to ask again:
-
-1. Who is this content for? (specific audience)
-2. What makes this company different? (positioning)
-3. How should this sound? (voice)
-4. What must we never say? (guardrails)
-5. What's the goal? (success metrics)
-
-If any answer is missing, the interview isn't complete.
+- A complete profile answers: who is this for, what makes them different, and how should it sound
+- If audience, positioning, or voice is missing, the interview isn't complete
+- Every content skill reads this profile; gaps here cascade into every piece of content

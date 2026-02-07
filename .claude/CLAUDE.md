@@ -227,7 +227,7 @@ Automatic: post-draft, post-enhancement, pre-publish. Manual: batch review (afte
 
 ## Agents
 
-Six agents handle automated workflows. Agents cannot spawn other agents; the main session orchestrates all spawning, retry loops, and commits. Agent files in `.claude/agents/`.
+Seven agents handle automated workflows (including Copy Fixer for validation retries). Agents cannot spawn other agents; the main session orchestrates all spawning, retry loops, and commits. Agent files in `.claude/agents/`.
 
 ---
 

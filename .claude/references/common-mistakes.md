@@ -15,20 +15,6 @@ When you spot a mistake appearing across multiple pieces of content:
 ### Template
 
 ```markdown
-### [Short descriptive name]
-
-**Pattern:** What to look for (example of the bad thing)
-
-**Why it fails:** Brief explanation of why this is a problem
-
-**Fix:** How to correct it (example of the good version)
-```
-
-### Template (Extracted from Issue)
-
-Use this template when extracting patterns from a GitHub Issue during pillar completion:
-
-```markdown
 ### [Short descriptive name] (Issue #{number})
 
 **Pattern:** What to look for (example of the bad thing)
@@ -37,10 +23,8 @@ Use this template when extracting patterns from a GitHub Issue during pillar com
 
 **Fix:** How to correct it (example of the good version)
 
-**Source:** {pillar name} — {count} occurrences
+**Source:** {pillar name} — {count} occurrences ← optional, include when extracted from a GitHub Issue
 ```
-
-The Issue number links back to the original error log for context.
 
 ---
 
@@ -152,7 +136,7 @@ Never skip step 2. It's where good content becomes great content.
 
 ## Agent Orchestration Patterns
 
-The following patterns relate to agent orchestration. See [Workflow Rules](workflow.md) for the complete guidelines.
+The following patterns relate to agent orchestration. See [Workflow Rules](../rules/workflow.md) for the complete guidelines.
 
 ---
 

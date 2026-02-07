@@ -18,21 +18,13 @@ The content workflow has 7 steps: 3 manual (require user decisions) and 4 agent-
 
 **Manual Steps (1-3):** Interactive skills that require user decisions. Run one at a time with user input.
 
-**Agent-Automated Steps (4-7):** Handled by the 4-agent system. Can run in parallel for multiple articles.
+**Agent-Automated Steps (4-7):** Handled by the 5-agent system. Can run in parallel for multiple articles.
 
 ---
 
 ## Critical Constraint: Agents Cannot Spawn Agents
 
-From Claude Code's architecture:
-
-> "Subagents cannot spawn other subagents. If your workflow requires nested delegation, use Skills or chain subagents from the main conversation."
-
-This means:
-- The **main session** orchestrates ALL agent spawning
-- Agents return PASS/FAIL to the main session
-- The main session decides what to spawn next
-- Retry loops are orchestrated by the main session, not agents
+Subagents cannot spawn other subagents. The main session orchestrates ALL agent spawning, receives PASS/FAIL results, decides what to spawn next, and runs all retry loops.
 
 ---
 
@@ -78,11 +70,9 @@ For full agent specifications, see the individual agent files in `.claude/agents
 
 - **SEO Writer:** returns `PASS, {file_path}`
 - **Copy Enhancer:** returns `PASS`
-- **Copy Fixer:** returns `PASS`
+- **Copy Fixer:** returns `PASS` or `FAIL: {reason}`
 - **Content Validator:** returns `PASS` or `FAIL, {fail_count}, {warn_count}, {validation_file_path}`
 - **Content Atomizer:** returns `PASS`
-
-**Why minimal returns:** Prevents main session context overflow during pillar execution (32+ articles). Full validation output goes to files, not return messages.
 
 ---
 

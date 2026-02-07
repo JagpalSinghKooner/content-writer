@@ -87,68 +87,28 @@ external_citations:
 ## Field Definitions
 
 ### Core Metadata
-
-| Field | Required | Description |
-|-------|----------|-------------|
-| title | Yes | Article H1, primary headline |
-| meta_title | Yes | SEO title for search results, max 60 chars |
-| meta_description | Yes | Search result snippet, 150-160 chars, include keyword |
-| slug | Yes | URL path, lowercase, hyphenated, include keyword |
-| author | Yes | Author name from client profile |
-| date | Yes | Publication date in YYYY-MM-DD format |
-| status | Yes | draft, review, or published |
-
+- **title** (required): Article H1, primary headline
+- **meta_title** (required): SEO title for search results, max 60 chars
+- **meta_description** (required): Search result snippet, 150-160 chars, include keyword
+- **slug** (required): URL path, lowercase, hyphenated, include keyword
+- **author** (required): Author name from client profile
+- **date** (required): Publication date in YYYY-MM-DD format
+- **status** (required): draft, review, or published
 ### Taxonomy
-
-| Field | Required | Description |
-|-------|----------|-------------|
-| categories | Yes | Primary content category (1-2) |
-| tags | No | Topic tags for filtering (3-5 recommended) |
-
+- **categories** (required): Primary content category (1-2)
+- **tags** (optional): Topic tags for filtering (3-5 recommended)
 ### SEO Metadata
-
-| Field | Required | Description |
-|-------|----------|-------------|
-| primary_keyword | Yes | Main target keyword for this article |
-| secondary_keywords_used | Yes | Related keywords naturally included |
-| keyword_density | Yes | Primary keyword density percentage |
-| word_count | Yes | Total word count of article body |
-
+- **primary_keyword** (required): Main target keyword for this article
+- **secondary_keywords_used** (required): Related keywords naturally included
+- **keyword_density** (required): Primary keyword density percentage
+- **word_count** (required): Total word count of article body
 ### Open Graph
-
-| Field | Required | Description |
-|-------|----------|-------------|
-| og_title | Yes | Social sharing title (can be more engaging than meta_title) |
-| og_description | Yes | Social sharing description |
-| og_image | No | Featured image URL for social cards |
-| canonical_url | No | Only if different from default URL |
-
+- **og_title** (required): Social sharing title (can be more engaging than meta_title)
+- **og_description** (required): Social sharing description
+- **og_image** (optional): Featured image URL for social cards
+- **canonical_url** (optional): Only if different from default URL
 ### Schema
-
-| Field | Required | Description |
-|-------|----------|-------------|
-| schema_type | Yes | Article, HowTo, FAQ, Product, or Review |
-
+- **schema_type** (required): Article, HowTo, FAQ, Product, or Review
 ### Links
-
-| Field | Required | Description |
-|-------|----------|-------------|
-| internal_links | Yes | Minimum 3, list with url and anchor text |
-| external_citations | Recommended | E-E-A-T sources with author, year, title, URL |
-
----
-
-## Validation Checklist
-
-Before publishing, verify:
-
-- [ ] All required frontmatter fields populated
-- [ ] meta_title under 60 characters
-- [ ] meta_description 150-160 characters
-- [ ] slug is lowercase, hyphenated, contains keyword
-- [ ] primary_keyword appears in first 150 words
-- [ ] Minimum 3 internal links with descriptive anchor text
-- [ ] External citations include author/org and year
-- [ ] word_count matches actual content
-- [ ] keyword_density between 1-2%
-- [ ] Table of contents included if 3000+ words
+- **internal_links** (required): Minimum 3, list with url and anchor text
+- **external_citations** (recommended): E-E-A-T sources with author, year, title, URL
