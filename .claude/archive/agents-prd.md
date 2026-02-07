@@ -1,6 +1,8 @@
+> **Archived:** This PRD served its purpose during initial agent development. The canonical agent specifications now live in .claude/agents/. This file is kept for historical reference only.
+
 # Agents PRD: A*-Level Sub-Agent System
 
-**Status:** Ready for Implementation
+**Status:** Archived
 **Created:** 2026-02-03
 **Updated:** 2026-02-03
 **Purpose:** Complete reference document for implementing the content generation agent system

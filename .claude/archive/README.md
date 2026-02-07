@@ -2,7 +2,7 @@
 
 This folder contains files that have been superseded by the Claude Code agent files approach.
 
-**Superseded by:** [agents-prd.md](../agents-prd.md)
+**Superseded by:** Individual agent files in `.claude/agents/`
 
 ---
 

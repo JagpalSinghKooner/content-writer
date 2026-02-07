@@ -66,7 +66,7 @@ Articles are grouped into tiers by internal linking dependencies: Tier 1 (no dep
 
 ## Agent Reference
 
-For full agent specifications, see [agents-prd.md](../agents-prd.md).
+For full agent specifications, see the individual agent files in `.claude/agents/`.
 
 - **SEO Writer** (`seo-writer.md`): Write articles with E-E-A-T research. Tools: Read, Glob, Grep, Write
 - **Copy Enhancer** (`copy-enhancer.md`): Add persuasion + fix validation issues. Tools: Read, Edit

@@ -368,17 +368,22 @@
 8. Commit
 
 **Acceptance Criteria:**
-- [ ] `agents-prd.md` moved to `.claude/archive/agents-prd.md`
-- [ ] Archival note added at top of moved file
-- [ ] `CLAUDE.md` reference updated
-- [ ] `workflow.md` agent reference updated (if applicable)
-- [ ] No broken references to `agents-prd.md` anywhere in `.claude/`
-- [ ] Git commit created
+- [x] `agents-prd.md` moved to `.claude/archive/agents-prd.md`
+- [x] Archival note added at top of moved file
+- [x] `CLAUDE.md` reference updated
+- [x] `workflow.md` agent reference updated (if applicable)
+- [x] No broken references to `agents-prd.md` anywhere in `.claude/`
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read TASKS.md Task 65 for steps. Move `.claude/agents-prd.md` to `.claude/archive/agents-prd.md` with archival note. Update references in `CLAUDE.md` and `workflow.md`. Grep for any remaining references. Commit.
 
-**Status:** pending
+**Status:** PASS
+
+**Handoff:**
+- **Done:** Moved `agents-prd.md` (948 lines) to `.claude/archive/agents-prd.md` with archival note. Updated 3 references: `CLAUDE.md` (removed PRD link), `workflow.md` (pointed to agent files), `archive/README.md` (pointed to agent files). Self-references inside the archived file left as-is.
+- **Decisions:** Only active-file references were updated. The archived PRD's internal self-references were intentionally left unchanged since the file is historical reference only.
+- **Next:** Task 66 (multi-client path isolation) is independent and ready to run.
 
 ---
 
