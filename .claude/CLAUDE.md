@@ -251,27 +251,7 @@ Follow the 7-step workflow: keyword research → start pillar → positioning �
 
 ### File Naming Conventions
 
-- Keyword brief: `00-keyword-brief.md`
-- Pillar brief: `01-pillar-brief.md`
-- Positioning: `02-positioning.md`
-- Supporting articles: `{nn}-{slug}.md` (e.g. `01-beginners-guide-what-is-seo.md`)
-- Pillar guide: `{nn}-{slug}.md` with highest number (e.g. `11-complete-guide-ai-marketing-strategy.md`)
-- Distribution: `distribution/{slug}/{platform}.md` (e.g. `distribution/beginners-guide-what-is-seo/linkedin.md`)
-
-**Article Numbering:**
-
-1. **Supporting articles** numbered `01`, `02`, `03`... in priority/publishing order
-2. **Pillar guide** always gets the **highest number** (publishes last)
-3. **Example:** 10 supporting articles + pillar guide = articles `01`-`10`, pillar guide is `11-{slug}.md`
-
-The pillar guide publishes last because it links to all supporting articles.
-
-**Slug Rules:**
-- Lowercase only
-- Hyphens between words (no underscores or spaces)
-- Descriptive-first format: `{context}-{keyword}` (not keyword-only)
-- Max 50 characters
-- No stop words unless essential for meaning
+Supporting articles: `{nn}-{slug}.md` numbered in priority order. Pillar guide gets the highest number (publishes last). See [File Naming Conventions](references/file-naming-conventions.md) for full naming rules, slug format, and distribution paths.
 
 ### Pillar-First Execution
 
@@ -282,88 +262,11 @@ Complete ALL articles for one pillar before moving to the next. This ensures:
 
 ### Internal Linking Strategy
 
-Internal links are added at different times depending on link type:
-
-- **Links TO pillar guide:** Add after pillar guide is published. Go back and update all supporting articles.
-- **Links BETWEEN supporting articles:** Add during writing if target exists, or after both are published. Use placeholder if target doesn't exist yet.
-- **Links FROM pillar guide:** Add during pillar guide writing. All supporting articles exist at this point.
-- **Links FROM outside pillar:** Add after pillar is complete (cross-pillar linking pass).
-
-**Placeholder Convention:**
-
-When referencing an article that doesn't exist yet, use this placeholder:
-
-```html
-<!-- LINK NEEDED: [slug] when published -->
-```
-
-**Example:** Writing article 01 and want to reference article 05:
-
-```markdown
-For advanced techniques, see our guide on automation workflows<!-- LINK NEEDED: 05-automation-workflows when published -->.
-```
-
-**Post-Pillar Linking Pass:**
-
-After the pillar guide is published, run a linking pass:
-1. Replace all `<!-- LINK NEEDED: ... -->` placeholders with actual links
-2. Add links TO the pillar guide from all supporting articles
-3. Update frontmatter `internal_links` arrays
-4. Verify no broken links remain
-
-#### Cross-Pillar Linking
-
-Cross-pillar links connect related content across different topic clusters. Use them sparingly—each article should primarily link within its own pillar.
-
-**When to Cross-Link:**
-
-- Topics naturally overlap (e.g. AI marketing tools article links to automation pillar guide)
-- Article mentions a concept from another pillar (e.g. SEO article references email marketing best practices)
-- Supporting article could benefit from a related pillar guide (e.g. how-to article links to guide in adjacent topic)
-
-**Cross-Pillar Linking Pass:**
-
-After completing the current pillar:
-1. Review other completed pillars for linking opportunities
-2. Add 1-2 cross-pillar links maximum per article (more dilutes internal link equity)
-3. Update frontmatter `internal_links` arrays with new cross-pillar links
-4. Use anchor text that clarifies the pillar context (not just generic keywords)
-
-**Anchor Text for Cross-Pillar Links:**
-
-- Good: "our guide to building email sequences" (clarifies different topic)
-- Good: "the automation workflow pillar" (explicitly names the pillar)
-- Bad: "click here" (no context)
-- Bad: "marketing" (too generic)
-
-**Don't Over-Link:**
-
-- Each article primarily links within its own pillar (maintains topical authority)
-- Cross-pillar links are supplementary, not primary
-- If you're adding more than 2 cross-pillar links, reconsider
+Use `<!-- LINK NEEDED: [slug] when published -->` for articles that don't exist yet. After pillar guide publishes, run a linking pass to replace all placeholders, add links TO the pillar guide, and update frontmatter. Cross-pillar: max 1-2 links per article. See [Internal Linking Strategy](references/internal-linking-strategy.md) for full rules, placeholder syntax, and cross-pillar guidelines.
 
 ### Validation Checkpoints
 
-Content validation happens at specific points in the workflow. Some checkpoints are automatic (run every time), others are manual (run on request).
-
-- **Post-draft** (Automatic): After `/seo-content`, validate full article against universal rules
-- **Post-enhancement** (Automatic): After `/direct-response-copy`, validate full article + brand voice alignment
-- **Pre-publish** (Automatic): Before changing status to "published", run final validation (all checks)
-- **Batch review** (Manual): After pillar complete, review all pillar articles for cross-article consistency
-- **Spot check** (Manual): When issues suspected, validate specific content on request
-
-**Automatic Checkpoints:**
-
-These run without being asked:
-- **Post-draft:** Catches AI fingerprints and rule violations early, before enhancement work
-- **Post-enhancement:** Ensures direct-response-copy changes didn't introduce issues
-- **Pre-publish:** Final gate before content goes live
-
-**Manual Checkpoints:**
-
-These run when explicitly requested:
-- **Batch review:** After completing a pillar, review all articles together for consistency, contradictions, and cross-linking
-- **Spot check:** When client feedback suggests issues, when revisiting old content, or when quality is questioned
+Automatic: post-draft, post-enhancement, pre-publish. Manual: batch review (after pillar), spot check (on request). See [Validation Checkpoints](references/validation-checkpoints.md) for details.
 
 ---
 

@@ -5,7 +5,7 @@
 | Task | Status |
 |------|--------|
 | **CLAUDE.md Slim (plan: giggly-doodling-otter.md)** | |
-| Task 55: Move Phase 2 reference sections to `references/` | pending |
+| Task 55: Move Phase 2 reference sections to `references/` | PASS |
 | Task 56: Condense Rules 1-3 and Task Tracking in-place | pending |
 | Task 57: Final verification of CLAUDE.md slim | pending |
 
@@ -54,7 +54,14 @@ Full plan documented in `~/.claude/plans/giggly-doodling-otter.md`. Goal: reduce
 **Starter Prompt:**
 > Read TASKS.md Task 55 for full context. Read `.claude/CLAUDE.md` in full. Extract 3 sections: File Naming Conventions, Internal Linking Strategy + Cross-Pillar Linking, and Validation Checkpoints into new reference files in `.claude/references/`. Replace with compact pointers. Keep Pillar-First Execution in CLAUDE.md. Verify with grep and wc -l. Commit.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Extracted File Naming Conventions, Internal Linking Strategy + Cross-Pillar Linking, and Validation Checkpoints into 3 new files in `.claude/references/`. Replaced with compact pointers in CLAUDE.md. Pillar-First Execution kept intact.
+- **Decisions:** Pointers preserve key syntax (`LINK NEEDED` placeholder, `{nn}-{slug}` pattern) and checkpoint names inline so the main session has enough context without loading reference files.
+- **Next:** Task 56 condenses Rules 1-3 and Task Tracking in-place. CLAUDE.md is now 289 lines (down from 387).
 
 ---
 
