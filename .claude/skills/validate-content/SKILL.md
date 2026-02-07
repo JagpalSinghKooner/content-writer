@@ -5,14 +5,6 @@ description: "Check content against universal rules and client profile, outputti
 
 # Content Validation Workflow
 
-Every piece of content gets validated before publishing. No exceptions.
-
-This skill checks content against universal rules (UK English, banned AI words, SEO requirements) and client-specific rules (brand voice, terminology, avoided topics). It outputs a clear PASS/FAIL verdict with line-specific issues that can be fixed.
-
-The goal: Catch AI fingerprints and quality issues before they reach readers.
-
----
-
 ## The core job
 
 Validate content against all rules and output:
@@ -35,36 +27,9 @@ If no client profile provided, validation runs against universal rules only.
 
 ---
 
-## When to Run Validation
+## When to validate
 
-Validation runs at specific points in the content workflow. Missing a checkpoint risks publishing content with issues.
-
-### Mandatory Triggers
-
-These checkpoints are non-negotiable:
-
-| Trigger | When | Why |
-|---------|------|-----|
-| After `/seo-content` | Every article draft | Catch AI fingerprints and rule violations before enhancement |
-| After `/direct-response-copy` | Every enhanced article | Ensure conversion edits didn't introduce banned words or break voice |
-| Before publishing | Every piece of content | Final gate before readers see it |
-
-### Recommended Triggers
-
-These improve quality but aren't strictly required:
-
-| Trigger | When | Why |
-|---------|------|-----|
-| After completing pillar | All pillar articles written | Check cross-article consistency, contradictions, and linking |
-| When revisiting old content | Updating existing articles | Older content may not meet current standards |
-| When client feedback suggests issues | Quality concerns raised | Targeted validation to identify specific problems |
-| After batch edits | Multiple articles updated at once | Ensure consistency wasn't broken |
-
-### Automatic vs Manual
-
-**Automatic checkpoints** (Post-draft, Post-enhancement, Pre-publish) run as part of the standard workflow—you don't need to ask for them.
-
-**Manual checkpoints** (Batch review, Spot checks) run when explicitly requested. Use `/validate-content` to trigger these.
+Run validation after `/seo-content`, after `/direct-response-copy`, and before publishing. These three checkpoints are mandatory. Optional: after completing a pillar, when revisiting old content, after batch edits.
 
 ---
 
@@ -338,12 +303,9 @@ Grade Level = 0.39 × (total words / total sentences) + 11.8 × (total syllables
 ```
 
 **Target Ranges:**
-
-| Content Type | Target Grade | Description |
-|--------------|--------------|-------------|
-| General blog | 6-8 | Easy to read, wide audience |
-| B2B content | 8-10 | Professional but accessible |
-| Technical | 10-12 | Expert audience acceptable |
+- General blog: Grade 6-8 (easy to read, wide audience)
+- B2B content: Grade 8-10 (professional but accessible)
+- Technical: Grade 10-12 (expert audience acceptable)
 
 **Output format:**
 ```
@@ -361,16 +323,13 @@ Reading Ease = 206.835 - 1.015 × (total words / total sentences) - 84.6 × (tot
 ```
 
 **Score Interpretation:**
-
-| Score | Readability |
-|-------|-------------|
-| 90-100 | Very Easy (5th grade) |
-| 80-89 | Easy (6th grade) |
-| 70-79 | Fairly Easy (7th grade) |
-| 60-69 | Standard (8th-9th grade) |
-| 50-59 | Fairly Difficult (10th-12th grade) |
-| 30-49 | Difficult (College) |
-| 0-29 | Very Difficult (College graduate) |
+- 90-100: Very Easy (5th grade)
+- 80-89: Easy (6th grade)
+- 70-79: Fairly Easy (7th grade)
+- 60-69: Standard (8th-9th grade)
+- 50-59: Fairly Difficult (10th-12th grade)
+- 30-49: Difficult (College)
+- 0-29: Very Difficult (College graduate)
 
 **Target:** Most SEO content should score 60-70 (Standard readability).
 
@@ -399,16 +358,10 @@ WARN: All sentences between 18-22 words — add variety (some short, some longer
 
 Include a readability summary in the validation output:
 
-```
-### Readability Metrics
-
-| Metric | Score | Target | Status |
-|--------|-------|--------|--------|
-| Flesch-Kincaid Grade | 7.2 | 6-8 | ✓ |
-| Flesch Reading Ease | 65 | 60-70 | ✓ |
-| Avg Sentence Length | 16 words | <20 | ✓ |
-| Longest Sentence | 34 words | <40 | ✓ |
-```
+- Flesch-Kincaid Grade: [score] (target: [range]) [status]
+- Flesch Reading Ease: [score] (target: 60-70) [status]
+- Avg Sentence Length: [words] (target: <20) [status]
+- Longest Sentence: [words] (target: <40) [status]
 
 ---
 
@@ -491,27 +444,22 @@ Not all content types require the same validation. This phase determines which r
 
 Before validating, identify the content type:
 
-| Content Type | Indicators |
-|--------------|------------|
-| **Article** | In `/articles/` folder, has SEO frontmatter, 1,500+ words |
-| **Email** | In email sequence file, has subject line, part of sequence |
-| **Newsletter** | In newsletter folder, has hook/body/CTA structure |
-| **Lead Magnet** | Conceptual document, bridge to paid offer |
-| **Distribution** | In `/distribution/` folder, platform-specific format |
+- **Article** — In `/articles/` folder, has SEO frontmatter, 1,500+ words
+- **Email** — In email sequence file, has subject line, part of sequence
+- **Newsletter** — In newsletter folder, has hook/body/CTA structure
+- **Lead Magnet** — Conceptual document, bridge to paid offer
+- **Distribution** — In `/distribution/` folder, platform-specific format
 
 ### 7.2 Email Sequences
 
 Applicable rules: see `universal-rules.md` Scope section (Emails column). Skip SEO, Pillar Consistency, External Citations.
 
 **Additional Checks for Emails:**
-
-| Check | Requirement | FAIL/WARN |
-|-------|-------------|-----------|
-| Subject line length | Under 50 characters | WARN |
-| Preview text | Present and under 90 characters | WARN |
-| CTA count | One primary CTA per email | FAIL if multiple competing CTAs |
-| CTA clarity | Clear, specific action | WARN if vague |
-| Personalisation | Uses subscriber name/context where appropriate | WARN |
+- Subject line length: under 50 characters (WARN)
+- Preview text: present and under 90 characters (WARN)
+- CTA count: one primary CTA per email (FAIL if multiple competing CTAs)
+- CTA clarity: clear, specific action (WARN)
+- Personalisation: uses subscriber name/context where appropriate (WARN)
 
 **Output format:**
 ```
@@ -526,24 +474,18 @@ FAIL: Email has 3 different CTAs → use one primary CTA
 Applicable rules: see `universal-rules.md` Scope section (Newsletters column). Skip SEO, Pillar Consistency.
 
 **Additional Checks for Newsletters:**
-
-| Check | Requirement | FAIL/WARN |
-|-------|-------------|-----------|
-| Hook present | Opening grabs attention in first 2 sentences | FAIL |
-| Scannable format | Uses headers, bullets, or bold for scanning | WARN |
-| CTA present | At least one CTA (can be soft) | WARN |
-| Value delivery | Provides standalone value before any pitch | WARN |
-| Length appropriate | Matches newsletter format (see below) | WARN |
+- Hook present: opening grabs attention in first 2 sentences (FAIL)
+- Scannable format: uses headers, bullets, or bold for scanning (WARN)
+- CTA present: at least one CTA, can be soft (WARN)
+- Value delivery: provides standalone value before any pitch (WARN)
+- Length appropriate: matches newsletter format (WARN)
 
 **Format-Specific Length Guidelines:**
-
-| Newsletter Format | Target Length |
-|-------------------|---------------|
-| Deep-Dive | 1,000-2,000 words |
-| News Briefing | 500-800 words |
-| Curated Links | 300-600 words + links |
-| Personal Essay | 800-1,500 words |
-| Roundup | 600-1,200 words |
+- Deep-Dive: 1,000-2,000 words
+- News Briefing: 500-800 words
+- Curated Links: 300-600 words + links
+- Personal Essay: 800-1,500 words
+- Roundup: 600-1,200 words
 
 **Output format:**
 ```
@@ -558,13 +500,10 @@ WARN: No CTA — add at least a soft CTA (reply, share, follow)
 Lead magnet concepts are validated lightly since they're planning documents, not final content. Applicable rules: see `universal-rules.md` Scope section (Lead Magnets column). Only UK English and Brand Voice apply.
 
 **Additional Checks for Lead Magnets:**
-
-| Check | Requirement | FAIL/WARN |
-|-------|-------------|-----------|
-| Bridge to paid offer | Clear connection to what you're selling | FAIL |
-| Quick win defined | Specific transformation promise | WARN |
-| Hook clarity | Why someone would download is clear | WARN |
-| Format appropriate | Format matches audience and topic | WARN |
+- Bridge to paid offer: clear connection to what you're selling (FAIL)
+- Quick win defined: specific transformation promise (WARN)
+- Hook clarity: why someone would download is clear (WARN)
+- Format appropriate: format matches audience and topic (WARN)
 
 **Output format:**
 ```
@@ -579,24 +518,18 @@ WARN: Hook unclear — why would someone download this? → sharpen the promise
 Applicable rules: see `universal-rules.md` Scope section (Distribution column). Skip Banned Phrases, AI Patterns, SEO, Pillar Consistency, External Citations.
 
 **Additional Checks for Distribution:**
-
-| Check | Requirement | FAIL/WARN |
-|-------|-------------|-----------|
-| Hook in first line | Opening line stops the scroll | FAIL |
-| Platform-appropriate length | Matches platform specs | WARN |
-| Source article referenced | Links back or references original | WARN |
-| CTA appropriate | Platform-appropriate action | WARN |
+- Hook in first line: opening line stops the scroll (FAIL)
+- Platform-appropriate length: matches platform specs (WARN)
+- Source article referenced: links back or references original (WARN)
+- CTA appropriate: platform-appropriate action (WARN)
 
 **Platform Length Guidelines:**
-
-| Platform | Format | Max Length |
-|----------|--------|------------|
-| LinkedIn | Text post | 3,000 characters |
-| LinkedIn | Carousel | 10 slides, 200 chars/slide |
-| Twitter/X | Single | 280 characters |
-| Twitter/X | Thread | 15 tweets max |
-| Instagram | Caption | 2,200 characters |
-| Instagram | Carousel | 10 slides |
+- LinkedIn text post: 3,000 characters
+- LinkedIn carousel: 10 slides, 200 chars/slide
+- Twitter/X single: 280 characters
+- Twitter/X thread: 15 tweets max
+- Instagram caption: 2,200 characters
+- Instagram carousel: 10 slides
 
 **Output format:**
 ```
@@ -608,17 +541,17 @@ WARN: No reference to source article → add link or mention
 
 ### 7.6 Content Type Quick Reference
 
-Use this table to quickly identify which phases to run:
+Which phases to run per content type:
 
-| Phase | Articles | Emails | Newsletters | Lead Magnets | Distribution |
-|-------|:--------:|:------:|:-----------:|:------------:|:------------:|
-| 1. Universal Rules | Full | Partial | Partial | Minimal | Partial |
-| 2. Client Profile | Full | Full | Full | Partial | Full |
-| 3. Human Quality | Full | Full | Full | Skip | Partial |
-| 4. Schema | Full | Skip | Skip | Skip | Partial |
-| 5. Readability | Full | Skip | Optional | Skip | Skip |
-| 6. Pillar Consistency | Full | Skip | Skip | Skip | Skip |
-| 7. Content Type | Skip | Email | Newsletter | Lead Magnet | Distribution |
+**Articles:** All phases (1-6 full).
+
+**Emails:** Phase 1 partial (UK English, Banned Words, Banned Phrases, AI Patterns, Em Dashes), Phase 2 full, Phase 3 full, Phase 7 Email checks. Skip: SEO, Schema, Readability, Pillar Consistency.
+
+**Newsletters:** Phase 1 partial (UK English, Banned Words, Banned Phrases, AI Patterns, Em Dashes), Phase 2 full, Phase 3 full, Phase 5 optional, Phase 7 Newsletter checks. Skip: SEO, Schema, Pillar Consistency.
+
+**Lead Magnets:** Phase 1 minimal (UK English, Em Dashes only), Phase 2 partial, Phase 7 Lead Magnet checks. Skip: Banned Words/Phrases, AI Patterns, SEO, Schema, Readability, Human Quality, Pillar Consistency.
+
+**Distribution:** Phase 1 partial (UK English, Banned Words, Em Dashes), Phase 2 full, Phase 3 partial, Phase 4 partial, Phase 7 Distribution checks. Skip: Banned Phrases, AI Patterns, Readability, Pillar Consistency.
 
 ---
 
@@ -640,9 +573,8 @@ After all phases, output the validation result:
 
 1. **Line 23:** "color" - US spelling → use "colour"
 2. **Line 45:** "leverage" - banned AI word → use "use" or rephrase
-3. **Line 67:** "In today's digital age" - banned AI phrase → rewrite opening
-4. **Missing:** Primary keyword not in first 150 words → add to opening
-5. **Structure:** Word count is 1,234 → add 266+ words to reach 1,500 minimum
+3. **Missing:** Primary keyword not in first 150 words → add to opening
+4. **Structure:** Word count is 1,234 → add 266+ words to reach 1,500 minimum
 
 ---
 
@@ -651,7 +583,6 @@ After all phases, output the validation result:
 1. **Line 89:** No contraction used → "it is" could be "it's"
 2. **Lines 45-67:** 4 consecutive sentences start with "The" → vary openers
 3. **Voice:** No author opinions expressed → add perspective
-4. **Examples:** All examples generic → add specific named examples
 
 ---
 
@@ -679,18 +610,16 @@ After all phases, output the validation result:
 
 ### Readability Metrics
 
-| Metric | Score | Target | Status |
-|--------|-------|--------|--------|
-| Flesch-Kincaid Grade | 7.2 | 6-8 | ✓ |
-| Flesch Reading Ease | 65 | 60-70 | ✓ |
-| Avg Sentence Length | 16 words | <20 | ✓ |
-| Longest Sentence | 34 words | <40 | ✓ |
+- Flesch-Kincaid Grade: [score] (target: [range]) [status]
+- Flesch Reading Ease: [score] (target: 60-70) [status]
+- Avg Sentence Length: [words] (target: <20) [status]
+- Longest Sentence: [words] (target: <40) [status]
 
 ---
 
 ### Pillar Consistency
 
-- [x] Article aligns with assigned angle "Speed + Simplicity"
+- [x] Article aligns with assigned angle
 - [x] Internal links reference pillar articles
 - [x] Messaging consistent with positioning.md
 - [x] No contradictions with other pillar content
@@ -700,16 +629,6 @@ After all phases, output the validation result:
 ### Suggested Pattern for common-mistakes.md
 
 *Only shown if same issue appears 3+ times across content*
-
-```markdown
-### [Issue Name]
-
-**Pattern:** [What to look for]
-
-**Why it fails:** [Explanation]
-
-**Fix:** [How to correct]
-```
 ```
 
 ---
@@ -737,33 +656,15 @@ If auto-retry fails:
 
 ### Pattern Suggestion
 
-If the same issue appears 3+ times in content (or across multiple pieces):
-
-1. Suggest addition to `.claude/references/common-mistakes.md`
-2. Use the template format from that file
-3. Human approves/rejects addition
-4. Future content avoids the pattern
+If the same issue appears 3+ times in content (or across multiple pieces), suggest addition to `.claude/references/common-mistakes.md`.
 
 ---
 
-## How this connects to other skills
+## Skill connections
 
-**Input from:**
-- **direct-response-copy** → Provides `04-final.md` to validate
-
-**Output to:**
-- **PASS** → Content ready to publish
-- **FAIL** → Back to direct-response-copy for fixes
-
-**Feeds:**
-- **common-mistakes.md** → Pattern suggestions when recurring issues detected
-
-**The flow:**
-```
-04-final.md → validate-content → PASS → publish
-                              → FAIL → fix → re-validate
-                                     → still FAIL → human review
-```
+**Input from:** `/direct-response-copy` provides article to validate
+**Output to:** PASS → publish, FAIL → back for fixes
+**Feeds:** `common-mistakes.md` with recurring patterns
 
 ---
 
@@ -771,97 +672,63 @@ If the same issue appears 3+ times in content (or across multiple pieces):
 
 ### Automatic FAIL (must fix)
 
-| Category | Issue | Applies To |
-|----------|-------|------------|
-| UK English | Any US spelling | All content types |
-| AI Words | Any of 53 banned words | Articles, Emails, Newsletters, Distribution |
-| AI Phrases | Any banned phrase | Articles, Emails, Newsletters |
-| AI Patterns | Repetitive starts, rule of threes, hedging overload | Articles, Emails, Newsletters |
-| SEO | Missing keyword placement, under 1,500 words, bad meta data | Articles only |
-| SEO | Multiple H1s, no internal links | Articles only |
-| Client | Wrong terminology, avoided words/topics | All content types |
-| Schema | Missing required frontmatter fields | Articles only |
-| Schema | Invalid slug format (uppercase, underscores, too long, missing keyword) | Articles only |
-| Schema | word_count or keyword_density mismatch with content | Articles only |
-| Readability | Flesch-Kincaid Grade > 14 (too complex) | Articles only |
-| Readability | Sentence over 40 words | Articles only |
-| Pillar | Article contradicts other pillar content | Articles only |
-| Pillar | No internal links to pillar articles | Articles only |
-| Emails | Multiple competing CTAs in single email | Emails only |
-| Newsletters | No hook in first 2 sentences | Newsletters only |
-| Lead Magnets | No bridge to paid offer | Lead Magnets only |
-| Distribution | No hook in first line | Distribution only |
+- UK English: Any US spelling (All content types)
+- AI Words: Any of 53 banned words (Articles, Emails, Newsletters, Distribution)
+- AI Phrases: Any banned phrase (Articles, Emails, Newsletters)
+- AI Patterns: Repetitive starts, rule of threes, hedging overload (Articles, Emails, Newsletters)
+- SEO: Missing keyword placement, under 1,500 words, bad meta data (Articles only)
+- SEO: Multiple H1s, no internal links (Articles only)
+- Client: Wrong terminology, avoided words/topics (All content types)
+- Schema: Missing required frontmatter fields (Articles only)
+- Schema: Invalid slug format (uppercase, underscores, too long, missing keyword) (Articles only)
+- Schema: word_count or keyword_density mismatch with content (Articles only)
+- Readability: Flesch-Kincaid Grade > 14 (too complex) (Articles only)
+- Readability: Sentence over 40 words (Articles only)
+- Pillar: Article contradicts other pillar content (Articles only)
+- Pillar: No internal links to pillar articles (Articles only)
+- Emails: Multiple competing CTAs in single email (Emails only)
+- Newsletters: No hook in first 2 sentences (Newsletters only)
+- Lead Magnets: No bridge to paid offer (Lead Magnets only)
+- Distribution: No hook in first line (Distribution only)
 
 ### Automatic WARN (should fix)
 
-| Category | Issue | Applies To |
-|----------|-------|------------|
-| Contractions | Formal "it is" instead of "it's" | All content types |
-| Rhythm | Monotonous sentence length | Articles, Emails, Newsletters |
-| Voice | No personal opinions | Articles, Newsletters |
-| Examples | Generic instead of specific | Articles, Newsletters |
-| Voice | Passive voice overuse | Articles, Emails |
-| Schema | Missing external_citations (recommended for E-E-A-T) | Articles only |
-| Readability | Flesch-Kincaid Grade 10-14 (consider simplifying) | Articles only |
-| Readability | Average sentence length > 20 words | Articles only |
-| Pillar | Angle emphasis differs from positioning.md | Articles only |
-| Pillar | Links to content outside pillar | Articles only |
-| Emails | Subject line over 50 characters | Emails only |
-| Emails | No preview text | Emails only |
-| Newsletters | No scannable formatting (headers, bullets) | Newsletters only |
-| Newsletters | No CTA present | Newsletters only |
-| Lead Magnets | Quick win vague or missing | Lead Magnets only |
-| Distribution | Platform length exceeded | Distribution only |
-| Distribution | No reference to source article | Distribution only |
-
----
-
-## The test
-
-Before marking validation complete, verify:
-
-1. **All FAIL issues have line numbers and specific fixes**
-2. **WARN issues are genuinely optional improvements**
-3. **SEO checklist is accurate (counts verified)**
-4. **Client profile rules were checked (if provided)**
-5. **Human quality assessment completed**
-6. **Schema validation completed (all frontmatter fields checked)**
-7. **Slug format validated (lowercase, hyphenated, keyword present, under 50 chars)**
-8. **SEO metrics verified (word_count and keyword_density match actual content)**
-9. **Readability metrics calculated and reported (Flesch-Kincaid scores)**
-10. **Pillar consistency checked (if positioning.md exists)**
-11. **Content type variations applied (emails, newsletters, lead magnets, distribution)**
-12. **Auto-retry workflow triggered if FAIL**
-
-A good validation catches issues before readers do. A great validation explains exactly how to fix them.
+- Contractions: Formal "it is" instead of "it's" (All content types)
+- Rhythm: Monotonous sentence length (Articles, Emails, Newsletters)
+- Voice: No personal opinions (Articles, Newsletters)
+- Examples: Generic instead of specific (Articles, Newsletters)
+- Voice: Passive voice overuse (Articles, Emails)
+- Schema: Missing external_citations (recommended for E-E-A-T) (Articles only)
+- Readability: Flesch-Kincaid Grade 10-14 (consider simplifying) (Articles only)
+- Readability: Average sentence length > 20 words (Articles only)
+- Pillar: Angle emphasis differs from positioning.md (Articles only)
+- Pillar: Links to content outside pillar (Articles only)
+- Emails: Subject line over 50 characters (Emails only)
+- Emails: No preview text (Emails only)
+- Newsletters: No scannable formatting (headers, bullets) (Newsletters only)
+- Newsletters: No CTA present (Newsletters only)
+- Lead Magnets: Quick win vague or missing (Lead Magnets only)
+- Distribution: Platform length exceeded (Distribution only)
+- Distribution: No reference to source article (Distribution only)
 
 ---
 
 ## Non-Interactive Mode
 
-When invoked by an agent (see [Workflow Rules](../../rules/workflow.md)), this skill runs in non-interactive mode.
+When invoked by an agent (see `rules/workflow.md`), this skill runs in non-interactive mode.
 
 ### What Changes
 
-| Behaviour | Interactive | Non-Interactive |
-|-----------|-------------|-----------------|
-| Clarifying questions | Asked when needed | Never asked |
-| Confirmation requests | May ask "Continue?" | Proceeds without confirmation |
-| Summary output | May abbreviate for clarity | FULL output required |
-| User suggestions | May recommend actions | Returns data only |
+- **Clarifying questions:** Never asked (proceeds without)
+- **Confirmation requests:** Proceeds without confirmation
+- **Summary output:** FULL output required (never abbreviated)
+- **User suggestions:** Returns data only (no action recommendations)
 
 ### Critical: Full Output Required
 
-**In non-interactive mode, return the COMPLETE validation output. Do not abbreviate.**
+In non-interactive mode, return the COMPLETE validation output as defined in the Output Format section above. Do not abbreviate.
 
-The main session needs:
-- Every FAIL issue with line numbers and specific fixes
-- Every WARN issue with suggestions
-- Full SEO checklist with actual values
-- Complete readability metrics table
-- Brand voice alignment assessment
-
-**Why:** The main session uses this output to decide whether to retry, escalate, or proceed. Abbreviated output forces re-validation or direct file reading, defeating sub-agent isolation.
+The main session needs every FAIL issue with line numbers, every WARN issue, full SEO checklist, complete readability metrics, and brand voice assessment. Abbreviated output forces re-validation, defeating sub-agent isolation.
 
 ### Requirements for Non-Interactive
 
@@ -872,71 +739,9 @@ The sub-agent prompt must include:
 - [ ] Primary keyword (for SEO checks)
 - [ ] Content type (Article/Email/Newsletter/Distribution)
 
-### Return Format
-
-In non-interactive mode, return the FULL validation output format:
-
-```
-## Validation Result: [PASS/FAIL]
-
-**Article:** [filename]
-**Primary Keyword:** [keyword]
-**Word Count:** [actual count]
-**Client Profile:** [path]
-
----
-
-### FAIL Issues (must fix before publishing)
-
-[Every FAIL issue with line number and fix]
-
----
-
-### WARN Issues (should fix for quality)
-
-[Every WARN issue with suggestion]
-
----
-
-### SEO Checklist
-
-[Full checklist with actual values]
-
----
-
-### Schema Validation
-
-[Full schema check results]
-
----
-
-### Readability Metrics
-
-[Complete metrics table]
-
----
-
-### Brand Voice
-
-- Aligned: Yes | No
-- Tone Match: [assessment]
-- Terminology: [any violations]
-- Notes: [any concerns]
-
----
-
-### Pillar Consistency (if checked)
-
-[Full pillar consistency results]
-```
-
 ### Missing Context Handling
 
-If required context is missing:
-
-1. Return FAIL status immediately
-2. List missing context in the Issues section
-3. Do NOT attempt to guess or validate partially
+If required context is missing, return FAIL immediately with missing context listed in the Issues section. Do NOT attempt to guess or validate partially.
 
 Example:
 ```
@@ -949,8 +754,8 @@ Example:
 
 ### FAIL Issues
 
-1. **Missing Context:** Client profile not found at provided path — cannot validate brand voice
-2. **Missing Context:** Primary keyword not provided — cannot validate SEO requirements
+1. **Missing Context:** Client profile not found at provided path
+2. **Missing Context:** Primary keyword not provided
 
 ---
 
