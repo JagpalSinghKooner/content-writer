@@ -1,6 +1,6 @@
 ---
 name: execute-pillar
-description: "Execute full pillar content generation workflow. Use when ready to generate all articles for a pillar after positioning is complete. Orchestrates seo-writer, copy-enhancer, content-validator, and content-atomizer agents in tier-based parallel execution. Triggers on: execute pillar, run pillar, generate pillar content, /execute-pillar. Outputs: Complete pillar with articles, distribution content, and PR."
+description: "Execute full pillar content generation workflow. Use when ready to generate all articles for a pillar after positioning is complete. Orchestrates seo-writer, copy-enhancer, copy-fixer, content-validator, and content-atomizer agents in tier-based parallel execution. Triggers on: execute pillar, run pillar, generate pillar content, /execute-pillar. Outputs: Complete pillar with articles, distribution content, and PR."
 ---
 
 # Execute Pillar
@@ -63,39 +63,9 @@ Before executing, read the Production Queue table in `00-keyword-brief.md` and v
 1. **Target pillar status:** Must be `🎯 Positioned` to execute
 2. **Previous pillars:** All earlier priorities should be `✅ Complete` (pillars are designed to build on each other)
 
-**Status Values:**
+**Status values:** ⏳ Pending (no brief) → 📋 Brief (no positioning) → 🎯 Positioned (ready) → 🔄 In Progress → ✅ Complete
 
-| Status | Meaning | Can Execute? |
-|--------|---------|--------------|
-| ⏳ Pending | No pillar brief yet | ❌ No |
-| 📋 Brief | Brief created, no positioning | ❌ No |
-| 🎯 Positioned | Positioning complete | ✅ Yes |
-| 🔄 In Progress | Currently executing | ❌ No (already running) |
-| ✅ Complete | All articles done | ❌ No (already done) |
-
-**If status check fails:**
-
-```
-❌ Pillar Status Check FAILED
-
-Target pillar: {pillar name}
-Current status: {status}
-Required status: 🎯 Positioned
-
-{If wrong status:}
-Cannot execute: Pillar is {explanation based on status}.
-
-{If previous pillars incomplete:}
-Cannot execute: Previous pillar(s) not complete:
-- Pillar {N}: {name} — {status}
-
-Run /start-pillar and /positioning-angles first, or complete earlier pillars.
-```
-
-**If any prerequisite is missing:**
-1. Stop execution
-2. Report missing items to user
-3. Do NOT proceed until all prerequisites pass
+**If any prerequisite is missing:** Stop execution, report missing items to user, do NOT proceed.
 
 ---
 
@@ -126,55 +96,11 @@ Related PR: #{pr-number}
 
 Create Draft Pull Request with title: `📚 {Pillar Name}`
 
-**PR Body:**
-```markdown
-## Pillar: {Pillar Name}
-
-### Articles
-- [ ] Article 01: {title}
-- [ ] Article 02: {title}
-...
-
-### Error Tracking
-Issue: #{issue-number}
-
----
-
-🤖 Generated with Claude Code
-```
+**PR Body:** List all articles as checkboxes, link to error tracking Issue, add `🤖 Generated with Claude Code` footer.
 
 ### 1.4 Context Architecture Communication
 
-After creating the draft PR, proactively explain the context architecture to the user:
-
-**Output Template:**
-
-```
-📊 Context Architecture for This Pillar
-
-Agent Execution Plan:
-- {N} articles × 4 agents each = {N × 4} total agent spawns
-- Each agent runs in a fresh, isolated context window
-- Main session orchestrates spawning and receives results
-
-Context Budget:
-- Main session: Will accumulate orchestration context (~50-70% for 7 articles)
-- Agent contexts: Independent, don't affect main session
-- This architecture prevents context explosion compared to reading all articles directly
-
-Estimated Execution Time: {tier_count} tiers × ~5-10 min per tier = {estimate} minutes total
-
-Ready to proceed with tier analysis...
-```
-
-**Why This Matters:**
-
-- Sets user expectations about context usage
-- Explains why main session context increases during orchestration
-- Shows the architectural benefit (isolated agent contexts)
-- Prevents surprise when main session hits 60-70% context
-
-**When to Output:** After PR creation, before tier analysis
+After creating the draft PR, proactively tell the user: how many articles × 4 agents = total spawns, that each agent runs in isolated context, and estimated execution time ({tier_count} tiers × ~5-10 min per tier).
 
 ---
 
@@ -184,21 +110,17 @@ Identify article dependencies from the pillar brief to determine execution order
 
 ### Dependency Rules
 
-| Article Type | Links To | Tier |
-|--------------|----------|------|
-| Articles with no internal link dependencies | Nothing | Tier 1 |
-| Articles that reference Tier 1 articles | Tier 1 | Tier 2 |
-| Articles that reference Tier 2 articles | Tier 2 | Tier 3 |
-| Pillar Guide (links to all articles) | All articles | Final Tier |
+- **Tier 1:** Articles with no internal link dependencies
+- **Tier 2:** Articles that reference Tier 1 articles
+- **Tier 3:** Articles that reference Tier 2 articles
+- **Final Tier:** Pillar Guide (links to all articles, always last)
 
 ### How to Identify Tiers
 
 1. Read the pillar brief's article list
 2. Check positioning document for internal linking strategy
-3. For each article, ask: "Does this need to link to any other article in the pillar?"
-4. If no: Tier 1
-5. If yes: Tier = (highest tier of articles it links to) + 1
-6. Pillar guide is always Final Tier
+3. For each article: no links to other pillar articles = Tier 1; otherwise Tier = (highest tier of linked articles) + 1
+4. Pillar guide is always Final Tier
 
 ### Tier Analysis Output
 
@@ -210,11 +132,9 @@ Document the tier analysis before execution:
 ### Tier 1 (No Dependencies)
 - Article 01: {title} - {primary keyword}
 - Article 02: {title} - {primary keyword}
-- Article 03: {title} - {primary keyword}
 
 ### Tier 2 (Depends on Tier 1)
 - Article 04: {title} - Links to: 01, 02
-- Article 05: {title} - Links to: 03
 
 ### Final Tier (Pillar Guide)
 - Article NN: {pillar guide title} - Links to: all articles
@@ -228,132 +148,44 @@ Before spawning any agents, validate the tier structure automatically.
 
 ### Validation Checks
 
-**1. Completeness:** All articles from pillar brief are assigned to a tier
-
-**2. No Orphans:** Every article appears in exactly one tier
-
-**3. Dependency Validity:** Tier N+1 articles only reference articles in Tiers 1 through N
-
-**4. No Circular References:** Article A links to Article B which links back to Article A
-
-**5. Tier 1 Identified:** At least 1 article has no dependencies (Tier 1 must exist)
-
-### Validation Logic
-
-Pseudo-code for validation:
-
-```python
-# Check completeness and orphans
-for article in pillar_articles:
-    assert article in tier_assignments, f"Article {article} not assigned to any tier"
-
-# Check dependency validity
-for tier_num, articles in tiers.items():
-    for article in articles:
-        for link in article.internal_links:
-            link_tier = find_tier(link)
-            assert link_tier < tier_num, f"Tier {tier_num} article {article} links to Tier {link_tier} article {link}"
-
-# Check Tier 1 exists
-assert len(tiers[1]) > 0, "No Tier 1 articles found (at least 1 article must have no dependencies)"
-```
+1. **Completeness:** All articles from pillar brief are assigned to a tier
+2. **No Orphans:** Every article appears in exactly one tier
+3. **Dependency Validity:** Tier N+1 articles only reference articles in Tiers 1 through N
+4. **No Circular References:** Article A links to Article B which links back to Article A
+5. **Tier 1 Identified:** At least 1 article has no dependencies
 
 ### Error Output Format
 
-If validation fails, output:
+If validation fails:
 
 ```
 ❌ Tier Validation FAILED
 
 Issues found:
-1. Article 03 assigned to Tier 2 but references Article 05 (Tier 3)
-2. Article 04 not assigned to any tier
-3. Circular dependency: Article 02 → Article 04 → Article 02
+1. {description of each issue}
 
 EXECUTION BLOCKED. Fix tier structure before proceeding.
 ```
 
-### Success Output Format
-
-If validation passes, output:
+If validation passes:
 
 ```
 ✅ Tier Validation PASSED
 
 Tier Structure:
-- Tier 1: Articles 01, 02 (no dependencies) → Will spawn 8 agents in parallel
-- Tier 2: Articles 03, 04 (depend on Tier 1) → Will spawn 8 agents in parallel
-- Tier 3: Article 05 (pillar guide, depends on all) → Will spawn 4 agents
+- Tier 1: Articles 01, 02 (no dependencies) → {agent count} agents
+- Tier 2: Articles 03, 04 (depend on Tier 1) → {agent count} agents
+- Final: Article 05 (pillar guide) → 4 agents
 
-Total: 20 agent spawns across 3 tiers
-Estimated context usage: ~50-60%
-
+Total: {total} agent spawns across {tier_count} tiers
 Proceeding to execution...
 ```
-
-### When to Run
-
-After completing "Tier Analysis Output" (Step 2) and before "Spawn Tier 1 agents" (Step 3)
-
-### What Happens on Fail
-
-Stop execution, output error details, do not spawn any agents
 
 ---
 
 ## Step 3: Tier-Based Parallel Execution
 
 Execute articles in tiers. Parallel within tiers, sequential across tiers.
-
-### Execution Pattern
-
-```
-Main Session (Orchestrator)
-    │
-    ├─→ TIER 1: All articles in parallel
-    │   │
-    │   ├─→ Article 01 pipeline ─┐
-    │   ├─→ Article 02 pipeline ─┼─→ All PASS → commit tier
-    │   └─→ Article 03 pipeline ─┘
-    │
-    ├─→ TIER 2: All articles in parallel (after Tier 1 committed)
-    │   │
-    │   ├─→ Article 04 pipeline ─┐
-    │   └─→ Article 05 pipeline ─┴─→ All PASS → commit tier
-    │
-    └─→ FINAL TIER: Pillar Guide (after all articles committed)
-        │
-        └─→ Pillar guide pipeline → commit → convert PR to ready
-```
-
-### Single Article Pipeline
-
-Each article goes through 4 agents, spawned sequentially by the main session:
-
-```
-Article Pipeline (main session orchestrates)
-    │
-    ├─→ 1. SEO WRITER AGENT
-    │       Input: Profile path, positioning path, brief path, keyword, slug
-    │       Output: PASS/FAIL + file path + word count + citations
-    │       └─→ If FAIL: Log error, skip to next article
-    │
-    ├─→ 2. COPY ENHANCER AGENT (Enhancement Mode)
-    │       Input: Article path
-    │       Output: PASS/FAIL + changes made
-    │       └─→ If FAIL: Log error, continue to validation
-    │
-    ├─→ 3. CONTENT VALIDATOR AGENT
-    │       Input: Article path
-    │       Output: PASS/FAIL + FULL issues list
-    │       └─→ If PASS: Continue to atomizer
-    │       └─→ If FAIL: Enter retry loop (see Step 4)
-    │
-    └─→ 4. CONTENT ATOMIZER AGENT
-            Input: Article path
-            Output: PASS/FAIL + files created + platform summary
-            └─→ If FAIL: Log error, mark article complete anyway
-```
 
 ### Spawning Articles in Parallel
 
@@ -370,7 +202,16 @@ When spawning multiple articles in the same tier:
 9. Wait for ALL to return
 10. Commit the tier
 
-**Important:** You can spawn multiple agents in the same message using multiple Task tool calls. This maximizes parallelism.
+**Important:** You can spawn multiple agents in the same message using multiple Task tool calls. This maximises parallelism.
+
+### Single Article Pipeline
+
+Each article goes through 4 agents, spawned sequentially by the main session:
+
+1. **SEO Writer** → receives file path + status + word count. If FAIL: log error, skip article.
+2. **Copy Enhancer** (Enhancement Mode) → receives status + changes. If FAIL: log error, continue to validation.
+3. **Content Validator** → receives PASS/FAIL + issues. If PASS: continue to atomiser. If FAIL: enter retry loop (Step 4).
+4. **Content Atomiser** → receives status + files created. If FAIL: log error, mark article complete anyway.
 
 ---
 
@@ -380,45 +221,29 @@ When validation fails, the main session orchestrates a retry loop. Maximum 3 att
 
 ### Retry Flow
 
-```
-Main session receives FAIL from Validator (attempt N)
-    │
-    ├─ If N < 3:
-    │   │
-    │   ├─→ Extract FAIL issues from validator output
-    │   │
-    │   ├─→ Spawn COPY ENHANCER (Fix Mode) with:
-    │   │     - Article path
-    │   │     - List of specific FAIL issues
-    │   │
-    │   ├─→ Wait for Copy Enhancer to return PASS
-    │   │
-    │   ├─→ Spawn CONTENT VALIDATOR again
-    │   │
-    │   └─→ If PASS → Continue to atomizer
-    │       If FAIL → Increment N, repeat loop
-    │
-    └─ If N >= 3:
-        │
-        ├─→ Log to PROJECT-TASKS.md: "Article {slug} failed validation after 3 attempts"
-        ├─→ Log to GitHub Issue with full issue list
-        └─→ Continue with remaining articles (don't block the pillar)
-```
+On validator FAIL (attempt N < 3):
 
-### Passing Issues to Copy Enhancer (Fix Mode)
+1. Spawn **Copy Fixer** with article path + validation file path
+2. Copy Fixer reads the validation file itself (file-based, not prompt-based)
+3. Wait for Copy Fixer to return PASS
+4. Spawn **Content Validator** again
+5. If PASS → continue to atomiser. If FAIL → increment N, repeat.
 
-When spawning copy-enhancer for fixes, include the FULL validation output:
+On attempt N >= 3:
+
+1. Log to PROJECT-TASKS.md: "Article {slug} failed validation after 3 attempts"
+2. Log to GitHub Issue with full issue list
+3. Continue with remaining articles (don't block the pillar)
+
+### Passing Issues to Copy Fixer
+
+**File-based approach (prevents context overflow):**
+
+The Content Validator writes issues to a validation file at `{pillar}/articles/{slug}-validation.md`. The main session passes only the **validation file path** to Copy Fixer. Copy Fixer reads the file itself. Do NOT paste validation output into the prompt.
 
 ```
-Mode: Fix
-
-Article: {path}
-
-FAIL Issues to Fix:
-1. Line 23: "color" - US spelling → use "colour"
-2. Line 45: "leverage" - banned AI word → use "use"
-3. Line 67: Em dash found - restructure sentence
-...
+Task: Fix validation issues in {article_path}
+Validation file: {validation_file_path}
 ```
 
 ---
@@ -437,32 +262,10 @@ Add a comment to the Issue for each error:
 
 ### Error Types
 
-| Type | When |
-|------|------|
-| `Validation FAIL` | Content validator returns FAIL |
-| `Git Error` | Any git operation fails |
-| `Agent FAIL` | Any agent fails to complete |
-| `Retry Exhausted` | Article failed after 3 retry attempts |
-
-### Example Error Comments
-
-```markdown
-**[Validation FAIL]** Article: 01-understanding-adhd-sleep.md
-- Line 23: "color" - US spelling → use "colour"
-- Line 45: "leverage" - banned AI word
-```
-
-```markdown
-**[Retry Exhausted]** Article: 03-sleep-hygiene-tips.md
-Failed validation 3 times. Remaining issues:
-- Line 12: H1 missing hook (keyword-only)
-- Line 89: Em dash in paragraph 5
-```
-
-```markdown
-**[Agent FAIL]** seo-writer failed for article 05-white-noise-benefits.md
-Reason: Missing positioning angle for this keyword
-```
+- **`Validation FAIL`** — Content validator returns FAIL
+- **`Git Error`** — Any git operation fails
+- **`Agent FAIL`** — Any agent fails to complete
+- **`Retry Exhausted`** — Article failed after 3 retry attempts
 
 ---
 
@@ -470,27 +273,18 @@ Reason: Missing positioning angle for this keyword
 
 ### Commit After Each Tier
 
-After all articles in a tier pass validation and atomization:
+After all articles in a tier pass validation and atomisation:
 
 ```bash
-# Stage all files in the pillar
-git add {pillar}/articles/*.md
-git add {pillar}/distribution/**/*
-
-# Commit with tier information
+git add {pillar}/articles/*.md {pillar}/distribution/**/*
 git commit -m "$(cat <<'EOF'
 ✅ Tier {N}: {Pillar Name} - {article count} articles
 
-Articles:
-- {slug-1}
-- {slug-2}
-- ...
+Articles: {slug-1}, {slug-2}, ...
 
 Co-Authored-By: Claude <noreply@anthropic.com>
 EOF
 )"
-
-# Push to pillar branch
 git push origin pillar/{pillar-name}
 ```
 
@@ -502,18 +296,14 @@ git push origin pillar/{pillar-name}
 4. Convert Draft PR to Ready for Review
 
 ```bash
-# Final commit
 git commit -m "$(cat <<'EOF'
 ✅ Complete: {Pillar Name} pillar guide
 
-Total articles: {count}
-Total word count: {sum}
-Distribution assets: {count} files
+Total articles: {count} | Words: {sum} | Distribution: {count} files
 
 Co-Authored-By: Claude <noreply@anthropic.com>
 EOF
 )"
-
 git push origin pillar/{pillar-name}
 ```
 
@@ -533,19 +323,10 @@ Before converting to Ready for Review:
 
 ### Update Pillar Status
 
-After pillar execution completes successfully, update the Production Queue table in `00-keyword-brief.md`:
+After pillar execution completes, update the Production Queue table in `00-keyword-brief.md`:
 
-1. Change the pillar's status from `🔄 In Progress` to `✅ Complete`
-2. Commit this change with the final PR
-
-**Status transitions during execution:**
-
-```
-🎯 Positioned → 🔄 In Progress (when execution starts)
-🔄 In Progress → ✅ Complete (when PR is ready for review)
-```
-
-This ensures the next `/execute-pillar` run correctly shows which pillars are complete.
+- `🎯 Positioned` → `🔄 In Progress` (when execution starts)
+- `🔄 In Progress` → `✅ Complete` (when PR is ready for review)
 
 ---
 
@@ -556,21 +337,10 @@ After the pillar guide is written, run a linking pass to complete internal links
 ### Linking Tasks
 
 1. **Replace Placeholders:** Find all `<!-- LINK NEEDED: ... -->` comments and replace with actual links
-
 2. **Add Links TO Pillar Guide:** Update each supporting article to link to the pillar guide where appropriate
-
 3. **Verify All Links:** Check that no broken links exist
 
-### Placeholder Search
-
-```bash
-# Find all placeholder links
-grep -r "LINK NEEDED" {pillar}/articles/
-```
-
 ### Link Format
-
-When adding internal links:
 
 ```markdown
 For a complete overview, see our [comprehensive guide to {topic}]({pillar-guide-slug}).
@@ -606,75 +376,14 @@ For each pattern with 3+ occurrences, add to `common-mistakes.md`:
 ### {Pattern Name} (Issue #{number})
 
 **Pattern:** What to look for
-
 **Why it fails:** Explanation
-
 **Fix:** How to correct
-
 **Source:** {pillar name} — {count} occurrences
 ```
 
 ### Close the Issue
 
-After extracting patterns, close the GitHub Issue with a summary:
-
-```markdown
-## Summary
-
-- Total errors logged: {count}
-- Patterns extracted: {count}
-- Added to common-mistakes.md: {list pattern names}
-
-Closing as pillar is complete.
-```
-
----
-
-## Complete Execution Checklist
-
-Use this checklist to track pillar execution:
-
-```markdown
-## Pillar Execution: {Pillar Name}
-
-### Setup
-- [ ] Prerequisites verified (including pillar status = 🎯 Positioned)
-- [ ] Pillar status updated to 🔄 In Progress in 00-keyword-brief.md
-- [ ] Pillar branch created
-- [ ] Error tracking Issue created
-- [ ] Draft PR created
-
-### Tier Analysis
-- [ ] Dependencies identified
-- [ ] Articles assigned to tiers
-- [ ] Execution order documented
-
-### Tier 1
-- [ ] All articles written (seo-writer)
-- [ ] All articles enhanced (copy-enhancer)
-- [ ] All articles validated (content-validator)
-- [ ] Retries completed (if needed)
-- [ ] All articles atomized (content-atomizer)
-- [ ] Tier committed
-
-### Tier 2 (if applicable)
-- [ ] Same as Tier 1...
-
-### Final Tier (Pillar Guide)
-- [ ] Pillar guide written
-- [ ] Pillar guide enhanced
-- [ ] Pillar guide validated
-- [ ] Pillar guide atomized
-- [ ] Post-pillar linking complete
-- [ ] Final commit pushed
-
-### Completion
-- [ ] Pillar status updated to ✅ Complete in 00-keyword-brief.md
-- [ ] PR converted to Ready for Review
-- [ ] Error patterns extracted
-- [ ] GitHub Issue closed
-- [ ] PROJECT-TASKS.md updated
-```
+Close the GitHub Issue with a summary: total errors logged, patterns extracted, additions to common-mistakes.md.
 
 ---
 
@@ -692,99 +401,41 @@ Inputs:
 - Keyword: {primary_keyword}
 - Slug: {article_slug}
 - Article Number: {NN}
-
-Expected Output:
-- Status: PASS/FAIL
-- File Path: {path}
-- Word Count: {count}
-- Citations Found: {count}
 ```
 
 ### Copy Enhancer (Enhancement Mode)
 
 ```
 Task: Enhance article at {article_path}
-
 Mode: Enhancement
-
-Expected Output:
-- Status: PASS/FAIL
-- Mode: Enhancement
-- Changes Made: [list]
 ```
 
-### Copy Enhancer (Fix Mode)
+### Copy Fixer
 
 ```
 Task: Fix validation issues in {article_path}
-
-Mode: Fix
-
-FAIL Issues:
-{paste full validation FAIL output}
-
-Expected Output:
-- Status: PASS/FAIL
-- Mode: Fix
-- Issues Fixed: [list]
+Validation file: {validation_file_path}
 ```
+
+Copy Fixer reads the validation file itself. Do NOT paste issues into the prompt.
 
 ### Content Validator
 
 ```
 Task: Validate article at {article_path}
-
-Expected Output:
-- FULL validation output (never abbreviated)
-- All 6 phases
-- All FAIL/WARN issues with line numbers
 ```
 
-### Content Atomizer
+### Content Atomiser
 
 ```
 Task: Create distribution content for {article_path}
-
-Expected Output:
-- Status: PASS/FAIL
-- Files Created: [list]
-- Platform Summary: {counts}
 ```
 
 ---
 
 ## Troubleshooting
 
-### Agent Not Spawning
-
-If an agent doesn't auto-delegate:
-1. Check that `.claude/agents/{agent}.md` exists
-2. Verify YAML frontmatter is valid
-3. Use explicit task description matching agent's `description` field
-
-### Validation Loop Never Passes
-
-If an article fails validation 3+ times:
-1. Check if the FAIL issues are addressable by copy-enhancer
-2. Some issues (e.g., fundamental structure problems) may need manual rewrite
-3. Log the issue and continue with other articles
-4. Return to problem article manually after pillar execution
-
-### Git Conflicts
-
-If git operations fail:
-1. Check branch status: `git status`
-2. Ensure you're on the pillar branch
-3. Pull latest if needed: `git pull origin pillar/{name}`
-4. Resolve conflicts manually if they occur
-
-### Context Running Low
-
-If main session context is getting full:
-1. Complete current tier
-2. Commit progress
-3. Document current state in PROJECT-TASKS.md
-4. Start fresh session with handoff context
+See [Execute Pillar Troubleshooting](../../references/execute-pillar-troubleshooting.md).
 
 ---
 

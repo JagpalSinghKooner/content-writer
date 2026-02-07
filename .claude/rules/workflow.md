@@ -54,7 +54,7 @@ The main session spawns agents sequentially for each article. Agents return resu
 
 ## Retry Loop
 
-On validation FAIL, the main session re-spawns Copy Enhancer (mode: "fix") then Content Validator, up to 3 attempts. Copy Enhancer reads issues from the validation file (file-based, not prompt-based) to prevent context overflow. After 3 failures, escalate to user. Full retry logic: see [Execute Pillar skill](../skills/execute-pillar/SKILL.md) Step 4.
+On validation FAIL, the main session spawns **Copy Fixer** then Content Validator, up to 3 attempts. Copy Fixer reads issues from the validation file (file-based, not prompt-based) to prevent context overflow. After 3 failures, escalate to user. Full retry logic: see [Execute Pillar skill](../skills/execute-pillar/SKILL.md) Step 4.
 
 ---
 
@@ -69,7 +69,8 @@ Articles are grouped into tiers by internal linking dependencies: Tier 1 (no dep
 For full agent specifications, see the individual agent files in `.claude/agents/`.
 
 - **SEO Writer** (`seo-writer.md`): Write articles with E-E-A-T research. Tools: Read, Glob, Grep, Write
-- **Copy Enhancer** (`copy-enhancer.md`): Add persuasion + fix validation issues. Tools: Read, Edit
+- **Copy Enhancer** (`copy-enhancer.md`): Add persuasion to drafts. Tools: Read, Edit
+- **Copy Fixer** (`copy-fixer.md`): Fix specific validation issues. Tools: Read, Edit
 - **Content Validator** (`content-validator.md`): Check rules + quality, write validation file. Tools: Read, Glob, Grep, Write
 - **Content Atomizer** (`content-atomizer.md`): Create platform distribution. Tools: Read, Write
 
@@ -77,6 +78,7 @@ For full agent specifications, see the individual agent files in `.claude/agents
 
 - **SEO Writer:** returns `PASS, {file_path}`
 - **Copy Enhancer:** returns `PASS`
+- **Copy Fixer:** returns `PASS`
 - **Content Validator:** returns `PASS` or `FAIL, {fail_count}, {warn_count}, {validation_file_path}`
 - **Content Atomizer:** returns `PASS`
 
