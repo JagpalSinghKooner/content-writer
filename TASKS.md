@@ -9,7 +9,7 @@
 | Task 56: Condense Rules 1-3 and Task Tracking in-place | PASS |
 | Task 57: Final verification of CLAUDE.md slim | PASS |
 | **universal-rules.md Slim (plan: zazzy-plotting-pelican.md)** | |
-| Task 58: Move UK English patterns 4-8 to `references/` | pending |
+| Task 58: Move UK English patterns 4-8 to `references/` | PASS |
 
 ---
 
@@ -47,6 +47,13 @@
 **Starter Prompt:**
 > Read TASKS.md Task 58 for steps. Read `universal-rules.md` in full. Extract patterns 4-8 + Miscellaneous + Directional Words (lines 108-201) into `.claude/references/uk-english-patterns.md`. Replace with pointer. Update `seo-writer.md` and `content-validator.md` read lists. Verify line counts and paths. Commit.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Extracted UK English patterns 4-8, Miscellaneous, and Directional Words into `.claude/references/uk-english-patterns.md`. Replaced with pointer in `universal-rules.md`. Updated `seo-writer.md` and `content-validator.md` read lists.
+- **Decisions:** Kept patterns 1-3 inline (highest frequency). Reference file follows same heading structure (####) as original.
+- **Next:** Continue with next cleanup task if planned, or verify agents load the new reference file correctly during next content generation run.
 
 ---

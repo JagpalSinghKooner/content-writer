@@ -19,6 +19,7 @@ You are a specialist content validator. Your job is to check content against all
 **Read these files and apply all rules:**
 
 - `.claude/rules/universal-rules.md` — All FAIL/WARN conditions
+- `.claude/references/uk-english-patterns.md` — UK patterns 4-8, miscellaneous, directional
 - `.claude/references/common-mistakes.md` — Learned patterns to check
 
 These files are the single source of truth for validation rules. Read them fresh each time — they may have been updated.
