@@ -13,7 +13,7 @@
 | **Token Efficiency & Scalability Audit (plan: slim-down.md)** | |
 | Task 59: Strip inline rule copies from content-validator.md | PASS |
 | Task 60: Strip inline banned words from copy-enhancer.md + add "Before Starting" | PASS |
-| Task 61: Strip inline rule copies from validate-content/SKILL.md | pending |
+| Task 61: Strip inline rule copies from validate-content/SKILL.md | PASS |
 | Task 62: Extract banned words, phrases, AI patterns to `references/` | pending |
 | Task 63: Extract SEO requirements and citation rules to `references/` | pending |
 | Task 64: Condense workflow.md retry/tier details | pending |
@@ -181,21 +181,28 @@
 11. Commit
 
 **Acceptance Criteria:**
-- [ ] Inline UK English pairs removed, replaced with reference
-- [ ] Inline banned words removed, replaced with reference
-- [ ] Inline banned phrases removed, replaced with reference
-- [ ] Inline AI patterns removed, replaced with reference
-- [ ] Inline SEO checklist removed, replaced with reference
-- [ ] Scope matrix duplicate removed, replaced with reference
-- [ ] Content-type-specific checks (email, newsletter) preserved
-- [ ] All output format examples retained
-- [ ] `validate-content/SKILL.md` reduced by ~300 lines
-- [ ] Git commit created
+- [x] Inline UK English pairs removed, replaced with reference
+- [x] Inline banned words removed, replaced with reference
+- [x] Inline banned phrases removed, replaced with reference
+- [x] Inline AI patterns removed, replaced with reference
+- [x] Inline SEO checklist removed, replaced with reference
+- [x] Scope matrix duplicate removed, replaced with reference
+- [x] Content-type-specific checks (email, newsletter) preserved
+- [x] All output format examples retained
+- [x] `validate-content/SKILL.md` reduced by 168 lines (1132→964; actual duplication was less than estimated ~300)
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read TASKS.md Task 61 for steps. Read `.claude/skills/validate-content/SKILL.md` in full. For sections 1.1-1.4, SEO Requirements, and Content Type Variations, replace inline rule copies with references to `universal-rules.md` Rules 1-5 and `uk-english-patterns.md`. Keep all output format examples and content-type-specific checks. Commit.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Replaced inline rule copies in sections 1.1-1.4, 1.5 SEO, and Content Type Variations (7.2-7.5) with references to `universal-rules.md` Rules 1-5, Rule 5a, and `uk-english-patterns.md`. Preserved all 25 output format examples and all content-type-specific additional checks (email subject lines, newsletter hooks, lead magnet bridge, distribution hooks).
+- **Decisions:** Actual reduction was 168 lines (not estimated 300) because the scope lists in Content Type Variations were more concise than expected. Kept the 7.6 Quick Reference table (maps all phases × content types — unique value not duplicated elsewhere).
+- **Next:** Task 62 can proceed (extract banned words/phrases to references). The validate-content skill now references `universal-rules.md` directly, so when Task 62 moves rules to reference files, the skill's references remain valid (it points to rule numbers, not specific file locations of content).
 
 ---
 

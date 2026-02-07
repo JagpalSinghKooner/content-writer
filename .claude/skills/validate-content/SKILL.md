@@ -82,36 +82,7 @@ Check against all FAIL conditions in `.claude/rules/universal-rules.md`.
 
 ### 1.1 UK English Spelling Scan
 
-Scan for American spellings. Any found = FAIL.
-
-**Check for these US→UK pairs:**
-
-| US (FAIL) | UK (correct) |
-|-----------|--------------|
-| color | colour |
-| behavior | behaviour |
-| organization | organisation |
-| favorite | favourite |
-| honor | honour |
-| favor | favour |
-| humor | humour |
-| labor | labour |
-| recognize | recognise |
-| organize | organise |
-| realize | realise |
-| analyze | analyse |
-| center | centre |
-| meter | metre |
-| theater | theatre |
-| mom | mum |
-| traveling | travelling |
-| canceled | cancelled |
-| defense | defence |
-| license | licence |
-| gray | grey |
-| check (money) | cheque |
-| program | programme |
-| catalog | catalogue |
+Scan for American spellings per `universal-rules.md` Rule 1 (patterns 1-3) and `references/uk-english-patterns.md` (patterns 4-8). Any found = FAIL.
 
 **Output format:**
 ```
@@ -120,22 +91,7 @@ FAIL: Line 23: "color" - US spelling → use "colour"
 
 ### 1.2 Banned AI Words Scan (53 words)
 
-Scan for any of the 53 banned AI words. Any found = FAIL.
-
-**Overused Verbs:**
-delve, navigate, leverage, utilize, facilitate, harness, empower, foster, embark, unleash, spearhead, bolster, underscore, spotlight, streamline
-
-**Hollow Adjectives:**
-comprehensive, robust, crucial, vital, optimal, seamless, intricate, nuanced, cutting-edge, revolutionary, pivotal, paramount, transformative, groundbreaking, multifaceted
-
-**Buzzwords:**
-plethora, myriad, bevy, tapestry, realm, paradigm, synergy, landscape (figurative), journey (for processes), game-changer, supercharge, elevate, unlock
-
-**Filler Adverbs:**
-noteworthy, notably, interestingly, importantly, undoubtedly, certainly, surely, obviously, clearly
-
-**Weak Transitions:**
-firstly, secondly, thirdly, lastly, additionally, furthermore, moreover
+Scan for all 53 banned AI words per `universal-rules.md` Rule 2. Any found = FAIL.
 
 **Output format:**
 ```
@@ -145,48 +101,7 @@ FAIL: Line 67: "comprehensive" - banned AI word → use "complete" or "full"
 
 ### 1.3 Banned AI Phrases Scan
 
-Scan for AI fingerprint phrases. Any found = FAIL.
-
-**Opening Cliches:**
-- "In today's fast-paced world"
-- "In today's digital age"
-- "In today's modern landscape"
-- "In the ever-evolving world of..."
-- "In this day and age"
-
-**Throat-Clearing:**
-- "It's important to note that..."
-- "It's worth noting that..."
-- "It's worth mentioning that..."
-- "Let me explain..."
-- "Let's dive in"
-- "Let's explore"
-- "Let's unpack"
-- "Without further ado"
-
-**Padding Phrases:**
-- "When it comes to..."
-- "In order to..." (just use "to")
-- "Whether you're a... or a..."
-- "At the end of the day"
-- "It goes without saying"
-- "The fact of the matter is"
-- "For all intents and purposes"
-
-**Meta-Commentary:**
-- "In conclusion"
-- "To summarize"
-- "To sum up"
-- "In this article, we will..."
-- "This comprehensive guide will..."
-- "As we've discussed"
-- "As mentioned earlier"
-
-**Desperate Hooks:**
-- "Are you looking for...?"
-- "Look no further"
-- "You've come to the right place"
-- "Ready to take your X to the next level?"
+Scan for all banned AI phrases per `universal-rules.md` Rule 3 (opening cliches, throat-clearing, padding, meta-commentary, desperate hooks). Any found = FAIL.
 
 **Output format:**
 ```
@@ -196,27 +111,7 @@ FAIL: Line 156: "In conclusion" - banned AI phrase → just start concluding
 
 ### 1.4 AI Pattern Detection
 
-Scan for structural patterns that reveal AI authorship. Any found = FAIL.
-
-**Repetitive Sentence Starts:**
-- 3+ consecutive sentences starting with the same word
-- Every paragraph starting with "The" or "This"
-
-**The Rule of Threes:**
-- Everything in perfect threes (3 points, 3 examples, 3 benefits repeatedly)
-- "First... Second... Third..." structure
-
-**Hedging Overload:**
-- Excessive use of: might, could, perhaps, possibly, potentially, may
-- Count hedging words — if more than 5% of content, flag
-
-**Empty Transitions:**
-- "Now let's move on to..."
-- "With that said..."
-- "Having covered X, let's turn to Y"
-
-**Artificial Balance:**
-- "While X is great, it's important to consider Y" pattern repeated
+Scan for structural AI patterns per `universal-rules.md` Rule 4 (repetitive sentence starts, rule of threes, hedging overload, empty transitions, artificial balance) and Rule 4b (em dashes). Any found = FAIL.
 
 **Output format:**
 ```
@@ -227,28 +122,7 @@ FAIL: Content has 7% hedging words (might, could, perhaps) - make definitive sta
 
 ### 1.5 SEO Requirements Check
 
-Check all SEO requirements. Missing requirements = FAIL.
-
-**Keyword Placement:**
-- [ ] Primary keyword in first 150 words
-- [ ] Primary keyword in at least one H2
-- [ ] Primary keyword density: 1-2% (not stuffed)
-
-**Content Length:**
-- [ ] Minimum 1,500 words
-
-**Meta Data:**
-- [ ] Meta title present and under 60 characters
-- [ ] Meta description present and 140-160 characters
-- [ ] Both include primary keyword
-
-**Links:**
-- [ ] At least 3 internal links
-
-**Structure:**
-- [ ] One H1 only (the title)
-- [ ] Logical H2/H3 hierarchy
-- [ ] Short paragraphs (3-4 sentences max)
+Check all SEO requirements per `universal-rules.md` Rule 5 (keyword placement, content length, meta data, links, structure, H1 format) and Rule 5a (internal link format). Missing requirements = FAIL.
 
 **Output format:**
 ```
@@ -627,17 +501,7 @@ Before validating, identify the content type:
 
 ### 7.2 Email Sequences
 
-**Rules that APPLY:**
-- UK English (all spellings must be British)
-- Banned AI Words (all 53 words)
-- Banned AI Phrases (all phrases)
-- AI Patterns (repetitive starts, hedging overload)
-- Brand Voice (must match client voice profile)
-
-**Rules to SKIP:**
-- SEO Requirements (no keyword density, word count, or meta data needed)
-- Pillar Consistency (emails don't belong to pillars)
-- External Citations (not required, but can be used for credibility)
+Applicable rules: see `universal-rules.md` Scope section (Emails column). Skip SEO, Pillar Consistency, External Citations.
 
 **Additional Checks for Emails:**
 
@@ -659,16 +523,7 @@ FAIL: Email has 3 different CTAs → use one primary CTA
 
 ### 7.3 Newsletters
 
-**Rules that APPLY:**
-- UK English (all spellings must be British)
-- Banned AI Words (all 53 words)
-- Banned AI Phrases (all phrases)
-- AI Patterns (repetitive starts, hedging overload)
-- Brand Voice (must match client voice profile)
-
-**Rules to SKIP:**
-- SEO Requirements (newsletters aren't optimised for search)
-- Pillar Consistency (newsletters are standalone content)
+Applicable rules: see `universal-rules.md` Scope section (Newsletters column). Skip SEO, Pillar Consistency.
 
 **Additional Checks for Newsletters:**
 
@@ -700,19 +555,7 @@ WARN: No CTA — add at least a soft CTA (reply, share, follow)
 
 ### 7.4 Lead Magnets (Concepts)
 
-Lead magnet concepts are validated lightly since they're planning documents, not final content.
-
-**Rules that APPLY:**
-- UK English (all spellings must be British)
-- Brand Voice alignment (concept should fit brand personality)
-
-**Rules to SKIP:**
-- Banned AI Words (planning documents can use any language)
-- Banned AI Phrases (planning documents can use any language)
-- AI Patterns (not applicable to concept documents)
-- SEO Requirements (lead magnets aren't search-optimised)
-- Pillar Consistency (lead magnets are standalone)
-- External Citations (not required for concepts)
+Lead magnet concepts are validated lightly since they're planning documents, not final content. Applicable rules: see `universal-rules.md` Scope section (Lead Magnets column). Only UK English and Brand Voice apply.
 
 **Additional Checks for Lead Magnets:**
 
@@ -733,17 +576,7 @@ WARN: Hook unclear — why would someone download this? → sharpen the promise
 
 ### 7.5 Distribution Content
 
-**Rules that APPLY:**
-- UK English (all spellings must be British)
-- Banned AI Words (all 53 words)
-- Brand Voice (must match client voice profile, adjusted for platform)
-
-**Rules to SKIP:**
-- Banned AI Phrases (some phrases work in short-form social content)
-- AI Patterns (short-form content has different patterns)
-- SEO Requirements (social content isn't search-optimised)
-- Pillar Consistency (distribution references articles but isn't part of pillar)
-- External Citations (not required for social posts)
+Applicable rules: see `universal-rules.md` Scope section (Distribution column). Skip Banned Phrases, AI Patterns, SEO, Pillar Consistency, External Citations.
 
 **Additional Checks for Distribution:**
 
