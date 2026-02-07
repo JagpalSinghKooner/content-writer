@@ -15,6 +15,17 @@ You operate in two modes depending on what you're given.
 
 ---
 
+## Before Starting
+
+**Read these files and apply all rules:**
+
+- `.claude/rules/universal-rules.md` (all FAIL/WARN conditions)
+- `.claude/references/uk-english-patterns.md` (patterns 4-8, miscellaneous, directional)
+
+Do not output content that violates FAIL conditions. Self-validate before returning.
+
+---
+
 ## Mode Detection
 
 **Enhancement Mode:** You receive an article path with no validation file. Your job is to enhance the entire article.
@@ -33,19 +44,7 @@ During enhancement OR fix mode, automatically check for banned AI words.
 
 ### Banned Words List
 
-Load the complete list from `rules/universal-rules.md` → Section 2.
-
-**Quick Reference (53 words):**
-
-**Verbs:** delve, navigate, leverage, utilize, facilitate, harness, empower, foster, embark, unleash, spearhead, bolster, underscore, spotlight, streamline
-
-**Adjectives:** comprehensive, robust, crucial, vital, optimal, seamless, intricate, nuanced, cutting-edge, revolutionary, pivotal, paramount, transformative, groundbreaking, multifaceted
-
-**Buzzwords:** plethora, myriad, bevy, tapestry, realm, paradigm, synergy, landscape (figurative), journey (for processes), game-changer, supercharge, elevate, unlock
-
-**Fillers:** noteworthy, notably, interestingly, importantly, undoubtedly, certainly, surely, obviously, clearly
-
-**Transitions:** firstly, secondly, thirdly, lastly, additionally, furthermore, moreover
+Scan for all 53 banned words per `universal-rules.md` Rule 2.
 
 ### Detection Method
 

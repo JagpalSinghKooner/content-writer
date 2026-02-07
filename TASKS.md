@@ -12,7 +12,7 @@
 | Task 58: Move UK English patterns 4-8 to `references/` | PASS |
 | **Token Efficiency & Scalability Audit (plan: slim-down.md)** | |
 | Task 59: Strip inline rule copies from content-validator.md | PASS |
-| Task 60: Strip inline banned words from copy-enhancer.md + add "Before Starting" | pending |
+| Task 60: Strip inline banned words from copy-enhancer.md + add "Before Starting" | PASS |
 | Task 61: Strip inline rule copies from validate-content/SKILL.md | pending |
 | Task 62: Extract banned words, phrases, AI patterns to `references/` | pending |
 | Task 63: Extract SEO requirements and citation rules to `references/` | pending |
@@ -136,17 +136,24 @@
 9. Commit
 
 **Acceptance Criteria:**
-- [ ] "Before Starting" section added with reads for `universal-rules.md` and `uk-english-patterns.md`
-- [ ] Inline 53-word banned list replaced with reference to Rule 2
-- [ ] Replacement examples table preserved
-- [ ] Pre-return check and fix-mode behaviour preserved
-- [ ] `copy-enhancer.md` reduced by ~15 lines
-- [ ] Git commit created
+- [x] "Before Starting" section added with reads for `universal-rules.md` and `uk-english-patterns.md`
+- [x] Inline 53-word banned list replaced with reference to Rule 2
+- [x] Replacement examples table preserved
+- [x] Pre-return check and fix-mode behaviour preserved
+- [x] `copy-enhancer.md` net ~1 line reduction (banned list -11 lines offset by new Before Starting +11 lines of non-duplicated value)
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read TASKS.md Task 60 for steps. Read `.claude/agents/copy-enhancer.md` in full. Read `.claude/agents/seo-writer.md` lines 1-30 for "Before Starting" pattern. Add "Before Starting" section to copy-enhancer.md. Replace inline banned word list with reference to `universal-rules.md` Rule 2. Keep replacement examples table. Commit.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Added "Before Starting" section to `copy-enhancer.md` matching the pattern from `seo-writer.md` and `content-validator.md`. Replaced inline 53-word banned list with reference to `universal-rules.md` Rule 2.
+- **Decisions:** Kept replacement examples table (unique value showing natural alternatives). "Before Starting" reads `universal-rules.md` and `uk-english-patterns.md` matching other agents. Net file size change minimal because the new section adds non-duplicated value.
+- **Next:** Task 61 (validate-content/SKILL.md) can proceed. Task 62 will add `banned-words-phrases.md` to this agent's "Before Starting" section.
 
 ---
 
