@@ -14,11 +14,11 @@
 | Task 59: Strip inline rule copies from content-validator.md | PASS |
 | Task 60: Strip inline banned words from copy-enhancer.md + add "Before Starting" | PASS |
 | Task 61: Strip inline rule copies from validate-content/SKILL.md | PASS |
-| Task 62: Extract banned words, phrases, AI patterns to `references/` | pending |
+| Task 62: Extract banned words, phrases, AI patterns to `references/` | PASS |
 | Task 63: Extract SEO requirements and citation rules to `references/` | PASS |
-| Task 64: Condense workflow.md retry/tier details | pending |
-| Task 65: Archive agents-prd.md | pending |
-| Task 66: Add multi-client path isolation to CLAUDE.md | pending |
+| Task 64: Condense workflow.md retry/tier details | PASS |
+| Task 65: Archive agents-prd.md | PASS |
+| Task 66: Add multi-client path isolation to CLAUDE.md | PASS |
 
 ---
 
@@ -410,17 +410,24 @@
 6. Commit
 
 **Acceptance Criteria:**
-- [ ] "Multi-Client Architecture" subsection added to CLAUDE.md
-- [ ] Contains path isolation rules (4 key points)
-- [ ] Fits naturally in document structure
-- [ ] No contradictions with existing content
-- [ ] ~8 lines added
-- [ ] Git commit created
+- [x] "Multi-Client Architecture" subsection added to CLAUDE.md
+- [x] Contains path isolation rules (4 key points)
+- [x] Fits naturally in document structure
+- [x] No contradictions with existing content
+- [x] ~8 lines added
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read TASKS.md Task 66 for steps. Read `.claude/CLAUDE.md` in full. Add "Multi-Client Architecture" subsection with path isolation rules (each client by directory, explicit profile path input, verify before spawning, never load multiple profiles). Place after Phase 1 or before Rules & References. Commit.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Added "Multi-Client Architecture" subsection to `CLAUDE.md` as a `###` under Phase 1: Client Onboarding. Contains 4 path isolation rules (directory isolation, explicit profile input, pre-spawn verification, single-profile sessions).
+- **Decisions:** Placed as subsection under Phase 1 (not a new top-level section) since it directly extends client onboarding with scaling guidance. 8 lines added (heading + intro + 4 bullet points).
+- **Next:** All tasks in the slim-down plan are now complete. The cleanup/context-slim branch is ready for review and merge to main.
 
 ---
 

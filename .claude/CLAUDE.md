@@ -189,6 +189,15 @@ Run `/onboard-client` once per client to create their profile:
 
 **Note:** Brand voice is captured during onboarding (not a separate step). The profile includes a complete voice profile with tone spectrum, personality traits, vocabulary, rhythm patterns, and example phrases.
 
+### Multi-Client Architecture
+
+When scaling to multiple clients, path isolation prevents context pollution:
+
+- Each client is isolated by directory path (`/clients/{name}/`)
+- Agents receive the client profile path as explicit input (never auto-detected)
+- Main session verifies the correct profile path before spawning any agent
+- Never load multiple client profiles in the same session
+
 ---
 
 ## Phase 2: Content Generation
