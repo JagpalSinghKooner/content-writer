@@ -105,16 +105,23 @@
 - Tighten section spacing
 
 **Acceptance Criteria:**
-- [ ] File is ~240 lines (within 15% tolerance)
+- [x] File is ~240 lines (within 15% tolerance)
 - [x] Zero lines starting with `|` (no tables)
-- [ ] All profile fields preserved as bullets
-- [ ] All section headings intact
-- [ ] No footer notes
+- [x] All profile fields preserved as bullets
+- [x] All section headings intact
+- [x] No footer notes
 
 **Starter Prompt:**
 > Read `.claude/skills/onboard-client/profile-template.md` (305 lines). Slim to ~240 lines. Tables are already converted (zero `|` rows). Focus on: removing footer notes if still present, condensing verbose placeholder text, reducing competitor template repetition (5 identical blocks — consider a single template with "Repeat for competitors 2-5"), tightening section spacing. Keep all section headings and profile fields.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Slimmed profile-template.md from 305 → 240 lines (exact target). Collapsed 5 identical competitor blocks to 1 template + "Repeat for competitors 2-5". Condensed verbose placeholder text throughout (Voice Summary, Tone Spectrum, Vocabulary, Rhythm & Structure, CTA Templates, Goals). Tightened Do's/Don'ts and Example Phrases to inline format. Zero tables confirmed. No footer notes present.
+- **Decisions:** Used pipe-separated inline format for Do's/Don'ts, Example Phrases, and Success Metrics to save vertical space while keeping all fields. Competitor block kept full structure for Competitor 1 as the template example.
+- **Next:** Task 101 (Phase 2 verification) is now unblocked.
 
 ---
 
@@ -156,10 +163,8 @@
 
 ## Remaining Work
 
-2 tasks pending: 97, 101
+1 task pending: 101
 
 ```
-Task 97: Slim profile-template.md (no blockers)
-  ↓
-Task 101: Verify Phase 2 (after Task 97)
+Task 101: Verify Phase 2 (no blockers)
 ```
