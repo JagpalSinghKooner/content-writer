@@ -6,7 +6,7 @@
 |------|--------|
 | **CLAUDE.md Slim (plan: giggly-doodling-otter.md)** | |
 | Task 55: Move Phase 2 reference sections to `references/` | PASS |
-| Task 56: Condense Rules 1-3 and Task Tracking in-place | pending |
+| Task 56: Condense Rules 1-3 and Task Tracking in-place | PASS |
 | Task 57: Final verification of CLAUDE.md slim | pending |
 
 ---
@@ -99,7 +99,14 @@ Full plan documented in `~/.claude/plans/giggly-doodling-otter.md`. Goal: reduce
 **Starter Prompt:**
 > Read TASKS.md Task 56 for full context. Read `.claude/CLAUDE.md` in full. Delete: Rule #1 "Why This Rule Exists" block (keep the Common Mistakes link), Rule #2 example commit + "PR triggers when", Rule #3 error examples + closing template (replace with 1 line) + "Why This Rule Exists", Task Tracking "Why two files?". Verify all rules/instructions survived with grep. Report line count. Commit.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Removed ~54 lines of fluff from CLAUDE.md: Rule #1 "Why This Rule Exists" motivational block, Rule #2 example commit and "PR triggers when" list, Rule #3 error examples + closing template (replaced with 1-line summary) + "Why This Rule Exists", Task Tracking "Why two files?" explanation.
+- **Decisions:** Kept all rule headers, CRITICAL warning, STOP checklist, PROJECT-TASKS.md template, commit format spec, error types list, and Common Mistakes link intact.
+- **Next:** Task 57 verifies total auto-loaded lines, checks for broken references across `.claude/`, and updates TASKS.md summary.
 
 ---
 

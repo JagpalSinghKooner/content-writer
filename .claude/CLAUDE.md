@@ -11,11 +11,6 @@ This project uses **two separate task tracking files** for different purposes:
 - **`TASKS.md`** (repository root): System development tasks. Building skills, rules, templates, and infrastructure for the content system itself.
 - **`PROJECT-TASKS.md`** (`/projects/{client}/{project}/`): Client project work. Tracking content creation tasks for specific client projects (keyword research, articles, distribution).
 
-**Why two files?**
-
-- **TASKS.md (root):** Tracks work on the content system itself — new skills, rule updates, template improvements, bug fixes. This is *building the machine*.
-- **PROJECT-TASKS.md:** Tracks work *using* the system for clients — researching keywords, writing articles, creating distribution content. This is *running the machine*.
-
 **When starting a session:**
 - Working on a client project? → Read the project's `PROJECT-TASKS.md`
 - Working on system improvements? → Read the root `TASKS.md`
@@ -83,16 +78,6 @@ Every project uses this structure:
 - **Next:** [Context for next task]
 ```
 
-### Why This Rule Exists
-
-- Prevents context rot
-- Maintains consistent quality
-- Creates clear audit trail
-- Enables pause/resume at any point
-- Every task is reproducible with its starter prompt
-
-**If you skip this rule, the work fails.**
-
 See [Common Mistakes](references/common-mistakes.md) for recurring violations of this rule.
 
 ### STOP: Before Completing Any Task
@@ -128,15 +113,6 @@ Immediately after updating PROJECT-TASKS.md with PASS status:
    ```
 3. Push to the current branch
 
-**Example commit:**
-```
-✅ Complete pillar brief for AI Marketing
-
-Created 01-pillar-brief.md with competitor analysis and content plan.
-
-Co-Authored-By: Claude <noreply@anthropic.com>
-```
-
 ### When a Pillar is Complete
 
 After the final task in a pillar passes (pillar guide + distribution done):
@@ -145,11 +121,6 @@ After the final task in a pillar passes (pillar guide + distribution done):
    - **Title:** `📚 {Pillar Name} - Complete`
    - **Body:** Summary of all articles, word counts, and distribution assets
 2. Inform the user the PR is ready for review
-
-**PR triggers when:**
-- Pillar guide is written and validated
-- All supporting articles are written and validated
-- Distribution content is created (if requested)
 
 ### Branch Strategy
 
@@ -197,15 +168,6 @@ Auto-comment to the Issue with this format:
 - `Git Error`: any git operation fails
 - `Skill FAIL`: any skill fails to complete
 
-**Examples:**
-```
-**[Validation FAIL]** Banned word "leverage" in paragraph 3
-
-**[Git Error]** Merge conflict in 01-pillar-brief.md
-
-**[Skill FAIL]** /seo-content failed: missing brand voice in profile
-```
-
 ### When Pillar Completes
 
 1. Review all errors logged to the Issue
@@ -213,23 +175,7 @@ Auto-comment to the Issue with this format:
 3. Convert Draft PR to Ready for Review
 4. Close the Issue with summary comment
 
-**Closing Comment Template:**
-```
-## Summary
-
-- Total errors logged: {count}
-- Patterns extracted: {count}
-- Added to common-mistakes.md: {list pattern names}
-
-Closing as pillar is complete.
-```
-
-### Why This Rule Exists
-
-- **Captures everything** — No error lost between sessions
-- **Patterns emerge** — Same error 5 times = obvious pattern
-- **System improves** — common-mistakes.md grows with real data
-- **Errors decrease** — Future validation catches known patterns
+Close the Issue with a summary of total errors, patterns extracted, and updates to common-mistakes.md.
 
 ---
 
