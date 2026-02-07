@@ -1,19 +1,16 @@
 # Client Profile: {CLIENT_NAME}
 
-**Created:** {DATE}
-**Last updated:** {DATE}
+**Created:** {DATE} | **Last updated:** {DATE}
 
 ---
 
 ## Company
 
-| Field | Value |
-|-------|-------|
-| **Name** | {company_name} |
-| **Industry** | {industry} |
-| **Size** | {size: solo / small team / agency / enterprise} |
-| **Website** | {url} |
-| **Years operating** | {years} |
+- **Name:** {company_name}
+- **Industry:** {industry}
+- **Size:** {solo / small team / agency / enterprise}
+- **Website:** {url}
+- **Years operating:** {years}
 
 ---
 
@@ -21,19 +18,19 @@
 
 ### Core Offering
 
-{Description of main product or service - what it is, what it does}
+{What it is, what it does}
 
 ### Problem Solved
 
-{The core problem this solves for customers}
+{Core problem solved for customers}
 
 ### Price Range
 
-{Price range if relevant to content, otherwise "N/A - not disclosed in content"}
+{Price range or "N/A"}
 
 ### Do Not Mention
 
-- {product/service to avoid mentioning}
+- {product/service to avoid}
 - {feature not yet launched}
 
 ---
@@ -42,34 +39,27 @@
 
 ### Primary Audience
 
-| Field | Value |
-|-------|-------|
-| **Job titles** | {titles, comma-separated} |
-| **Company size** | {company size they work at} |
-| **Industry** | {industries they work in} |
-| **Experience level** | {beginner / intermediate / advanced / mixed} |
-| **Geographic focus** | {UK / US / global / specific regions} |
+- **Job titles:** {titles, comma-separated}
+- **Company size:** {company size they work at}
+- **Industry:** {industries they work in}
+- **Experience level:** {beginner / intermediate / advanced / mixed}
+- **Geographic focus:** {UK / US / global / specific regions}
 
 ### Pain Points
 
-1. **{Pain point 1}** - {brief explanation}
-2. **{Pain point 2}** - {brief explanation}
-3. **{Pain point 3}** - {brief explanation}
+1. **{Pain point 1}** - {explanation}
+2. **{Pain point 2}** - {explanation}
+3. **{Pain point 3}** - {explanation}
 
 ### Failed Solutions
 
-{What they've tried before that didn't work}
+{What they've tried that didn't work}
 
 ### Goals
 
-**Immediate:**
-- {short-term goal}
-
-**Long-term:**
-- {aspirational goal}
-
-**How they measure success:**
-- {metric or outcome}
+- **Immediate:** {short-term goal}
+- **Long-term:** {aspirational goal}
+- **Success metric:** {how they measure success}
 
 ---
 
@@ -77,50 +67,12 @@
 
 ### Competitor 1: {Name}
 
-| Field | Value |
-|-------|-------|
-| **URL** | {url} |
-| **Strengths** | {what they do well} |
-| **Weaknesses** | {what they get wrong} |
-| **Our advantage** | {why choose us over them} |
+- **URL:** {url}
+- **Strengths:** {what they do well}
+- **Weaknesses:** {what they get wrong}
+- **Our advantage:** {why choose us over them}
 
-### Competitor 2: {Name}
-
-| Field | Value |
-|-------|-------|
-| **URL** | {url} |
-| **Strengths** | {what they do well} |
-| **Weaknesses** | {what they get wrong} |
-| **Our advantage** | {why choose us over them} |
-
-### Competitor 3: {Name}
-
-| Field | Value |
-|-------|-------|
-| **URL** | {url} |
-| **Strengths** | {what they do well} |
-| **Weaknesses** | {what they get wrong} |
-| **Our advantage** | {why choose us over them} |
-
-### Competitor 4: {Name}
-
-| Field | Value |
-|-------|-------|
-| **URL** | {url} |
-| **Strengths** | {what they do well} |
-| **Weaknesses** | {what they get wrong} |
-| **Our advantage** | {why choose us over them} |
-
-### Competitor 5: {Name}
-
-| Field | Value |
-|-------|-------|
-| **URL** | {url} |
-| **Strengths** | {what they do well} |
-| **Weaknesses** | {what they get wrong} |
-| **Our advantage** | {why choose us over them} |
-
-<!-- Remove unused competitor sections if fewer than 5 -->
+*Repeat the above block for competitors 2-5.*
 
 ---
 
@@ -128,99 +80,71 @@
 
 ### Voice Summary
 
-{2-3 sentences capturing the essence of this voice. What does it FEEL like to encounter? How would a reader describe the experience?}
+{2-3 sentences capturing the voice essence}
 
 ### Core Personality Traits
 
-| Trait | What This Means in Practice |
-|-------|----------------------------|
-| **{Trait 1}** | {How this shows up in content - specific examples} |
-| **{Trait 2}** | {How this shows up in content - specific examples} |
-| **{Trait 3}** | {How this shows up in content - specific examples} |
-| **{Trait 4}** | {How this shows up in content - specific examples} |
-| **{Trait 5}** | {How this shows up in content - specific examples} |
+- **{Trait 1}:** {How this shows up in content}
+- **{Trait 2}:** {How this shows up in content}
+- **{Trait 3}:** {How this shows up in content}
+- **{Trait 4}:** {How this shows up in content}
+- **{Trait 5}:** {How this shows up in content}
 
 ### Tone Spectrum
 
-| Dimension | Position | Notes |
-|-----------|----------|-------|
-| Formal ↔ Casual | {e.g., "Casual, but not sloppy"} | {specifics on where to draw the line} |
-| Serious ↔ Playful | {e.g., "Mostly serious, occasional wit"} | {when humour is/isn't appropriate} |
-| Reserved ↔ Bold | {e.g., "Bold, makes strong claims"} | {how confident to be} |
-| Simple ↔ Sophisticated | {e.g., "Simple words, sophisticated ideas"} | {vocabulary complexity level} |
-| Warm ↔ Direct | {e.g., "Direct but not cold"} | {balance of friendliness and efficiency} |
+- **Formal ↔ Casual:** {position + where to draw the line}
+- **Serious ↔ Playful:** {position + when humour is appropriate}
+- **Reserved ↔ Bold:** {position + confidence level}
+- **Simple ↔ Sophisticated:** {position + vocabulary complexity}
+- **Warm ↔ Direct:** {position + friendliness vs efficiency}
 
 ### Vocabulary
 
 **Words/phrases to USE:**
-- {word/phrase} — {why/when to use}
-- {word/phrase} — {why/when to use}
-- {signature phrases if any}
+- {word/phrase} — {why/when}
+- {word/phrase} — {why/when}
 
 **Words/phrases to AVOID:**
-- {word/phrase} — {why to avoid}
-- {word/phrase} — {why to avoid}
-- {AI-sounding words to skip}
+- {word/phrase} — {why}
+- {word/phrase} — {why}
 
-| Setting | Value |
-|---------|-------|
-| **Jargon level** | {Heavy / Moderate / Light / Translated} |
-| **Profanity** | {Yes / Occasional / Never} |
+- **Jargon level:** {Heavy / Moderate / Light / Translated}
+- **Profanity:** {Yes / Occasional / Never}
 
 ### Rhythm & Structure
 
-**Sentences:** {e.g., "Mix of short punchy (3-5 words) and medium (10-15 words). Rarely long."}
-
-**Paragraphs:** {e.g., "Short. 1-3 sentences max. Lots of white space."}
-
-**Openings:** {e.g., "Often starts with bold statement or direct challenge. Rarely asks questions."}
-
-**Closings:** {e.g., "Action-oriented CTA. No wishy-washy summaries."}
-
-**Formatting:** {e.g., "Uses headers. Bulleted lists. Bold for emphasis. Minimal emojis."}
+- **Sentences:** {length mix and style}
+- **Paragraphs:** {length and spacing}
+- **Openings:** {how content typically starts}
+- **Closings:** {how content typically ends}
+- **Formatting:** {headers, lists, bold, emojis}
 
 ### POV & Address
 
-| Field | Value |
-|-------|-------|
-| **First person** | {I / We / Mix} |
-| **Reader address** | {You / Direct name / Folks / Friends / etc.} |
-| **Relationship stance** | {Teacher / Peer / Guide / Insider / Rebel} |
+- **First person:** {I / We / Mix}
+- **Reader address:** {You / Direct name / Folks / Friends / etc.}
+- **Relationship stance:** {Teacher / Peer / Guide / Insider / Rebel}
 
 ### Voice Examples
 
 **Content we admire:**
-- {URL or description} — {what specifically we like about how they communicate}
-- {URL or description} — {what specifically we like about how they communicate}
+- {URL or description} — {what we like about it}
+- {URL or description} — {what we like about it}
 
 **Our best content:**
 - {URL or description} — {what makes it sound like us}
 
 ### Example Phrases
 
-**On-brand (sounds like us):**
-- "{Example phrase that captures our voice}"
-- "{Example phrase that captures our voice}"
-- "{Example phrase that captures our voice}"
+**On-brand:** "{phrase}" | "{phrase}" | "{phrase}"
 
-**Off-brand (doesn't sound like us):**
-- "{Example phrase}" — {why it's wrong for our voice}
-- "{Example phrase}" — {why it's wrong for our voice}
-- "{Example phrase}" — {why it's wrong for our voice}
+**Off-brand:** "{phrase}" — {why wrong} | "{phrase}" — {why wrong}
 
 ### Do's and Don'ts
 
-**DO:**
-- {Specific guidance on what to do}
-- {Specific guidance on what to do}
-- {Specific guidance on what to do}
-- {Specific guidance on what to do}
+**DO:** {guidance} | {guidance} | {guidance}
 
-**DON'T:**
-- {Specific guidance on what to avoid}
-- {Specific guidance on what to avoid}
-- {Specific guidance on what to avoid}
-- {Specific guidance on what to avoid}
+**DON'T:** {guidance} | {guidance} | {guidance}
 
 ---
 
@@ -228,7 +152,6 @@
 
 ### Words to Avoid
 
-- {word} - {reason}
 - {word} - {reason}
 - {word} - {reason}
 
@@ -240,23 +163,17 @@
 ### Signature Phrases
 
 - "{phrase}" - {when to use}
-- "{phrase}" - {when to use}
 
 ### Terminology
 
-| Our Term | Industry Standard | Notes |
-|----------|-------------------|-------|
-| {our term} | {standard term} | {when/why we differ} |
-| {product name} | — | {exact capitalisation} |
-| {feature name} | — | {how to reference} |
+- **{our term}:** replaces "{standard term}"
+- **{product name}:** {exact capitalisation}
 
 ### How We Refer To...
 
-| Subject | Our Language |
-|---------|--------------|
-| **Our customers** | {clients / customers / users / members / etc.} |
-| **Our product** | {product name / the platform / the tool / etc.} |
-| **Our company** | {we / company name / the team / etc.} |
+- **Our customers:** {clients / customers / users / members}
+- **Our product:** {product name / the platform / the tool}
+- **Our company:** {we / company name / the team}
 
 ---
 
@@ -264,36 +181,24 @@
 
 ### Primary CTA
 
-| Field | Value |
-|-------|-------|
-| **Action** | {free trial / demo / contact / newsletter / purchase} |
-| **URL** | {CTA destination URL} |
+- **Action:** {free trial / demo / contact / newsletter / purchase}
+- **URL:** {CTA destination URL}
 
 ### CTA Templates
 
-**Soft CTA:**
-> {example soft CTA copy}
-
-**Hard CTA:**
-> {example hard CTA copy}
-
-**Newsletter CTA:**
-> {example newsletter signup copy}
+- **Soft:** {example soft CTA copy}
+- **Hard:** {example hard CTA copy}
+- **Newsletter:** {example newsletter signup copy}
 
 ### Lead Magnets
 
-| Name | Type | URL |
-|------|------|-----|
-| {lead magnet name} | {guide / template / tool / etc.} | {url} |
+- **{lead magnet name}:** {type} — {url}
 
 ### Social Proof
 
-| Type | Detail |
-|------|--------|
-| **Customer count** | {number or "X+ customers"} |
-| **Notable clients** | {names, with permission} |
-| **Awards** | {recognition} |
-| **Stats** | {citable statistics} |
+- **Customer count:** {number or "X+ customers"}
+- **Notable clients:** {names}
+- **Awards/Stats:** {recognition, citable statistics}
 
 ---
 
@@ -301,11 +206,8 @@
 
 ### Content Goals
 
-**Primary:** {main goal: traffic / leads / brand awareness / thought leadership / sales enablement}
-
-**Secondary:**
-- {goal 2}
-- {goal 3}
+- **Primary:** {traffic / leads / brand awareness / thought leadership / sales enablement}
+- **Secondary:** {goal 2}, {goal 3}
 
 ### Priority Topics
 
@@ -315,16 +217,11 @@
 
 ### Seasonal Considerations
 
-| Period | Focus |
-|--------|-------|
-| {Q1 / month / season} | {relevant topic or campaign} |
+- **{Q1 / month / season}:** {relevant topic or campaign}
 
 ### Success Metrics
 
-| Metric | Target |
-|--------|--------|
-| {metric} | {target value} |
-| {metric} | {target value} |
+- **{metric}:** {target} | **{metric}:** {target}
 
 ---
 
@@ -341,13 +238,3 @@
 **CTA:** {primary CTA in one line}
 
 **Audience in one line:** {concise audience description}
-
----
-
-## Notes
-
-{Any additional context, preferences, or edge cases that don't fit above}
-
----
-
-*Profile created via `/onboard-client` skill*

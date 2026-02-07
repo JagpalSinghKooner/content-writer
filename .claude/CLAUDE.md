@@ -8,15 +8,8 @@ A content production system that creates SEO-optimised articles for any client. 
 
 This project uses **two separate task tracking files** for different purposes:
 
-| File | Location | Purpose |
-|------|----------|---------|
-| `TASKS.md` | Repository root | **System development tasks** — Building skills, rules, templates, and infrastructure for the content system itself |
-| `PROJECT-TASKS.md` | `/projects/{client}/{project}/` | **Client project work** — Tracking content creation tasks for specific client projects (keyword research, articles, distribution) |
-
-**Why two files?**
-
-- **TASKS.md (root):** Tracks work on the content system itself — new skills, rule updates, template improvements, bug fixes. This is *building the machine*.
-- **PROJECT-TASKS.md:** Tracks work *using* the system for clients — researching keywords, writing articles, creating distribution content. This is *running the machine*.
+- **`TASKS.md`** (repository root): System development tasks. Building skills, rules, templates, and infrastructure for the content system itself.
+- **`PROJECT-TASKS.md`** (`/projects/{client}/{project}/`): Client project work. Tracking content creation tasks for specific client projects (keyword research, articles, distribution).
 
 **When starting a session:**
 - Working on a client project? → Read the project's `PROJECT-TASKS.md`
@@ -85,17 +78,7 @@ Every project uses this structure:
 - **Next:** [Context for next task]
 ```
 
-### Why This Rule Exists
-
-- Prevents context rot
-- Maintains consistent quality
-- Creates clear audit trail
-- Enables pause/resume at any point
-- Every task is reproducible with its starter prompt
-
-**If you skip this rule, the work fails.**
-
-See [Common Mistakes](rules/common-mistakes.md) for recurring violations of this rule.
+See [Common Mistakes](references/common-mistakes.md) for recurring violations of this rule.
 
 ### STOP: Before Completing Any Task
 
@@ -130,15 +113,6 @@ Immediately after updating PROJECT-TASKS.md with PASS status:
    ```
 3. Push to the current branch
 
-**Example commit:**
-```
-✅ Complete pillar brief for AI Marketing
-
-Created 01-pillar-brief.md with competitor analysis and content plan.
-
-Co-Authored-By: Claude <noreply@anthropic.com>
-```
-
 ### When a Pillar is Complete
 
 After the final task in a pillar passes (pillar guide + distribution done):
@@ -148,18 +122,11 @@ After the final task in a pillar passes (pillar guide + distribution done):
    - **Body:** Summary of all articles, word counts, and distribution assets
 2. Inform the user the PR is ready for review
 
-**PR triggers when:**
-- Pillar guide is written and validated
-- All supporting articles are written and validated
-- Distribution content is created (if requested)
-
 ### Branch Strategy
 
-| Scenario | Branch |
-|----------|--------|
-| Single pillar | Work on `main` or current branch |
-| Multiple pillars | Create `pillar/{pillar-name}` branch |
-| Client project | Create `client/{client-name}` branch |
+- Single pillar: work on `main` or current branch
+- Multiple pillars: create `pillar/{pillar-name}` branch
+- Client project: create `client/{client-name}` branch
 
 ### What NOT to Auto-Commit
 
@@ -197,20 +164,9 @@ Auto-comment to the Issue with this format:
 ```
 
 **Error Types:**
-| Type | When |
-|------|------|
-| `Validation FAIL` | `/validate-content` returns FAIL |
-| `Git Error` | Any git operation fails |
-| `Skill FAIL` | Any skill fails to complete |
-
-**Examples:**
-```
-**[Validation FAIL]** Banned word "leverage" in paragraph 3
-
-**[Git Error]** Merge conflict in 01-pillar-brief.md
-
-**[Skill FAIL]** /seo-content failed: missing brand voice in profile
-```
+- `Validation FAIL`: `/validate-content` returns FAIL
+- `Git Error`: any git operation fails
+- `Skill FAIL`: any skill fails to complete
 
 ### When Pillar Completes
 
@@ -219,23 +175,7 @@ Auto-comment to the Issue with this format:
 3. Convert Draft PR to Ready for Review
 4. Close the Issue with summary comment
 
-**Closing Comment Template:**
-```
-## Summary
-
-- Total errors logged: {count}
-- Patterns extracted: {count}
-- Added to common-mistakes.md: {list pattern names}
-
-Closing as pillar is complete.
-```
-
-### Why This Rule Exists
-
-- **Captures everything** — No error lost between sessions
-- **Patterns emerge** — Same error 5 times = obvious pattern
-- **System improves** — common-mistakes.md grows with real data
-- **Errors decrease** — Future validation catches known patterns
+Close the Issue with a summary of total errors, patterns extracted, and updates to common-mistakes.md.
 
 ---
 
@@ -249,122 +189,24 @@ Run `/onboard-client` once per client to create their profile:
 
 **Note:** Brand voice is captured during onboarding (not a separate step). The profile includes a complete voice profile with tone spectrum, personality traits, vocabulary, rhythm patterns, and example phrases.
 
+### Multi-Client Architecture
+
+When scaling to multiple clients, path isolation prevents context pollution:
+
+- Each client is isolated by directory path (`/clients/{name}/`)
+- Agents receive the client profile path as explicit input (never auto-detected)
+- Main session verifies the correct profile path before spawning any agent
+- Never load multiple client profiles in the same session
+
 ---
 
 ## Phase 2: Content Generation
 
-| Step | Skill | Input | Output |
-|------|-------|-------|--------|
-| 1 | `/keyword-research` | Client profile | `00-keyword-brief.md` |
-| 2 | `/start-pillar` | Keyword brief + pillar name | `{pillar}/01-pillar-brief.md` |
-| 3 | `/positioning-angles` | Pillar brief + profile | `{pillar}/02-positioning.md` |
-| 4 | `/seo-content` | Positioning + profile | `{pillar}/articles/{nn}-{slug}.md` |
-| 5 | `/direct-response-copy` | Draft article | Updates article in place |
-| 6 | `/content-atomizer` | Final article | `{pillar}/distribution/{slug}/` |
-| 7 | `/validate-content` | Final + rules | PASS/FAIL |
-
-### File Structure
-
-```
-/projects/{client}/{project}/
-├── PROJECT-TASKS.md
-├── 00-keyword-brief.md
-└── {pillar-name}/
-    ├── 01-pillar-brief.md
-    ├── 02-positioning.md
-    ├── articles/
-    │   ├── 01-{slug}.md
-    │   ├── 02-{slug}.md
-    │   └── ...
-    └── distribution/
-        └── {article-slug}/
-            ├── linkedin.md
-            ├── twitter.md
-            ├── newsletter.md
-            └── instagram.md
-```
+Follow the 7-step workflow: keyword research → start pillar → positioning → seo-content → direct-response-copy → validate → atomize. Steps 1-3 are manual (require user decisions); steps 4-7 are agent-automated via `/execute-pillar`. See [Workflow Rules](rules/workflow.md) for the full pipeline, agent orchestration, retry logic, and tier-based parallel execution.
 
 ### File Naming Conventions
 
-**Strict naming rules for all project files:**
-
-| File Type | Naming Pattern | Example |
-|-----------|----------------|---------|
-| Keyword brief | `00-keyword-brief.md` | `00-keyword-brief.md` |
-| Pillar brief | `01-pillar-brief.md` | `01-pillar-brief.md` |
-| Positioning | `02-positioning.md` | `02-positioning.md` |
-| Supporting articles | `{nn}-{slug}.md` | `01-beginners-guide-what-is-seo.md` |
-| Pillar guide | `{nn}-{slug}.md` (highest number) | `11-complete-guide-ai-marketing-strategy.md` |
-| Distribution | `distribution/{slug}/{platform}.md` | `distribution/beginners-guide-what-is-seo/linkedin.md` |
-
-**Article Numbering:**
-
-Supporting articles and the pillar guide are numbered sequentially:
-
-1. **Supporting articles** numbered `01`, `02`, `03`... in priority/publishing order
-2. **Pillar guide** always gets the **highest number** (publishes last)
-3. **Example:** 10 supporting articles + pillar guide = supporting articles are `01`-`10`, pillar guide is `11-{slug}.md`
-
-The pillar guide publishes last because it links to all supporting articles—those articles must exist first.
-
-**Slug Rules:**
-- Lowercase only
-- Hyphens between words (no underscores or spaces)
-- Descriptive-first format: `{context}-{keyword}`
-- Max 50 characters
-- No stop words unless essential for meaning
-
-**Slug Format:**
-
-Slugs must be descriptive, not keyword-only. The format is `{context}-{keyword}` where context provides meaning and keyword targets search.
-
-| Bad (keyword-only) ✗ | Good (descriptive-first) ✓ |
-|---------------------|---------------------------|
-| `adhd-sleep` | `understanding-adhd-sleep-problems` |
-| `what-is-seo` | `beginners-guide-what-is-seo` |
-| `email-marketing` | `complete-guide-email-marketing` |
-| `productivity-tips` | `morning-routine-productivity-tips` |
-
-**Why descriptive-first:**
-- Keyword-only slugs are generic and undifferentiated
-- Descriptive slugs signal content depth to readers and search engines
-- They match the H1 hook requirement (both need context beyond keyword)
-
-**Distribution Folder:**
-
-When atomising content for social distribution, create a folder per article:
-
-```
-distribution/{article-slug}/
-├── linkedin.md      # LinkedIn post(s)
-├── twitter.md       # Twitter/X thread
-├── newsletter.md    # Newsletter snippet
-└── instagram.md     # Instagram caption + carousel notes
-```
-
-Each platform file follows its own format but references the source article slug in the filename structure.
-
-**Platform File Formats:**
-
-Each distribution file uses a consistent format with YAML frontmatter:
-
-| File | Contains | Key Sections |
-|------|----------|--------------|
-| `linkedin.md` | Carousel slides + text posts | Carousel (slides 1-10), Text Posts (2-3 standalone) |
-| `twitter.md` | Thread + single tweets | Thread (8-15 tweets), Singles (3-5 standalone) |
-| `newsletter.md` | Newsletter snippet | Hook, Body (2-3 paragraphs), CTA |
-| `instagram.md` | Carousel + Reel script | Carousel (slides 1-10), Caption, Reel Script (15-30s) |
-
-**Standard frontmatter for all platform files:**
-
-```yaml
----
-source_article: "{slug}"
-platform: "{platform}"
-created: "YYYY-MM-DD"
-status: draft | ready | published
----
-```
+Supporting articles: `{nn}-{slug}.md` numbered in priority order. Pillar guide gets the highest number (publishes last). See [File Naming Conventions](references/file-naming-conventions.md) for full naming rules, slug format, and distribution paths.
 
 ### Pillar-First Execution
 
@@ -375,216 +217,28 @@ Complete ALL articles for one pillar before moving to the next. This ensures:
 
 ### Internal Linking Strategy
 
-Internal links are added at different times depending on link type:
-
-| Link Type | When to Add | Notes |
-|-----------|-------------|-------|
-| Links TO pillar guide | After pillar guide published | Go back and update all supporting articles |
-| Links BETWEEN supporting articles | During writing if target exists, or after both published | Use placeholder if target doesn't exist yet |
-| Links FROM pillar guide | During pillar guide writing | All supporting articles exist at this point |
-| Links FROM outside pillar | After pillar complete | Cross-pillar linking pass |
-
-**Placeholder Convention:**
-
-When referencing an article that doesn't exist yet, use this placeholder:
-
-```html
-<!-- LINK NEEDED: [slug] when published -->
-```
-
-**Example:** Writing article 01 and want to reference article 05:
-
-```markdown
-For advanced techniques, see our guide on automation workflows<!-- LINK NEEDED: 05-automation-workflows when published -->.
-```
-
-**Post-Pillar Linking Pass:**
-
-After the pillar guide is published, run a linking pass:
-1. Replace all `<!-- LINK NEEDED: ... -->` placeholders with actual links
-2. Add links TO the pillar guide from all supporting articles
-3. Update frontmatter `internal_links` arrays
-4. Verify no broken links remain
-
-#### Cross-Pillar Linking
-
-Cross-pillar links connect related content across different topic clusters. Use them sparingly—each article should primarily link within its own pillar.
-
-**When to Cross-Link:**
-
-| Scenario | Example |
-|----------|---------|
-| Topics naturally overlap | AI marketing tools article links to automation pillar guide |
-| Article mentions concept from another pillar | SEO article references email marketing best practices |
-| Supporting article could benefit from related pillar guide | How-to article links to comprehensive guide in adjacent topic |
-
-**Cross-Pillar Linking Pass:**
-
-After completing the current pillar:
-1. Review other completed pillars for linking opportunities
-2. Add 1-2 cross-pillar links maximum per article (more dilutes internal link equity)
-3. Update frontmatter `internal_links` arrays with new cross-pillar links
-4. Use anchor text that clarifies the pillar context (not just generic keywords)
-
-**Anchor Text for Cross-Pillar Links:**
-
-- ✓ "our guide to building email sequences" (clarifies different topic)
-- ✓ "the automation workflow pillar" (explicitly names the pillar)
-- ✗ "click here" (no context)
-- ✗ "marketing" (too generic)
-
-**Don't Over-Link:**
-
-- Each article primarily links within its own pillar (maintains topical authority)
-- Cross-pillar links are supplementary, not primary
-- If you're adding more than 2 cross-pillar links, reconsider—one pillar shouldn't depend heavily on another
+Use `<!-- LINK NEEDED: [slug] when published -->` for articles that don't exist yet. After pillar guide publishes, run a linking pass to replace all placeholders, add links TO the pillar guide, and update frontmatter. Cross-pillar: max 1-2 links per article. See [Internal Linking Strategy](references/internal-linking-strategy.md) for full rules, placeholder syntax, and cross-pillar guidelines.
 
 ### Validation Checkpoints
 
-Content validation happens at specific points in the workflow. Some checkpoints are automatic (run every time), others are manual (run on request).
-
-| Checkpoint | Trigger | What to Validate | Type |
-|------------|---------|------------------|------|
-| Post-draft | After `/seo-content` | Full article against universal rules | Automatic |
-| Post-enhancement | After `/direct-response-copy` | Full article + brand voice alignment | Automatic |
-| Pre-publish | Before changing status to "published" | Final validation (all checks) | Automatic |
-| Batch review | After pillar complete | All pillar articles for cross-article consistency | Manual |
-| Spot check | When issues suspected | Specific content on request | Manual |
-
-**Automatic Checkpoints:**
-
-These run without being asked:
-- **Post-draft:** Catches AI fingerprints and rule violations early, before enhancement work
-- **Post-enhancement:** Ensures direct-response-copy changes didn't introduce issues
-- **Pre-publish:** Final gate before content goes live
-
-**Manual Checkpoints:**
-
-These run when explicitly requested:
-- **Batch review:** After completing a pillar, review all articles together for consistency, contradictions, and cross-linking
-- **Spot check:** When client feedback suggests issues, when revisiting old content, or when quality is questioned
-
-### Agent-Automated Execution
-
-Steps 4-7 of the content workflow (seo-content, direct-response-copy, validate-content, content-atomizer) are automated via the agent system. The main session orchestrates agent execution.
-
-**Full workflow documentation:** [Workflow Rules](rules/workflow.md)
-
-**Key Principles:**
-
-1. **Agents cannot spawn other agents** — The main session orchestrates all agent spawning
-2. **Fresh context windows** — Each agent runs with clean context
-3. **Tier-based parallel execution** — Articles grouped by internal linking dependencies
-4. **Automatic retry loop** — Validation failures trigger copy-enhancer fixes (max 3 attempts)
-5. **Full validation output required** — Never abbreviated
-
-**Quick Reference:**
-
-| Step | Agent | Auto-Triggered By |
-|------|-------|-------------------|
-| 4 | seo-writer | "Write an article for keyword X" |
-| 5 | copy-enhancer | "Enhance this article" or validation FAIL |
-| 6 | content-validator | After enhancement (automatic) |
-| 7 | content-atomizer | "Create distribution content" |
-
-**For pillar execution:** Use `/execute-pillar` to run the complete workflow with tier-based parallel execution, error logging, and automatic commits. See [Workflow Rules](rules/workflow.md) for full documentation.
-
----
-
-## Skills
-
-| Skill | Purpose |
-|-------|---------|
-| `/onboard-client` | Interview to build client profile |
-| `/keyword-research` | Find high-opportunity keywords |
-| `/start-pillar` | Extract pillar + competitor analysis |
-| `/positioning-angles` | Find the hook that differentiates |
-| `/seo-content` | Write SEO articles that sound human |
-| `/direct-response-copy` | Add conversion elements |
-| `/brand-voice` | Voice refinement or evolution (initial voice captured in `/onboard-client`) |
-| `/email-sequences` | Build email sequences that convert |
-| `/content-atomizer` | Repurpose content across platforms |
-| `/lead-magnet` | Generate lead magnet concepts |
-| `/newsletter` | Create newsletters people want to read |
-| `/validate-content` | Check content against rules before publishing |
-| `/orchestrator` | Route to correct skill when unsure where to start |
-| `/execute-pillar` | Run complete pillar execution workflow with agent orchestration |
-| `/audit-pillar` | Re-validate existing content against current rules |
+Automatic: post-draft, post-enhancement, pre-publish. Manual: batch review (after pillar), spot check (on request). See [Validation Checkpoints](references/validation-checkpoints.md) for details.
 
 ---
 
 ## Agents
 
-Six agents handle the automated content generation and audit workflows. The main session orchestrates all agent execution.
-
-| Agent | Purpose | Auto-Triggers On |
-|-------|---------|------------------|
-| **seo-writer** | Write SEO articles with E-E-A-T research | "Write an article for keyword X", "Create content for X" |
-| **copy-enhancer** | Add persuasion + fix validation issues | "Enhance this article", "Fix these issues" |
-| **content-validator** | Check rules + quality (read-only) | After enhancement (automatic), "Validate this article" |
-| **content-atomizer** | Create platform distribution | "Create distribution content", "Atomize this article" |
-| **link-auditor** | Audit internal links across a pillar | After pillar complete, "Audit links in this pillar" |
-| **consistency-checker** | Check cross-article consistency across a pillar | During audit, "Check consistency across pillar" |
-
-**Agent Files:** Located in `.claude/agents/`
-
-**Key Constraint:** Agents cannot spawn other agents. The main session orchestrates all spawning, handles retry loops, and manages commits.
-
-**Workflow:** See [Workflow Rules](rules/workflow.md) for the complete orchestration pattern, retry logic, and tier-based parallel execution.
-
-**Full Specifications:** See [Agents PRD](agents-prd.md) for detailed agent specifications, return formats, and system prompts.
+Seven agents handle automated workflows (including Copy Fixer for validation retries). Agents cannot spawn other agents; the main session orchestrates all spawning, retry loops, and commits. Agent files in `.claude/agents/`.
 
 ---
 
-## Rules
+## Rules & References
 
-- [Universal Rules](rules/universal-rules.md) - UK English, banned AI words, SEO requirements
-- [Common Mistakes](rules/common-mistakes.md) - Learned patterns (grows over time)
-- [Client Profile Requirements](rules/client-profile-requirements.md) - Which profile fields each skill needs
-- [Workflow Rules](rules/workflow.md) - Agent orchestration, execution pipeline, retry loops
+- [Universal Rules](rules/universal-rules.md) — UK English, banned AI words, SEO requirements
+- [Workflow Rules](rules/workflow.md) — Agent orchestration, execution pipeline, retry loops
+- [Common Mistakes](references/common-mistakes.md) and [Client Profile Requirements](references/client-profile-requirements.md) in `references/`
 
 ---
 
 ## Templates
 
-Reusable templates for common project needs. Copy and customise for each project.
-
-### Shared Templates
-
-Located in `.claude/skills/templates/`:
-
-| Template | Purpose |
-|----------|---------|
-| [tasks-template.md](skills/templates/tasks-template.md) | PROJECT-TASKS.md starter for new projects |
-| [article-template.md](skills/templates/article-template.md) | SEO article structure with frontmatter |
-| [distribution-template.md](skills/templates/distribution-template.md) | Platform files for content atomisation |
-| [email-sequence-template.md](skills/templates/email-sequence-template.md) | Email sequence structures by type |
-
-### Skill-Specific Templates
-
-Some skills have their own templates:
-
-| Skill | Template | Purpose |
-|-------|----------|---------|
-| `/onboard-client` | [profile-template.md](skills/onboard-client/profile-template.md) | Client profile structure |
-| `/start-pillar` | [pillar-brief-template.md](skills/start-pillar/templates/pillar-brief-template.md) | Pillar brief structure |
-
-### Reference Materials
-
-Some skills include `/references/` folders with detailed guidance:
-
-| Skill | References | Contents |
-|-------|------------|----------|
-| `/positioning-angles` | 5 files | Angle frameworks, Dunford positioning, Hormozi offer, Schwartz sophistication, unique mechanism |
-| `/lead-magnet` | 5 files | Format examples, psychology, SaaS/services/info-product magnets |
-| `/content-atomizer` | 1 file | Platform playbook with specs and best practices |
-| `/seo-content` | 1 file | E-E-A-T examples and citation patterns |
-| `/newsletter` | 1 file | Newsletter examples from top creators |
-
-Reference materials are loaded automatically when running the relevant skill.
-
----
-
-## Example Workflow
-
-For a complete end-to-end example showing all phases from onboarding to distribution, see [End-to-End Example](examples/end-to-end-example.md).
+Located in `.claude/skills/templates/`. Skills load their own templates and reference materials automatically.

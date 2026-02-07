@@ -5,14 +5,6 @@ description: "Transform one piece of content into platform-optimized assets acro
 
 # Content Atomizer Skill
 
-One piece of content should become ten. The best creators don't create more—they distribute better.
-
-This skill transforms any source content into platform-optimized assets. Not generic repurposing. Platform-native content that performs.
-
-**The math:** A single blog post can become 1 LinkedIn carousel + 2 LinkedIn text posts + 1 Twitter thread + 3 single tweets + 2 Instagram carousels + 1 Reel script + 2 TikTok scripts + 1 YouTube Short script = 13 pieces of content from one source.
-
----
-
 ## The Core Job
 
 Transform source content into **platform-native assets** that:
@@ -27,16 +19,14 @@ Transform source content into **platform-native assets** that:
 
 ### What Can Be Atomized
 
-| Source Type | Best Outputs | Atomization Potential |
-|-------------|--------------|----------------------|
-| **Blog Post** | All platforms | High (lots of material) |
-| **Newsletter** | LinkedIn, Twitter, Instagram | High |
-| **Podcast Episode** | Short-form video, threads, carousels | Very High |
-| **Long-form Video** | Shorts, Reels, TikToks, carousels | Very High |
-| **Webinar/Talk** | All platforms | Very High |
-| **Case Study** | LinkedIn, Twitter threads | High |
-| **Data/Research** | Carousels, threads, single posts | Medium-High |
-| **Framework/Process** | Carousels, threads, video scripts | High |
+- **Blog Post** → All platforms (High)
+- **Newsletter** → LinkedIn, Twitter, Instagram (High)
+- **Podcast Episode** → Short-form video, threads, carousels (Very High)
+- **Long-form Video** → Shorts, Reels, TikToks, carousels (Very High)
+- **Webinar/Talk** → All platforms (Very High)
+- **Case Study** → LinkedIn, Twitter threads (High)
+- **Data/Research** → Carousels, threads, single posts (Medium-High)
+- **Framework/Process** → Carousels, threads, video scripts (High)
 
 ### What to Extract
 
@@ -68,12 +58,10 @@ From any source, identify:
 
 **Optimal Specs:**
 
-| Format | Specs | Notes |
-|--------|-------|-------|
-| Carousel | 5-10 slides, 1080x1350px | Highest dwell time, save-worthy |
-| Text Post | 1,200-1,500 chars, 3-line hook | Depth over frequency |
-| Document | PDF, 10-15 pages max | Good for frameworks |
-| Video | 30-90 seconds, captions required | Lower reach than text/carousels |
+- **Carousel:** 5-10 slides, 1080x1350px. Highest dwell time, save-worthy
+- **Text Post:** 1,200-1,500 chars, 3-line hook. Depth over frequency
+- **Document:** PDF, 10-15 pages max. Good for frameworks
+- **Video:** 30-90 seconds, captions required. Lower reach than text/carousels
 
 #### LinkedIn Carousel Template
 
@@ -191,12 +179,10 @@ Here's what I learned:
 
 **Optimal Specs:**
 
-| Format | Specs | Performance |
-|--------|-------|-------------|
-| Single Tweet | <100 characters optimal | Highest engagement rate |
-| Thread | 8-15 tweets | Best for depth + followers |
-| Quote Tweet | Add value to original | 2x engagement vs retweet |
-| Image Tweet | 1200x675px | 35% more engagement |
+- **Single Tweet:** <100 characters optimal. Highest engagement rate
+- **Thread:** 8-15 tweets. Best for depth + followers
+- **Quote Tweet:** Add value to original. 2x engagement vs retweet
+- **Image Tweet:** 1200x675px. 35% more engagement
 
 #### Twitter Thread Template
 
@@ -317,12 +303,10 @@ Here's exactly how:
 
 **Optimal Specs:**
 
-| Format | Specs | Performance |
-|--------|-------|-------------|
-| Carousel | 6-10 slides (up to 20), 1080x1350px | Highest engagement, save-worthy |
-| Reel | 7-15 sec (viral), 30-45 sec (tutorials) | Best for discovery/reach |
-| Single Image | 1080x1350px | Getting more support in 2025 |
-| Story | 1080x1920px, <15 sec | Best for DM engagement |
+- **Carousel:** 6-10 slides (up to 20), 1080x1350px. Highest engagement, save-worthy
+- **Reel:** 7-15 sec (viral), 30-45 sec (tutorials). Best for discovery/reach
+- **Single Image:** 1080x1350px. Getting more support in 2025
+- **Story:** 1080x1920px, <15 sec. Best for DM engagement
 
 #### Instagram Carousel Template
 
@@ -470,12 +454,10 @@ OR
 
 **Optimal Specs:**
 
-| Format | Specs | Performance |
-|--------|-------|-------------|
-| Short-form | 15-30 seconds | Highest completion rate |
-| Medium | 30-60 seconds | Now favored if retention is strong |
-| Long-form | 1-3 minutes | Good for depth with engaged audiences |
-| Vertical | 1080x1920px (9:16) | Required |
+- **Short-form:** 15-30 seconds. Highest completion rate
+- **Medium:** 30-60 seconds. Now favoured if retention is strong
+- **Long-form:** 1-3 minutes. Good for depth with engaged audiences
+- **Vertical:** 1080x1920px (9:16). Required
 
 #### TikTok Script Template (15-30 seconds)
 
@@ -553,11 +535,9 @@ OR
 
 **Optimal Specs:**
 
-| Format | Specs | Performance |
-|--------|-------|-------------|
-| Shorts | 10-35 sec (discovery), up to 60 sec | Highest reach, lower depth |
-| Long-form | 8-12 minutes (sweet spot) | Best for monetization + depth |
-| Thumbnail | 1280x720px | CTR target: 4-10% (Home), 6-12% strong |
+- **Shorts:** 10-35 sec (discovery), up to 60 sec. Highest reach, lower depth
+- **Long-form:** 8-12 minutes (sweet spot). Best for monetisation + depth
+- **Thumbnail:** 1280x720px. CTR target: 4-10% (Home), 6-12% strong
 
 #### YouTube Shorts Script Template
 
@@ -638,15 +618,13 @@ End abruptly (drives rewatch for missed content)
 
 **Title Formulas:**
 
-| Pattern | Example |
-|---------|---------|
-| How I [result] | "How I Built a 6-Figure Newsletter in 8 Months" |
-| [Number] [Things] That [Outcome] | "7 LinkedIn Mistakes Killing Your Reach" |
-| Why [Thing] Doesn't Work | "Why Your Content Strategy Isn't Working" |
-| The [Adjective] [Thing] | "The Boring Marketing Strategy That Actually Works" |
-| I [Did X] For [Time]. Here's What Happened | "I Posted Daily for 90 Days. Here's What Happened" |
-| [Year] Guide to [Topic] | "2024 Guide to Growing on LinkedIn" |
-| [Thing] vs [Thing] | "Threads vs Twitter: Which One Should You Use?" |
+- **How I [result]** — "How I Built a 6-Figure Newsletter in 8 Months"
+- **[Number] [Things] That [Outcome]** — "7 LinkedIn Mistakes Killing Your Reach"
+- **Why [Thing] Doesn't Work** — "Why Your Content Strategy Isn't Working"
+- **The [Adjective] [Thing]** — "The Boring Marketing Strategy That Actually Works"
+- **I [Did X] For [Time]. Here's What Happened** — "I Posted Daily for 90 Days. Here's What Happened"
+- **[Year] Guide to [Topic]** — "2024 Guide to Growing on LinkedIn"
+- **[Thing] vs [Thing]** — "Threads vs Twitter: Which One Should You Use?"
 
 ---
 
@@ -686,15 +664,13 @@ CONTRARIAN TAKES:
 
 ### Step 2: Map to Platforms
 
-| Content Element | Best Platforms | Best Formats |
-|-----------------|----------------|--------------|
-| Core insight | All | Single posts, hooks |
-| Supporting points (together) | LinkedIn, Twitter | Carousel, thread |
-| Individual points | All | Single posts |
-| Stories | Instagram, TikTok | Reels, Stories |
-| Data points | LinkedIn, Twitter | Image posts, carousels |
-| Quotable lines | Twitter, Instagram | Quote graphics |
-| Contrarian takes | Twitter, TikTok | Single tweets, video hooks |
+- **Core insight** → All platforms → Single posts, hooks
+- **Supporting points (together)** → LinkedIn, Twitter → Carousel, thread
+- **Individual points** → All platforms → Single posts
+- **Stories** → Instagram, TikTok → Reels, Stories
+- **Data points** → LinkedIn, Twitter → Image posts, carousels
+- **Quotable lines** → Twitter, Instagram → Quote graphics
+- **Contrarian takes** → Twitter, TikTok → Single tweets, video hooks
 
 ### Step 3: Transform
 
@@ -719,77 +695,13 @@ For each platform, apply:
 
 ---
 
-## Anti-Patterns: What Not to Do
+## Anti-Patterns
 
-### Don't:
-
-1. **Copy-paste across platforms**
-   - Each platform has different norms
-   - Cross-posted content performs 40-60% worse
-
-2. **Use the same hook everywhere**
-   - LinkedIn hooks ≠ TikTok hooks
-   - Adjust energy and format per platform
-
-3. **Ignore platform-native features**
-   - No hashtags on LinkedIn carousels
-   - Always use captions on video
-   - Instagram needs visual-first thinking
-
-4. **Post everything at once**
-   - Stagger across days/weeks
-   - Gives each piece room to perform
-
-5. **Forget the CTA**
-   - Every platform piece needs a clear next action
-   - But make it platform-appropriate
-
-### Do:
-
-1. **Lead with the best hook per platform**
-2. **Adapt length to platform norms**
-3. **Use native formatting (threads, carousels, etc.)**
-4. **Front-load value (especially for video)**
-5. **Create platform-specific visuals when possible**
-
----
-
-## Transformation Examples
-
-### Example: Blog Post → Multi-Platform
-
-**Source:** 2,000-word blog post on "5 Pricing Mistakes That Kill SaaS Growth"
-
-**Atomization:**
-
-| Platform | Format | Content |
-|----------|--------|---------|
-| LinkedIn | Carousel | 8 slides: Hook + 5 mistakes + recap + CTA |
-| LinkedIn | Text Post | Deep dive on mistake #1 with personal story |
-| Twitter | Thread | 7 tweets: Hook + 5 mistakes + wrap |
-| Twitter | Single | Just mistake #3 (most contrarian) as hot take |
-| Instagram | Carousel | Visual version of LinkedIn carousel |
-| Instagram | Reel | 30-sec: "Stop making these pricing mistakes" |
-| TikTok | Video | 20-sec: Most controversial mistake, hot take style |
-| YouTube Short | Video | 45-sec: All 5 mistakes, rapid fire |
-
-### Example: Podcast Episode → Multi-Platform
-
-**Source:** 45-minute podcast interview with actionable insights
-
-**Atomization:**
-
-| Platform | Format | Content |
-|----------|--------|---------|
-| LinkedIn | Text Post | Best quote + context + your take |
-| LinkedIn | Carousel | Key framework from interview |
-| Twitter | Thread | 10 best insights from the episode |
-| Twitter | Single | Best quote as standalone insight |
-| Instagram | Carousel | Visual quotes from guest |
-| Instagram | Reel | Best 30-second clip with captions |
-| TikTok | Video | Spiciest take from interview |
-| YouTube Short | Video | Best insight with visual hook |
-| YouTube | Long-form | Full episode or highlights compilation |
+- **No cross-posting** — Adapt per platform; copy-paste performs 40-60% worse
+- **Different hooks per platform** — LinkedIn hooks ≠ TikTok hooks; adjust energy and format
+- **Use native features** — Captions on video, visual-first on Instagram, no hashtags on LinkedIn carousels
+- **Stagger posting** — Spread across days/weeks so each piece gets room to perform
+- **Always include a CTA** — Platform-appropriate next action on every piece
 
 ---
 
@@ -797,26 +709,22 @@ For each platform, apply:
 
 The same insight needs different energy per platform:
 
-| Platform | Voice | Example (same insight) |
-|----------|-------|----------------------|
-| LinkedIn | Professional, thoughtful | "After 10 years in marketing, I've learned that simplicity beats complexity. Here's why:" |
-| Twitter | Punchy, direct | "Hot take: Simple marketing > 'sophisticated' marketing. Every time." |
-| Instagram | Visual, inspirational | [Image with text: "Simple > Sophisticated" + story in caption] |
-| TikTok | Casual, energetic | "Y'all I need to talk about why everyone's overcomplicating their marketing..." |
-| YouTube | Conversational, thorough | "If you've been in marketing for any length of time, you've probably noticed something..." |
+- **LinkedIn** — Professional, thoughtful: "After 10 years in marketing, I've learned that simplicity beats complexity. Here's why:"
+- **Twitter** — Punchy, direct: "Hot take: Simple marketing > 'sophisticated' marketing. Every time."
+- **Instagram** — Visual, inspirational: [Image with text: "Simple > Sophisticated" + story in caption]
+- **TikTok** — Casual, energetic: "Y'all I need to talk about why everyone's overcomplicating their marketing..."
+- **YouTube** — Conversational, thorough: "If you've been in marketing for any length of time, you've probably noticed something..."
 
 ---
 
 ## Quick Reference: Platform Specs (December 2025)
 
-| Platform | Optimal Length | Best Format | Hook Window | Top Signal |
-|----------|---------------|-------------|-------------|------------|
-| LinkedIn | 1,200-1,500 chars | Carousel | First 3 lines | Dwell time + topic authority |
-| Twitter/X | <100 chars (single) | Thread (8-15) | First tweet | Replies + early engagement |
-| Instagram | 6-10 slides | Carousel | First slide | DM shares ("sends per reach") |
-| TikTok | 30-60 seconds (if retention high) | Short video | First 3 seconds | Completion + niche alignment |
-| YouTube (Shorts) | 10-35 seconds | Vertical video | First 2 seconds | Completion rate |
-| YouTube (Long) | 8-12 minutes | Horizontal | First 30 seconds | Satisfaction + session time |
+- **LinkedIn:** 1,200-1,500 chars, carousel, hook in first 3 lines, top signal: dwell time + topic authority
+- **Twitter/X:** <100 chars (single), thread (8-15), hook in first tweet, top signal: replies + early engagement
+- **Instagram:** 6-10 slides, carousel, hook on first slide, top signal: DM shares ("sends per reach")
+- **TikTok:** 30-60 sec (if retention high), short video, hook in first 3 seconds, top signal: completion + niche alignment
+- **YouTube Shorts:** 10-35 sec, vertical video, hook in first 2 seconds, top signal: completion rate
+- **YouTube Long:** 8-12 min, horizontal, hook in first 30 seconds, top signal: satisfaction + session time
 
 ---
 
@@ -863,313 +771,7 @@ If atomizing `articles/01-what-is-seo.md`, output goes to:
 
 ## Platform File Format Templates
 
-Each platform file uses a consistent format with YAML frontmatter and structured sections.
-
-### linkedin.md Format
-
-```markdown
----
-source_article: "{slug}"
-platform: linkedin
-created: "YYYY-MM-DD"
-status: draft
----
-
-# LinkedIn Content: {Article Title}
-
-## Carousel
-
-### Slide 1: Hook
-[Bold claim or question]
-
-Swipe → to learn [specific outcome]
-
-### Slide 2-6: Content
-[ONE point per slide with 2-3 sentences]
-
-### Slide 7: Summary
-Quick recap:
-1. [Point 1]
-2. [Point 2]
-3. [Point 3]
-
-### Slide 8: CTA
-Found this useful?
-→ Follow for more [topic]
-→ Repost to help others
-
----
-
-## Text Post 1
-
-[HOOK - First line]
-
-[CONTEXT - 2-3 lines]
-
-Here's what I learned:
-
-1. [Point with explanation]
-2. [Point with explanation]
-3. [Point with explanation]
-
-[TAKEAWAY]
-
-[CTA - Question or action]
-
-#[hashtag1] #[hashtag2] #[hashtag3]
-
----
-
-## Text Post 2
-
-[Alternative angle or deep dive on single point]
-```
-
-### twitter.md Format
-
-```markdown
----
-source_article: "{slug}"
-platform: twitter
-created: "YYYY-MM-DD"
-status: draft
----
-
-# Twitter/X Content: {Article Title}
-
-## Thread
-
-### Tweet 1 (Hook)
-[BOLD CLAIM OR PROMISE]
-
-[What they'll learn]
-
-🧵 Thread:
-
-### Tweet 2
-1. [POINT]
-
-[2-3 sentences of explanation]
-
-### Tweet 3-7
-[Continue numbered points]
-
-### Tweet 8 (Wrap)
-TL;DR:
-
-• [Point 1]
-• [Point 2]
-• [Point 3]
-
-If this was useful:
-1. Follow @[handle] for more
-2. RT the first tweet
-
----
-
-## Single Tweets
-
-### Tweet A (Insight)
-[Counterintuitive observation]
-
-Most people think [X].
-But [Y] is actually true because [Z].
-
-### Tweet B (Hot Take)
-Unpopular opinion:
-
-[Contrarian statement]
-
-Here's why: [One-line reasoning]
-
-### Tweet C (List)
-[Number] [things] that [outcome]:
-
-• [Item 1]
-• [Item 2]
-• [Item 3]
-
-Which one hits different?
-```
-
-### newsletter.md Format
-
-```markdown
----
-source_article: "{slug}"
-platform: newsletter
-created: "YYYY-MM-DD"
-status: draft
----
-
-# Newsletter Snippet: {Article Title}
-
-## Hook
-
-[1-2 sentences that create curiosity and connect to reader's situation]
-
-## Body
-
-[Paragraph 1: The core insight or problem]
-
-[Paragraph 2: The solution or framework - brief version]
-
-[Paragraph 3: Why this matters to them specifically]
-
-## CTA
-
-[Action prompt with link to full article]
-
-**Read the full breakdown:** [Article Title](link)
-
----
-
-## Alternative: Teaser Format
-
-**This week:** [Topic]
-
-[3-4 bullet points of what they'll learn]
-
-→ [Link to full article]
-```
-
-### instagram.md Format
-
-```markdown
----
-source_article: "{slug}"
-platform: instagram
-created: "YYYY-MM-DD"
-status: draft
----
-
-# Instagram Content: {Article Title}
-
-## Carousel
-
-### Slide 1: Cover
-[BOLD STATEMENT OR QUESTION]
-
-[Large, readable font - high contrast]
-
-### Slide 2: The Problem
-[Why this matters / what most people get wrong]
-
-### Slides 3-8: Content
-[ONE point per slide]
-[Large text, minimal words]
-[Visual hierarchy: headline + 1-2 supporting lines]
-
-### Slide 9: Summary
-Quick recap:
-✓ [Point 1]
-✓ [Point 2]
-✓ [Point 3]
-
-### Slide 10: CTA
-Save this for later 📌
-Follow @[handle] for more
-Share with someone who needs this
-
----
-
-## Caption
-
-[HOOK - First line must work in preview]
-
-.
-.
-.
-
-[BODY - 2-4 paragraphs, each 2-3 sentences]
-
----
-
-💾 Save this for later
-📤 Share with a friend who needs it
-💬 Drop a [emoji] if this resonated
-
----
-
-#[niche] #[broader] #[topic]
-
----
-
-## Reel Script (15-30 seconds)
-
-**[0-3 seconds: HOOK]**
-"[Pattern interrupt or bold claim]"
-
-**[3-20 seconds: VALUE]**
-"Here's [what/why/how]:
-Point one: [brief]
-Point two: [brief]
-Point three: [brief]"
-
-**[20-30 seconds: CTA]**
-"Follow for more [topic]"
-OR "Save this for later"
-
----
-
-## Visual Notes
-
-[Carousel design notes: colours, fonts, image suggestions]
-[Reel B-roll suggestions or visual hooks]
-```
-
----
-
-## Keeping Platform Specs Current
-
-Platform algorithms and best practices change frequently. This section ensures the content-atomizer skill stays accurate and effective.
-
-### Last Updated
-
-**Platform Playbook:** 2026-02-02
-**Next Review:** 2026-05-02 (quarterly)
-
-### Quarterly Update Checklist
-
-Run this checklist every quarter to keep platform specs current:
-
-| Task | What to Check |
-|------|---------------|
-| **Review algorithm changes** | Search for "[platform] algorithm update [year]" for each platform |
-| **Check format specs** | Verify character limits, image dimensions, video lengths haven't changed |
-| **Update year-specific notes** | Replace outdated year references (e.g., "2025 Changes" → "2026 Changes") |
-| **Verify hook formulas** | Test hook patterns still perform; remove underperforming formulas |
-| **Review creator examples** | Confirm referenced creators are still active and relevant |
-| **Check platform features** | Note new features (e.g., new post types, algorithm tools) |
-
-### Sources to Check
-
-**Official Platform Sources:**
-- [LinkedIn Engineering Blog](https://engineering.linkedin.com/blog)
-- [Twitter/X Blog](https://blog.twitter.com/)
-- [Instagram @creators](https://www.instagram.com/creators/)
-- [TikTok Newsroom](https://newsroom.tiktok.com/)
-- [YouTube Creator Blog](https://blog.youtube/creator-and-artist-stories/)
-
-**Industry Analysis:**
-- Social Media Examiner — Platform-specific deep dives
-- Hootsuite Blog — Annual social media trends reports
-- Sprout Social Insights — Algorithm and engagement research
-- Later Blog — Instagram and TikTok focus
-- Buffer Blog — Cross-platform analysis
-
-**Creator Communities:**
-- LinkedIn: Search #LinkedInAlgorithm, #ContentCreator
-- Twitter: Follow algorithm researchers (@LinusEkenstam, @GrowthTactics)
-- YouTube: Creator Insider channel (official YouTube updates)
-
-### What to Update
-
-When changes are found, update these locations:
-
-1. **SKILL.md** — Algorithm signals, optimal specs tables, format templates
-2. **platform-playbook.md** — Detailed breakdowns, creator examples, hook formulas
-3. **Last Updated dates** — Both files' header metadata
+See `templates/distribution-template.md` for complete file format templates (linkedin.md, twitter.md, newsletter.md, instagram.md) with YAML frontmatter and structured sections.
 
 ---
 

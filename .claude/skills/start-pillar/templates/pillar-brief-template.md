@@ -118,18 +118,5 @@
 | 4 | {Article title} | #1, #2 | {References concepts from earlier articles} |
 | 5 | {Pillar guide title} | All above | Publish last - links to all supporting articles |
 
-**Dependency types:**
-- **Content dependency:** Article explains concept needed by later articles
-- **Linking dependency:** Article must exist for internal links to work
-- **Strategic dependency:** Business reasons to publish in order
-
-**Parallel publishing:** Articles with same dependencies can publish simultaneously.
-
----
-
-## Ready for Positioning
-
-This brief feeds into `/positioning-angles` to develop:
-- Primary angle for pillar guide
-- Secondary angles for each supporting article
-- Consistency checks across all content
+- Articles with the same dependencies can publish in parallel
+- Dependencies are content (concept needed later), linking (must exist for links), or strategic (business order)

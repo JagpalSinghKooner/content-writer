@@ -6,24 +6,7 @@ Reference templates for platform-specific distribution content. Use these when a
 
 ## Usage Notes
 
-**How to use this template:**
-
-1. **As part of content-atomizer workflow:** Run `/content-atomizer` on source content and the skill will create files using these formats automatically
-
-2. **Independently:** Copy the relevant section(s) below into your distribution folder:
-   ```
-   {pillar}/distribution/{article-slug}/
-   ├── linkedin.md
-   ├── twitter.md
-   ├── newsletter.md
-   └── instagram.md
-   ```
-
-3. **Customise:** Replace placeholder text `{...}` with your actual content
-
-**File naming:** Use the source article's slug (e.g., `what-is-seo`) for the parent folder
-
-**Status values:** `draft` | `ready` | `published`
+Content-atomizer creates these files automatically. For manual use, copy the relevant template into `{pillar}/distribution/{article-slug}/`, replace `{...}` placeholders, and set status to `draft` | `ready` | `published`.
 
 ---
 
@@ -482,29 +465,16 @@ OR
 
 ---
 
-## Quick Reference: Frontmatter Fields
+## Quick Reference
 
-All distribution files use these standard frontmatter fields:
+**Frontmatter fields** (all distribution files):
+- `source_article`: Slug of the source article (e.g. `"what-is-seo"`)
+- `platform`: `linkedin`, `twitter`, `newsletter`, or `instagram`
+- `created`: Date created (e.g. `"2026-02-02"`)
+- `status`: `draft` | `ready` | `published`
 
-| Field | Description | Example |
-|-------|-------------|---------|
-| `source_article` | Slug of the source article | `"what-is-seo"` |
-| `platform` | Target platform | `linkedin`, `twitter`, `newsletter`, `instagram` |
-| `created` | Date created | `"2026-02-02"` |
-| `status` | Publication status | `draft`, `ready`, `published` |
-
----
-
-## Specs Reference
-
-Quick specs for each platform (see content-atomizer skill for full details):
-
-| Platform | Key Format | Dimensions | Length |
-|----------|------------|------------|--------|
-| LinkedIn | Carousel | 1080x1350px | 5-10 slides |
-| LinkedIn | Text post | - | 1,200-1,500 chars |
-| Twitter | Thread | - | 8-15 tweets |
-| Twitter | Single | - | <100 chars optimal |
-| Instagram | Carousel | 1080x1350px | 6-10 slides |
-| Instagram | Reel | 1080x1920px | 15-30 seconds |
-| Newsletter | Snippet | - | 2-4 paragraphs |
+**Platform specs:**
+- **LinkedIn:** Carousel 1080x1350px, 5-10 slides / Text post 1,200-1,500 chars
+- **Twitter:** Thread 8-15 tweets / Single <100 chars optimal
+- **Instagram:** Carousel 1080x1350px, 6-10 slides / Reel 1080x1920px, 15-30s
+- **Newsletter:** Snippet, 2-4 paragraphs

@@ -5,12 +5,6 @@ description: "Bridge from keyword research to positioning. Extracts a single pil
 
 # Start Pillar
 
-Keyword research gives you the map. This skill zooms in on one territory.
-
-It extracts a single pillar from your master keyword brief, runs competitor analysis to find gaps and opportunities, and outputs a focused brief that fits in context for positioning work.
-
----
-
 ## The core job
 
 Transform a pillar from your keyword research into an **actionable brief** with:
@@ -35,25 +29,6 @@ Transform a pillar from your keyword research into an **actionable brief** with:
 **Required:**
 - Pillar name (must match a pillar in your 00-keyword-brief.md)
 - Working directory set to the project folder (e.g., `/projects/client-name/project-name/`)
-
-**Example:**
-```
-/start-pillar ai-marketing-strategy
-```
-
----
-
-## The process
-
-```
-EXTRACT → RESEARCH → ANALYSE → PLAN → OUTPUT
-```
-
-1. **Extract** — Pull the pillar section from 00-keyword-brief.md
-2. **Research** — Search for top-ranking content on pillar keywords
-3. **Analyse** — Identify competitor angles, gaps, and opportunities
-4. **Plan** — Map keywords to articles with priorities
-5. **Output** — Create pillar-brief.md and folder structure
 
 ---
 
@@ -110,10 +85,7 @@ curl --location 'https://api.dataforseo.com/v3/backlinks/domain_rating/live' \
 ]'
 ```
 
-**Response fields to extract:**
-- `domain_rating` — The DR score (0-100)
-- `total_backlinks` — Total backlinks pointing to domain
-- `referring_domains` — Unique domains linking to target
+**Response fields to extract:** `domain_rating` (0-100), `total_backlinks`, `referring_domains`
 
 Run this for each competitor URL identified in Step 2.
 
@@ -135,45 +107,26 @@ Analyse the content at [competitor URL] for:
 
 Use `mcp__perplexity__perplexity_ask` for quick competitor analysis or `mcp__perplexity__perplexity_research` for comprehensive deep-dives.
 
-### 3.3 Competitor Validation Table
+### 3.3 Competitor Validation
 
-Compile findings into a validation table:
-
-| Competitor | DR Score | Backlinks | Referring Domains | Content Depth | Primary Angle | Key Gap |
-|------------|----------|-----------|-------------------|---------------|---------------|---------|
-| [Domain 1] | [0-100]  | [count]   | [count]           | [H/M/L]       | [angle]       | [gap]   |
-| [Domain 2] | [0-100]  | [count]   | [count]           | [H/M/L]       | [angle]       | [gap]   |
-| [Domain 3] | [0-100]  | [count]   | [count]           | [H/M/L]       | [angle]       | [gap]   |
-
-**Interpreting DR scores:**
-- **DR 70+:** High authority, hard to outrank directly — find angle gaps
-- **DR 50-69:** Medium authority, beatable with better content + links
-- **DR <50:** Lower authority, opportunity for comprehensive coverage
+For each competitor, compile:
+- **DR Score** (0-100) and difficulty tier: DR 70+ = high authority (find angle gaps), DR 50-69 = medium (beatable with better content), DR <50 = lower authority (opportunity)
+- **Backlinks** and **referring domains** count
+- **Content depth** (H/M/L)
+- **Primary angle**
+- **Key gap**
 
 ### 3.4 Gap Analysis
 
 With competitor data complete, identify:
 
-**Content gaps:**
-- Topics competitors miss entirely
-- Depth they lack (surface-level coverage)
-- Perspectives they ignore (specific audiences, use cases)
-- Formats they don't use (templates, tools, checklists)
+**Content gaps:** Topics competitors miss, depth they lack, perspectives they ignore, formats they don't use
 
-**Angle gaps:**
-- Common angles everyone uses (crowded positioning)
-- Angles no one has claimed (opportunity)
-- Contrarian positions available (challenge assumptions)
+**Angle gaps:** Common angles everyone uses (crowded), angles no one has claimed (opportunity), contrarian positions available
 
-**Trust gaps:**
-- Missing proof (no data, no examples)
-- Missing expertise signals (no practitioner voice)
-- Missing specificity (vague, generic advice)
+**Trust gaps:** Missing proof, missing expertise signals, missing specificity
 
-**Authority gaps (from DR analysis):**
-- Can you match/exceed their backlink profile?
-- Where are their referring domains coming from?
-- What link-worthy assets are they missing?
+**Authority gaps (from DR analysis):** Can you match/exceed their backlink profile? Where are their referring domains coming from? What link-worthy assets are they missing?
 
 ---
 
@@ -240,218 +193,4 @@ The `articles/` folder will hold individual article files as they're created (na
 
 ### Write 01-pillar-brief.md
 
-Use this exact format (keeps context compact):
-
-```markdown
-# Pillar Brief: [Pillar Name]
-
-## 1. Strategic Context
-
-**Pillar:** [Primary keyword]
-**Priority:** [From keyword brief]
-**Why now:** [1-2 sentences on opportunity]
-**Proprietary advantage:** [What unique angle/data/expertise you bring]
-
----
-
-## 2. Keyword Table
-
-| Keyword | Intent | Volume | Difficulty | Article |
-|---------|--------|--------|------------|---------|
-| [term]  | [I/C/T] | [H/M/L] | [H/M/L]   | [#]     |
-
-Intent: I=Informational, C=Commercial, T=Transactional
-Volume/Difficulty: H=High, M=Medium, L=Low
-Article: Number reference to content plan
-
----
-
-## 3. Competitor Analysis
-
-### Competitor Metrics
-
-| Competitor | DR Score | Backlinks | Referring Domains | Difficulty |
-|------------|----------|-----------|-------------------|------------|
-| [Domain 1] | [0-100]  | [count]   | [count]           | [H/M/L]    |
-| [Domain 2] | [0-100]  | [count]   | [count]           | [H/M/L]    |
-| [Domain 3] | [0-100]  | [count]   | [count]           | [H/M/L]    |
-
-*DR scores from DataForSEO `/backlinks/domain_rating/live`*
-
-### [Competitor 1]
-- **URL:** [link]
-- **DR Score:** [0-100]
-- **Angle:** [their positioning]
-- **Strengths:** [what they do well]
-- **Gaps:** [what they miss]
-
-### [Competitor 2]
-- **URL:** [link]
-- **DR Score:** [0-100]
-- **Angle:** [their positioning]
-- **Strengths:** [what they do well]
-- **Gaps:** [what they miss]
-
-### [Competitor 3]
-- **URL:** [link]
-- **DR Score:** [0-100]
-- **Angle:** [their positioning]
-- **Strengths:** [what they do well]
-- **Gaps:** [what they miss]
-
----
-
-## 4. Content Plan
-
-### Article 1: [Title] (PRIORITY: Do First)
-- **Target keyword:** [primary]
-- **Secondary keywords:** [list]
-- **Content type:** [guide/how-to/listicle/comparison]
-- **Word count:** [range]
-- **Angle opportunity:** [brief]
-
-### Article 2: [Title]
-[Same structure]
-
-### Article 3: [Title]
-[Same structure]
-
-[Continue for all planned articles]
-
-### Pillar Article: [Title] (PUBLISH LAST)
-- **Target keyword:** [pillar keyword]
-- **Secondary keywords:** [list]
-- **Content type:** Comprehensive guide
-- **Word count:** [range]
-- **Links to:** Articles 1-N
-
----
-
-## 5. Angle Opportunities
-
-Based on competitor gaps, these angles are available:
-
-1. **[Angle name]:** [One sentence description]
-2. **[Angle name]:** [One sentence description]
-3. **[Angle name]:** [One sentence description]
-
-**Recommended starting angle:** [Which one and why]
-
----
-
-## 6. Internal Linking Map
-
-```
-[Pillar Article]
-    |
-    +-- [Article 1] -- [Article 2]
-    |       |
-    +-- [Article 3] -- [Article 4]
-    |
-    +-- [Article 5]
-```
-
-**Linking rules for this pillar:**
-- Every article links to pillar (when published)
-- Each article links to 1-2 related supporting articles
-- [Any specific linking notes]
-
-**Link Timing:**
-
-| Link Type | When Added |
-|-----------|------------|
-| Links TO pillar guide | After pillar guide published |
-| Links BETWEEN supporting articles | During writing if target exists, otherwise use placeholder |
-| Links FROM pillar guide | During pillar guide writing (all supporting articles exist) |
-
-**Placeholder convention:** When an article needs to link to content that doesn't exist yet:
-```html
-<!-- LINK NEEDED: [slug] when published -->
-```
-
-**Post-pillar linking pass:** After pillar guide publishes, replace all placeholders with actual links and add links TO the pillar guide from all supporting articles.
-
----
-
-## 7. Publishing Order
-
-| Order | Article | Depends On | Notes |
-|-------|---------|------------|-------|
-| 1     | [Title] | None       | [Why first - foundational/quick win] |
-| 2     | [Title] | #1         | [Dependency reason] |
-| 3     | [Title] | #1, #2     | [Dependency reason] |
-| N     | [Pillar Guide] | All above | Publish last - links to all |
-
-**Dependency types:**
-- Content: Explains concepts needed by later articles
-- Linking: Must exist for internal links to work
-- Strategic: Business reasons for this order
-```
-
----
-
-## What this skill does NOT do
-
-This skill prepares the brief. It does NOT:
-- Write the actual content (use /seo-content)
-- Find the final positioning (use /positioning-angles)
-- Create the keyword research (use /keyword-research first)
-- Validate finished content (use /validate-content)
-
-The output is strategic preparation. Execution happens downstream.
-
----
-
-## How this connects to other skills
-
-**Before this skill:**
-- `/keyword-research` creates the master brief with all pillars
-- `/onboard-client` ensures client profile exists
-
-**After this skill:**
-- `/positioning-angles` finds the specific angle for each article
-- `/seo-content` writes the actual content
-- `/direct-response-copy` adds conversion elements
-
-**Workflow:**
-```
-keyword-research → start-pillar → positioning-angles → seo-content → validate
-```
-
----
-
-## The test
-
-A good pillar brief answers these questions:
-
-1. **Why this pillar?** (strategic context is clear)
-2. **What keywords?** (complete table, no guessing)
-3. **Who's winning?** (competitor analysis is specific)
-4. **What's the plan?** (articles are prioritised)
-5. **What's our angle?** (opportunities are identified)
-6. **How does it connect?** (linking map is clear)
-7. **What publishes when?** (publishing order with dependencies mapped)
-
-If any answer is vague, the brief isn't ready for positioning work.
-
----
-
-## Example: Starting the "AI Marketing Strategy" pillar
-
-**Input:**
-```
-/start-pillar ai-marketing-strategy
-```
-
-**Actions taken:**
-1. Read 00-keyword-brief.md, extract "AI Marketing Strategy" pillar
-2. Search "ai marketing strategy", "ai marketing strategy guide", "best ai marketing strategy"
-3. Analyse top 3 results (HubSpot, Sprout Social, Salesforce)
-4. Identify gaps: no practitioner perspective, no 2025 tools coverage, generic advice
-5. Create folder: `ai-marketing-strategy/articles/`
-6. Write pillar-brief.md with all 6 sections
-
-**Output:**
-- `ai-marketing-strategy/01-pillar-brief.md` (1,200 words)
-- Empty `ai-marketing-strategy/articles/` folder ready for content
-- Clear next step: run `/positioning-angles` on Article 1
+Write `01-pillar-brief.md` using the template at `templates/pillar-brief-template.md`.
