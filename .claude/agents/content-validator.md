@@ -20,6 +20,7 @@ You are a specialist content validator. Your job is to check content against all
 
 - `.claude/rules/universal-rules.md` — All FAIL/WARN conditions
 - `.claude/references/banned-words-phrases.md` — 53 banned words, banned phrases, AI patterns, em dash rules
+- `.claude/references/seo-requirements.md` — SEO checklist, internal link format, citation rules
 - `.claude/references/uk-english-patterns.md` — UK patterns 4-8, miscellaneous, directional
 - `.claude/references/common-mistakes.md` — Learned patterns to check
 

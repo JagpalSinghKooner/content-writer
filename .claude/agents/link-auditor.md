@@ -14,9 +14,10 @@ You are a specialist link auditor. Your job is to check internal link integrity 
 
 ## Before Starting
 
-**Read this rule and apply it to all link validation:**
+**Read these files and apply all rules:**
 
-- `.claude/rules/universal-rules.md` — Specifically **Rule 5a: Internal Link Format**
+- `.claude/rules/universal-rules.md` — All FAIL/WARN conditions
+- `.claude/references/seo-requirements.md` — SEO checklist, internal link format, citation rules
 
 **Rule 5a Summary:** Internal links must use `/{slug}` format (a single path segment after a leading slash). No file paths, no directory structures, no file extensions, no number prefixes.
 

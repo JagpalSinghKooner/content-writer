@@ -15,7 +15,7 @@
 | Task 60: Strip inline banned words from copy-enhancer.md + add "Before Starting" | PASS |
 | Task 61: Strip inline rule copies from validate-content/SKILL.md | PASS |
 | Task 62: Extract banned words, phrases, AI patterns to `references/` | pending |
-| Task 63: Extract SEO requirements and citation rules to `references/` | pending |
+| Task 63: Extract SEO requirements and citation rules to `references/` | PASS |
 | Task 64: Condense workflow.md retry/tier details | pending |
 | Task 65: Archive agents-prd.md | pending |
 | Task 66: Add multi-client path isolation to CLAUDE.md | pending |
@@ -284,19 +284,26 @@
 8. Commit
 
 **Acceptance Criteria:**
-- [ ] `references/seo-requirements.md` created with Rules 5, 5a, 6
-- [ ] `universal-rules.md` has named stubs with reference links for each moved rule
-- [ ] `content-validator.md` "Before Starting" includes new reference file
-- [ ] `seo-writer.md` "Before Starting" includes new reference file
-- [ ] `link-auditor.md` "Before Starting" includes new reference file
-- [ ] `universal-rules.md` reduced by ~85 lines from auto-load
-- [ ] Complete SEO checklist present in reference file
-- [ ] Git commit created
+- [x] `references/seo-requirements.md` created with Rules 5, 5a, 6
+- [x] `universal-rules.md` has named stubs with reference links for each moved rule
+- [x] `content-validator.md` "Before Starting" includes new reference file
+- [x] `seo-writer.md` "Before Starting" includes new reference file
+- [x] `link-auditor.md` "Before Starting" includes new reference file
+- [x] `universal-rules.md` reduced by ~83 lines from auto-load (271→188)
+- [x] Complete SEO checklist present in reference file
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read TASKS.md Task 63 for steps. Read `universal-rules.md` in full. Create `.claude/references/seo-requirements.md` with Rules 5, 5a, 6. Replace sections in `universal-rules.md` with named stubs + reference links. Update "Before Starting" in content-validator.md, seo-writer.md, and link-auditor.md. Verify coverage. Commit.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `references/seo-requirements.md` with Rules 5, 5a, 6 (SEO requirements, internal link format, external citations). Replaced full rule content in `universal-rules.md` with named stubs + reference links. Updated "Before Starting" in content-validator.md, seo-writer.md, and link-auditor.md to read the new file.
+- **Decisions:** Stubs follow same pattern as Task 62 (one-line summary + anchor link). Reduction was 83 lines (271→188), close to ~85 target. Link-auditor "Before Starting" expanded from single-rule reference to full pattern matching other agents.
+- **Next:** Task 64 (condense workflow.md), Task 65 (archive agents-prd.md), and Task 66 (multi-client docs) can run in parallel.
 
 ---
 
