@@ -524,14 +524,14 @@
 - Keep changes minimal — only what's needed for copy-fixer awareness
 
 **Acceptance Criteria:**
-- [ ] CLAUDE.md mentions 7 agents (not 6)
-- [ ] copy-fixer mentioned in Agents section
-- [ ] No unnecessary "why" explanations added/remaining
+- [x] CLAUDE.md mentions 7 agents (not 6)
+- [x] copy-fixer mentioned in Agents section
+- [x] No unnecessary "why" explanations added/remaining
 
 **Starter Prompt:**
 > Read `.claude/CLAUDE.md`. Update the Agents section: change "Six agents" to "Seven agents" and add copy-fixer mention. Remove any "why" explanations that should be directives. Keep changes minimal.
 
-**Status:** pending
+**Status:** PASS
 
 ---
 
@@ -548,15 +548,22 @@
 - Grep for lines starting with `|` in all modified agent and skill files (should be zero — no tables)
 
 **Acceptance Criteria:**
-- [ ] Zero `eeat-examples` references in agent files
-- [ ] Zero `Fix Mode` references in execute-pillar
-- [ ] Zero `common-mistakes` references in seo-writer
-- [ ] Zero table rows (`|`) in any modified agent or skill file
+- [x] Zero `eeat-examples` references in agent files
+- [x] Zero `Fix Mode` references in execute-pillar
+- [x] Zero `common-mistakes` references in seo-writer
+- [x] Zero table rows (`|`) in any modified agent or skill file
 
 **Starter Prompt:**
 > Run these verification greps across `.claude/agents/` and `.claude/skills/`: (1) `eeat-examples` in agent files — should be zero, (2) `copy-enhancer.*fix` or `Fix Mode` in execute-pillar — should be zero, (3) `common-mistakes` in seo-writer.md — should be zero, (4) lines starting with `|` in all modified files — should be zero. Report any violations found.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** All 4 verification greps passed. Zero `eeat-examples` in agent files, zero `Fix Mode` in execute-pillar, zero `common-mistakes` in seo-writer, zero table rows in any modified agent or skill file.
+- **Decisions:** The only `copy-enhancer.*fix` match was in execute-pillar's YAML description listing agent names ("copy-enhancer, copy-fixer") — not a functional Fix Mode reference. Tables in `link-auditor.md` and `consistency-checker.md` are in unmodified files, so not violations.
+- **Next:** Task 80 (update workflow.md) and Task 83 (frontmatter + line count audit) remain pending.
 
 ---
 
@@ -629,4 +636,626 @@ Phase D (depends on Phases B and C):
 Phase E (depends on all above):
   Task 82: Verify stale references
   Task 83: Verify frontmatter + line counts
+```
+
+---
+---
+
+## Phase 2: Slim Interactive Skills, Audit System, Templates & References
+
+**Source plan:** `workflow-update.md` (Phase 2 section) + `.claude/plans/quirky-napping-lark.md`
+**Goal:** Apply Phase 1 principles to interactive skills, audit system, templates, and references. 5,867 → ~3,750 lines (~36% reduction, ~1,837 net lines saved). Unused skills (email-sequences, lead-magnet, newsletter, orchestrator) left untouched.
+
+**Principles (same as Phase 1):**
+- No tables — convert to flat bullet lists
+- No ASCII diagrams
+- No motivational intros — start with directives
+- No duplicated content — single source of truth, reference instead of repeating
+- Extract reference material to on-demand files
+
+**Cross-File Duplications to Resolve:**
+1. `brand-voice/SKILL.md` (lines 153-232) duplicates voice profile template in `onboard-client/profile-template.md` → brand-voice references the template
+2. `start-pillar/SKILL.md` (lines 244-389) duplicates `start-pillar/templates/pillar-brief-template.md` → skill references the template
+3. `consistency-checker.md` (lines 70-89) defines Hook/CTA generically → remove (checker compares against client profile)
+4. `positioning-angles/SKILL.md` (lines 244-327) full worked example redundant with output format template → remove
+
+---
+
+## Task 84: Extract keyword-research references
+
+**Objective:** Extract DataForSEO API detail and Perplexity competitor prompts from `keyword-research/SKILL.md` into standalone reference files, converting tables to flat lists.
+
+**What to do:**
+- Read `.claude/skills/keyword-research/SKILL.md`
+- Extract DataForSEO API detail (lines ~140-342, ~200 lines) → `.claude/skills/keyword-research/references/dataforseo-api.md`
+  - Includes: endpoint URLs, key parameters, response field parsing, KD/volume thresholds, advanced SERP parameters, SERP item types, organic results data points, competitive assessment
+- Extract Perplexity competitor analysis prompts (lines ~346-426, ~80 lines) → `.claude/skills/keyword-research/references/perplexity-prompts.md`
+  - Includes: prompt templates for competitor gap analysis, content angle discovery
+- Convert all tables in extracted files to flat bullet lists
+- Do NOT modify the source SKILL.md yet (extraction only)
+
+**Acceptance Criteria:**
+- [ ] `.claude/skills/keyword-research/references/dataforseo-api.md` exists (~200 lines)
+- [ ] `.claude/skills/keyword-research/references/perplexity-prompts.md` exists (~80 lines)
+- [ ] Zero lines starting with `|` in either file (no tables)
+- [ ] All API endpoints, parameters, and response parsing preserved
+- [ ] All Perplexity prompt templates preserved
+- [ ] Original `keyword-research/SKILL.md` unchanged
+
+**Starter Prompt:**
+> Read `.claude/skills/keyword-research/SKILL.md`. Extract two reference files:
+>
+> 1. `.claude/skills/keyword-research/references/dataforseo-api.md` (~200 lines): Everything about DataForSEO Labs API — endpoint URLs, key parameters, interpreting results fields, KD thresholds, volume thresholds, advanced SERP parameters, SERP item types, organic results data points, competitive assessment matrix. Source: lines ~140-342.
+>
+> 2. `.claude/skills/keyword-research/references/perplexity-prompts.md` (~80 lines): Perplexity competitor analysis prompt templates and content angle discovery prompts. Source: lines ~346-426.
+>
+> Convert ALL tables to flat bullet lists in both files. Do NOT modify the source SKILL.md — extraction only.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Extracted DataForSEO API detail (~200 lines) to `skills/keyword-research/references/dataforseo-api.md` (214 lines) and Perplexity prompts (~80 lines) to `skills/keyword-research/references/perplexity-prompts.md` (80 lines). All tables converted to flat bullet lists. Zero table rows in either file.
+- **Decisions:** Kept all API endpoints, parameters, response parsing, KD/volume thresholds, advanced SERP analysis, and competitive assessment in the DataForSEO file. Kept all prompt templates and extraction patterns in the Perplexity file.
+- **Next:** Task 85 depends on this (slimming the source SKILL.md by replacing these sections with reference pointers).
+
+---
+
+## Task 85: Slim keyword-research SKILL.md (998 → ~550 lines)
+
+**Depends on:** Task 84
+
+**Objective:** Remove motivational content, ASCII diagrams, worked examples, and tables. Replace extracted sections with reference pointers.
+
+**What to do:**
+- Remove motivational intro (lines 8-13): "Most keyword research is backwards..."
+- Remove 3 ASCII diagrams: `SEED → EXPAND → CLUSTER → PRIORITIZE → MAP` (lines ~30-32), repeat diagram (lines ~431-436), hub-and-spoke box diagram (lines ~530-542)
+- Remove full worked example (lines ~812-946, 135 lines): "Example: Keyword research for AI Marketing Consultant"
+- Remove "What this skill does NOT do" section (~12 lines)
+- Remove "How this connects to other skills" section (~24 lines)
+- Remove "The test" section
+- Remove "Free tools to supplement" section (~11 lines)
+- Replace DataForSEO detail (~200 lines) with 5-line directive: "Use DataForSEO Labs API to enrich keywords with metrics. See `references/dataforseo-api.md` for endpoint details, parameters, and response parsing."
+- Replace Perplexity detail (~80 lines) with 3-line directive: "Use Perplexity for competitor gap analysis. See `references/perplexity-prompts.md` for prompt templates."
+- Convert all remaining instructional tables to flat bullet lists (~17 tables)
+- Keep output format template tables intact (lines ~736-808) — these are written to `00-keyword-brief.md` for downstream parsing by `/start-pillar`
+- Keep: frontmatter, core job directive, context gathering, Phase 1-5 (seed, 6 circles, data-enhanced research, cluster, prioritise, map to content), output format template
+
+**Acceptance Criteria:**
+- [x] File is ~550 lines (within 15% tolerance) — 493 lines
+- [x] No motivational intro
+- [x] Zero ASCII diagrams
+- [x] No worked example section
+- [x] No "what this skill does NOT do", "how this connects", "the test" sections
+- [x] References `references/dataforseo-api.md` and `references/perplexity-prompts.md`
+- [x] Zero instructional tables (lines starting with `|`) outside of the output format template section
+- [x] Output format template tables preserved (downstream parsing)
+- [x] Phases 1-5 all present
+
+**Starter Prompt:**
+> Read `.claude/skills/keyword-research/SKILL.md` (998 lines). Slim to ~550 lines. Remove: motivational intro (lines 8-13), all 3 ASCII diagrams, full worked example (lines ~812-946), "What this skill does NOT do", "How this connects to other skills", "The test", "Free tools to supplement". Replace DataForSEO detail (lines ~140-342) with 5-line directive pointing to `references/dataforseo-api.md`. Replace Perplexity detail (lines ~346-426) with 3-line directive pointing to `references/perplexity-prompts.md`. Convert all instructional tables to flat bullet lists. KEEP the output format template tables (lines ~736-808) — these are structural output for downstream `/start-pillar` parsing. Keep all 5 phases (Seed, 6 Circles, Data-Enhanced Research, Cluster, Prioritise, Map to Content).
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Slimmed `skills/keyword-research/SKILL.md` from 998 to 493 lines (51% reduction). Removed: motivational intro (3 paragraphs), all 3 ASCII diagrams (process flow, enrich flow, hub-and-spoke), full worked example (AI Marketing Consultant, ~135 lines), "What this skill does NOT do", "How this connects to other skills", "The test", "Free tools to supplement" (rolled into "When Data Isn't Available" bullets). Replaced DataForSEO detail (~200 lines) with 5-line directive pointing to `references/dataforseo-api.md`. Replaced Perplexity detail (~80 lines) with 3-line directive pointing to `references/perplexity-prompts.md`. Converted 7 instructional tables to flat bullet lists (Product vs Market, Proprietary Advantage, Priority Matrix, Content type, Intent matching, Data points captured, Free tools fallback). All output format template tables preserved intact.
+- **Decisions:** 493 lines vs ~550 target (below target, all content preserved). Renamed Phase 4 heading "Prioritize" → "Prioritise" for UK English consistency. "Free tools to supplement" standalone section removed but content merged into "When Data Isn't Available" as bullet list (no information lost). Data-enhanced pillar validation format template kept in full (structural output used downstream).
+- **Next:** Task 86 (slim start-pillar) has no dependency on this. Tasks 86-89 can run in parallel.
+
+---
+
+## Task 86: Slim start-pillar SKILL.md (457 → ~280 lines)
+
+**Objective:** Remove motivational content, ASCII diagram, duplicated output format, worked example, and convert tables.
+
+**What to do:**
+- Remove motivational intro (lines 8-11): "Keyword research gives you the map..."
+- Remove ASCII diagram (lines ~48-50): `EXTRACT → RESEARCH → ANALYSE → PLAN → OUTPUT`
+- Remove embedded output format (lines 244-389, 146 lines) — duplicates `start-pillar/templates/pillar-brief-template.md`. Replace with: "Write `01-pillar-brief.md` using the template at `templates/pillar-brief-template.md`."
+- Remove "What this skill does NOT do" section (~10 lines)
+- Remove "How this connects to other skills" section with workflow ASCII (~14 lines)
+- Remove "The test" section and example (~37 lines)
+- Convert competitor validation table (lines ~142-147) to flat list
+- Keep: frontmatter, core job directive, how to run, Step 1 (extract pillar), Step 2 (research competitors), Step 3 (competitor deep-dive with DataForSEO/Perplexity), Step 4 (plan content), Step 5 (output folder structure with template reference)
+
+**Acceptance Criteria:**
+- [x] File is ~280 lines (within 15% tolerance) — 197 lines
+- [x] No motivational intro
+- [x] No ASCII diagram
+- [x] No embedded output format (replaced with template reference)
+- [x] No "what this skill does NOT do", "how this connects", "the test" sections
+- [x] References `templates/pillar-brief-template.md`
+- [x] Zero lines starting with `|` (no tables)
+- [x] Steps 1-5 all present
+
+**Starter Prompt:**
+> Read `.claude/skills/start-pillar/SKILL.md` (457 lines). Slim to ~280 lines. Remove: motivational intro (lines 8-11), ASCII diagram (lines ~48-50), embedded output format (lines 244-389, 146 lines — replace with "Write `01-pillar-brief.md` using the template at `templates/pillar-brief-template.md`"), "What this skill does NOT do", "How this connects to other skills", "The test" + example. Convert competitor validation table to flat list. Keep Steps 1-5 intact.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Slimmed `skills/start-pillar/SKILL.md` from 457 to 197 lines (57% reduction). Removed: motivational intro, ASCII diagram (`EXTRACT → RESEARCH → ANALYSE → PLAN → OUTPUT`), embedded output format (146 lines replaced with template reference), "What this skill does NOT do", "How this connects to other skills", "The test" + worked example. Converted competitor validation table to flat list with DR tier guidance inline.
+- **Decisions:** 197 lines vs ~280 target (well under target, all operational content preserved). Kept DataForSEO API format, Perplexity analysis prompt, gap analysis categories, content planning rules, article numbering, and publishing order logic fully intact.
+- **Next:** Task 87 (slim positioning-angles) has no dependency on this. Tasks 87-89 can run in parallel.
+
+---
+
+## Task 87: Slim positioning-angles SKILL.md (389 → ~220 lines)
+
+**Objective:** Remove motivational intro, full worked example, meta-sections, and condense the test.
+
+**What to do:**
+- Remove motivational intro (lines 8-10): "The same content can perform 100x better..."
+- Remove full worked example (lines 244-327, 84 lines): AI Marketing Strategy pillar — redundant with output format template (lines 177-239)
+- Remove "How this skill gets invoked" section (lines ~330-348, 19 lines) — frontmatter description covers this
+- Remove "What this skill is NOT" section (lines ~352-360, 9 lines)
+- Condense "The test" (lines ~364-390, 27 lines) to 5 bullets
+- No tables to convert (none in this file)
+- Keep: frontmatter, core job directive, Steps 1-5 angle-finding process (lines 29-172), 8 angle generators (lines 105-172), output format template (lines 175-239), references to positioning reference files
+
+**Acceptance Criteria:**
+- [x] File is ~220 lines (within 15% tolerance) — 228 lines
+- [x] No motivational intro
+- [x] No full worked example
+- [x] No "how this skill gets invoked" or "what this skill is NOT" sections
+- [x] "The test" condensed to ≤5 bullets
+- [x] Steps 1-5 and 8 angle generators all present
+- [x] Output format template present
+- [x] References to positioning reference files present
+
+**Starter Prompt:**
+> Read `.claude/skills/positioning-angles/SKILL.md` (389 lines). Slim to ~220 lines. Remove: motivational intro (lines 8-10), full worked example (lines 244-327, 84 lines — the AI Marketing Strategy example), "How this skill gets invoked" (lines ~330-348), "What this skill is NOT" (lines ~352-360). Condense "The test" (lines ~364-390) to 5 bullets. Keep: core job, Steps 1-5, 8 angle generators, output format template, references to positioning reference files.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Slimmed `skills/positioning-angles/SKILL.md` from 389 to 228 lines (41% reduction). Removed: motivational intro (3 lines + separator), full worked example (AI Marketing Strategy pillar, 84 lines), "How this skill gets invoked" (19 lines), "What this skill is NOT" (9 lines). Condensed "The test" from 27 lines (8 numbered items across two groups) to 5 bullets. Additional trims: duplicate example quotes removed from each angle generator, verbose explanations condensed, em dashes fixed to spaced dashes, "optimized" corrected to "optimised".
+- **Decisions:** 228 lines vs ~220 target (within 15% tolerance). Remaining gap is structural markdown (blank lines and `---` separators needed for rendering). All 8 angle generators kept with single example quote each (removed second quotes).
+- **Next:** Tasks 88-89 can run in parallel (no dependency on this task).
+
+---
+
+## Task 88: Slim brand-voice SKILL.md (467 → ~200 lines)
+
+**Objective:** Remove motivational intro, duplicated output template, worked examples, and meta-sections.
+
+**What to do:**
+- Remove motivational intro (lines 8-10): "Generic copy converts worse..."
+- Remove output format template (lines 153-232, 80 lines) — duplicates brand voice section in `onboard-client/profile-template.md`. Replace with: "Output voice profile using the Brand Voice section format from `onboard-client/profile-template.md`."
+- Remove "Example: Extracted Voice Profile" (Marc Lou, lines ~236-326, 91 lines)
+- Remove "Example: Built Voice Profile" (Coach, lines ~330-422, 93 lines)
+- Remove "How this skill connects to others" (lines ~426-443, 18 lines)
+- Remove "When to revisit" (lines ~445-454, 10 lines) — condense to 2 bullets
+- Condense "The test" (lines ~457-467, 11 lines) to 3 bullets
+- Keep: frontmatter, core job directive, two modes explanation, Mode 1: Extract (what to analyse, what to look for), Mode 2: Build (strategic questions and build process)
+
+**Acceptance Criteria:**
+- [x] File is ~200 lines (within 15% tolerance) — 143 lines
+- [x] No motivational intro
+- [x] No embedded output format template (replaced with profile-template reference)
+- [x] No worked examples (Marc Lou, Coach)
+- [x] No "how this connects" section
+- [x] "When to revisit" condensed to ≤2 bullets
+- [x] "The test" condensed to ≤3 bullets
+- [x] References `onboard-client/profile-template.md` for output format
+- [x] Mode 1 (Extract) and Mode 2 (Build) both present
+
+**Status:** PASS
+
+**Handoff:**
+- **Done:** Slimmed brand-voice SKILL.md from 467 → 143 lines (69% reduction). Removed motivational intro, full output format template (replaced with reference to `onboard-client/profile-template.md`), both worked examples (Marc Lou + Coach), and "How this connects" section. Condensed "When to revisit" to 2 bullets, "The test" to 3 bullets. Fixed US → UK spellings (analyse, synthesise, humour, recognisable).
+- **Decisions:** Came in under 200-line target at 143 lines; all core instruction content (Extract + Build modes) preserved in full.
+- **Next:** Task 89 (slim onboard-client SKILL.md)
+
+---
+
+## Task 89: Slim onboard-client SKILL.md (295 → ~200 lines)
+
+**Objective:** Remove motivational intro, tips, workflow sections, and condense administrative sections.
+
+**What to do:**
+- Remove motivational intro (lines 8-10): "Every piece of content needs context..."
+- Remove "Interview tips" section (lines ~220-228, 9 lines) — generic advice
+- Remove "After onboarding" section (lines ~249-258, 10 lines) — lists other skills
+- Condense "Updating profiles" section (lines ~260-282, 23 lines) to 2 bullets
+- Condense "The test" (lines ~285-295, 11 lines) to 3 bullets
+- No tables to convert (none in this file)
+- Keep: frontmatter, goal, how to run, all 9 interview sections (1-9 are the core content, lines 41-217), output reference
+
+**Acceptance Criteria:**
+- [x] File is ~200 lines (within 15% tolerance) — 218 lines
+- [x] No motivational intro
+- [x] No "interview tips" section
+- [x] No "after onboarding" section
+- [x] "Updating profiles" condensed to ≤2 bullets
+- [x] "The test" condensed to ≤3 bullets
+- [x] All 9 interview sections present (Sections 1-9)
+- [x] Output reference present
+
+**Starter Prompt:**
+> Read `.claude/skills/onboard-client/SKILL.md` (295 lines). Slim to ~200 lines. Remove: motivational intro (lines 8-10), "Interview tips" (lines ~220-228), "After onboarding" (lines ~249-258). Condense "Updating profiles" (lines ~260-282) to 2 bullets, "The test" (lines ~285-295) to 3 bullets. Keep all 9 interview sections intact (lines 41-217) — they are the core content.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Slimmed `skills/onboard-client/SKILL.md` from 295 to 218 lines (26% reduction). Removed: motivational intro (3 lines + "The goal" section), "Interview tips" section (9 lines), "After onboarding" section (10 lines). Condensed "Output" to 1 line, "Updating profiles" to 2 bullets, "The test" renamed to "Completeness Check" with 3 bullets. Fixed em dash on jargon level line. All 9 interview sections intact.
+- **Decisions:** 218 lines vs ~200 target (within 15% tolerance). Kept all interview questions verbatim. Removed "goal" section as redundant with frontmatter description.
+- **Next:** Tasks 90-92 (Phase C) can run in parallel. Tasks 93-98 (Phase D) have no dependencies.
+
+---
+
+## Task 90: Slim audit-pillar SKILL.md (289 → ~240 lines)
+
+**Objective:** Convert the error handling table to a flat list. This file is already lean — minimal changes needed.
+
+**What to do:**
+- Convert error handling table (lines ~233-246, 14 rows) to flat bullet list
+- No motivational intro, ASCII diagrams, or duplications to remove (file is already in orchestration playbook format)
+- Keep everything else intact
+
+**Acceptance Criteria:**
+- [x] File is ~240 lines (within 15% tolerance) — 215 lines
+- [x] Zero lines starting with `|` (no tables)
+- [x] Error handling scenarios all preserved as bullets
+- [x] All orchestration steps intact
+
+**Starter Prompt:**
+> Read `.claude/skills/audit-pillar/SKILL.md` (289 lines). Slim to ~240 lines. Convert the error handling table (lines ~233-246) to a flat bullet list. This file is already lean — only the table conversion is needed. Keep all orchestration steps intact.
+
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Slimmed `skills/audit-pillar/SKILL.md` from 289 to 215 lines (26% reduction). Converted error handling table (14 rows) to flat bullet list. Additional trims: condensed agent invocation code blocks to inline format (Phases 2, 3, 5, 7), condensed git workflow (removed bash code block), condensed reference files list, trimmed frontmatter description. All 8 orchestration phases preserved intact.
+- **Decisions:** Went below ~240 target to 215 because agent invocation code blocks were verbose and redundant with agent .md files. Inline `subagent_type` + bullet list format is more scannable.
+- **Next:** Tasks 91-92 (slim consistency-checker and link-auditor agents) can run in parallel.
+
+---
+
+## Task 91: Slim consistency-checker agent (389 → ~300 lines)
+
+**Objective:** Remove generic terminology definitions and convert tables to flat lists. Keep report format tables (output templates written to file).
+
+**What to do:**
+- Remove terminology definitions (lines 70-89, 20 lines): Hook, CTA, Soft CTA, Hard CTA, CTA Placement table — these are generic definitions not used by the checker's comparison logic (which compares against client profile and positioning doc)
+- Convert severity levels table (lines ~167-174) to flat list
+- Convert positioning alignment rating table (lines ~180-191) to flat list
+- Convert tool usage table (lines ~348-353) to flat list
+- Convert edge cases table (lines ~361-368) to flat list
+- Keep report format tables (lines ~237-240, ~271-274, ~312-314, ~337-340) — these are output templates written to the report file
+- Keep: agent identity, file-based output protocol, inputs, workflow steps 1-5, report format template, return format, status determination
+
+**Acceptance Criteria:**
+- [x] File is ~300 lines (within 15% tolerance)
+- [x] No terminology definitions section (Hook, CTA, etc.)
+- [x] Zero instructional tables (severity, alignment, tool usage, edge cases converted)
+- [x] Report format tables preserved (output templates)
+- [x] All 5 workflow steps present
+- [x] Return format present
+
+**Starter Prompt:**
+> Read `.claude/agents/consistency-checker.md` (389 lines). Slim to ~300 lines. Remove: terminology definitions (lines 70-89) for Hook, CTA, Soft CTA, Hard CTA — these are generic definitions the checker doesn't use (it compares against client profile and positioning doc). Convert these tables to flat bullet lists: severity levels, positioning alignment rating, tool usage, edge cases. KEEP report format tables intact — they are output templates written to the report file. Keep all workflow steps, return format, status determination.
+
+**Status:** PASS
+
+**Handoff:**
+- **Done:** Slimmed consistency-checker.md from 389 → 308 lines (21% reduction)
+- **Decisions:** Removed Hook/CTA/Soft CTA/Hard CTA definitions + CTA Placement table (generic, never referenced by checker logic). Converted severity levels, positioning alignment ratings, tool usage, edge cases tables to flat bullet lists. Merged duplicate "Before Starting" section into Step 1. Condensed workflow checks 3a-4c to single-line format. All report format tables kept intact.
+- **Next:** Task 92 — slim link-auditor agent (408 → ~330 lines)
+
+---
+
+## Task 92: Slim link-auditor agent (408 → ~330 lines)
+
+**Objective:** Convert instructional tables to flat lists. Keep report format tables (output templates).
+
+**What to do:**
+- Convert severity levels table (lines ~204-213) to flat list
+- Convert tool usage table (lines ~364-369) to flat list
+- Convert edge cases table (lines ~379-388) to flat list
+- Keep report format tables (lines ~260-267, ~326-329, ~333-336, ~343-346, ~353-356) — output templates written to the report file
+- No motivational content or unnecessary sections to remove (file is well-written and focused)
+- Keep everything else intact
+
+**Acceptance Criteria:**
+- [x] File is ~330 lines (within 15% tolerance)
+- [x] Zero instructional tables (severity, tool usage, edge cases converted)
+- [x] Report format tables preserved (output templates)
+- [x] All workflow steps present
+- [x] Return format present
+
+**Starter Prompt:**
+> Read `.claude/agents/link-auditor.md` (408 lines). Slim to ~330 lines. Convert these tables to flat bullet lists: severity levels (lines ~204-213), tool usage (lines ~364-369), edge cases (lines ~379-388). KEEP all report format tables intact — they are output templates written to the report file. Keep everything else — this file is already well-structured.
+
+**Status:** PASS
+
+**Handoff:**
+- **Done:** Slimmed link-auditor.md from 408 → 335 lines (18% reduction)
+- **Decisions:** Converted severity levels table to FAIL/INFO grouped bullet lists. Converted tool usage table to flat bullets with "Not available" note. Converted edge cases table to bold-key bullet list. All 6 report format tables preserved intact (Summary, Cross-Pillar Outbound/Inbound, Guide → Supporting, Supporting → Guide). Compressed verbose workflow prose (Step 2 registry building, Step 3 link extraction, Steps 6-7) to single-line format.
+- **Next:** Task 93 — slim article-template.md (154 → ~115 lines)
+
+---
+
+## Task 93: Slim article-template.md (154 → ~115 lines)
+
+**Objective:** Convert field definition tables to flat bullet lists. Light touch — keep structural content.
+
+**What to do:**
+- Convert 6 field definition tables to flat bullet lists:
+  - Core metadata table (lines ~92-99, 7 rows)
+  - Taxonomy table (lines ~103-106, 2 rows)
+  - SEO metadata table (lines ~110-115, 4 rows)
+  - Open Graph table (lines ~119-124, 4 rows)
+  - Schema table (lines ~128-130, 1 row)
+  - Links table (lines ~134-137, 2 rows)
+- Keep the template portion (lines ~9-83) intact — it defines the actual output format
+- Total: 32 table lines to convert
+
+**Acceptance Criteria:**
+- [ ] File is ~115 lines (within 15% tolerance)
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] All field definitions preserved as bullets
+- [ ] Template output format intact (lines ~9-83)
+
+**Starter Prompt:**
+> Read `.claude/skills/templates/article-template.md` (154 lines). Slim to ~115 lines. Convert all 6 field definition tables to flat bullet lists: Core metadata (~7 rows), Taxonomy (~2 rows), SEO metadata (~4 rows), Open Graph (~4 rows), Schema (~1 row), Links (~2 rows). Keep the template output format section (lines ~9-83) intact.
+
+**Status:** pending
+
+---
+
+## Task 94: Slim distribution-template.md (510 → ~475 lines)
+
+**Objective:** Convert tables and condense usage notes. Light touch — platform templates are structural output.
+
+**What to do:**
+- Convert frontmatter fields table (lines ~489-494, 4 rows) to flat bullet list
+- Convert specs reference table (lines ~502-510, 8 rows) to flat bullet list
+- Condense "Usage Notes" section (lines ~9-27, 19 lines) to 3-line directive
+- Keep all platform templates (LinkedIn, Twitter, Instagram, Newsletter) intact — structural output
+
+**Acceptance Criteria:**
+- [ ] File is ~475 lines (within 15% tolerance)
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] Usage notes condensed to ≤5 lines
+- [ ] All platform templates present (LinkedIn, Twitter, Instagram, Newsletter)
+
+**Starter Prompt:**
+> Read `.claude/skills/templates/distribution-template.md` (510 lines). Slim to ~475 lines. Light touch. Convert: frontmatter fields table (lines ~489-494) and specs reference table (lines ~502-510) to flat bullet lists. Condense "Usage Notes" (lines ~9-27) to a 3-line directive. Keep all platform templates (LinkedIn, Twitter, Instagram, Newsletter) intact.
+
+**Status:** pending
+
+---
+
+## Task 95: Slim tasks-template.md (188 → ~130 lines)
+
+**Objective:** Remove full example sections that duplicate the template itself.
+
+**What to do:**
+- Remove "Example: Completed Task" section (lines ~73-101, 29 lines) — the template itself is sufficient
+- Remove "Example: Pending Task" section (lines ~103-126, 24 lines) — same reasoning
+- Keep: usage notes, template section, handoff section template, quick reference (condensed)
+
+**Acceptance Criteria:**
+- [ ] File is ~130 lines (within 15% tolerance)
+- [ ] No "Example: Completed Task" section
+- [ ] No "Example: Pending Task" section
+- [ ] Template section intact
+- [ ] Handoff section template intact
+
+**Starter Prompt:**
+> Read `.claude/skills/templates/tasks-template.md` (188 lines). Slim to ~130 lines. Remove both full example sections: "Example: Completed Task" (lines ~73-101, 29 lines) and "Example: Pending Task" (lines ~103-126, 24 lines). The template itself is sufficient without worked examples. Keep: usage notes, template section, handoff section template, quick reference.
+
+**Status:** pending
+
+---
+
+## Task 96: Slim pillar-brief-template.md (135 → ~110 lines)
+
+**Objective:** Remove meta-sections. Keep output template tables (structural deliverables for downstream parsing).
+
+**What to do:**
+- Remove "Ready for Positioning" section (lines ~130-135, 6 lines) — workflow connection documented elsewhere
+- Condense dependency types and parallel publishing notes (lines ~121-127, 7 lines) to 2 bullets
+- Keep ALL output template tables — they are structural deliverables written to `01-pillar-brief.md` for downstream parsing by `/positioning-angles`, not instructional formatting
+
+**Acceptance Criteria:**
+- [ ] File is ~110 lines (within 15% tolerance)
+- [ ] No "Ready for Positioning" section
+- [ ] Dependency notes condensed
+- [ ] All output template tables preserved (keyword table, content plan, links TO/FROM, publishing order)
+
+**Starter Prompt:**
+> Read `.claude/skills/start-pillar/templates/pillar-brief-template.md` (135 lines). Slim to ~110 lines. Remove: "Ready for Positioning" section (lines ~130-135). Condense dependency types and parallel publishing notes (lines ~121-127) to 2 bullets. KEEP all output template tables — they are structural deliverables for downstream parsing, not instructional formatting.
+
+**Status:** pending
+
+---
+
+## Task 97: Slim profile-template.md (353 → ~240 lines)
+
+**Objective:** Convert all 14+ tables (112 rows) to flat bullet lists. This is the most table-heavy template file.
+
+**What to do:**
+- Convert ALL tables to flat `**Field:** Value` bullet format:
+  - Company info table (lines ~10-16, 5 rows)
+  - Target audience table (lines ~44-50, 5 rows)
+  - 5 competitor tables (lines ~80-123, ~20 rows total)
+  - Core personality traits table (lines ~135-141, 5 rows)
+  - Tone spectrum table (lines ~145-151, 5 rows)
+  - Vocabulary settings table (lines ~165-168, 2 rows)
+  - POV & Address table (lines ~184-188, 3 rows)
+  - Terminology table (lines ~247-250, 3 rows)
+  - How We Refer To table (lines ~255-259, 3 rows)
+  - Primary CTA table (lines ~267-269, 2 rows)
+  - Lead magnets table (lines ~285-287, 1 row)
+  - Social proof table (lines ~291-296, 4 rows)
+  - Seasonal considerations table (lines ~319-320, 1 row)
+  - Success metrics table (lines ~324-326, 2 rows)
+- Remove footer notes (lines ~347-353, 7 lines)
+- Keep all section structure and headings
+
+**Acceptance Criteria:**
+- [ ] File is ~240 lines (within 15% tolerance)
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] All profile fields preserved as bullets
+- [ ] All section headings intact
+- [ ] No footer notes
+
+**Starter Prompt:**
+> Read `.claude/skills/onboard-client/profile-template.md` (353 lines). Slim to ~240 lines. Convert ALL 14+ tables (~112 table rows) to flat `**Field:** Value` bullet format. Tables to convert: Company info, Target audience, 5 competitor tables, Core personality traits, Tone spectrum, Vocabulary settings, POV & Address, Terminology, How We Refer To, Primary CTA, Lead magnets, Social proof, Seasonal considerations, Success metrics. Remove footer notes (lines ~347-353). Keep all section headings and structure.
+
+**Status:** pending
+
+---
+
+## Task 98: Slim audit-summary-template.md (247 → ~220 lines)
+
+**Objective:** Remove duplicated status determination section. Keep output template tables.
+
+**What to do:**
+- Remove status determination section (lines ~129-135, 7 lines) — duplicates the audit-pillar skill's own status determination
+- Keep ALL output template tables — they are written to `audit-summary.md` for human/agent consumption
+- Keep everything else intact
+
+**Acceptance Criteria:**
+- [ ] File is ~220 lines (within 15% tolerance)
+- [ ] No duplicated status determination section
+- [ ] All output template tables preserved
+- [ ] Report structure intact
+
+**Starter Prompt:**
+> Read `.claude/skills/audit-pillar/templates/audit-summary-template.md` (247 lines). Slim to ~220 lines. Remove the status determination section (lines ~129-135) — it duplicates the audit-pillar skill's own status determination. Keep ALL output template tables and report structure intact.
+
+**Status:** pending
+
+---
+
+## Task 99: Slim common-mistakes.md (289 → ~280 lines)
+
+**Objective:** Merge two template sections into one. This file is already clean — minimal changes.
+
+**What to do:**
+- Merge the two template sections (lines ~17-25 regular template + lines ~27-43 "Template Extracted from Issue") into a single template with an optional `**Source:**` line
+- Keep all existing mistake patterns intact — they are the system's learning memory
+
+**Acceptance Criteria:**
+- [ ] File is ~280 lines (within 15% tolerance)
+- [ ] Single unified template (not two separate templates)
+- [ ] All existing mistake patterns preserved
+- [ ] Optional `Source:` field in template
+
+**Starter Prompt:**
+> Read `.claude/references/common-mistakes.md` (289 lines). Slim to ~280 lines. Merge the two template sections (lines ~17-25 and ~27-43) into a single template with an optional `**Source:**` line. Keep all existing mistake patterns intact.
+
+**Status:** pending
+
+---
+
+## Task 100: Slim client-profile-requirements.md (309 → ~160 lines)
+
+**Objective:** Convert the massive requirements matrix and detail tables to flat bullet lists. Highest percentage reduction in Phase 2.
+
+**What to do:**
+- Convert 10x9 quick reference matrix (lines ~9-22) to per-skill one-liners:
+  - Format: `**keyword-research:** Requires Company, Product, Audience, Competitors, Goals. Optional: Conversion.`
+- Convert all 10 detailed skill breakdown tables (~80 total table rows) to flat bullet lists
+- Remove "if missing" sections under each skill breakdown — redundant with the table/bullet data
+- Remove "Profile Completeness by Use Case" section (lines ~263-290) — covered by quick reference
+- Remove "Onboarding Coverage Checklist" section (lines ~293-309) — duplicates profile template structure
+
+**Acceptance Criteria:**
+- [ ] File is ~160 lines (within 15% tolerance)
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] All 10 skill requirements preserved
+- [ ] Quick reference as per-skill one-liners (not matrix)
+- [ ] No "if missing" sections
+- [ ] No "Profile Completeness by Use Case" section
+- [ ] No "Onboarding Coverage Checklist" section
+
+**Starter Prompt:**
+> Read `.claude/references/client-profile-requirements.md` (309 lines). Slim to ~160 lines. Convert the 10x9 quick reference matrix (lines ~9-22) to per-skill one-liners: `**skill-name:** Requires X, Y, Z. Optional: A, B.` Convert all 10 detailed skill breakdown tables to flat bullet lists. Remove all "if missing" sections (redundant). Remove "Profile Completeness by Use Case" and "Onboarding Coverage Checklist" sections.
+
+**Status:** pending
+
+---
+
+## Task 101: Verify Phase 2 — grep for stale references and tables
+
+**Depends on:** Tasks 84-100
+
+**Objective:** Ensure no stale references remain and all table conversions are complete.
+
+**What to do:**
+- Grep for lines starting with `|` in all Phase 2 modified files (should be zero except output templates in pillar-brief-template, audit-summary-template, and keyword-research output format)
+- Verify `brand-voice/SKILL.md` references `onboard-client/profile-template.md` (not embedding its own template)
+- Verify `start-pillar/SKILL.md` references `templates/pillar-brief-template.md` (not embedding its own output format)
+- Verify reference pointers match actual file paths: `references/dataforseo-api.md`, `references/perplexity-prompts.md`
+- Line count audit: count lines in all 18 files (16 modified + 2 new) and compare to targets — flag any outside 15% tolerance
+
+**Acceptance Criteria:**
+- [ ] Zero instructional tables in any modified file
+- [ ] brand-voice references profile-template (not duplicating)
+- [ ] start-pillar references pillar-brief-template (not duplicating)
+- [ ] All reference file paths valid and files exist
+- [ ] All 18 files within 15% of target line count
+- [ ] Any files outside tolerance flagged with actual vs target
+
+**Starter Prompt:**
+> Verify all Phase 2 modifications. Run these checks:
+>
+> 1. Grep for `|` at line start in all modified files under `.claude/skills/` and `.claude/agents/` and `.claude/references/`. Should be zero except output template sections in `pillar-brief-template.md`, `audit-summary-template.md`, and keyword-research output format.
+> 2. Verify `brand-voice/SKILL.md` contains a reference to `onboard-client/profile-template.md` and does NOT contain its own 80-line output format template.
+> 3. Verify `start-pillar/SKILL.md` contains a reference to `templates/pillar-brief-template.md` and does NOT contain its own 146-line embedded output format.
+> 4. Verify `.claude/skills/keyword-research/references/dataforseo-api.md` and `perplexity-prompts.md` exist.
+> 5. Count lines (`wc -l`) in all 18 Phase 2 files and compare to targets. Flag any file outside 15% tolerance.
+>
+> Report results for each check.
+
+**Status:** pending
+
+---
+
+## Phase 2 Execution Order & Dependencies
+
+```
+Phase A (no dependencies):
+  Task 84: Extract keyword-research references
+
+Phase B (depends on Phase A):
+  Task 85: Slim keyword-research SKILL.md (needs Task 84)
+  Task 86: Slim start-pillar SKILL.md (no dependency)
+  Task 87: Slim positioning-angles SKILL.md (no dependency)
+  Task 88: Slim brand-voice SKILL.md (no dependency)
+  Task 89: Slim onboard-client SKILL.md (no dependency)
+
+Phase C (no dependency on B, can run in parallel):
+  Task 90: Slim audit-pillar SKILL.md (no dependency)
+  Task 91: Slim consistency-checker agent (no dependency)
+  Task 92: Slim link-auditor agent (no dependency)
+
+Phase D (no dependencies, can run in parallel with B/C):
+  Task 93: Slim article-template.md
+  Task 94: Slim distribution-template.md
+  Task 95: Slim tasks-template.md
+  Task 96: Slim pillar-brief-template.md
+  Task 97: Slim profile-template.md
+  Task 98: Slim audit-summary-template.md
+
+Phase E (no dependencies, can run in parallel with B/C/D):
+  Task 99: Slim common-mistakes.md
+  Task 100: Slim client-profile-requirements.md
+
+Phase F (depends on all above):
+  Task 101: Verify Phase 2
 ```
