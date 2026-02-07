@@ -1,446 +1,552 @@
-# Project Tasks: HushAway SEO Content Fixes
+# System Tasks
 
-## Summary
+## Workflow Optimisation: Agent Context Loading & Output Quality
 
-| Task | Status |
-|------|--------|
-| **CLAUDE.md Slim (plan: giggly-doodling-otter.md)** | |
-| Task 55: Move Phase 2 reference sections to `references/` | PASS |
-| Task 56: Condense Rules 1-3 and Task Tracking in-place | PASS |
-| Task 57: Final verification of CLAUDE.md slim | PASS |
-| **universal-rules.md Slim (plan: zazzy-plotting-pelican.md)** | |
-| Task 58: Move UK English patterns 4-8 to `references/` | PASS |
-| **Token Efficiency & Scalability Audit (plan: slim-down.md)** | |
-| Task 59: Strip inline rule copies from content-validator.md | PASS |
-| Task 60: Strip inline banned words from copy-enhancer.md + add "Before Starting" | PASS |
-| Task 61: Strip inline rule copies from validate-content/SKILL.md | PASS |
-| Task 62: Extract banned words, phrases, AI patterns to `references/` | PASS |
-| Task 63: Extract SEO requirements and citation rules to `references/` | PASS |
-| Task 64: Condense workflow.md retry/tier details | PASS |
-| Task 65: Archive agents-prd.md | PASS |
-| Task 66: Add multi-client path isolation to CLAUDE.md | PASS |
+**Source plan:** `workflow-update.md`
+**Goal:** Reduce ~91,554 lines loaded across an 8-article pillar to ~52,000 lines (43% reduction) by stripping tables, ASCII diagrams, motivational intros, duplicated content, and extracting reference material to on-demand files.
 
 ---
 
-## Task 58: Move UK English Patterns 4-8 to `references/`
+## Task 67: Extract copywriting frameworks to reference file
 
-**Objective:** Extract low-frequency UK English patterns (4-8, Miscellaneous, Directional Words) from `universal-rules.md` into a reference file. Keep high-frequency patterns 1-3 inline. Update agent read lists. This saves ~91 lines from auto-loaded context.
+**Objective:** Move everything after the `# REFERENCE MATERIAL` marker in `skills/direct-response-copy/SKILL.md` (lines 583-2217) to a new standalone reference file. Convert all tables to flat lists.
 
-**Context:** Patterns 1-3 (-our/-or, -ise/-ize, -re/-er) catch the vast majority of UK English violations. Patterns 4-8 cover edge cases (doubled consonants, -ogue/-og, miscellaneous words like "grey", directional words like "towards"). These are still needed by agents that validate content, but don't need to load every session via the main auto-loaded file.
-
-**Risk:** MODERATE. Agents that validate UK English must be updated to read the new reference file. If missed, obscure UK spellings could slip through. Common ones (-our, -ise, -re) still inline.
-
-**Execution Steps:**
-1. Read `universal-rules.md` in full
-2. Create `.claude/references/uk-english-patterns.md` from lines 108-201 (Pattern 4 through Directional Words, including separators)
-3. Replace lines 108-201 in `universal-rules.md` with a 3-line pointer: `Patterns 4-8, Miscellaneous, and Directional Words: see [UK English Extended Patterns](../references/uk-english-patterns.md).`
-4. Update `.claude/agents/seo-writer.md` line 20 area — add `- .claude/references/uk-english-patterns.md` to "Before Starting" read list
-5. Update `.claude/agents/content-validator.md` line 21 area — add `- .claude/references/uk-english-patterns.md` to "Before Starting" read list
-6. Verify: `wc -l` on `universal-rules.md` — target ~424 lines
-7. Verify: grep for "Pattern 1", "Pattern 2", "Pattern 3" still present in `universal-rules.md`
-8. Verify: grep for "Pattern 4" through "Pattern 8" present in new reference file
-9. Verify: no broken `references/` paths across `.claude/`
-10. Commit
+**What to do:**
+- Read `.claude/skills/direct-response-copy/SKILL.md` lines 583-2217
+- Create `.claude/references/copywriting-frameworks.md` with that content
+- Remove all tables from extracted content, convert to flat bullet lists
+- Include: Classic DR Frameworks (Schwartz, Hopkins, Ogilvy, Halbert, Caples, Sugarman, Collier), Headline Formulas, Opening Lines, Curiosity Gaps, Flow Techniques, Modern Internet-Native Examples
+- This file is NOT auto-loaded by any agent — for interactive `/direct-response-copy` use only
 
 **Acceptance Criteria:**
-- [ ] `references/uk-english-patterns.md` created with patterns 4-8 + Miscellaneous + Directional Words
-- [ ] Patterns 1-3 still inline in `universal-rules.md`
-- [ ] Pointer to reference file replaces moved content
-- [ ] `seo-writer.md` reads new reference file
-- [ ] `content-validator.md` reads new reference file
-- [ ] `universal-rules.md` ~424 lines (down from 515)
-- [ ] Total auto-loaded ~780 lines (down from 871)
-- [ ] Zero broken path references
-- [ ] Git commit created
+- [ ] `.claude/references/copywriting-frameworks.md` exists
+- [ ] Contains all 7 framework authors
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] ~1,627 lines (within 15% tolerance)
+- [ ] Original source file unchanged (extraction only, no editing yet)
 
 **Starter Prompt:**
-> Read TASKS.md Task 58 for steps. Read `universal-rules.md` in full. Extract patterns 4-8 + Miscellaneous + Directional Words (lines 108-201) into `.claude/references/uk-english-patterns.md`. Replace with pointer. Update `seo-writer.md` and `content-validator.md` read lists. Verify line counts and paths. Commit.
+> Read `.claude/skills/direct-response-copy/SKILL.md` from line 583 to the end. Create `.claude/references/copywriting-frameworks.md` with that content. Convert all tables to flat bullet lists. Keep all frameworks intact (Schwartz, Hopkins, Ogilvy, Halbert, Caples, Sugarman, Collier), headline formulas, opening lines, curiosity gaps, flow techniques, and modern examples. Do NOT modify the source file — extraction only.
 
 **Status:** PASS
 
 ---
 
 **Handoff:**
-- **Done:** Extracted UK English patterns 4-8, Miscellaneous, and Directional Words into `.claude/references/uk-english-patterns.md`. Replaced with pointer in `universal-rules.md`. Updated `seo-writer.md` and `content-validator.md` read lists.
-- **Decisions:** Kept patterns 1-3 inline (highest frequency). Reference file follows same heading structure (####) as original.
-- **Next:** Continue with next cleanup task if planned, or verify agents load the new reference file correctly during next content generation run.
+- **Done:** Extracted lines 583-2217 from `skills/direct-response-copy/SKILL.md` to `references/copywriting-frameworks.md` (1,633 lines). Converted Voice Markers Summary table to flat bullet list. All 7 framework authors present. Zero table rows.
+- **Decisions:** Used `Corporate: X → Internet-native: Y` bullet format for the voice markers table conversion.
+- **Next:** Task 71 depends on this (slimming the source SKILL.md by removing the now-extracted reference material).
 
 ---
 
-## Task 59: Strip inline rule copies from content-validator.md
+## Task 68: Create condensed E-E-A-T patterns reference
 
-**Objective:** Remove duplicated rule content from `content-validator.md` that the agent already reads from `universal-rules.md` at startup. Replace with references to the canonical source. Saves ~90 lines.
+**Objective:** Condense `skills/seo-content/references/eeat-examples.md` (654 lines) into a new ~80-line patterns file for agent use. Keep the original file intact for interactive skill use.
 
-**Context:** The content-validator already reads `universal-rules.md` in its "Before Starting" section (line 21). Its inline copies of rules are loaded twice per validation — once from the source file, once from the agent's own instructions. This is pure token waste.
-
-**Depends on:** Nothing (can run in parallel with Tasks 60, 61)
-
-**Risk:** LOW — agent already reads the source files.
-
-**Execution Steps:**
-1. Read `.claude/agents/content-validator.md` in full
-2. Section 1.1 (UK English, lines ~72-90): Replace 10-pair word list with `"Scan for American spellings per universal-rules.md Rule 1 and uk-english-patterns.md."` Keep output format example only
-3. Section 1.2 (Banned Words, lines ~92-106): Replace full 53-word list with `"Scan for all 53 banned words per universal-rules.md Rule 2."` Keep output format
-4. Section 1.3 (Banned Phrases, lines ~108-121): Replace category summaries with reference to Rule 3. Keep output format
-5. Section 1.4 (AI Patterns, lines ~124-136): Replace pattern list with reference to Rule 4. Keep output format
-6. Section 1.5 (Em Dashes, lines ~139-163): Keep the Grep detection method (unique value). Remove the duplicate rule explanation and exclusion list
-7. Section 1.9 (SEO Requirements, lines ~226-245): Replace checklist with reference to Rule 5. Keep output format
-8. Verify: agent still has output format examples for every rule category
-9. Verify: no references to rules that don't exist in source files
-10. Commit
+**What to do:**
+- Read `.claude/skills/seo-content/references/eeat-examples.md`
+- Create `.claude/skills/seo-content/references/eeat-patterns.md` (~80 lines)
+- Include: 7 Universal Patterns (from lines 567-591), 5 Questions Before Writing (lines 594-604), Red Flags (lines 608-616), 20 authors as `### Author Name` + 3 bullets each (vertical, key pattern, steal-this technique)
+- No tables. Use headings + bullets only
 
 **Acceptance Criteria:**
-- [x] Inline UK English word pairs removed, replaced with reference
-- [x] Inline banned words list removed, replaced with reference
-- [x] Inline banned phrases removed, replaced with reference
-- [x] Inline AI patterns removed, replaced with reference
-- [x] Em dash Grep detection method preserved
-- [x] Inline SEO checklist removed, replaced with reference
-- [x] All output format examples retained
-- [x] `content-validator.md` reduced by ~48 lines (632→584; actual duplication was less than estimated ~90)
-- [x] Git commit created
+- [ ] `.claude/skills/seo-content/references/eeat-patterns.md` exists
+- [ ] Contains 7 Universal Patterns section
+- [ ] Contains 5 Questions Before Writing section
+- [ ] Contains Red Flags section
+- [ ] Contains 20 author entries with 3 bullets each
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] ~80 lines (within 15% tolerance)
+- [ ] Original `eeat-examples.md` unchanged
 
 **Starter Prompt:**
-> Read TASKS.md Task 59 for steps. Read `.claude/agents/content-validator.md` in full. For sections 1.1-1.5 and 1.9, replace inline rule copies with references to `universal-rules.md` Rules 1-5. Keep all output format examples and the Em Dash Grep detection method. Verify output format coverage. Commit.
+> Read `.claude/skills/seo-content/references/eeat-examples.md`. Create `.claude/skills/seo-content/references/eeat-patterns.md` as a condensed ~80-line version. Include: 7 Universal Patterns (from lines 567-591), 5 Questions Before Writing (lines 594-604), Red Flags (lines 608-616), and 20 authors as `### Author Name` with 3 bullets each (vertical, key pattern, steal-this technique). No tables — headings + bullets only. Do NOT modify the original file.
 
-**Status:** PASS
-
----
-
-**Handoff:**
-- **Done:** Replaced inline rule copies in sections 1.1-1.5 and 1.9 with references to `universal-rules.md` Rules 1-5 and `uk-english-patterns.md`. Preserved all output format examples and the Em Dash Grep detection method.
-- **Decisions:** Kept Em Dash exclusion guidance embedded in step 2 of detection method (already concise). Actual line reduction was 48 (not estimated 90) because inline copies were more concise than the source rules.
-- **Next:** Task 60 (copy-enhancer.md) and Task 61 (validate-content/SKILL.md) can run in parallel.
+**Status:** pending
 
 ---
 
-## Task 60: Strip inline banned words from copy-enhancer.md + add "Before Starting" section
+## Task 69: Create copy-fixer agent
 
-**Objective:** Add a "Before Starting" section to `copy-enhancer.md` (matching the pattern in seo-writer.md and content-validator.md) and replace the inline 53-word banned list with a reference. Saves ~15 lines.
+**Objective:** Create a new lightweight agent for validation fix retries, replacing the full Copy Enhancer in the retry loop. ~150 lines, no skills loaded.
 
-**Context:** The copy-enhancer has no "Before Starting" section telling it to read rules files. It relies entirely on its preloaded skill and an inline "Quick Reference" of 53 banned words. Adding the read-on-start pattern ensures it always has the latest rules.
-
-**Depends on:** Nothing (can run in parallel with Tasks 59, 61)
-
-**Risk:** LOW-MEDIUM — the "Before Starting" addition is new for this agent but follows established pattern from seo-writer.md and content-validator.md.
-
-**Execution Steps:**
-1. Read `.claude/agents/copy-enhancer.md` in full
-2. Read `.claude/agents/seo-writer.md` lines 1-30 for "Before Starting" pattern reference
-3. Add "Before Starting" section after the frontmatter/intro, instructing agent to read `universal-rules.md` and `uk-english-patterns.md`
-4. Replace lines ~38-48 (full banned word list) with reference to `universal-rules.md` Rule 2
-5. Keep the replacement examples table (lines ~58-70) — this is unique value showing natural alternatives
-6. Keep the pre-return check and fix-mode behaviour
-7. Verify: "Before Starting" section matches pattern from other agents
-8. Verify: replacement examples table intact
-9. Commit
+**What to do:**
+- Create `.claude/agents/copy-fixer.md`
+- Frontmatter: name: copy-fixer, description: "Fix specific validation issues in articles. Use after content-validator returns FAIL. Reads validation file and applies targeted fixes only.", tools: Read, Edit, model: sonnet
+- No `skills:` field (saves loading entire direct-response-copy skill at 2,217 lines)
+- Extract from current `copy-enhancer.md`: Read validation file workflow (lines 176-238)
+- Include: banned words reference line pointing to `banned-words-phrases.md`, em dash removal with 3-4 inline restructuring examples (no table), common fix types as flat list (US→UK spelling, banned phrases→rewrites, AI patterns→restructure)
+- Return format: `PASS` or `FAIL: {reason}`
 
 **Acceptance Criteria:**
-- [x] "Before Starting" section added with reads for `universal-rules.md` and `uk-english-patterns.md`
-- [x] Inline 53-word banned list replaced with reference to Rule 2
-- [x] Replacement examples table preserved
-- [x] Pre-return check and fix-mode behaviour preserved
-- [x] `copy-enhancer.md` net ~1 line reduction (banned list -11 lines offset by new Before Starting +11 lines of non-duplicated value)
-- [x] Git commit created
+- [ ] `.claude/agents/copy-fixer.md` exists
+- [ ] Valid YAML frontmatter with name, description, tools, model
+- [ ] No `skills:` field in frontmatter
+- [ ] Contains validation file reading workflow
+- [ ] Contains banned words reference to `banned-words-phrases.md`
+- [ ] Contains em dash removal examples (inline, not table)
+- [ ] Contains common fix types as flat list
+- [ ] Contains return format specification
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] ~150 lines (within 15% tolerance)
 
 **Starter Prompt:**
-> Read TASKS.md Task 60 for steps. Read `.claude/agents/copy-enhancer.md` in full. Read `.claude/agents/seo-writer.md` lines 1-30 for "Before Starting" pattern. Add "Before Starting" section to copy-enhancer.md. Replace inline banned word list with reference to `universal-rules.md` Rule 2. Keep replacement examples table. Commit.
+> Read `.claude/agents/copy-enhancer.md` (especially lines 176-238 for the fix mode workflow). Create `.claude/agents/copy-fixer.md` as a new lightweight agent (~150 lines). Frontmatter: name copy-fixer, description "Fix specific validation issues in articles. Use after content-validator returns FAIL. Reads validation file and applies targeted fixes only.", tools Read/Edit, model sonnet. NO skills field. Extract the fix workflow, add banned words reference to `banned-words-phrases.md`, em dash removal with 3-4 inline examples, common fix types as flat list. Return format: PASS or FAIL: {reason}. No tables anywhere.
 
-**Status:** PASS
-
----
-
-**Handoff:**
-- **Done:** Added "Before Starting" section to `copy-enhancer.md` matching the pattern from `seo-writer.md` and `content-validator.md`. Replaced inline 53-word banned list with reference to `universal-rules.md` Rule 2.
-- **Decisions:** Kept replacement examples table (unique value showing natural alternatives). "Before Starting" reads `universal-rules.md` and `uk-english-patterns.md` matching other agents. Net file size change minimal because the new section adds non-duplicated value.
-- **Next:** Task 61 (validate-content/SKILL.md) can proceed. Task 62 will add `banned-words-phrases.md` to this agent's "Before Starting" section.
+**Status:** pending
 
 ---
 
-## Task 61: Strip inline rule copies from validate-content/SKILL.md
+## Task 70: Extract execute-pillar troubleshooting to reference file
 
-**Objective:** Remove duplicated rule content from `validate-content/SKILL.md`. This is the biggest duplication in the system — the skill is preloaded into the content-validator agent which already reads `universal-rules.md`, so every rule list is loaded twice per validation. Saves ~300 lines.
+**Objective:** Move troubleshooting section from `skills/execute-pillar/SKILL.md` (lines 756-789) to a standalone reference file.
 
-**Context:** This skill file contains full copies of UK English pairs, banned words, banned phrases, AI patterns, SEO requirements, and content type scope matrix. All of these exist in `universal-rules.md` which the content-validator agent reads at startup. The skill adds unique value through output format examples and content-type-specific checks (email subject lines, newsletter hooks) — those must be kept.
-
-**Depends on:** Nothing (can run in parallel with Tasks 59, 60)
-
-**Risk:** LOW — the skill is loaded into an agent that already reads the source files.
-
-**Execution Steps:**
-1. Read `.claude/skills/validate-content/SKILL.md` in full
-2. Section 1.1 (UK English, lines ~88-115): Replace 24-pair table with reference to Rule 1 + `uk-english-patterns.md`
-3. Section 1.2 (Banned Words, lines ~121-143): Replace full word list with reference to Rule 2
-4. Section 1.3 (Banned Phrases, lines ~146-195): Replace ~50 lines of phrases with reference to Rule 3
-5. Section 1.4 (AI Patterns, lines ~197-226): Replace with reference to Rule 4
-6. SEO Requirements section: Replace checklist with reference to Rule 5
-7. Content Type Variations section (lines ~612-788): Replace scope matrix duplicate with reference to `universal-rules.md` Scope section. Keep content-type-specific checks (email subject lines, newsletter hooks) that are NOT in `universal-rules.md`
-8. Keep ALL output format examples throughout
-9. Verify: output format examples present for every rule category
-10. Verify: content-type-specific checks (email, newsletter) preserved
-11. Commit
+**What to do:**
+- Read `.claude/skills/execute-pillar/SKILL.md` lines 756-789
+- Create `.claude/references/execute-pillar-troubleshooting.md` (~34 lines)
+- Cover: agent not spawning, validation loop never passes, git conflicts, context running low
 
 **Acceptance Criteria:**
-- [x] Inline UK English pairs removed, replaced with reference
-- [x] Inline banned words removed, replaced with reference
-- [x] Inline banned phrases removed, replaced with reference
-- [x] Inline AI patterns removed, replaced with reference
-- [x] Inline SEO checklist removed, replaced with reference
-- [x] Scope matrix duplicate removed, replaced with reference
-- [x] Content-type-specific checks (email, newsletter) preserved
-- [x] All output format examples retained
-- [x] `validate-content/SKILL.md` reduced by 168 lines (1132→964; actual duplication was less than estimated ~300)
-- [x] Git commit created
+- [ ] `.claude/references/execute-pillar-troubleshooting.md` exists
+- [ ] Covers all 4 troubleshooting scenarios (agent not spawning, validation loop, git conflicts, context running low)
+- [ ] ~34 lines (within 15% tolerance)
+- [ ] Original source file unchanged (extraction only, no editing yet)
 
 **Starter Prompt:**
-> Read TASKS.md Task 61 for steps. Read `.claude/skills/validate-content/SKILL.md` in full. For sections 1.1-1.4, SEO Requirements, and Content Type Variations, replace inline rule copies with references to `universal-rules.md` Rules 1-5 and `uk-english-patterns.md`. Keep all output format examples and content-type-specific checks. Commit.
+> Read `.claude/skills/execute-pillar/SKILL.md` lines 756-789. Create `.claude/references/execute-pillar-troubleshooting.md` (~34 lines) covering: agent not spawning, validation loop never passes, git conflicts, context running low. Do NOT modify the source file — extraction only.
 
-**Status:** PASS
-
----
-
-**Handoff:**
-- **Done:** Replaced inline rule copies in sections 1.1-1.4, 1.5 SEO, and Content Type Variations (7.2-7.5) with references to `universal-rules.md` Rules 1-5, Rule 5a, and `uk-english-patterns.md`. Preserved all 25 output format examples and all content-type-specific additional checks (email subject lines, newsletter hooks, lead magnet bridge, distribution hooks).
-- **Decisions:** Actual reduction was 168 lines (not estimated 300) because the scope lists in Content Type Variations were more concise than expected. Kept the 7.6 Quick Reference table (maps all phases × content types — unique value not duplicated elsewhere).
-- **Next:** Task 62 can proceed (extract banned words/phrases to references). The validate-content skill now references `universal-rules.md` directly, so when Task 62 moves rules to reference files, the skill's references remain valid (it points to rule numbers, not specific file locations of content).
+**Status:** pending
 
 ---
 
-## Task 62: Extract banned words, phrases, AI patterns, and em dash rules to references
+## Task 71: Slim direct-response-copy SKILL.md (2,217 → ~590 lines)
 
-**Objective:** Move Rules 2-4b (banned words, banned phrases, AI patterns, em dashes) from `universal-rules.md` to a new reference file `banned-words-phrases.md`. Replace with named stubs in `universal-rules.md`. Update agent "Before Starting" sections. Saves ~155 lines from auto-load.
+**Depends on:** Task 67
 
-**Context:** These rules are content-creation specific. They waste auto-load tokens during system development sessions where no content is being written. The stub pattern keeps rule names visible (so you know they exist) while moving the full lists to on-demand reference files.
+**Objective:** Remove reference material (now in `references/copywriting-frameworks.md`), motivational intro, tables, and duplicate content from the DR copy skill.
 
-**Depends on:** Tasks 59, 60, 61 (agents must reference source files before we move the content)
-
-**Risk:** MEDIUM — agents must read the new reference file or rules are silently dropped. Mitigated by stub pattern (rule names remain visible in auto-loaded file) and content-validator as gatekeeper.
-
-**Execution Steps:**
-1. Read `universal-rules.md` in full (post Tasks 59-61 state)
-2. Create `.claude/references/banned-words-phrases.md` containing:
-   - Rule 2: Banned AI Words (full 53-word list)
-   - Rule 3: Banned AI Phrases (full list)
-   - Rule 4: AI Patterns
-   - Rule 4b: No Em Dashes
-3. Replace each section in `universal-rules.md` with a named stub + reference link (e.g., `### 2. Banned AI Words\n53 banned words. See [Banned Words & Phrases](../references/banned-words-phrases.md).`)
-4. Add `.claude/references/banned-words-phrases.md` to "Before Starting" sections in:
-   - `content-validator.md`
-   - `seo-writer.md`
-   - `copy-enhancer.md` (added in Task 60)
-5. Verify: stubs in `universal-rules.md` still show rule names and numbers
-6. Verify: reference file contains all 53 banned words, all banned phrases, all AI patterns, em dash rules
-7. Verify: all three agents list the new reference file in "Before Starting"
-8. Commit
+**What to do:**
+- Remove lines 583-2217 (everything after `# REFERENCE MATERIAL` — now in `references/copywriting-frameworks.md`)
+- Remove motivational intro (lines 8-16): "Here's what separates copy that converts..."
+- Convert all tables to flat lists (CTA comparison at line 381, Voice markers at line 2186)
+- Add opening directive: "Your job is to write copy that sounds like a smart friend explaining something while deploying persuasion principles the reader doesn't notice."
+- Add one-line reference: "For extended frameworks, headline formulas, and examples, see `references/copywriting-frameworks.md`"
+- Keep intact (convert tables to flat lists): Headlines (20-76), Opening lines (79-132), Curiosity gaps (135-176), Flow techniques (179-248), Pain quantification (250-269), So What Chain (272-289), Rhythm (292-318), Founder story (321-335), Testimonials (338-353), Disqualification (355-375), CTAs (377-393), Internet-native voice markers (396-417), Full sequence (419-434), AI tells (438-491), Example transformation (494-511), The test (514-528), SEO/frontmatter (532-579)
 
 **Acceptance Criteria:**
-- [x] `references/banned-words-phrases.md` created with Rules 2, 3, 4, 4b
-- [x] `universal-rules.md` has named stubs with reference links for each moved rule
-- [x] `content-validator.md` "Before Starting" includes new reference file
-- [x] `seo-writer.md` "Before Starting" includes new reference file
-- [x] `copy-enhancer.md` "Before Starting" includes new reference file
-- [x] `universal-rules.md` reduced by ~155 lines from auto-load (actual: 157)
-- [x] All 53 banned words present in reference file
-- [x] Git commit created
+- [ ] File is ~590 lines (within 15% tolerance)
+- [ ] No `# REFERENCE MATERIAL` section or content after it
+- [ ] No motivational intro paragraph
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] Opening directive present
+- [ ] Reference to `references/copywriting-frameworks.md` present
+- [ ] All 17 kept sections still present (Headlines through SEO/frontmatter)
 
 **Starter Prompt:**
-> Read TASKS.md Task 62 for steps. Read `universal-rules.md` in full. Create `.claude/references/banned-words-phrases.md` with Rules 2-4b (banned words, phrases, AI patterns, em dashes). Replace sections in `universal-rules.md` with named stubs + reference links. Update "Before Starting" in content-validator.md, seo-writer.md, and copy-enhancer.md to read the new file. Verify coverage. Commit.
+> Read `.claude/skills/direct-response-copy/SKILL.md`. Slim it from 2,217 to ~590 lines. Remove: lines 583-2217 (moved to `references/copywriting-frameworks.md`), motivational intro (lines 8-16), all tables (convert to flat lists). Add opening directive: "Your job is to write copy that sounds like a smart friend explaining something while deploying persuasion principles the reader doesn't notice." Add reference: "For extended frameworks, headline formulas, and examples, see `references/copywriting-frameworks.md`". Keep all 17 sections from Headlines through SEO/frontmatter intact, converting any tables within them to flat lists.
 
-**Status:** PASS
-
----
-
-**Handoff:**
-- **Done:** Created `references/banned-words-phrases.md` with Rules 2-4b (banned words, phrases, AI patterns, em dashes). Replaced full rule content in `universal-rules.md` with named stubs + reference links. Updated "Before Starting" in content-validator.md, seo-writer.md, and copy-enhancer.md to read the new file.
-- **Decisions:** Stubs keep rule names and numbers visible with one-line summaries. Reference links use anchor fragments for direct navigation. Reduction was 157 lines (427 → 270), slightly above the ~155 target.
-- **Next:** Task 63 can proceed (extract SEO requirements and citation rules to `seo-requirements.md`). The stub pattern is established and works well for sequential extraction.
+**Status:** pending
 
 ---
 
-## Task 63: Extract SEO requirements and citation rules to references
+## Task 72: Slim seo-content SKILL.md (995 → ~400 lines)
 
-**Objective:** Move Rules 5, 5a, and 6 (SEO requirements, internal link format, external citations) from `universal-rules.md` to a new reference file `seo-requirements.md`. Replace with named stubs. Update agent "Before Starting" sections. Saves ~85 lines from auto-load.
+**Depends on:** Task 68
 
-**Context:** These rules only apply to articles. System dev, email, and distribution sessions never need them. Moving them to a reference file means they only load when content agents spawn.
+**Objective:** Remove content duplicated in other files, motivational intro, ASCII diagram, and tables from the SEO content skill.
 
-**Depends on:** Task 62 (sequential extraction — do banned words first, then SEO)
-
-**Risk:** MEDIUM — same pattern as Task 62. Mitigated by stub visibility and validator gatekeeper.
-
-**Execution Steps:**
-1. Read `universal-rules.md` in full (post Task 62 state)
-2. Create `.claude/references/seo-requirements.md` containing:
-   - Rule 5: SEO Requirements (keyword placement, content length, meta data, links, structure, H1 format)
-   - Rule 5a: Internal Link Format
-   - Rule 6: External Citations (E-E-A-T)
-3. Replace each section in `universal-rules.md` with named stubs + reference links
-4. Add `.claude/references/seo-requirements.md` to "Before Starting" sections in:
-   - `content-validator.md`
-   - `seo-writer.md`
-   - `link-auditor.md`
-5. Verify: stubs in `universal-rules.md` still show rule names
-6. Verify: reference file contains complete SEO checklist, internal link format, citation rules
-7. Verify: all three agents list the new reference file
-8. Commit
+**What to do:**
+- Remove template structure (lines 648-757, ~110 lines) — duplicates `templates/article-template.md`
+- Remove humanize phase AI patterns (lines 318-465, ~147 lines) — duplicates `references/banned-words-phrases.md`
+- Remove optimize phase SEO checklist (lines 467-587, ~120 lines) — duplicates `references/seo-requirements.md`
+- Remove pillar/non-interactive mode (lines 827-864, 928-991, ~100 lines) — duplicates `rules/workflow.md`
+- Remove file naming rules (lines 806-823, ~17 lines) — duplicates `references/file-naming-conventions.md`
+- Remove internal linking rules (lines 545-587, ~42 lines) — duplicates `references/internal-linking-strategy.md`
+- Remove motivational intro text and ASCII diagram
+- Remove all tables
+- Replace removed sections with one-line references to their source files
+- Update reference: `eeat-examples.md` → `eeat-patterns.md`
+- Keep: Content Brief template (lines 86-152), Outline structures (lines 154-266), Draft phase principles condensed (lines 270-316, trim to ~30 lines), Quality review checklists condensed (lines 589-639), E-E-A-T signals checklist (lines 629-638)
 
 **Acceptance Criteria:**
-- [x] `references/seo-requirements.md` created with Rules 5, 5a, 6
-- [x] `universal-rules.md` has named stubs with reference links for each moved rule
-- [x] `content-validator.md` "Before Starting" includes new reference file
-- [x] `seo-writer.md` "Before Starting" includes new reference file
-- [x] `link-auditor.md` "Before Starting" includes new reference file
-- [x] `universal-rules.md` reduced by ~83 lines from auto-load (271→188)
-- [x] Complete SEO checklist present in reference file
-- [x] Git commit created
+- [ ] File is ~400 lines (within 15% tolerance)
+- [ ] Contains one-line references to: `article-template.md`, `banned-words-phrases.md`, `seo-requirements.md`, `internal-linking-strategy.md`
+- [ ] No duplicate template structure, AI patterns, SEO checklist, pillar mode, file naming, or linking rules
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] No ASCII diagram
+- [ ] References `eeat-patterns.md` (not `eeat-examples.md`)
+- [ ] Content Brief template still present
+- [ ] Outline structures still present
+- [ ] E-E-A-T signals checklist still present
 
 **Starter Prompt:**
-> Read TASKS.md Task 63 for steps. Read `universal-rules.md` in full. Create `.claude/references/seo-requirements.md` with Rules 5, 5a, 6. Replace sections in `universal-rules.md` with named stubs + reference links. Update "Before Starting" in content-validator.md, seo-writer.md, and link-auditor.md. Verify coverage. Commit.
+> Read `.claude/skills/seo-content/SKILL.md`. Slim it from 995 to ~400 lines. Remove sections duplicated elsewhere: template structure (→ article-template.md), humanize AI patterns (→ banned-words-phrases.md), optimize SEO checklist (→ seo-requirements.md), pillar/non-interactive mode (→ workflow.md), file naming (→ file-naming-conventions.md), internal linking (→ internal-linking-strategy.md). Remove motivational intro, ASCII diagram, all tables. Replace removed sections with one-line references. Update eeat-examples.md → eeat-patterns.md. Keep: Content Brief template, Outline structures, Draft principles (condensed to ~30 lines), Quality review checklists (condensed), E-E-A-T signals checklist.
 
-**Status:** PASS
-
----
-
-**Handoff:**
-- **Done:** Created `references/seo-requirements.md` with Rules 5, 5a, 6 (SEO requirements, internal link format, external citations). Replaced full rule content in `universal-rules.md` with named stubs + reference links. Updated "Before Starting" in content-validator.md, seo-writer.md, and link-auditor.md to read the new file.
-- **Decisions:** Stubs follow same pattern as Task 62 (one-line summary + anchor link). Reduction was 83 lines (271→188), close to ~85 target. Link-auditor "Before Starting" expanded from single-rule reference to full pattern matching other agents.
-- **Next:** Task 64 (condense workflow.md), Task 65 (archive agents-prd.md), and Task 66 (multi-client docs) can run in parallel.
+**Status:** pending
 
 ---
 
-## Task 64: Condense workflow.md retry/tier details
+## Task 73: Slim validate-content SKILL.md (964 → ~700 lines)
 
-**Objective:** Condense the retry loop (lines ~54-96) and tier execution (lines ~100-114) sections in `workflow.md` to short summaries with pointers to `execute-pillar/SKILL.md`. Saves ~45 lines from auto-load.
+**Objective:** Remove motivational intro, context sections, motivational checklists, and tables from the validation skill.
 
-**Context:** Retry loop details and tier execution are only needed during pillar execution. The `execute-pillar/SKILL.md` (791 lines) already contains all these details in expanded form. The auto-loaded `workflow.md` just needs to mention they exist and point to the full source.
-
-**Depends on:** Nothing (independent, can run in parallel with Tasks 65, 66)
-
-**Risk:** LOW — full details remain in `execute-pillar/SKILL.md`.
-
-**Execution Steps:**
-1. Read `.claude/rules/workflow.md` in full
-2. Read `.claude/skills/execute-pillar/SKILL.md` lines 1-50 to confirm retry/tier details exist there
-3. Condense retry loop section (~lines 54-96) to ~5-line summary with pointer to execute-pillar skill
-4. Condense tier execution section (~lines 100-114) to ~4-line summary with pointer to execute-pillar skill
-5. Keep: 7-step overview, agent pipeline, "agents cannot spawn agents" constraint, agent return formats
-6. Verify: workflow overview (steps 1-7) intact
-7. Verify: "agents cannot spawn agents" constraint intact
-8. Verify: agent return formats intact
-9. Commit
+**What to do:**
+- Remove motivational intro (lines 1-14)
+- Remove "When to Validate" context section — condense to single directive
+- Remove "The Test" motivational checklist (lines 817-835)
+- Convert all tables to flat lists
+- Convert content type matrix table to flat list
+- Keep all 6 validation phase definitions (this is the single source of truth)
 
 **Acceptance Criteria:**
-- [ ] Retry loop section condensed to ~5-line summary + pointer
-- [ ] Tier execution section condensed to ~4-line summary + pointer
-- [ ] 7-step workflow overview preserved
-- [ ] "Agents cannot spawn agents" constraint preserved
-- [ ] Agent pipeline and return formats preserved
-- [ ] `workflow.md` reduced by ~45 lines
-- [ ] Git commit created
+- [ ] File is ~700 lines (within 15% tolerance)
+- [ ] No motivational intro
+- [ ] No "The Test" section
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] All 6 validation phases still present and complete
+- [ ] "When to Validate" is a single directive, not a full section
 
 **Starter Prompt:**
-> Read TASKS.md Task 64 for steps. Read `.claude/rules/workflow.md` in full. Read `.claude/skills/execute-pillar/SKILL.md` lines 1-50 to confirm detail overlap. Condense retry loop to ~5-line summary and tier execution to ~4-line summary, both pointing to execute-pillar skill. Keep overview, constraint, pipeline, return formats. Commit.
+> Read `.claude/skills/validate-content/SKILL.md`. Slim it from 964 to ~700 lines. Remove: motivational intro (lines 1-14), "When to Validate" context (condense to single directive), "The Test" motivational checklist (lines 817-835), all tables (convert to flat lists), content type matrix table (convert to flat list). Keep all 6 validation phase definitions intact — this is the single source of truth.
 
-**Status:** PASS
-
-**Handoff:**
-- **Done:** Condensed retry loop (was 22 lines) to 3-line summary + pointer to execute-pillar Step 4. Condensed tier execution (was 20 lines) to 3-line summary + pointer to execute-pillar Step 3. Preserved 7-step overview, agent constraint, pipeline, and return formats.
-- **Decisions:** Kept key design rationale inline (file-based issue passing, context overflow prevention) since it explains *why* the architecture works this way. Pointers use relative links to skill file with step numbers.
-- **Next:** Task 65 (archive agents-prd.md) and Task 66 (multi-client docs) can run independently.
+**Status:** pending
 
 ---
 
-## Task 65: Archive agents-prd.md
+## Task 74: Slim content-atomizer SKILL.md (1,189 → ~900 lines)
 
-**Objective:** Move the 948-line `agents-prd.md` to `.claude/archive/` and update the reference in `CLAUDE.md`. The 6 agent files in `.claude/agents/` are the canonical implementation — the PRD duplicates their specs and contains stale content.
+**Objective:** Remove motivational intro, redundant sections, maintenance section, and tables from the atomizer skill.
 
-**Depends on:** Nothing (independent, can run in parallel with Tasks 64, 66)
-
-**Risk:** LOW — document served its purpose, agent files are the source of truth.
-
-**Execution Steps:**
-1. Read `.claude/agents-prd.md` first 20 lines to confirm it's the design doc
-2. Create `.claude/archive/` directory if it doesn't exist
-3. Move `.claude/agents-prd.md` to `.claude/archive/agents-prd.md`
-4. Add archival note at top of file: `> **Archived:** This PRD served its purpose during initial agent development. The canonical agent specifications now live in .claude/agents/. This file is kept for historical reference only.`
-5. Update `CLAUDE.md` reference from `See [Agents PRD](agents-prd.md)` to `Agent files in .claude/agents/`
-6. Update any other files that reference `agents-prd.md` (check `workflow.md` agent reference section)
-7. Verify: no broken references to `agents-prd.md`
-8. Commit
+**What to do:**
+- Remove motivational intro (lines 1-12)
+- Condense anti-patterns section to 5-line bullet list
+- Remove transformation examples (lines 756-793) — redundant with templates
+- Remove "Keeping Platform Specs Current" maintenance section (lines 1122-1174)
+- Convert all tables to flat lists
+- Keep platform playbooks (LinkedIn, Twitter, Instagram, TikTok, YouTube) but strip tables within them
 
 **Acceptance Criteria:**
-- [x] `agents-prd.md` moved to `.claude/archive/agents-prd.md`
-- [x] Archival note added at top of moved file
-- [x] `CLAUDE.md` reference updated
-- [x] `workflow.md` agent reference updated (if applicable)
-- [x] No broken references to `agents-prd.md` anywhere in `.claude/`
-- [x] Git commit created
+- [ ] File is ~900 lines (within 15% tolerance)
+- [ ] No motivational intro
+- [ ] Anti-patterns condensed to ≤5 bullets
+- [ ] No "Keeping Platform Specs Current" section
+- [ ] No transformation examples section
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] All 5 platform playbooks still present (LinkedIn, Twitter, Instagram, TikTok, YouTube)
 
 **Starter Prompt:**
-> Read TASKS.md Task 65 for steps. Move `.claude/agents-prd.md` to `.claude/archive/agents-prd.md` with archival note. Update references in `CLAUDE.md` and `workflow.md`. Grep for any remaining references. Commit.
+> Read `.claude/skills/content-atomizer/SKILL.md`. Slim it from 1,189 to ~900 lines. Remove: motivational intro (lines 1-12), transformation examples (lines 756-793), "Keeping Platform Specs Current" (lines 1122-1174). Condense anti-patterns to 5-line bullet list. Convert all tables to flat lists. Keep all 5 platform playbooks (LinkedIn, Twitter, Instagram, TikTok, YouTube) intact but strip tables within them.
 
-**Status:** PASS
-
-**Handoff:**
-- **Done:** Moved `agents-prd.md` (948 lines) to `.claude/archive/agents-prd.md` with archival note. Updated 3 references: `CLAUDE.md` (removed PRD link), `workflow.md` (pointed to agent files), `archive/README.md` (pointed to agent files). Self-references inside the archived file left as-is.
-- **Decisions:** Only active-file references were updated. The archived PRD's internal self-references were intentionally left unchanged since the file is historical reference only.
-- **Next:** Task 66 (multi-client path isolation) is independent and ready to run.
+**Status:** pending
 
 ---
 
-## Task 66: Add multi-client path isolation to CLAUDE.md
+## Task 75: Slim seo-writer agent (205 → ~130 lines)
 
-**Objective:** Add an 8-line "Multi-Client Architecture" subsection to `CLAUDE.md` documenting path isolation rules for scaling to 5+ clients.
+**Depends on:** Task 68
 
-**Context:** At 5+ clients, the main risk is context pollution — loading the wrong client's profile. This task adds documentation-only guardrails to prevent it.
+**Objective:** Remove content duplicated in the preloaded skill and convert tables to flat lists.
 
-**Depends on:** Nothing (independent, can run in parallel with Tasks 64, 65)
-
-**Risk:** LOW — documentation only, no code changes.
-
-**Execution Steps:**
-1. Read `.claude/CLAUDE.md` in full
-2. Add "Multi-Client Architecture" subsection (suggested location: after the Phase 1 section or as a new section before Rules & References)
-3. Content to add (~8 lines):
-   - Each client isolated by directory path (`/clients/{name}/`)
-   - Agents receive client profile path as explicit input
-   - Main session verifies correct profile path before spawning agents
-   - Never load multiple client profiles in the same session
-4. Verify: section fits naturally in CLAUDE.md structure
-5. Verify: no contradictions with existing client profile references
-6. Commit
+**What to do:**
+- Remove Section "4. Write the Article" (lines 77-99, ~23 lines) — duplicates article template + seo-content skill
+- Remove Section "5. Write Quality Content" (lines 108-120, ~13 lines) — duplicates skill requirements
+- Convert URL status codes table (lines 136-143) to flat list
+- Convert tool usage table (lines 198-203) to flat list
+- Remove "Why minimal return" explanation (lines 173-176)
+- Drop `common-mistakes.md` from "Before Starting" references
+- Replace sections 4-5 with: "Follow the preloaded `/seo-content` skill workflow to write the article. Use `skills/templates/article-template.md` for structure."
+- Update reference: `eeat-examples.md` → `eeat-patterns.md`
+- Keep: Step 1 (Read Context Files), Step 2 (Research E-E-A-T Citations), Step 3 (Find Existing Articles), Step 6 (Verify Citation URLs as flat list), Return Format (condensed)
 
 **Acceptance Criteria:**
-- [x] "Multi-Client Architecture" subsection added to CLAUDE.md
-- [x] Contains path isolation rules (4 key points)
-- [x] Fits naturally in document structure
-- [x] No contradictions with existing content
-- [x] ~8 lines added
-- [x] Git commit created
+- [ ] File is ~130 lines (within 15% tolerance)
+- [ ] No "Write the Article" or "Write Quality Content" sections
+- [ ] No "Why minimal return" explanation
+- [ ] No `common-mistakes.md` reference
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] References `eeat-patterns.md` (not `eeat-examples.md`)
+- [ ] Contains replacement directive for sections 4-5
+- [ ] Steps 1, 2, 3, 6, and Return Format still present
 
 **Starter Prompt:**
-> Read TASKS.md Task 66 for steps. Read `.claude/CLAUDE.md` in full. Add "Multi-Client Architecture" subsection with path isolation rules (each client by directory, explicit profile path input, verify before spawning, never load multiple profiles). Place after Phase 1 or before Rules & References. Commit.
+> Read `.claude/agents/seo-writer.md`. Slim it from 205 to ~130 lines. Remove: Section 4 "Write the Article" (lines 77-99), Section 5 "Write Quality Content" (lines 108-120), "Why minimal return" (lines 173-176), `common-mistakes.md` from Before Starting. Replace sections 4-5 with: "Follow the preloaded `/seo-content` skill workflow to write the article. Use `skills/templates/article-template.md` for structure." Convert all tables to flat lists. Update eeat-examples.md → eeat-patterns.md. Keep Steps 1, 2, 3, 6, and Return Format.
 
-**Status:** PASS
-
----
-
-**Handoff:**
-- **Done:** Added "Multi-Client Architecture" subsection to `CLAUDE.md` as a `###` under Phase 1: Client Onboarding. Contains 4 path isolation rules (directory isolation, explicit profile input, pre-spawn verification, single-profile sessions).
-- **Decisions:** Placed as subsection under Phase 1 (not a new top-level section) since it directly extends client onboarding with scaling guidance. 8 lines added (heading + intro + 4 bullet points).
-- **Next:** All tasks in the slim-down plan are now complete. The cleanup/context-slim branch is ready for review and merge to main.
+**Status:** pending
 
 ---
 
-## Execution Order
+## Task 76: Slim copy-enhancer agent (290 → ~170 lines)
+
+**Depends on:** Task 69
+
+**Objective:** Remove fix mode (moved to copy-fixer agent), tables, and explanatory content. Make enhancement-only.
+
+**What to do:**
+- Remove Mode Detection section (lines 30-39) — now enhancement-only
+- Remove all Fix Mode sections (lines 176-238) — moved to copy-fixer agent
+- Remove Common Fix Types section (lines 203-230) — moved to copy-fixer
+- Convert Banned Words replacement table (lines 58-69) to "Replace per `banned-words-phrases.md`"
+- Convert Em Dash examples table (lines 140-144) to inline examples
+- Convert Tool Usage table (lines 285-288) to flat list
+- Remove "Why minimal return" explanation
+- Drop `universal-rules.md` from "Before Starting" references
+- Update description: remove "Handles both enhancement passes and fixing specific validation issues" — now enhancement-only
+
+**Acceptance Criteria:**
+- [ ] File is ~170 lines (within 15% tolerance)
+- [ ] No Mode Detection section
+- [ ] No Fix Mode sections
+- [ ] No Common Fix Types section
+- [ ] No "Why minimal return" explanation
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] Description says enhancement-only (no mention of "fix")
+- [ ] Enhancement Mode workflow still present
+- [ ] Banned Words Validation checklist still present
+- [ ] Em Dash Removal process still present (inline examples)
+- [ ] Preserve Frontmatter rules still present
+- [ ] What NOT to Do still present
+
+**Starter Prompt:**
+> Read `.claude/agents/copy-enhancer.md`. Slim it from 290 to ~170 lines. This agent is now enhancement-only — fix mode moved to copy-fixer. Remove: Mode Detection (lines 30-39), Fix Mode sections (lines 176-238), Common Fix Types (lines 203-230), "Why minimal return", `universal-rules.md` from Before Starting. Convert all tables to flat lists or inline examples. Update description to remove any mention of "fix" — enhancement-only. Keep: Enhancement Mode workflow, Banned Words Validation checklist, Em Dash Removal (inline examples), Preserve Frontmatter, What NOT to Do, Return Format.
+
+**Status:** pending
+
+---
+
+## Task 77: Slim content-validator agent (585 → ~210 lines)
+
+**Objective:** Remove all 6 phases duplicated in the preloaded validate-content skill. Keep only agent-specific additions.
+
+**What to do:**
+- Remove all duplicated phase descriptions (Phases 1-6 full descriptions, lines 69-401)
+- Remove Status determination section (lines 514-530)
+- Remove Missing context handling example (lines 548-570)
+- Remove "Why file-based" explanation (lines 39-42)
+- Remove all tables (H1 examples at 144, readability at 362, content type at 578, tool usage at 535)
+- Add directive: "Execute all 6 validation phases as defined in the preloaded `/validate-content` skill, with these agent-specific additions for Phase 1..."
+- Keep (agent-specific, NOT in skill): agent identity + read-only constraint (line 13), file-based output protocol directive (lines 31-37 without the "why"), Phase 1 additions: 1.5 em dash detection, 1.6 H1 validation, 1.7 heading uniqueness, 1.8 slug format check, 1.10 placeholder link handling
+- Keep: validation file format template (lines 428-510), return format (condensed), content type awareness as flat list
+
+**Acceptance Criteria:**
+- [ ] File is ~210 lines (within 15% tolerance)
+- [ ] No duplicate phase 1-6 descriptions (these are in the skill)
+- [ ] No "Why file-based" explanation
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] Contains directive referencing preloaded `/validate-content` skill
+- [ ] Agent-specific Phase 1 additions present: 1.5, 1.6, 1.7, 1.8, 1.10
+- [ ] Validation file format template present
+- [ ] Return format present
+- [ ] Content type awareness as flat list present
+
+**Starter Prompt:**
+> Read `.claude/agents/content-validator.md` and `.claude/skills/validate-content/SKILL.md` to verify duplication. Slim the agent from 585 to ~210 lines. Remove ALL duplicated phase descriptions (phases 1-6 are in the skill). Remove: status determination (lines 514-530), missing context example (lines 548-570), "Why file-based" (lines 39-42), all tables. Add directive: "Execute all 6 validation phases as defined in the preloaded `/validate-content` skill, with these agent-specific additions for Phase 1..." Keep agent-specific additions: 1.5 em dash detection, 1.6 H1 validation, 1.7 heading uniqueness, 1.8 slug format check, 1.10 placeholder links. Keep: validation file format template, return format (condensed), content type awareness (flat list).
+
+**Status:** pending
+
+---
+
+## Task 78: Slim content-atomizer agent (176 → ~110 lines)
+
+**Objective:** Remove motivational content, duplicated sections, and tables from the atomizer agent.
+
+**What to do:**
+- Remove "Your Mission" section (lines 16-24) — motivational
+- Remove Platform Voice Adjustments table (lines 111-121) — in preloaded skill
+- Remove Output Structure duplicate code block (lines 129-135) — already in workflow step 4
+- Convert Tool Usage table (lines 172-176) to flat list
+- Remove "Why minimal return" explanation
+- Keep: Workflow (read article, read profile, create platform content, write files, quality check), return format
+
+**Acceptance Criteria:**
+- [ ] File is ~110 lines (within 15% tolerance)
+- [ ] No "Your Mission" section
+- [ ] No Platform Voice Adjustments table/section
+- [ ] No duplicate Output Structure code block
+- [ ] No "Why minimal return" explanation
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] Workflow steps still present (read article, read profile, create content, write files, quality check)
+- [ ] Return format still present
+
+**Starter Prompt:**
+> Read `.claude/agents/content-atomizer.md`. Slim it from 176 to ~110 lines. Remove: "Your Mission" (lines 16-24), Platform Voice Adjustments table (lines 111-121, in preloaded skill), Output Structure duplicate code block (lines 129-135), Tool Usage table (convert to flat list), "Why minimal return" explanation. Keep: Workflow (read article, read profile, create platform content, write files, quality check) and return format.
+
+**Status:** pending
+
+---
+
+## Task 79: Update execute-pillar SKILL.md (791 → ~500 lines)
+
+**Depends on:** Tasks 69, 70, 76, 77
+
+**Objective:** Fix the validation-passing contradiction, update agent references for copy-fixer, and remove bloat (ASCII diagrams, tables, duplicate checklists).
+
+**What to do:**
+- **Fix contradiction (lines 408-423):** Replace with file-based approach — spawn copy-fixer with validation_file_path, agent reads file directly, do NOT paste validation output into prompt
+- **Update agent references:** Step 3 pipeline: "COPY ENHANCER (Enhancement Mode)" → "COPY ENHANCER". Step 4 retry: "Spawn COPY ENHANCER (Fix Mode)" → "Spawn COPY FIXER". Quick Reference: add Copy Fixer template, remove Fix Mode from Copy Enhancer template
+- **Remove:** All ASCII diagrams (lines 310-327, 333-356, 383-406 = 66 lines), all tables (lines 68-74, 187-192, 440-446 = 20 lines), Complete Execution Checklist (lines 636-677, 42 lines — duplicates Steps 1-8), Example Error Comments (lines 449-465, 17 lines), Context Architecture Communication verbose template (lines 150-178 — condense to 3-line directive), Pseudo-code for tier validation (lines 244-259), Quick Reference "Expected Output" sections (~30 lines), Condense commit/PR bash blocks (~30 lines), Troubleshooting section (lines 756-789 — moved to `references/execute-pillar-troubleshooting.md`)
+
+**Acceptance Criteria:**
+- [ ] File is ~500 lines (within 15% tolerance)
+- [ ] Validation passing uses file-based approach (validation_file_path, not prompt paste)
+- [ ] References "COPY FIXER" in retry loop (not "COPY ENHANCER Fix Mode")
+- [ ] Copy Fixer template in Quick Reference section
+- [ ] Zero ASCII diagram blocks (no lines with box-drawing characters like ─, │, ┌, └)
+- [ ] Zero lines starting with `|` (no tables)
+- [ ] No Complete Execution Checklist section
+- [ ] No Troubleshooting section (moved to reference file)
+- [ ] Reference to `references/execute-pillar-troubleshooting.md` present
+
+**Starter Prompt:**
+> Read `.claude/skills/execute-pillar/SKILL.md`. Slim it from 791 to ~500 lines. Fix the validation contradiction at lines 408-423: use file-based approach (pass validation_file_path, agent reads file, do NOT paste output into prompt). Update: "COPY ENHANCER (Fix Mode)" → "COPY FIXER" everywhere. Add Copy Fixer to Quick Reference. Remove: all ASCII diagrams (lines 310-327, 333-356, 383-406), all tables, Complete Execution Checklist (lines 636-677), Example Error Comments (lines 449-465), Context Architecture verbose template (condense to 3 lines), pseudo-code (lines 244-259), Expected Output sections, condense commit/PR bash blocks, Troubleshooting (lines 756-789, moved to `references/execute-pillar-troubleshooting.md`).
+
+**Status:** pending
+
+---
+
+## Task 80: Update workflow.md for copy-fixer agent
+
+**Depends on:** Task 69
+
+**Objective:** Add copy-fixer to the workflow rules and update the pipeline description.
+
+**What to do:**
+- Add `copy-fixer` to Agent Reference with description and return format
+- Update pipeline description: 5 agents (seo-writer, copy-enhancer, content-validator, copy-fixer, content-atomizer)
+- Note: copy-fixer only spawns on validation FAIL (retry loop)
+- Remove block quote for architecture constraint — make it a directive
+- Remove "Why minimal returns" explanation
+- Confirm retry loop uses file-based issue passing
+
+**Acceptance Criteria:**
+- [ ] copy-fixer listed in Agent Reference with description and return format
+- [ ] Pipeline description mentions 5 agents
+- [ ] Retry loop references copy-fixer (not copy-enhancer fix mode)
+- [ ] Architecture constraint is a directive (not block quote)
+- [ ] No "Why minimal returns" explanation
+- [ ] File is ~80 lines (within 15% tolerance)
+
+**Starter Prompt:**
+> Read `.claude/rules/workflow.md`. Add copy-fixer agent to Agent Reference: "Copy Fixer (`copy-fixer.md`): Fix specific validation issues. Tools: Read, Edit" with return format "PASS or FAIL: {reason}". Update pipeline to 5 agents. Update retry loop: copy-fixer spawns on FAIL (not copy-enhancer fix mode). Convert architecture constraint block quote to directive. Remove "Why minimal returns" explanation. Confirm file-based issue passing in retry loop.
+
+**Status:** pending
+
+---
+
+## Task 81: Update CLAUDE.md for copy-fixer agent
+
+**Depends on:** Task 69
+
+**Objective:** Add copy-fixer as the seventh agent and clean up any "why" explanations.
+
+**What to do:**
+- Update Agents section: mention copy-fixer as seventh agent (was "Six agents")
+- Remove any "why" explanations that can be directives instead
+- Keep changes minimal — only what's needed for copy-fixer awareness
+
+**Acceptance Criteria:**
+- [ ] CLAUDE.md mentions 7 agents (not 6)
+- [ ] copy-fixer mentioned in Agents section
+- [ ] No unnecessary "why" explanations added/remaining
+
+**Starter Prompt:**
+> Read `.claude/CLAUDE.md`. Update the Agents section: change "Six agents" to "Seven agents" and add copy-fixer mention. Remove any "why" explanations that should be directives. Keep changes minimal.
+
+**Status:** pending
+
+---
+
+## Task 82: Verify — grep for stale references
+
+**Depends on:** Tasks 67-81
+
+**Objective:** Ensure no stale references remain after all modifications.
+
+**What to do:**
+- Grep for `eeat-examples` in agent files (should only appear in eeat-patterns.md and eeat-examples.md itself)
+- Grep for `copy-enhancer.*fix` or `Fix Mode` in execute-pillar (should reference copy-fixer instead)
+- Grep for `common-mistakes` in seo-writer agent (should be removed)
+- Grep for lines starting with `|` in all modified agent and skill files (should be zero — no tables)
+
+**Acceptance Criteria:**
+- [ ] Zero `eeat-examples` references in agent files
+- [ ] Zero `Fix Mode` references in execute-pillar
+- [ ] Zero `common-mistakes` references in seo-writer
+- [ ] Zero table rows (`|`) in any modified agent or skill file
+
+**Starter Prompt:**
+> Run these verification greps across `.claude/agents/` and `.claude/skills/`: (1) `eeat-examples` in agent files — should be zero, (2) `copy-enhancer.*fix` or `Fix Mode` in execute-pillar — should be zero, (3) `common-mistakes` in seo-writer.md — should be zero, (4) lines starting with `|` in all modified files — should be zero. Report any violations found.
+
+**Status:** pending
+
+---
+
+## Task 83: Verify — agent frontmatter and line count audit
+
+**Depends on:** Tasks 67-81
+
+**Objective:** Validate all agent frontmatter is correct and all files hit their target line counts.
+
+**What to do:**
+- Verify valid YAML frontmatter in all 5 agent files (seo-writer, copy-enhancer, copy-fixer, content-validator, content-atomizer)
+- Verify copy-fixer has no `skills:` field
+- Verify copy-enhancer description no longer mentions "fix"
+- Count lines in every modified file and compare to targets (within 15%):
+  - `references/copywriting-frameworks.md` → ~1,627
+  - `skills/seo-content/references/eeat-patterns.md` → ~80
+  - `agents/copy-fixer.md` → ~150
+  - `references/execute-pillar-troubleshooting.md` → ~34
+  - `skills/direct-response-copy/SKILL.md` → ~590
+  - `skills/seo-content/SKILL.md` → ~400
+  - `skills/validate-content/SKILL.md` → ~700
+  - `skills/content-atomizer/SKILL.md` → ~900
+  - `agents/seo-writer.md` → ~130
+  - `agents/copy-enhancer.md` → ~170
+  - `agents/content-validator.md` → ~210
+  - `agents/content-atomizer.md` → ~110
+  - `skills/execute-pillar/SKILL.md` → ~500
+  - `rules/workflow.md` → ~80
+
+**Acceptance Criteria:**
+- [ ] All 5 agent files have valid YAML frontmatter
+- [ ] copy-fixer has no `skills:` field
+- [ ] copy-enhancer description doesn't mention "fix"
+- [ ] All 14 files within 15% of target line count
+- [ ] Any files outside tolerance flagged with actual vs target count
+
+**Starter Prompt:**
+> Verify all modified `.claude/` files. Check: (1) Valid YAML frontmatter in 5 agent files (seo-writer, copy-enhancer, copy-fixer, content-validator, content-atomizer). (2) copy-fixer has no `skills:` field. (3) copy-enhancer description doesn't mention "fix". (4) Count lines in all 14 modified/created files and compare to targets — flag any outside 15% tolerance. Report results.
+
+**Status:** pending
+
+---
+
+## Execution Order & Dependencies
 
 ```
-Tasks 59 + 60 + 61    (parallel — strip agent/skill duplication)
-        |
-    Task 62            (extract banned words/phrases to references)
-        |
-    Task 63            (extract SEO rules to references — Task 58 already done)
-        |
-Tasks 64 + 65 + 66    (parallel — workflow trim + archive PRD + multi-client docs)
-```
+Phase A (no dependencies, can run in any order):
+  Task 67: Extract copywriting frameworks
+  Task 68: Create eeat-patterns
+  Task 69: Create copy-fixer agent
+  Task 70: Extract troubleshooting
 
----
+Phase B (depends on Phase A):
+  Task 71: Slim DR copy skill (needs Task 67)
+  Task 72: Slim seo-content skill (needs Task 68)
+  Task 73: Slim validate-content skill (no dependency)
+  Task 74: Slim content-atomizer skill (no dependency)
+
+Phase C (depends on Phase A):
+  Task 75: Slim seo-writer agent (needs Task 68)
+  Task 76: Slim copy-enhancer agent (needs Task 69)
+  Task 77: Slim content-validator agent (no dependency)
+  Task 78: Slim content-atomizer agent (no dependency)
+
+Phase D (depends on Phases B and C):
+  Task 79: Update execute-pillar (needs Tasks 69, 70, 76, 77)
+  Task 80: Update workflow.md (needs Task 69)
+  Task 81: Update CLAUDE.md (needs Task 69)
+
+Phase E (depends on all above):
+  Task 82: Verify stale references
+  Task 83: Verify frontmatter + line counts
+```
