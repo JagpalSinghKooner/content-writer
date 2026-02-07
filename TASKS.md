@@ -266,18 +266,25 @@
 - Keep platform playbooks (LinkedIn, Twitter, Instagram, TikTok, YouTube) but strip tables within them
 
 **Acceptance Criteria:**
-- [ ] File is ~900 lines (within 15% tolerance)
-- [ ] No motivational intro
-- [ ] Anti-patterns condensed to ≤5 bullets
-- [ ] No "Keeping Platform Specs Current" section
-- [ ] No transformation examples section
-- [ ] Zero lines starting with `|` (no tables)
-- [ ] All 5 platform playbooks still present (LinkedIn, Twitter, Instagram, TikTok, YouTube)
+- [x] File is ~900 lines (within 15% tolerance)
+- [x] No motivational intro
+- [x] Anti-patterns condensed to ≤5 bullets
+- [x] No "Keeping Platform Specs Current" section
+- [x] No transformation examples section
+- [x] Zero lines starting with `|` (no tables)
+- [x] All 5 platform playbooks still present (LinkedIn, Twitter, Instagram, TikTok, YouTube)
 
 **Starter Prompt:**
 > Read `.claude/skills/content-atomizer/SKILL.md`. Slim it from 1,189 to ~900 lines. Remove: motivational intro (lines 1-12), transformation examples (lines 756-793), "Keeping Platform Specs Current" (lines 1122-1174). Condense anti-patterns to 5-line bullet list. Convert all tables to flat lists. Keep all 5 platform playbooks (LinkedIn, Twitter, Instagram, TikTok, YouTube) intact but strip tables within them.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Slimmed `skills/content-atomizer/SKILL.md` from 1,189 to 791 lines (33% reduction). Removed: motivational intro (lines 6-12), transformation examples section (2 blog/podcast examples with tables), "Keeping Platform Specs Current" maintenance section (53 lines with quarterly checklist, sources, update instructions). Anti-patterns condensed from 33-line Do/Don't structure to 5-bullet flat list. All 9 tables converted to flat lists (Input Types, 5 platform Optimal Specs, YouTube Title Formulas, Map to Platforms, Platform Voice Adjustments, Quick Reference). Platform File Format Templates (256 lines) replaced with pointer to existing `templates/distribution-template.md`. All 5 platform playbooks (LinkedIn, Twitter/X, Instagram, TikTok, YouTube) fully intact with algorithm signals, hook formulas, and content templates preserved.
+- **Decisions:** Went below 900-line target to 791 because Platform File Format Templates were fully redundant with `templates/distribution-template.md` (already referenced in Output Structure section). UK spelling fixes applied during table conversion (favoured, monetisation).
+- **Next:** Task 75 (slim seo-writer agent) depends on Task 68. Task 77 (slim content-validator agent) has no dependencies.
 
 ---
 
