@@ -70,19 +70,7 @@ Check against all FAIL conditions in `universal-rules.md`.
 
 ### 1.1 UK English Spelling
 
-Scan for American spellings. Any found = FAIL.
-
-**Common US→UK pairs to check:**
-- color → colour
-- behavior → behaviour
-- organization → organisation
-- recognize → recognise
-- center → centre
-- traveling → travelling
-- canceled → cancelled
-- defense → defence
-- gray → grey
-- program → programme
+Scan for American spellings per `universal-rules.md` Rule 1 (patterns 1-3) and `uk-english-patterns.md` (patterns 4-8). Any found = FAIL.
 
 **Output format:**
 ```
@@ -91,14 +79,7 @@ FAIL: Line XX: "color" - US spelling → use "colour"
 
 ### 1.2 Banned AI Words (53 words)
 
-Scan for any of the 53 banned words. Any found = FAIL.
-
-**Categories:**
-- Overused verbs: delve, navigate, leverage, utilize, facilitate, harness, empower, foster, embark, unleash, spearhead, bolster, underscore, spotlight, streamline
-- Hollow adjectives: comprehensive, robust, crucial, vital, optimal, seamless, intricate, nuanced, cutting-edge, revolutionary, pivotal, paramount, transformative, groundbreaking, multifaceted
-- Buzzwords: plethora, myriad, bevy, tapestry, realm, paradigm, synergy, landscape (figurative), journey (for processes), game-changer, supercharge, elevate, unlock
-- Filler adverbs: noteworthy, notably, interestingly, importantly, undoubtedly, certainly, surely, obviously, clearly
-- Weak transitions: firstly, secondly, thirdly, lastly, additionally, furthermore, moreover
+Scan for all 53 banned words per `universal-rules.md` Rule 2. Any found = FAIL.
 
 **Output format:**
 ```
@@ -107,14 +88,7 @@ FAIL: Line XX: "leverage" - banned AI word → use "use" or rephrase
 
 ### 1.3 Banned AI Phrases
 
-Scan for AI fingerprint phrases. Any found = FAIL.
-
-**Categories:**
-- Opening cliches: "In today's fast-paced world", "In today's digital age", etc.
-- Throat-clearing: "It's important to note that...", "Let's dive in", etc.
-- Padding phrases: "When it comes to...", "In order to...", etc.
-- Meta-commentary: "In conclusion", "In this article, we will...", etc.
-- Desperate hooks: "Are you looking for...?", "Look no further", etc.
+Scan for all banned AI phrases per `universal-rules.md` Rule 3. Any found = FAIL.
 
 **Output format:**
 ```
@@ -123,13 +97,7 @@ FAIL: Line XX: "In today's digital age" - banned AI phrase → rewrite opening
 
 ### 1.4 AI Pattern Detection
 
-Scan for structural patterns. Any found = FAIL.
-
-**Patterns to detect:**
-- 3+ consecutive sentences starting with same word
-- Perfect "First... Second... Third..." structure
-- Hedging overload (>5% hedging words: might, could, perhaps, possibly, potentially, may)
-- Empty transitions: "Now let's move on to...", "With that said..."
+Scan for structural AI patterns per `universal-rules.md` Rule 4. Any found = FAIL.
 
 **Output format:**
 ```
@@ -138,7 +106,7 @@ FAIL: Lines XX-XX: 3 consecutive sentences start with "This" - vary openers
 
 ### 1.5 Em Dash Check
 
-Em dashes are an AI writing fingerprint per Rule 4b. They must be restructured, not replaced with other punctuation.
+Per `universal-rules.md` Rule 4b. Any em dash = FAIL.
 
 **Detection Method — use Grep for BOTH patterns:**
 
@@ -155,11 +123,6 @@ FAIL: Line XX: Em dash (—) found in "text — more text" → restructure as se
 FAIL: Line XX: Em dash (—) found in "thing — explanation" → reword without dash
 FAIL: Line XX: Space-hyphen-space found in "text - more text" → likely em dash substitute, restructure sentence
 ```
-
-**What to exclude from space-hyphen-space check:**
-- YAML frontmatter list items (e.g., `  - item`)
-- Markdown bullet points (e.g., `- list item`)
-- Hyphenated compound words (e.g., `well-known` has no spaces around the hyphen)
 
 ### 1.6 H1 Validation
 
@@ -225,18 +188,7 @@ WARN: Slug "adhd-sleep" appears keyword-only → use descriptive format like "un
 
 ### 1.9 SEO Requirements Check
 
-Check all SEO requirements. Missing = FAIL.
-
-**Checklist:**
-- [ ] Primary keyword in first 150 words
-- [ ] Primary keyword in at least one H2
-- [ ] Keyword density 1-2%
-- [ ] Minimum 1,500 words
-- [ ] Meta title under 60 characters
-- [ ] Meta description 140-160 characters
-- [ ] At least 3 internal links
-- [ ] One H1 only (the title)
-- [ ] Logical H2/H3 hierarchy
+Check all SEO requirements per `universal-rules.md` Rule 5. Missing = FAIL.
 
 **Output format:**
 ```
