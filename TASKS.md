@@ -306,19 +306,26 @@
 - Keep: Step 1 (Read Context Files), Step 2 (Research E-E-A-T Citations), Step 3 (Find Existing Articles), Step 6 (Verify Citation URLs as flat list), Return Format (condensed)
 
 **Acceptance Criteria:**
-- [ ] File is ~130 lines (within 15% tolerance)
-- [ ] No "Write the Article" or "Write Quality Content" sections
-- [ ] No "Why minimal return" explanation
-- [ ] No `common-mistakes.md` reference
-- [ ] Zero lines starting with `|` (no tables)
-- [ ] References `eeat-patterns.md` (not `eeat-examples.md`)
-- [ ] Contains replacement directive for sections 4-5
-- [ ] Steps 1, 2, 3, 6, and Return Format still present
+- [x] File is ~130 lines (within 15% tolerance)
+- [x] No "Write the Article" or "Write Quality Content" sections
+- [x] No "Why minimal return" explanation
+- [x] No `common-mistakes.md` reference
+- [x] Zero lines starting with `|` (no tables)
+- [x] References `eeat-patterns.md` (not `eeat-examples.md`)
+- [x] Contains replacement directive for sections 4-5
+- [x] Steps 1, 2, 3, 6, and Return Format still present
 
 **Starter Prompt:**
 > Read `.claude/agents/seo-writer.md`. Slim it from 205 to ~130 lines. Remove: Section 4 "Write the Article" (lines 77-99), Section 5 "Write Quality Content" (lines 108-120), "Why minimal return" (lines 173-176), `common-mistakes.md` from Before Starting. Replace sections 4-5 with: "Follow the preloaded `/seo-content` skill workflow to write the article. Use `skills/templates/article-template.md` for structure." Convert all tables to flat lists. Update eeat-examples.md → eeat-patterns.md. Keep Steps 1, 2, 3, 6, and Return Format.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Slimmed seo-writer.md from 205 → 141 lines. Removed sections 4-5 (Write the Article, Write Quality Content), "Why minimal return", common-mistakes.md reference. Replaced with `/seo-content` skill directive. Converted URL status table and tool usage table to flat lists. Added eeat-patterns.md reference in step 2. Renumbered steps: old step 6 → step 5.
+- **Decisions:** Merged Output section into step 4 to save lines. Condensed URL warning example to inline format.
+- **Next:** Task 76 (Slim copy-enhancer agent) is next in the cleanup sequence.
 
 ---
 
