@@ -54,47 +54,13 @@ The main session spawns agents sequentially for each article. Agents return resu
 
 ## Retry Loop
 
-When validation fails, the main session orchestrates retries. Maximum 3 attempts per article.
-
-**On FAIL (attempt < 3):**
-
-1. Main session spawns Copy Enhancer with article path + validation file path (mode: "fix")
-2. Copy Enhancer reads issues from validation file, fixes them, returns PASS
-3. Main session spawns Content Validator again
-4. If PASS: validator deletes validation file, continue to Atomizer
-5. If FAIL: increment attempt count, repeat from step 1
-
-**On FAIL (attempt >= 3):**
-
-1. Log failure to PROJECT-TASKS.md
-2. Log to GitHub Issue (if error tracking active)
-3. Escalate to user (validation file remains for debugging)
-
-**Why main session orchestrates:** Agents have fresh context windows. They can't remember previous attempts or coordinate with each other. Only the main session can track retry count and make escalation decisions.
-
-**Why file-based issue passing:** Copy Enhancer reads issues directly from the validation file instead of receiving them in the prompt. This prevents main session context overflow when orchestrating 32+ articles.
+On validation FAIL, the main session re-spawns Copy Enhancer (mode: "fix") then Content Validator, up to 3 attempts. Copy Enhancer reads issues from the validation file (file-based, not prompt-based) to prevent context overflow. After 3 failures, escalate to user. Full retry logic: see [Execute Pillar skill](../skills/execute-pillar/SKILL.md) Step 4.
 
 ---
 
 ## Tier-Based Parallel Execution
 
-When generating multiple articles, execute in tiers based on internal linking dependencies.
-
-### Tier Identification
-
-From the pillar brief, identify article dependencies:
-
-- Articles with no internal links needed → Tier 1
-- Articles that reference Tier 1 articles → Tier 2
-- Articles that reference Tier 2 articles → Tier 3
-- Pillar Guide (links to all articles) → Final tier
-
-### Execution Rules
-
-1. **Parallel within tiers:** All articles in the same tier can run simultaneously
-2. **Sequential across tiers:** Wait for all Tier N articles to complete before starting Tier N+1
-3. **Commit per tier:** After all articles in a tier pass validation, commit them together
-4. **Pillar guide last:** Always executes in the final tier (needs to link to all articles)
+Articles are grouped into tiers by internal linking dependencies: Tier 1 (no dependencies) → Tier 2 (references Tier 1) → Tier 3 → Pillar Guide (final). Articles within a tier run in parallel; tiers run sequentially. Commit per tier after all articles pass. Full tier logic: see [Execute Pillar skill](../skills/execute-pillar/SKILL.md) Step 3.
 
 ---
 
