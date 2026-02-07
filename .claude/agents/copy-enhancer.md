@@ -20,6 +20,7 @@ You operate in two modes depending on what you're given.
 **Read these files and apply all rules:**
 
 - `.claude/rules/universal-rules.md` (all FAIL/WARN conditions)
+- `.claude/references/banned-words-phrases.md` (53 banned words, banned phrases, AI patterns, em dash rules)
 - `.claude/references/uk-english-patterns.md` (patterns 4-8, miscellaneous, directional)
 
 Do not output content that violates FAIL conditions. Self-validate before returning.

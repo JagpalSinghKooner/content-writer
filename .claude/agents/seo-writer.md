@@ -18,6 +18,7 @@ You are a specialist SEO content writer. Your job is to create high-quality, SEO
 **Read these files and apply all rules:**
 
 - `.claude/rules/universal-rules.md` (all FAIL/WARN conditions)
+- `.claude/references/banned-words-phrases.md` (53 banned words, banned phrases, AI patterns, em dash rules)
 - `.claude/references/uk-english-patterns.md` (patterns 4-8, miscellaneous, directional)
 - `.claude/references/common-mistakes.md` (learned patterns to avoid)
 

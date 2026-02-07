@@ -234,19 +234,26 @@
 8. Commit
 
 **Acceptance Criteria:**
-- [ ] `references/banned-words-phrases.md` created with Rules 2, 3, 4, 4b
-- [ ] `universal-rules.md` has named stubs with reference links for each moved rule
-- [ ] `content-validator.md` "Before Starting" includes new reference file
-- [ ] `seo-writer.md` "Before Starting" includes new reference file
-- [ ] `copy-enhancer.md` "Before Starting" includes new reference file
-- [ ] `universal-rules.md` reduced by ~155 lines from auto-load
-- [ ] All 53 banned words present in reference file
-- [ ] Git commit created
+- [x] `references/banned-words-phrases.md` created with Rules 2, 3, 4, 4b
+- [x] `universal-rules.md` has named stubs with reference links for each moved rule
+- [x] `content-validator.md` "Before Starting" includes new reference file
+- [x] `seo-writer.md` "Before Starting" includes new reference file
+- [x] `copy-enhancer.md` "Before Starting" includes new reference file
+- [x] `universal-rules.md` reduced by ~155 lines from auto-load (actual: 157)
+- [x] All 53 banned words present in reference file
+- [x] Git commit created
 
 **Starter Prompt:**
 > Read TASKS.md Task 62 for steps. Read `universal-rules.md` in full. Create `.claude/references/banned-words-phrases.md` with Rules 2-4b (banned words, phrases, AI patterns, em dashes). Replace sections in `universal-rules.md` with named stubs + reference links. Update "Before Starting" in content-validator.md, seo-writer.md, and copy-enhancer.md to read the new file. Verify coverage. Commit.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `references/banned-words-phrases.md` with Rules 2-4b (banned words, phrases, AI patterns, em dashes). Replaced full rule content in `universal-rules.md` with named stubs + reference links. Updated "Before Starting" in content-validator.md, seo-writer.md, and copy-enhancer.md to read the new file.
+- **Decisions:** Stubs keep rule names and numbers visible with one-line summaries. Reference links use anchor fragments for direct navigation. Reduction was 157 lines (427 → 270), slightly above the ~155 target.
+- **Next:** Task 63 can proceed (extract SEO requirements and citation rules to `seo-requirements.md`). The stub pattern is established and works well for sequential extraction.
 
 ---
 
