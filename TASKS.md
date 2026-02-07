@@ -86,21 +86,28 @@
 - Return format: `PASS` or `FAIL: {reason}`
 
 **Acceptance Criteria:**
-- [ ] `.claude/agents/copy-fixer.md` exists
-- [ ] Valid YAML frontmatter with name, description, tools, model
-- [ ] No `skills:` field in frontmatter
-- [ ] Contains validation file reading workflow
-- [ ] Contains banned words reference to `banned-words-phrases.md`
-- [ ] Contains em dash removal examples (inline, not table)
-- [ ] Contains common fix types as flat list
-- [ ] Contains return format specification
-- [ ] Zero lines starting with `|` (no tables)
-- [ ] ~150 lines (within 15% tolerance)
+- [x] `.claude/agents/copy-fixer.md` exists
+- [x] Valid YAML frontmatter with name, description, tools, model
+- [x] No `skills:` field in frontmatter
+- [x] Contains validation file reading workflow
+- [x] Contains banned words reference to `banned-words-phrases.md`
+- [x] Contains em dash removal examples (inline, not table)
+- [x] Contains common fix types as flat list
+- [x] Contains return format specification
+- [x] Zero lines starting with `|` (no tables)
+- [x] ~150 lines (within 15% tolerance) — 140 lines
 
 **Starter Prompt:**
 > Read `.claude/agents/copy-enhancer.md` (especially lines 176-238 for the fix mode workflow). Create `.claude/agents/copy-fixer.md` as a new lightweight agent (~150 lines). Frontmatter: name copy-fixer, description "Fix specific validation issues in articles. Use after content-validator returns FAIL. Reads validation file and applies targeted fixes only.", tools Read/Edit, model sonnet. NO skills field. Extract the fix workflow, add banned words reference to `banned-words-phrases.md`, em dash removal with 3-4 inline examples, common fix types as flat list. Return format: PASS or FAIL: {reason}. No tables anywhere.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Created `.claude/agents/copy-fixer.md` (140 lines). Lightweight fix-only agent with frontmatter (name, description, tools Read/Edit, model sonnet, no skills field). Includes: validation file reading workflow, banned words reference to `banned-words-phrases.md`, em dash removal with 4 inline examples, 9 common fix types as flat list. Return format: PASS or FAIL: {reason}. Zero tables.
+- **Decisions:** 140 lines vs ~150 target (within 15% tolerance). Added "What NOT to Do" section from copy-enhancer to prevent scope creep during fixes. Added " - " space-dash detection alongside em dash character.
+- **Next:** Task 76 depends on this (slimming copy-enhancer by removing fix mode). Task 79 depends on this (updating execute-pillar to reference copy-fixer). Task 80 depends on this (updating workflow.md). Task 81 depends on this (updating CLAUDE.md agent count).
 
 ---
 
@@ -148,20 +155,25 @@
 - Keep intact (convert tables to flat lists): Headlines (20-76), Opening lines (79-132), Curiosity gaps (135-176), Flow techniques (179-248), Pain quantification (250-269), So What Chain (272-289), Rhythm (292-318), Founder story (321-335), Testimonials (338-353), Disqualification (355-375), CTAs (377-393), Internet-native voice markers (396-417), Full sequence (419-434), AI tells (438-491), Example transformation (494-511), The test (514-528), SEO/frontmatter (532-579)
 
 **Acceptance Criteria:**
-- [ ] File is ~590 lines (within 15% tolerance)
-- [ ] No `# REFERENCE MATERIAL` section or content after it
-- [ ] No motivational intro paragraph
-- [ ] Zero lines starting with `|` (no tables)
-- [ ] Opening directive present
-- [ ] Reference to `references/copywriting-frameworks.md` present
-- [ ] All 17 kept sections still present (Headlines through SEO/frontmatter)
+- [x] File is ~590 lines (within 15% tolerance) — 571 lines
+- [x] No `# REFERENCE MATERIAL` section or content after it
+- [x] No motivational intro paragraph
+- [x] Zero lines starting with `|` (no tables)
+- [x] Opening directive present
+- [x] Reference to `references/copywriting-frameworks.md` present
+- [x] All 17 kept sections still present (Headlines through SEO/frontmatter)
 
 **Starter Prompt:**
 > Read `.claude/skills/direct-response-copy/SKILL.md`. Slim it from 2,217 to ~590 lines. Remove: lines 583-2217 (moved to `references/copywriting-frameworks.md`), motivational intro (lines 8-16), all tables (convert to flat lists). Add opening directive: "Your job is to write copy that sounds like a smart friend explaining something while deploying persuasion principles the reader doesn't notice." Add reference: "For extended frameworks, headline formulas, and examples, see `references/copywriting-frameworks.md`". Keep all 17 sections from Headlines through SEO/frontmatter intact, converting any tables within them to flat lists.
 
-**Status:** pending
+**Status:** PASS
 
 ---
+
+**Handoff:**
+- **Done:** Slimmed `skills/direct-response-copy/SKILL.md` from 2,217 to 571 lines (74% reduction). Removed reference material (lines 583-2217), motivational intro (lines 8-16), converted CTA table to flat arrow-format list. Added opening directive and reference to `references/copywriting-frameworks.md`.
+- **Decisions:** Used `"X" → "Y"` arrow format for CTA comparisons (consistent with Task 67's voice markers conversion). All 17 sections preserved verbatim except the table conversion.
+- **Next:** Task 72 (slim seo-content SKILL.md) is next in Phase B. Tasks 73-74 can also run in parallel (no dependencies on Task 71).
 
 ## Task 72: Slim seo-content SKILL.md (995 → ~400 lines)
 
@@ -196,7 +208,14 @@
 **Starter Prompt:**
 > Read `.claude/skills/seo-content/SKILL.md`. Slim it from 995 to ~400 lines. Remove sections duplicated elsewhere: template structure (→ article-template.md), humanize AI patterns (→ banned-words-phrases.md), optimize SEO checklist (→ seo-requirements.md), pillar/non-interactive mode (→ workflow.md), file naming (→ file-naming-conventions.md), internal linking (→ internal-linking-strategy.md). Remove motivational intro, ASCII diagram, all tables. Replace removed sections with one-line references. Update eeat-examples.md → eeat-patterns.md. Keep: Content Brief template, Outline structures, Draft principles (condensed to ~30 lines), Quality review checklists (condensed), E-E-A-T signals checklist.
 
-**Status:** pending
+**Status:** PASS
+
+---
+
+**Handoff:**
+- **Done:** Slimmed `skills/seo-content/SKILL.md` from 995 to 414 lines (58% reduction). Removed: motivational intro, ASCII diagram, template structure (→ `article-template.md`), humanise AI patterns (→ `banned-words-phrases.md`), optimise SEO checklist (→ `seo-requirements.md`), internal linking rules (→ `internal-linking-strategy.md`), file naming rules (→ `file-naming-conventions.md`), pillar/non-interactive mode (→ `workflow.md`), worked example section. Zero tables. Updated `eeat-examples.md` → `eeat-patterns.md`.
+- **Decisions:** Kept Draft phase condensed to ~38 lines (one subsection per principle with before/after example for First Paragraph Rule). Kept all 4 outline structures verbatim. Phase 5/6 reduced to 2-3 line references each. Non-interactive mode reduced to single-line reference to `workflow.md`.
+- **Next:** Task 75 (slim seo-writer agent) also depends on Task 68 (done). Tasks 73-74 have no dependencies and can run next.
 
 ---
 
